@@ -1,0 +1,248 @@
+// @extend list styles
+// Clearfix
+%clearfix:after {
+  display: table;
+  clear: both;
+  content: "";
+  zoom: 1;
+}
+
+// List Styles
+%list--unstyled {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+%list--inline {
+  @extend %list--unstyled;
+
+  > li {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+// Hide only visually, but have it available for screenreaders
+%visually-hidden {
+  position: absolute;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+
+%visually-unhidden {
+  position: relative;
+  height: auto;
+  width: auto;
+  clip: auto;
+  margin: 0;
+}
+
+// FOR FULL WIDTH BANNER BACKGROUND IMAGES
+%bannerBg {
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @if ($old-ie) {
+    &[style*='.png'],
+    &[style*='.svg'],
+    &[style*='.jpg'] {
+      background-position: center top;
+      background-repeat: no-repeat;
+      background-size: cover;
+      -ms-behavior: url(/_CSS/htc/backgroundsize.min.htc);
+    }
+  }
+}
+
+// Add a triangle after the text (mainly for the links)
+%arrow {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  width: 0;
+  height: 0;
+}
+
+%arrow-right {
+  @extend %arrow;
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-left-style: solid;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+}
+
+%arrow-left {
+  @extend %arrow;
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-right-style: solid;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+}
+
+%arrow-up {
+  @extend %arrow;
+  border-bottom-style: solid;
+  border-right-style: solid;
+  border-left-style: solid;
+  border-left-color: transparent;
+  border-right-color: transparent;
+}
+
+%arrow-down {
+  @extend %arrow;
+  border-top-style: solid;
+  border-right-style: solid;
+  border-left-style: solid;
+  border-left-color: transparent;
+  border-right-color: transparent;
+}
+
+%data-pointer-arrow {
+  @extend %arrow-down;
+  position: absolute;
+  left: 50%;
+  z-index: $defaultZIndex + 1;
+  margin-left: -$pointer-width;
+  border-width: $pointer-width;
+  bottom: -$pointer-width;
+
+  @media screen and (max-width: $mobile) {
+    margin-left: -$pointer-mobile-width;
+    border-width: $pointer-mobile-width;
+    bottom: -$pointer-mobile-width;
+  }
+}
+
+%data-pointer {
+  &[data-pointer="true"] {
+    @if ($old-ie) {
+      z-index: $defaultZIndex;
+    }
+
+    &:after {
+      @extend %data-pointer-arrow;
+      border-top-color: inherit;
+    }
+  }
+
+  &[data-pointer-top="true"] {
+    &:before {
+      @extend %data-pointer-arrow;
+      border-top-color: $color-white;
+      bottom: auto;
+      top: 0;
+    }
+  }
+
+  &.data-pointer {
+    .wrapper {
+      margin-bottom: $gutter*2;
+    }
+  }
+
+  &.data-pointer-next {
+    margin-top: -$pointer-width;
+    z-index: $beforeAllZIndex;
+  }
+
+  .pointer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+
+    .pointer {
+      &-left, &-right {
+        position: absolute;
+        bottom: 100%;
+        width: 50%;
+        box-sizing: border-box;
+      }
+
+      &-left {
+        right: 50%;
+        border-bottom: $pointer-width solid $color-white;
+        border-right: $pointer-width solid transparent;
+      }
+
+      &-right {
+        left: 50%;
+        border-bottom: $pointer-width solid $color-white;
+        border-left: $pointer-width solid transparent;
+      }
+    }
+  }
+
+  @media screen and (max-width: $mobile) {
+    &.data-pointer {
+      padding-bottom: $pointer-mobile-width;
+    }
+
+    &.data-pointer-next {
+      margin-top: -$pointer-mobile-width;
+    }
+
+    .pointer .pointer {
+      &-left, &-right {
+        border-width: $pointer-mobile-width;
+      }
+    }
+  }
+}
+
+//layout extensions
+.primary-content {
+  %primary-content-wrapper {
+    margin-top: $primary-wrapper-margin-top;
+    padding-top: $primary-wrapper-padding-top;
+    border-top: $primary-wrapper-border;
+
+    &:first-child {
+      border: 0;
+      margin-top: 0;
+      padding-top: 0;
+
+      & > .wrapper {
+        margin-top: 0;
+        padding-top: 0;
+      }
+    }
+  }
+
+  @media screen and (max-width: $tablet) {
+    %primary-content-wrapper,
+    %primary-content-wrapper:first-child {
+      border: 0;
+      padding: $primary-wrapper-padding;
+    }
+  }
+}
+
+//btn rxtensions
+%btn--unstyled-btn {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  outline: 0;
+}
+
+%btn--unstyled {
+  // to reset button styles
+  background: transparent;
+  border: 0;
+  outline: 0;
+  -moz-appearance: none;
+
+  &::-moz-focus-inner {
+    margin: 0;
+    padding: 0;
+  }
+}

@@ -1,0 +1,1885 @@
+//1 Header
+//  1.1 Header - Utility Nav
+//  1.2 Header - Secondary Nav
+//  1.3 Header - Primary Nav
+//2 Footer
+//  2.1 Footer - Tagline
+//  2.2 Footer - Social Links
+//  2.3 Footer - Help Links
+//  2.4 Footer - Utility Links
+//  2.5 Footer - Group Links
+//  2.6 Footer Corporate Links
+//3 Hero Options
+//  3.1 Hero Options - Icon List
+//  3.2 Hero Options - Left Aligned
+//  3.3 Hero Options - on Homepage
+//4 Other
+//  4.1 Other - CTA
+//  4.2 Forms
+//    4.2.1 Forms - Checkbox/Radio
+//    4.2.2 Forms - Demo Account
+//    4.2.3 Forms - Select
+//      4.2.3.1 Forms - Select - Chosen Select
+//    4.2.4 Forms - Rail Demo Form
+//5 Alert
+//6 Rates Table (Margin Pip Calculator, Most Active Markets, Most Popular Markets and etc.)
+//  6.1 Most Active Markets
+//  6.2 Master The Markets
+//  6.3 Quote Board
+//7 Margin/Pip Calculator
+//8 Tabs module
+//9 Bar Module (Global Bar, Open an Account Bar)
+//10 Multicolumn Module
+//  10.1 Multicolumn Module - List
+//  10.2 Multicolumn Module - RTF
+//11 Rail Modules
+//  11.1 Rail Modules - Top Stories
+//  11.2 Rail Modules - Most Active Markets
+//  11.3 Rail Modules - Related Markets
+//  11.4 Rail Modules - Client Sentiment
+//12 Economic Calendar
+//  12.1 Economic Calendar - Rail
+//13 Most Popular Markets
+//14 Tooltip
+//15 Alternating Image Layout
+//  15.1 Alternating Image Layout - Item
+//16 Key Benefits
+//17 Education
+//  17.1 Education - Education Themes Rail
+//    17.1.1 Education - Education Themes Rail - Tertiary Navigation Menu
+//18 Banner Area
+//19 Platform Comparison
+//20 Product Summary
+//  20.1 Product Summary - Banner
+//  20.2 Product Summary - Details
+//21 Research
+//  21.1 Research - Article
+//  21.2 Research - Related
+//  21.3 Research - Master the Markets
+//  21.4 Research - Article Tags
+//  21.5 Research - Grid Page
+//    21.5.1 Research - Grid Page - Grid View
+//    21.5.2 Research - Grid Page - Switch View
+//22 International Landing
+//23 Live Trading
+//24 Pagination
+
+//1.1 Header - Utility Nav
+$utility-nav-bg-color: $color-light-cool !default;
+$utility-nav-links-header-bg-color: transparent !default;
+$utility-nav-links-hover-bg-color: #f5f8f8 !default;
+$utility-nav-dropdown-bg-color: $color-medium !default;
+$utility-nav-dropdown-hover-bg-color: #d6dddd !default;
+$utility-search-bg-color: $color-white !default;
+$utility-search-input-bg-color: transparent !default;
+$utility-nav-open-account-bg-color: $color-secondary-5 !default;
+$utility-nav-item-sub-link-hover-bg-color: transparent !default;
+$utility-nav-mobile-bg-color: null !default;
+$utility-nav-links-bottom-link-mobile-bg-color: $color-primary-3 !default;
+$utility-nav-links-bottom-mobile-bg-color: $color-white !default;
+$utility-search-mobile-bg-color: $color-light-cool !default;
+$utility-search-input-mobile-bg-color: $color-white !default;
+
+$utility-nav-links-color: $color-primary-3 !default;
+$utility-nav-links-hover-color: $color-primary-3 !default;
+$utility-nav-dropdown-hover-color: $color-medium !default;
+$utility-nav-dropdown-open-color: $color-medium !default;
+$utility-nav-item-sub-link-hover-color: $color-link-hover !default;
+$utility-search-input-color: $color-white !default;
+$utility-search-placeholder-color: #666666 !default;
+$utility-search-placeholder-mobile-color: #666666 !default;
+$utility-item-dropdown-inverse-color: $color-white !default;
+$utility-search-input-mobile-color: $color-darker !default;
+$utility-nav-links-header-mobile-color: $color-white !default;
+
+$utility-item-dropdown-inverse-border-color: $color-white !default;
+$utility-search-input-border-color: $color-white !default;
+$utility-nav-links-bottom-mobile-border-color: $color-white !default;
+$utility-nav-item-btn-border-width: 2px !default;
+
+$utility-nav-height: 40px !default;
+$utility-nav-dropdown-height: $utility-nav-height !default;
+$utility-nav-item-btn-min-width: 100px !default;
+$utility-nav-item-btn-margin: 3px 15px !default;
+$utility-nav-item-btn-padding: 0 10px !default;
+
+$utility-nav-mobile-height: 50px !default;
+$utility-nav-mobile-button-width: 40px !default;
+$utility-nav-links-header-mobile-height: 40px !default;
+$utility-nav-logo-mobile-size: 104px 16px !default;
+
+$utility-nav-font: 12 500 !default;
+$utility-nav-item-sub-link-font: 10 600 null null center !default;
+$utility-nav-item-btn-font: 10 null null null center !default;
+$utility-nav-menu-toggle-font-size: 12px !default;
+$utility-nav-login-font-size: 18px !default;
+$utility-nav-mobile-font: 14 !default;
+$utility-nav-links-header-mobile-font: null 500 null uppercase center;
+
+//1.2 Header - Secondary Nav
+$secondary-nav-border: solid 1px $color-light !default;
+$secondary-nav-item-active-border: solid 3px $color-primary-1 !default;
+
+$secondary-nav-item-height: 38px !default;
+$secondary-nav-item-padding: 0 15px;
+
+$secondary-nav-font: 14 !default;
+
+//1.3 Header - Primary Nav
+$primary-nav-bg-color: $color-white !default;
+$primary-nav-item-wrapper-bg-color: $color-white !default;
+$primary-nav-item-open-trigger-bg-color: $color-white !default;
+$primary-nav-overview-bg-color: $color-light-cool !default;
+$primary-nav-tagline-bg-color: $color-white !default;
+$primary-nav-sticky-bg-color: $color-white !default;
+$primary-nav-mobile-bg-color: null !default;
+$primary-nav-item-wrapper-mobile-bg-color: $color-light !default;
+$primary-nav-item-trigger-mobile-bg-color: transparent !default;
+$primary-nav-item-open-trigger-mobile-bg-color: $color-light !default;
+
+$primary-nav-color: $color-darker !default;
+$primary-nav-links-color: $color-link !default;
+$primary-nav-links-hover-color: $color-link-hover !default;
+$primary-nav-item-trigger-color: $color-link !default;
+$primary-nav-item-hover-trigger-color: $color-link-hover !default;
+$primary-nav-item-active-trigger-color: $primary-nav-item-hover-trigger-color !default;
+$primary-nav-item-open-trigger-color: $color-link !default;
+$primary-nav-sub-item-subheadline-color: $color-darker !default;
+$primary-nav-sub-item-subheadline-hover-color: $primary-nav-sub-item-subheadline-color !default;
+
+$primary-nav-links-mobile-color: $color-link !default;
+$primary-nav-links-hover-mobile-color: $primary-nav-links-mobile-color !default;
+$primary-nav-item-trigger-mobile-color: $color-link !default;
+$primary-nav-item-hover-trigger-mobile-color: $primary-nav-item-trigger-mobile-color !default;
+$primary-nav-item-active-trigger-mobile-color: $primary-nav-item-trigger-mobile-color !default;
+$primary-nav-item-open-trigger-mobile-color: $color-link !default;
+$primary-nav-sub-item-subheadline-mobile-color: $color-link !default;
+$primary-nav-sub-item-subheadline-hover-mobile-color: $primary-nav-sub-item-subheadline-mobile-color !default;
+
+$primary-nav-item-trigger-padding: 0 15px !default;
+$primary-nav-sub-item-padding: 10px 20px 10px 80px !default;
+$primary-nav-sub-item-padding-top: 50px !default;
+$primary-nav-sub-item-overview-sub-item-padding: 40px 36px !default;
+$primary-nav-sub-item-link-padding: 5px 0 !default;
+$primary-nav-sub-item-headline-margin: .25em 0 !default;
+$primary-nav-sub-item-subheadline-margin: .5em 0 !default;
+$primary-nav-sub-item-description-margin: .5em 0 !default;
+$primary-nav-tagline-padding: 10px 40px !default;
+
+$primary-nav-item-trigger-mobile-padding: 0 15px 0 25px !default;
+$primary-nav-sub-item-link-mobile-padding: 0 0 0 50px !default;
+
+$primary-nav-border: solid 1px $color-light !default;
+$primary-nav-item-wrapper-border: solid 1px $color-medium !default;
+$primary-nav-item-trigger-border: solid 1px transparent !default;
+$primary-nav-item-open-trigger-border-color: $color-medium !default;
+$primary-nav-item-content-border-color: $color-light !default;
+$primary-nav-tagline-border: solid 1px $color-light !default;
+$primary-nav-item-trigger-mobile-border: solid 1px $color-medium !default;
+$primary-nav-item-open-trigger-mobile-border: solid 1px $color-white !default;
+$primary-nav-item-mobile-border: solid 1px $color-medium !default;
+$primary-nav-sub-item-mobile-border: solid 1px $color-white !default;
+
+$primary-nav-height: 90px !default;
+$primary-nav-logo-size: 149px 26px !default;
+$primary-nav-shrinked-logo-size: 119px 21px !default;
+$primary-nav-shrinked-nav-height: 50px !default;
+$primary-nav-mobile-height: 60px !default;
+$primary-nav-trigger-mobile-width: 60px !default;
+$primary-nav-sub-item-links-underline: null !default;
+
+$primary-nav-font: 14.5 null 1.6 !default;
+$primary-nav-item-trigger-font: null 700 $primary-nav-height uppercase !default;
+$primary-nav-sub-item-headline-font: 30 null 1.2 !default;
+$primary-nav-sub-item-subheadline-font: 14 700 null uppercase !default;
+$primary-nav-sub-item-description-font: 14.5 !default;
+$primary-nav-sub-item-links-font: 14.5 !default;
+$primary-nav-tagline-font: null 500 null null right !default;
+
+$primary-nav-mobile-font: 16 !default;
+$primary-nav-icon-mobile-font: 22 500 $primary-nav-mobile-height null center !default;
+$primary-nav-item-trigger-mobile-font: null !default;
+$primary-nav-sub-item-links-mobile-font: null !default;
+$primary-nav-sub-item-subheadline-mobile-font: 16 700 null uppercase !default;
+
+//2 Footer
+$footer-bg-color: transparent !default;
+$footer-disclaimer-bg-color: $color-lightest-bg !default;
+
+$footer-color: $color-darker !default;
+$footer-link-color: $color-link !default;
+$footer-link-hover-color: $color-link-hover !default;
+
+$footer-border: solid 1px $color-light !default;
+
+$footer-contacts-one-column-breakpoint: $mobile !default;
+$footer-newsletter-width: 250px;
+
+$footer-font-size: 14 !default;
+$footer-grouped-banners-list-font-size: 16 !default;
+$footer-newsletter-headline-font-size: 16 !default;
+$footer-mobile-font-size: 13 !default;
+$footer-newsletter-headline-mobile-font-size: 13 !default;
+
+$footer-disclaimer-font: 12 !default;
+$footer-disclaimer-padding: 20px 0 !default;
+$footer-disclaimer-tablet-font: null !default;
+$footer-disclaimer-tablet-padding: null !default;
+$footer-disclaimer-mobile-font: null !default;
+$footer-disclaimer-mobile-padding: null !default;
+
+//2.1 Footer Tagline
+$tagline-color: $color-white !default;
+
+$tagline-font-size: 24 !default;
+$tagline-mobile-font-size: 18 !default;
+
+//2.2 Footer Social Links
+$footer-social-links-link-bg-color: $color-primary-3 !default;
+$footer-social-links-link-hover-bg-color: $color-link-hover !default;
+
+$footer-social-links-link-size: 34px 34px 9px 0 !default;
+$footer-social-links-link-tablet-size: null null null null !default;
+$footer-social-links-link-mobile-size: 30px 30px 9px 0 !default;
+
+$footer-social-links-font: 16 400 null uppercase !default;
+$footer-social-links-list-font: 16 !default;
+$footer-social-links-tablet-font: $footer-social-links-font !default;
+$footer-social-links-mobile-font: 14 !default;
+
+//2.3 Footer Help Links
+$footer-help-links-disable-href-color: $color-darker !default;
+
+$footer-help-links-headline-margin: 0 15px 0 0 !default;
+$footer-help-links-link-margin: 0 18.3px 0 0 !default;
+$footer-help-links-margin: 0 0 -2px !default;
+
+$footer-help-links-headline-mobile-margin: 0 0 10px !default;
+$footer-help-links-link-margin: 0 10px 0 0 !default;
+
+$footer-help-links-icon-size: auto 22px !default;
+$footer-help-links-icon-tablet-size: null !default;
+$footer-help-links-icon-mobile-size: auto 18px !default;
+$footer-help-links-underline: null !default;
+
+$footer-help-links-headline-font: 15 700 null uppercase !default;
+$footer-help-links-list-font: 16 !default;
+$footer-help-links-headline-tablet-font: $footer-help-links-headline-font !default;
+$footer-help-links-list-tablet-font: $footer-help-links-list-font !default;
+$footer-help-links-headline-mobile-font: 14 !default;
+$footer-help-links-list-mobile-font: 14 !default;
+
+//2.4 Footer Utility Links
+$footer-utility-links-bg-color: $color-lightest-bg !default;
+
+$footer-utility-links-padding: 26px 0 20px !default;
+$footer-utility-links-link-padding: 0 10px 0 0 !default;
+$footer-utility-links-link-margin: 5px 10px 5px 0 !default;
+
+$footer-utility-links-tablet-padding: 26px $tabletPadding 20px !default;
+$footer-utility-links-mobile-padding: null !default;
+$footer-utility-links-link-mobile-padding: null !default;
+$footer-utility-links-link-mobile-margin: null !default;
+
+$footer-utility-links-underline: null !default;
+
+$footer-utility-links-font: 12 null null uppercase !default;
+$footer-utility-links-link-font: null null 1.3 !default;
+$footer-utility-links-tablet-font: 12 !default;
+$footer-utility-links-mobile-font: 12 !default;
+
+//2.5 Footer Group Links
+$footer-group-links-headline-font: 16 700 !default;
+$footer-group-links-headline-margin: .5em 0 !default;
+$footer-group-links-margin: .5em 0 1em !default;
+$footer-group-links-col-3-padding: 15px !default;
+$footer-group-links-underline: null !default;
+
+$footer-group-links-headline-mobile-font: 13 null 1.4 !default;
+
+//2.6 Footer Corporate Links
+$footer-corporate-links-icon-color: $color-primary-3 !default;
+$footer-corporate-links-icon-hover-color: $color-link-hover !default;
+
+$footer-corporate-links-padding: 20px 0 !default;
+$footer-corporate-links-link-padding: 10px 1em 5px 20px !default;
+$footer-corporate-links-link-margin: 0 10px !default;
+$footer-corporate-links-icon-margin: 0 0 0 5px !default;
+
+$footer-corporate-links-tablet-padding: 20px $tabletPadding !default;
+$footer-corporate-links-icon-mobile-margin: 0 -25px 0 5px !default;
+$footer-corporate-links-mobile-padding: null !default;
+
+$footer-corporate-links-underline: null !default;
+
+$footer-corporate-links-font: null !default;
+$footer-corporate-links-link-font: null !default;
+$footer-corporate-links-icon-font-size: 8px !default;
+$footer-corporate-links-tablet-font: null !default;
+$footer-corporate-links-mobile-font: null !default;
+$footer-corporate-links-icon-mobile-font-size: 10px !default;
+
+//3 Hero Options
+$hero-two-section-highlight-bg-color: $color-primary-1 !default;
+$hero-two-section-highlight-inverse-bg-color: $color-white !default;
+$hero-two-section-headline-no-highlight-inverse-color: $color-white !default;
+
+$hero-two-section-highlight-color: $color-white !default;
+$hero-two-section-highlight-inverse-color: $color-primary-3 !default;
+$hero-two-section-pointer-color: inherit !default;
+$hero-two-section-headline-no-highlight-color: $color-primary-3 !default;
+
+$hero-two-section-columns-2-breakpoint: $mobile !default;
+$hero-two-section-headline-margin: 30px 0 0 16px !default;
+$hero-two-section-subheadline-margin: 20px 0 !default;
+$hero-two-section-description-margin: 1em 0 !default;
+$hero-two-section-columns-1-padding: 50px 0 !default;
+$hero-two-section-columns-1-subheadline-margin: 30px 0 20px !default;
+$hero-two-section-columns-2-padding: 40px 0 !default;
+$hero-two-section-columns-2-col-padding: 0 0 0 20px !default;
+$hero-two-section-columns-2-col-first-padding: 0 20px 0 0 !default;
+$hero-two-section-columns-2-content-module-padding: 38px !default;
+
+$hero-two-section-columns-1-tablet-padding: 30px 0 !default;
+$hero-two-section-columns-1-subheadline-tablet-margin: 20px 0 !default;
+$hero-two-section-columns-2-tablet-padding: 40px 0 80px !default;
+$hero-two-section-columns-2-headline-tablet-margin: 0 0 20px 17px !default;
+$hero-two-section-columns-2-content-module-tablet-padding: 30px !default;
+
+$hero-two-section-cta-btn-mobile-margin: 20px 0 10px !default;
+$hero-two-section-headline-mobile-margin: null !default;
+$hero-two-section-subheadline-mobile-margin: 25px 0 !default;
+$hero-two-section-columns-1-mobile-padding: 30px 0 !default;
+$hero-two-section-columns-1-headline-mobile-margin: 30px 0 0 8px !default;
+$hero-two-section-columns-1-headline-mobile-padding: 0 0 0 8px !default;
+$hero-two-section-columns-1-subheadline-mobile-margin: 20px 0 !default;
+$hero-two-section-columns-2-mobile-padding: 55px 0 !default;
+$hero-two-section-columns-2-headline-mobile-margin: null !default;
+
+$hero-two-section-highlight-options: 12px 0 4px 10px 5px 5px !default;
+$hero-two-section-highlight-mobile-options: 10px/3 !default;
+
+$hero-two-section-border: solid 1px $color-grey-dark !default;
+
+$hero-two-section-headline-font: 40 null 1.5 !default;
+$hero-two-section-headline-no-highlight-font: 40 null 1.2 !default;
+$hero-two-section-headline-page-title-font: 50 !default;
+$hero-two-section-subheadline-font: null null 1.4 !default;
+$hero-two-section-description-font: null !default;
+
+$hero-two-section-headline-tablet-font: 36 null 1.7 !default;
+$hero-two-section-headline-no-highlight-tablet-font: null !default;
+$hero-two-section-headline-page-title-tablet-font: null !default;
+$hero-two-section-subheadline-tablet-font: 18 !default;
+$hero-two-section-description-tablet-font: null !default;
+
+$hero-two-section-headline-mobile-font: 25 null 1.75 !default;
+$hero-two-section-headline-no-highlight-mobile-font: null !default;
+$hero-two-section-headline-page-title-mobile-font: 36 !default;
+$hero-two-section-subheadline-mobile-font: 17 !default;
+$hero-two-section-description-mobile-font: null !default;
+$hero-two-section-columns-1-headline-mobile-font: 30 !default;
+$hero-two-section-columns-1-subheadline-mobile-font: null !default;
+
+//3.1 Hero Options - Icon List
+$hero-two-section-icon-list-description-margin: 0 !default;
+$hero-two-section-icon-list-multi-col-margin: 0 0 35px !default;
+$hero-two-section-icon-list-multi-col-padding: 0 5px !important !default;
+$hero-two-section-icon-list-multi-col-img-max-height: null !default;
+$hero-two-section-icon-list-multi-col-img-margin: 0 0 10px !important !default;
+
+$hero-two-section-icon-list-description-tablet-margin: null !default;
+$hero-two-section-icon-list-multi-col-tablet-margin: null !default;
+$hero-two-section-icon-list-multi-col-tablet-padding: null !default;
+$hero-two-section-icon-list-multi-col-img-tablet-max-height: null !default;
+
+$hero-two-section-icon-list-description-mobile-margin: 5px 0 0 !default;
+$hero-two-section-icon-list-multi-col-mobile-margin: 0 0 25px !default;
+$hero-two-section-icon-list-multi-col-mobile-padding: null !default;
+$hero-two-section-icon-list-multi-col-img-mobile-max-height: null !default;
+
+$hero-two-section-icon-list-col-font: null null null null center !default;
+$hero-two-section-icon-list-description-font: null !default;
+$hero-two-section-icon-list-description-tablet-font: null !default;
+$hero-two-section-icon-list-description-mobile-font: null !default;
+
+//3.2 Hero Options - Left Aligned
+$hero-two-section-left-aligned-font: null null null null left !default;
+$hero-two-section-left-aligned-headline-margin: 0 !default;
+$hero-two-section-left-aligned-data-carousel-headline-margin: 30px !default;
+$hero-two-section-left-aligned-multi-col-headline-font: null normal !default;
+$hero-two-section-left-aligned-multi-col-headline-margin: 10px !default;
+$hero-two-section-left-aligned-multi-col-subheadline-font: null 1.35 !default;
+$hero-two-section-left-aligned-multi-col-subheadline-margin: 0 !default;
+$hero-two-section-left-aligned-multi-col-list-padding: 60px !default;
+$hero-two-section-left-aligned-multi-col-content-col-margin: 0 !default;
+
+$hero-two-section-left-aligned-tablet-headline-font: 36 !default;
+
+$hero-two-section-left-aligned-mobile-wrapper-font: null null null null left !default;
+$hero-two-section-left-aligned-mobile-headline-font: 22 null null null left !default;
+$hero-two-section-left-aligned-mobile-headline-margin: null !default;
+$hero-two-section-left-aligned-subheadline-mobile-font: null !default;
+$hero-two-section-left-aligned-subheadline-mobile-margin: null !default;
+$hero-two-section-left-aligned-multi-col-headline-mobile-font: null normal !default;
+$hero-two-section-left-aligned-multi-col-headline-mobile-margin: 15px !default;
+$hero-two-section-left-aligned-multi-col-subheadline-mobile-font: null 1.35 !default;
+$hero-two-section-left-aligned-multi-col-subheadline-mobile-margin: 0 !default;
+$hero-two-section-left-aligned-multi-col-list-mobile-padding: 20px !default;
+$hero-two-section-left-aligned-multi-col-content-col-mobile-margin: 50px !default;
+$hero-two-section-left-aligned-multi-col-content-last-col-mobile-margin: 0 !default;
+
+//3.3 Hero Options - on Homepage
+$home-page-hero-two-section-padding: 60px 0 !default;
+$home-page-hero-two-section-first-padding: 120px 0 100px !default;
+
+$home-page-hero-two-section-mobile-padding: 60px 0 !default;
+$home-page-hero-two-section-first-mobile-padding: 80px 0 60px !default;
+
+$home-page-hero-two-section-columns-2-col-padding: 0 0 0 10px !default;
+$home-page-hero-two-section-columns-2-col-first-padding: 0 10px 0 0 !default;
+
+$home-page-hero-headline-font: if(variable_exists(home-page-hero-headline-font), $home-page-hero-headline-font, 50) !default;
+$home-page-hero-headline-first-font: if(variable_exists(home-page-hero-headline-first-font), $home-page-hero-headline-first-font, 60) !default;
+
+$home-page-hero-headline-mobile-font: if(variable_exists(home-page-hero-headline-mobile-font), $home-page-hero-headline-mobile-font, 36) !default;
+$home-page-hero-headline-first-mobile-font: if(variable_exists(home-page-hero-headline-first-mobile-font), $home-page-hero-headline-first-mobile-font, 41) !default;
+$home-page-hero-subheadline-font: if(variable_exists(home-page-hero-subheadline-font), $home-page-hero-subheadline-font, 16) !default;
+
+//4 Other
+$disable-href-color: $color-darker !default;
+$transitionDurationAndEffect: .15s ease-in !default;
+$header-shrink-animation: .15s linear !default;
+$mobile-content-duration-effect-animation: .3s ease-in !default;
+
+$pointer-width: 20px !default;
+$pointer-mobile-width: 12px !default;
+
+$primary-content-fix: -6px !default;
+
+//4.1 Other - CTA
+$cta-link-arrow-margin: -2px -4px 0 10px !default;
+$cta-link-arrow-size: 4px !default;
+$cta-link-font: 15 700 1.2 uppercase !default;
+
+$cta-link-arrow-mobile-margin: null !default;
+$cta-link-arrow-mobile-size: null !default;
+$cta-link-mobile-font: 14 null 1.25 !default;
+
+$cta-btn-default-theme-options: $color-secondary-7 $color-white !default;
+$cta-btn-full-width-breakpoint: $mobile !default;
+
+$cta-btn-margin: 1em 0 !default;
+$cta-btn-padding: 5px 40px 5px 20px !default;
+$cta-btn-padding-no-arrow: 5px 20px !default;
+$cta-btn-has-arrow: true !default;
+$cta-btn-arrow-margin: -3px -15px 0 10px !default;
+$cta-btn-arrow-size: 5px !default;
+$cta-btn-border: solid 3px !default;
+$cta-btn-border-radius: null !default;
+
+$cta-btn-tablet-border: null !default;
+$cta-btn-tablet-padding: null !default;
+
+$cta-btn-mobile-border: solid 3px !default;
+$cta-btn-mobile-padding: $cta-btn-padding !default;
+
+$cta-btn-font: 15 700 null uppercase center !default;
+$cta-btn-tablet-font: null !default;
+$cta-btn-mobile-font: 14 !default;
+
+//4.2 Forms
+$form-dropdown-bg-color: $color-white !default;
+$form-label-error-bg-color: $color-secondary-6 !default;
+
+$form-label-select-mobile-bg-color: $form-dropdown-bg-color !default;
+
+$form-headline-color: $color-primary-3 !default;
+$form-input-color: $color-darker !default;
+$form-input-active-border-color: $color-dark !important !default;
+$form-div-invalid-color: $color-secondary-6 !default;
+$form-label-error-color: $color-white !default;
+$form-submit-default-color: $color-secondary-7, $color-white !default;
+$form-submit-default-disabled-color: $color-light !default;
+$form-div-controls-label-color: $color-darker !default;
+
+$form-label-mobile-color: $color-dark !default;
+$form-label-focus-mobile-color: $color-darker !default;
+
+$form-div-min-height: 50px !default;
+$form-div-margin: 0 0 5px !default;
+$form-div-checkbox-inline-margin: 0 0 20px 0 !default;
+$form-div-checkbox-radio-padding: 10px 0 0 !default;
+$form-div-checkbox-label-padding: 13px 0 0 !default;
+$form-div-text-padding: 0 !default;
+$form-div-text-margin: 0 0 20px !default;
+$form-div-textarea-height: 120px !default;
+$form-div-textarea-label-position: null null 110px !default;
+$form-div-item-height: 40px !default;
+
+$form-label-width-units: .25 !default;
+$form-label-width: percentage($form-label-width-units) !default;
+$form-label-height: $form-div-item-height !default;
+$form-label-padding: 9px 0 0 !default;
+$form-label-error-position: null 20% 50px !default;
+$form-label-error-padding: 5px 10px !default;
+$form-label-error-arrow-position: null 10px -6px !default;
+$form-label-error-arrow-width: 7px !default;
+$form-label-error-inverse-position: null inherit null 30% !default;
+$form-label-error-inverse-arrow-position: null null null 10px !default;
+
+$form-input-width-units: 1 - $form-label-width-units;
+$form-input-width: percentage($form-input-width-units) !default;
+$form-input-chosen-width: null !default;
+$form-input-height: $form-div-item-height !default;
+$form-input-padding: 9px !default;
+
+$form-div-controls-label-width: 37px !default;
+$form-div-controls-padding: 10px !default;
+$form-div-controls-width: $form-input-width !default;
+$form-div-controls-2-width: percentage($form-input-width-units/2) !default;
+$form-div-controls-3-width: percentage($form-input-width-units/3) !default;
+
+$form-headline-margin: 0 0 20px !default;
+$form-description-margin: -10px 0 20px !default;
+$form-disclaimer-margin: -5px 0 0 $form-label-width !default;
+$form-disclaimer-links-margin: 20px 0 !default;
+$form-disclaimer-link-margin: 0 15px !default;
+
+$form-submit-height: $form-div-item-height !default;
+$form-submit-width: null !default;
+$form-submit-margin: 0 0 1em $form-label-width !default;
+
+$form-div-mobile-min-height: 55px !default;
+$form-div-mobile-margin: 0 0 15px !default;
+$form-div-item-mobile-height: 50px !default;
+
+$form-label-mobile-height: $form-div-item-mobile-height !default;
+$form-label-mobile-line-height: $form-label-mobile-height !default;
+$form-label-mobile-padding: 0 25px 0 15px !default;
+$form-label-error-inverse-mobile-position: null null null 20% !default;
+$form-label-focus-mobile-height: 17px !default;
+$form-label-focus-mobile-line-height: 14px !important !default;
+$form-label-focus-mobile-margin: 2px 0 0 !default;
+$form-label-error-mobile-position: null !default;
+$form-label-error-mobile-padding: null !default;
+$form-label-error-arrow-mobile-position: null !default;
+$form-label-error-arrow-mobile-width: null !default;
+
+$form-input-mobile-height: auto !default;
+$form-input-mobile-padding: 16px 15px !default;
+
+$form-div-checkbox-label-mobile-line-height: 24px !default;
+$form-div-controls-mobile-padding: 0 !important !default;
+$form-div-controls-mobile-input-padding: $form-input-mobile-padding !default;
+$form-div-controls-label-before-mobile-min-height: 70px !default;
+$form-div-controls-label-before-mobile-padding: 0 !default;
+$form-div-controls-label-before-mobile-margin: -10px 0 0 !default;
+$form-div-controls-label-before-input-mobile-margin-top: 30px !default;
+$form-disclaimer-mobile-margin: 0 !default;
+$form-submit-mobile-height: $form-div-item-mobile-height !default;
+$form-submit-mobile-width: 100% !default;
+
+$form-input-default-border: solid 1px $color-light !default;
+$form-input-border: solid 1px $color-medium-dark !important !default;
+$form-label-mobile-transition: .2s !default;
+
+$form-headline-font: 20 null 1.2 !default;
+$form-description-font: 14 !default;
+$form-select-font: null normal !default;
+$form-instructions-font: null 700 null uppercase !default;
+$form-instructions-note-font: 14 400 null none !default;
+$form-div-font: 14 !default;
+$form-input-font: null !default;
+$form-label-font: null !default;
+$form-div-controls-label-font: null 700 null null center !default;
+$form-label-error-font: 14 !default;
+$form-disclaimer-links-font: 14 null null null center !default;
+
+$form-label-tablet-font: null !default;
+$form-input-tablet-font: null !default;
+
+$form-input-mobile-font: 14 !default;
+$form-label-mobile-font: null !default;
+$form-label-error-mobile-font: null !default;
+$form-div-controls-label-mobile-font: null normal !default;
+$form-div-controls-label-before-mobile-font: 18 null 40px !default;
+
+//4.2.1 Forms - Checkbox/Radio
+$checkbox-styled-icon-bg-color: null !default;
+$checkbox-styled-icon-checked-bg-color: $color-secondary-7 !default;
+$checkbox-styled-icon-checked-border-color: $color-secondary-7 !default;
+
+$checkbox-styled-icon-disabled-bg-color: $color-medium-dark !important !default;
+$checkbox-styled-icon-disabled-border-color: $color-medium-dark !default;
+
+$checkbox-styled-old-ie-padding: 0 0 15px !default;
+$checkbox-styled-padding: 0 0 15px 26px !default;
+$checkbox-styled-icon-position: 4px null null 0 !default;
+$checkbox-styled-icon-size: 15px !default;
+
+$checkbox-styled-border: solid 2px $color-medium !default;
+$checkbox-styled-radio-border-radius: 50% !default;
+
+//4.2.2 Forms - Demo Account
+$demo-account-header-font: null null null uppercase !default;
+$demo-account-headline-font: null 700 !default;
+$demo-account-required-font: 12 !default;
+$demo-account-disclaimer-font: 14 !default;
+$demo-account-hero-form-padding: 25px !default;
+$demo-account-hero-form-font: 14 null null null left !default;
+
+$demo-account-headline-mobile-padding: 0 !default;
+$demo-account-hero-form-mobile-border: solid 1px $color-medium !default;
+
+//4.2.3 Forms - Select
+$custom-select-bg-color: transparent !default;
+
+$custom-select-color: $color-darker !default;
+
+$custom-select-height: 50px !default;
+$custom-select-padding: 0 10px !default;
+$custom-select-mobile-padding: 0 0 0 5px !default;
+
+$custom-select-border: solid 1px $color-medium-dark !default;
+$custom-select-focus-border: solid 1px $color-dark !default;
+$custom-select-focus-alt-color: $color-secondary-7 !default;
+
+$custom-select-font: 14 500 null uppercase !default;
+
+//4.2.3.1 Forms - Select - Chosen Select
+$chosen-theme-bg-color: transparent !default;
+$chosen-theme-color: $color-darker, solid 1px $color-medium-dark, false !default;
+$chosen-theme-hover-active-color: null, solid 1px $color-dark, false !default;
+$chosen-theme-hover-active-alt-color: $color-secondary-7, solid 1px $color-secondary-7, false !default;
+$chosen-theme-transparent-btn-color: $color-white, solid 1px $color-medium-dark !default;
+$chosen-theme-darker-btn-color: $color-light, solid 1px $color-medium-dark, solid 1px $color-dark !default;
+
+$chosen-theme-padding: 8px 15px 10px 10px !default;
+$chosen-theme-height: 40px !default;
+$chosen-theme-btn-padding: 7px 0 0 14px !default;
+$chosen-theme-btn-width: 40px !default;
+$chosen-theme-btn-arrow-width: 5px !default;
+$chosen-theme-cancel-position: 9px 45px !default;
+
+$chosen-theme-font: 14 !default;
+$chosen-theme-cancel-font: 20 600 !default;
+
+$chosen-theme-list-bg-color: $color-white !default;
+$chosen-theme-list-result-hover-color: $text-color !default;
+$chosen-theme-list-result-hover-bg-color: $color-lighter !default;
+$chosen-theme-list-search-color: $color-primary-3 !default;
+$chosen-theme-list-search-input-color: $text-color !default;
+
+$chosen-theme-list-margin: 0 !default;
+$chosen-theme-list-result-padding: 9px 6px !default;
+$chosen-theme-list-search-icon-position: 5px 5px !default;
+$chosen-theme-list-search-input-padding: 9px 20px 9px 5px !default;
+
+$chosen-theme-list-border: solid 1px $color-medium !default;
+$chosen-theme-list-result-border: $chosen-theme-list-border !default;
+$chosen-theme-list-search-input-border: solid 1px $color-light !default;
+
+$chosen-theme-list-font: 14 !default;
+$chosen-theme-list-search-icon-font: 14 bold 1.6 !default;
+$chosen-theme-list-search-input-font: 14 !default;
+
+//4.2.4 Forms - Rail Demo Form
+$form-rail-label-width-units: .4 !default;
+$form-rail-input-width-units: 1 - $form-rail-label-width-units !default;
+$form-rail-submit-margin-left-units: 1 - $form-rail-input-width-units !default;
+$form-rail-label-width: percentage($form-rail-label-width-units) !default;
+$form-rail-input-width: percentage($form-rail-input-width-units) !default;
+$form-rail-submit-margin-left: $form-rail-label-width !default;
+
+$form-rail-label-tablet-width-units: .2 !default;
+$form-rail-input-tablet-width-units: 1 - $form-rail-label-tablet-width-units !default;
+$form-rail-label-tablet-width: percentage($form-rail-label-tablet-width-units) !default;
+$form-rail-input-tablet-width: percentage($form-rail-input-tablet-width-units) !default;
+$form-rail-submit-tablet-margin-left: 0 !default;
+
+$form-rail-label-mobile-width: percentage(1) !default;
+$form-rail-input-mobile-width: percentage(1) !default;
+$form-rail-submit-mobile-margin-left: 0 !default;
+
+$form-rail-font: 14 !default;
+$form-rail-disclaimer-font: 13 !default;
+
+//5 Alert
+$alert-close-color: $color-darker !default;
+$alert-close-inverse-color: $color-white !default;
+$alert-close-link-inverse-color: inherit !default;
+$alert-close-link-inverse-hover-color: $color-link-hover !default;
+$alert-risk-warning-color: null !default;
+
+$alert-close-width: 40px !default;
+$alert-message-padding: 15px 60px 15px 0 !default;
+$alert-cookie-padding: null !default;
+$alert-risk-warning-padding: null !default;
+
+$alert-risk-warning-border: solid 1px #ccc !default;
+$alert-risk-warning-opacity: null !default;
+
+$alert-font: 16 !default;
+$alert-cookie-font: null !default;
+$alert-risk-warning-font: null !default;
+$alert-close-font-size: 11px !default;
+$alert-mobile-font: 14 !default;
+
+//6 Rates Table (Margin Pip Calculator, Most Active Markets, Most Popular Markets and etc.)
+$rates-table-head-bg-color: $color-lightest !default;
+$rates-table-row-bg-color: $color-lightest !default;
+$rates-table-row-odd-bg-color: $color-light !default;
+$rates-table-row-hover-bg-color: $color-medium !default;
+$rates-table-value-changed-bg-color: $color-secondary-2 !default;
+$rates-table-transpose-row-mobile-bg-color: $color-lightest !default;
+$rates-table-transpose-row-odd-mobile-bg-color: $color-light !default;
+
+$rates-table-value-up-color: $color-secondary-7 !default;
+$rates-table-value-down-color: $color-secondary-6 !default;
+$rates-table-value-changed: $color-white !default;
+
+$rates-table-head-border: null !default;
+$rates-table-value-changed-options: solid 3px !default;
+$rates-table-value-default-border: $rates-table-value-changed-options transparent !default;
+$rates-table-value-changed-border: $rates-table-value-changed-options $rates-table-value-changed-bg-color !default;
+$rates-table-head-mobile-border: null !default;
+$rates-table-transpose-head-mobile-border: null !default;
+
+$rates-table-head-padding: 10px 0 10px 5px !default;
+$rates-table-cell-padding: 14px 0 14px 5px !default;
+$rates-table-cell-product-padding: 20px !default;
+$rates-table-cell-product-rail-padding: 10px !default;
+$rates-table-transpose-cell-mobile-padding: 10px 20px !default;
+$rates-table-spinner-height: $spinnerSize !default;
+$rates-table-spread-width: 60px !default;
+
+$rates-table-cell-mobile-padding: 10px 0 10px 5px !default;
+$rates-table-cell-product-mobile-padding: null !default;
+$rates-table-cell-product-rail-mobile-padding: null !default;
+$rates-table-spread-mobile-width: 85px !default;
+$rates-table-head-mobile-width: 100px !default;
+$rates-table-transpose-row-mobile-height: 45px !default;
+
+$rates-table-head-font: 12 null null uppercase left !default;
+$rates-table-cell-font: 14 400 !default;
+$rates-table-cell-value-font: null 700 !default;
+$rates-table-cell-product-font: null !default;
+
+$rates-table-head-mobile-font: 12 !default;
+$rates-table-cell-mobile-font: null !default;
+$rates-table-cell-value-mobile-font: null !default;
+$rates-table-cell-product-mobile-font: null !default;
+
+//6.1 Most Active Markets
+$most-active-markets-headline-font: 15 600 null uppercase !default;
+$most-active-markets-tabs-font: 12 500 null uppercase !default;
+$most-active-markets-tabs-wrapper-padding: 20px !default;
+$most-active-markets-tabs-list-margin: 0 0 10px !default;
+
+$most-active-markets-blue-theme-table-margin: 10px !default;
+$most-active-markets-blue-theme-table-head-row-padding: 20px !default;
+
+$most-active-markets-table-row-bg-color: $color-light !default;
+$most-active-markets-table-row-odd-bg-color: $color-lightest !default;
+$most-active-markets-table-row-hover-bg-color: $color-medium !default;
+$most-active-markets-media-margin: 2px 0 0 !default;
+$most-active-markets-media-position: null null null 55px !default;
+$most-active-markets-media-icon-margin: 0 15px 0 0 !default;
+$most-active-markets-blue-theme-table-row-color: darken($color-primary-2, 5) !default;
+$most-active-markets-blue-theme-table-row-font-color: $color-white !default;
+$most-active-markets-blue-theme-table-head-row-background-color: $color-darkest-bg !default;
+$most-active-markets-blue-theme-table-row-border: 2px solid $color-primary-2 !default;
+$most-active-markets-up-color: $color-secondary-7 !default;
+$most-active-markets-down-color: $color-secondary-6 !default;
+
+$most-active-markets-table-cell-product-padding: 10px !default;
+$most-active-markets-table-cell-rank-padding: 30px !default;
+$most-active-markets-table-cell-width: 19% !default;
+$most-active-markets-blue-theme-table-cell-padding: 30px 20px !default;
+
+$most-active-markets-blue-theme-table-tablet-margin: 10px 0 !default;
+$most-active-markets-blue-theme-table-head-cell-tablet-padding: 20px !default;
+
+$most-active-markets-media-icon-mobile-margin: 0 5px 0 0 !default;
+$most-active-markets-table-cell-mobile-width: 40% !default;
+
+$most-active-markets-blue-theme-table-cell-font: 20 400 1 !default;
+$most-active-markets-rank-value-font: null 700 !default;
+$most-active-markets-rank-change-value-font: 12 !default;
+
+$most-active-markets-mobile-headline-font: 14 !default;
+$most-active-markets-mobile-headline-padding: 0 0 20px !default;
+$most-active-markets-tabs-list-wrapper-padding: 0 !default;
+$most-active-markets-table-cell-rank-mobile-width: 40px !important !default;
+$most-active-markets-table-cell-rank-mobile-padding: 10px 0 10px 10px !important !default;
+
+//6.2 Master The Markets
+$master-the-markets-table-mobile-headline-font: 14px !default;
+
+//6.3 Quote Board
+$quote-board-headline-font: 15 700 null uppercase !default;
+$quote-board-tabs-item-margin: null !default;
+$quote-board-tabs-link-font: 12 500 null uppercase !default;
+$quote-board-tabs-link-font-color: $color-link !default;
+$quote-board-tabs-link-border: solid 2px $color-light !default;
+$quote-board-tabs-link-active-color: $color-secondary-7 !default;
+$quote-board-tabs-link-active-background-color: null !default;
+$quote-board-tabs-link-active-border-color: $color-secondary-7 !default;
+$quote-board-update-button-font: 14 500 null uppercase !default;
+$quote-board-update-button-font-color: $color-darker !default;
+$quote-board-update-button-background-color: $color-light !default;
+$quote-board-update-button-hover-background-color: $color-grey-dark !default;
+$quote-board-update-button-hover-font-color: $color-darker !default;
+
+$quote-board-mobile-select-border: 1px solid $color-medium-dark !default;
+
+//7 Margin/Pip Calculator
+$margin-pip-calculator-dropdowns-bg-color: $color-primary-3 !default;
+$margin-pip-calculator-bid-changed-bg-color: $color-secondary-2 !default;
+$margin-pip-calculator-table-head-bg-color: $color-lightest !default;
+$margin-pip-calculator-table-row-bg-color: $color-lightest !default;
+$margin-pip-calculator-table-row-odd-bg-color: $color-light !default;
+$margin-pip-calculator-table-row-hover-bg-color: $color-medium !default;
+$margin-pip-calculator-table-dropdown-bg-color: $color-lightest !default;
+$margin-pip-calculator-table-row-mobile-bg-color: $color-lightest !default;
+$margin-pip-calculator-table-row-even-mobile-bg-color: $color-light !default;
+
+$margin-pip-calculator-dropdowns-color: $color-white !default;
+$margin-pip-calculator-bid-changed-color: $color-white !default;
+$margin-pip-calculator-table-dropdown-hover-mobile-color: $color-darker !default;
+$margin-pip-calculator-table-dropdown-chosen-color: $color-darker, solid 1px $color-medium !default;
+
+$margin-pip-calculator-dropdown-border: solid 2px $color-medium-dark !default;
+$margin-pip-calculator-dropdown-hover-border: $margin-pip-calculator-dropdown-border !default;
+$margin-pip-calculator-table-dropdown-border: solid 1px $color-medium !default;
+$margin-pip-calculator-dropdown-hover-mobile-border: solid 1px $color-medium-dark !default;
+$margin-pip-calculator-table-dropdown-hover-mobile-border: $margin-pip-calculator-table-dropdown-border !default;
+$margin-pip-calculator-table-head-mobile-border: solid 1px $color-medium-dark !default;
+
+$margin-pip-calculator-table-row-height: 50px !default;
+$margin-pip-calculator-padding: 0 0 40px !default;
+$margin-pip-calculator-headline-margin: 0 0 30px !default;
+$margin-pip-calculator-dropdowns-padding: 0 90px 0 0 !default;
+$margin-pip-calculator-dropdown-padding: 10px 10px 20px !default;
+$margin-pip-calculator-table-cell-padding: 10px 0 10px 15px !default;
+$margin-pip-calculator-table-contract-width: 145px !default;
+$margin-pip-calculator-table-dropdown-padding: 0 !important !default;
+$margin-pip-calculator-disclaimer-margin: 20px 0 0 !default;
+
+$margin-pip-calculator-table-row-mobile-height: 45px !default;
+$margin-pip-calculator-dropdown-mobile-height: 40px !default;
+$margin-pip-calculator-dropdown-label-mobile-width: 120px !default;
+$margin-pip-calculator-header-mobile-width: 145px !default;
+$margin-pip-calculator-table-mobile-min-height: 270px !default;
+$margin-pip-calculator-table-row-mobile-min-width: 100px !default;
+$margin-pip-calculator-dropdowns-mobile-padding: 0 !default;
+$margin-pip-calculator-dropdown-mobile-padding: 10px !default;
+$margin-pip-calculator-table-cell-mobile-padding: 13px 10px 10px !default;
+
+$margin-pip-calculator-headline-font: 35 null 1.14 !default;
+$margin-pip-calculator-dropdown-font: 12 500 2.6 uppercase !default;
+$margin-pip-calculator-headline-mobile-font: 25 !default;
+$margin-pip-calculator-disclaimer-font: 12 !default;
+
+//8 Tabs module
+$tabs-link-bg-color: none !default;
+$tabs-link-active-bg-color: none !default;
+$tabs-link-hover-bg-color: $tabs-link-active-bg-color !default;
+
+$tabs-link-color: $color-link !default;
+$tabs-link-active-color: $color-secondary-7 !default;
+$tabs-link-hover-color: $tabs-link-active-color !default;
+
+$tabs-list-max-width: $page-width !default;
+$tabs-list-margin: 10px auto !default;
+$tabs-item-margin: 0 0 10px 3px !default;
+$tabs-link-padding: 5px 10px !default;
+
+$tabs-list-mobile-margin: null !default;
+$tabs-panel-mobile-padding: 40px $tabletPadding 30px !default;
+$tabs-link-mobile-padding: null !default;
+
+$tabs-link-border: solid 2px $color-light !default;
+$tabs-link-active-border: solid 2px $color-secondary-7 !important !default;
+$tabs-link-hover-border: $tabs-link-border !default;
+
+$tabs-link-mobile-border: null !default;
+$tabs-link-mobile-active-border: null !default;
+$tabs-link-mobile-hover-border: null !default;
+
+$tabs-link-font: 12 500 null uppercase !default;
+$tabs-link-tablet-font: null !default;
+$tabs-link-mobile-font: null !default;
+
+//9 Bar Module (Global Bar, Open an Account Bar)
+$bar-content-padding: 17px 0 16px !default;
+$bar-primary-content-padding: null !default;
+$bar-one-column-breakpoint: $mobile !default;
+
+$bar-rtf-mobile-padding: 0 !default;
+$bar-content-one-column-padding: 20px 0 !default;
+$bar-primary-content-one-column-padding: null !default;
+
+$bar-rtf-font: 20 !default;
+$bar-rtf-mobile-font: null null null null center !default;
+
+//10 Multicolumn Module
+$multi-col-headline-color: $color-primary-3 !default;
+$multi-col-title-color: $color-primary-3 !default;
+$multi-col-headline-inverse-color: $color-white !default;
+$multi-col-title-inverse-color: $color-white !default;
+$multi-col-primary-bg-color: transparent !important !default;
+
+$multi-col-padding: 60px 0 !default;
+$multi-col-primary-padding: 40px 0 !default;
+$multi-col-headline-margin: null !default;
+$multi-col-content-margin-top: 40px !default;
+$multi-col-subheadline-margin: 10px 0 30px !default;
+$multi-col-subheadline-img-margin: 0 0 30px !default;
+$multi-col-img-margin: 0 0 10px !default;
+$multi-col-img-max-height: 60px !default;
+$multi-col-img-max-width: null !default;
+$multi-col-title-margin: null !default;
+$multi-col-description-margin: 10px 0 30px !default;
+$multi-col-cta-link-margin: 5px 20px 30px !default;
+$multi-col-primary-cta-link-margin: 5px 20px 30px 5px !default;
+
+$multi-col-tablet-padding: null !default;
+$multi-col-primary-tablet-padding: null !default;
+$multi-col-headline-tablet-margin: null !default;
+$multi-col-content-tablet-margin-top: null !default;
+$multi-col-description-tablet-margin: null !default;
+$multi-col-img-tablet-margin: null !default;
+$multi-col-img-tablet-max-height: null !default;
+$multi-col-img-tablet-max-width: null !default;
+$multi-col-cta-link-tablet-margin: 10px 20px 30px !default;
+
+$multi-col-mobile-padding: null !default;
+$multi-col-headline-mobile-margin: 0 0 10px !default;
+$multi-col-content-mobile-margin-top: 30px !default;
+$multi-col-subheadline-mobile-margin: 0 0 30px !default;
+$multi-col-img-mobile-margin: 0 auto 10px !default;
+$multi-col-img-mobile-max-height: 50px !default;
+$multi-col-img-mobile-max-width: null !default;
+$multi-col-title-mobile-margin: null !default;
+$multi-col-description-mobile-margin: 10px 0 0 !default;
+
+$multi-col-font: null null null null center !default;
+$multi-col-primary-font: null null null null left !default;
+$multi-col-headline-font: 40 null 1.2 !default;
+$multi-col-subheadline-font: 20 null 1.4 !default;
+$multi-col-title-font: 20 null 1.2 !default;
+$multi-col-subtitle-font: 12 500 null uppercase !default;
+$multi-col-description-font: 14 null 1.5 !default;
+$multi-col-link-font: null !default;
+
+$multi-col-tablet-font: null !default;
+$multi-col-headline-tablet-font: 36 !default;
+$multi-col-title-tablet-font: 18 !default;
+$multi-col-subtitle-tablet-font: null !default;
+$multi-col-description-tablet-font: null !default;
+$multi-col-link-tablet-font: null !default;
+
+$multi-col-mobile-font: null !default;
+$multi-col-primary-mobile-font: null null null null left !default;
+$multi-col-headline-mobile-font: 25 null 1.25 !default;
+$multi-col-subheadline-mobile-font: 14 !default;
+$multi-col-title-mobile-font: 16 700 !default;
+$multi-col-subtitle-mobile-font: null !default;
+$multi-col-description-mobile-font: null !default;
+$multi-col-link-mobile-font: null !default;
+
+//10.1 Multicolumn Module - List
+$multi-col-list-margin: 0 0 20px !default;
+$multi-col-list-title-margin: null !default;
+$multi-col-list-item-margin: 20px 0 0 !default;
+$multi-col-list-item-first-child-margin: 0 !default;
+$multi-col-list-item-title-padding: 0 0 0 60px !default;
+$multi-col-list-item-title-min-height: 40px !default;
+$multi-col-list-item-img-max-height: 40px !default;
+$multi-col-list-item-img-max-width: 40px !default;
+$multi-col-list-cta-link-margin: 30px 0 0 !default;
+
+$multi-col-list-title-font: 20 null 1.2 !default;
+$multi-col-list-item-title-font: null null 1.3 !default;
+
+//10.2 Multicolumn Module - RTF
+$multi-col-rtf-padding: 0 0 0 30px !default;
+$multi-col-rtf-h3-margin: 10px 0 !default;
+$multi-col-rtf-hr-margin: 2em 0 !default;
+$multi-col-rtf-ul-margin: 1em 0 !default;
+$multi-col-rtf-ul-padding: 0 0 0 1.2em !default;
+$multi-col-rtf-li-margin: .25em 0 !default;
+
+$multi-col-rtf-tablet-padding: 10px !default;
+$multi-col-rtf-mobile-padding: 40px 0 0 !default;
+$multi-col-rtf-li-mobile-margin: 1em 0 !default;
+
+$multi-col-rtf-ul-style: square !default;
+$multi-col-rtf-border: solid 1px $color-light !default;
+
+$multi-col-rtf-font: null null null null left !default;
+$multi-col-rtf-h3-font: 16 700 null uppercase !default;
+
+//10.3 Multicolumn Module - Layouts
+$multi-col-columns: (
+  (columns: 2, padding: 0 0 0 80px, padding-nth: 0 80px 0 0, width: 50%),
+  (columns: 3, padding: 0 50px, width: 33.3333%),
+  (columns: 4, padding: 0 20px, width: 25%),
+  (columns: 5, padding: 0 10px, width: 20%)
+) !default;
+$multi-col-columns-tablet: (
+  (columns: 2, padding: 0 0 0 15px, padding-nth: 0 15px 0 0, break-on: "2n+1"),
+  (columns: 3, padding: 0 20px),
+  (columns: 4, width: 50%, break-on: "2n+1")
+) !default;
+$multi-col-primary-col-2-padding: 20px !default;
+$multi-col-primary-col-3-padding: 20px !default;
+$multi-col-col-border-position: 10px null 25px 0 !default;
+
+$multi-col-col-tablet-margin: null !default;
+$multi-col-col-mobile-margin: 30px 0 0 !default;
+$multi-col-col-mobile-padding: 0 !important !default;
+$multi-col-col-no-description-mobile-width: 50% !default;
+$multi-col-col-no-description-mobile-padding: 0 5px !important !default;
+
+$multi-col-col-border: solid 1px $color-medium !default;
+
+//11 Rail Modules
+//11.1 Top Stories
+$top-stories-link-color: null !default;
+$top-stories-link-hover-color: null !default;
+
+$top-stories-hero-options-padding: 0 0 0 50px !default;
+$top-stories-list-padding: 20px 0 10px !default;
+$top-stories-list-margin: 0 0 10px !default;
+$top-stories-list-first-padding: 10px 0 !default;
+$top-stories-headline-margin: 0 0 20px !default;
+$top-stories-link-padding: 0 0 2px !default;
+$top-stories-cta-link-margin: null !default;
+
+$top-stories-hero-options-mobile-padding: 0 !default;
+$top-stories-headline-mobile-margin: 0 0 10px !default;
+$top-stories-list-mobile-padding: null !default;
+$top-stories-list-mobile-first-padding: null !default;
+$top-stories-link-mobile-padding: 0 !default;
+$top-stories-teaser-mobile-margin: null !default;
+$top-stories-cta-link-mobile-margin: null !default;
+
+$top-stories-border: solid 1px $color-grey-dark !default;
+$top-stories-mobile-border: solid 1px $color-grey-dark !default;
+$top-stories-hero-options-border: 1px solid $color-grey-dark !default;
+
+$top-stories-headline-font: 16 700 1.3 uppercase !default;
+$top-stories-link-font: null null 1.3 !default;
+$top-stories-teaser-font: null !default;
+$top-stories-date-font: null !default;
+
+$top-stories-headline-tablet-font: null !default;
+$top-stories-link-tablet-font: null !default;
+$top-stories-date-tablet-font: null !default;
+$top-stories-cta-link-tablet-font: null !default;
+
+$top-stories-headline-mobile-font: 14 !default;
+$top-stories-link-mobile-font: 16 !default;
+$top-stories-teaser-mobile-font: null !default;
+$top-stories-date-mobile-font: 13 !default;
+$top-stories-cta-link-mobile-font: null !default;
+
+//11.2 Most Active Markets - Rail
+$most-active-markets-rail-blue-style-font-color: $color-darker !default;
+$most-active-markets-rail-blue-style-headline-color: $color-white !default;
+$most-active-markets-rail-chosen-single-background-color: $color-lighter !default;
+$most-active-markets-rail-headline-font: 16 !default;
+$most-active-markets-rail-headline-padding: 20px !default;
+$most-active-markets-rail-dropdown-margin: 10px 0 !default;
+
+$most-active-markets-rail-table-cell-rank-width: 50px !default;
+$most-active-markets-rail-table-cell-product-width: 35% !default;
+$most-active-markets-rail-table-cell-product-value-width: 40% !default;
+
+$most-active-markets-rail-blue-theme-link-color: $color-primary-3 !default;
+$most-active-markets-rail-blue-theme-link-hover-color: $color-secondary-7 !default;
+
+$most-active-markets-rail-dropdown-mobile-width: 40% !default;
+
+//11.3 Rail Modules - Related Markets
+$related-markets-sentiment-text-color: $color-secondary-2 !default;
+
+$related-markets-headline-margin: 0 0 30px !default;
+$related-markets-product-margin: 30px 0 0 !default;
+$related-markets-sentiment-width: 50% !default;
+$related-markets-sentiment-size: 70px !default;
+$related-markets-sentiment-text-width: 50px !default;
+$related-markets-sentiment-text-margin: 31% 0 0 10px !default;
+
+$related-markets-headline-tablet-margin: null !default;
+$related-markets-sentiment-tablet-width: 25% !default;
+$related-markets-sentiment-tablet-size: null !default;
+$related-markets-sentiment-text-tablet-width: null !default;
+$related-markets-sentiment-text-tablet-margin: null !default;
+
+$related-markets-headline-mobile-margin: 0 0 20px !default;
+$related-markets-product-mobile-margin: $related-markets-product-margin !default;
+$related-markets-sentiment-mobile-width: 50% !default;
+$related-markets-sentiment-mobile-size: 82px !default;
+$related-markets-sentiment-text-mobile-width: 53px !default;
+$related-markets-sentiment-text-mobile-margin: 38% 0 0 15px !default;
+
+$related-markets-headline-font: 16 500 null uppercase left !default;
+$related-markets-sentiment-text-font: 20 null 1.2 !default;
+$related-markets-headline-tablet-font: null !default;
+$related-markets-sentiment-text-tablet-font: null !default;
+$related-markets-headline-mobile-font: 14 !default;
+$related-markets-sentiment-text-mobile-font: 17 500 !default;
+
+//11.4 Rail Modules - Client Sentiment
+$client-sentiment-sentiment-text-color: $color-secondary-2 !default;
+
+$client-sentiment-headline-margin: 10px 0 30px !default;
+$client-sentiment-legend-item-padding: 0 0 15px !default;
+$client-sentiment-sentiment-size: 186px !default;
+$client-sentiment-sentiment-margin: 0 auto 40px !default;
+$client-sentiment-sentiment-text-width: 119px !default;
+$client-sentiment-sentiment-text-margin: 31% 0 0 34px !default;
+
+$client-sentiment-headline-tablet-margin: null !default;
+$client-sentiment-sentiment-tablet-padding: null !default;
+$client-sentiment-legend-tablet-padding: 0 0 0 40px !default;
+
+$client-sentiment-headline-mobile-margin: 0 0 20px !default;
+$client-sentiment-sentiment-mobile-size: 206px !default;
+$client-sentiment-sentiment-mobile-margin: 0 auto 25px !default;
+$client-sentiment-sentiment-text-mobile-width: 132px !default;
+$client-sentiment-sentiment-text-mobile-margin: 32.5% 0 0 36px !default;
+$client-sentiment-legend-mobile-padding: null !default;
+$client-sentiment-legend-item-mobile-padding: null !default;
+
+$client-sentiment-headline-font: 16 600 null uppercase left !default;
+$client-sentiment-legend-headline-font: 14 600 null uppercase !default;
+$client-sentiment-legend-description-font: 14 null 1.2 !default;
+$client-sentiment-sentiment-text-font: 41 400 1.2 !default;
+$client-sentiment-sentiment-sub-text-font: 15 600 1 uppercase !default;
+
+$client-sentiment-headline-tablet-font: null !default;
+
+$client-sentiment-headline-mobile-font: 14 !default;
+$client-sentiment-legend-headline-mobile-font: null !default;
+$client-sentiment-legend-description-mobile-font: null !default;
+$client-sentiment-sentiment-sub-text-mobile-font: null !default;
+$client-sentiment-sentiment-text-mobile-font: null !default;
+
+//12 Economic Calendar
+//12.1 Economic Calendar - Rail
+$economic-calendar-rail-event-row-odd-bg-color: $color-lightest !default;
+$economic-calendar-rail-event-row-even-bg-color: $color-light !default;
+
+$economic-calendar-rail-event-row-link-color: null !default;
+$economic-calendar-rail-event-row-hover-color: $color-darker !default;
+$economic-calendar-rail-event-hover-link-color: $color-primary-3 !default;
+$economic-calendar-rail-event-hover-link-hover-color: $color-link-hover !default;
+
+$economic-calendar-rail-headline-margin: 10px 0 30px !default;
+$economic-calendar-rail-headline-tooltip-padding: 0 0 0 2px !default;
+$economic-calendar-rail-event-row-padding: 10px 10px 20px !default;
+$economic-calendar-rail-event-row-height: 30px !default;
+$economic-calendar-rail-event-row-text-padding: 0 0 10px !default;
+$economic-calendar-rail-event-row-flag-width: 24px !default;
+$economic-calendar-rail-event-row-flag-padding: null !default;
+$economic-calendar-rail-event-row-text-width: 90% !default;
+$economic-calendar-rail-event-row-previous-width: auto !default;
+$economic-calendar-rail-event-row-actual-width: auto !default;
+$economic-calendar-rail-event-row-date-width: $economic-calendar-rail-event-row-text-width !default;
+$economic-calendar-rail-event-row-actual-margin: 0 0 0 25px !default;
+$economic-calendar-rail-act-prev-label-padding: 0 5px 0 0 !default;
+$economic-calendar-rail-cta-link-margin: 30px 0 20px !default;
+
+$economic-calendar-rail-grid-tablet-margin: 0 !default;
+$economic-calendar-rail-event-row-tablet-padding: 20px 30px !default;
+$economic-calendar-rail-event-row-text-tablet-padding: 0 !default;
+$economic-calendar-rail-event-row-vol-tablet-width: 10% !default;
+$economic-calendar-rail-event-row-flag-tablet-width: auto !default;
+$economic-calendar-rail-event-row-text-tablet-width: 60% !default;
+$economic-calendar-rail-event-row-previous-tablet-width: auto !default;
+$economic-calendar-rail-event-row-actual-tablet-width: $economic-calendar-rail-event-row-previous-tablet-width !default;
+$economic-calendar-rail-event-row-flag-tablet-margin: 0 5px 0 0 !default;
+$economic-calendar-rail-event-row-actual-tablet-margin: 0 !default;
+
+$economic-calendar-rail-headline-mobile-margin: 0 0 20px !default;
+$economic-calendar-rail-event-row-mobile-padding: null !default;
+$economic-calendar-rail-event-row-mobile-height: null !default;
+$economic-calendar-rail-event-row-text-mobile-padding: null !default;
+$economic-calendar-rail-event-row-flag-mobile-padding: null !default;
+$economic-calendar-rail-event-row-actual-mobile-margin: null !default;
+$economic-calendar-rail-act-prev-label-mobile-padding: null !default;
+$economic-calendar-rail-cta-link-mobile-margin: null !default;
+
+$economic-calendar-rail-headline-font: 16 600 null uppercase !default;
+$economic-calendar-rail-text-font: null null normal !default;
+$economic-calendar-rail-date-font: 14 null null uppercase left !default;
+$economic-calendar-rail-previous-font: null null normal !default;
+$economic-calendar-rail-actual-font: null null normal null left !default;
+$economic-calendar-rail-act-prev-label-font: null bold !default;
+
+$economic-calendar-rail-mobile-font: 14 !default;
+$economic-calendar-rail-headline-mobile-font: 14 !default;
+$economic-calendar-rail-text-mobile-font: null !default;
+$economic-calendar-rail-date-mobile-font: null !default;
+$economic-calendar-rail-previous-mobile-font: null !default;
+$economic-calendar-rail-actual-mobile-font: null !default;
+$economic-calendar-rail-act-prev-label-mobile-font: null !default;
+
+//13 Most Popular Markets
+$most-popular-markets-title-color: $color-primary-3 !default;
+$most-popular-markets-headline-color: $color-darker !default;
+$most-popular-markets-show-all-color: $color-link !default;
+$most-popular-markets-show-all-hover-color: $color-link-hover !default;
+
+$most-popular-markets-padding: 40px 0 0 !default;
+$most-popular-markets-title-margin: 0 0 40px !default;
+$most-popular-markets-headline-margin: 10px 0 20px !default;
+$most-popular-markets-tabs-padding: 0 130px 40px !default;
+$most-popular-markets-select-padding: 0 20px 0 0 !default;
+$most-popular-markets-select-size: (100% !important, 30px) !default;
+$most-popular-markets-select-arrow-position: 13px 5px !default;
+$most-popular-markets-select-arrow-width: 5px !default;
+$most-popular-markets-select-arrow-color: $color-darker !default;
+$most-popular-markets-select-hover-arrow-color: $color-secondary-7 !default;
+
+$most-popular-markets-between-tables-3-padding: 40px !default;
+$most-popular-markets-between-tables-2-padding: 10px !default;
+$most-popular-markets-trading-sub-title-padding: 20px 0 !default;
+$most-popular-markets-tab-trading-sub-title-padding: null !default;
+$most-popular-markets-trading-title-padding: 0 20px !default;
+$most-popular-markets-trading-title-top: -16px !default;
+$most-popular-markets-trading-title-width: null !default;
+
+$most-popular-markets-tablet-padding: 55px 0 0 !default;
+$most-popular-markets-title-tablet-margin: 0 0 30px !default;
+$most-popular-markets-headline-tablet-margin: 0 0 20px !default;
+$most-popular-markets-tabs-tablet-padding: 0 0 40px !default;
+$most-popular-markets-trading-sub-title-tablet-padding: null !default;
+$most-popular-markets-tab-trading-sub-title-tablet-padding: null !default;
+$most-popular-markets-trading-title-tablet-padding: null !default;
+$most-popular-markets-trading-title-tablet-top: null !default;
+$most-popular-markets-trading-title-tablet-width: null !default;
+
+$most-popular-markets-mobile-padding: null !default;
+$most-popular-markets-wrapper-mobile-padding: 0 !default;
+$most-popular-markets-title-mobile-padding: 0 $tabletPadding !default;
+$most-popular-markets-title-mobile-margin: null !default;
+$most-popular-markets-tabs-mobile-padding: 0 $tabletPadding 40px !default;
+$most-popular-markets-headline-mobile-margin: null !default;
+$most-popular-markets-headline-mobile-max-width: 65% !default;
+$most-popular-markets-trading-title-mobile-padding: null !default;
+$most-popular-markets-trading-title-mobile-top: -12px !default;
+$most-popular-markets-trading-title-mobile-width: null !default;
+$most-popular-markets-tab-trading-title-mobile-padding: null !default;
+$most-popular-markets-tab-trading-sub-title-mobile-padding: null !default;
+$most-popular-markets-table-spread-mobile-width: 100px !default;
+
+$most-popular-markets-tabs-border: solid 3px $color-secondary-7 !default;
+$most-popular-markets-tabs-tablet-border: none !default;
+$most-popular-markets-tabs-mobile-border: $most-popular-markets-tabs-border !default;
+
+$most-popular-markets-switch-to-dropdown-breakpoint: $tablet !default;
+$most-popular-markets-switch-to-dropdown-wrapper-max-width: 170px !default;
+$most-popular-markets-switch-to-dropdown-wrapper-width: 35% !default;
+$most-popular-markets-switch-to-dropdown-wrapper-position: -3px !default;
+
+$most-popular-markets-title-font: 40 null 1.25 null center !default;
+$most-popular-markets-headline-font: 16 600 null uppercase !default;
+$most-popular-markets-show-all-font: 16 !default;
+$most-popular-markets-show-all-icon-font: 22 !default;
+$most-popular-markets-trading-title-font: 20 null 1.4 null center !default;
+$most-popular-markets-trading-sub-title-font: 16 null null null center !default;
+
+$most-popular-markets-title-tablet-font: 36 !default;
+$most-popular-markets-headline-tablet-font: null !default;
+$most-popular-markets-trading-title-tablet-font: 18 !default;
+$most-popular-markets-show-all-tablet-font: null !default;
+$most-popular-markets-show-all-icon-tablet-font: null !default;
+$most-popular-markets-trading-sub-title-tablet-font: null !default;
+
+$most-popular-markets-title-mobile-font: 25 !default;
+$most-popular-markets-headline-mobile-font: 14 null null null left !default;
+$most-popular-markets-show-all-mobile-font: 14 !default;
+$most-popular-markets-show-all-icon-mobile-font: 20 !default;
+$most-popular-markets-trading-title-mobile-font: 16 !default;
+$most-popular-markets-trading-sub-title-mobile-font: 14 !default;
+
+//14 Tooltip
+$tooltip-color: $color-darker !default;
+$tooltip-icon-color: $color-dark !default;
+$tooltip-icon-hover-color: $color-secondary-7 !default;
+
+$tooltip-h2-padding: 0 0 10px !default;
+$tooltip-border: solid 1px $color-dark !default;
+$tooltip-size: 16px !default;
+
+$tooltip-h2-font: 14 600 !default;
+$tooltip-p-font: 12 normal 1.4 none !default;
+$tooltip-icon-font: 11 null 14px null center !default;
+
+$tooltip-p-mobile-font: 14 !default;
+
+//15 Alternating Image Layout
+$alternating-layout-headline-color: $color-primary-3 !default;
+$alternating-layout-headline-inverse-color: $color-white !default;
+
+$alternating-layout-padding: 40px 0 !default;
+$alternating-layout-columns-margin: 40px auto !default;
+$alternating-layout-columns-padding: 0 0 20px !default;
+$alternating-layout-content-padding: 40px !default;
+$alternating-layout-cta-btn-padding: null !default;
+$alternating-layout-headline-padding: null !default;
+$alternating-layout-image-width: 66.6666% !default;
+
+$alternating-layout-tablet-padding: 40px $tabletPadding !default;
+$alternating-layout-headline-tablet-padding: null !default;
+
+$alternating-layout-mobile-padding: 40px 0 !default;
+$alternating-layout-columns-mobile-margin: 40px $tabletPadding !default;
+$alternating-layout-columns-mobile-padding: null !default;
+$alternating-layout-cta-btn-mobile-padding: null !default;
+$alternating-layout-headline-mobile-padding: 0 0 10px !default;
+
+$alternating-layout-border: solid 1px $color-light !default;
+
+$alternating-layout-headline-font: 40 null null null center !default;
+$alternating-layout-subheadline-font: 20 null null null center !default;
+
+$alternating-layout-headline-tablet-font: 36 !default;
+$alternating-layout-subheadline-tablet-font: null null 1.25 !default;
+
+$alternating-layout-headline-mobile-font: 25 null 1.25 !default;
+$alternating-layout-subheadline-mobile-font: 16 !default;
+
+//15.1 Alternating Image Layout - Item
+$alternating-item-headline-color: $color-primary-3 !default;
+$alternating-item-headline-inverse-color: $color-white !default;
+
+$alternating-ite-cta-margin: 10px 0 !default;
+$alternating-item-media-margin: 20px 0 !default;
+$alternating-item-headline-margin: 0 0 10px !default;
+
+$alternating-item-cta-tablet-font: null !default;
+
+$alternating-item-headline-tablet-margin: null !default;
+$alternating-item-media-tablet-margin: null !default;
+
+$alternating-item-headline-mobile-margin: null !default;
+$alternating-item-mobile-margin: null !default;
+
+$alternating-item-headline-font: 20 null 1.35 !default;
+$alternating-item-sub-headline-font: null !default;
+
+$alternating-item-headline-tablet-font: null null 1.25 !default;
+$alternating-item-sub-headline-tablet-font: null !default;
+
+$alternating-item-mobile-font: 14 !default;
+$alternating-item-headline-mobile-font: 16 700 !default;
+$alternating-item-sub-headline-mobile-font: null !default;
+
+//16 Key Benefits
+$key-benefits-slider-item-bg-color: null !default;
+$key-benefits-slider-item-active-bg-color: $color-white !default;
+$key-benefits-slider-item-progress-bg-color: $color-secondary-7 !default;
+$key-benefits-slider-item-tablet-bg-color: $color-medium !default;
+$key-benefits-slider-item-active-tablet-bg-color: $color-primary-3 !default;
+
+$key-benefits-headline-color: $color-primary-3 !default;
+$key-benefits-headline-inverse-color: $color-white !default;
+$key-benefits-slider-item-color: null !default;
+$key-benefits-slider-item-active-color: null !default;
+$key-benefits-slide-item-hover-color: null !default;
+$key-benefits-slide-item-active-hover-color: null !default;
+$key-benefits-slide-title-color: $color-primary-3 !default;
+$key-benefits-slide-headline-inverse-color: $color-white !default;
+
+$key-benefits-padding: 30px 0 !default;
+$key-benefits-headline-margin: null !default;
+$key-benefits-description-margin: 0 0 10px !default;
+$key-benefits-slider-nav-min-height: 160px !default;
+$key-benefits-slider-item-size: floor($page-width/6) null !default;
+$key-benefits-slider-item-padding: 10px 5px 15px !default;
+$key-benefits-slider-item-margin: null !default;
+$key-benefits-slider-item-progress-height: 2px !default;
+$key-benefits-slider-item-max-height: 80px !default;
+$key-benefits-slider-item-max-width: 100px !default;
+$key-benefits-slide-margin: 0 0 20px !default;
+$key-benefits-slide-padding: 20px 10px !default;
+$key-benefits-slide-image-width: 60% !default;
+$key-benefits-slide-content-padding: 45px !default;
+$key-benefits-slide-title-margin: null !default;
+$key-benefits-slide-description-margin: 0 !default;
+$key-benefits-slide-cta-link: 10px 0 0 !default;
+$key-benefits-slide-image-max-width: 512px !default;
+$key-benefits-slide-image-max-height: 340px !default;
+
+$key-benefits-slider-control-prev-position: 50px null null -30px !default;
+$key-benefits-slider-control-next-position: null -30px null auto !default;
+
+$key-benefits-tablet-padding: null !default;
+$key-benefits-slider-viewport-tablet-min-height: 60px !default;
+$key-benefits-headline-tablet-margin: null !default;
+$key-benefits-description-tablet-margin: null !default;
+$key-benefits-slide-tablet-margin: 0 !default;
+$key-benefits-slider-nav-tablet-margin: 20px 0 !default;
+$key-benefits-slider-nav-tablet-min-height: 0 !default;
+$key-benefits-slider-item-tablet-size: 12.5px !important, 12.5px !default;
+$key-benefits-slider-item-tablet-padding: 0 !default;
+$key-benefits-slider-item-tablet-margin: 0 5px !default;
+$key-benefits-slider-item-tablet-border-radius: 50% !default;
+$key-benefits-slide-title-tablet-margin: 0 0 10px !default;
+$key-benefits-slide-description-tablet-margin: null !default;
+
+$key-benefits-mobile-padding: null !default;
+$key-benefits-headline-mobile-margin: 0 0 10px !default;
+$key-benefits-description-mobile-margin: 0 0 20px !default;
+$key-benefits-slide-title-mobile-margin: null !default;
+$key-benefits-slide-description-mobile-margin: null !default;
+$key-benefits-slider-item-mobile-size: null !default;
+
+$key-benefits-slide-item-margin-border: null !default;
+$key-benefits-slide-item-border: null !default;
+
+$key-benefits-slide-item-margin-tablet-border: null !default;
+$key-benefits-slide-item-tablet-border: null !default;
+
+$key-benefits-font: null null null null center !default;
+$key-benefits-headline-font: 40 !default;
+$key-benefits-description-font: 20 null 1.4 !default;
+$key-benefits-slider-control-font: null null null null center !default;
+$key-benefits-slider-item-font: 14 null 1.3 !default;
+$key-benefits-slider-item-title-font: null !default;
+$key-benefits-slide-title-font: null !default;
+$key-benefits-slide-description-font: null !default;
+
+$key-benefits-headline-tablet-font: 36 !default;
+$key-benefits-description-tablet-font: null !default;
+$key-benefits-slide-title-tablet-font: 20 null 1.25 !default;
+$key-benefits-slide-description-tablet-font: null !default;
+
+$key-benefits-headline-mobile-font: 25 null 1.25 !default;
+$key-benefits-description-mobile-font: 14 null 1.68 !default;
+$key-benefits-slide-title-mobile-font: 14 700 !default;
+$key-benefits-slide-description-mobile-font: 14 !default;
+
+//17 Education
+//17.1 Education - Education Themes Rail
+$education-themes-rail-themes-link-active-bg-color: $color-white !default;
+$education-themes-rail-themes-link-color: $color-link !default;
+$education-themes-rail-themes-link-hover: $color-link-hover !default;
+$education-themes-rail-themes-link-active: $color-link-hover !default;
+
+$education-themes-rail-headline-margin: 0 0 10px !default;
+$education-themes-rail-themes-margin: 0 -10px !default;
+$education-themes-rail-themes-link-margin: 0 0 1px !default;
+$education-themes-rail-themes-link-padding: 15px 10px 14px !default;
+
+$education-themes-rail-tablet-padding: 20px $tabletPadding !default;
+$education-themes-rail-themes-link-tablet-width: 33.3333% !default;
+$education-themes-rail-themes-link-tablet-padding: 0 30px 0 0 !default;
+
+$education-themes-rail-headline-mobile-margin: null !default;
+$education-themes-rail-themes-link-mobile-margin: null !default;
+$education-themes-rail-themes-link-mobile-padding: null !default;
+
+$education-themes-rail-themes-link-border: null !default;
+
+$education-themes-rail-headline-font: 16 700 null uppercase !default;
+$education-themes-rail-themes-link-font: 14 700 1.5 uppercase !default;
+
+$education-themes-rail-headline-mobile-font: null !default;
+$education-themes-rail-themes-link-mobile-font: null !default;
+
+//17.1.1 Education - Education Themes Rail - Tertiary Navigation Menu
+$tertiary-navigation-rail-sub-link-color: $color-link !default;
+$tertiary-navigation-rail-sub-link-hover-color: $color-link-hover !default;
+
+$tertiary-navigation-rail-padding: 0 0 0 15px !default;
+$tertiary-navigation-rail-margin: 0 !default;
+$tertiary-navigation-rail-sub-link-padding: 5px 0 5px 10px !default;
+$tertiary-navigation-rail-link-icon-position: 10px null null -10px !default;
+
+$tertiary-navigation-rail-sub-link-font: null 400 !default;
+$tertiary-navigation-rail-link-icon-font: 20 !default;
+
+//18 Banner Area
+$banner-area-item-color: $color-white !default;
+$banner-area-item-hover-color: $color-white !default;
+
+$banner-area-padding: 60px 0 !default;
+$banner-area-headline-margin: null !default;
+$banner-area-subheadline-margin: null !default;
+$banner-area-item-height: 92px !default;
+$banner-area-control-top: 36px !default;
+$banner-area-control-left: -30px !default;
+$banner-area-wrapper-margin: 0 25px !default;
+$banner-area-item-padding: 0 5px !default;
+$banner-area-item-content-padding: 20px 17px !default;
+
+$banner-area-wrapper-tablet-margin: 0 100px !default;
+$banner-area-headline-tablet-margin: null !default;
+$banner-area-subheadline-tablet-margin: null !default;
+
+$banner-area-mobile-padding: 40px 0 !default;
+$banner-area-wrapper-mobile-margin: 0 65px !default;
+$banner-area-headline-mobile-margin: null !default;
+$banner-area-subheadline-mobile-margin: null !default;
+$banner-area-item-mobile-margin: 0 0 0 10px !default;
+
+$banner-area-item-font: 15 !default;
+$banner-area-headline-font: null !default;
+$banner-area-subheadline-font: null !default;
+
+$banner-area-headline-tablet-font: null !default;
+$banner-area-subheadline-tablet-font: null !default;
+
+$banner-area-item-mobile-font: 14 !default;
+$banner-area-headline-mobile-font: null !default;
+$banner-area-subheadline-mobile-font: null !default;
+
+// 19 Platform Comparison
+$platform-comparison-actions-width: 100% !default;
+$platform-comparison-actions-padding: 25% !default;
+$platform-comparison-actions-font: null null 0 !default;
+
+$platform-comparison-action-padding: 45px 5px !default;
+$platform-comparison-action-background-color: $color-light !default;
+$platform-comparison-action-link-color: $color-darker !default;
+$platform-comparison-action-border-radius: 3px !default;
+$platform-comparison-table-odd-background-color: $color-lightest !default;
+$platform-comparison-table-last-child-margin: 40px !default;
+$platform-comparison-table-row-margin: 25% !default;
+$platform-comparison-table-first-child-cell-description-padding: 0 !default;
+
+$platform-comparison-table-head-header-font: 20 600 null none !default;
+$platform-comparison-table-head-header-margin: 20px !default;
+$platform-comparison-table-head-description-margin: 0 !default;
+$platform-comparison-table-head-description-padding: 0 !default;
+
+$platform-comparison-inner-table-width: 100% !default;
+$platform-comparison-inner-table-cell-width: $page-width/4 !default;
+$platform-comparison-inner-table-cell-padding: 20px 20px 10px !default;
+$platform-comparison-inner-table-cell-headline-font: 14 700 1.2 uppercase !default;
+$platform-comparison-inner-table-cell-description-font: 14 !default;
+$platform-comparison-inner-table-cell-list-width: 100% !default;
+$platform-comparison-inner-table-cell-list-margin: null !default;
+$platform-comparison-inner-table-cell-list-item-margin: 10px 0 !default;
+
+$platform-comparison-actions-tablet-padding: 33.3333% !default;
+$platform-comparison-table-wrapper-tablet-margin: 17px !default;
+$platform-comparison-table-row-tablet-margin: 33.3333% !default;
+
+$platform-comparison-table-mobile-menu-headline-font: 14 800 50px !default;
+$platform-comparison-table-mobile-menu-headline-font-color: $color-white !default;
+$platform-comparison-table-mobile-menu-headline-width: 100% !default;
+$platfrom-comparions-table-mobile-menu-headline-padding: 0 45px 0 30px !default;
+$platform-comparison-table-mobile-menu-headline-background-color: $color-primary-3 !default;
+$platform-comparison-table-mobile-menu-headline-border: 2px solid $color-white !default;
+$platform-comparison-table-mobile-menu-action-font: 20 !default;
+$platform-comparison-table-row-mobile-background-color: $color-white !default;
+$platform-comparison-table-row-odd-mobile-background-color: $color-lightest !default;
+$platform-comparison-inner-table-cell-mobile-width: 100% !default;
+$platform-comparison-inner-table-cell-mobile-padding: 20px 30px 10px !default;
+$platform-comparison-inner-table-cell-description-mobile-padding: 0 !default;
+
+//20 Product Summary
+//20.1 Product Summary - Banner
+$product-summary-banner-rate-bg-color: null !default;
+$product-summary-banner-rate-diff-bg-color: $color-medium !default;
+$product-summary-banner-rate-up-inter-bg-color: $color-secondary-7 !default;
+$product-summary-banner-rate-down-inter-bg-color: $color-secondary-6 !default;
+
+$product-summary-banner-headline-color: $color-primary-3 !default;
+$product-summary-banner-headline-inverse-color: $color-white !default;
+$product-summary-banner-rate-color: null !default;
+$product-summary-banner-rate-up-color: $color-secondary-7 !default;
+$product-summary-banner-rate-up-inter-color: $color-white !default;
+$product-summary-banner-rate-down-color: $color-secondary-6 !default;
+$product-summary-banner-rate-down-inter-color: $color-white !default;
+$product-summary-banner-changes-up-color: $color-secondary-7 !default;
+$product-summary-banner-changes-down-color: $color-secondary-6 !default;
+$product-summary-banner-trigger-color: $color-dark !default;
+$product-summary-banner-trigger-hover-color: $color-link-hover !default;
+$product-summary-banner-trigger-inverse-color: $color-link-inverse !default;
+$product-summary-banner-trigger-inverse-hover-color: $color-link-inverse-hover !default;
+
+$product-summary-banner-padding: 40px 0 !default;
+$product-summary-banner-subheadline-margin: 0 0 30px !default;
+$product-summary-banner-header-padding: 0 0 20px !default;
+$product-summary-banner-header-width: percentage(.4) !default;
+$product-summary-banner-data-width: percentage(.6) !default;
+$product-summary-banner-data-padding: 0 0 0 10px !default;
+$product-summary-banner-rates-padding: 0 0 50px !default;
+$product-summary-banner-rate-size: 190px 120px !default;
+$product-summary-banner-rate-padding: 0 !default;
+$product-summary-banner-rate-buy-margin: 0 0 0 -3px !default;
+$product-summary-banner-rate-value-position: -10px null null 10px !default;
+$product-summary-banner-rate-buy-value-position: null 10px null auto !default;
+$product-summary-banner-rate-label-position: null null 5px 15px !default;
+$product-summary-banner-rate-buy-label-position: null 15px null auto !default;
+$product-summary-banner-rate-diff-position: 68px 154px !default;
+$product-summary-banner-rate-diff-size: 70px !default;
+$product-summary-banner-rate-diff-padding: 22.5px 0 0 !default;
+$product-summary-banner-rate-arrow-margin: -2px 5px 0 !default;
+$product-summary-banner-rate-arrow-width: 6px !default;
+$product-summary-banner-changes-padding: 0 0 0 20px !default;
+$product-summary-banner-trigger-margin: 0 0 10px !default;
+$product-summary-banner-trigger-icon-padding: 0 0 0 5px !default;
+
+$product-summary-banner-tablet-padding: null !default;
+$product-summary-banner-subheadline-tablet-margin: 0 0 25px !default;
+$product-summary-banner-rates-tablet-padding: 0 0 35px !default;
+$product-summary-banner-rate-tablet-size: 140px 90px !default;
+$product-summary-banner-rate-tablet-padding: null !default;
+$product-summary-banner-rate-buy-tablet-margin: null !default;
+$product-summary-banner-rate-diff-tablet-position: 52px 114px !default;
+$product-summary-banner-rate-diff-tablet-size: 50px !default;
+$product-summary-banner-rate-diff-tablet-padding: 16px 0 0 !default;
+$product-summary-banner-rate-arrow-tablet-margin: null !default;
+
+$product-summary-banner-mobile-padding: 40px 0 30px !default;
+$product-summary-banner-headline-mobile-margin: 0 0 10px !default;
+$product-summary-banner-subheadline-mobile-margin: 0 !default;
+$product-summary-banner-rates-mobile-padding: 0 0 20px !default;
+$product-summary-banner-rate-mobile-size: 50% null !default;
+$product-summary-banner-rate-mobile-padding: null !default;
+$product-summary-banner-rate-buy-mobile-margin: 0 0 0 -2px !default;
+$product-summary-banner-rate-diff-mobile-position: null 50% !default;
+$product-summary-banner-rate-diff-mobile-size: 50px !default;
+$product-summary-banner-rate-diff-mobile-padding: 17px 0 0 !default;
+$product-summary-banner-rate-diff-mobile-margin: 0 -25px 0 0 !default;
+$product-summary-banner-changes-mobile-padding: 10px 0 0 !default;
+$product-summary-banner-changes-mobile-width: percentage(.5) !default;
+$product-summary-banner-rate-arrow-mobile-margin: null !default;
+
+$product-summary-banner-breakpoint: $mobile !default;
+$product-summary-banner-rate-border: solid 3px $color-medium !default;
+$product-summary-banner-rate-diff-border-radius: 50% !default;
+$product-summary-banner-rate-mobile-border: solid 2px $color-medium !default;
+
+$product-summary-banner-headline-font: 50 400 1.2 !default;
+$product-summary-banner-subheadline-font: 19 !default;
+$product-summary-banner-rate-font: 44 null null null left !default;
+$product-summary-banner-rate-label-font: 16 700 null uppercase !default;
+$product-summary-banner-rate-diff-font: 23 null 1 null center !default;
+$product-summary-banner-changes-value-font: 32 null null null left !default;
+$product-summary-banner-changes-label-font: 14 null null uppercase left !default;
+$product-summary-banner-trigger-font: 15 700 1.6 uppercase !default;
+
+$product-summary-banner-headline-tablet-font: null !default;
+$product-summary-banner-subheadline-tablet-font: 16 !default;
+$product-summary-banner-rate-tablet-font: 32 !default;
+$product-summary-banner-rate-label-tablet-font: 14 !default;
+$product-summary-banner-rate-diff-tablet-font: 18.5 !default;
+$product-summary-banner-changes-value-tablet-font: 23 !default;
+$product-summary-banner-changes-label-tablet-font: 10 !default;
+
+$product-summary-banner-headline-mobile-font: 36 null 1.1 !default;
+$product-summary-banner-subheadline-mobile-font: null !default;
+$product-summary-banner-rate-mobile-font: 30 !default;
+$product-summary-banner-rate-label-mobile-font: 11 !default;
+$product-summary-banner-rate-diff-mobile-font: 16 !default;
+$product-summary-banner-changes-value-mobile-font: 25 null 1.4 !default;
+$product-summary-banner-changes-label-mobile-font: 11 null 1.4 !default;
+
+$product-summary-banner-controls: "tabs" !default;
+
+//20.2 Product Summary - Details
+$product-summary-details-padding: $product-summary-banner-padding !default;
+$product-summary-details-col-padding: 20px !default;
+
+$product-summary-details-rtf-table-mobile-padding: 10px 5px !default;
+$product-summary-details-rtf-table-mobile-side-padding: 15px !default;
+
+$product-summary-details-rtf-table-font: 14 null null none !default;
+$product-summary-details-disclaimer-font: 12 !default;
+
+$product-summary-details-tablet-padding: $product-summary-banner-tablet-padding !default;
+$product-summary-details-mobile-padding: $product-summary-banner-mobile-padding !default;
+
+//21 Research
+//21.1 Research - Article
+$research-article-section-tablet-padding: 0 63px !default;
+$research-article-cta-margin: 20px 0 !default;
+$research-article-headline-font: 16 700 null uppercase !default;
+
+$research-article-title-font: 26 null 1.3 !default;
+$research-article-title-margin: 5px 0 30px !default;
+$research-article-title-mobile-font: 25 null 1.25 !default;
+
+$research-article-title-link-color: null !default;
+$research-article-title-link-hover-color: null !default;
+
+$research-article-subtitle-margin: 10px 0 !default;
+$research-article-subtitle-font: 12 200 1.4 uppercase !default;
+
+$research-article-author-font: null bold !default;
+
+$research-article-teaser-font: null null 1.5 !default;
+$research-article-teaser-margin: 20px 0 !default;
+
+//21.2 Research - Related
+$research-related-margin: 30px 0 !default;
+$research-related-mobile-margin: 20px 0 !default;
+
+$research-related-article-width: "50% - 5px" null true !default;
+$research-related-article-padding: 15px 20px 10px !default;
+$research-related-article-mobile-padding: 30px 20px 10px !default;
+$research-related-article-mobile-margin: 0 0 10px !default;
+
+$research-related-article-bg-color: $color-lighter !default;
+$research-related-article-title-font: 16 !default;
+$research-related-article-title-margin: 8px 0 !default;
+
+//21.3 Research - Master the Markets
+$research-master-markets-article-headline-font: 12 !default;
+$research-master-markets-article-headline-bg-color: $color-primary-3 !default;
+$research-master-markets-article-headline-color: $color-white !default;
+$research-master-markets-article-headline-padding: 2px 10px !default;
+$research-master-markets-article-headline-position: 0 null null 20px !default;
+
+$research-master-markets-article-title-font: 22 !default;
+$research-master-markets-article-title-margin: 20px 0 0 !default;
+$research-master-markets-article-teaser-max-height: 4.7em !default;
+
+//21.4 Research - Article Tags
+$article-tags-link-color: $color-secondary-7 !default;
+$article-tags-font: 12 200 1.4 uppercase !default;
+$article-tags-link-font: null 700 null none !default;
+
+$article-tags-mobile-font: 11 !default;
+
+//21.5 Research - Grid Page
+$research-header-min-height: 40px !default;
+$research-header-tablet-min-height: 37px !default;
+$research-list-max-width: 951px !default;
+
+$research-item-bg-color: $color-white !default;
+$research-item-even-bg-color: $color-lightest !default;
+$research-item-mobile-border: solid 1px $color-light !default;
+$research-item-article-teaser-mobile-max-height: 4.7em !default;
+
+$research-content-padding: 30px 40px !default;
+$research-content-mobile-padding: 20px $tabletPadding !default;
+
+//21.5.1 Research - Grid Page - Grid View
+$research-grid-list-margin: 0 0 0 -10px !default;
+
+$research-grid-item-bg-color: $color-white !default;
+$research-grid-item-hover-bg-color: $color-lightest !default;
+$research-grid-item-width: percentage(1/3) !default;
+$research-grid-item-alt-width: percentage(2/3) !default;
+$research-grid-item-padding: 0 0 78px !default;
+$research-grid-item-live-promo-padding: 0 !default;
+$research-grid-item-border: solid 10px $color-lighter !default;
+
+$research-grid-item-tablet-width: percentage(1/2) !default;
+$research-grid-item-alt-tablet-width: percentage(1) !default;
+
+$research-grid-item-mobile-border: solid 1px $color-light !default;
+$research-grid-item-mobile-padding: 0 !default;
+
+$research-grid-content-padding: 30px 30px 134px !default;
+$research-grid-content-wrapper-color: $color-darker !default;
+$research-grid-content-wrapper-position: null null null 0 !default;
+$research-grid-content-wrapper-max-height: 8.6em !default;
+$research-grid-content-wrapper-padding: 0 30px !default;
+
+$research-grid-article-title-margin: 5px 0 15px !default;
+$research-grid-article-title-font: 23 !default;
+
+$research-grid-article-teaser-margin: 17px 0 !default;
+
+$research-grid-article-tabs-bg-color: $color-white !default;
+$research-grid-article-tabs-position: null null -20px 0 !default;
+$research-grid-article-tabs-max-height: 78px !default;
+$research-grid-article-tabs-padding: 10px 30px 20px !default;
+$research-grid-article-tabs-border: solid 20px $color-white !default;
+
+$research-grid-item-top-story-color: $color-white !default;
+$research-grid-item-top-story-bg-color: $color-primary-2 !default;
+$research-grid-item-top-story-hover-bg-color: darken($color-primary-2, 5%) !default;
+
+$research-grid-item-top-story-content-padding: 50px 30px 30px !default;
+$research-grid-item-top-story-content-mobile-padding: 30px $tabletPadding !default;
+
+$research-grid-item-top-story-article-headline-color: $color-primary-2 !default;
+$research-grid-item-top-story-article-headline-bg-color: $color-white !default;
+$research-grid-item-top-story-article-headline-position: 0 null null 30px !default;
+$research-grid-item-top-story-article-headline-padding: 5px 10px !default;
+$research-grid-item-top-story-article-headline-font: 12 !default;
+
+$research-grid-item-top-story-article-headline-mobile-color: $color-white !default;
+$research-grid-item-top-story-article-headline-mobile-bg-color: $color-secondary-7 !default;
+$research-grid-item-top-story-article-headline-mobile-position: null null null $tabletPadding !default;
+
+$research-grid-item-top-story-article-title-font: 44 null 1.2 !default;
+$research-grid-item-top-story-article-title-margin: 5px 0 10px !default;
+$research-grid-item-top-story-article-title-padding: 0 100px 0 0 !default;
+$research-grid-item-top-story-article-title-border-position: -5px !default;
+$research-grid-item-top-story-article-title-content-position: 0 null null 0 !default;
+$research-grid-item-top-story-article-title-border: solid 1px transparent !default;
+$research-grid-item-top-story-article-title-hover-border: solid 1px $color-white !default;
+
+$research-grid-item-top-story-article-title-mobile-margin: 5px 0 0 !default;
+$research-grid-item-top-story-article-title-mobile-padding: 14px 100px 0 0 !default;
+
+$research-grid-item-top-story-article-author-underline: $color-white 1px 1px !default;
+
+$research-grid-item-top-story-article-tags-bg-color: none !default;
+$research-grid-item-top-story-article-tags-link-underline: $color-white 1px !default;
+
+//21.5.2 Research - Grid Page - Switch View
+$research-grid-switch-position: null 0 !default;
+$research-grid-switch-after-filter-position: 7px !default;
+$research-grid-switch-trigger-margin: 0 0 5px 20px !default;
+$research-grid-switch-tablet-margin: 0 0 5px !default;
+
+//22 International Landing
+$international-landing-map-pin-icon: $icon-pin !default;
+
+//23 Live Trading
+$live-trading-promo-padding: 20px !default;
+$live-trading-promo-cta-color: $color-white !default;
+$live-trading-promo-headline-font: 20 null null uppercase !default;
+$live-trading-promo-headline-color: $color-white !default;
+$live-trading-promo-description-margin: 20px 0 !default;
+$live-trading-promo-description-color: $color-white !default;
+$live-trading-promo-rail-border-bottom: 40px !default;
+$live-trading-promo-rail-border-top: $live-trading-promo-rail-border-bottom !default;
+$live-trading-promo-rail-border: solid 20px $color-lighter !default;
+$live-trading-promo-research-grid-padding: 50px 30px !default;
+$live-trading-promo-research-grid-headline-font: 30 null 1.2 !default;
+
+$live-trading-promo-tablet-font: null null null null left !default;
+$live-trading-promo-tablet-description-margin: 5px 0 10px !default;
+$live-trading-promo-tablet-description-font: null null 1.4 null left !default;
+;
+$live-trading-promo-rail-tablet-padding: 20px !default;
+
+$live-trading-promo-mobile-font: null null null null right !default;
+$live-trading-promo-mobile-headline-font: 14 null 1.6 !default;
+$live-trading-promo-mobile-description-padding: 5px 0 10px !default;
+$live-trading-promo-research-grid-mobile-padding: 20px !default;
+$live-trading-promo-research-grid-mobile-headline-font: 20 !default;
+
+//24 Pagination
+$pagination-font: null null null null center !default;
+$pagination-padding: 20px 0 !default;
+$pagination-load-more-font: 14 700 null uppercase !default;
+$pagination-load-more-padding: 10px 20px !default;
+$pagination-link-padding: 3px !default;
+$pagination-link-active-font: null 700 !default;
+$pagination-link-active-color: $color-darker !default;
+$pagination-item-disabled-color: $color-darker !default;
+$pagination-control-min-width: 20px !default;
+$pagination-control-icon-position: 50% null null 50% !default;
+$pagination-control-icon-margin: -4px 0 0 -4px !default;
+$pagination-control-icon-size: 4px 8px !default;
+$pagination-mobile-bg-color: $color-white !default;
+$pagination-breakpoint: $mobile !default;

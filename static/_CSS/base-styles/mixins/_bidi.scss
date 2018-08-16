@@ -1,0 +1,11 @@
+/* Original using Stylus by David Walsh http://davidwalsh.name/stylus-parent-selectors */
+
+/* mixin definition ; sets LTR and RTL within the same style call */
+@mixin bidi-style($prop, $value, $inverse-prop, $default-value) {
+  #{$prop}: $value;
+  
+  html[dir=rtl] & {
+    #{$inverse-prop}: $value;
+    #{$prop}: $default-value;
+  }
+}

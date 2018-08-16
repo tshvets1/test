@@ -1,0 +1,3 @@
+@function nullable($variable) {
+  @return if($variable == false, null, $variable);
+}

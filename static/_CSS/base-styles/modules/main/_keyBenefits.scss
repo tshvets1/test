@@ -1,0 +1,328 @@
+%key-benefits-inverse {
+  .key-benefits__headline {
+    color: $key-benefits-headline-inverse-color;
+  }
+
+  .key-benefits__slide h3 {
+    color: $key-benefits-slide-headline-inverse-color;
+  }
+}
+
+.key-benefits {
+  &-section {
+    padding: $key-benefits-padding;
+    @include set-text-styles($key-benefits-font...);
+
+    // PAGE ARROWS
+    .bx-controls-direction {
+      > a {
+        position: absolute;
+        z-index: $defaultZIndex + 1;
+        display: block;
+        overflow: hidden;
+        @include position($key-benefits-slider-control-prev-position...);
+        text-indent: -9999px;
+        @include set-text-styles($key-benefits-slider-control-font...);
+
+        &.bx-next {
+          @include position($key-benefits-slider-control-next-position...);
+          @include sprite($icon-slider-control-right);
+        }
+
+        &.bx-prev {
+          @include sprite($icon-slider-control-left);
+        }
+
+        &.disabled {
+          display: none;
+        }
+      }
+    }
+
+    @each $color-theme in $color-themes {
+      @if (map_get($color-theme, inverseColor)) {
+        &[data-sectionbg="#{map_get($color-theme, theme)}"] {
+          @extend %key-benefits-inverse;
+        }
+      }
+    }
+  }
+
+  &__headline {
+    margin: $key-benefits-headline-margin;
+    @include set-text-styles($key-benefits-headline-font...);
+    color: $key-benefits-headline-color;
+  }
+
+  &__description {
+    margin: $key-benefits-description-margin;
+    @include set-text-styles($key-benefits-description-font...);
+    word-wrap: break-word;
+  }
+
+  &__slider {
+    @extend %list--unstyled;
+
+    li {
+      display: block;
+    }
+  }
+
+  &__slider-nav {
+    height: 100%;
+
+    &[data-hide-progress="true"] &-item-progress {
+      display: none !important;
+    }
+  }
+
+  &__slider-nav-item {
+    display: block;
+    position: relative;
+    @include size($key-benefits-slider-item-size...);
+    padding: $key-benefits-slider-item-padding;
+    @include set-text-styles($key-benefits-slider-item-font...);
+    text-decoration: none;
+    outline: 0 !important;
+    color: $key-benefits-slider-item-color;
+    border-left: $key-benefits-slide-item-margin-border;
+    border-right: $key-benefits-slide-item-margin-border;
+
+    &:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: $beforeAllZIndex;
+      width: 100%;
+      height: 100%;
+      border: $key-benefits-slide-item-border;
+      background: $key-benefits-slider-item-bg-color;
+    }
+
+    &.active {
+      overflow: hidden;
+      color: $key-benefits-slider-item-active-color;
+
+      &:after {
+        background: $key-benefits-slider-item-active-bg-color;
+      }
+    }
+
+    &.active &-progress {
+      left: 0;
+      bottom: 0;
+      position: absolute;
+      display: block;
+      width: 0;
+      height: $key-benefits-slider-item-progress-height;
+      background-color: $key-benefits-slider-item-progress-bg-color;
+    }
+
+    &[data-has-hover-image="true"] {
+      &:hover,
+      &.active {
+        .key-benefits__slider-nav-image {
+          display: none;
+        }
+
+        .key-benefits__slider-nav-image-hover {
+          display: inline-block;
+        }
+      }
+    }
+  }
+
+  &__slider-nav-image,
+  &__slider-nav-image-hover {
+    max-height: $key-benefits-slider-item-max-height;
+    max-width: $key-benefits-slider-item-max-width;
+    margin: $key-benefits-slider-item-margin;
+  }
+
+  &__slider-nav-image-hover {
+    display: none;
+  }
+
+  &__slider-nav-title {
+    @include set-text-styles($key-benefits-slider-item-title-font...);
+  }
+
+  &__slide {
+    margin: $key-benefits-slide-margin;
+
+    &[data-columns="2"] {
+      display: table-row;
+
+      .col {
+        display: table-cell;
+        width: #{100% - $key-benefits-slide-image-width};
+        vertical-align: middle;
+        padding: $key-benefits-slide-padding;
+      }
+    }
+    &[data-image="left"] {
+      .col:first-child {
+        width: $key-benefits-slide-image-width;
+      }
+      .col + .col {
+        padding-left: $key-benefits-slide-content-padding;
+        text-align: left;
+      }
+    }
+    &[data-image="right"] {
+      .col:first-child {
+        padding-right: $key-benefits-slide-content-padding;
+        text-align: left;
+      }
+
+      .col + .col {
+        width: $key-benefits-slide-image-width;
+      }
+    }
+
+    h3 {
+      margin: $key-benefits-slide-title-margin;
+      @include set-text-styles($key-benefits-slide-title-font...);
+      color: $key-benefits-slide-title-color;
+    }
+
+    p {
+      margin: $key-benefits-slide-description-margin;
+      @include set-text-styles($key-benefits-slide-description-font...);
+    }
+
+    .cta-link {
+      margin: $key-benefits-slide-cta-link;
+    }
+
+    &-image {
+      max-height: $key-benefits-slide-image-max-height;
+      max-width: $key-benefits-slide-image-max-width;
+    }
+  }
+
+  // TABLET LAYOUT
+  @media screen and (max-width: $tablet) {
+    &-section {
+      padding: $key-benefits-tablet-padding;
+
+      .bx-viewport {
+        min-height: $key-benefits-slider-viewport-tablet-min-height;
+      }
+
+      .bx-wrapper {
+        max-width: 100% !important;
+      }
+    }
+
+    &__headline {
+      margin: $key-benefits-headline-tablet-margin;
+      @include set-text-styles($key-benefits-headline-tablet-font...);
+    }
+
+    &__description {
+      @include set-text-styles($key-benefits-description-tablet-font...);
+      margin: $key-benefits-description-tablet-margin;
+    }
+
+    &__slider-nav {
+      min-height: $key-benefits-slider-nav-tablet-min-height;
+      margin: $key-benefits-slider-nav-tablet-margin;
+      width: 100% !important;
+      height: auto;
+      text-align: center;
+      transform: none !important;
+
+      &-image,
+      &-item-progress {
+        display: none !important;
+      }
+    }
+
+    &__slider-nav-item {
+      float: none !important;
+      display: inline-block;
+      @include size($key-benefits-slider-item-tablet-size...);
+      margin: $key-benefits-slider-item-tablet-margin;
+      padding: $key-benefits-slider-item-tablet-padding;
+      overflow: hidden;
+      border-radius: $key-benefits-slider-item-tablet-border-radius;
+      border-left: $key-benefits-slide-item-margin-tablet-border;
+      border-right: $key-benefits-slide-item-margin-tablet-border;
+      background-color: $key-benefits-slider-item-tablet-bg-color;
+      text-indent: -9999px;
+
+      &.active {
+        background-color: $key-benefits-slider-item-active-tablet-bg-color;
+      }
+
+      &:after {
+        content: none;
+      }
+    }
+
+    &__slide {
+      margin: $key-benefits-slide-tablet-margin;
+
+      h3 {
+        @include set-text-styles($key-benefits-slide-title-tablet-font...);
+        margin: $key-benefits-slide-title-tablet-margin;
+      }
+
+      p {
+        @include set-text-styles($key-benefits-slide-description-tablet-font...);
+        margin: $key-benefits-slide-description-tablet-margin;
+      }
+    }
+  }
+
+  // MOBILE LAYOUT
+  @media screen and (max-width: $mobile) {
+    &-section {
+      padding: $key-benefits-mobile-padding;
+    }
+
+    &__headline {
+      margin: $key-benefits-headline-mobile-margin;
+      @include set-text-styles($key-benefits-headline-mobile-font...);
+    }
+
+    &__description {
+      margin: $key-benefits-description-mobile-margin;
+      @include set-text-styles($key-benefits-description-mobile-font...);
+    }
+
+    &__slider-nav-item {
+      @include size($key-benefits-slider-item-mobile-size...);
+    }
+
+    &__slide {
+      &[data-columns="2"] {
+        display: block;
+
+        .col {
+          display: block;
+          width: 100% !important;
+          text-align: center !important;
+          padding: 0 !important;
+        }
+      }
+
+      h3 {
+        @include set-text-styles($key-benefits-slide-title-mobile-font...);
+        margin: $key-benefits-slide-title-mobile-margin;
+      }
+
+      p {
+        @include set-text-styles($key-benefits-slide-description-mobile-font...);
+        margin: $key-benefits-slide-description-mobile-margin;
+      }
+
+      &-image {
+        max-width: 100%;
+        max-height: 100%;
+      }
+    }
+  }
+}

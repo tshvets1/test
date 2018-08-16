@@ -1,0 +1,2182 @@
+[
+  {
+	"Quote": "AUC/AUD",
+	"BidRate": "4264.510000",
+	"Notation": "A",
+	"Pair": "AUC/USD",
+	"ValueOfaPip": "0.007955",
+	"Group": "60",
+	"MiniTradeSize": "1",
+	"StandardTradeSize": "1",
+	"Alias": "AUC/AUD",
+	"MinLeverage": "2",
+	"MaxLeverage": "1",
+	"StandardLeverage": "2",
+	"MicroTradeSize": "1",
+	"Result": {
+	  "Status": false,
+	  "Code": null,
+	  "Message": null
+	}
+  },
+  {
+	"Quote": "AUC/USD",
+	"BidRate": "3334.080000",
+	"Notation": "A",
+	"Pair": "AUC/USD",
+	"ValueOfaPip": "0.010000",
+	"Group": "20",
+	"MiniTradeSize": "1",
+	"StandardTradeSize": "1",
+	"Alias": "AUC/USD",
+	"MinLeverage": "2",
+	"MaxLeverage": "1",
+	"StandardLeverage": "2",
+	"MicroTradeSize": "1",
+	"Result": {
+	  "Status": false,
+	  "Code": null,
+	  "Message": null
+	}
+  },
+  {
+	"Quote": "AUD/CAD",
+	"BidRate": "0.955720",
+	"Notation": "A",
+	"Pair": "AUD/USD",
+	"ValueOfaPip": "0.832348",
+	"Group": "1",
+	"MiniTradeSize": "10000",
+	"StandardTradeSize": "100000",
+	"Alias": "AUD/CAD",
+	"MinLeverage": "3",
+	"MaxLeverage": "1",
+	"StandardLeverage": "3",
+	"MicroTradeSize": "1000",
+	"Result": {
+	  "Status": false,
+	  "Code": null,
+	  "Message": null
+	}
+  },
+  {
+	"Quote": "AUD/CHF",
+	"BidRate": "0.743360",
+	"Notation": "A",
+	"Pair": "AUD/USD",
+	"ValueOfaPip": "1.070057",
+	"Group": "1",
+	"MiniTradeSize": "10000",
+	"StandardTradeSize": "100000",
+	"Alias": "AUD/CHF",
+	"MinLeverage": "5",
+	"MaxLeverage": "1",
+	"StandardLeverage": "5",
+	"MicroTradeSize": "1000",
+	"Result": {
+	  "Status": false,
+	  "Code": null,
+	  "Message": null
+	}
+  },
+  {
+	"Quote": "AUD/JPY",
+	"BidRate": "94.470000",
+	"Notation": "A",
+	"Pair": "AUD/USD",
+	"ValueOfaPip": "0.841907",
+	"Group": "1",
+	"MiniTradeSize": "10000",
+	"StandardTradeSize": "100000",
+	"Alias": "AUD/JPY",
+	"MinLeverage": "3",
+	"MaxLeverage": "1",
+	"StandardLeverage": "3",
+	"MicroTradeSize": "1000",
+	"Result": {
+	  "Status": false,
+	  "Code": null,
+	  "Message": null
+	}
+  },
+  {
+	"Quote": "AUD/NZD",
+	"BidRate": "1.044780",
+	"Notation": "A",
+	"Pair": "AUD/USD",
+	"ValueOfaPip": "0.761330",
+	"Group": "1",
+	"MiniTradeSize": "10000",
+	"StandardTradeSize": "100000",
+	"Alias": "AUD/NZD",
+	"MinLeverage": "3",
+	"MaxLeverage": "1",
+	"StandardLeverage": "3",
+	"MicroTradeSize": "1000",
+	"Result": {
+	  "Status": false,
+	  "Code": null,
+	  "Message": null
+	}
+  },
+  {
+	"Quote": "AUD/USD",
+	"BidRate": "0.795500",
+	"Notation": "A",
+	"Pair": "AUD/USD",
+	"ValueOfaPip": "1.000000",
+	"Group": "1",
+	"MiniTradeSize": "10000",
+	"StandardTradeSize": "100000",
+	"Alias": "AUD/USD",
+	"MinLeverage": "3",
+	"MaxLeverage": "1",
+	"StandardLeverage": "3",
+	"MicroTradeSize": "1000",
+	"Result": {
+	  "Status": false,
+	  "Code": null,
+	  "Message": null
+	}
+  },
+  {
+	"Quote": "AUX/AUD",
+	"BidRate": "5746.000000",
+	"Notation": "A",
+	"Pair": "AUX/USD",
+	"ValueOfaPip": "0.795500",
+	"Group": "6",
+	"MiniTradeSize": "1",
+	"StandardTradeSize": "1",
+	"Alias": "AUX/AUD",
+	"MinLeverage": "2",
+	"MaxLeverage": "1",
+	"StandardLeverage": "2",
+	"MicroTradeSize": "1",
+	"Result": {
+	  "Status": false,
+	  "Code": null,
+	  "Message": null
+	}
+  },
+  {
+	"Quote": "AUX/USD",
+	"BidRate": "4569.320000",
+	"Notation": "A",
+	"Pair": "AUX/USD",
+	"ValueOfaPip": "0.010000",
+	"Group": "20",
+	"MiniTradeSize": "1",
+	"StandardTradeSize": "1",
+	"Alias": "AUX/USD",
+	"MinLeverage": "2",
+	"MaxLeverage": "1",
+	"StandardLeverage": "2",
+	"MicroTradeSize": "1",
+	"Result": {
+	  "Status": false,
+	  "Code": null,
+	  "Message": null
+	}
+  },
+  {
+	"Quote": "BCO/USD",
+	"BidRate": "66.040000",
+	"Notation": "A",
+	"Pair": "BCO/USD",
+	"ValueOfaPip": "1.000000",
+	"Group": "3",
+	"MiniTradeSize": "100",
+	"StandardTradeSize": "100",
+	"Alias": "BCO/USD",
+	"MinLeverage": "2",
+	"MaxLeverage": "1",
+	"StandardLeverage": "2",
+	"MicroTradeSize": "100",
+	"Result": {
+	  "Status": false,
+	  "Code": null,
+	  "Message": null
+	}
+  },
+  {
+	"Quote": "CAD/CHF",
+	"BidRate": "0.777730",
+	"Notation": "A",
+	"Pair": "USD/CAD",
+	"ValueOfaPip": "1.070057",
+	"Group": "1",
+	"MiniTradeSize": "10000",
+	"StandardTradeSize": "100000",
+	"Alias": "CAD/CHF",
+	"MinLeverage": "5",
+	"MaxLeverage": "1",
+	"StandardLeverage": "5",
+	"MicroTradeSize": "1000",
+	"Result": {
+	  "Status": false,
+	  "Code": null,
+	  "Message": null
+	}
+  },
+  {
+	"Quote": "CAD/JPY",
+	"BidRate": "98.852000",
+	"Notation": "A",
+	"Pair": "USD/CAD",
+	"ValueOfaPip": "0.841907",
+	"Group": "1",
+	"MiniTradeSize": "10000",
+	"StandardTradeSize": "100000",
+	"Alias": "CAD/JPY",
+	"MinLeverage": "3",
+	"MaxLeverage": "1",
+	"StandardLeverage": "3",
+	"MicroTradeSize": "1000",
+	"Result": {
+	  "Status": false,
+	  "Code": null,
+	  "Message": null
+	}
+  },
+  {
+	"Quote": "CHF/HUF",
+	"BidRate": "289.210000",
+	"Notation": "A",
+	"Pair": "USD/CHF",
+	"ValueOfaPip": "0.369794",
+	"Group": "50",
+	"MiniTradeSize": "10000",
+	"StandardTradeSize": "100000",
+	"Alias": "CHF/HUF",
+	"MinLeverage": null,
+	"MaxLeverage": "1",
+	"StandardLeverage": null,
+	"MicroTradeSize": "1000",
+	"Result": {
+	  "Status": false,
+	  "Code": null,
+	  "Message": null
+	}
+  },
+  {
+	"Quote": "CHF/JPY",
+	"BidRate": "127.090000",
+	"Notation": "A",
+	"Pair": "USD/CHF",
+	"ValueOfaPip": "0.841907",
+	"Group": "1",
+	"MiniTradeSize": "10000",
+	"StandardTradeSize": "100000",
+	"Alias": "CHF/JPY",
+	"MinLeverage": "5",
+	"MaxLeverage": "1",
+	"StandardLeverage": "5",
+	"MicroTradeSize": "1000",
+	"Result": {
+	  "Status": false,
+	  "Code": null,
+	  "Message": null
+	}
+  },
+  {
+	"Quote": "COR/USD",
+	"BidRate": "3.695000",
+	"Notation": "A",
+	"Pair": "COR/USD",
+	"ValueOfaPip": "0.100000",
+	"Group": "8",
+	"MiniTradeSize": "1000",
+	"StandardTradeSize": "1000",
+	"Alias": "COR/USD",
+	"MinLeverage": "2",
+	"MaxLeverage": "1",
+	"StandardLeverage": "2",
+	"MicroTradeSize": "1000",
+	"Result": {
+	  "Status": false,
+	  "Code": null,
+	  "Message": null
+	}
+  },
+  {
+	"Quote": "COT/USD",
+	"BidRate": "0.675400",
+	"Notation": "A",
+	"Pair": "COT/USD",
+	"ValueOfaPip": "0.500000",
+	"Group": "8",
+	"MiniTradeSize": "5000",
+	"StandardTradeSize": "5000",
+	"Alias": "COT/USD",
+	"MinLeverage": "2",
+	"MaxLeverage": "1",
+	"StandardLeverage": "2",
+	"MicroTradeSize": "5000",
+	"Result": {
+	  "Status": false,
+	  "Code": null,
+	  "Message": null
+	}
+  },
+  {
+	"Quote": "CUU/USD",
+	"BidRate": "2.818500",
+	"Notation": "A",
+	"Pair": "CUU/USD",
+	"ValueOfaPip": "0.250000",
+	"Group": "8",
+	"MiniTradeSize": "2500",
+	"StandardTradeSize": "2500",
+	"Alias": "CUU/USD",
+	"MinLeverage": "2",
+	"MaxLeverage": "1",
+	"StandardLeverage": "2",
+	"MicroTradeSize": "2500",
+	"Result": {
+	  "Status": false,
+	  "Code": null,
+	  "Message": null
+	}
+  },
+  {
+	"Quote": "ETX/EUR",
+	"BidRate": "3528.000000",
+	"Notation": "A",
+	"Pair": "ETX/USD",
+	"ValueOfaPip": "3.370470",
+	"Group": "6",
+	"MiniTradeSize": "3",
+	"StandardTradeSize": "3",
+	"Alias": "ETX/EUR",
+	"MinLeverage": "2",
+	"MaxLeverage": "1",
+	"StandardLeverage": "2",
+	"MicroTradeSize": "3",
+	"Result": {
+	  "Status": false,
+	  "Code": null,
+	  "Message": null
+	}
+  },
+  {
+	"Quote": "ETX/USD",
+	"BidRate": "3963.670000",
+	"Notation": "A",
+	"Pair": "ETX/USD",
+	"ValueOfaPip": "0.010000",
+	"Group": "20",
+	"MiniTradeSize": "1",
+	"StandardTradeSize": "1",
+	"Alias": "ETX/USD",
+	"MinLeverage": "2",
+	"MaxLeverage": "1",
+	"StandardLeverage": "2",
+	"MicroTradeSize": "1",
+	"Result": {
+	  "Status": false,
+	  "Code": null,
+	  "Message": null
+	}
+  },
+  {
+	"Quote": "EUR/AUD",
+	"BidRate": "1.412340",
+	"Notation": "A",
+	"Pair": "EUR/USD",
+	"ValueOfaPip": "0.795500",
+	"Group": "1",
+	"MiniTradeSize": "10000",
+	"StandardTradeSize": "100000",
+	"Alias": "EUR/AUD",
+	"MinLeverage": "3",
+	"MaxLeverage": "1",
+	"StandardLeverage": "3",
+	"MicroTradeSize": "1000",
+	"Result": {
+	  "Status": false,
+	  "Code": null,
+	  "Message": null
+	}
+  },
+  {
+	"Quote": "EUR/CAD",
+	"BidRate": "1.349810",
+	"Notation": "A",
+	"Pair": "EUR/USD",
+	"ValueOfaPip": "0.832348",
+	"Group": "1",
+	"MiniTradeSize": "10000",
+	"StandardTradeSize": "100000",
+	"Alias": "EUR/CAD",
+	"MinLeverage": "2",
+	"MaxLeverage": "1",
+	"StandardLeverage": "2",
+	"MicroTradeSize": "1000",
+	"Result": {
+	  "Status": false,
+	  "Code": null,
+	  "Message": null
+	}
+  },
+  {
+	"Quote": "EUR/CHF",
+	"BidRate": "1.049900",
+	"Notation": "A",
+	"Pair": "EUR/USD",
+	"ValueOfaPip": "1.070057",
+	"Group": "1",
+	"MiniTradeSize": "10000",
+	"StandardTradeSize": "100000",
+	"Alias": "EUR/CHF",
+	"MinLeverage": "5",
+	"MaxLeverage": "1",
+	"StandardLeverage": "5",
+	"MicroTradeSize": "1000",
+	"Result": {
+	  "Status": false,
+	  "Code": null,
+	  "Message": null
+	}
+  },
+  {
+	"Quote": "EUR/CZK",
+	"BidRate": "27.428500",
+	"Notation": "A",
+	"Pair": "EUR/USD",
+	"ValueOfaPip": "0.040968",
+	"Group": "1",
+	"MiniTradeSize": "10000",
+	"StandardTradeSize": "100000",
+	"Alias": "EUR/CZK",
+	"MinLeverage": "10",
+	"MaxLeverage": "1",
+	"StandardLeverage": "10",
+	"MicroTradeSize": "1000",
+	"Result": {
+	  "Status": false,
+	  "Code": null,
+	  "Message": null
+	}
+  },
+  {
+	"Quote": "EUR/DKK",
+	"BidRate": "7.461200",
+	"Notation": "A",
+	"Pair": "EUR/USD",
+	"ValueOfaPip": "0.150583",
+	"Group": "1",
+	"MiniTradeSize": "10000",
+	"StandardTradeSize": "100000",
+	"Alias": "EUR/DKK",
+	"MinLeverage": "10",
+	"MaxLeverage": "1",
+	"StandardLeverage": "10",
+	"MicroTradeSize": "1000",
+	"Result": {
+	  "Status": false,
+	  "Code": null,
+	  "Message": null
+	}
+  },
+  {
+	"Quote": "EUR/GBP",
+	"BidRate": "0.725800",
+	"Notation": "A",
+	"Pair": "EUR/USD",
+	"ValueOfaPip": "1.547790",
+	"Group": "1",
+	"MiniTradeSize": "10000",
+	"StandardTradeSize": "100000",
+	"Alias": "EUR/GBP",
+	"MinLeverage": "2",
+	"MaxLeverage": "1",
+	"StandardLeverage": "2",
+	"MicroTradeSize": "1000",
+	"Result": {
+	  "Status": false,
+	  "Code": null,
+	  "Message": null
+	}
+  },
+  {
+	"Quote": "EUR/HUF",
+	"BidRate": "303.817000",
+	"Notation": "A",
+	"Pair": "EUR/USD",
+	"ValueOfaPip": "0.369794",
+	"Group": "1",
+	"MiniTradeSize": "10000",
+	"StandardTradeSize": "100000",
+	"Alias": "EUR/HUF",
+	"MinLeverage": "5",
+	"MaxLeverage": "1",
+	"StandardLeverage": "5",
+	"MicroTradeSize": "1000",
+	"Result": {
+	  "Status": false,
+	  "Code": null,
+	  "Message": null
+	}
+  },
+  {
+	"Quote": "EUR/JPY",
+	"BidRate": "133.444000",
+	"Notation": "A",
+	"Pair": "EUR/USD",
+	"ValueOfaPip": "0.841907",
+	"Group": "1",
+	"MiniTradeSize": "10000",
+	"StandardTradeSize": "100000",
+	"Alias": "EUR/JPY",
+	"MinLeverage": "3",
+	"MaxLeverage": "1",
+	"StandardLeverage": "3",
+	"MicroTradeSize": "1000",
+	"Result": {
+	  "Status": false,
+	  "Code": null,
+	  "Message": null
+	}
+  },
+  {
+	"Quote": "EUR/NOK",
+	"BidRate": "8.385040",
+	"Notation": "A",
+	"Pair": "EUR/USD",
+	"ValueOfaPip": "0.133997",
+	"Group": "1",
+	"MiniTradeSize": "10000",
+	"StandardTradeSize": "100000",
+	"Alias": "EUR/NOK",
+	"MinLeverage": "3",
+	"MaxLeverage": "1",
+	"StandardLeverage": "3",
+	"MicroTradeSize": "1000",
+	"Result": {
+	  "Status": false,
+	  "Code": null,
+	  "Message": null
+	}
+  },
+  {
+	"Quote": "EUR/NZD",
+	"BidRate": "1.475690",
+	"Notation": "A",
+	"Pair": "EUR/USD",
+	"ValueOfaPip": "0.761330",
+	"Group": "1",
+	"MiniTradeSize": "10000",
+	"StandardTradeSize": "100000",
+	"Alias": "EUR/NZD",
+	"MinLeverage": "2",
+	"MaxLeverage": "1",
+	"StandardLeverage": "2",
+	"MicroTradeSize": "1000",
+	"Result": {
+	  "Status": false,
+	  "Code": null,
+	  "Message": null
+	}
+  },
+  {
+	"Quote": "EUR/PLN",
+	"BidRate": "4.035020",
+	"Notation": "A",
+	"Pair": "EUR/USD",
+	"ValueOfaPip": "0.278443",
+	"Group": "1",
+	"MiniTradeSize": "10000",
+	"StandardTradeSize": "100000",
+	"Alias": "EUR/PLN",
+	"MinLeverage": "5",
+	"MaxLeverage": "1",
+	"StandardLeverage": "5",
+	"MicroTradeSize": "1000",
+	"Result": {
+	  "Status": false,
+	  "Code": null,
+	  "Message": null
+	}
+  },
+  {
+	"Quote": "EUR/SEK",
+	"BidRate": "9.266400",
+	"Notation": "A",
+	"Pair": "EUR/USD",
+	"ValueOfaPip": "0.121250",
+	"Group": "1",
+	"MiniTradeSize": "10000",
+	"StandardTradeSize": "100000",
+	"Alias": "EUR/SEK",
+	"MinLeverage": "3",
+	"MaxLeverage": "1",
+	"StandardLeverage": "3",
+	"MicroTradeSize": "1000",
+	"Result": {
+	  "Status": false,
+	  "Code": null,
+	  "Message": null
+	}
+  },
+  {
+	"Quote": "EUR/TRY",
+	"BidRate": "2.986270",
+	"Notation": "A",
+	"Pair": "EUR/USD",
+	"ValueOfaPip": "0.376251",
+	"Group": "1",
+	"MiniTradeSize": "10000",
+	"StandardTradeSize": "100000",
+	"Alias": "EUR/TRY",
+	"MinLeverage": "5",
+	"MaxLeverage": "1",
+	"StandardLeverage": "5",
+	"MicroTradeSize": "1000",
+	"Result": {
+	  "Status": false,
+	  "Code": null,
+	  "Message": null
+	}
+  },
+  {
+	"Quote": "EUR/USD",
+	"BidRate": "1.123490",
+	"Notation": "A",
+	"Pair": "EUR/USD",
+	"ValueOfaPip": "1.000000",
+	"Group": "1",
+	"MiniTradeSize": "10000",
+	"StandardTradeSize": "100000",
+	"Alias": "EUR/USD",
+	"MinLeverage": "2",
+	"MaxLeverage": "1",
+	"StandardLeverage": "2",
+	"MicroTradeSize": "1000",
+	"Result": {
+	  "Status": false,
+	  "Code": null,
+	  "Message": null
+	}
+  },
+  {
+	"Quote": "EXC/EUR",
+	"BidRate": "2573.000000",
+	"Notation": "A",
+	"Pair": "EXC/USD",
+	"ValueOfaPip": "1.123490",
+	"Group": "60",
+	"MiniTradeSize": "1",
+	"StandardTradeSize": "1",
+	"Alias": "EXC/EUR",
+	"MinLeverage": "2",
+	"MaxLeverage": "1",
+	"StandardLeverage": "2",
+	"MicroTradeSize": "1",
+	"Result": {
+	  "Status": false,
+	  "Code": null,
+	  "Message": null
+	}
+  },
+  {
+	"Quote": "EXC/USD",
+	"BidRate": "2797.000000",
+	"Notation": "A",
+	"Pair": "EXC/USD",
+	"ValueOfaPip": "1.000000",
+	"Group": "20",
+	"MiniTradeSize": "1",
+	"StandardTradeSize": "1",
+	"Alias": "EXC/USD",
+	"MinLeverage": "2",
+	"MaxLeverage": "1",
+	"StandardLeverage": "2",
+	"MicroTradeSize": "1",
+	"Result": {
+	  "Status": false,
+	  "Code": null,
+	  "Message": null
+	}
+  },
+  {
+	"Quote": "FRC/EUR",
+	"BidRate": "3562.000000",
+	"Notation": "A",
+	"Pair": "FRC/USD",
+	"ValueOfaPip": "0.011235",
+	"Group": "60",
+	"MiniTradeSize": "1",
+	"StandardTradeSize": "1",
+	"Alias": "FRC/EUR",
+	"MinLeverage": "2",
+	"MaxLeverage": "1",
+	"StandardLeverage": "2",
+	"MicroTradeSize": "1",
+	"Result": {
+	  "Status": false,
+	  "Code": null,
+	  "Message": null
+	}
+  },
+  {
+	"Quote": "FRC/USD",
+	"BidRate": "3872.610000",
+	"Notation": "A",
+	"Pair": "FRC/USD",
+	"ValueOfaPip": "0.010000",
+	"Group": "20",
+	"MiniTradeSize": "1",
+	"StandardTradeSize": "1",
+	"Alias": "FRC/USD",
+	"MinLeverage": "2",
+	"MaxLeverage": "1",
+	"StandardLeverage": "2",
+	"MicroTradeSize": "1",
+	"Result": {
+	  "Status": false,
+	  "Code": null,
+	  "Message": null
+	}
+  },
+  {
+	"Quote": "FRX/EUR",
+	"BidRate": "4951.000000",
+	"Notation": "A",
+	"Pair": "FRX/USD",
+	"ValueOfaPip": "0.011235",
+	"Group": "6",
+	"MiniTradeSize": "1",
+	"StandardTradeSize": "1",
+	"Alias": "FRX/EUR",
+	"MinLeverage": "2",
+	"MaxLeverage": "1",
+	"StandardLeverage": "2",
+	"MicroTradeSize": "1",
+	"Result": {
+	  "Status": false,
+	  "Code": null,
+	  "Message": null
+	}
+  },
+  {
+	"Quote": "FRX/USD",
+	"BidRate": "5562.350000",
+	"Notation": "A",
+	"Pair": "FRX/USD",
+	"ValueOfaPip": "1.000000",
+	"Group": "20",
+	"MiniTradeSize": "100",
+	"StandardTradeSize": "100",
+	"Alias": "FRX/USD",
+	"MinLeverage": "2",
+	"MaxLeverage": "1",
+	"StandardLeverage": "2",
+	"MicroTradeSize": "100",
+	"Result": {
+	  "Status": false,
+	  "Code": null,
+	  "Message": null
+	}
+  },
+  {
+	"Quote": "GBP/AUD",
+	"BidRate": "1.945730",
+	"Notation": "A",
+	"Pair": "GBP/USD",
+	"ValueOfaPip": "0.795500",
+	"Group": "1",
+	"MiniTradeSize": "10000",
+	"StandardTradeSize": "100000",
+	"Alias": "GBP/AUD",
+	"MinLeverage": "3",
+	"MaxLeverage": "1",
+	"StandardLeverage": "3",
+	"MicroTradeSize": "1000",
+	"Result": {
+	  "Status": false,
+	  "Code": null,
+	  "Message": null
+	}
+  },
+  {
+	"Quote": "GBP/CAD",
+	"BidRate": "1.859610",
+	"Notation": "A",
+	"Pair": "GBP/USD",
+	"ValueOfaPip": "0.832348",
+	"Group": "1",
+	"MiniTradeSize": "10000",
+	"StandardTradeSize": "100000",
+	"Alias": "GBP/CAD",
+	"MinLeverage": "2",
+	"MaxLeverage": "1",
+	"StandardLeverage": "2",
+	"MicroTradeSize": "1000",
+	"Result": {
+	  "Status": false,
+	  "Code": null,
+	  "Message": null
+	}
+  },
+  {
+	"Quote": "GBP/CHF",
+	"BidRate": "1.446470",
+	"Notation": "A",
+	"Pair": "GBP/USD",
+	"ValueOfaPip": "1.070057",
+	"Group": "1",
+	"MiniTradeSize": "10000",
+	"StandardTradeSize": "100000",
+	"Alias": "GBP/CHF",
+	"MinLeverage": "5",
+	"MaxLeverage": "1",
+	"StandardLeverage": "5",
+	"MicroTradeSize": "1000",
+	"Result": {
+	  "Status": false,
+	  "Code": null,
+	  "Message": null
+	}
+  },
+  {
+	"Quote": "GBP/JPY",
+	"BidRate": "183.835000",
+	"Notation": "A",
+	"Pair": "GBP/USD",
+	"ValueOfaPip": "0.841907",
+	"Group": "1",
+	"MiniTradeSize": "10000",
+	"StandardTradeSize": "100000",
+	"Alias": "GBP/JPY",
+	"MinLeverage": "3",
+	"MaxLeverage": "1",
+	"StandardLeverage": "3",
+	"MicroTradeSize": "1000",
+	"Result": {
+	  "Status": false,
+	  "Code": null,
+	  "Message": null
+	}
+  },
+  {
+	"Quote": "GBP/NZD",
+	"BidRate": "2.033130",
+	"Notation": "A",
+	"Pair": "GBP/USD",
+	"ValueOfaPip": "0.761330",
+	"Group": "1",
+	"MiniTradeSize": "10000",
+	"StandardTradeSize": "100000",
+	"Alias": "GBP/NZD",
+	"MinLeverage": "2",
+	"MaxLeverage": "1",
+	"StandardLeverage": "2",
+	"MicroTradeSize": "1000",
+	"Result": {
+	  "Status": false,
+	  "Code": null,
+	  "Message": null
+	}
+  },
+  {
+	"Quote": "GBP/TRY",
+	"BidRate": "3.204680",
+	"Notation": "A",
+	"Pair": "GBP/USD",
+	"ValueOfaPip": "0.376251",
+	"Group": "93",
+	"MiniTradeSize": "10000",
+	"StandardTradeSize": "100000",
+	"Alias": "GBP/TRY",
+	"MinLeverage": "5",
+	"MaxLeverage": "1",
+	"StandardLeverage": "5",
+	"MicroTradeSize": "1000",
+	"Result": {
+	  "Status": false,
+	  "Code": null,
+	  "Message": null
+	}
+  },
+  {
+	"Quote": "GBP/USD",
+	"BidRate": "1.547790",
+	"Notation": "A",
+	"Pair": "GBP/USD",
+	"ValueOfaPip": "1.000000",
+	"Group": "1",
+	"MiniTradeSize": "10000",
+	"StandardTradeSize": "100000",
+	"Alias": "GBP/USD",
+	"MinLeverage": "2",
+	"MaxLeverage": "1",
+	"StandardLeverage": "2",
+	"MicroTradeSize": "1000",
+	"Result": {
+	  "Status": false,
+	  "Code": null,
+	  "Message": null
+	}
+  },
+  {
+	"Quote": "GRC/EUR",
+	"BidRate": "7076.510000",
+	"Notation": "A",
+	"Pair": "GRC/USD",
+	"ValueOfaPip": "0.011235",
+	"Group": "60",
+	"MiniTradeSize": "1",
+	"StandardTradeSize": "1",
+	"Alias": "GRC/EUR",
+	"MinLeverage": "2",
+	"MaxLeverage": "1",
+	"StandardLeverage": "2",
+	"MicroTradeSize": "1",
+	"Result": {
+	  "Status": false,
+	  "Code": null,
+	  "Message": null
+	}
+  },
+  {
+	"Quote": "GRC/USD",
+	"BidRate": "7693.580000",
+	"Notation": "A",
+	"Pair": "GRC/USD",
+	"ValueOfaPip": "0.010000",
+	"Group": "20",
+	"MiniTradeSize": "1",
+	"StandardTradeSize": "1",
+	"Alias": "GRC/USD",
+	"MinLeverage": "2",
+	"MaxLeverage": "1",
+	"StandardLeverage": "2",
+	"MicroTradeSize": "1",
+	"Result": {
+	  "Status": false,
+	  "Code": null,
+	  "Message": null
+	}
+  },
+  {
+	"Quote": "GRX/EUR",
+	"BidRate": "11357.500000",
+	"Notation": "A",
+	"Pair": "GRX/USD",
+	"ValueOfaPip": "0.011235",
+	"Group": "6",
+	"MiniTradeSize": "1",
+	"StandardTradeSize": "1",
+	"Alias": "GRX/EUR",
+	"MinLeverage": "2",
+	"MaxLeverage": "1",
+	"StandardLeverage": "2",
+	"MicroTradeSize": "1",
+	"Result": {
+	  "Status": false,
+	  "Code": null,
+	  "Message": null
+	}
+  },
+  {
+	"Quote": "GRX/USD",
+	"BidRate": "12759.920000",
+	"Notation": "A",
+	"Pair": "GRX/USD",
+	"ValueOfaPip": "1.000000",
+	"Group": "20",
+	"MiniTradeSize": "100",
+	"StandardTradeSize": "100",
+	"Alias": "GRX/USD",
+	"MinLeverage": "2",
+	"MaxLeverage": "1",
+	"StandardLeverage": "2",
+	"MicroTradeSize": "100",
+	"Result": {
+	  "Status": false,
+	  "Code": null,
+	  "Message": null
+	}
+  },
+  {
+	"Quote": "HGO/USD",
+	"BidRate": "1.954200",
+	"Notation": "A",
+	"Pair": "HGO/USD",
+	"ValueOfaPip": "0.300000",
+	"Group": "3",
+	"MiniTradeSize": "3000",
+	"StandardTradeSize": "3000",
+	"Alias": "HGO/USD",
+	"MinLeverage": "2",
+	"MaxLeverage": "1",
+	"StandardLeverage": "2",
+	"MicroTradeSize": "3000",
+	"Result": {
+	  "Status": false,
+	  "Code": null,
+	  "Message": null
+	}
+  },
+  {
+	"Quote": "HKC/HKD",
+	"BidRate": "21254.000000",
+	"Notation": "E",
+	"Pair": "HKC/USD",
+	"ValueOfaPip": "0.129027",
+	"Group": "60",
+	"MiniTradeSize": "1",
+	"StandardTradeSize": "1",
+	"Alias": "HKC/HKD",
+	"MinLeverage": "2",
+	"MaxLeverage": "1",
+	"StandardLeverage": "2",
+	"MicroTradeSize": "1",
+	"Result": {
+	  "Status": false,
+	  "Code": null,
+	  "Message": null
+	}
+  },
+  {
+	"Quote": "HKC/USD",
+	"BidRate": "2743.000000",
+	"Notation": "A",
+	"Pair": "HKC/USD",
+	"ValueOfaPip": "1.000000",
+	"Group": "20",
+	"MiniTradeSize": "1",
+	"StandardTradeSize": "1",
+	"Alias": "HKC/USD",
+	"MinLeverage": "2",
+	"MaxLeverage": "1",
+	"StandardLeverage": "2",
+	"MicroTradeSize": "1",
+	"Result": {
+	  "Status": false,
+	  "Code": null,
+	  "Message": null
+	}
+  },
+  {
+	"Quote": "HKX/HKD",
+	"BidRate": "28105.000000",
+	"Notation": "E",
+	"Pair": "HKX/USD",
+	"ValueOfaPip": "0.387082",
+	"Group": "6",
+	"MiniTradeSize": "3",
+	"StandardTradeSize": "3",
+	"Alias": "HKX/HKD",
+	"MinLeverage": "2",
+	"MaxLeverage": "1",
+	"StandardLeverage": "2",
+	"MicroTradeSize": "3",
+	"Result": {
+	  "Status": false,
+	  "Code": null,
+	  "Message": null
+	}
+  },
+  {
+	"Quote": "HKX/USD",
+	"BidRate": "3626.310000",
+	"Notation": "A",
+	"Pair": "HKX/USD",
+	"ValueOfaPip": "0.010000",
+	"Group": "20",
+	"MiniTradeSize": "1",
+	"StandardTradeSize": "1",
+	"Alias": "HKX/USD",
+	"MinLeverage": "2",
+	"MaxLeverage": "1",
+	"StandardLeverage": "2",
+	"MicroTradeSize": "1",
+	"Result": {
+	  "Status": false,
+	  "Code": null,
+	  "Message": null
+	}
+  },
+  {
+	"Quote": "IBC/EUR",
+	"BidRate": "8390.000000",
+	"Notation": "A",
+	"Pair": "IBC/USD",
+	"ValueOfaPip": "1.123490",
+	"Group": "60",
+	"MiniTradeSize": "1",
+	"StandardTradeSize": "1",
+	"Alias": "IBC/EUR",
+	"MinLeverage": "2",
+	"MaxLeverage": "1",
+	"StandardLeverage": "2",
+	"MicroTradeSize": "1",
+	"Result": {
+	  "Status": false,
+	  "Code": null,
+	  "Message": null
+	}
+  },
+  {
+	"Quote": "IBC/USD",
+	"BidRate": "9122.000000",
+	"Notation": "A",
+	"Pair": "IBC/USD",
+	"ValueOfaPip": "1.000000",
+	"Group": "20",
+	"MiniTradeSize": "1",
+	"StandardTradeSize": "1",
+	"Alias": "IBC/USD",
+	"MinLeverage": "2",
+	"MaxLeverage": "1",
+	"StandardLeverage": "2",
+	"MicroTradeSize": "1",
+	"Result": {
+	  "Status": false,
+	  "Code": null,
+	  "Message": null
+	}
+  },
+  {
+	"Quote": "ITC/EUR",
+	"BidRate": "16859.000000",
+	"Notation": "A",
+	"Pair": "ITC/USD",
+	"ValueOfaPip": "1.123490",
+	"Group": "60",
+	"MiniTradeSize": "1",
+	"StandardTradeSize": "1",
+	"Alias": "ITC/EUR",
+	"MinLeverage": "2",
+	"MaxLeverage": "1",
+	"StandardLeverage": "2",
+	"MicroTradeSize": "1",
+	"Result": {
+	  "Status": false,
+	  "Code": null,
+	  "Message": null
+	}
+  },
+  {
+	"Quote": "ITC/USD",
+	"BidRate": "18329.000000",
+	"Notation": "A",
+	"Pair": "ITC/USD",
+	"ValueOfaPip": "1.000000",
+	"Group": "20",
+	"MiniTradeSize": "1",
+	"StandardTradeSize": "1",
+	"Alias": "ITC/USD",
+	"MinLeverage": "2",
+	"MaxLeverage": "1",
+	"StandardLeverage": "2",
+	"MicroTradeSize": "1",
+	"Result": {
+	  "Status": false,
+	  "Code": null,
+	  "Message": null
+	}
+  },
+  {
+	"Quote": "JPC/USD",
+	"BidRate": "10094.000000",
+	"Notation": "A",
+	"Pair": "JPC/USD",
+	"ValueOfaPip": "1.000000",
+	"Group": "60",
+	"MiniTradeSize": "1",
+	"StandardTradeSize": "1",
+	"Alias": "JPC/USD",
+	"MinLeverage": "2",
+	"MaxLeverage": "1",
+	"StandardLeverage": "2",
+	"MicroTradeSize": "1",
+	"Result": {
+	  "Status": false,
+	  "Code": null,
+	  "Message": null
+	}
+  },
+  {
+	"Quote": "JPX/JPY",
+	"BidRate": "19390.000000",
+	"Notation": "E",
+	"Pair": "JPX/USD",
+	"ValueOfaPip": "0.841907",
+	"Group": "6",
+	"MiniTradeSize": "100",
+	"StandardTradeSize": "100",
+	"Alias": "JPX/JPY",
+	"MinLeverage": "2",
+	"MaxLeverage": "1",
+	"StandardLeverage": "2",
+	"MicroTradeSize": "100",
+	"Result": {
+	  "Status": false,
+	  "Code": null,
+	  "Message": null
+	}
+  },
+  {
+	"Quote": "JPX/USD",
+	"BidRate": "163.240000",
+	"Notation": "A",
+	"Pair": "JPX/USD",
+	"ValueOfaPip": "0.010000",
+	"Group": "20",
+	"MiniTradeSize": "1",
+	"StandardTradeSize": "1",
+	"Alias": "JPX/USD",
+	"MinLeverage": "2",
+	"MaxLeverage": "1",
+	"StandardLeverage": "2",
+	"MicroTradeSize": "1",
+	"Result": {
+	  "Status": false,
+	  "Code": null,
+	  "Message": null
+	}
+  },
+  {
+	"Quote": "NSC/USD",
+	"BidRate": "2703.510000",
+	"Notation": "A",
+	"Pair": "NSC/USD",
+	"ValueOfaPip": "0.010000",
+	"Group": "60",
+	"MiniTradeSize": "1",
+	"StandardTradeSize": "1",
+	"Alias": "NSC/USD",
+	"MinLeverage": "2",
+	"MaxLeverage": "1",
+	"StandardLeverage": "2",
+	"MicroTradeSize": "1",
+	"Result": {
+	  "Status": false,
+	  "Code": null,
+	  "Message": null
+	}
+  },
+  {
+	"Quote": "NSX/USD",
+	"BidRate": "4452.230000",
+	"Notation": "A",
+	"Pair": "NSX/USD",
+	"ValueOfaPip": "0.050000",
+	"Group": "6",
+	"MiniTradeSize": "5",
+	"StandardTradeSize": "5",
+	"Alias": "NSX/USD",
+	"MinLeverage": "2",
+	"MaxLeverage": "1",
+	"StandardLeverage": "2",
+	"MicroTradeSize": "5",
+	"Result": {
+	  "Status": false,
+	  "Code": null,
+	  "Message": null
+	}
+  },
+  {
+	"Quote": "NTG/USD",
+	"BidRate": "2.586000",
+	"Notation": "A",
+	"Pair": "NTG/USD",
+	"ValueOfaPip": "2.500000",
+	"Group": "3",
+	"MiniTradeSize": "2500",
+	"StandardTradeSize": "2500",
+	"Alias": "NTG/USD",
+	"MinLeverage": "2",
+	"MaxLeverage": "1",
+	"StandardLeverage": "2",
+	"MicroTradeSize": "2500",
+	"Result": {
+	  "Status": false,
+	  "Code": null,
+	  "Message": null
+	}
+  },
+  {
+	"Quote": "NZD/CAD",
+	"BidRate": "0.914720",
+	"Notation": "A",
+	"Pair": "NZD/USD",
+	"ValueOfaPip": "0.832348",
+	"Group": "1",
+	"MiniTradeSize": "10000",
+	"StandardTradeSize": "100000",
+	"Alias": "NZD/CAD",
+	"MinLeverage": "2",
+	"MaxLeverage": "1",
+	"StandardLeverage": "2",
+	"MicroTradeSize": "1000",
+	"Result": {
+	  "Status": false,
+	  "Code": null,
+	  "Message": null
+	}
+  },
+  {
+	"Quote": "NZD/CHF",
+	"BidRate": "0.711370",
+	"Notation": "A",
+	"Pair": "NZD/USD",
+	"ValueOfaPip": "1.070057",
+	"Group": "1",
+	"MiniTradeSize": "10000",
+	"StandardTradeSize": "100000",
+	"Alias": "NZD/CHF",
+	"MinLeverage": "5",
+	"MaxLeverage": "1",
+	"StandardLeverage": "5",
+	"MicroTradeSize": "1000",
+	"Result": {
+	  "Status": false,
+	  "Code": null,
+	  "Message": null
+	}
+  },
+  {
+	"Quote": "NZD/JPY",
+	"BidRate": "90.397000",
+	"Notation": "A",
+	"Pair": "NZD/USD",
+	"ValueOfaPip": "0.841907",
+	"Group": "1",
+	"MiniTradeSize": "10000",
+	"StandardTradeSize": "100000",
+	"Alias": "NZD/JPY",
+	"MinLeverage": "3",
+	"MaxLeverage": "1",
+	"StandardLeverage": "3",
+	"MicroTradeSize": "1000",
+	"Result": {
+	  "Status": false,
+	  "Code": null,
+	  "Message": null
+	}
+  },
+  {
+	"Quote": "NZD/USD",
+	"BidRate": "0.761330",
+	"Notation": "A",
+	"Pair": "NZD/USD",
+	"ValueOfaPip": "1.000000",
+	"Group": "1",
+	"MiniTradeSize": "10000",
+	"StandardTradeSize": "100000",
+	"Alias": "NZD/USD",
+	"MinLeverage": "2",
+	"MaxLeverage": "1",
+	"StandardLeverage": "2",
+	"MicroTradeSize": "1000",
+	"Result": {
+	  "Status": false,
+	  "Code": null,
+	  "Message": null
+	}
+  },
+  {
+	"Quote": "PDU/USD",
+	"BidRate": "782.200000",
+	"Notation": "A",
+	"Pair": "PDU/USD",
+	"ValueOfaPip": "0.100000",
+	"Group": "8",
+	"MiniTradeSize": "10",
+	"StandardTradeSize": "10",
+	"Alias": "PDU/USD",
+	"MinLeverage": "2",
+	"MaxLeverage": "1",
+	"StandardLeverage": "2",
+	"MicroTradeSize": "10",
+	"Result": {
+	  "Status": false,
+	  "Code": null,
+	  "Message": null
+	}
+  },
+  {
+	"Quote": "PTU/USD",
+	"BidRate": "1151.400000",
+	"Notation": "A",
+	"Pair": "PTU/USD",
+	"ValueOfaPip": "0.100000",
+	"Group": "8",
+	"MiniTradeSize": "10",
+	"StandardTradeSize": "10",
+	"Alias": "PTU/USD",
+	"MinLeverage": "2",
+	"MaxLeverage": "1",
+	"StandardLeverage": "2",
+	"MicroTradeSize": "10",
+	"Result": {
+	  "Status": false,
+	  "Code": null,
+	  "Message": null
+	}
+  },
+  {
+	"Quote": "SGD/JPY",
+	"BidRate": "89.790000",
+	"Notation": "A",
+	"Pair": "USD/SGD",
+	"ValueOfaPip": "0.841907",
+	"Group": "1",
+	"MiniTradeSize": "10000",
+	"StandardTradeSize": "100000",
+	"Alias": "SGD/JPY",
+	"MinLeverage": "5",
+	"MaxLeverage": "1",
+	"StandardLeverage": "5",
+	"MicroTradeSize": "1000",
+	"Result": {
+	  "Status": false,
+	  "Code": null,
+	  "Message": null
+	}
+  },
+  {
+	"Quote": "SOY/USD",
+	"BidRate": "9.920000",
+	"Notation": "A",
+	"Pair": "SOY/USD",
+	"ValueOfaPip": "0.100000",
+	"Group": "8",
+	"MiniTradeSize": "1000",
+	"StandardTradeSize": "1000",
+	"Alias": "SOY/USD",
+	"MinLeverage": "2",
+	"MaxLeverage": "1",
+	"StandardLeverage": "2",
+	"MicroTradeSize": "1000",
+	"Result": {
+	  "Status": false,
+	  "Code": null,
+	  "Message": null
+	}
+  },
+  {
+	"Quote": "SPC/USD",
+	"BidRate": "1393.310000",
+	"Notation": "A",
+	"Pair": "SPC/USD",
+	"ValueOfaPip": "0.100000",
+	"Group": "60",
+	"MiniTradeSize": "10",
+	"StandardTradeSize": "10",
+	"Alias": "SPC/USD",
+	"MinLeverage": "2",
+	"MaxLeverage": "1",
+	"StandardLeverage": "2",
+	"MicroTradeSize": "10",
+	"Result": {
+	  "Status": false,
+	  "Code": null,
+	  "Message": null
+	}
+  },
+  {
+	"Quote": "SPX/USD",
+	"BidRate": "2090.250000",
+	"Notation": "A",
+	"Pair": "SPX/USD",
+	"ValueOfaPip": "0.100000",
+	"Group": "6",
+	"MiniTradeSize": "10",
+	"StandardTradeSize": "10",
+	"Alias": "SPX/USD",
+	"MinLeverage": "2",
+	"MaxLeverage": "1",
+	"StandardLeverage": "2",
+	"MicroTradeSize": "10",
+	"Result": {
+	  "Status": false,
+	  "Code": null,
+	  "Message": null
+	}
+  },
+  {
+	"Quote": "SUG/USD",
+	"BidRate": "0.132800",
+	"Notation": "A",
+	"Pair": "SUG/USD",
+	"ValueOfaPip": "2.800000",
+	"Group": "8",
+	"MiniTradeSize": "28000",
+	"StandardTradeSize": "28000",
+	"Alias": "SUG/USD",
+	"MinLeverage": "2",
+	"MaxLeverage": "1",
+	"StandardLeverage": "2",
+	"MicroTradeSize": "28000",
+	"Result": {
+	  "Status": false,
+	  "Code": null,
+	  "Message": null
+	}
+  },
+  {
+	"Quote": "UDX/USD",
+	"BidRate": "17863.000000",
+	"Notation": "A",
+	"Pair": "UDX/USD",
+	"ValueOfaPip": "1.000000",
+	"Group": "6",
+	"MiniTradeSize": "1",
+	"StandardTradeSize": "1",
+	"Alias": "UDX/USD",
+	"MinLeverage": "2",
+	"MaxLeverage": "1",
+	"StandardLeverage": "2",
+	"MicroTradeSize": "1",
+	"Result": {
+	  "Status": false,
+	  "Code": null,
+	  "Message": null
+	}
+  },
+  {
+	"Quote": "UKC/GBP",
+	"BidRate": "5942.510000",
+	"Notation": "A",
+	"Pair": "UKC/USD",
+	"ValueOfaPip": "0.015478",
+	"Group": "60",
+	"MiniTradeSize": "1",
+	"StandardTradeSize": "1",
+	"Alias": "UKC/GBP",
+	"MinLeverage": "2",
+	"MaxLeverage": "1",
+	"StandardLeverage": "2",
+	"MicroTradeSize": "1",
+	"Result": {
+	  "Status": false,
+	  "Code": null,
+	  "Message": null
+	}
+  },
+  {
+	"Quote": "UKC/USD",
+	"BidRate": "9022.810000",
+	"Notation": "A",
+	"Pair": "UKC/USD",
+	"ValueOfaPip": "0.010000",
+	"Group": "20",
+	"MiniTradeSize": "1",
+	"StandardTradeSize": "1",
+	"Alias": "UKC/USD",
+	"MinLeverage": "2",
+	"MaxLeverage": "1",
+	"StandardLeverage": "2",
+	"MicroTradeSize": "1",
+	"Result": {
+	  "Status": false,
+	  "Code": null,
+	  "Message": null
+	}
+  },
+  {
+	"Quote": "UKX/GBP",
+	"BidRate": "6896.500000",
+	"Notation": "A",
+	"Pair": "UKX/USD",
+	"ValueOfaPip": "0.015478",
+	"Group": "6",
+	"MiniTradeSize": "1",
+	"StandardTradeSize": "1",
+	"Alias": "UKX/GBP",
+	"MinLeverage": "2",
+	"MaxLeverage": "1",
+	"StandardLeverage": "2",
+	"MicroTradeSize": "1",
+	"Result": {
+	  "Status": false,
+	  "Code": null,
+	  "Message": null
+	}
+  },
+  {
+	"Quote": "UKX/USD",
+	"BidRate": "10674.330000",
+	"Notation": "A",
+	"Pair": "UKX/USD",
+	"ValueOfaPip": "1.000000",
+	"Group": "20",
+	"MiniTradeSize": "100",
+	"StandardTradeSize": "100",
+	"Alias": "UKX/USD",
+	"MinLeverage": "2",
+	"MaxLeverage": "1",
+	"StandardLeverage": "2",
+	"MicroTradeSize": "100",
+	"Result": {
+	  "Status": false,
+	  "Code": null,
+	  "Message": null
+	}
+  },
+  {
+	"Quote": "USC/USD",
+	"BidRate": "13185.000000",
+	"Notation": "A",
+	"Pair": "USC/USD",
+	"ValueOfaPip": "1.000000",
+	"Group": "60",
+	"MiniTradeSize": "1",
+	"StandardTradeSize": "1",
+	"Alias": "USC/USD",
+	"MinLeverage": "2",
+	"MaxLeverage": "1",
+	"StandardLeverage": "2",
+	"MicroTradeSize": "1",
+	"Result": {
+	  "Status": false,
+	  "Code": null,
+	  "Message": null
+	}
+  },
+  {
+	"Quote": "USD/CAD",
+	"BidRate": "1.201420",
+	"Notation": "E",
+	"Pair": "USD/CAD",
+	"ValueOfaPip": "0.832348",
+	"Group": "1",
+	"MiniTradeSize": "10000",
+	"StandardTradeSize": "100000",
+	"Alias": "USD/CAD",
+	"MinLeverage": "2",
+	"MaxLeverage": "1",
+	"StandardLeverage": "2",
+	"MicroTradeSize": "1000",
+	"Result": {
+	  "Status": false,
+	  "Code": null,
+	  "Message": null
+	}
+  },
+  {
+	"Quote": "USD/CHF",
+	"BidRate": "0.934530",
+	"Notation": "E",
+	"Pair": "USD/CHF",
+	"ValueOfaPip": "1.070057",
+	"Group": "1",
+	"MiniTradeSize": "10000",
+	"StandardTradeSize": "100000",
+	"Alias": "USD/CHF",
+	"MinLeverage": "5",
+	"MaxLeverage": "1",
+	"StandardLeverage": "5",
+	"MicroTradeSize": "1000",
+	"Result": {
+	  "Status": false,
+	  "Code": null,
+	  "Message": null
+	}
+  },
+  {
+	"Quote": "USD/CNH",
+	"BidRate": "6.205900",
+	"Notation": "E",
+	"Pair": "USD/CNH",
+	"ValueOfaPip": "0.161137",
+	"Group": "1",
+	"MiniTradeSize": "10000",
+	"StandardTradeSize": "100000",
+	"Alias": "USD/CNH",
+	"MinLeverage": "10",
+	"MaxLeverage": "1",
+	"StandardLeverage": "10",
+	"MicroTradeSize": "1000",
+	"Result": {
+	  "Status": false,
+	  "Code": null,
+	  "Message": null
+	}
+  },
+  {
+	"Quote": "USD/CZK",
+	"BidRate": "24.409200",
+	"Notation": "E",
+	"Pair": "USD/CZK",
+	"ValueOfaPip": "0.040968",
+	"Group": "1",
+	"MiniTradeSize": "10000",
+	"StandardTradeSize": "100000",
+	"Alias": "USD/CZK",
+	"MinLeverage": "10",
+	"MaxLeverage": "1",
+	"StandardLeverage": "10",
+	"MicroTradeSize": "1000",
+	"Result": {
+	  "Status": false,
+	  "Code": null,
+	  "Message": null
+	}
+  },
+  {
+	"Quote": "USD/DKK",
+	"BidRate": "6.640870",
+	"Notation": "E",
+	"Pair": "USD/DKK",
+	"ValueOfaPip": "0.150583",
+	"Group": "1",
+	"MiniTradeSize": "10000",
+	"StandardTradeSize": "100000",
+	"Alias": "USD/DKK",
+	"MinLeverage": "10",
+	"MaxLeverage": "1",
+	"StandardLeverage": "10",
+	"MicroTradeSize": "1000",
+	"Result": {
+	  "Status": false,
+	  "Code": null,
+	  "Message": null
+	}
+  },
+  {
+	"Quote": "USD/HKD",
+	"BidRate": "7.750300",
+	"Notation": "E",
+	"Pair": "USD/HKD",
+	"ValueOfaPip": "0.129027",
+	"Group": "1",
+	"MiniTradeSize": "10000",
+	"StandardTradeSize": "100000",
+	"Alias": "USD/HKD",
+	"MinLeverage": "10",
+	"MaxLeverage": "1",
+	"StandardLeverage": "10",
+	"MicroTradeSize": "1000",
+	"Result": {
+	  "Status": false,
+	  "Code": null,
+	  "Message": null
+	}
+  },
+  {
+	"Quote": "USD/HUF",
+	"BidRate": "270.421000",
+	"Notation": "E",
+	"Pair": "USD/HUF",
+	"ValueOfaPip": "0.369794",
+	"Group": "1",
+	"MiniTradeSize": "10000",
+	"StandardTradeSize": "100000",
+	"Alias": "USD/HUF",
+	"MinLeverage": "5",
+	"MaxLeverage": "1",
+	"StandardLeverage": "5",
+	"MicroTradeSize": "1000",
+	"Result": {
+	  "Status": false,
+	  "Code": null,
+	  "Message": null
+	}
+  },
+  {
+	"Quote": "USD/JPY",
+	"BidRate": "118.778000",
+	"Notation": "E",
+	"Pair": "USD/JPY",
+	"ValueOfaPip": "0.841907",
+	"Group": "1",
+	"MiniTradeSize": "10000",
+	"StandardTradeSize": "100000",
+	"Alias": "USD/JPY",
+	"MinLeverage": "3",
+	"MaxLeverage": "1",
+	"StandardLeverage": "3",
+	"MicroTradeSize": "1000",
+	"Result": {
+	  "Status": false,
+	  "Code": null,
+	  "Message": null
+	}
+  },
+  {
+	"Quote": "USD/MXN",
+	"BidRate": "15.224100",
+	"Notation": "E",
+	"Pair": "USD/MXN",
+	"ValueOfaPip": "0.065685",
+	"Group": "1",
+	"MiniTradeSize": "10000",
+	"StandardTradeSize": "100000",
+	"Alias": "USD/MXN",
+	"MinLeverage": "6",
+	"MaxLeverage": "1",
+	"StandardLeverage": "6",
+	"MicroTradeSize": "1000",
+	"Result": {
+	  "Status": false,
+	  "Code": null,
+	  "Message": null
+	}
+  },
+  {
+	"Quote": "USD/NOK",
+	"BidRate": "7.462860",
+	"Notation": "E",
+	"Pair": "USD/NOK",
+	"ValueOfaPip": "0.133997",
+	"Group": "1",
+	"MiniTradeSize": "10000",
+	"StandardTradeSize": "100000",
+	"Alias": "USD/NOK",
+	"MinLeverage": "3",
+	"MaxLeverage": "1",
+	"StandardLeverage": "3",
+	"MicroTradeSize": "1000",
+	"Result": {
+	  "Status": false,
+	  "Code": null,
+	  "Message": null
+	}
+  },
+  {
+	"Quote": "USD/PLN",
+	"BidRate": "3.591400",
+	"Notation": "E",
+	"Pair": "USD/PLN",
+	"ValueOfaPip": "0.278443",
+	"Group": "1",
+	"MiniTradeSize": "10000",
+	"StandardTradeSize": "100000",
+	"Alias": "USD/PLN",
+	"MinLeverage": "5",
+	"MaxLeverage": "1",
+	"StandardLeverage": "5",
+	"MicroTradeSize": "1000",
+	"Result": {
+	  "Status": false,
+	  "Code": null,
+	  "Message": null
+	}
+  },
+  {
+	"Quote": "USD/RUB",
+	"BidRate": "50.990000",
+	"Notation": "E",
+	"Pair": "USD/RUB",
+	"ValueOfaPip": "0.019612",
+	"Group": "1",
+	"MiniTradeSize": "10000",
+	"StandardTradeSize": "100000",
+	"Alias": "USD/RUB",
+	"MinLeverage": "20",
+	"MaxLeverage": "1",
+	"StandardLeverage": "20",
+	"MicroTradeSize": "1000",
+	"Result": {
+	  "Status": false,
+	  "Code": null,
+	  "Message": null
+	}
+  },
+  {
+	"Quote": "USD/SEK",
+	"BidRate": "8.247450",
+	"Notation": "E",
+	"Pair": "USD/SEK",
+	"ValueOfaPip": "0.121250",
+	"Group": "1",
+	"MiniTradeSize": "10000",
+	"StandardTradeSize": "100000",
+	"Alias": "USD/SEK",
+	"MinLeverage": "3",
+	"MaxLeverage": "1",
+	"StandardLeverage": "3",
+	"MicroTradeSize": "1000",
+	"Result": {
+	  "Status": false,
+	  "Code": null,
+	  "Message": null
+	}
+  },
+  {
+	"Quote": "USD/SGD",
+	"BidRate": "1.322510",
+	"Notation": "E",
+	"Pair": "USD/SGD",
+	"ValueOfaPip": "0.756138",
+	"Group": "1",
+	"MiniTradeSize": "10000",
+	"StandardTradeSize": "100000",
+	"Alias": "USD/SGD",
+	"MinLeverage": "5",
+	"MaxLeverage": "1",
+	"StandardLeverage": "5",
+	"MicroTradeSize": "1000",
+	"Result": {
+	  "Status": false,
+	  "Code": null,
+	  "Message": null
+	}
+  },
+  {
+	"Quote": "USD/TRY",
+	"BidRate": "2.657800",
+	"Notation": "E",
+	"Pair": "USD/TRY",
+	"ValueOfaPip": "0.376251",
+	"Group": "1",
+	"MiniTradeSize": "10000",
+	"StandardTradeSize": "100000",
+	"Alias": "USD/TRY",
+	"MinLeverage": "5",
+	"MaxLeverage": "1",
+	"StandardLeverage": "5",
+	"MicroTradeSize": "1000",
+	"Result": {
+	  "Status": false,
+	  "Code": null,
+	  "Message": null
+	}
+  },
+  {
+	"Quote": "USD/ZAR",
+	"BidRate": "11.781100",
+	"Notation": "E",
+	"Pair": "USD/ZAR",
+	"ValueOfaPip": "0.084882",
+	"Group": "1",
+	"MiniTradeSize": "10000",
+	"StandardTradeSize": "100000",
+	"Alias": "USD/ZAR",
+	"MinLeverage": "5",
+	"MaxLeverage": "1",
+	"StandardLeverage": "5",
+	"MicroTradeSize": "1000",
+	"Result": {
+	  "Status": false,
+	  "Code": null,
+	  "Message": null
+	}
+  },
+  {
+	"Quote": "WHT/USD",
+	"BidRate": "4.867500",
+	"Notation": "A",
+	"Pair": "WHT/USD",
+	"ValueOfaPip": "0.100000",
+	"Group": "8",
+	"MiniTradeSize": "1000",
+	"StandardTradeSize": "1000",
+	"Alias": "WHT/USD",
+	"MinLeverage": "2",
+	"MaxLeverage": "1",
+	"StandardLeverage": "2",
+	"MicroTradeSize": "1000",
+	"Result": {
+	  "Status": false,
+	  "Code": null,
+	  "Message": null
+	}
+  },
+  {
+	"Quote": "WTI/USD",
+	"BidRate": "59.150000",
+	"Notation": "A",
+	"Pair": "WTI/USD",
+	"ValueOfaPip": "1.000000",
+	"Group": "3",
+	"MiniTradeSize": "100",
+	"StandardTradeSize": "100",
+	"Alias": "WTI/USD",
+	"MinLeverage": "2",
+	"MaxLeverage": "1",
+	"StandardLeverage": "2",
+	"MicroTradeSize": "100",
+	"Result": {
+	  "Status": false,
+	  "Code": null,
+	  "Message": null
+	}
+  },
+  {
+	"Quote": "XAG/USD",
+	"BidRate": "16.611000",
+	"Notation": "A",
+	"Pair": "XAG/USD",
+	"ValueOfaPip": "5.000000",
+	"Group": "2",
+	"MiniTradeSize": "500",
+	"StandardTradeSize": "500",
+	"Alias": "XAG/USD",
+	"MinLeverage": "100",
+	"MaxLeverage": "1",
+	"StandardLeverage": "100",
+	"MicroTradeSize": "500",
+	"Result": {
+	  "Status": false,
+	  "Code": null,
+	  "Message": null
+	}
+  },
+  {
+	"Quote": "XAU/AUD",
+	"BidRate": "1514.350000",
+	"Notation": "A",
+	"Pair": "XAU/USD",
+	"ValueOfaPip": "0.079550",
+	"Group": "2",
+	"MiniTradeSize": "10",
+	"StandardTradeSize": "10",
+	"Alias": "XAU/AUD",
+	"MinLeverage": "100",
+	"MaxLeverage": "1",
+	"StandardLeverage": "100",
+	"MicroTradeSize": "10",
+	"Result": {
+	  "Status": false,
+	  "Code": null,
+	  "Message": null
+	}
+  },
+  {
+	"Quote": "XAU/CHF",
+	"BidRate": "1125.770000",
+	"Notation": "A",
+	"Pair": "XAU/USD",
+	"ValueOfaPip": "0.107006",
+	"Group": "2",
+	"MiniTradeSize": "10",
+	"StandardTradeSize": "10",
+	"Alias": "XAU/CHF",
+	"MinLeverage": "100",
+	"MaxLeverage": "1",
+	"StandardLeverage": "100",
+	"MicroTradeSize": "10",
+	"Result": {
+	  "Status": false,
+	  "Code": null,
+	  "Message": null
+	}
+  },
+  {
+	"Quote": "XAU/EUR",
+	"BidRate": "1072.200000",
+	"Notation": "A",
+	"Pair": "XAU/USD",
+	"ValueOfaPip": "0.112349",
+	"Group": "2",
+	"MiniTradeSize": "10",
+	"StandardTradeSize": "10",
+	"Alias": "XAU/EUR",
+	"MinLeverage": "100",
+	"MaxLeverage": "1",
+	"StandardLeverage": "100",
+	"MicroTradeSize": "10",
+	"Result": {
+	  "Status": false,
+	  "Code": null,
+	  "Message": null
+	}
+  },
+  {
+	"Quote": "XAU/GBP",
+	"BidRate": "778.200000",
+	"Notation": "A",
+	"Pair": "XAU/USD",
+	"ValueOfaPip": "0.154779",
+	"Group": "2",
+	"MiniTradeSize": "10",
+	"StandardTradeSize": "10",
+	"Alias": "XAU/GBP",
+	"MinLeverage": "100",
+	"MaxLeverage": "1",
+	"StandardLeverage": "100",
+	"MicroTradeSize": "10",
+	"Result": {
+	  "Status": false,
+	  "Code": null,
+	  "Message": null
+	}
+  },
+  {
+	"Quote": "XAU/JPY",
+	"BidRate": "143083.000000",
+	"Notation": "A",
+	"Pair": "XAU/USD",
+	"ValueOfaPip": "0.084191",
+	"Group": "7",
+	"MiniTradeSize": "10",
+	"StandardTradeSize": "10",
+	"Alias": "XAU/JPY",
+	"MinLeverage": "100",
+	"MaxLeverage": "1",
+	"StandardLeverage": "100",
+	"MicroTradeSize": "10",
+	"Result": {
+	  "Status": false,
+	  "Code": null,
+	  "Message": null
+	}
+  },
+  {
+	"Quote": "XAU/TRY",
+	"BidRate": "2629.150000",
+	"Notation": "E",
+	"Pair": "XAU/USD",
+	"ValueOfaPip": "0.000376",
+	"Group": "93",
+	"MiniTradeSize": "10",
+	"StandardTradeSize": "10",
+	"Alias": "XAU/TRY",
+	"MinLeverage": "100",
+	"MaxLeverage": "1",
+	"StandardLeverage": "100",
+	"MicroTradeSize": "10",
+	"Result": {
+	  "Status": false,
+	  "Code": null,
+	  "Message": null
+	}
+  },
+  {
+	"Quote": "XAU/USD",
+	"BidRate": "1204.630000",
+	"Notation": "A",
+	"Pair": "XAU/USD",
+	"ValueOfaPip": "0.100000",
+	"Group": "2",
+	"MiniTradeSize": "10",
+	"StandardTradeSize": "10",
+	"Alias": "XAU/USD",
+	"MinLeverage": "100",
+	"MaxLeverage": "1",
+	"StandardLeverage": "100",
+	"MicroTradeSize": "10",
+	"Result": {
+	  "Status": false,
+	  "Code": null,
+	  "Message": null
+	}
+  },
+  {
+	"Quote": "ZAR/JPY",
+	"BidRate": "10.075000",
+	"Notation": "A",
+	"Pair": "USD/ZAR",
+	"ValueOfaPip": "0.841907",
+	"Group": "1",
+	"MiniTradeSize": "10000",
+	"StandardTradeSize": "100000",
+	"Alias": "ZAR/JPY",
+	"MinLeverage": "5",
+	"MaxLeverage": "1",
+	"StandardLeverage": "5",
+	"MicroTradeSize": "1000",
+	"Result": {
+	  "Status": false,
+	  "Code": null,
+	  "Message": null
+	}
+  }
+]

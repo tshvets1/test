@@ -1,0 +1,67 @@
+@import "header/utilityNav",
+"header/primaryNav",
+"header/secondaryNav",
+"header/navCallouts",
+"header/siteSearch";
+
+.header {
+  position: relative;
+
+  a {
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  &.sticky {
+    position: fixed;
+    top: 0;
+    z-index: $headerStickyZIndex;
+    width: 100%;
+    background-color: $primary-nav-sticky-bg-color;
+
+    .primary-nav {
+      &__logo img {
+        @include size($primary-nav-shrinked-logo-size...);
+      }
+
+      &__logo,
+      &__links,
+      &__item-trigger {
+        line-height: $primary-nav-shrinked-nav-height;
+        height: $primary-nav-shrinked-nav-height;
+      }
+    }
+
+    .utility-nav {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: $tablet) {
+    .wrapper {
+      max-width: none;
+    }
+
+    &__navigation-wrapper {
+      display: none;
+    }
+
+    &.open ~ [class^="tooltipster"] {
+      display: none;
+    }
+
+    &.open &__navigation-wrapper {
+      display: block;
+    }
+
+    &.open &.utility-nav__menu-toggle {
+      .icon-close {
+        display: block;
+      }
+
+      .icon-mobile-menu {
+        display: none;
+      }
+    }
+  }
+}

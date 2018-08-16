@@ -1,0 +1,7 @@
+.alert-section {
+  &.bottom-fixed {
+    .alert__close {
+      display: none;
+    }
+  }
+}

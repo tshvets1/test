@@ -1,0 +1,122 @@
+<!--
+  {
+  "name": "Margin/Pip Calculator",
+  "status": "In Progress",
+  "notes": ""
+  }
+-->
+
+<div class="margin-pip-calculator-module"
+	 data-apply-ko="marginPipCalculator"
+	 data-get-products-timeout="5000"
+	 data-default-currency-group-value="EUR/AUD,EUR/GBP,EUR/JPY,EUR/USD"
+	 data-default-base-currency="USD"
+	 data-default-leverage="100:1">
+	<h2 class="margin-pip-calculator__headline">Margin/Pip Calculator</h2>
+
+	<div class="margin-pip-calculator__dropdowns">
+		<!-- Currencies Dropdown -->
+		<div class="margin-pip-calculator__dropdown">
+			<label class="margin-pip-calculator__dropdown-label" for="currencyGroup">Currencies</label>
+			<select class="custom-select" id="currencyGroup" data-bind="value: currencyGroupValue" data-chosen-select=""
+					data-chosen-options='{"disable_search":"true","width":"100%"}'>
+				<option value="AUD/USD,EUR/AUD,EUR/GBP,EUR/JPY,GBP/JPY,USD/ZAR">Quick Pairs</option>
+				<option value="EUR/AUD,EUR/GBP,EUR/JPY,EUR/USD" selected="selected">EUR/*</option>
+				<option value="USD/ZAR">USD/ZAR</option>
+			</select>
+		</div>
+		<!-- /end Currencies Dropdown -->
+		<!-- Leverage Dropdown -->
+		<div class="margin-pip-calculator__dropdown">
+			<label class="margin-pip-calculator__dropdown-label" for="leverage">Leverage</label>
+			<select class="custom-select" id="leverage" data-bind="value: leverage" data-chosen-select=""
+					data-chosen-options='{"disable_search":"true","width":"100%"}'>
+				<option value="100:1" selected="selected">100:1</option>
+				<option value="50:1">50:1</option>
+				<option value="33.33:1">33.33:1</option>
+				<option value="25:1">25:1</option>
+				<option value="20:1">20:1</option>
+				<option value="10:1">10:1</option>
+				<option value="1:1">1:1</option>
+			</select>
+		</div>
+		<!-- /end Leverage Dropdown -->
+		<!-- Base Currency Dropdown -->
+		<div class="margin-pip-calculator__dropdown">
+			<label class="margin-pip-calculator__dropdown-label" for="baseCurrency">Base Currency</label>
+			<select class="custom-select" data-bind="value: baseCurrency" id="baseCurrency" data-chosen-select=""
+					data-chosen-options='{"disable_search":"true","width":"100%"}'>
+				<option value="USD" selected="selected">USD</option>
+				<option value="EUR">EUR</option>
+				<option value="JPY">JPY</option>
+			</select>
+		</div>
+		<!-- /end Base Currency Dropdown -->
+	</div>
+
+	<div class="margin-pip-calculator__table-wrapper-outer">
+		<div class="margin-pip-calculator__table-wrapper-inner">
+			<table class="margin-pip-calculator__table rates-table">
+				<thead>
+				<tr>
+					<th class="margin-pip-calculator__table-market">Market</th>
+					<th>Pip Value</th>
+					<th>Bid Rate</th>
+					<th>Required Margin</th>
+					<th>Leverage</th>
+					<th class="margin-pip-calculator__table-contract">Contract Size</th>
+				</tr>
+				<tr class="spinner" data-bind="attr: {'hidden' : products().length > 0}">
+					<td colspan="6">
+						<img src="/_Images/ui/loader.gif" alt="spinner"/>
+					</td>
+				</tr>
+				</thead>
+				<tbody hidden data-bind="attr: {'hidden' : products().length == 0}">
+				<!-- ko foreach: { data: products, afterAdd: afterAddProduct} -->
+				<tr>
+					<td>
+						<a href="#" data-bind="text: product"></a>
+					</td>
+					<td data-bind="text: pip"></td>
+					<td><span class="margin-pip-calculator__table-bid"
+							  data-bind="text: bid, css: { 'bid-changed': bid() != bid_prev()}"></span></td>
+					<td data-bind="text: requiredMargin"></td>
+					<td>
+						<span data-bind="text: leverage"></span>
+
+						<div class="tooltip" data-bind="visible: showLeverageTooltip">
+							<div class="tooltip__content">
+								<p>Maximum leverage and available trade size varies by product. Please contact client
+									services for more information.</p>
+							</div>
+						</div>
+					</td>
+					<td class="margin-pip-calculator__table-dropdown">
+						<select class="custom-select" data-bind="value: contractSize"
+								data-chosen-options='{"disable_search":"true","width":"100%"}'>
+							<option data-bind="text: minTradeSize() * 1, attr: {value: minTradeSize() * 1}"></option>
+							<option data-bind="text: minTradeSize() * 2, attr: {value: minTradeSize() * 2}"></option>
+							<option data-bind="text: minTradeSize() * 3, attr: {value: minTradeSize() * 3}"></option>
+							<option data-bind="text: minTradeSize() * 4, attr: {value: minTradeSize() * 4}"></option>
+							<option data-bind="text: minTradeSize() * 5, attr: {value: minTradeSize() * 5}"></option>
+							<option data-bind="text: minTradeSize() * 10, attr: {value: minTradeSize() * 10}"></option>
+							<option data-bind="text: minTradeSize() * 15, attr: {value: minTradeSize() * 15}"></option>
+							<option data-bind="text: minTradeSize() * 20, attr: {value: minTradeSize() * 20}"></option>
+							<option data-bind="text: minTradeSize() * 25, attr: {value: minTradeSize() * 25}"></option>
+						</select>
+					</td>
+				</tr>
+				<!-- /ko -->
+				</tbody>
+			</table>
+		</div>
+	</div>
+
+	<div class="margin-pip-calculator__disclamer">
+		Neither FOREX.com nor its affiliates will be held responsible for the reliability or accuracy of this data. The
+		service is provided in good faith; however, there are no explicit or implicit warranties of accuracy. The user
+		agrees not to hold FOREX.com or any of its affiliates, liable for trading decisions that are based on the pip &
+		margin calculators from this website.
+	</div>
+</div>

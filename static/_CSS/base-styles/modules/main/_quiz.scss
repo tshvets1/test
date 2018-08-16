@@ -1,0 +1,392 @@
+.quiz {
+  &-section {
+    padding: $gutter*8 0;
+    background: $color-primary-3 no-repeat; //#063245;
+    color: $color-white;
+    text-align: center;
+    background-size: cover;
+    position: relative;
+
+    &[data-is-page-title="true"],
+    &[data-is-page-title="True"] {
+      .quiz__intro-headline {
+        @include rem(font-size, 50);
+      }
+    }
+
+    & > .wrapper {
+      display: none;
+    }
+
+    .spinner {
+      padding-top: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: $spinnerSize;
+      height: $spinnerSize;
+
+      .overlay {
+        background-color: transparent;
+      }
+
+      img {
+        height: auto;
+        margin-top: -$spinnerSize/2;
+      }
+    }
+  }
+
+  &__intro {
+    &-headline {
+      @include rem("font-size", 46);
+      line-height: 1.1;
+      padding-bottom: $gutter*2;
+    }
+
+    &-subheadline {
+      @include rem("font-size", 20);
+      line-height: 1.2;
+    }
+
+    &-icons {
+      @extend %list--unstyled;
+      display: table;
+      padding: $gutter*4;
+      margin: 0 auto;
+      text-align: left;
+
+      li {
+        display: table-cell;
+        position: relative;
+        width: 33.33%;
+        padding: 0 $gutter 0 0;
+      }
+    }
+
+    &-icon {
+      display: table-cell;
+      vertical-align: middle;
+      min-width: 50px;
+
+      img {
+        vertical-align: middle;
+      }
+    }
+
+    &-icon-description {
+      display: table-cell;
+      vertical-align: middle;
+      padding-left: 15px;
+      margin: 0;
+    }
+  }
+
+  &__question {
+    &-headline {
+      @include rem("font-size", 36);
+      line-height: 1.1;
+      padding-bottom: $gutter*4;
+    }
+
+    &-answers {
+      @extend %list--unstyled;
+      width: 100%;
+      overflow: auto;
+      padding-bottom: $gutter*4;
+
+      li {
+        display: block;
+        float: left;
+        background-color: transparent;
+        padding: 0 $gutter;
+        width: 33.3%;
+        height: 140px;
+
+        &.selected {
+          .quiz__question-answer {
+            background-color: $color-secondary-7;
+            color: $color-primary-3;
+
+            &-wrapper {
+              border-color: $color-secondary-7;
+              background-color: $color-primary-3;
+            }
+          }
+        }
+      }
+    }
+
+    &-answer {
+      cursor: pointer;
+      display: table;
+      table-layout: fixed;
+      width: 100%;
+      height: 100%;
+      @include transition(background-color, $transitionDurationAndEffect);
+
+      &-wrapper {
+        @include transition(border-color, $transitionDurationAndEffect);
+        border: 3px solid $color-white;
+        padding: $gutter*0.3;
+        height: 100%;
+
+      }
+
+      span {
+        @include rem("font-size", 18);
+        width: 60%;
+        padding-left: $gutter*2;
+        display: table-cell;
+        vertical-align: middle;
+        text-align: left;
+        line-height: 1.3;
+      }
+
+      &-icon {
+        width: 40%;
+        display: table-cell;
+        vertical-align: middle;
+      }
+    }
+
+    &-progress {
+      @extend %list--unstyled;
+      display: inline-block;
+
+      a {
+        @include rem("font-size", 12);
+        color: $color-white;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      li {
+        cursor: pointer;
+        position: relative;
+        float: left;
+        width: 60px;
+        padding-top: 15px;
+        text-align: left;
+
+        &:after {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          height: 7px;
+          background-color: $color-white;
+        }
+
+        &.answered {
+          a {
+            color: $color-secondary-7;
+          }
+
+          &:after {
+            background-color: $color-secondary-7;
+            @include transition(background-color, $transitionDurationAndEffect);
+          }
+        }
+
+        &.last-child {
+          width: 10px;
+        }
+      }
+    }
+  }
+
+  &__results {
+    &-header {
+      &-section {
+        padding: 0;
+        background: $color-primary-3 no-repeat; //#063245;
+        color: $color-white;
+        text-align: center;
+        background-size: cover;
+        position: relative;
+      }
+      &-wrapper {
+        background-position: center;
+        background-repeat: no-repeat;
+        padding: $gutter*6 $gutter*8;
+
+        p.centered-text {
+          @include rem("font-size", 16);
+        }
+      }
+      &-headline {
+        @include rem("font-size", 50);
+        line-height: 1.1;
+      }
+      &-subheadline {
+        @include rem("font-size", 20);
+        line-height: 1.2;
+      }
+      &-orange-logo {
+        position: relative;
+        height: 115px;
+        width: 115px;
+        margin: $gutter*3 auto;
+        background: $color-secondary-4;
+        border-radius: 50%;
+        background-position: center;
+        background-repeat: no-repeat;
+        @if ($old-ie) {
+          -ms-behavior: url('/_CSS/htc/PIE.htc');
+        }
+      }
+
+      &-heading-text {
+        @include rem("font-size", 20);
+      }
+    }
+
+    &-wrapper {
+      padding: $gutter*6 0;
+      text-align: center;
+      position: relative;
+
+      .spinner {
+        padding-top: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: $spinnerSize;
+        height: $spinnerSize;
+
+        .overlay {
+          background-color: transparent;
+        }
+
+        img {
+          height: auto;
+          margin-top: -$spinnerSize/2;
+        }
+      }
+
+      .custom-legend {
+        text-align: left;
+        font-weight: bold;
+
+        .legend-circle {
+          border-radius: 50%;
+          display: inline-block;
+          margin-right: $gutter;
+          width: 12px;
+          height: 12px;
+          float: left;
+        }
+
+        .legend-label {
+          padding-bottom: $gutter*0.8;
+          line-height: 1;
+          font-size: 13px;
+        }
+      }
+    }
+
+    &-chart {
+      &-data canvas {
+        cursor: default !important;
+      }
+
+      &-headline {
+        @include rem("font-size", 44);
+        line-height: 1.1;
+        padding-bottom: $gutter*2;
+        color: $color-primary-3;
+      }
+
+      &-subheadline {
+        @include rem("font-size", 20);
+        padding-bottom: $gutter*4;
+      }
+
+      &-indicator {
+        display: none;
+      }
+    }
+  }
+
+  @media screen and (max-width: $mobile) {
+    &-section {
+      &[data-is-page-title="true"],
+      &[data-is-page-title="True"] {
+        .quiz__intro-headline {
+          @include rem(font-size, 36);
+        }
+      }
+    }
+    &__intro {
+      &-headline {
+        @include rem("font-size", 26);
+        font-weight: 500;
+      }
+
+      &-subheadline {
+        @include rem("font-size", 18);
+      }
+
+      &-icons {
+        padding: $gutter*2 0;
+
+        li {
+          display: block;
+          width: 100%;
+          margin: $gutter 0;
+        }
+      }
+
+      &-icon, &-icon-description {
+        display: table-cell;
+      }
+
+      &-icon {
+        position: relative;
+      }
+
+      &-icon-description {
+        @include rem("font-size", 16);
+        padding-left: $gutter*1.5;
+      }
+    }
+
+    &__question {
+      &-answers {
+        li {
+          width: 100%;
+          margin: $gutter 0;
+        }
+      }
+      &-progress {
+        display: flex;
+        padding: 0 $gutter;
+
+        li {
+          width: 100%;
+        }
+      }
+    }
+
+    &__results {
+      &-wrapper {
+        padding-top: $gutter*5.5;
+        padding-bottom: $gutter*4;
+      }
+
+      &-chart {
+        &-headline {
+          @include rem("font-size", 25);
+          padding-bottom: $gutter;
+        }
+
+        &-subheadline {
+          @include rem("font-size", 14);
+          padding-bottom: $gutter;
+        }
+      }
+    }
+  }
+}

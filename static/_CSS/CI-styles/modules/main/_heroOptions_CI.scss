@@ -1,0 +1,110 @@
+.hero-two-section {
+  &[data-columns="2"] {
+    .wrapper {
+      > .col {
+        &:first-child {
+          > .gain-custom-form-bg {
+            padding-right: $hero-two-section-columns-2-content-module-padding;
+            padding-left: 0;
+          }
+        }
+
+        .form-input,
+        .form-text,
+        .form-tel,
+        .form-email,
+        .form-textarea,
+        .form-password,
+        .form-select,
+        .form-submit {
+          width: 210px;
+          float: none;
+        }
+
+        form .chosen-container-single {
+          width: 210px !important;
+          float: none;
+        }
+
+        form label.error {
+          right: calc(62% - 210px);
+        }
+      }
+    }
+
+    .gain-custom-form-bg {
+      padding-left: $hero-two-section-columns-2-content-module-padding;
+    }
+  }
+
+  &[data-pointer-top="true"] {
+    &:after {
+      @extend %data-pointer-arrow;
+      border-top-color: inherit;
+      bottom: -$pointer-width;
+    }
+
+    &:before {
+      content: none;
+    }
+
+    @media screen and (max-width: $mobile) {
+      &:after {
+        bottom: -$pointer-mobile-width;
+      }
+    }
+  }
+
+  .hero__headline span {
+    padding-bottom: 4px;
+  }
+
+  &[data-highlight-headline="false"] {
+    .hero__headline span {
+      padding-bottom: 0;
+    }
+  }
+
+  @media screen and (max-width: $tablet) {
+    &[data-columns="2"] {
+      .wrapper {
+        > .col {
+          .form-input,
+          .form-text,
+          .form-tel,
+          .form-email,
+          .form-textarea,
+          .form-password,
+          .form-select,
+          .form-submit {
+            width: 100%;
+          }
+
+          form .chosen-container-single {
+            width: 100% !important;
+          }
+
+          form label.error {
+            right: 0;
+          }
+        }
+      }
+      .gain-custom-form-bg {
+        padding-left: $hero-two-section-columns-2-content-module-tablet-padding;
+      }
+    }
+  }
+
+  @media screen and (max-width: $hero-two-section-columns-2-breakpoint) {
+    &[data-columns="2"] {
+      .gain-custom-form-bg {
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+
+    .hero__headline span {
+      padding-bottom: 2px;
+    }
+  }
+}

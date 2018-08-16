@@ -1,0 +1,265 @@
+<!--
+  {
+  "name": "Product Summary",
+  "status": "Complete",
+  "notes": ""
+  }
+-->
+
+<section class="section-wrapper product-summary-banner" data-sectionbg="default"
+		 data-apply-ko="productLiveRates" data-product="EUR/USD" data-get-product-timeout="5000"
+		 data-default-tab="spreadBets">
+	<div class="wrapper product-summary-banner__wrapper">
+		<div class="product-summary-banner__header">
+			<h2 class="product-summary-banner__headline">EUR/USD</h2>
+			<em class="product-summary-banner__subheadline">Euro/U.S. Dollar</em>
+
+			<div class="product-summary-banner__tabs-wrapper">
+				<ul class="product-summary-banner__tabs-list tabs__list" data-tabs-handler="false">
+					<li class="tabs__item">
+						<a class="tabs__link product-summary-banner__tabs-link" href="#"
+						   data-bind="click: changeTab.bind($data,'cfd'), css: {'active': currentTab()=='cfd'}">
+							CFDs
+						</a>
+					</li>
+					<li class="tabs__item">
+						<a class="tabs__link product-summary-banner__tabs-link" href="#"
+						   data-bind="click: changeTab.bind($data,'spreadBets'), css: {'active': currentTab()=='spreadBets'}">
+							Spread Bets
+						</a>
+					</li>
+					<li class="tabs__item">
+						<a class="tabs__link product-summary-banner__tabs-link" href="#"
+						   data-bind="click: changeTab.bind($data,'spotFx'), css: {'active': currentTab()=='spotFx'}">
+							Spot FX
+						</a>
+					</li>
+				</ul>
+
+				<select class="custom-select" data-bind="value: currentTab" data-chosen-select="" data-chosen-options='{"width":"100%"}'>
+					<option value="cfd">CFDs</option>
+					<option selected value="spreadBets">Spread Bets</option>
+					<option value="spotFx">Spot FX</option>
+				</select>
+			</div>
+		</div>
+
+		<div data-bind="with: ratesInfo" class="product-summary-banner__data">
+			<div class="product-summary-banner__rates">
+				<button class="product-summary-banner__rate product-summary-banner__rate-buy no-transition"
+						data-modal-href="#modalId"
+						data-bind="highlightUpDownIntermediate: buy,
+						css: {'product-summary-banner__rate--up': buyMoving() > 0, 'product-summary-banner__rate--down': buyMoving() < 0 },
+						highlightOptions: {highlightUp: 'product-summary-banner__rate--up-end', highlightDown: 'product-summary-banner__rate--down-end',
+						highlightUpInter: 'product-summary-banner__rate--up-inter', highlightDownInter: 'product-summary-banner__rate--down-inter',
+						highlightProperty: 'buyMoving' }">
+					<label data-bind="superscriptLastChar: buy, decimals: decimals"></label>
+					<strong class="product-summary-banner__rate-label">Buy</strong>
+				</button>
+				<button class="product-summary-banner__rate no-transition" data-modal-href="http://google.com"
+						data-bind="highlightUpDownIntermediate: sell,
+						css: {'product-summary-banner__rate--up': sellMoving() > 0, 'product-summary-banner__rate--down': sellMoving() < 0 },
+						highlightOptions: {highlightUp: 'product-summary-banner__rate--up-end', highlightDown: 'product-summary-banner__rate--down-end',
+						highlightUpInter: 'product-summary-banner__rate--up-inter', highlightDownInter: 'product-summary-banner__rate--down-inter',
+						highlightProperty: 'sellMoving' }">
+					<label data-bind="superscriptLastChar: sell, decimals: decimals"></label>
+					<strong class="product-summary-banner__rate-label">Sell</strong>
+				</button>
+				<div class="product-summary-banner__rate-diff">
+					<span data-bind="text: sellBuyDiff"></span>
+				</div>
+			</div>
+			<!-- END .product-data__actions -->
+
+			<div class="product-summary-banner__changes">
+				<span>
+					<em>high</em>
+					<label data-bind="text: high">12981.6</label>
+				</span>
+				<span>
+					<em>low</em>
+					<label data-bind="text: low">12852.3</label>
+				</span>
+				<span>
+					<em>Change</em>
+					<label data-bind="text: change,
+					css: {'product-summary-banner__changes--up': change()>changeOld(),
+					'product-summary-banner__changes--down': change()<changeOld() }">
+					</label>
+				</span>
+				<span>
+					<em>% Change</em>
+					<label data-bind="text: changePercent()+'%',
+					css: {'product-summary-banner__changes--up': changePercent()>changePercentOld(),
+					'product-summary-banner__changes--down': changePercent()<changePercentOld() }">
+					</label>
+				</span>
+			</div>
+			<!-- END .product-data__changes -->
+		</div>
+	</div>
+	<div class="wrapper">
+		<a class="product-summary-banner__details-trigger" data-bind="click: showDetail">Product Details</a>
+	</div>
+</section>
+<section class="section-wrapper product-summary-details" data-sectionbg="light-gray">
+	<div class="wrapper">
+		<div class="product-summary-details__data" data-columns="2" data-for-product="cfd">
+			<div class="col">
+				<div class="rtf">
+					CFD
+					<table class="data-table">
+						<tbody>
+						<tr>
+							<td>Min Trade Size</td>
+							<td>1,000</td>
+						</tr>
+						<tr>
+							<td>Pip Value</td>
+							<td>$1.00</td>
+						</tr>
+						<tr>
+							<td>Margin</td>
+							<td>200:1</td>
+						</tr>
+						<tr>
+							<td>Min guaranteed stop distance</td>
+							<td>1 pip</td>
+						</tr>
+						</tbody>
+					</table>
+
+					<table class="data-table">
+						<caption>Expiry</caption>
+						<tbody>
+						<tr>
+							<td>Expiry Date</td>
+							<td>01/04/2016</td>
+						</tr>
+						<tr>
+							<td>Last Dealing Date &amp; Time</td>
+							<td>01/04/2016 20:00</td>
+						</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<div class="col">
+				<div class="rtf">
+					<table class="data-table">
+						<caption>margin requirements</caption>
+						<thead>
+						<tr>
+							<th>Tier</th>
+							<th>Position (USD)</th>
+							<th>Deposit Factor</th>
+						</tr>
+						</thead>
+						<tbody>
+						<tr>
+							<td>2</td>
+							<td>700-1750</td>
+							<td>0.5%</td>
+						</tr>
+						<tr>
+							<td>3</td>
+							<td>1750-8750</td>
+							<td>2.5%</td>
+						</tr>
+						<tr>
+							<td>4</td>
+							<td>8750+</td>
+							<td>5.0%</td>
+						</tr>
+						</tbody>
+					</table>
+				</div>
+				<p class="product-summary-details__disclaimer">If your aggregate position is larger than Tier 1,
+					your
+					margin requirement will not be reduced
+					by non-guaranteed stops. Please note: we have tried to ensure that the information here
+					is
+					as accurate as possible, but it is intended for guidance only and any errors will not be
+					binding on us.</p>
+			</div>
+		</div>
+		<div class="product-summary-details__data" data-columns="2" data-for-product="spreadBets">
+			<div class="col">
+				<div class="rtf">
+					<table class="data-table">
+						<tbody>
+						<tr>
+							<td>Min Trade Size</td>
+							<td>1,000</td>
+						</tr>
+						<tr>
+							<td>Pip Value</td>
+							<td>$1.00</td>
+						</tr>
+						<tr>
+							<td>Margin</td>
+							<td>200:1</td>
+						</tr>
+						<tr>
+							<td>Min guaranteed stop distance</td>
+							<td>1 pip</td>
+						</tr>
+						</tbody>
+					</table>
+
+					<table class="data-table">
+						<caption>Expiry</caption>
+						<tbody>
+						<tr>
+							<td>Expiry Date</td>
+							<td>01/04/2016</td>
+						</tr>
+						<tr>
+							<td>Last Dealing Date &amp; Time</td>
+							<td>01/04/2016 20:00</td>
+						</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<div class="col">
+				<div class="rtf">
+					<table class="data-table">
+						<caption>margin requirements</caption>
+						<thead>
+						<tr>
+							<th>Tier</th>
+							<th>Position (USD)</th>
+							<th>Deposit Factor</th>
+						</tr>
+						</thead>
+						<tbody>
+						<tr>
+							<td>2</td>
+							<td>700-1750</td>
+							<td>0.5%</td>
+						</tr>
+						<tr>
+							<td>3</td>
+							<td>1750-8750</td>
+							<td>2.5%</td>
+						</tr>
+						<tr>
+							<td>4</td>
+							<td>8750+</td>
+							<td>5.0%</td>
+						</tr>
+						</tbody>
+					</table>
+				</div>
+				<p class="product-summary-details__disclaimer">If your aggregate position is larger than Tier 1,
+					your
+					margin requirement will not be reduced
+					by non-guaranteed stops. Please note: we have tried to ensure that the information here
+					is
+					as accurate as possible, but it is intended for guidance only and any errors will not be
+					binding on us.</p>
+			</div>
+		</div>
+	</div>
+</section>

@@ -1,0 +1,40 @@
+<!--
+  {
+  "name": "Platform Handbooks - Two Column",
+  "status": "Complete",
+  "notes": ""
+  }
+-->
+
+<section class="section-wrapper main-left-rail" data-sectionbg="default">
+	<div class="wrapper">
+
+		<nav class="secondary-content" role="navigation">
+			@@include('/modules/support/platform-handbooks/platform_handbooks_filter.html')
+		</nav>
+
+		<div class="primary-content">
+
+			<div class="platform-handbooks">
+				<div class="platform-handbooks__description">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+					et
+					dolore magna aliqua. eu fugiat
+				</div>
+
+				<div class="platform-handbooks__platform active" id="forexTrader">
+					@@include('/modules/support/platform-handbooks/platform_handbooks_platform.html', {"headline":
+					"ForexTrader"})
+				</div>
+				<div class="platform-handbooks__platform" id="dealbook">
+					@@include('/modules/support/platform-handbooks/platform_handbooks_platform.html', {"headline":
+					"Dealbook"})
+				</div>
+				<div class="platform-handbooks__platform" id="metaTrader">
+					@@include('/modules/support/platform-handbooks/platform_handbooks_platform.html', {"headline":
+					"MetaTrader"})
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

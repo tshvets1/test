@@ -1,0 +1,243 @@
+.margin-pip-calculator {
+  &-module {
+    padding: $margin-pip-calculator-padding;
+  }
+
+  &__headline {
+    @include set-text-styles($margin-pip-calculator-headline-font...);
+    margin: $margin-pip-calculator-headline-margin;
+  }
+
+  &__dropdowns {
+    display: table;
+    table-layout: fixed;
+    padding: $margin-pip-calculator-dropdowns-padding;
+    width: 100%;
+    color: $margin-pip-calculator-dropdowns-color;
+    background-color: $margin-pip-calculator-dropdowns-bg-color;
+  }
+
+  &__dropdown {
+    padding: $margin-pip-calculator-dropdown-padding;
+    display: table-cell;
+
+    &-label {
+      @include set-text-styles($margin-pip-calculator-dropdown-font...);
+    }
+
+    @extend %chosen-select--transparent-button;
+
+    .chosen-container-single {
+      &.chosen-with-drop {
+        .chosen-single {
+          border: $margin-pip-calculator-dropdown-border;
+        }
+      }
+
+      .chosen-single {
+        padding-top: 7px;
+        padding-left: 7px;
+        border-width: 2px;
+
+        span {
+          margin-right: 34px;
+        }
+
+        div {
+          padding-top: 6px;
+          border-left-width: 2px;
+        }
+
+        &:hover, &.active {
+          border: $margin-pip-calculator-dropdown-hover-border;
+        }
+      }
+    }
+  }
+
+  &__table {
+    table-layout: auto;
+    text-align: left;
+    margin: 0;
+    //min-height: 150px;
+
+    a {
+      text-decoration: none;
+    }
+
+    &-bid {
+      box-shadow: 3px 0 0 3px transparent,
+      -3px 0 0 3px transparent;
+    }
+
+    .bid-changed {
+      background-color: $margin-pip-calculator-bid-changed-bg-color;
+      box-shadow: 3px 0 0 3px $margin-pip-calculator-bid-changed-bg-color,
+      -3px 0 0 3px $margin-pip-calculator-bid-changed-bg-color;
+      color: $margin-pip-calculator-bid-changed-color;
+    }
+
+    thead tr {
+      background-color: $margin-pip-calculator-table-head-bg-color;
+    }
+
+    tbody {
+      tr {
+        background-color: $margin-pip-calculator-table-row-bg-color;
+
+        &.nth-child-odd {
+          background-color: $margin-pip-calculator-table-row-odd-bg-color;
+        }
+
+        &:hover {
+          background-color: $margin-pip-calculator-table-row-hover-bg-color;
+        }
+
+        &:first-child {
+          .chosen-single, .chosen-single:hover {
+            border-top: $margin-pip-calculator-table-dropdown-border;
+          }
+        }
+      }
+    }
+
+    th, td {
+      padding: $margin-pip-calculator-table-cell-padding;
+      height: $margin-pip-calculator-table-row-height;
+    }
+
+    &-contract {
+      width: $margin-pip-calculator-table-contract-width;
+    }
+
+    &-dropdown {
+      padding: $margin-pip-calculator-table-dropdown-padding;
+
+      .chosen-container-single {
+        .chosen-single {
+          background: $margin-pip-calculator-table-dropdown-bg-color;
+          height: $margin-pip-calculator-table-row-height;
+          padding-top: 13px;
+
+          & > div {
+            padding-top: 12px;
+          }
+
+        }
+
+        .chosen-single, .chosen-single:hover {
+          @include chosen-select-set-color($margin-pip-calculator-table-dropdown-chosen-color...);
+          border-top-color: transparent;
+        }
+      }
+    }
+  }
+
+  &__table-wrapper-outer {
+    position: relative;
+  }
+
+  &__disclamer {
+    @include set-text-styles($margin-pip-calculator-disclaimer-font...);
+
+    margin: $margin-pip-calculator-disclaimer-margin;
+  }
+
+  @media screen and (max-width: $mobile) {
+    &__headline {
+      @include set-text-styles($margin-pip-calculator-headline-mobile-font...);
+    }
+
+    &__dropdowns {
+      padding: $margin-pip-calculator-dropdowns-mobile-padding;
+    }
+
+    &__dropdown {
+      display: table;
+      table-layout: fixed;
+      width: 100%;
+      padding: $margin-pip-calculator-dropdown-mobile-padding;
+
+      &-label {
+        display: table-cell;
+        width: $margin-pip-calculator-dropdown-label-mobile-width;
+      }
+
+      .custom-select {
+        height: $margin-pip-calculator-dropdown-mobile-height;
+        padding: $gutter/2 $gutter;
+
+        &:hover, &:focus {
+          border: $margin-pip-calculator-dropdown-hover-mobile-border;
+        }
+      }
+    }
+
+    &__table {
+      min-height: $margin-pip-calculator-table-mobile-min-height;
+
+      thead .spinner {
+        position: absolute;
+        padding: 0;
+        width: calc(100% - #{$margin-pip-calculator-header-mobile-width});
+        margin-left: $margin-pip-calculator-header-mobile-width;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      thead tr {
+        width: $margin-pip-calculator-header-mobile-width;
+        position: absolute;
+        z-index: $defaultZIndex;
+        left: 0;
+      }
+
+      tr {
+        > th, td {
+          background-color: $margin-pip-calculator-table-row-mobile-bg-color;
+          padding: $margin-pip-calculator-table-cell-mobile-padding;
+
+          &:nth-child(even) {
+            background-color: $margin-pip-calculator-table-row-even-mobile-bg-color;
+          }
+        }
+      }
+
+      tbody {
+        display: block;
+        margin-left: $margin-pip-calculator-header-mobile-width;
+
+        tr {
+          display: block;
+          float: left;
+          min-width: $margin-pip-calculator-table-row-mobile-min-width;
+        }
+      }
+
+      th, td {
+        display: block;
+        height: $margin-pip-calculator-table-row-mobile-height;
+      }
+
+      th {
+        border-right: $margin-pip-calculator-table-head-mobile-border;
+      }
+
+      .custom-select {
+        height: $margin-pip-calculator-table-row-mobile-height;
+        padding: $gutter/2 $gutter;
+        border: $margin-pip-calculator-table-dropdown-border;
+        background: $margin-pip-calculator-table-dropdown-bg-color;
+
+        &:hover {
+          border: $margin-pip-calculator-table-dropdown-hover-mobile-border;
+          color: $margin-pip-calculator-table-dropdown-hover-mobile-color;
+        }
+      }
+    }
+
+    &__table-wrapper-inner {
+      overflow-x: scroll;
+    }
+  }
+}

@@ -1,0 +1,13 @@
+// Use CSS to replace text with a background image.
+// Uses HTML boilerplate method of image replacement.
+// Note that some validators will incorrectly report as invalid CSS.
+// For other options see here: http://css-tricks.com/examples/ImageReplacement/
+@mixin image-replace($imagePath, $width, $height) {
+  border: 0;
+  font: 0/0 a;
+  text-shadow: none;
+  color: transparent;
+  background: url($imagePath) no-repeat;
+  width: $width;
+  height: $height;
+}

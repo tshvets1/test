@@ -1,0 +1,8 @@
+@mixin transition($properties, $durationAndEffect) {
+  $transition: null;
+  @each $property in $properties {
+    $transition: $transition, $property $durationAndEffect;
+  }
+
+  transition: $transition;
+}

@@ -1,0 +1,76 @@
+.social-links {
+  &-section {
+    text-align: right;
+  }
+
+  &__heading,
+  &__list {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  &__heading {
+    @include set-text-styles($footer-social-links-font...);
+  }
+
+  &__list {
+    @extend %list--inline;
+    @include set-text-styles($footer-social-links-list-font...)
+  }
+
+  &__link {
+    display: inline-block;
+    height: nth($footer-social-links-link-size, 2);
+    width: nth($footer-social-links-link-size, 1);
+    overflow: hidden;
+    margin: 0 5px;
+    padding: nth($footer-social-links-link-size, 3) nth($footer-social-links-link-size, 4);
+    color: transparent;
+    font-size: 0;
+    text-decoration: none;
+    vertical-align: text-bottom;
+    background-color: $footer-social-links-link-bg-color;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+
+    &:hover {
+      background-color: $footer-social-links-link-hover-bg-color;
+
+    }
+  }
+
+  @media screen and (max-width: $tablet) {
+    &__heading,
+    &__list {
+      @include set-text-styles( $footer-social-links-tablet-font...);
+    }
+
+    &__link {
+      height: nth($footer-social-links-link-tablet-size, 2);
+      width: nth($footer-social-links-link-tablet-size, 1);
+      padding: nth($footer-social-links-link-tablet-size, 3) nth($footer-social-links-link-tablet-size, 4);
+    }
+  }
+
+  @media screen and (max-width: $mobile) {
+    &__heading,
+    &__list {
+      @include set-text-styles( $footer-social-links-mobile-font...);
+    }
+
+    &__link {
+      height: nth($footer-social-links-link-mobile-size, 2);
+      width: nth($footer-social-links-link-mobile-size, 1);
+      padding: nth($footer-social-links-link-mobile-size, 3) nth($footer-social-links-link-mobile-size, 4);
+    }
+  }
+
+  @media screen and (max-width: $footer-contacts-one-column-breakpoint) {
+    &-section {
+      text-align: left;
+    }
+  }
+}

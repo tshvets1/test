@@ -1,0 +1,76 @@
+.my-account-login {
+  &-modal-section {
+    text-align: center;
+    padding: $gutter*4 $gutter*2;
+    max-width: 600px;
+
+    .wrapper {
+      padding: 0;
+    }
+
+    .my-account-login {
+      @media screen and (max-width: $tablet) {
+        &__form {
+          padding: $gutter*2 0;
+          text-align: center !important;
+
+          .form-group {
+            text-align: left;
+          }
+
+          .form-input {
+            width: 100%;
+          }
+
+          .form-submit {
+            margin-left: 0;
+            background: $color-secondary-5;
+            border-bottom-color: darken($color-secondary-5, 10%);
+
+            &:hover {
+              background: darken($color-secondary-5, 5%);
+              border-bottom-color: darken($color-secondary-5, 15%);
+            }
+          }
+        }
+
+        &__sub-form-text {
+          text-align: left;
+          padding-bottom: $gutter*2;
+          overflow: auto;
+          width: 100%;
+
+          a {
+            text-decoration: none;
+
+            &:first-child {
+              float: left;
+            }
+
+            &:last-child {
+              float: right;
+            }
+          }
+        }
+
+        &__sub-headline {
+          @include rem(font-size, 24)
+        }
+      }
+
+      @media screen and (max-width: $mobile) {
+        &-modal-section {
+          min-height: inherit !important;
+
+          .modal__content {
+            padding: 0;
+          }
+        }
+
+        &__sub-headline {
+          @include rem(font-size, 21)
+        }
+      }
+    }
+  }
+}

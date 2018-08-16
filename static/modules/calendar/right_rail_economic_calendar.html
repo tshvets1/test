@@ -1,0 +1,44 @@
+<!--
+  {
+  "name": "Economic Calendar - Right Rail",
+  "status": "In Progress",
+  "notes": ""
+  }
+-->
+
+			<div class="module-wrapper economic-calendar-section" data-sectionbg="default">
+				<div class="wrapper">
+					<h2 class="economic-calendar-section__headline">
+						Economic Calendar
+						<div class="tooltip">
+							<div class="tooltip__content">
+								<h2>Lorem ipsum</h2>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vitae velit egetnisi portafacilisis.</p>
+							</div>
+						</div>
+					</h2>
+                    <div id="fxst_grid" class="fxst_grid"></div>
+					<a class="cta-link" href="#">View All</a>
+				</div>
+
+				<script type="text/javascript" src="http://calendar.fxstreet.com/scripts/resources/?culture=en-us"></script>
+
+					<script type="text/javascript">
+						var calendarOptions = {
+							tabs: "",
+							gridSelector: "#fxst_grid",
+							filterSelector: ".economic-calendar-filter-section",
+							pushUpdates: true,
+							saveSettings: true,
+							rows: 2,
+							rightRail: true,
+							linkOnDetail: {
+								label: "Login to trade this event",
+								cssClass: "cta-link",
+								href: "#"
+							},
+							culture: "en-us",
+							timezone: "Eastern Standard Time",
+						};
+				</script>
+			</div>

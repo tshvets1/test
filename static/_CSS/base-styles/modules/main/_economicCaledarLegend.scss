@@ -1,0 +1,83 @@
+.fxst-i-vol {
+  $economic-legend-item-vol1-bg-color: $color-secondary-2;
+  $economic-legend-item-vol2-bg-color: $color-secondary-4;
+  $economic-legend-item-vol3-bg-color: $color-secondary-6;
+
+  $economic-legend-item-border: solid 1px $color-medium-dark;
+  $economic-legend-item-border-radius: 50%;
+  $economic-legend-item-vol1-border-color: $color-secondary-2;
+  $economic-legend-item-vol2-border-color: $color-secondary-4;
+  $economic-legend-item-vol3-border-color: $color-secondary-6;
+  $economic-legend-item-size: 8px 8px;
+
+  display: inline-block;
+  width: nth($economic-legend-item-size, 1);
+  height: nth($economic-legend-item-size, 2);
+  vertical-align: middle;
+  position: relative;
+  top: -1px;
+  font-size: 0;
+  border: $economic-legend-item-border;
+  border-radius: $economic-legend-item-border-radius;
+
+  @if ($old-ie) {
+    -ms-behavior: url('/_CSS/htc/PIE.htc');
+  }
+
+  &.fxst-i-vol1 {
+    background: $economic-legend-item-vol1-bg-color;
+    border-color: $economic-legend-item-vol1-border-color;
+  }
+
+  &.fxst-i-vol2 {
+    background: $economic-legend-item-vol2-bg-color;
+    border-color: $economic-legend-item-vol2-border-color;
+  }
+
+  &.fxst-i-vol3 {
+    background: $economic-legend-item-vol3-bg-color;
+    border-color: $economic-legend-item-vol3-border-color;
+  }
+}
+
+.economic__legend {
+  $economic-legend-font-size: 14;
+  $economic-legend-mobile-font-size: 13;
+
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: $color-darker;
+
+  &-title {
+    display: inline-block;
+    @include rem(font-size, $economic-legend-font-size);
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  &-list {
+    display: inline-block;
+    @extend %list--inline;
+    @include rem(font-size, $economic-legend-font-size);
+
+    li {
+      padding: 0 $gutter;
+      text-transform: uppercase;
+    }
+  }
+
+  @media screen and (max-width: $mobile) {
+    position: relative;
+    width: 100%;
+
+    &-title,
+    &-list {
+      @include rem(font-size, $economic-legend-mobile-font-size);
+    }
+
+    &-list li {
+      padding: $gutter/2;
+    }
+  }
+}

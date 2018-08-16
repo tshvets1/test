@@ -1,0 +1,56 @@
+/* To add line by line background color around inline content */
+
+@mixin inline-bg($bg-color, $left: 12px, $right: 0, $paddingTopBottom: 4px, $IEleft: 10px, $IEright: 5px, $IEpaddingRight: 5px, $IEafterPosition: -2px -2px -2px -2px) {
+  &:not(.IE) {
+    background: $bg-color;
+    box-shadow: $right 0 0 $paddingTopBottom $bg-color,
+    -$left 0 0 $paddingTopBottom $bg-color;
+    -webkit-box-decoration-break: clone;
+    -ms-box-decoration-break: clone;
+    -o-box-decoration-break: clone;
+    box-decoration-break: clone;
+    padding-right: $left;
+  }
+
+  @if ($old-ie) {
+    position: relative;
+    -ms-behavior: url(/_CSS/htc/PIE.htc);
+
+    css3-container {
+      z-index: 0 !important;
+    }
+  }
+
+  &.IE {
+    > span {
+      background: $bg-color;
+      position: relative;
+      z-index: $defaultZIndex;
+      box-shadow: $IEright 0 0 $paddingTopBottom $bg-color,
+      -$IEleft 0 0 $paddingTopBottom $bg-color;
+      padding-right: $IEpaddingRight;
+
+      @if ($old-ie) {
+        -ms-behavior: url(/_CSS/htc/PIE.htc);
+      }
+
+      &:after {
+        content: "";
+        background-color: $bg-color;
+        position: absolute;
+        @include position($IEafterPosition...);
+        z-index: $beforeAllZIndex;
+      }
+    }
+  }
+}
+
+@mixin inline-bg-mobile($bg-color, $size: $gutter/3, $line-height: 1.25, $padding: 0) {
+  &:not(.IE) {
+    background: $bg-color;
+    box-shadow: $size 0 0 $size $bg-color,
+    -$size 0 0 $size $bg-color;
+    line-height: $line-height;
+    padding: $padding;
+  }
+}

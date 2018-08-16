@@ -1,0 +1,306 @@
+.most-popular-markets {
+  &-section {
+    padding: $most-popular-markets-padding;
+
+    @each $color-theme in $color-themes {
+      $themeName: map_get($color-theme, theme);
+      $tempClassName: '%theme' + $themeName;
+      #{$tempClassName} {
+        background-color: map_get($color-theme, bgColor);
+        border: $rates-table-value-changed-options map_get($color-theme, bgColor);
+      }
+
+      &[data-change-up-color=#{$themeName}] {
+        .rates-table__value-changed--up {
+          @extend #{$tempClassName};
+        }
+      }
+
+      &[data-change-down-color=#{$themeName}] {
+        .rates-table__value-changed--down {
+          @extend #{$tempClassName};
+        }
+      }
+    }
+  }
+
+  &__title {
+    margin: $most-popular-markets-title-margin;
+    @include set-text-styles($most-popular-markets-title-font...);
+    color: $most-popular-markets-title-color;
+  }
+
+  &__headline {
+    display: inline-block;
+    float: left;
+    margin: $most-popular-markets-headline-margin;
+    @include set-text-styles($most-popular-markets-headline-font...);
+  }
+
+  &__tabs {
+    position: relative;
+    padding: $most-popular-markets-tabs-padding;
+    border: $most-popular-markets-tabs-border;
+    border-bottom: 0;
+    text-align: center;
+  }
+
+  &__tabs-wrapper {
+    @extend %menuDropdownDefault;
+    float: right;
+
+    &:after {
+      @extend %arrow-down;
+      display: none;
+    }
+  }
+
+  &__tabs-content {
+    clear: both;
+  }
+
+  &__tabs-tab {
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
+
+  &__table {
+    float: left;
+
+    &[data-columns="3"] {
+      padding-left: $most-popular-markets-between-tables-3-padding/3;
+      width: 33.3333%;
+
+      &:first-child {
+        padding-left: 0;
+        padding-right: $most-popular-markets-between-tables-3-padding/3;
+      }
+
+      &:first-child + .most-popular-markets__table {
+        padding-left: $most-popular-markets-between-tables-3-padding/6;
+        padding-right: $most-popular-markets-between-tables-3-padding/6;
+      }
+    }
+
+    &[data-columns="2"] {
+      padding-left: $most-popular-markets-between-tables-2-padding;
+      width: 50%;
+
+      &:first-child {
+        padding-left: 0;
+        padding-right: $most-popular-markets-between-tables-2-padding;
+      }
+    }
+  }
+
+  &__table-wrapper {
+    overflow: auto;
+    clear: both;
+  }
+
+  &__show-all-link {
+    @include set-text-styles($most-popular-markets-show-all-font...);
+    width: 100%;
+    color: $most-popular-markets-show-all-color;
+
+    &:after {
+      display: none;
+    }
+
+    span {
+      @include set-text-styles($most-popular-markets-show-all-icon-font...);
+      position: relative;
+      top: 2px;
+      color: $most-popular-markets-show-all-color;
+    }
+
+    &:hover {
+      color: $most-popular-markets-show-all-hover-color;
+      span {
+        color: $most-popular-markets-show-all-hover-color;
+      }
+    }
+  }
+
+  &__trading-sub-title {
+    @include set-text-styles($most-popular-markets-trading-sub-title-font...);
+    padding: $most-popular-markets-trading-sub-title-padding;
+  }
+
+  &__tabs-content-wrapper &__trading-sub-title {
+    padding: $most-popular-markets-tab-trading-sub-title-padding;
+  }
+
+  &__trading-title {
+    position: relative;
+    display: inline-block;
+    width: $most-popular-markets-trading-title-width;
+    top: $most-popular-markets-trading-title-top;
+    padding: $most-popular-markets-trading-title-padding;
+    @include set-text-styles($most-popular-markets-trading-title-font...);
+  }
+
+  @media screen and (max-width: $tablet) {
+    &-section {
+      padding: $most-popular-markets-tablet-padding;
+    }
+
+    &__title {
+      margin: $most-popular-markets-title-tablet-margin;
+      @include set-text-styles($most-popular-markets-title-tablet-font...);
+    }
+
+    &__headline {
+      @include set-text-styles($most-popular-markets-headline-tablet-font...);
+      margin: $most-popular-markets-headline-tablet-margin;
+    }
+
+    &__tabs {
+      border: $most-popular-markets-tabs-tablet-border;
+      padding: $most-popular-markets-tabs-tablet-padding;
+    }
+
+    &__show-all-link {
+      @include set-text-styles($most-popular-markets-show-all-tablet-font...);
+
+      span {
+        @include set-text-styles($most-popular-markets-show-all-icon-tablet-font...);
+      }
+    }
+
+    &__trading-sub-title {
+      @include set-text-styles($most-popular-markets-trading-sub-title-tablet-font...);
+      padding: $most-popular-markets-trading-sub-title-tablet-padding;
+    }
+
+    &__tabs-content-wrapper &__trading-sub-title {
+      padding: $most-popular-markets-tab-trading-sub-title-tablet-padding;
+    }
+
+    &__trading-title {
+      width: $most-popular-markets-trading-title-tablet-width;
+      top: $most-popular-markets-trading-title-tablet-top;
+      padding: $most-popular-markets-trading-title-tablet-padding;
+      @include set-text-styles($most-popular-markets-trading-title-tablet-font...);
+    }
+  }
+
+  @media screen and (max-width: $mobile) {
+    &-section {
+      padding: $most-popular-markets-mobile-padding;
+      .wrapper {
+        padding: $most-popular-markets-wrapper-mobile-padding;
+      }
+    }
+
+    &__title {
+      padding: $most-popular-markets-title-mobile-padding;
+      margin: $most-popular-markets-title-mobile-margin;
+      @include set-text-styles($most-popular-markets-title-mobile-font...);
+    }
+
+    &__headline {
+      @include set-text-styles($most-popular-markets-headline-mobile-font...);
+      margin: $most-popular-markets-headline-mobile-margin;
+      max-width: $most-popular-markets-headline-mobile-max-width;
+    }
+
+    &__tabs {
+      width: 100%;
+      padding: $most-popular-markets-tabs-mobile-padding;
+      border-top: $most-popular-markets-tabs-mobile-border;
+    }
+
+    &__table {
+      &[data-columns] {
+        width: 100%;
+        padding: 0 !important;
+      }
+
+      &-spread {
+        width: $most-popular-markets-table-spread-mobile-width;
+      }
+    }
+
+    &__trading-title {
+      width: $most-popular-markets-trading-title-mobile-width;
+      top: $most-popular-markets-trading-title-mobile-top;
+      padding: $most-popular-markets-trading-title-mobile-padding;
+      @include set-text-styles($most-popular-markets-trading-title-mobile-font...);
+    }
+
+    &__show-all-link {
+      @include set-text-styles($most-popular-markets-show-all-mobile-font...);
+
+      span {
+        @include set-text-styles($most-popular-markets-show-all-icon-mobile-font...);
+      }
+    }
+
+    &__trading-sub-title {
+      padding: $most-popular-markets-tab-trading-title-mobile-padding;
+      @include set-text-styles($most-popular-markets-trading-sub-title-mobile-font...);
+    }
+
+    &__tabs-content-wrapper &__trading-sub-title {
+      padding: $most-popular-markets-tab-trading-sub-title-mobile-padding;
+    }
+  }
+
+  @if ($most-popular-markets-switch-to-dropdown-breakpoint) {
+    @media screen and (max-width: $most-popular-markets-switch-to-dropdown-breakpoint) {
+      &__tabs {
+        &-list {
+          display: none;
+        }
+
+        &-wrapper {
+          position: relative;
+          width: $most-popular-markets-switch-to-dropdown-wrapper-width;
+          max-width: $most-popular-markets-switch-to-dropdown-wrapper-max-width;
+          @include position($most-popular-markets-switch-to-dropdown-wrapper-position...);
+          z-index: $defaultZIndex;
+
+          .custom-select {
+            @include size($most-popular-markets-select-size...);
+            float: right;
+            padding: $most-popular-markets-select-padding;
+            -webkit-appearance: none;
+            appearance: none;
+            border: none;
+            direction: rtl;
+            opacity: 1;
+            left: auto;
+
+            option {
+              direction: ltr;
+            }
+          }
+
+          &:after {
+            display: block;
+            position: absolute;
+            z-index: $beforeAllZIndex;
+            @include position($most-popular-markets-select-arrow-position...);
+            border-width: $most-popular-markets-select-arrow-width;
+            border-bottom-width: 0;
+            border-top-color: $most-popular-markets-select-arrow-color;
+          }
+
+          &:hover {
+            .custom-select {
+              border: none;
+            }
+
+            &:after {
+              border-top-color: $most-popular-markets-select-hover-arrow-color;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,193 @@
+//Multi Column Layouts
+.multi-col__content {
+  @extend %clearfix;
+
+  &[data-divider="true"] {
+    .col {
+      position: relative;
+
+      &:before {
+        position: absolute;
+        @include position($multi-col-col-border-position...);
+        content: "";
+        width: 1px;
+        border-left: $multi-col-col-border;
+      }
+
+      &:first-child {
+        &:before {
+          content: none;
+        }
+      }
+    }
+  }
+
+  @each $columns-options in $multi-col-columns {
+    $columns: map_get($columns-options, columns);
+    $padding: map_get($columns-options, padding);
+    $padding-nth: map_get($columns-options, padding-nth);
+    $column-width: map_get($columns-options, width);
+
+    &[data-columns="#{$columns}"] {
+      > .col {
+        width: $column-width;
+        float: left;
+        padding: $padding;
+
+        &#{if($old-ie, ".nth-child-#{$columns}n-1", ":nth-child(#{$columns}n+1)")} {
+          clear: left;
+          padding: $padding-nth;
+
+          &:before {
+            content: none;
+          }
+        }
+      }
+    }
+  }
+
+  &[data-rightrtf="true"] {
+    @extend %clearfix;
+    position: relative;
+    width: 66%;
+    float: left;
+
+    &:after {
+      content: "";
+      position: absolute;
+      display: block;
+      right: -1px;
+      top: 0;
+      bottom: 0;
+      height: 100%;
+      border-left: $multi-col-rtf-border;
+    }
+
+    &[data-columns="2"] {
+      > .col {
+        padding: 0 $gutter*2;
+
+        &#{if($old-ie, ".nth-child-2n-1", ":nth-child(2n+1)")} {
+          padding: 0 $gutter*2;
+        }
+      }
+    }
+  }
+
+  @at-root .primary-content & {
+    &[data-columns="2"] {
+      > .col {
+        padding: 0 0 0 $multi-col-primary-col-2-padding;
+
+        &#{if($old-ie, ".nth-child-2n-1", ":nth-child(2n+1)")} {
+          padding: 0 $multi-col-primary-col-2-padding 0 0;
+        }
+      }
+    }
+
+    &[data-columns="3"] {
+      .col {
+        padding: 0 $multi-col-primary-col-3-padding/2;
+
+        &#{if($old-ie, ".nth-child-3n", ":nth-child(3n)")} {
+          padding: 0 0 0 $multi-col-primary-col-3-padding;
+        }
+
+        &#{if($old-ie, ".nth-child-3n-1", ":nth-child(3n+1)")} {
+          padding: 0 $multi-col-primary-col-3-padding 0 0;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: $tablet) {
+    > .col {
+      margin: $multi-col-col-tablet-margin;
+
+      &:first-child {
+        margin: 0;
+      }
+    }
+
+    &[data-rightrtf="true"] {
+      width: 100%;
+      float: none;
+
+      &:after {
+        display: none;
+      }
+    }
+
+    @each $columns-options in $multi-col-columns-tablet {
+      $columns: map_get($columns-options, columns);
+      $padding: map_get($columns-options, padding);
+      $padding-nth: map_get($columns-options, padding-nth);
+      $column-width: map_get($columns-options, width);
+      $break-on: map_get($columns-options, break-on);
+
+      &[data-columns="#{$columns}"] {
+        > .col {
+          width: $column-width;
+          padding: $padding;
+
+          @if ($break-on) {
+            &:nth-child(#{$break-on}) {
+              clear: left;
+              padding: $padding-nth;
+
+              &:before {
+                content: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: $mobile) {
+    > .col {
+      margin: $multi-col-col-mobile-margin;
+
+      &:first-child {
+        margin: 0;
+      }
+    }
+
+    &[data-no-description="true"] {
+      &[data-columns] {
+        > .col {
+          width: $multi-col-col-no-description-mobile-width;
+          float: left;
+          padding: $multi-col-col-no-description-mobile-padding;
+
+          &:nth-child(2n+1) {
+            clear: left;
+          }
+
+          &:nth-child(2n+2) {
+            clear: none;
+          }
+
+          &:nth-child(2) {
+            margin: 0;
+          }
+        }
+      }
+    }
+
+    &[data-columns] {
+      > .col {
+        width: 100%;
+        float: none;
+        padding: $multi-col-col-mobile-padding;
+      }
+    }
+
+    &[data-divider="true"] {
+      > .col:before {
+        content: none;
+      }
+    }
+  }
+}

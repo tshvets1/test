@@ -1,0 +1,11 @@
+@mixin set-text-styles($font-size:null, $font-weight: null, $line-height: null, $text-transform:null, $text-align: null, $font-family: null ) {
+  font-family: $font-family;
+  @if ($font-size) {
+    @include rem(font-size, $font-size);
+  }
+
+  font-weight: $font-weight;
+  text-transform: $text-transform;
+  text-align: $text-align;
+  line-height: $line-height;
+}

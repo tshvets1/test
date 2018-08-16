@@ -1,0 +1,41 @@
+.nav-callout {
+  $nav-callout-margin: 15px 0 !default;
+  $nav-callout-padding: 15px 0 !default;
+  $nav-callout-border: solid 1px $color-medium !default;
+
+  $nav-callout-headline-font: 18 null 1.2 !default;
+  $nav-callout-headline-margin: .5em 0 !default;
+
+  $nav-callout-description-font: 14 !default;
+  $nav-callout-description-margin: .5em 0 !default;
+
+  $nav-callout-icon-max-height: 55px !default;
+  $nav-callout-timestamp-font: 12 null null uppercase !default;
+
+  margin: $nav-callout-margin;
+  padding: $nav-callout-padding;
+  border-top: $nav-callout-border;
+
+  &__heading {
+    @include set-text-styles($nav-callout-headline-font...);
+    margin: $nav-callout-headline-margin;
+    letter-spacing: -.03em
+  }
+
+  &__description {
+    @include set-text-styles($nav-callout-description-font...);
+    margin: $nav-callout-description-margin;
+  }
+
+  &__icon {
+    max-height: $nav-callout-icon-max-height;
+  }
+
+  &__timestamp {
+    @include set-text-styles($nav-callout-timestamp-font...);
+  }
+
+  @media screen and (max-width: $tablet) {
+    display: none;
+  }
+}

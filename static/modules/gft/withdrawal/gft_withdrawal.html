@@ -1,0 +1,302 @@
+<!--
+  {
+  "name": "GFT Withdrawal - Form",
+  "status": "Complete",
+  "notes": ""
+  }
+-->
+
+<div class="section-wrapper gft-withdrawal" data-sectionbg="default">
+	<div class="wrapper">
+		<form class="form gft-withdrawal__form" novalidate="novalidate">
+			<div class="multi-col__content" data-columns="2" data-divider="false" data-show-readmore="false"
+				 data-title-link="false" data-rightrtf="false">
+				<!-- left col -->
+				<div class="col"
+					 data-ie8-selector=":nth-child(2n+1)|:nth-child(3n)|:nth-child(3n+1)|:nth-child(4n+1):nth-child(5n+1)">
+					<div class="form-group">
+						<input id="name" class="form-input" type="text" placeholder="Optional"/>
+						<label class="form-label" for="name"><span>Name</span>
+							<span class="tablet-hidden desktop-hidden">(Optional)</span>
+						</label>
+					</div>
+					<div class="form-group">
+						<input id="email" class="form-input" type="email" required=""
+							   pattern="^\S+@\S+\.\S+$"/>
+						<label class="form-label" for="email"><span>Email</span></label>
+						<span class="form-validation-message">Invalid Email. Required format: example@example.com</span>
+					</div>
+					<div class="form-group">
+						<input id="accountNumber" class="form-input" type="number" required=""
+							   pattern="\d+"/>
+						<label class="form-label" for="accountNumber"><span>Account Number</span></label>
+						<span class="form-validation-message">Invalid Account Number. Required format: 1234567890</span>
+					</div>
+					<div class="form-group">
+						<input id="phone" class="form-input" type="tel" placeholder="Optional"
+							   pattern="(^\d{1,3}\(\d{1,3}\)\d{5,9}$)|(^\d{5,12}$)"/>
+						<label class="form-label" for="phone"><span>Phone</span>
+							<span class="tablet-hidden desktop-hidden">(Optional)</span></label>
+						<span class="form-validation-message">Invalid Phone. Required format: 1(234)56789</span>
+					</div>
+				</div>
+				<!-- end left col -->
+				<!-- right col -->
+				<div class="col"
+					 data-ie8-selector=":nth-child(2n+1)|:nth-child(3n)|:nth-child(3n+1)|:nth-child(4n+1):nth-child(5n+1)">
+					<div class="form-group checkbox" data-label-before="true">
+						<div class="form-input">
+							<input type="checkbox" id="allFunds" data-required-relation="#amount"/>
+							<label for="allFunds">All Available Funds</label>
+						</div>
+						<label class="form-label"><span>Amount</span></label>
+						<span class="form-validation-message inverse">This field is required</span>
+					</div>
+					<div class="form-group" data-controls="2" data-label-before="true">
+						<div class="col">
+							<select class="custom-select" name="currency" id="currency" data-chosen-select
+									data-chosen-options='{"disable_search":"true"}'>
+								<option value="USD" selected>USD</option>
+								<option value="EUR">EUR</option>
+								<option value="GBP">GBP</option>
+							</select>
+						</div>
+						<div class="col">
+							<input id="amount" class="form-input" type="text" pattern="/d+"
+								   data-required-relation="#allFunds"/>
+						</div>
+
+						<label class="form-label" for="amount">
+							<span>Other</span></label>
+						<span class="form-validation-message inverse">
+							Invalid Amount. Should be numeric
+						</span>
+					</div>
+					<div class="form-group textarea">
+						<textarea id="reason" class="form-input" required=""></textarea>
+						<label class="form-label" for="reason"><span>Reason of Withdrawal</span></label>
+						<span class="form-validation-message">This field is required</span>
+					</div>
+					<div class="form-group">
+						<label class="form-label mobile-hidden" for="preferredMethod"><span>Preferred Method</span></label>
+
+						<select class="custom-select" name="preferredMethod" id="preferredMethod" data-chosen-select="" required=""
+								data-placeholder="Select Method"
+								data-chosen-options='{"disable_search":"true"}'>
+							<option value=""></option>
+							<option value="Wire" data-show="#wireDetails">Wire</option>
+							<option value="Check" data-show="#checkDetails">Check</option>
+							<option value="Credit Card">Credit Card</option>
+						</select>
+
+						<span class="form-validation-message">This field is required</span>
+					</div>
+				</div>
+				<!-- end right col -->
+			</div>
+
+			<!-- wire details section -->
+			<div class="gft-withdrawal__form-hidden" id="wireDetails">
+				<h2 class="gft-withdrawal__form-hidden-headline">Bank Information</h2>
+
+				<div class="gft-withdrawal__form-hidden-fields">
+					<div class="form-group">
+						<input id="bankName" class="form-input" type="text" required=""/>
+						<label class="form-label" for="bankName"><span>Bank Name</span></label>
+						<span class="form-validation-message">This field is required</span>
+					</div>
+					<div class="form-group">
+						<input id="bankAddress" class="form-input" type="text" required=""/>
+						<label class="form-label" for="bankAddress"><span>Address</span></label>
+						<span class="form-validation-message">This field is required</span>
+					</div>
+					<div class="form-group">
+						<input id="bankCity" class="form-input" type="text" required=""/>
+						<label class="form-label" for="bankCity"><span>City</span></label>
+						<span class="form-validation-message">This field is required</span>
+					</div>
+					<div class="form-group">
+						<input id="bankState" class="form-input" type="text" placeholder="Optional"/>
+						<label class="form-label" for="bankState"><span>State/Province</span>
+							<span class="tablet-hidden desktop-hidden">(Optional)</span>
+						</label>
+					</div>
+					<div class="form-group">
+						<input id="bankPostalCode" class="form-input" type="text" required=""/>
+						<label class="form-label" for="bankPostalCode"><span>Postal Code</span></label>
+						<span class="form-validation-message">This field is required</span>
+					</div>
+					<div class="form-group">
+						<label class="form-label" for="bankCountry"><span>Country</span></label>
+
+						@@include('/modules/gft/withdrawal/countries_dropdown.html', {"id": "bankCountry", "require": "required=''"})
+						<span class="form-validation-message">This field is required</span>
+					</div>
+					<div class="form-group">
+						<input id="bankABA" class="form-input" type="text" required=""/>
+						<label class="form-label" for="bankABA"><span>ABA/Swift Code</span></label>
+						<span class="form-validation-message">This field is required</span>
+					</div>
+					<div class="form-group">
+						<input id="bankNameOfAccount" class="form-input" type="text" required=""/>
+						<label class="form-label" for="bankNameOfAccount"><span>Name on the Account</span></label>
+						<span class="form-validation-message">This field is required</span>
+					</div>
+					<div class="form-group">
+						<input id="bankAccountNumber" class="form-input" type="text" required=""/>
+						<label class="form-label" for="bankAccountNumber"><span>Account Number</span></label>
+						<span class="form-validation-message">This field is required</span>
+					</div>
+					<div class="form-group">
+						<input id="bankCredit" class="form-input" type="text" placeholder="Optional"/>
+						<label class="form-label" for="bankCredit"><span>For further credit</span>
+							<span class="tablet-hidden desktop-hidden">(Optional)</span>
+						</label>
+					</div>
+					<div class="form-group">
+						<input id="bankIBAN" class="form-input" type="text" placeholder="Optional"/>
+						<label class="form-label" for="bankIBAN"><span>IBAN</span>
+							<span class="tablet-hidden desktop-hidden">(Optional)</span>
+						</label>
+					</div>
+				</div>
+
+				<h2 class="gft-withdrawal__form-hidden-sub-headline">Intermediary Bank Information</h2>
+
+				<div class="gft-withdrawal__form-hidden-fields">
+					<div class="form-group">
+						<input id="interbankName" class="form-input" type="text" placeholder="Optional"/>
+						<label class="form-label" for="interbankName">
+							<span>Bank Name</span>
+							<span class="tablet-hidden desktop-hidden">(Optional)</span>
+						</label>
+					</div>
+					<div class="form-group">
+						<input id="interbankAddress" class="form-input" type="text" placeholder="Optional"/>
+						<label class="form-label" for="interbankAddress">
+							<span>Address</span>
+							<span class="tablet-hidden desktop-hidden">(Optional)</span>
+						</label>
+					</div>
+					<div class="form-group">
+						<input id="interbankCity" class="form-input" type="text" placeholder="Optional"/>
+						<label class="form-label" for="interbankCity">
+							<span>City</span><span class="tablet-hidden desktop-hidden">(Optional)</span>
+						</label>
+					</div>
+					<div class="form-group">
+						<input id="interbankState" class="form-input" type="text" placeholder="Optional"/>
+						<label class="form-label" for="interbankState"><span>State/Province</span>
+							<span class="tablet-hidden desktop-hidden">(Optional)</span>
+						</label>
+					</div>
+					<div class="form-group">
+						<input id="interbankPostalCode" class="form-input" type="text" placeholder="Optional"/>
+						<label class="form-label" for="interbankPostalCode">
+							<span>Postal Code</span>
+							<span class="tablet-hidden desktop-hidden">(Optional)</span>
+						</label>
+					</div>
+					<div class="form-group">
+						<label class="form-label" for="interbankCountry">
+							<span>Country</span>
+							<span class="tablet-hidden desktop-hidden">(Optional)</span>
+						</label>
+
+						@@include('/modules/gft/withdrawal/countries_dropdown.html', {"id": "interbankCountry", "require":""})
+					</div>
+					<div class="form-group">
+						<input id="interbankABA" class="form-input" type="text" placeholder="Optional"/>
+						<label class="form-label" for="interbankABA">
+							<span>ABA/Swift Code</span>
+							<span class="tablet-hidden desktop-hidden">(Optional)</span>
+						</label>
+					</div>
+					<div class="form-group">
+						<input id="interbankNameOfAccount" class="form-input" type="text" placeholder="Optional"/>
+						<label class="form-label" for="interbankNameOfAccount">
+							<span>Name on the Account</span>
+							<span class="tablet-hidden desktop-hidden">(Optional)</span>
+						</label>
+					</div>
+					<div class="form-group">
+						<input id="interbankAccountNumber" class="form-input" type="text" placeholder="Optional"/>
+						<label class="form-label" for="interbankAccountNumber">
+							<span>Account Number</span>
+							<span class="tablet-hidden desktop-hidden">(Optional)</span>
+						</label>
+					</div>
+					<div class="form-group">
+						<input id="interbankCredit" class="form-input" type="text" placeholder="Optional"/>
+						<label class="form-label" for="interbankCredit">
+							<span>For further credit</span>
+							<span class="tablet-hidden desktop-hidden">(Optional)</span>
+						</label>
+					</div>
+					<div class="form-group">
+						<input id="interbankIBAN" class="form-input" type="text" placeholder="Optional"/>
+						<label class="form-label" for="interbankIBAN">
+							<span>IBAN</span>
+							<span class="tablet-hidden desktop-hidden">(Optional)</span>
+						</label>
+					</div>
+				</div>
+			</div>
+			<!-- end wire details section -->
+			<!-- check details section -->
+			<div class="gft-withdrawal__form-hidden" id="checkDetails">
+				<h2 class="gft-withdrawal__form-hidden-headline">Check Information</h2>
+
+				<div class="gft-withdrawal__form-hidden-fields">
+					<div class="form-group">
+						<input id="checkAddress" class="form-input" type="text" placeholder="Optional"/>
+						<label class="form-label" for="checkAddress">
+							<span>Address</span>
+							<span class="tablet-hidden desktop-hidden">(Optional)</span>
+						</label>
+					</div>
+					<div class="form-group">
+						<input id="checkCity" class="form-input" type="text" placeholder="Optional"/>
+						<label class="form-label" for="checkCity">
+							<span>City</span><span class="tablet-hidden desktop-hidden">(Optional)</span>
+						</label>
+					</div>
+					<div class="form-group">
+						<input id="checkState" class="form-input" type="text" placeholder="Optional"/>
+						<label class="form-label" for="checkState"><span>State/Province</span>
+							<span class="tablet-hidden desktop-hidden">(Optional)</span>
+						</label>
+					</div>
+					<div class="form-group">
+						<input id="checkPostalCode" class="form-input" type="text" placeholder="Optional"/>
+						<label class="form-label" for="checkPostalCode">
+							<span>Postal Code</span>
+							<span class="tablet-hidden desktop-hidden">(Optional)</span>
+						</label>
+					</div>
+					<div class="form-group">
+						<label class="form-label" for="checkCountry">
+							<span>Country</span>
+							<span class="tablet-hidden desktop-hidden">(Optional)</span>
+						</label>
+
+						@@include('/modules/gft/withdrawal/countries_dropdown.html', {"id": "checkCountry", "require":""})
+					</div>
+					<div class="form-group">
+						<input id="checkSignature" class="form-input" type="text" required=""/>
+						<label class="form-label" for="checkSignature">
+							<span>Primary Account Holder Electronic Signature</span>
+						</label>
+						<span class="form-validation-message">This field is required</span>
+					</div>
+				</div>
+			</div>
+			<!-- end check details section -->
+			<button type="submit" class="form-submit">Submit</button>
+
+			<div class="form-disclaimer">We will make every effort to return funds to the originating source. All funds
+				within six month will be returned to original funding method.
+			</div>
+		</form>
+	</div>
+</div>

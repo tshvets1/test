@@ -1,0 +1,470 @@
+%product-summary-banner-inverse {
+  .product-summary-banner__headline {
+    color: $product-summary-banner-headline-inverse-color;
+  }
+
+  .product-summary-banner__details-trigger {
+    &:after {
+      color: $product-summary-banner-trigger-inverse-color;
+    }
+
+    &:hover:after {
+      color: $product-summary-banner-trigger-inverse-hover-color;
+    }
+  }
+}
+
+.product-summary-banner {
+  &__wrapper {
+    padding: $product-summary-banner-padding;
+  }
+
+  &__headline {
+    @include set-text-styles($product-summary-banner-headline-font...);
+    color: $product-summary-banner-headline-color;
+  }
+
+  @include inverse-section-bg("%product-summary-banner-inverse");
+
+  &__subheadline {
+    display: block;
+    margin: $product-summary-banner-subheadline-margin;
+
+    @include set-text-styles($product-summary-banner-subheadline-font...);
+    font-style: normal;
+  }
+
+  @if ($product-summary-banner-controls == "tabs") {
+    .chosen-container.chosen-container-single {
+      display: none !important;
+    }
+
+    &__tabs-link {
+      text-transform: none;
+    }
+  }
+
+  &__wrapper {
+    @extend %menuDropdown;
+  }
+
+  &__header {
+    position: relative;
+    padding: $product-summary-banner-header-padding;
+    float: left;
+    width: $product-summary-banner-header-width;
+  }
+
+  // FACADE LAYER DATA
+  &__data {
+    position: relative;
+    float: right;
+    width: $product-summary-banner-data-width;
+    padding: $product-summary-banner-data-padding;
+    text-align: right;
+  }
+
+  &__rates {
+    padding: $product-summary-banner-rates-padding;
+    overflow: auto;
+  }
+
+  &__rate {
+    display: block;
+    float: right;
+    position: relative;
+    @include size($product-summary-banner-rate-size...);
+    padding: $product-summary-banner-rate-padding;
+
+    @extend %btn--unstyled;
+    @include set-text-styles($product-summary-banner-rate-font...);
+    border: $product-summary-banner-rate-border;
+    color: $product-summary-banner-rate-color;
+    background: $product-summary-banner-rate-bg-color;
+
+    label {
+      position: relative;
+      @include position($product-summary-banner-rate-value-position...);
+    }
+
+    &-buy {
+      margin: $product-summary-banner-rate-buy-margin;
+      text-align: right;
+
+      label {
+        @include position($product-summary-banner-rate-buy-value-position...);
+      }
+    }
+
+    &--up {
+      .product-summary-banner__rate-label:after {
+        @extend %arrow-up;
+      }
+
+      &-end {
+        b, sup {
+          color: $product-summary-banner-rate-up-color;
+        }
+
+        .product-summary-banner__rate-label:after {
+          border-bottom-color: $product-summary-banner-rate-up-color;
+        }
+      }
+
+      &-inter {
+        background-color: $product-summary-banner-rate-up-inter-bg-color;
+        color: $product-summary-banner-rate-up-inter-color;
+
+        .product-summary-banner__rate-label:after {
+          border-bottom-color: $product-summary-banner-rate-up-inter-color;
+        }
+      }
+    }
+
+    &--down {
+      .product-summary-banner__rate-label:after {
+        @extend %arrow-down;
+      }
+
+      &-end {
+        b, sup {
+          color: $product-summary-banner-rate-down-color;
+        }
+
+        .product-summary-banner__rate-label:after {
+          border-top-color: $product-summary-banner-rate-down-color;
+        }
+      }
+
+      &-inter {
+        background-color: $product-summary-banner-rate-down-inter-bg-color;
+        color: $product-summary-banner-rate-down-inter-color;
+
+        .product-summary-banner__rate-label:after {
+          border-top-color: $product-summary-banner-rate-down-inter-color;
+        }
+      }
+    }
+  }
+
+  &__rate-diff {
+    display: inline-block;
+    position: absolute;
+    @include position($product-summary-banner-rate-diff-position...);
+    @include size($product-summary-banner-rate-diff-size...);
+    padding: $product-summary-banner-rate-diff-padding;
+    @include set-text-styles($product-summary-banner-rate-diff-font...);
+    background: $product-summary-banner-rate-diff-bg-color;
+    border-radius: $product-summary-banner-rate-diff-border-radius;
+
+    @if ($old-ie) {
+      -ms-behavior: url('/_CSS/htc/PIE.htc');
+    }
+  }
+
+  &__rate-label {
+    position: absolute;
+    @include position($product-summary-banner-rate-label-position...);
+    @include set-text-styles($product-summary-banner-rate-label-font...);
+
+    &:after {
+      margin: $product-summary-banner-rate-arrow-margin;
+      border-width: $product-summary-banner-rate-arrow-width;
+      vertical-align: top;
+    }
+  }
+
+  &__rate-buy &__rate-label {
+    @include position($product-summary-banner-rate-buy-label-position...);
+  }
+
+  &__changes {
+    span {
+      display: inline-block;
+      padding: $product-summary-banner-changes-padding;
+
+      &:first-child {
+        padding-left: 0;
+      }
+    }
+
+    label {
+      @include set-text-styles($product-summary-banner-changes-value-font...);
+    }
+
+    em {
+      display: block;
+      @include set-text-styles($product-summary-banner-changes-label-font...);
+      font-style: normal;
+    }
+
+    &--up {
+      color: $product-summary-banner-changes-up-color;
+    }
+
+    &--down {
+      color: $product-summary-banner-changes-down-color;
+    }
+  }
+
+  // PRODUCT DETAILS (hide/show tables)
+  &__details-trigger {
+    display: inline-block;
+    margin: $product-summary-banner-trigger-margin;
+    @include set-text-styles($product-summary-banner-trigger-font...);
+    color: $product-summary-banner-trigger-color;
+    cursor: pointer;
+
+    &:after {
+      content: "+";
+      padding: $product-summary-banner-trigger-icon-padding;
+      display: inline-block;
+      color: $product-summary-banner-trigger-color;
+    }
+
+    &.active:after {
+      content: "\2013";
+    }
+
+    &:hover {
+      color: $product-summary-banner-trigger-hover-color;
+      &:after {
+        color: $product-summary-banner-trigger-hover-color;
+      }
+    }
+  }
+
+  // TABLET
+  @media screen and (max-width: $tablet) {
+    &__wrapper {
+      padding: $product-summary-banner-tablet-padding;
+    }
+
+    &__headline {
+      @include set-text-styles($product-summary-banner-headline-tablet-font...);
+    }
+
+    &__subheadline {
+      margin: $product-summary-banner-subheadline-tablet-margin;
+      @include set-text-styles($product-summary-banner-subheadline-tablet-font...);
+    }
+
+    &__rates {
+      padding: $product-summary-banner-rates-tablet-padding;
+    }
+
+    &__rate {
+      @include size($product-summary-banner-rate-tablet-size...);
+      @include set-text-styles($product-summary-banner-rate-tablet-font...);
+      padding: $product-summary-banner-rate-tablet-padding;
+
+      &-buy {
+        margin: $product-summary-banner-rate-buy-tablet-margin;
+      }
+    }
+
+    &__rate-diff {
+      @include position($product-summary-banner-rate-diff-tablet-position...);
+      @include size($product-summary-banner-rate-diff-tablet-size...);
+      padding: $product-summary-banner-rate-diff-tablet-padding;
+      @include set-text-styles($product-summary-banner-rate-diff-tablet-font...);
+    }
+
+    &__rate-label {
+      @include set-text-styles($product-summary-banner-rate-label-tablet-font...);
+
+      &:after {
+        margin: $product-summary-banner-rate-arrow-tablet-margin;
+      }
+    }
+
+    &__changes {
+      label {
+        @include set-text-styles($product-summary-banner-changes-value-tablet-font...);
+      }
+
+      em {
+        @include set-text-styles($product-summary-banner-changes-label-tablet-font...);
+      }
+    }
+  }
+
+  @media screen and (max-width: $product-summary-banner-breakpoint) {
+    &__header,
+    &__data {
+      float: none;
+      clear: both;
+      width: 100%;
+    }
+
+    &__data {
+      padding-left: 0;
+    }
+  }
+
+  @media screen and (min-width: $mobile) {
+    &__wrapper .custom-select {
+      left: -9999px;
+    }
+  }
+
+  // MOBILE
+  @media screen and (max-width: $mobile) {
+    &__wrapper {
+      padding: $product-summary-banner-mobile-padding;
+    }
+
+    @if ($product-summary-banner-controls == "tabs") {
+      &__tabs-list {
+        display: none;
+      }
+    }
+
+    &__headline {
+      margin: $product-summary-banner-headline-mobile-margin;
+      @include set-text-styles($product-summary-banner-headline-mobile-font...);
+    }
+
+    &__subheadline {
+      margin: $product-summary-banner-subheadline-mobile-margin;
+      @include set-text-styles($product-summary-banner-subheadline-mobile-font...);
+    }
+
+    &__rates {
+      padding: $product-summary-banner-rates-mobile-padding;
+    }
+
+    &__rate {
+      @include size($product-summary-banner-rate-mobile-size...);
+      @include set-text-styles($product-summary-banner-rate-mobile-font...);
+      padding: $product-summary-banner-rate-mobile-padding;
+
+      border: $product-summary-banner-rate-mobile-border;
+
+      &-buy {
+        margin: $product-summary-banner-rate-buy-mobile-margin;
+      }
+    }
+
+    &__rate-diff {
+      @include position($product-summary-banner-rate-diff-mobile-position...);
+      @include size($product-summary-banner-rate-diff-mobile-size...);
+      margin: $product-summary-banner-rate-diff-mobile-margin;
+      padding: $product-summary-banner-rate-diff-mobile-padding;
+      @include set-text-styles($product-summary-banner-rate-diff-mobile-font...);
+    }
+
+    &__rate-label {
+      @include set-text-styles($product-summary-banner-rate-label-mobile-font...);
+
+      &:after {
+        margin: $product-summary-banner-rate-arrow-mobile-margin;
+
+      }
+    }
+
+    &__changes {
+      span {
+        width: $product-summary-banner-changes-mobile-width;
+        float: left;
+        text-align: left;
+        padding: $product-summary-banner-changes-mobile-padding;
+      }
+
+      label {
+        @include set-text-styles($product-summary-banner-changes-value-mobile-font...);
+      }
+
+      em {
+        @include set-text-styles($product-summary-banner-changes-label-mobile-font...);
+      }
+    }
+
+    &__details-trigger {
+      text-align: center;
+      width: 100%;
+    }
+  }
+}
+
+.product-summary-details {
+  padding: $product-summary-details-padding;
+  display: none;
+
+  &.open {
+    display: block;
+  }
+
+  &__data {
+    display: none;
+
+    &.active {
+      display: block;
+    }
+
+    &[data-columns="2"] {
+      overflow: auto;
+
+      > .col {
+        width: 50%;
+        float: left;
+        padding: 0 0 0 $product-summary-details-col-padding;
+
+        &:first-child {
+          padding: 0 $product-summary-details-col-padding 0 0;
+        }
+      }
+    }
+
+    .rtf {
+      td, th {
+        @include set-text-styles($product-summary-details-rtf-table-font...);
+      }
+
+      .data-table {
+        margin-top: 0;
+      }
+    }
+  }
+
+  &__disclaimer {
+    @include set-text-styles($product-summary-details-disclaimer-font...);
+  }
+
+  @media screen and (max-width: $tablet) {
+    padding: $product-summary-details-tablet-padding;
+
+    &__data {
+      &[data-columns="2"] {
+        > .col {
+          width: 100%;
+          float: none;
+          padding: 0;
+
+          &:first-child {
+            padding: 0;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: $mobile) {
+    padding: $product-summary-details-mobile-padding;
+
+    &__data {
+      .rtf table td,
+      .rtf table th {
+        padding: $product-summary-details-rtf-table-mobile-padding;
+
+        &:first-child {
+          padding-left: $product-summary-details-rtf-table-mobile-side-padding;
+        }
+
+        &:last-child {
+          padding-right: $product-summary-details-rtf-table-mobile-side-padding;
+        }
+      }
+    }
+  }
+}

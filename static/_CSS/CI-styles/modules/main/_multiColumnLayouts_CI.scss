@@ -1,0 +1,39 @@
+.multi-col__content {
+  @media screen and (max-width: $tablet) {
+    &[data-columns] {
+      > .col {
+        width: 100%;
+        float: none;
+        position: relative;
+        padding: 0;
+        margin: $multi-col-col-tablet-margin;
+      }
+    }
+
+    &[data-divider="true"] {
+      .col {
+        border-bottom: $multi-col-col-border;
+        padding: $multi-col-col-divider-tablet-padding;
+
+        &:before {
+          content: none;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: $mobile) {
+    &[data-divider="true"] {
+      .col {
+        border-bottom: none;
+      }
+    }
+
+    &[data-columns] {
+      .col {
+        padding: 0;
+        margin: $multi-col-col-mobile-margin;
+      }
+    }
+  }
+}

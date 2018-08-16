@@ -1,0 +1,37 @@
+%related-markets-inverse {
+  .related-markets__sentiment-text {
+    color: $related-markets-sentiment-text-inverse-color;
+  }
+}
+
+.related-markets {
+  &-module {
+    @include inverse-section-bg("%related-markets-inverse");
+  }
+
+  @at-root .primary-content & {
+    &-module {
+      padding: $related-markets-sentiment-primary-padding;
+    }
+
+    &__product {
+      margin: $related-markets-product-primary-margin;
+      width: $related-markets-sentiment-primary-width;
+    }
+  }
+
+  @media screen and (max-width: $mobile) {
+    &__sentiment-link {
+      @include set-text-styles($related-markets-sentiment-link-mobile-font...);
+
+      &:after {
+        margin: $related-markets-sentiment-link-mobile-margin;
+        border-width: $related-markets-sentiment-link-mobile-width;
+      }
+    }
+
+    @at-root .primary-content &-module {
+      padding: $related-markets-sentiment-primary-mobile-padding;
+    }
+  }
+}

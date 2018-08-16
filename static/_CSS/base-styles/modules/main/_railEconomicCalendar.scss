@@ -1,0 +1,222 @@
+.economic-calendar-section {
+  &__headline {
+    display: inline-block;
+    margin: $economic-calendar-rail-headline-margin;
+
+    @include set-text-styles($economic-calendar-rail-headline-font...);
+
+    .tooltip {
+      padding: $economic-calendar-rail-headline-tooltip-padding;
+    }
+  }
+
+  @at-root .module-wrapper#{&} {
+    table {
+      border-collapse: separate;
+
+      .fxst-calendarhead, .fxst-dateRow {
+        display: none;
+      }
+
+      .fxst-tr-event {
+        display: table;
+        padding: $economic-calendar-rail-event-row-padding;
+        width: 100%;
+        border-bottom: none;
+        line-height: $economic-calendar-rail-event-row-height;
+
+        &.fxst-oddRow {
+          background-color: $economic-calendar-rail-event-row-odd-bg-color;
+        }
+
+        &.fxst-evenRow {
+          background-color: $economic-calendar-rail-event-row-even-bg-color;
+        }
+
+        &.fxst-evenRow,
+        &.fxst-oddRow {
+          a {
+            color: $economic-calendar-rail-event-row-link-color;
+          }
+
+          &:hover {
+            color: $economic-calendar-rail-event-row-hover-color;
+
+            a {
+              color: $economic-calendar-rail-event-hover-link-color;
+            }
+          }
+        }
+
+        td {
+          display: inline-table;
+
+          &.flag-td {
+            width: $economic-calendar-rail-event-row-flag-width;
+            padding: $economic-calendar-rail-event-row-flag-padding;
+            vertical-align: top;
+            line-height: 1;
+            float: left;
+            clear: left;
+
+            a {
+              float: left;
+            }
+          }
+
+          &.fxst-txt-left {
+            width: $economic-calendar-rail-event-row-text-width;
+            padding: $economic-calendar-rail-event-row-text-padding;
+            vertical-align: top;
+            color: $economic-calendar-rail-event-hover-link-color;
+            @include set-text-styles($economic-calendar-rail-text-font...);
+            white-space: normal;
+            float: left;
+
+            a {
+              text-transform: none;
+
+              &:hover {
+                color: $economic-calendar-rail-event-hover-link-hover-color;
+              }
+            }
+          }
+
+          &.fxst-td-previous {
+            width: $economic-calendar-rail-event-row-previous-width;
+            float: right;
+            vertical-align: top;
+            white-space: nowrap;
+            @include set-text-styles($economic-calendar-rail-previous-font...);
+          }
+
+          &.fxit-actual {
+            margin: $economic-calendar-rail-event-row-actual-margin;
+            width: $economic-calendar-rail-event-row-actual-width;
+            float: left;
+            vertical-align: top;
+            @include set-text-styles($economic-calendar-rail-actual-font...);
+            white-space: nowrap;
+          }
+
+          &.date-td {
+            width: $economic-calendar-rail-event-row-date-width;
+            @include set-text-styles($economic-calendar-rail-date-font...);
+            float: left;
+          }
+
+          .fxit-previous-label, .fxit-actual-label {
+            padding: $economic-calendar-rail-act-prev-label-padding;
+            @include set-text-styles($economic-calendar-rail-act-prev-label-font...);
+          }
+        }
+      }
+    }
+
+    .cta-link {
+      margin: $economic-calendar-rail-cta-link-margin;
+    }
+
+    //tablet only
+    @media screen and (max-width: $tablet) and (min-width: $mobile) {
+      table {
+        .fxst-tr-event {
+          padding: $economic-calendar-rail-event-row-tablet-padding;
+
+          td {
+            &.vol-td {
+              width: $economic-calendar-rail-event-row-vol-tablet-width;
+
+              .fxst-i-vol {
+                float: right;
+              }
+            }
+
+            &.flag-td {
+              width: $economic-calendar-rail-event-row-flag-tablet-width;
+              margin: $economic-calendar-rail-event-row-flag-tablet-margin;
+            }
+
+            &.fxst-txt-left {
+              float: left;
+              width: $economic-calendar-rail-event-row-text-tablet-width;
+              padding: $economic-calendar-rail-event-row-text-tablet-padding;
+            }
+
+            &.fxit-actual {
+              margin: $economic-calendar-rail-event-row-actual-tablet-margin;
+              width: $economic-calendar-rail-event-row-actual-tablet-width;
+            }
+
+            &.fxst-td-previous {
+              width: $economic-calendar-rail-event-row-previous-tablet-width;
+            }
+          }
+        }
+      }
+    }
+    //tablet
+    @media screen and (max-width: $tablet) {
+      .fxst_grid {
+        margin: $economic-calendar-rail-grid-tablet-margin;
+      }
+    }
+  }
+
+  //mobile
+  @media screen and (max-width: $mobile) {
+    &__headline {
+      margin: $economic-calendar-rail-headline-mobile-margin;
+
+      @include set-text-styles($economic-calendar-rail-headline-mobile-font...);
+    }
+
+    @at-root .module-wrapper#{&} {
+      table {
+        &.fxst-calendarpro {
+          width: 100%;
+          @include set-text-styles($economic-calendar-rail-mobile-font...);
+        }
+
+        .fxst-tr-event {
+          padding: $economic-calendar-rail-event-row-mobile-padding;
+          line-height: $economic-calendar-rail-event-row-mobile-height;
+
+          td {
+            &.fxst-txt-left {
+              padding: $economic-calendar-rail-event-row-text-mobile-padding;
+              @include set-text-styles($economic-calendar-rail-text-mobile-font...);
+            }
+
+            &.fxst-td-previous {
+              @include set-text-styles($economic-calendar-rail-previous-mobile-font...);
+            }
+
+            &.fxit-actual {
+              margin: $economic-calendar-rail-event-row-actual-mobile-margin;
+              @include set-text-styles($economic-calendar-rail-actual-mobile-font...);
+            }
+
+            &.flag-td {
+              padding: $economic-calendar-rail-event-row-flag-mobile-padding;
+            }
+
+            &.date-td {
+              @include set-text-styles($economic-calendar-rail-date-mobile-font...);
+            }
+
+            .fxit-previous-label,
+            .fxit-actual-label {
+              padding: $economic-calendar-rail-act-prev-label-mobile-padding;
+              @include set-text-styles($economic-calendar-rail-act-prev-label-mobile-font...);
+            }
+          }
+        }
+      }
+
+      .cta-link {
+        margin: $economic-calendar-rail-cta-link-mobile-margin;
+      }
+    }
+  }
+}

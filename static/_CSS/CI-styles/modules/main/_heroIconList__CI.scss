@@ -1,0 +1,123 @@
+.hero-two-section[data-icon-list="true"] {
+  .wrapper > .col {
+    width: $hero-two-section-icon-list-content-width;
+
+    &.multi-col__content {
+      @if ($hero-two-section-icon-list-content-width) {
+        width: $page-width - $hero-two-section-icon-list-content-width;
+      }
+
+      &[data-columns] .col {
+        &:first-child,
+        &:first-child + .col {
+          margin-top: 0;
+        }
+      }
+
+      &[data-columns="3"] .col {
+        &:first-child + .col + .col {
+          margin-top: 0;
+        }
+      }
+    }
+
+    &:first-child {
+      position: relative;
+
+      &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        border-left: $hero-two-section-icon-list-border;
+      }
+    }
+  }
+
+  @media screen and (max-width: $tablet) {
+    .wrapper > .col {
+      width: 100%;
+      float: none;
+
+      &:after {
+        content: none;
+      }
+
+      &:first-child {
+        padding: $hero-two-section-icon-list-col-tablet-padding;
+        margin: $hero-two-section-icon-list-col-tablet-margin;
+
+        &:after {
+          top: auto;
+          left: 0;
+          border: none;
+          border-bottom: $hero-two-section-icon-list-border;
+        }
+      }
+
+      &.multi-col__content {
+        width: 100%;
+      }
+    }
+
+    .multi-col {
+      &__content {
+        overflow: hidden;
+
+        &[data-columns] .col {
+          float: left;
+        }
+
+        &[data-columns="2"] .col {
+          width: 50%;
+        }
+
+        &[data-columns="3"] .col {
+          width: 50%;
+          margin: 20px 0 0 !important;
+
+          &#{if($old-ie, ".nth-child-3n-1", ":nth-child(3n+1)")} {
+            clear: none;
+          }
+        }
+      }
+
+      &__img {
+        position: static;
+        max-width: none;
+
+        ~ * {
+          padding: 0;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: $mobile) {
+    .wrapper > .col:first-child {
+      padding: $hero-two-section-icon-list-col-mobile-padding;
+      margin: $hero-two-section-icon-list-col-mobile-margin;
+    }
+
+    .multi-col {
+      &__img {
+        margin: $hero-two-section-icon-list-left-aligned-multi-col-img-mobile-margin;
+      }
+
+      &__description {
+        @include set-text-styles($hero-two-section-icon-list-left-aligned-multi-col-description-mobile-font...);
+      }
+
+      &__content {
+        + a {
+          margin: $hero-two-section-icon-list-list-after-multi-col-mobile-margin;
+        }
+
+        + .cta-btn {
+          margin: $hero-two-section-icon-list-left-aligned-cta-mobile-margin;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,63 @@
+<!--
+  {
+  "name": "Current Rates 2 Columns 2 Table Module",
+  "status": "In Progress",
+  "notes": "data-two-columns="true" attribute is used to set 50% width of section"
+  }
+-->
+
+<div class="current-rates-section" data-apply-ko="currentRates"
+	 data-products="['USD/JPY','EUR/USD','WHT/USD','USD/CAD','GBP/AUD']"
+	 data-get-products-timeout="5000"
+	 data-is-two-column="true">
+
+	<div class="wrapper">
+		<h2>data-two-tables="true" </h2>
+
+		<h2 class="current-rates__headline">Lorem ipsum
+
+			<div class="tooltip">
+				<div class="tooltip__content">
+					<h2>Lorem ipsum</h2>
+
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vitae velit eget nisi porta
+						facilisis. </p>
+				</div>
+			</div>
+		</h2>
+
+		<!-- DROPDOWN -->
+		<div class="current-rates__dropdown">
+			<select class="custom-select" data-placeholder="Choose Item" id="currentRatesDropdown" data-chosen-select=""
+					data-chosen-options='{"disable_search":"true","width":"100%"}'>
+				<option value="" disabled>Choose Item</option>
+				<option value="Lorem7">Lorem7</option>
+				<option value="Lorem8">Lorem8</option>
+				<option value="Lorem9">Lorem9</option>
+			</select>
+		</div>
+		<!-- END DROPDOWN -->
+
+		<table class="current-rates__table rates-table">
+			<thead>
+			<tr>
+				<th class="rates-table__product">Pair</th>
+				<th class="rates-table__spread">Spread</th>
+			</tr>
+			</thead>
+			<tbody>
+			<!-- ko foreach: products -->
+			<tr>
+				<td class="rates-table__product"><a href="#" data-bind="text: product"></a></td>
+				<td class="rates-table__value">
+					<span data-bind="text: spread, highlight: spread(), highlightClass: 'rates-table__value-changed'"></span>
+				</td>
+			</tr>
+			<!-- /ko -->
+			</tbody>
+		</table>
+
+		<a class="cta-link" href="#">Lorem ipsum</a>
+	</div>
+</div>
+

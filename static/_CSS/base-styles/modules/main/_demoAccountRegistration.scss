@@ -1,0 +1,120 @@
+.demo-account {
+  &-modal {
+    display: none;
+  }
+
+  &__header {
+    @include set-text-styles($demo-account-header-font...);
+    display: block;
+    width: 100%;
+    padding-left: 30%;
+  }
+
+  &__headline {
+    @include set-text-styles($demo-account-headline-font...);
+  }
+
+  &__required {
+    @include set-text-styles($demo-account-required-font...);
+    font-style: normal;
+  }
+
+  &__disclaimer,
+  &__rtf {
+    @include set-text-styles($demo-account-disclaimer-font...);
+    margin: $gutter 0;
+    text-align: left;
+
+    a {
+      padding-right: 5px;
+    }
+  }
+}
+
+// WFFM FORM
+.hero-two-section .demo-account {
+  form {
+    padding-left: $demo-account-hero-form-padding;
+    @include set-text-styles($demo-account-hero-form-font...);
+  }
+}
+
+@media screen and (max-width: $mobile) {
+  .demo-account {
+    &__header {
+      padding-left: $demo-account-headline-mobile-padding;
+    }
+  }
+
+  // WFFM FORM
+  .hero-two-section .demo-account {
+    form {
+      margin: $gutter*2 0 0;
+      padding: $gutter*2 0 0;
+      border-top: $demo-account-hero-form-mobile-border;
+    }
+  }
+}
+
+// Open Demo Account modal
+.modal {
+  p {
+    margin-top: 0;
+    margin-bottom: 8px;
+  }
+
+  a.btn {
+    margin-top: 16px;
+    padding-bottom: 6px;
+  }
+
+  h2 {
+    margin-bottom: 14px;
+  }
+
+  .form-disclaimer {
+    text-align: center;
+    margin: 0 $gutter;
+
+    &__links {
+      @include rem(font-size, 12);
+      margin: $gutter 0;
+    }
+  }
+}
+
+.modal-cancel {
+  display: inline-block;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+.modal-cancel:hover {
+  text-decoration: none;
+}
+
+.modal-cancel:hover .icon {
+  @include opacity(1);
+}
+
+#modal-spaces {
+  min-height: 305px;
+}
+
+.hiddenWebsite {
+  display: none;
+}
+
+@media screen and (max-width: $mobile) {
+  .modal__content {
+    padding: 0;
+  }
+
+  .modal {
+    max-height: 100%;
+    overflow: auto;
+    margin: 0;
+    border: none !important;
+  }
+}

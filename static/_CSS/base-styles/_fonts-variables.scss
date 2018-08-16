@@ -1,0 +1,80 @@
+$page-title-font: 50 400 1.2 !default;
+$subheading-font: 44 400 1.14 !default;
+$promo-title-font: 20 400 null uppercase !default;
+$body-copy-font: 15 400 1.6 !default;
+$body-copy-color: $color-darker !default;
+$callout-copy-font: 16 500 1.25 !default;
+$subtitle-font: 16 400 1.5 !default;
+
+//1.1 Fonts - font-face options
+
+$font-path: "/_Fonts";
+$font-primary: "Gotham", arial, helvetica, sans-serif !default;
+$font-primary-oldie: Optima, Segoe, 'Segoe UI', Candara, Calibri, 'Arial Narrow', 'Trebuchet MS', sans-serif !default;
+
+//1.1 Fonts - font-face options
+$font-face-options: (
+  font-path: $font-path,
+  version: "2.202",
+  font-family: "Gotham",
+  font-formats: "woff" "otf",
+  options: (
+    (
+      font-weight: 100,
+      src-base-name: "GothamNarrow-XLight"
+    ), (
+      font-weight: 100,
+      font-style: italic,
+      src-base-name: "GothamNarrow-XLightItalic"
+    ), (
+      font-weight: 200,
+      src-base-name: "GothamNarrow-Light"
+    ), (
+      font-weight: 200,
+      font-style: italic,
+      src-base-name: "GothamNarrow-LightItalic"
+    ), (
+      font-weight: 300,
+      src-base-name: "GothamNarrow-Thin"
+    ), (
+      font-weight: 300,
+      font-style: italic,
+      src-base-name: "GothamNarrow-ThinItalic"
+    ), (
+      font-weight: 400,
+      src-base-name: "GothamNarrow-Book"
+    ), (
+      font-weight: 400,
+      font-style: italic,
+      src-base-name: "GothamNarrow-BookItalic"
+    ), (
+      font-weight: 500,
+      src-base-name: "GothamNarrow-Medium"
+    ), (
+      font-weight: 500,
+      font-style: italic,
+      src-base-name: "GothamNarrow-MediumItalic"
+    ), (
+      font-weight: 700,
+      src-base-name: "GothamNarrow-Bold"
+    ), (
+      font-weight: 700,
+      font-style: italic,
+      src-base-name: "GothamNarrow-BoldItalic"
+    ), (
+      font-weight: 800,
+      src-base-name: "GothamNarrow-Black"
+    ), (
+      font-weight: 800,
+      font-style: italic,
+      src-base-name: "GothamNarrow-BlackItalic"
+    ), (
+      font-weight: 900,
+      src-base-name: "GothamNarrow-Ultra"
+    ), (
+      font-weight: 900,
+      font-style: italic,
+      src-base-name: "GothamNarrow-UltraItalic"
+    )
+  )
+) !default;

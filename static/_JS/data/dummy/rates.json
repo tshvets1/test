@@ -1,0 +1,396 @@
+{
+  "d": [
+	{
+	  "Bid": "0.94738",
+	  "Offer": "0.94766",
+	  "Product": "AUD/CAD",
+	  "CounterCurrency": "AUD",
+	  "ContractCurrency": "CAD"
+	},
+	{
+	  "Bid": "0.71759",
+	  "Offer": "0.71798",
+	  "Product": "AUD/CHF",
+	  "CounterCurrency": "AUD",
+	  "ContractCurrency": "CHF"
+	},
+	{
+	  "Bid": "79.812",
+	  "Offer": "79.834",
+	  "Product": "AUD/JPY",
+	  "CounterCurrency": "AUD",
+	  "ContractCurrency": "JPY"
+	},
+	{
+	  "Bid": "1.07005",
+	  "Offer": "1.07046",
+	  "Product": "AUD/NZD",
+	  "CounterCurrency": "AUD",
+	  "ContractCurrency": "NZD"
+	},
+	{
+	  "Bid": "0.72401",
+	  "Offer": "0.72418",
+	  "Product": "AUD/USD",
+	  "CounterCurrency": "AUD",
+	  "ContractCurrency": "United States Dollar"
+	},
+	{
+	  "Bid": "0.75733",
+	  "Offer": "0.75775",
+	  "Product": "CAD/CHF",
+	  "CounterCurrency": "CAD",
+	  "ContractCurrency": "CHF"
+	},
+	{
+	  "Bid": "84.230",
+	  "Offer": "84.256",
+	  "Product": "CAD/JPY",
+	  "CounterCurrency": "CAD",
+	  "ContractCurrency": "JPY"
+	},
+	{
+	  "Bid": "111.195",
+	  "Offer": "111.224",
+	  "Product": "CHF/JPY",
+	  "CounterCurrency": "CHF",
+	  "ContractCurrency": "JPY"
+	},
+	{
+	  "Bid": "1.54796",
+	  "Offer": "1.54838",
+	  "Product": "EUR/AUD",
+	  "CounterCurrency": "Euro Dollar",
+	  "ContractCurrency": "AUD"
+	},
+	{
+	  "Bid": "1.46677",
+	  "Offer": "1.46711",
+	  "Product": "EUR/CAD",
+	  "CounterCurrency": "Euro Dollar",
+	  "ContractCurrency": "CAD"
+	},
+	{
+	  "Bid": "1.11111",
+	  "Offer": "1.11138",
+	  "Product": "EUR/CHF",
+	  "CounterCurrency": "Euro Dollar",
+	  "ContractCurrency": "CHF"
+	},
+	{
+	  "Bid": "27.0200",
+	  "Offer": "27.0250",
+	  "Product": "EUR/CZK",
+	  "CounterCurrency": "Euro Dollar",
+	  "ContractCurrency": "CZK"
+	},
+	{
+	  "Bid": "7.43641",
+	  "Offer": "7.43736",
+	  "Product": "EUR/DKK",
+	  "CounterCurrency": "Euro Dollar",
+	  "ContractCurrency": "DKK"
+	},
+	{
+	  "Bid": "0.76741",
+	  "Offer": "0.76754",
+	  "Product": "EUR/GBP",
+	  "CounterCurrency": "Euro Dollar",
+	  "ContractCurrency": "British pound"
+	},
+	{
+	  "Bid": "316.100",
+	  "Offer": "316.192",
+	  "Product": "EUR/HUF",
+	  "CounterCurrency": "Euro Dollar",
+	  "ContractCurrency": "HUF"
+	},
+	{
+	  "Bid": "123.567",
+	  "Offer": "123.590",
+	  "Product": "EUR/JPY",
+	  "CounterCurrency": "Euro Dollar",
+	  "ContractCurrency": "JPY"
+	},
+	{
+	  "Bid": "9.35045",
+	  "Offer": "9.35465",
+	  "Product": "EUR/NOK",
+	  "CounterCurrency": "Euro Dollar",
+	  "ContractCurrency": "NOK"
+	},
+	{
+	  "Bid": "1.65651",
+	  "Offer": "1.65732",
+	  "Product": "EUR/NZD",
+	  "CounterCurrency": "Euro Dollar",
+	  "ContractCurrency": "NZD"
+	},
+	{
+	  "Bid": "4.40895",
+	  "Offer": "4.40975",
+	  "Product": "EUR/PLN",
+	  "CounterCurrency": "Euro Dollar",
+	  "ContractCurrency": "PLN"
+	},
+	{
+	  "Bid": "9.35440",
+	  "Offer": "9.35745",
+	  "Product": "EUR/SEK",
+	  "CounterCurrency": "Euro Dollar",
+	  "ContractCurrency": "SEK"
+	},
+	{
+	  "Bid": "3.33994",
+	  "Offer": "3.34199",
+	  "Product": "EUR/TRY",
+	  "CounterCurrency": "Euro Dollar",
+	  "ContractCurrency": "TRY"
+	},
+	{
+	  "Bid": "1.12089",
+	  "Offer": "1.12109",
+	  "Product": "EUR/USD",
+	  "CounterCurrency": "Euro Dollar",
+	  "ContractCurrency": "United States Dollar"
+	},
+	{
+	  "Bid": "2.01695",
+	  "Offer": "2.01755",
+	  "Product": "GBP/AUD",
+	  "CounterCurrency": "British pound",
+	  "ContractCurrency": "AUD"
+	},
+	{
+	  "Bid": "1.91113",
+	  "Offer": "1.91162",
+	  "Product": "GBP/CAD",
+	  "CounterCurrency": "British pound",
+	  "ContractCurrency": "CAD"
+	},
+	{
+	  "Bid": "1.44770",
+	  "Offer": "1.44813",
+	  "Product": "GBP/CHF",
+	  "CounterCurrency": "British pound",
+	  "ContractCurrency": "CHF"
+	},
+	{
+	  "Bid": "161.003",
+	  "Offer": "161.045",
+	  "Product": "GBP/JPY",
+	  "CounterCurrency": "British pound",
+	  "ContractCurrency": "JPY"
+	},
+	{
+	  "Bid": "2.15860",
+	  "Offer": "2.15930",
+	  "Product": "GBP/NZD",
+	  "CounterCurrency": "British pound",
+	  "ContractCurrency": "NZD"
+	},
+	{
+	  "Bid": "1.46054",
+	  "Offer": "1.46077",
+	  "Product": "GBP/USD",
+	  "CounterCurrency": "British pound",
+	  "ContractCurrency": "United States Dollar"
+	},
+	{
+	  "Bid": "0.88494",
+	  "Offer": "0.88572",
+	  "Product": "NZD/CAD",
+	  "CounterCurrency": "NZD",
+	  "ContractCurrency": "CAD"
+	},
+	{
+	  "Bid": "0.67038",
+	  "Offer": "0.67098",
+	  "Product": "NZD/CHF",
+	  "CounterCurrency": "NZD",
+	  "ContractCurrency": "CHF"
+	},
+	{
+	  "Bid": "74.569",
+	  "Offer": "74.599",
+	  "Product": "NZD/JPY",
+	  "CounterCurrency": "NZD",
+	  "ContractCurrency": "JPY"
+	},
+	{
+	  "Bid": "0.67643",
+	  "Offer": "0.67665",
+	  "Product": "NZD/USD",
+	  "CounterCurrency": "NZD",
+	  "ContractCurrency": "United States Dollar"
+	},
+	{
+	  "Bid": "79.885",
+	  "Offer": "79.931",
+	  "Product": "SGD/JPY",
+	  "CounterCurrency": "SGD",
+	  "ContractCurrency": "JPY"
+	},
+	{
+	  "Bid": "1.30849",
+	  "Offer": "1.30873",
+	  "Product": "USD/CAD",
+	  "CounterCurrency": "United States Dollar",
+	  "ContractCurrency": "CAD"
+	},
+	{
+	  "Bid": "0.99122",
+	  "Offer": "0.99140",
+	  "Product": "USD/CHF",
+	  "CounterCurrency": "United States Dollar",
+	  "ContractCurrency": "CHF"
+	},
+	{
+	  "Bid": "6.5574",
+	  "Offer": "6.5603",
+	  "Product": "USD/CNH",
+	  "CounterCurrency": "United States Dollar",
+	  "ContractCurrency": "CNH"
+	},
+	{
+	  "Bid": "24.1007",
+	  "Offer": "24.1056",
+	  "Product": "USD/CZK",
+	  "CounterCurrency": "United States Dollar",
+	  "ContractCurrency": "CZK"
+	},
+	{
+	  "Bid": "6.63372",
+	  "Offer": "6.63465",
+	  "Product": "USD/DKK",
+	  "CounterCurrency": "United States Dollar",
+	  "ContractCurrency": "DKK"
+	},
+	{
+	  "Bid": "7.76561",
+	  "Offer": "7.76589",
+	  "Product": "USD/HKD",
+	  "CounterCurrency": "United States Dollar",
+	  "ContractCurrency": "HKD"
+	},
+	{
+	  "Bid": "281.870",
+	  "Offer": "282.116",
+	  "Product": "USD/HUF",
+	  "CounterCurrency": "United States Dollar",
+	  "ContractCurrency": "HUF"
+	},
+	{
+	  "Bid": "110.234",
+	  "Offer": "110.250",
+	  "Product": "USD/JPY",
+	  "CounterCurrency": "United States Dollar",
+	  "ContractCurrency": "JPY"
+	},
+	{
+	  "Bid": "18.40060",
+	  "Offer": "18.40567",
+	  "Product": "USD/MXN",
+	  "CounterCurrency": "United States Dollar",
+	  "ContractCurrency": "MXN"
+	},
+	{
+	  "Bid": "8.34122",
+	  "Offer": "8.34504",
+	  "Product": "USD/NOK",
+	  "CounterCurrency": "United States Dollar",
+	  "ContractCurrency": "NOK"
+	},
+	{
+	  "Bid": "3.93275",
+	  "Offer": "3.93455",
+	  "Product": "USD/PLN",
+	  "CounterCurrency": "United States Dollar",
+	  "ContractCurrency": "PLN"
+	},
+	{
+	  "Bid": "66.2695",
+	  "Offer": "66.5035",
+	  "Product": "USD/RUB",
+	  "CounterCurrency": "United States Dollar",
+	  "ContractCurrency": "RUB"
+	},
+	{
+	  "Bid": "8.34517",
+	  "Offer": "8.34760",
+	  "Product": "USD/SEK",
+	  "CounterCurrency": "United States Dollar",
+	  "ContractCurrency": "SEK"
+	},
+	{
+	  "Bid": "1.37939",
+	  "Offer": "1.37983",
+	  "Product": "USD/SGD",
+	  "CounterCurrency": "United States Dollar",
+	  "ContractCurrency": "SGD"
+	},
+	{
+	  "Bid": "2.97935",
+	  "Offer": "2.98030",
+	  "Product": "USD/TRY",
+	  "CounterCurrency": "United States Dollar",
+	  "ContractCurrency": "TRY"
+	},
+	{
+	  "Bid": "15.78530",
+	  "Offer": "15.79420",
+	  "Product": "USD/ZAR",
+	  "CounterCurrency": "United States Dollar",
+	  "ContractCurrency": "ZAR"
+	},
+	{
+	  "Bid": "16.514",
+	  "Offer": "16.546",
+	  "Product": "XAG/USD",
+	  "CounterCurrency": "XAG",
+	  "ContractCurrency": "United States Dollar"
+	},
+	{
+	  "Bid": "1731.91",
+	  "Offer": "1732.52",
+	  "Product": "XAU/AUD",
+	  "CounterCurrency": "XAU",
+	  "ContractCurrency": "AUD"
+	},
+	{
+	  "Bid": "1243.04",
+	  "Offer": "1243.65",
+	  "Product": "XAU/CHF",
+	  "CounterCurrency": "XAU",
+	  "ContractCurrency": "CHF"
+	},
+	{
+	  "Bid": "1118.58",
+	  "Offer": "1119.19",
+	  "Product": "XAU/EUR",
+	  "CounterCurrency": "XAU",
+	  "ContractCurrency": "Euro Dollar"
+	},
+	{
+	  "Bid": "858.40",
+	  "Offer": "859.01",
+	  "Product": "XAU/GBP",
+	  "CounterCurrency": "XAU",
+	  "ContractCurrency": "British pound"
+	},
+	{
+	  "Bid": "1254.04",
+	  "Offer": "1254.49",
+	  "Product": "XAU/USD",
+	  "CounterCurrency": "XAU",
+	  "ContractCurrency": "United States Dollar"
+	},
+	{
+	  "Bid": "6.969",
+	  "Offer": "6.995",
+	  "Product": "ZAR/JPY",
+	  "CounterCurrency": "ZAR",
+	  "ContractCurrency": "JPY"
+	}
+  ]
+}

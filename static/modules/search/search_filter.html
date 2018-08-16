@@ -1,0 +1,29 @@
+<!--
+  {
+  "name": "Search - Filter",
+  "status": "Complete",
+  "notes": ""
+  }
+-->
+
+
+<div class="section-wrapper search-filter-section fixed-menu-section" data-sectionbg="default" data-for="mobile">
+	<div class="wrapper">
+		<div class="fixed-menu__hideable-content search-filter__hideable-content">
+			<h2 class="fixed-menu__hideable-content-headline search-filter__headline">Show me results in</h2>
+
+			<ul class="fixed-menu__hideable-content-list search-filter__filters" data-type="checkbox"
+				data-bind="foreach: filters">
+				<li>
+					<input type="checkbox"
+						   data-bind="attr: {id: 'INPUT_' + Title, value: Title}, checked: $root.checkedFilter">
+					<label data-bind="attr: {for: 'INPUT_' + Title}, text: Title + ' (' + Count + ')'"></label>
+				</li>
+			</ul>
+		</div>
+		<div class="fixed-menu__toggle mobile-only" data-toggle-parent-class="open" data-open-fixed-menu="">
+			<i class="icon icon-filter"></i>
+			<h2>Filter Results</h2>
+		</div>
+	</div>
+</div>

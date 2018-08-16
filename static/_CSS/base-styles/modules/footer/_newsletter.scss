@@ -1,0 +1,78 @@
+.newsletter {
+
+  &-section {
+    position: relative;
+
+    form {
+      position: relative;
+    }
+  }
+
+  &__heading {
+    @include rem(font-size, $footer-newsletter-headline-font-size);
+    margin: .5em 0;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  &__description {
+    white-space: normal;
+    width: 100%;
+    *margin-left: -7px
+  }
+
+  &__label {
+    @extend %visually-hidden;
+  }
+
+  &__input[type="text"],
+  &__input[type="email"] {
+    width: $footer-newsletter-width;
+    margin: 0 $gutter/2 0 0;
+    float: none;
+
+    + label.error {
+      right: auto;
+      display: block;
+    }
+  }
+
+  &__submit {
+    @extend %btn--unstyled;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    &:hover {
+      color: $color-link-hover;
+    }
+
+    &:after {
+      @extend %arrow-right;
+
+      display: inline-block;
+      margin: -2px -4px 0 $gutter;
+      border-width: 4px;
+      border-left-width: 8px;
+      border-left-color: inherit;
+    }
+  }
+}
+
+@media screen and (max-width: $mobile) {
+  .newsletter {
+
+    &-section {
+      margin-bottom: $gutter;
+    }
+
+    &__heading {
+      @include rem(font-size, $footer-newsletter-headline-mobile-font-size);
+      margin: 0 0 .5em 0;
+    }
+
+    &__input[type="text"],
+    &__input[type="email"] {
+      width: 50%;
+
+    }
+  }
+}

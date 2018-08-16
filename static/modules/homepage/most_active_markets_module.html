@@ -1,0 +1,81 @@
+<!--
+  {
+  "name": "Most Active Markets Module - With Sentiment",
+  "status": "In Progress",
+  "notes": ""
+  }
+-->
+
+<section class="section-wrapper most-active-markets"
+		 data-apply-ko="mostActiveMarkets"
+		 data-products="['USD/JPY','EUR/USD','WHT/USD','USD/CAD','GBP/AUD']"
+		 data-get-products-timeout="5000"
+		 data-move-rows="false">
+	<div class="most-active-markets__tabs">
+		<h2 class="most-active-markets__headline">Most active markets</h2>
+
+		<div class="most-active-markets__sub-headline">Products are refreshed at 5 minutes intervals</div>
+
+		<div class="most-active-markets__tabs-content">
+			<div class="active-markets__table">
+				<table class="rates-table">
+					<thead>
+					<tr>
+						<th>Market</th>
+						<th>Bid</th>
+						<th>Ask</th>
+						<th class="mobile-hidden">Change</th>
+						<th class="mobile-hidden active-markets__table-sentiment">Sentiment</th>
+					</tr>
+					<tr class="spinner" data-bind="attr: {'hidden' : products().length > 0}">
+						<td colspan="5">
+							<img src="/_Images/ui/loader.gif" alt="spinner"/>
+						</td>
+					</tr>
+					</thead>
+					<tbody>
+					<!-- ko foreach: products -->
+					<tr>
+						<td>
+							<a href="#" data-bind="text: product"></a>
+						</td>
+						<td data-bind="text: bid,
+						css: {'active-markets__up' : bid() > bid_prev(), 'active-markets__down': bid() < bid_prev()}"></td>
+						<td data-bind="text: ask,
+						css: {'active-markets__up' : ask() > ask_prev(), 'active-markets__down': ask() < ask_prev()}"></td>
+						<td class="mobile-hidden" data-bind="text: change"></td>
+						<td data-bind="attr: {'data-percent': Long() > Short() ? -Long() : -Short(),
+						'class': Long() > Short() ? 'active-markets__long' : 'active-markets__short',
+						'data-bar-color': Long() > Short() ? '#32afea' : '#ffd816'},
+						drawPie: Long() > Short() ? -Long() : -Short()"
+							data-size="80"
+							data-line-width="15"
+							data-track-color="#c8d2d2">
+							<span data-bind="text: (Long() > Short() ? Long() : Short()) + '%'"></span>
+						</td>
+					</tr>
+					<!-- /ko -->
+					</tbody>
+				</table>
+			</div>
+		</div>
+
+		<div class="most-active-markets__sentiment-legend mobile-hidden">
+			<ul>
+				<li><span class="most-active-markets__sentiment-legend-item long"></span><span>Long</span></li>
+				<li><span class="most-active-markets__sentiment-legend-item short"></span><span>Short</span></li>
+			</ul>
+		</div>
+
+		<a href="#" class="cta-link">Lorem Ipsum Dolor</a>
+	</div>
+
+	<script type="text/html" id="sentimentTemplate">
+		<svg class="sentiment">
+			<circle class="outer" cx="" cy="" r=""></circle>
+			<path class="outer-sector" d=""></path>
+			<path class="inner-sector" d=""></path>
+			<circle class="inner" cx="100" cy="100" r="70"></circle>
+		</svg>
+	</script>
+</section>

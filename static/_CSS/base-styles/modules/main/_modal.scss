@@ -1,0 +1,38 @@
+.modal {
+  &__headline {
+    @include rem(font-size, 44);
+    color: $color-primary-3;
+    text-align: center;
+    letter-spacing: -.03em;
+  }
+
+  &__subheadline {
+    margin: $gutter 0;
+    text-align: center;
+    color: $color-darker;
+  }
+
+  &__content {
+    .col {
+      position: relative;
+    }
+  }
+
+  &__footer {
+    @include rem(font-size, 12);
+    padding-top: $gutter;
+    text-align: center;
+  }
+
+  @media screen and (max-width: $mobile) {
+    &__headline {
+      @include rem(font-size, 32);
+      line-height: 1.1;
+    }
+  }
+}
+
+.remodal {
+  background: $color-white;
+  border-radius: 0;
+}

@@ -1,0 +1,97 @@
+.related-markets {
+  &__headline {
+    margin: $related-markets-headline-margin;
+    @include set-text-styles($related-markets-headline-font...);
+  }
+
+  &__sentiments {
+    position: relative;
+    width: 100%;
+    text-align: center;
+  }
+
+  &__product {
+    width: $related-markets-sentiment-width;
+    float: left;
+    margin: $related-markets-product-margin;
+
+    &:first-child,
+    &:first-child + & {
+      margin: 0;
+    }
+  }
+
+  &__sentiment {
+    position: relative;
+    display: inline-block;
+    @include size($related-markets-sentiment-size...);
+
+    &-text {
+      position: absolute;
+      z-index: $defaultZIndex;
+      width: $related-markets-sentiment-text-width;
+      margin: $related-markets-sentiment-text-margin;
+      color: $related-markets-sentiment-text-color;
+
+      span {
+        @include set-text-styles($related-markets-sentiment-text-font...);
+      }
+    }
+
+    &-link {
+      width: 100%;
+    }
+  }
+
+  //TABLET ONLY
+  @media screen and (max-width: $tablet) {
+    &__headline {
+      @include set-text-styles($related-markets-headline-tablet-font...);
+      margin: $related-markets-headline-tablet-margin;
+    }
+
+    &__product {
+      width: $related-markets-sentiment-tablet-width;
+      margin: 0;
+    }
+
+    &__sentiment {
+      @include size($related-markets-sentiment-tablet-size...);
+
+      &-text {
+        width: $related-markets-sentiment-text-tablet-width;
+        margin: $related-markets-sentiment-text-tablet-margin;
+
+        span {
+          @include set-text-styles($related-markets-sentiment-text-tablet-font...);
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: $mobile) {
+    &__headline {
+      margin: $related-markets-headline-mobile-margin;
+      @include set-text-styles($related-markets-headline-mobile-font...);
+    }
+
+    &__product {
+      width: $related-markets-sentiment-mobile-width;
+      margin: $related-markets-product-mobile-margin;
+    }
+
+    &__sentiment {
+      @include size($related-markets-sentiment-mobile-size...);
+
+      &-text {
+        width: $related-markets-sentiment-text-mobile-width;
+        margin: $related-markets-sentiment-text-mobile-margin;
+
+        span {
+          @include set-text-styles($related-markets-sentiment-text-mobile-font...);
+        }
+      }
+    }
+  }
+
+}

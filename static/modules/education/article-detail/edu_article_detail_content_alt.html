@@ -1,0 +1,326 @@
+<!--
+  {
+  "name": "Article Detail Content Module - scrollable tables example",
+  "status": "Complete",
+  "notes": ""
+  }
+-->
+
+<div class="article-section">
+	<div class="article"><!-- conditional classes for image or video -->
+		<article class="article__wrapper">
+
+			<div class="article__head-wrapper" data-sectionbg="">
+
+				<h1 class="article__headline">Discover the Secrets of Trading Gold.</h1>
+
+				<h2 class="article__sub-headline">Nuggets of wisdom from GFT Markets.</h2>
+
+				<div class="article__created-by">by Matt Weller, Technical Analyst.</div>
+			</div>
+
+			<div class="article__description-wrap">
+				<div class="article__description">
+
+					<a class="article__download desktop-only">
+						<i class="media-source-article"></i>
+						<span>download</span>
+					</a>
+
+				</div>
+
+				@@include('/modules/main/article_share_this.html')
+			</div>
+
+			<div class="rtf">
+				<h3>A bit of history of Fibonacci</h3>
+
+				<p>Before we get in too much about what Fibonacci is, let’s first answer the question “who is
+					Fibonacci?” Leonardo Pisano, or Leonardo Fibonacci as he is most widely known, was a European
+					mathematician in the Middle Ages who wrote Liber Abaci (Book of Calculation) in 1202 AD. In this
+					book he discussed a variety of topics including how to convert currencies and measurements for
+					commerce, calculations of profit and interest, and a number of mathematical and geometric equations.
+					However, there are two things that jump to the forefront of our discussion in today’s world. First,
+					in the beginning portions of Liber Abaci he discussed the benefits of using the Arabic numeral
+					system. At the time, the influence of the defunct Roman Empire was still strong, and the preference
+					of most European citizens was to use Roman numerals. However, in Liber Abaci, Fibonacci provided a
+					very powerful, influential, and easy-to-understand argument for using the Arabic numeral system.
+					From that point on, the Arabic numeral system got a strong foothold in the European community and
+					soon became the dominant method of mathematics in the region and eventually throughout the world. It
+					was so strong that we still use the <a href="/">Arabic numeral system</a> to this day. </p>
+
+				<p>The second important section of Liber Abaci that we use today is the Fibonacci sequence. The
+					Fibonacci sequence is a series of numbers where each number in the series is the equivalent of the
+					sum of the two numbers previous to it. </p>
+				[INSERT IMAGE]
+				<p>As you can see from this sequence, we need to start out with two “seed” numbers, which are 0 and 1.
+					We then add 0 and 1 to get the next number in the sequence, which is 1. You then take that value and
+					add it to the number previous to it to get the next number in the sequence. If we continue to follow
+					that pattern we get this: </p>
+				[INSERT IMAGE]
+				<p>The Fibonacci sequence is so important to this discussion because we need those numbers to get our
+					Fibonacci ratios. Without the Fibonacci sequence, the Fibonacci ratios wouldn’t exist.</p>
+
+				<h3>What Makes a Fibonacci Ratio?</h3>
+
+				<p>With the advent of the internet, there has been a lot of misinformation on which values make up
+					Fibonacci Ratios. Proliferation of Fibonacci analysis, particularly in the realm of trading, has
+					encouraged misinterpretations and misunderstandings of how and what makes a Fibonacci ratio. Let’s
+					look at what a Fibonacci ratio is, how it is created, and some examples of those that are not really
+					Fibonacci ratios at all.</p>
+
+				<h3>Fibonacci Ratios</h3>
+
+				<p>The math involved behind the Fibonacci ratios is rather simple. All we have to do is take certain
+					numbers from the Fibonacci sequence and follow a pattern of division throughout it. As an example,
+					let’s take a number in the sequence and divide it by the number that follows it. </p>
+
+				<p>0 ÷ 1 = 0<br>
+					1 ÷ 1 = 1<br>
+					1 ÷ 2 = 0.5<br>
+					2 ÷ 3 = 0.67<br>
+					3 ÷ 5 = 0.6<br>
+					5 ÷ 8 = 0.625<br>
+					8 ÷ 13 = 0.615<br>
+					13 ÷ 21 = 0.619<br>
+					21 ÷ 34 = 0.618<br>
+					34 ÷ 55 = 0.618<br>
+					55 ÷ 89 = 0.618</p>
+
+				<p>Notice a pattern developing here? Starting at 21 divided by 34 going out to infinity you will ALWAYS
+					get 0.618! </p>
+
+				<p>We could do this with other numbers in the Fibonacci sequence as well. For instance by taking a
+					number in the sequence and dividing it by the number that precedes it, we see another constant
+					number that develops.</p>
+
+				<p>1 ÷ 0 = 0<br>
+					1 ÷ 1 = 1<br>
+					2 ÷ 1 = 2<br>
+					3 ÷ 2 = 1.5<br>
+					5 ÷ 3 = 1.67<br>
+					8 ÷ 5 = 1.6<br>
+					13 ÷ 8 = 1.625<br>
+					21 ÷ 13 = 1.615<br>
+					34 ÷ 21 = 1.619<br>
+					55 ÷ 34 = 1.618<br>
+					89 ÷ 55 = 1.618<br>
+					144 ÷ 89 = 1.618</p>
+
+				<p>Another pattern develops out of the numbers of the Fibonacci sequence. Now 1.618 actually holds even
+					more significance because it is also called the Golden Ratio, the Golden Number, or the Divine
+					Ratio, but I could go on for many more pages about that subject.</p>
+
+				<p>Here are some more examples of patterns that develop by taking numbers in the Fibonacci sequence and
+					dividing them in a pattern with other numbers within the sequence.</p>
+				<table>
+					<thead>
+					<tr>
+						<th>Divide by 2nd following</th>
+						<th>Divide by 2nd preceding</th>
+						<th>Divide by 3rd following</th>
+						<th>Divide by 3rd preceding</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+						<td>0 ÷ 1 = 0</td>
+						<td>1 ÷ 0 = 0</td>
+						<td>0 ÷ 2 = 0</td>
+						<td>2 ÷ 0 = 0</td>
+					</tr>
+					<tr>
+						<td>1 ÷ 2 = 0.5</td>
+						<td>2 ÷ 1 = 2</td>
+						<td>1 ÷ 3 = 0.33</td>
+						<td>3 ÷ 1 = 3</td>
+					</tr>
+					<tr>
+						<td>1 ÷ 3 = 0.33</td>
+						<td>3 ÷ 1 = 3</td>
+						<td>1 ÷ 5 = 0.2</td>
+						<td>5 ÷ 1 = 5</td>
+					</tr>
+					<tr>
+						<td>2 ÷ 5 = 0.4</td>
+						<td>5 ÷ 2 = 2.5</td>
+						<td>2 ÷ 8 = 0.25</td>
+						<td>8 ÷ 2 = 4</td>
+					</tr>
+					<tr>
+						<td>3 ÷ 8 = 0.375</td>
+						<td>8 ÷ 3 = 2.67</td>
+						<td>3 ÷ 13 = 0.231</td>
+						<td>13 ÷ 3 = 4.33</td>
+					</tr>
+					<tr>
+						<td>5 ÷ 13 = 0.385</td>
+						<td>13 ÷ 5 = 2.6</td>
+						<td> 5 ÷ 21 = 0.238</td>
+						<td>21 ÷ 5 = 4.2</td>
+					</tr>
+					<tr>
+						<td>8 ÷ 21 = 0.381</td>
+						<td>21 ÷ 8 = 2.625</td>
+						<td>8 ÷ 34 = 0.235</td>
+						<td>34 ÷ 8 = 4.25</td>
+					</tr>
+					<tr>
+						<td>13 ÷ 34 = 0.382</td>
+						<td>34 ÷ 13 = 2.615</td>
+						<td>13 ÷ 55 = 0.236</td>
+						<td>55 ÷ 13 = 4.231</td>
+					</tr>
+					<tr>
+						<td>21 ÷ 55 = 0.382</td>
+						<td>55 ÷ 21 = 2.619</td>
+						<td>21 ÷ 89 = 0.236</td>
+						<td>89 ÷ 21 = 4.231</td>
+					</tr>
+					<tr>
+						<td>34 ÷ 89 = 0.382</td>
+						<td>89 ÷ 34 = 2.618</td>
+						<td>34 ÷ 144 = 0.236</td>
+						<td>144 ÷ 34 = 4.235</td>
+					</tr>
+					<tr>
+						<td>55 ÷ 144 = 0.382</td>
+						<td>144 ÷ 55 = 2.618</td>
+						<td>55 ÷ 233 = 0.236</td>
+						<td>233 ÷ 55 = 4.236</td>
+					</tr>
+					<tr>
+						<td>89 ÷ 233 = 0.382</td>
+						<td>233 ÷ 89 = 2.618</td>
+						<td>89 ÷ 377 = 0.236</td>
+						<td>377 ÷ 89 = 4.236</td>
+					</tr>
+					<tr>
+						<td>144 ÷ 377 = 0.382</td>
+						<td>377 ÷ 144 = 2.618</td>
+						<td>144 ÷ 610 = 0.236</td>
+						<td>610 ÷ 144 = 4.236</td>
+					</tr>
+					</tbody>
+				</table>
+				<p>As you can see, we could get many different numbers by just taking numbers within the Fibonacci
+					sequence and developing a divisory pattern within the sequence. However, this is not the only way to
+					come up with Fibonacci ratios. Once we have the numbers from dividing, we can then take the square
+					roots of each of those numbers to get more numbers. See the chart below for some examples of those
+					values. </p>
+				<table>
+					<thead>
+					<tr>
+						<th>Fibonacci Ratio</th>
+						<th>Operation</th>
+						<th>Result</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+						<td>0.236</td>
+						<td>Square root of 0.236</td>
+						<td>0.486</td>
+					</tr>
+					<tr>
+						<td>0.382</td>
+						<td>Square root of 0.382</td>
+						<td>0.618</td>
+					</tr>
+					<tr>
+						<td>0.618</td>
+						<td>Square root of 0.618</td>
+						<td>0.786</td>
+					</tr>
+					<tr>
+						<td>1.618</td>
+						<td>Square root of 1.618</td>
+						<td>1.272</td>
+					</tr>
+					<tr>
+						<td>2.618</td>
+						<td>Square root of 2.618</td>
+						<td>1.618</td>
+					</tr>
+					<tr>
+						<td>4.236</td>
+						<td>Square root of 4.236</td>
+						<td>2.058</td>
+					</tr>
+					</tbody>
+				</table>
+				<p>The last part of making these numbers Fibonacci ratios is to simply turn them into percentages. Using
+					that rationale 0.236 becomes 23.6%, 0.382 becomes 38.2%, etc. So looking at our analysis we can then
+					see that 23.6%, 38.2%, 48.6%, 61.8%, 78.6%, 127.2%, 161.8%, 205.8%, 261.8%, and 423.6% are our bona
+					fide Fibonacci ratios.</p>
+
+				<h3>What about 50%?</h3>
+
+				<p>While the 50% ratio is often used in Fibonacci analysis, it is not a Fibonacci ratio. Some say that
+					the 50% level is a Gann ratio, created by W.D. Gann in the early 1900’s. Others call the 50% level
+					an inverse of a “sacred ratio.” Just like the Fibonacci ratios, many people will either take the
+					inverse or square root of the “sacred ratios” to form more values. Some examples can be found in the
+					table below.</p>
+				<table>
+					<thead>
+					<tr>
+						<th>Sacred Ratio</th>
+						<th>Operation</th>
+						<th>Result</th>
+						<th>Inverse of Sacred Ratio</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+						<td>1</td>
+						<td>Square root of 1</td>
+						<td>1</td>
+						<td>1</td>
+					</tr>
+					<tr>
+						<td>2</td>
+						<td>Square root of 2</td>
+						<td>1.414</td>
+						<td>0.5</td>
+					</tr>
+					<tr>
+						<td>3</td>
+						<td>Square root of 3</td>
+						<td>1.732</td>
+						<td>0.333</td>
+					</tr>
+					<tr>
+						<td>4</td>
+						<td>Square root of 4</td>
+						<td>2</td>
+						<td>2.236</td>
+					</tr>
+					<tr>
+						<td>5</td>
+						<td>Square root of 5</td>
+						<td>0.25</td>
+						<td>0.2</td>
+					</tr>
+					</tbody>
+				</table>
+				<p>Whatever the source, the 50% ratio seems to be a rather important and relevant level when trading, so
+					often times it is included in Fibonacci analysis as if it were a Fibonacci ratio. Some of the other
+					numbers included in the table have been mistaken as Fibonacci ratios as well, but obviously are
+					not.</p>
+
+				<p>Whatever the source, the 50% ratio seems to be a rather important and relevant level when trading, so
+					often times it is included in Fibonacci analysis as if it were a Fibonacci ratio. Some of the other
+					numbers included in the table have been mistaken as Fibonacci ratios as well, but obviously are
+					not.</p>
+			</div>
+
+
+			<div class="article__next-topic">
+				<span>next topiC: </span>
+				<a href="#" class="article__next-topic-link">
+					WHAT IS RISK?
+				</a>
+			</div>
+		</article>
+	</div>
+</div>

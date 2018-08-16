@@ -1,0 +1,64 @@
+.gft-withdrawal {
+  padding-bottom: $gutter*4;
+
+  &__form {
+    .form-submit, .form-disclaimer {
+      margin-left: 0;
+    }
+
+    .multi-col__content > .col {
+      margin-bottom: 0;
+
+      &:nth-child(2n+1) {
+        padding-right: $gutter*2;
+      }
+
+      &:nth-child(2n+2) {
+        padding-left: $gutter*2;
+      }
+    }
+
+    &-hidden {
+      &-headline {
+        @include rem(font-size, 20);
+        font-weight: 600;
+        display: block;
+        width: 100%;
+        padding: $gutter;
+        background-color: $color-secondary-2;
+        color: $color-white;
+      }
+
+      &-fields {
+        padding: $gutter/2;
+        border: 1px solid $color-light;
+        border-top: 0;
+        margin-bottom: $gutter*2;
+      }
+
+      &-sub-headline {
+        @include rem(font-size, 18);
+        font-weight: 600;
+        display: block;
+        width: 100%;
+        padding: $gutter/2;
+        background-color: $color-medium-dark;
+        color: $color-white;
+      }
+    }
+  }
+
+  @media screen and (max-width: $mobile) {
+    &__form {
+      .multi-col__content > .col {
+        &:nth-child(2n+1) {
+          padding-right: 0;
+        }
+
+        &:nth-child(2n+2) {
+          padding-left: 0;
+        }
+      }
+    }
+  }
+}

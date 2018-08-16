@@ -1,0 +1,59 @@
+<!--
+  {
+  "name": "My Account Login Modal",
+  "status": "Complete",
+  "notes": ""
+  }
+-->
+
+<!-- REMODAL EXAMPLE -->
+<div class="section-wrapper remodal my-account-login-modal-section" data-remodal-id="myAccountLoginModal">
+	<div class="wrapper">
+
+		<header class="modal__header">
+
+			<h1 class="modal__headline">MyAccount</h1>
+		</header>
+		<main class="modal__content">
+			<form class="form my-account-login__form" action="" novalidate="novalidate">
+				<div class="form-group">
+					<input id="username" class="form-input" placeholder="User Name" type="text" required=""/>
+					<span class="form-validation-message">This field is required</span>
+				</div>
+				<div class="form-group">
+					<input id="password" placeholder="Password" class="form-input" type="password" required=""/>
+					<span class="form-validation-message">This field is required</span>
+				</div>
+
+				<button type="submit" class="form-submit my-account-login__submit form">Submit</button>
+			</form>
+
+			<div class="my-account-login__sub-form-text">
+				<a href="#">Forgot Password?</a>
+				<a href="#">Open an Account</a>
+			</div>
+
+			<div class="my-account-login__sub-headline">Want to trade this account?</div>
+			<a href="#" class="cta-link"
+			   data-app-link="desktop"
+			   data-ios-ipad="http://itunes.apple.com/us/app/forextrader-for-ipad/id466025600"
+			   data-ios-iphone="http://itunes.apple.com/us/app/forextrader-for-iphone/id367994204"
+			   data-android="https://play.google.com/store/apps/details?id=com.forex.forextrader"
+			   data-windows="http://download.efxnow.com/ForexTraderPro/setup.exe"
+			   data-desktop="/en-us/login">Launch Platform: force Desktop</a>
+			<a href="#" class="cta-link installLink"
+			   data-ios-ipad="http://itunes.apple.com/us/app/forextrader-for-ipad/id466025600"
+			   data-ios-iphone="http://itunes.apple.com/us/app/forextrader-for-iphone/id367994204"
+			   data-android="https://play.google.com/store/apps/details?id=com.forex.forextrader"
+			   data-windows="http://download.efxnow.com/ForexTraderPro/setup.exe"
+			   data-desktop="/en-us/login">Launch Platform: based on useragent and data attributes</a>
+			<a href="#" class="cta-link installLink"
+			   data-app-links-json='{"iosIpad":"http://itunes.apple.com/us/app/forextrader-for-ipad/id466025600",
+			   "iosIphone":"http://itunes.apple.com/us/app/forextrader-for-iphone/id367994204",
+			   "android":"https://play.google.com/store/apps/details?id=com.forex.forextrader",
+			   "windows":"http://download.efxnow.com/ForexTraderPro/setup.exe",
+			   "desktop":"/en-us/login"}'>Launch Platform: based on useragent and json data</a>
+		</main>
+		<!-- end .modal__content -->
+	</div>
+</div>

@@ -1,0 +1,20 @@
+//todo: review -6px after JP release
+@media screen and (min-width: $tablet + 1) {
+  .primary-content > .description:first-child {
+    margin-top: $primary-content-fix;
+  }
+
+  .generic-hero-section[data-has-inner-hero-options="false"] + .description {
+    margin-top: $primary-content-fix;
+  }
+
+  .generic-hero-section[data-has-inner-hero-options="false"][data-is-page-title="false"] + .description {
+    margin-top: -18px;
+  }
+}
+
+@media screen and(max-width: $tablet) {
+  .description > .wrapper {
+    padding: 0 $tabletPadding;
+  }
+}

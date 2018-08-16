@@ -1,0 +1,29 @@
+.multi-col-section[data-display-as="full-width-image"] {
+  $multi-col-full-width-image-col-tablet-margin: 10px 0 0 !default;
+
+  .multi-col {
+    &__img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+
+  @media screen and (max-width: $tablet) {
+    .multi-col {
+      &__content {
+        > .col {
+          margin: $multi-col-full-width-image-col-tablet-margin;
+        }
+      }
+
+      &__img {
+        position: static;
+        width: 100%;
+
+        ~ * {
+          padding: 0;
+        }
+      }
+    }
+  }
+}

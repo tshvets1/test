@@ -1,0 +1,167 @@
+<!--
+  {
+  "name": "My Account Forms",
+  "status": "In Progress",
+  "notes": ""
+  }
+-->
+
+<script type="text/javascript">
+	var metaTrader = {
+		"html": [{
+			type: "div",
+			html: {
+				"name": "userId",
+				"label": "ログインID",
+				"id": "userId",
+				"type": "text",
+				"validate": {
+					"required": true,
+					"minlength": 6,
+					"maxlength": 20,
+					"pattern": /\d$/,
+					"messages": {
+						"required": "Please enter your user id",
+						"minlength": "User id should have minimum six characters.",
+						"pattern": "Only numeric values are allowed."
+					}
+				}
+			}
+		},{
+			type: "div",
+			html: {
+				"name": "password",
+				id: "password",
+				"type": "password",
+				"label": "パスワード",
+				validate: {
+					required: true
+				}
+			}
+		}, {
+			type: "div",
+			"class": "text",
+			html: "<a href='#'>パスワードをお忘れの方</a>"
+		}, {
+			"type": "div",
+			"html": {
+				"type": "buttonSubmit",
+				"name": "submit_button",
+				"value": "Submit"
+			}
+		}]
+	};
+	var forexTrader = {
+		"html": [{
+			type: "div",
+			class: "radiogroup",
+			html: {
+				"type": "div",
+				class: "form-input",
+				html: [ {
+                            "type": "div",
+                            html: {
+                                type: "radio",
+                                "name": "accountType",
+                                id: "acoountTypeLive",
+                                value: "live",
+                                caption: "ライブ",
+                                validate: {
+                                    required: true
+                                }
+                            }
+                        },{
+                        "type": "div",
+                        html: {
+                            type: "radio",
+                            "name": "accountType",
+                            id: "acoountTypeDemo",
+                            value: "demo",
+                            caption: "デモ",
+                            validate: {
+                                required: true
+                            }
+                        }
+                    },
+				]
+			}
+		}, {
+			type: "div",
+			html: {
+				"name": "userId",
+				"label": "ログインID",
+				"id": "userId",
+				"type": "text",
+				"validate": {
+					"required": true,
+					"minlength": 6,
+					"maxlength": 20,
+					"pattern": /\d$/,
+					"messages": {
+						"required": "Please enter your user id",
+						"minlength": "User id should have minimum six characters.",
+						"pattern": "Only numeric values are allowed."
+					}
+				}
+			}
+		}, {
+			type: "div",
+			html: {
+				"name": "password",
+				id: "password",
+				"type": "password",
+				"label": "パスワード",
+				validate: {
+					required: true
+				}
+			}
+		}, {
+			type: "div",
+			"class": "text",
+			html: "<a href='#'>パスワードをお忘れの方</a>"
+		}, {
+			"type": "div",
+			"html": {
+				"type": "buttonSubmit",
+				"name": "submit_button",
+				"value": "Submit"
+			}
+		}]
+	};
+
+</script>
+
+
+<section class="section-wrapper hero-two-section"
+		 data-sectionbg="alternate" style="" data-pointer="false" data-columns="2">
+	<div class="wrapper">
+		<div class="col">
+			<h1 class="hero__headline"><span>Meta Trader 4</span></h1>
+			<div class="hero__subheadline">
+				Lorem ipsum dolor sit amet, contsectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+				dolore magna.
+			</div>
+		</div>
+		<div class="col">
+			<div class="form-headline">マイアカウントログイン</div>
+			<form data-dform-variable="metaTrader"></form>
+		</div>
+	</div>
+</section>
+
+<section class="section-wrapper hero-two-section"
+		 data-sectionbg="alternate" style="" data-pointer="false" data-columns="2">
+	<div class="wrapper">
+		<div class="col">
+			<h1 class="hero__headline"><span>FOREXTrader</span></h1>
+			<div class="hero__subheadline">
+				Lorem ipsum dolor sit amet, contsectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+				dolore magna.
+			</div>
+		</div>
+		<div class="col">
+			<div class="form-headline">マイアカウントログイン</div>
+			<form data-dform-variable="forexTrader"></form>
+		</div>
+	</div>
+</section>

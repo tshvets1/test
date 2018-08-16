@@ -1,0 +1,102 @@
+//
+// HERO (BASIC HERO)
+// FOUND ON LANDING PAGES (Services Overview, All Platforms)
+//
+.hero-section {
+  @extend %bannerBg;
+  @extend %data-pointer;
+  position: relative;
+  color: $color-white;
+  text-align: center;
+
+  .wrapper {
+    padding: $gutter*4.5 0;
+  }
+
+  &[data-sectionbg="default"] {
+    color: $color-primary-3;
+  }
+  &[data-sectionbg="green"],
+  &[data-sectionbg="blue"] {
+    .hero {
+      &__subheadline {
+        color: $color-white;
+      }
+    }
+  }
+
+  .hero {
+    &__headline {
+      @include set-text-styles(40, 400, 1.2);
+    }
+
+    &__subheadline {
+      @include rem(font-size, 20);
+      margin: 0;
+      color: $color-darker;
+    }
+  }
+
+  &[data-is-page-title="true"],
+  &[data-is-page-title="True"] {
+    .hero__headline {
+      @include rem(font-size, 50);
+    }
+  }
+
+  // TABLET LAYOUT
+  @media screen and (max-width: $tablet) {
+    .hero {
+      &__headline {
+        @include rem(font-size, 60);
+      }
+
+      &__subheadline {
+        @include rem(font-size, 18);
+        margin: $gutter 0;
+      }
+    }
+  }
+
+  // MOBILE LAYOUT
+  @media screen and (max-width: $mobile) {
+    .wrapper {
+      padding: 45px $tabletPadding 40px;
+    }
+
+    .hero {
+      &__headline {
+        @include set-text-styles(36, null, 1.3);
+      }
+
+      &__subheadline {
+        margin: $gutter/2 0;
+        @include set-text-styles(16, null, 1.3);
+      }
+    }
+
+    &[data-is-page-title="true"],
+    &[data-is-page-title="True"] {
+      .hero__headline {
+        @include rem(font-size, 36);
+      }
+    }
+  }
+}
+
+.secondary-hero {
+  .hero {
+    &__headline {
+      @include rem(font-size, 44);
+    }
+  }
+
+  // MOBILE LAYOUT
+  @media screen and (max-width: $mobile) {
+    .hero {
+      &__headline {
+        @include rem(font-size, 25);
+      }
+    }
+  }
+}

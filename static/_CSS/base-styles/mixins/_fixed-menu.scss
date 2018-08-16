@@ -1,0 +1,111 @@
+@mixin fixed-menu($bg-color, $headline-bg-color, $text-color, $hover-color, $line-height, $headline-font) {
+  background-color: $bg-color;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: $fixedMenuZIndex;
+  width: 100%;
+
+  .wrapper {
+    padding: 0;
+    width: 100%;
+    max-width: inherit;
+  }
+
+  h2 {
+    @include set-text-styles($headline-font...);
+    text-decoration: none;
+    color: $text-color;
+
+    display: inline-block;
+    padding: 0 0 0 $gutter*2;
+
+    a {
+      text-decoration: none;
+      color: $text-color;
+    }
+  }
+
+  &.open, .wrapper.open {
+    > .fixed-menu__hideable-content {
+      display: block;
+    }
+  }
+
+  .fixed-menu {
+    &__hideable-content {
+      display: none;
+
+      &-list {
+        li {
+          line-height: $line-height;
+          padding: 0 $gutter*2;
+          border-top: 1px solid darken($bg-color, 10%);
+        }
+
+        input[type="checkbox"],
+        input[type="radio"] {
+          + label {
+            color: $text-color;
+            padding-left: $gutter*3.5;
+            padding-bottom: 0;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+
+            &:before {
+              top: 15px;
+              width: 20px;
+              height: 20px;
+              border-width: 1px;
+            }
+          }
+
+          &:checked + label:before {
+            background-color: $hover-color;
+            border-color: $hover-color;
+          }
+        }
+
+        &[data-type="links"] {
+          a {
+            position: relative;
+            color: $text-color;
+            padding-left: $gutter*2;
+
+            &:before {
+              content: " ";
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 3px;
+              height: 100%;
+              background: transparent;
+            }
+          }
+
+          .active {
+            a {
+              color: $hover-color;
+
+              &:before {
+                background: $hover-color;
+              }
+            }
+          }
+        }
+      }
+
+      &-headline {
+        background-color: $headline-bg-color;
+        width: 100%;
+      }
+    }
+
+    &__toggle {
+      cursor: pointer;
+      width: 100%;
+      border-top: 1px solid darken($bg-color, 10%);
+    }
+  }
+}

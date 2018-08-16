@@ -1,0 +1,54 @@
+@mixin underline($color, $size: 1px, $bottom: 0, $left: 0, $right: 0, $pseudoElement: after) {
+  $desktopParams: (
+    left: nth($left, 1),
+    right: nth($right, 1),
+    bottom: nth($bottom, 1),
+    border-bottom-width: nth($size, 1)
+  );
+  $tabletParams: (
+    left: if(length($left) > 1, nth($left, 2), map_get($desktopParams, left)),
+    right: if(length($right) > 1, nth($right, 2), map_get($desktopParams, right)),
+    bottom: if(length($bottom) > 1, nth($bottom, 2), map_get($desktopParams, bottom)),
+    border-bottom-width: if(length($size) > 1, nth($size, 2), map_get($desktopParams, border-bottom-width))
+  );
+  $mobileParams: (
+    left: if(length($left) > 2, nth($left, 3), map_get($tabletParams, left)),
+    right: if(length($right) > 2, nth($right, 3), map_get($tabletParams, right)),
+    bottom: if(length($bottom) > 2, nth($bottom, 3), map_get($tabletParams, bottom)),
+    border-bottom-width: if(length($size) > 2, nth($size, 3), map_get($tabletParams, border-bottom-width))
+  );
+
+  @if ($color) {
+    position: relative;
+    display: inline-block;
+    &:#{$pseudoElement} {
+      content: "";
+      display: block;
+      position: absolute;
+      border-bottom: solid transparent;
+      @include print-styles($desktopParams);
+    }
+
+    &:hover {
+      &:#{$pseudoElement} {
+        border-bottom: map_get($desktopParams, border-bottom-width) solid nth($color, 1);
+      }
+    }
+
+    @if (length($bottom) > 1 or length($left) > 1 or length($right) > 1 or length($size) > 1) {
+      @media screen and (max-width: $tablet) {
+        &:#{$pseudoElement} {
+          @include print-styles($tabletParams);
+        }
+      }
+    }
+
+    @if (length($bottom) > 2 or length($left) > 2 or length($right) > 2 or length($size) > 2) {
+      @media screen and (max-width: $mobile) {
+        &:#{$pseudoElement} {
+          @include print-styles($mobileParams);
+        }
+      }
+    }
+  }
+}

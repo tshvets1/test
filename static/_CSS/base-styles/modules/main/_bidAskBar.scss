@@ -1,0 +1,195 @@
+.bid-ask-bar-section {
+  $bid-ask-bar-product-hover-bg-color: $color-lightest !default;
+  $bid-ask-bar-spread-bg-color: $color-grey-dark !default;
+
+  $bid-ask-bar-product-color: $color-darker !default;
+  $bid-ask-bar-headline-color: $color-primary-3 !default;
+  $bid-ask-bar-headline-hover-color: $color-link-hover !default;
+  $bid-ask-bar-up-color: $color-secondary-7 !default;
+  $bid-ask-bar-down-color: $color-secondary-6 !default;
+
+  $bid-ask-bar-product-border: solid 1px $color-grey-dark !default;
+
+  $bid-ask-bar-headline-font: 16 600 null null center !default;
+  $bid-ask-bar-bidask-label-font: 12 500 null uppercase !default;
+  $bid-ask-bar-bidask-value-font: 22 null 1.25 !default;
+  $bid-ask-bar-spread-font: 14 null null null center !default;
+
+  $bid-ask-bar-bidask-value-tablet-font: 18 !default;
+
+  $bid-ask-bar-headline-mobile-font: 14 !default;
+  $bid-ask-bar-bidask-value-mobile-font: 16 !default;
+  $bid-ask-bar-spread-mobile-font: 12 !default;
+
+  padding-top: $gutter*2;
+  padding-bottom: $gutter*2;
+  position: relative;
+
+  .spinner {
+    @extend %spinner-not-fixed;
+  }
+
+  .bid-ask {
+    &__products {
+      margin: 0 auto;
+      text-align: center;
+      min-height: 60px;
+    }
+
+    &__product {
+      @include transition(none, null);
+      position: relative;
+      display: inline-block;
+      width: 25%;
+      padding-bottom: $gutter*2;
+      color: $bid-ask-bar-product-color;
+      border-right: $bid-ask-bar-product-border;
+      padding-left: $gutter*1.8;
+      padding-right: $gutter*1.8;
+      text-align: left;
+      text-decoration: none;
+
+      &:last-child {
+        border-right: 0;
+      }
+
+      &:hover {
+        background-color: $bid-ask-bar-product-hover-bg-color;
+
+        .bid-ask__headline {
+          color: $bid-ask-bar-headline-hover-color;
+        }
+      }
+
+      &-last {
+        border-right: 0;
+      }
+    }
+
+    &__headline {
+      @include set-text-styles($bid-ask-bar-headline-font...);
+      color: $bid-ask-bar-headline-color;
+      padding-bottom: $gutter/2;
+
+      @include transition(color, $transitionDurationAndEffect)
+    }
+
+    &__bid, &__ask {
+      float: left;
+      width: 50%;
+
+      em, span {
+        float: left;
+        width: 100%;
+      }
+
+      em {
+        @include set-text-styles($bid-ask-bar-bidask-label-font...);
+        font-style: normal;
+      }
+
+      span {
+        @include set-text-styles($bid-ask-bar-bidask-value-font...);
+        letter-spacing: -0.03em;
+      }
+    }
+
+    &__ask {
+      text-align: right;
+    }
+
+    &__spread {
+      @include set-text-styles($bid-ask-bar-spread-font...);
+      position: absolute;
+      left: 33%;
+      bottom: 8px;
+      width: 33.333%;
+
+      span {
+        padding: $gutter*0.2;
+        background-color: $bid-ask-bar-spread-bg-color;
+        font-weight: 500;
+      }
+    }
+
+    &__up span {
+      b, sup {
+        color: $bid-ask-bar-up-color;
+      }
+    }
+
+    &__down span {
+      b, sup {
+        color: $bid-ask-bar-down-color;
+      }
+    }
+
+    &__link {
+      float: right;
+      padding-top: $gutter*2;
+    }
+  }
+
+  @media screen and (min-width: $mobile) {
+    .bid-ask__product--no-border {
+      border-right: 0;
+    }
+  }
+
+  @media screen and (max-width: $tablet) {
+    .bid-ask {
+      &__bid, &__ask {
+        span {
+          @include set-text-styles($bid-ask-bar-bidask-value-tablet-font...);
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: $mobile) {
+    .wrapper {
+      padding: 0 $gutter;
+    }
+
+    .bid-ask {
+      &__product {
+        width: 50%;
+        padding-right: 0;
+        padding-left: 0;
+
+        &:nth-child(2n+1) {
+          padding-right: $gutter;
+
+          .bid-ask__spread {
+            left: calc(33% - 5px);
+          }
+        }
+
+        &:nth-child(2n+2) {
+          border-right: 0;
+          padding-left: $gutter;
+
+          .bid-ask__spread {
+            left: calc(33% + 5px);
+          }
+        }
+      }
+
+      &__headline {
+        @include set-text-styles($bid-ask-bar-headline-mobile-font...);
+      }
+
+      &__bid, &__ask {
+        span {
+          @include set-text-styles($bid-ask-bar-bidask-value-mobile-font...);
+        }
+      }
+
+      &__spread {
+        span {
+          @include set-text-styles($bid-ask-bar-spread-mobile-font...);
+        }
+      }
+    }
+  }
+}

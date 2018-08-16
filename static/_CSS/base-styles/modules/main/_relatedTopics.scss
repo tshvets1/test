@@ -1,0 +1,105 @@
+.related-topics {
+  $related-topics-headline-color: $color-primary-3 !default;
+  $related-topics-topic-bg-color: $color-lightest !default;
+  $related-topics-topic-odd-bg-color: $color-light !default;
+
+  $related-topics-margin: 0 0 60px !default;
+  $related-topics-headline-margin: 0 0 10px !default;
+  $related-topics-topic-padding: 35px 20px !default;
+  $related-topics-tablet-margin: 0 #{-$tabletPadding} !default;
+  $related-topics-headline-tablet-padding: 0 2*$tabletPadding !default;
+  $related-topics-topic-tablet-padding: 35px 2*$tabletPadding !default;
+
+  $related-topics-headline-mobile-padding: 0 $tabletPadding !default;
+  $related-topics-topic-headline-mobile-margin: 0 0 10px !default;
+  $related-topics-topic-mobile-padding: 35px $tabletPadding !default;
+
+  $related-topics-headline-font: 40 !default;
+  $related-topics-topic-headline-font: 14 700 null uppercase !default;
+  $related-topics-topic-subheadline-font: 20 !default;
+  $related-topics-content-font: 14 null 1.5 !default;
+
+  $related-topics-headline-mobile-font: 25 null null null center !default;
+  $related-topics-topic-headline-mobile-font: 13 !default;
+  $related-topics-topic-subheadline-mobile-font: null !default;
+  $related-topics-content-mobile-font: null !default;
+
+  &-module {
+    clear: both;
+    margin: $related-topics-margin;
+  }
+
+  &__headline {
+    margin: $related-topics-headline-margin;
+    @include set-text-styles($related-topics-headline-font...);
+    color: $related-topics-headline-color;
+  }
+
+  &__topics {
+    @extend %list--unstyled;
+  }
+
+  &__topic {
+    padding: $related-topics-topic-padding;
+    background-color: $related-topics-topic-bg-color;
+
+    &#{if($old-ie, ".nth-child-odd", ":nth-child(odd)")} {
+      background-color: $related-topics-topic-odd-bg-color;
+    }
+  }
+
+  &__topic-headline {
+    @include set-text-styles($related-topics-topic-headline-font...);
+  }
+
+  &__topic-subheadline {
+    @include set-text-styles($related-topics-topic-subheadline-font...);
+    a {
+      text-decoration: none;
+    }
+  }
+
+  &__content {
+    @include set-text-styles($related-topics-content-font...);
+  }
+
+  //TABLET
+  @media screen and (max-width: $tablet) {
+    &-module {
+      margin: $related-topics-tablet-margin;
+    }
+
+    &__headline {
+      padding: $related-topics-headline-tablet-padding;
+    }
+
+    &__topic {
+      padding: $related-topics-topic-tablet-padding;
+    }
+  }
+
+  //MOBILE
+  @media screen and (max-width: $mobile) {
+    &__headline {
+      @include set-text-styles($related-topics-headline-mobile-font...);
+      padding: $related-topics-headline-mobile-padding;
+    }
+
+    &__topic {
+      padding: $related-topics-topic-mobile-padding;
+    }
+
+    &__topic-headline {
+      @include set-text-styles($related-topics-topic-headline-mobile-font...);
+      margin: $related-topics-topic-headline-mobile-margin;
+    }
+
+    &__topic-subheadline {
+      @include set-text-styles($related-topics-topic-subheadline-mobile-font...);
+    }
+
+    &__content {
+      @include set-text-styles($related-topics-content-mobile-font...);
+    }
+  }
+}

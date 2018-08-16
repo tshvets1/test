@@ -1,0 +1,22 @@
+<!--
+  {
+  "name": "Knowledge Center - Two Column (w/Left rail)",
+  "status": "Complete",
+  "notes": ""
+  }
+-->
+
+<section class="section-wrapper main-left-rail knowledge-center-section" data-sectionbg="default">
+
+	<div class="wrapper">
+		<aside class="secondary-content" role="complementary">
+			@@include('/modules/support/knowledge-center/search_bar_module.html')
+			@@include('/modules/support/knowledge-center/knowledge_center_filter.html')
+		</aside>
+
+		<div class="primary-content">
+			@@include('/modules/support/knowledge-center/knowledge_center_item_popular_FAQs.html',
+			{"itemId":"popularFAQs", "headline": "Popular FAQs"})
+		</div>
+	</div>
+</section>

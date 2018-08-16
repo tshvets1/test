@@ -1,0 +1,201 @@
+%multi-col-section-inverse {
+  .multi-col__headline {
+    color: $multi-col-headline-inverse-color;
+  }
+
+  .multi-col__title {
+    color: $multi-col-title-inverse-color;
+  }
+}
+
+.multi-col-section {
+  @extend %clearfix;
+  @include set-text-styles($multi-col-font...);
+  padding: $multi-col-padding;
+
+  .cta-btn-group {
+    > .cta-btn {
+      clear: none;
+      float: none;
+    }
+  }
+
+  @include inverse-section-bg("%multi-col-section-inverse");
+
+  @at-root .primary-content & {
+    padding: $multi-col-primary-padding;
+    @include set-text-styles($multi-col-primary-font...);
+    background-color: if($multi-col-primary-bg-color == "none", null, $multi-col-primary-bg-color);
+
+    &:first-child {
+      padding-top: 0;
+    }
+
+    .wrapper {
+      padding: 0;
+    }
+
+    .cta-btn-group {
+      > .cta-btn {
+        float: left;
+      }
+    }
+  }
+
+  @media screen and (max-width: $tablet) {
+    padding: $multi-col-tablet-padding;
+    @include set-text-styles($multi-col-tablet-font...);
+
+    @at-root .primary-content & {
+      padding: $multi-col-primary-tablet-padding;
+    }
+  }
+
+  @media screen and (max-width: $mobile) {
+    padding: $multi-col-mobile-padding;
+    @include set-text-styles($multi-col-mobile-font...);
+
+    .primary-content > & {
+      @include set-text-styles($multi-col-primary-mobile-font...);
+    }
+  }
+}
+
+.multi-col {
+  &__headline {
+    @include set-text-styles($multi-col-headline-font...);
+    margin: $multi-col-headline-margin;
+    color: $multi-col-headline-color;
+  }
+
+  &__headline + &__content {
+    margin-top: $multi-col-content-margin-top;
+  }
+
+  &__subheadline {
+    margin: $multi-col-subheadline-margin;
+    @include set-text-styles($multi-col-subheadline-font...);
+  }
+
+  &__subheadline-img {
+    margin: $multi-col-subheadline-img-margin;
+  }
+
+  &__img {
+    @include vertical-align-undo;
+    max-height: $multi-col-img-max-height;
+    max-width: $multi-col-img-max-width;
+    margin: $multi-col-img-margin;
+  }
+
+  &__title {
+    @include set-text-styles($multi-col-title-font...);
+    margin: $multi-col-title-margin;
+    color: $multi-col-title-color;
+    letter-spacing: -.03em;
+
+    a {
+      text-decoration: none;
+    }
+  }
+
+  &__subtitle {
+    @include set-text-styles($multi-col-subtitle-font...);
+  }
+
+  &__description {
+    @include set-text-styles($multi-col-description-font...);
+    margin: $multi-col-description-margin;
+  }
+
+  &__cta-link {
+    display: block;
+    margin: $multi-col-cta-link-margin;
+  }
+
+  &__link {
+    @include set-text-styles($multi-col-link-font...);
+  }
+
+  .primary-content &__cta-link {
+    margin: $multi-col-primary-cta-link-margin;
+  }
+
+  @media screen and (max-width: $tablet) {
+    &__headline {
+      @include set-text-styles($multi-col-headline-tablet-font...);
+      margin: $multi-col-headline-tablet-margin;
+    }
+
+    &__headline + &__content {
+      margin-top: $multi-col-content-tablet-margin-top;
+    }
+
+    &__title {
+      @include set-text-styles($multi-col-title-tablet-font...);
+    }
+
+    &__subtitle {
+      @include set-text-styles($multi-col-subtitle-tablet-font...);
+    }
+
+    &__description {
+      @include set-text-styles($multi-col-description-tablet-font...);
+      margin: $multi-col-description-tablet-margin;
+    }
+
+    &__cta-link {
+      margin: $multi-col-cta-link-tablet-margin;
+    }
+
+    &__link {
+      @include set-text-styles($multi-col-link-tablet-font...);
+    }
+
+    &__img {
+      margin: $multi-col-img-tablet-margin;
+      max-height: $multi-col-img-tablet-max-height;
+      max-width: $multi-col-img-tablet-max-width;
+    }
+  }
+
+  @media screen and (max-width: $mobile) {
+    &__headline {
+      margin: $multi-col-headline-mobile-margin;
+      @include set-text-styles($multi-col-headline-mobile-font...);
+    }
+
+    &__headline + &__content {
+      margin-top: $multi-col-content-mobile-margin-top;
+    }
+
+    &__subheadline {
+      margin: $multi-col-subheadline-mobile-margin;
+      @include set-text-styles($multi-col-subheadline-mobile-font...);
+    }
+
+    &__title {
+      margin: $multi-col-title-mobile-margin;
+      @include set-text-styles($multi-col-title-mobile-font...);
+    }
+
+    &__subtitle {
+      @include set-text-styles($multi-col-subtitle-mobile-font...);
+    }
+
+    &__description {
+      @include set-text-styles($multi-col-description-mobile-font...);
+      margin: $multi-col-description-mobile-margin;
+    }
+
+    &__img {
+      max-height: $multi-col-img-mobile-max-height;
+      max-width: $multi-col-img-mobile-max-width;
+      margin: $multi-col-img-mobile-margin;
+    }
+
+    &__link {
+      @include set-text-styles($multi-col-link-mobile-font...);
+    }
+  }
+}

@@ -1,0 +1,66 @@
+// GRID LIST TOGGLE
+.research__switch {
+  position: absolute;
+  @include position($research-grid-switch-position...);
+
+  @at-root .research-filter-section + & {
+    @include position($research-grid-switch-after-filter-position...);
+  }
+
+  &-trigger {
+    display: block;
+    margin: $research-grid-switch-trigger-margin;
+    position: relative;
+    float: left;
+    background-repeat: no-repeat;
+    text-indent: -999em;
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      @if ($old-ie) {
+        display: none;
+      } @else {
+        opacity: 0;
+        @include transition(opacity, $transitionDurationAndEffect);
+      }
+    }
+
+    &:hover,
+    &.is-active {
+      &:after {
+        @if ($old-ie) {
+          content: "  ";
+          display: block;
+        } @else {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  &-grid {
+    @include sprite($icon-view-grid-grey);
+
+    &:after {
+      @include sprite($icon-view-grid-blue);
+    }
+  }
+
+  &-list {
+    @include sprite($icon-view-list-grey);
+
+    &:after {
+      @include sprite($icon-view-list-blue);
+    }
+  }
+
+  @media screen and (max-width: $tablet) {
+    position: static;
+    float: right;
+    margin: $research-grid-switch-tablet-margin;
+  }
+}

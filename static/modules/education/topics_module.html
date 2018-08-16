@@ -1,0 +1,18 @@
+<!--
+  {
+  "name": "Topics Module",
+  "status": "Complete",
+  "notes": ""
+  }
+-->
+<div class="topics-section-wrapper">
+    @@include('/modules/education/topics/edu_topics_anchor_links.html')
+    @@include('/modules/education/topics/search_bar_module.html')
+
+    @@include('/modules/education/edu_topics_themes.html',
+    { "headline":"Trading Fundamentals","topicId": "trading-fundamentals", "button": "<a class='topic__back-to-top' href='#' data-scroll-to-element='body'>back to top</a>", "linkStyle": "cta-link"})
+    @@include('/modules/education/edu_topics_themes.html',
+    { "headline":"Managing Risk","topicId": "managing-risk", "button": "<a class='topic__back-to-top' href='#' data-scroll-to-element='body'>back to top</a>", "linkStyle": "cta-link"})
+    @@include('/modules/education/edu_topics_themes.html',
+    { "headline":"Technical Analysis","topicId": "technical-analysis", "button": "<a class='topic__back-to-top' href='#' data-scroll-to-element='body'>back to top</a>", "linkStyle": "cta-link"})
+</div>

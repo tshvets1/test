@@ -1,0 +1,1028 @@
+<!--
+  {
+  "name": "Forms",
+  "status": "In Progress",
+  "notes": ""
+  }
+-->
+
+<style>
+	.page-content .section-wrapper .wrapper {
+		padding-top: 50px;
+		padding-bottom: 50px;
+	}
+</style>
+
+<script type="text/javascript">
+	var eaHosting = {
+		"class": "ea-hosting__form",
+		"html": [{
+			type: "div",
+			html: {
+				"name": "User ID",
+				"label": "お客様ID",
+				"id": "userId",
+				"type": "text",
+				"validate": {
+					"required": true,
+					"minlength": 6,
+					"maxlength": 20,
+					"pattern": /\d$/,
+					"messages": {
+						"required": "Please enter your user id",
+						"minlength": "User id should have minimum six characters.",
+						"pattern": "Only numeric values are allowed."
+					}
+				}
+			}
+		}, {
+			type: "div",
+			"data-controls": "2",
+			html: [{
+				type: "label",
+				"for": "kanjiFirstName",
+				html: "<span>フ姓名(漢字)</span>"
+			}, {
+				type: "div",
+				"class": "col",
+				html: {
+					"name": "Kanji Last Name",
+					id: "kanjiLastName",
+					"type": "text",
+					label: "<span>姓名(漢字) - </span>姓",
+					"validate": {
+						"required": true,
+						"pattern": /^[一-龯]+$/,
+						"messages": {
+							"required": "Please enter your name",
+							"pattern": "Only kanji are allowed."
+						}
+					}
+				}
+			}, {
+				type: "div",
+				"class": "col",
+				html: {
+					name: "Kanji First Name",
+					id: "kanjiFirstName",
+					type: "text",
+					label: "<span>姓名(漢字) - </span>名",
+					"validate": {
+						"required": true,
+						"pattern": /^[一-龯]+$/,
+						"messages": {
+							"required": "Please enter your name",
+							"pattern": "Only kanji are allowed."
+						}
+					}
+				}
+			}]
+		}, {
+			type: "div",
+			"data-controls": "2",
+			html: [{
+				type: "label",
+				"for": "kanaFirstName",
+				html: "<span>フリガナ</span>"
+			}, {
+				type: "div",
+				"class": "col",
+				html: {
+					"name": "Kana Last Name",
+					id: "kanaLastName",
+					"type": "text",
+					label: "<span>フリガナ - </span>セイ",
+					"validate": {
+						"required": true,
+						"pattern": /^[ぁ-んァ-ン]+$/,
+						"messages": {
+							"required": "Please enter your name",
+							"pattern": "Only kana are allowed."
+						}
+					}
+				}
+			}, {
+				type: "div",
+				"class": "col",
+				html: {
+					name: "Kana First Name",
+					id: "kanaFirstName",
+					type: "text",
+					label: "<span>フリガナ - </span>メイ",
+					"validate": {
+						"required": true,
+						"pattern": /^[ぁ-んァ-ン]+$/,
+						"messages": {
+							"required": "Please enter your name",
+							"pattern": "Only kana are allowed."
+						}
+					}
+				}
+			}]
+		}, {
+			type: "div",
+			html: {
+				"name": "Email",
+				id: "email",
+				"type": "email",
+				"label": "メールアドレス (半角英数字 携帯電話不可)",
+				validate: {
+					email: true,
+					required: true,
+					"maxlength": 150,
+					"pattern": /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/,
+					"messages": {
+						"required": "Please enter your email id.",
+						"pattern": "Please enter a valid email id.",
+						"maxlength": "Please enter only 150 characters."
+					}
+				}
+			}
+		}, {
+			type: "div",
+			html: {
+				"name": "Email Confirmation",
+				id: "emailConfirmation",
+				"type": "email",
+				"label": "メールアドレス(確認)",
+				validate: {
+					email: true,
+					required: true,
+					"maxlength": 150,
+					"pattern": /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/,
+					"equalTo": "[name='Email']",
+					"messages": {
+						"required": "Please enter your email id.",
+						"pattern": "Please enter a valid email id.",
+						"maxlength": "Please enter only 150 characters."
+					}
+				}
+			}
+		}, {
+			type: "div",
+			"class": "form-terms-conditions",
+			"html": {
+				type: "div",
+				"class": "form-terms-conditions__content",
+				"html": "<h3><strong>Terms and Conditions</strong></h3>"
+				+ "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo sint vel, qui aliquam dignissimos veniam iure, accusamus, et quibusdam nesciunt, sapiente! Aperiam quidem, harum voluptates minima explicabo. Ex, ipsum, exercitationem!</p>"
+				+ "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab quisquam mollitia, illo totam tempore. Voluptatem praesentium ipsa fugiat nostrum a harum nemo tempore. Sequi aperiam, laudantium. Voluptas quis illum laudantium?</p>"
+				+ "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium ipsum excepturi provident explicabo quo velit commodi non nulla natus voluptas quibusdam, optio fugit nobis, deleniti distinctio ab et error exercitationem.</p>"
+				+ "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea animi consectetur recusandae dolorum aperiam dignissimos culpa, perferendis sunt excepturi. Non voluptas expedita esse fuga, ratione quod, nostrum facilis delectus in?</p>"
+				+ "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci qui atque consequuntur recusandae quo tempora ullam! Rerum hic, repellat laboriosam ut! Dolor placeat veniam eligendi optio molestiae libero maiores, ipsam!</p>"
+				+ "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur inventore eos iusto voluptates distinctio harum quas maiores eum, nemo dolorum natus accusamus autem ut molestias ea tempore sed. Nulla, explicabo.</p>"
+			}
+		}, {
+			type: "div",
+			"class": "text",
+			html: {
+				type: "a",
+				href: "http://google.com",
+				"html": "Privacy Policy"
+			}
+		}, {
+			"type": "div",
+			"class": "checkbox-inline inverse",
+			"html": {
+				"type": "checkbox",
+				"id": "Terms And Conditions",
+				"name": "Terms And Conditions",
+				"label": "Click here if you agree to our terms and Services",
+				"validate": {
+					required: true
+				}
+			}
+		}, {
+			"type": "div",
+			"html": {
+				"type": "buttonSubmit",
+				"name": "submit_button",
+				"value": "Submit"
+			}
+		}
+		]
+	};
+	var demoAccount = {
+		"html": [{
+			type: "div",
+			html: {
+				"name": "User ID",
+				"label": "お客様ID",
+				"id": "userId",
+				"type": "text",
+				"validate": {
+					"required": true,
+					"minlength": 6,
+					"maxlength": 20,
+					"pattern": /\d$/,
+					"messages": {
+						"required": "Please enter your user id",
+						"minlength": "User id should have minimum six characters.",
+						"pattern": "Only numeric values are allowed."
+					}
+				}
+			}
+		}, {
+			type: "div",
+			"data-controls": "2",
+			html: [{
+				type: "label",
+				"for": "kanjiFirstName",
+				html: "<span>フ姓名(漢字)</span>"
+			}, {
+				type: "div",
+				"class": "col",
+				html: {
+					"name": "Kanji Last Name",
+					id: "kanjiLastName",
+					"type": "text",
+					label: "<span>姓名(漢字) - </span>姓",
+					"validate": {
+						"required": true,
+						"pattern": /^[一-龯]+$/,
+						"messages": {
+							"required": "Please enter your name",
+							"pattern": "Only kanji are allowed."
+						}
+					}
+				}
+			}, {
+				type: "div",
+				"class": "col",
+				html: {
+					name: "Kanji First Name",
+					id: "kanjiFirstName",
+					type: "text",
+					label: "<span>姓名(漢字) - </span>名",
+					"validate": {
+						"required": true,
+						"pattern": /^[一-龯]+$/,
+						"messages": {
+							"required": "Please enter your name",
+							"pattern": "Only kanji are allowed."
+						}
+					}
+				}
+			}]
+		}, {
+			type: "div",
+			"data-controls": "2",
+			html: [{
+				type: "label",
+				"for": "kanaFirstName",
+				html: "<span>フリガナ</span>"
+			}, {
+				type: "div",
+				"class": "col",
+				html: {
+					"name": "Kana Last Name",
+					id: "kanaLastName",
+					"type": "text",
+					label: "<span>フリガナ - </span>セイ",
+					"validate": {
+						"required": true,
+						"pattern": /^[ぁ-んァ-ン]+$/,
+						"messages": {
+							"required": "Please enter your name",
+							"pattern": "Only kana are allowed."
+						}
+					}
+				}
+			}, {
+				type: "div",
+				"class": "col",
+				html: {
+					name: "Kana First Name",
+					id: "kanaFirstName",
+					type: "text",
+					label: "<span>フリガナ - </span>メイ",
+					"validate": {
+						"required": true,
+						"pattern": /^[ぁ-んァ-ン]+$/,
+						"messages": {
+							"required": "Please enter your name",
+							"pattern": "Only kana are allowed."
+						}
+					}
+				}
+			}]
+		}, {
+			type: "div",
+			html: {
+				"name": "Email",
+				id: "email",
+				"type": "email",
+				"label": "メールアドレス (半角英数字 携帯電話不可)",
+				validate: {
+					email: true,
+					required: true,
+					"maxlength": 150,
+					"pattern": /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/,
+					"messages": {
+						"required": "Please enter your email id.",
+						"pattern": "Please enter a valid email id.",
+						"maxlength": "Please enter only 150 characters."
+					}
+				}
+			}
+		}, {
+			type: "div",
+			html: {
+				"name": "Email Confirmation",
+				id: "emailConfirmation",
+				"type": "email",
+				"label": "メールアドレス(確認)",
+				validate: {
+					email: true,
+					required: true,
+					"maxlength": 150,
+					"pattern": /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/,
+					"equalTo": "[name='Email']",
+					"messages": {
+						"required": "Please enter your email id.",
+						"pattern": "Please enter a valid email id.",
+						"maxlength": "Please enter only 150 characters."
+					}
+				}
+			}
+		}, {
+			type: "div",
+			html: {
+				"id": "phone",
+				"name": "phone",
+				"label": "連絡先電話番号",
+				"type": "tel",
+				validate: {
+					required: true
+				}
+			}
+		}, {
+			"type": "div",
+			"hideByCookie": "adv,tracking",
+			"dropdown": {
+				"name": "Hear about us",
+				"label": "当社を知ったきっかけ",
+				"validate": {
+					"required": true,
+					"messages": {"required": "Please select a category."}
+				},
+				"conditions": {
+					"Website/Online Ad": {
+						"mapname": "Website_map",
+						"dropdown": {
+							"validate": {
+								"required": true,
+								"messages": {"required": "Please tell us where you heard about us."}
+							},
+							"id": "044790a0-eeba-4292-9be8-081a127140fb",
+							"name": "Website",
+							"label": "",
+							"options": [{
+								"Name": "Which website?",
+								"Value": "",
+								"Id": "f4332ab4-8d21-4ba2-b672-7d302c39945a",
+								"Language": {"Name": "en"},
+								"Version": 1,
+								"Url": "/en-us/shared/components/data/form-fields-data/hear-about-us/website-online-ad/choose-an-option",
+								"TemplateId": "67d7213d-501e-45e9-848d-6080b27daae9"
+							}, {
+								"Name": "--------------------------",
+								"Value": "",
+								"Id": "1f0c3966-b733-4429-9a53-b87338ee5f52",
+								"Language": {"Name": "en"},
+								"Version": 1,
+								"Url": "/en-us/shared/components/data/form-fields-data/hear-about-us/website-online-ad/separator",
+								"TemplateId": "67d7213d-501e-45e9-848d-6080b27daae9"
+							}, {
+								"Name": "Acme Forex",
+								"Value": "DropDown.WebsiteOnline_Ad.Acme_Forex",
+								"Id": "55bf901c-4ea3-4227-82b4-1f805503b6f3",
+								"Language": {"Name": "en"},
+								"Version": 1,
+								"Url": "/en-us/shared/components/data/form-fields-data/hear-about-us/website-online-ad/acme-forex",
+								"TemplateId": "67d7213d-501e-45e9-848d-6080b27daae9"
+							}, {
+								"Name": "AboutCurrency.com",
+								"Value": "DropDown.WebsiteOnline_Ad.AboutCurrency",
+								"Id": "b94d5b1e-b579-4639-8a9b-bd1564ed6bda",
+								"Language": {"Name": "en"},
+								"Version": 1,
+								"Url": "/en-us/shared/components/data/form-fields-data/hear-about-us/website-online-ad/aboutcurrency",
+								"TemplateId": "67d7213d-501e-45e9-848d-6080b27daae9"
+							}, {
+								"Name": "Babypips.com",
+								"Value": "DropDown.WebsiteOnline_Ad.Babypips",
+								"Id": "f517c9b2-72a7-4911-8d93-cd63314636c6",
+								"Language": {"Name": "en"},
+								"Version": 1,
+								"Url": "/en-us/shared/components/data/form-fields-data/hear-about-us/website-online-ad/babypips",
+								"TemplateId": "67d7213d-501e-45e9-848d-6080b27daae9"
+							}, {
+								"Name": "DailyForex.com",
+								"Value": "DropDown.WebsiteOnline_Ad.DailyForex",
+								"Id": "912651ca-c48a-4ba8-81cf-58ff0246c685",
+								"Language": {"Name": "en"},
+								"Version": 1,
+								"Url": "/en-us/shared/components/data/form-fields-data/hear-about-us/website-online-ad/dailyforex",
+								"TemplateId": "67d7213d-501e-45e9-848d-6080b27daae9"
+							}, {
+								"Name": "eFXnews.com",
+								"Value": "DropDown.WebsiteOnline_Ad.eFXnews",
+								"Id": "de4a6ca2-ed40-46ca-8353-d798061f4fa1",
+								"Language": {"Name": "en"},
+								"Version": 1,
+								"Url": "/en-us/shared/components/data/form-fields-data/hear-about-us/website-online-ad/efxnews",
+								"TemplateId": "67d7213d-501e-45e9-848d-6080b27daae9"
+							}, {
+								"Name": "ForexBrokerz.com",
+								"Value": "DropDown.WebsiteOnline_Ad.ForexBrokerz",
+								"Id": "9adb2c70-10c8-4a1b-89e8-cc4691df8574",
+								"Language": {"Name": "en"},
+								"Version": 1,
+								"Url": "/en-us/shared/components/data/form-fields-data/hear-about-us/website-online-ad/forexbrokerz",
+								"TemplateId": "67d7213d-501e-45e9-848d-6080b27daae9"
+							}, {
+								"Name": "ForexCrunch.com",
+								"Value": "DropDown.WebsiteOnline_Ad.ForexCrunch",
+								"Id": "bcc847f6-3d35-4127-acd3-c57748582502",
+								"Language": {"Name": "en"},
+								"Version": 1,
+								"Url": "/en-us/shared/components/data/form-fields-data/hear-about-us/website-online-ad/forexcrunch",
+								"TemplateId": "67d7213d-501e-45e9-848d-6080b27daae9"
+							}, {
+								"Name": "ForexFactory.com",
+								"Value": "DropDown.WebsiteOnline_Ad.Forex_Factory",
+								"Id": "ed593a1f-b217-48d6-90be-836d453bdb7b",
+								"Language": {"Name": "en"},
+								"Version": 1,
+								"Url": "/en-us/shared/components/data/form-fields-data/hear-about-us/website-online-ad/forexfactory",
+								"TemplateId": "67d7213d-501e-45e9-848d-6080b27daae9"
+							}, {
+								"Name": "ForexNews.com",
+								"Value": "DropDown.WebsiteOnline_Ad.ForexNews",
+								"Id": "4c9fc2bb-eb74-49fa-8b21-f0857165e716",
+								"Language": {"Name": "en"},
+								"Version": 1,
+								"Url": "/en-us/shared/components/data/form-fields-data/hear-about-us/website-online-ad/forexnews",
+								"TemplateId": "67d7213d-501e-45e9-848d-6080b27daae9"
+							}, {
+								"Name": "Forex-Ratings.com",
+								"Value": "DropDown.WebsiteOnline_Ad.Forex-Ratings",
+								"Id": "7ca1a183-6ffb-4afc-b2e9-a17a28df93ca",
+								"Language": {"Name": "en"},
+								"Version": 1,
+								"Url": "/en-us/shared/components/data/form-fields-data/hear-about-us/website-online-ad/forex-ratings",
+								"TemplateId": "67d7213d-501e-45e9-848d-6080b27daae9"
+							}, {
+								"Name": "FXEmpire.com",
+								"Value": "DropDown.WebsiteOnline_Ad.FXEmpire",
+								"Id": "bc9b252d-e5d3-4846-9c02-e076411fbd4b",
+								"Language": {"Name": "en"},
+								"Version": 1,
+								"Url": "/en-us/shared/components/data/form-fields-data/hear-about-us/website-online-ad/fxempire",
+								"TemplateId": "67d7213d-501e-45e9-848d-6080b27daae9"
+							}, {
+								"Name": "Fxstreet.com",
+								"Value": "DropDown.WebsiteOnline_Ad.FxStreet",
+								"Id": "fd65a9eb-050e-4607-886d-72ec1ce4fe59",
+								"Language": {"Name": "en"},
+								"Version": 1,
+								"Url": "/en-us/shared/components/data/form-fields-data/hear-about-us/website-online-ad/fxstreet",
+								"TemplateId": "67d7213d-501e-45e9-848d-6080b27daae9"
+							}, {
+								"Name": "Investing.com",
+								"Value": "DropDown.WebsiteOnline_Ad.Investing",
+								"Id": "c833cbf3-df81-4994-ab5c-86c5ef8915f2",
+								"Language": {"Name": "en"},
+								"Version": 1,
+								"Url": "/en-us/shared/components/data/form-fields-data/hear-about-us/website-online-ad/investing",
+								"TemplateId": "67d7213d-501e-45e9-848d-6080b27daae9"
+							}, {
+								"Name": "MyFXBook.com",
+								"Value": "DropDown.WebsiteOnline_Ad.MyFXBook",
+								"Id": "a3eca54d-0678-4b90-92e8-343840b7d01d",
+								"Language": {"Name": "en"},
+								"Version": 1,
+								"Url": "/en-us/shared/components/data/form-fields-data/hear-about-us/website-online-ad/myfxbook",
+								"TemplateId": "67d7213d-501e-45e9-848d-6080b27daae9"
+							}, {
+								"Name": "Yahoo.com",
+								"Value": "DropDown.WebsiteOnline_Ad.Yahoo",
+								"Id": "e2d5a6ac-d041-4a8d-9806-8a638848fc9b",
+								"Language": {"Name": "en"},
+								"Version": 1,
+								"Url": "/en-us/shared/components/data/form-fields-data/hear-about-us/website-online-ad/yahoo",
+								"TemplateId": "67d7213d-501e-45e9-848d-6080b27daae9"
+							}, {
+								"Name": "Other Website",
+								"Value": "DropDown.WebsiteOnline_Ad.Other_Website",
+								"Id": "9c9c31e1-8213-42c4-8da9-db03caff8efe",
+								"Language": {"Name": "en"},
+								"Version": 1,
+								"Url": "/en-us/shared/components/data/form-fields-data/hear-about-us/website-online-ad/other-website",
+								"TemplateId": "67d7213d-501e-45e9-848d-6080b27daae9"
+							}]
+						}
+					},
+					"Search Engine": {
+						"mapname": "Website_map",
+						"dropdown": {
+							"validate": {
+								"required": true,
+								"messages": {"required": "Please tell us where you heard about us."}
+							},
+							"id": "044790a0-eeba-4292-9be8-081a127140fb",
+							"name": "Website",
+							"label": "",
+							"options": [{
+								"Name": "Which search engine?",
+								"Value": "",
+								"Id": "0fa73ed6-5c93-4b23-9205-504c5a7982d8",
+								"Language": {"Name": "en"},
+								"Version": 1,
+								"Url": "/en-us/shared/components/data/form-fields-data/hear-about-us/search-engine/choose-an-option",
+								"TemplateId": "67d7213d-501e-45e9-848d-6080b27daae9"
+							}, {
+								"Name": "--------------------------",
+								"Value": "",
+								"Id": "c6e51df5-7cdc-4739-a56b-61b1605120f1",
+								"Language": {"Name": "en"},
+								"Version": 1,
+								"Url": "/en-us/shared/components/data/form-fields-data/hear-about-us/search-engine/separator",
+								"TemplateId": "67d7213d-501e-45e9-848d-6080b27daae9"
+							}, {
+								"Name": "Bing",
+								"Value": "DropDown.Search_Engine.Bing/MSN",
+								"Id": "1ccfb4fc-8cbf-45a7-b7e3-85c8f5635a24",
+								"Language": {"Name": "en"},
+								"Version": 1,
+								"Url": "/en-us/shared/components/data/form-fields-data/hear-about-us/search-engine/bing",
+								"TemplateId": "67d7213d-501e-45e9-848d-6080b27daae9"
+							}, {
+								"Name": "Google",
+								"Value": "DropDown.Search_Engine.Google",
+								"Id": "c2be429e-59ec-4ec4-bd4e-c8c62203a818",
+								"Language": {"Name": "en"},
+								"Version": 1,
+								"Url": "/en-us/shared/components/data/form-fields-data/hear-about-us/search-engine/google",
+								"TemplateId": "67d7213d-501e-45e9-848d-6080b27daae9"
+							}, {
+								"Name": "Yahoo",
+								"Value": "DropDown.Search_Engine.Yahoo",
+								"Id": "3de0f3e5-168a-48e5-a68f-d5a06e739ed7",
+								"Language": {"Name": "en"},
+								"Version": 1,
+								"Url": "/en-us/shared/components/data/form-fields-data/hear-about-us/search-engine/yahoo",
+								"TemplateId": "67d7213d-501e-45e9-848d-6080b27daae9"
+							}, {
+								"Name": "Other Search Engine",
+								"Value": "DropDown.Search_Engine.Other_Search_Engine",
+								"Id": "8d552819-9fe9-48e1-8584-46a20ceee552",
+								"Language": {"Name": "en"},
+								"Version": 1,
+								"Url": "/en-us/shared/components/data/form-fields-data/hear-about-us/search-engine/other-search-engine",
+								"TemplateId": "67d7213d-501e-45e9-848d-6080b27daae9"
+							}]
+						}
+					},
+					"TV/Radio": {
+						"mapname": "Website_map",
+						"dropdown": {
+							"validate": {
+								"required": true,
+								"messages": {"required": "Please tell us where you heard about us."}
+							},
+							"id": "044790a0-eeba-4292-9be8-081a127140fb",
+							"name": "Website",
+							"label": "",
+							"options": [{
+								"Name": "Which TV/Radio?",
+								"Value": "",
+								"Id": "4b89eec0-40b4-490d-a388-7b47f2c88904",
+								"Language": {"Name": "en"},
+								"Version": 1,
+								"Url": "/en-us/shared/components/data/form-fields-data/hear-about-us/tv-radio/choose-an-option",
+								"TemplateId": "67d7213d-501e-45e9-848d-6080b27daae9"
+							}, {
+								"Name": "--------------------------",
+								"Value": "",
+								"Id": "2d9c8e6d-bb45-4529-9beb-eb8e0ba30def",
+								"Language": {"Name": "en"},
+								"Version": 1,
+								"Url": "/en-us/shared/components/data/form-fields-data/hear-about-us/tv-radio/separator",
+								"TemplateId": "67d7213d-501e-45e9-848d-6080b27daae9"
+							}, {
+								"Name": "Acme TV",
+								"Value": "DropDown.TV.Acme_TV",
+								"Id": "bdb948ae-93b2-4ce0-ada4-d1e0c18e7887",
+								"Language": {"Name": "en"},
+								"Version": 1,
+								"Url": "/en-us/shared/components/data/form-fields-data/hear-about-us/tv-radio/acme-tv",
+								"TemplateId": "67d7213d-501e-45e9-848d-6080b27daae9"
+							}, {
+								"Name": "Bloomberg Radio",
+								"Value": "DropDown.TV.Bloomberg_Radio",
+								"Id": "1ae35d4f-1c6e-4f6b-9a4c-05a7d5a916ee",
+								"Language": {"Name": "en"},
+								"Version": 1,
+								"Url": "/en-us/shared/components/data/form-fields-data/hear-about-us/tv-radio/bloomberg-radio",
+								"TemplateId": "67d7213d-501e-45e9-848d-6080b27daae9"
+							}, {
+								"Name": "Bloomberg TV",
+								"Value": "DropDown.TV.Bloomberg_TV",
+								"Id": "86a0e7da-a9f4-46f3-ad68-ba78f8df5f70",
+								"Language": {"Name": "en"},
+								"Version": 1,
+								"Url": "/en-us/shared/components/data/form-fields-data/hear-about-us/tv-radio/bloomberg-tv",
+								"TemplateId": "67d7213d-501e-45e9-848d-6080b27daae9"
+							}, {
+								"Name": "CNBC TV",
+								"Value": "DropDown.TV.CNBC_TV",
+								"Id": "2b752b13-b825-4969-9184-c859902ea258",
+								"Language": {"Name": "en"},
+								"Version": 1,
+								"Url": "/en-us/shared/components/data/form-fields-data/hear-about-us/tv-radio/cnbc",
+								"TemplateId": "67d7213d-501e-45e9-848d-6080b27daae9"
+							}, {
+								"Name": "CNN TV",
+								"Value": "DropDown.TV.CNN_TV",
+								"Id": "26be5473-6daa-4a0d-803c-32751c72f426",
+								"Language": {"Name": "en"},
+								"Version": 1,
+								"Url": "/en-us/shared/components/data/form-fields-data/hear-about-us/tv-radio/cnn-tv",
+								"TemplateId": "67d7213d-501e-45e9-848d-6080b27daae9"
+							}, {
+								"Name": "ESPN",
+								"Value": "DropDown.TV.ESPN",
+								"Id": "a5ed6b3c-bb79-4670-9dc8-b4cb26891956",
+								"Language": {"Name": "en"},
+								"Version": 1,
+								"Url": "/en-us/shared/components/data/form-fields-data/hear-about-us/tv-radio/espn",
+								"TemplateId": "67d7213d-501e-45e9-848d-6080b27daae9"
+							}, {
+								"Name": "G4",
+								"Value": "DropDown.TV.G4",
+								"Id": "0f9db9ae-1658-423e-abd7-edd88b9c79d9",
+								"Language": {"Name": "en"},
+								"Version": 1,
+								"Url": "/en-us/shared/components/data/form-fields-data/hear-about-us/tv-radio/g4",
+								"TemplateId": "67d7213d-501e-45e9-848d-6080b27daae9"
+							}, {
+								"Name": "History International",
+								"Value": "DropDown.TV.History_International",
+								"Id": "cca22700-e4c9-4327-a05b-e9f524e60614",
+								"Language": {"Name": "en"},
+								"Version": 1,
+								"Url": "/en-us/shared/components/data/form-fields-data/hear-about-us/tv-radio/history-international",
+								"TemplateId": "67d7213d-501e-45e9-848d-6080b27daae9"
+							}, {
+								"Name": "MSNBC",
+								"Value": "DropDown.TV.MSNBC_TV",
+								"Id": "d5cbd175-51a0-4e6f-a959-262b4559ed36",
+								"Language": {"Name": "en"},
+								"Version": 1,
+								"Url": "/en-us/shared/components/data/form-fields-data/hear-about-us/tv-radio/msnbc",
+								"TemplateId": "67d7213d-501e-45e9-848d-6080b27daae9"
+							}, {
+								"Name": "MSNBC TV",
+								"Value": "DropDown.TV.MSNBC_TV",
+								"Id": "58e2d8b4-d594-4389-89d9-fdb356796d82",
+								"Language": {"Name": "en"},
+								"Version": 1,
+								"Url": "/en-us/shared/components/data/form-fields-data/hear-about-us/tv-radio/msnbc-tv",
+								"TemplateId": "67d7213d-501e-45e9-848d-6080b27daae9"
+							}, {
+								"Name": "Other TV",
+								"Value": "DropDown.TV.Appearance",
+								"Id": "bd56f69d-df63-4396-ae6f-1beffceb6eee",
+								"Language": {"Name": "en"},
+								"Version": 1,
+								"Url": "/en-us/shared/components/data/form-fields-data/hear-about-us/tv-radio/other-tv",
+								"TemplateId": "67d7213d-501e-45e9-848d-6080b27daae9"
+							}, {
+								"Name": "TV Appearance",
+								"Value": "DropDown.TV.Appearance",
+								"Id": "21070e10-5eb9-4388-a0fb-cfe96ce0cf65",
+								"Language": {"Name": "en"},
+								"Version": 1,
+								"Url": "/en-us/shared/components/data/form-fields-data/hear-about-us/tv-radio/tv-appearance",
+								"TemplateId": "67d7213d-501e-45e9-848d-6080b27daae9"
+							}, {
+								"Name": "CNN",
+								"Value": "DropDown.TV.CNN_TV",
+								"Id": "4518675d-cdcb-4cf4-8c89-05d1c0a43782",
+								"Language": {"Name": "en"},
+								"Version": 1,
+								"Url": "/en-us/shared/components/data/form-fields-data/hear-about-us/tv-radio/cnn",
+								"TemplateId": "67d7213d-501e-45e9-848d-6080b27daae9"
+							}, {
+								"Name": "History International",
+								"Value": "DropDown.TV.History_International",
+								"Id": "cca22700-e4c9-4327-a05b-e9f524e60614",
+								"Language": {"Name": "en"},
+								"Version": 1,
+								"Url": "/en-us/shared/components/data/form-fields-data/hear-about-us/tv-radio/history-international",
+								"TemplateId": "67d7213d-501e-45e9-848d-6080b27daae9"
+							}]
+						}
+					},
+					"Word of Mouth": {
+						"mapname": "Website_map",
+						"dropdown": {
+							"validate": {
+								"required": true,
+								"messages": {"required": "Please tell us where you heard about us."}
+							},
+							"id": "044790a0-eeba-4292-9be8-081a127140fb",
+							"name": "Website",
+							"label": "",
+							"options": [{
+								"Name": "hello everyone",
+								"Value": "he",
+								"Id": "f924bc1a-00dc-4950-a704-210cce61fecc",
+								"Language": {"Name": "en"},
+								"Version": 1,
+								"Url": "/en-us/shared/components/data/form-fields-data/hear-about-us/word-of-mouth/new-child",
+								"TemplateId": "67d7213d-501e-45e9-848d-6080b27daae9"
+							}]
+						}
+					}
+				},
+				"id": "f3c40e4f-23bc-4c66-a1f2-bd193b75479e",
+				options: [{
+					"Name": "How did you hear about us?",
+					"Value": "",
+					"Id": "36145aa9-df11-4cc7-b44f-261b1fd48b59",
+					"Language": {"Name": "en"},
+					"Version": 1,
+					"Url": "/en-us/shared/components/data/form-fields-data/hear-about-us/choose-an-option",
+					"TemplateId": "67d7213d-501e-45e9-848d-6080b27daae9"
+				}, {
+					"Name": "--------------------------",
+					"Value": "",
+					"Id": "1e9fdf1a-a09a-4589-96e5-7f7f012c4396",
+					"Language": {"Name": "en"},
+					"Version": 1,
+					"Url": "/en-us/shared/components/data/form-fields-data/hear-about-us/separator",
+					"TemplateId": "67d7213d-501e-45e9-848d-6080b27daae9"
+				}, {
+					"Name": "Website/Online Ad",
+					"Value": "Website/Online Ad",
+					"Id": "d3de3ee0-bf55-403a-bba8-05bd17a07b8e",
+					"Language": {"Name": "en"},
+					"Version": 1,
+					"Url": "/en-us/shared/components/data/form-fields-data/hear-about-us/website-online-ad",
+					"TemplateId": "67d7213d-501e-45e9-848d-6080b27daae9"
+				}, {
+					"Name": "Search Engine",
+					"Value": "Search Engine",
+					"Id": "403086db-f0d4-4548-88c8-e07ac4224e56",
+					"Language": {"Name": "en"},
+					"Version": 1,
+					"Url": "/en-us/shared/components/data/form-fields-data/hear-about-us/search-engine",
+					"TemplateId": "67d7213d-501e-45e9-848d-6080b27daae9"
+				}, {
+					"Name": "TV/Radio",
+					"Value": "TV/Radio",
+					"Id": "74b512d7-fa5e-4493-b636-e10c7df0ae71",
+					"Language": {"Name": "en"},
+					"Version": 1,
+					"Url": "/en-us/shared/components/data/form-fields-data/hear-about-us/tv-radio",
+					"TemplateId": "67d7213d-501e-45e9-848d-6080b27daae9"
+				}, {
+					"Name": "Word of Mouth",
+					"Value": "DropDown..Word_Of_Mouth",
+					"Id": "040a452d-e25c-426e-b76b-1b411a6c76de",
+					"Language": {"Name": "en"},
+					"Version": 1,
+					"Url": "/en-us/shared/components/data/form-fields-data/hear-about-us/word-of-mouth",
+					"TemplateId": "67d7213d-501e-45e9-848d-6080b27daae9"
+				}]
+			}
+		}, {
+			"type": "div",
+			"html": {
+				"type": "buttonSubmit",
+				"name": "submit_button",
+				"value": "Submit"
+			}
+		}]
+	};
+	var contactForm = {
+		"action": "index.html",
+		"method": "get",
+		html: {
+			"type": "multiCol",
+			"matchHeight": "true",
+			columns: "2",
+			cols: [
+				[{
+					type: "div",
+					"data-controls": "2",
+					html: [{
+						type: "label",
+						"for": "kanjiFirstName",
+						html: "<span>フ姓名(漢字)</span>"
+					}, {
+						type: "div",
+						"class": "col",
+						html: {
+							"name": "Kanji Last Name",
+							id: "kanjiLastName",
+							"type": "text",
+							label: "<span>姓名(漢字) - </span>姓",
+							"validate": {
+								"required": true,
+								"pattern": /^[一-龯]+$/,
+								"messages": {
+									"required": "Please enter your name",
+									"pattern": "Only kanji are allowed."
+								}
+							}
+						}
+					}, {
+						type: "div",
+						"class": "col",
+						html: {
+							name: "Kanji First Name",
+							id: "kanjiFirstName",
+							type: "text",
+							label: "<span>姓名(漢字) - </span>名",
+							"validate": {
+								"required": true,
+								"pattern": /^[一-龯]+$/,
+								"messages": {
+									"required": "Please enter your name",
+									"pattern": "Only kanji are allowed."
+								}
+							}
+						}
+					}]
+				}, {
+					type: "div",
+					"data-controls": "2",
+					html: [{
+						type: "label",
+						"for": "kanaFirstName",
+						html: "<span>フリガナ</span>"
+					}, {
+						type: "div",
+						"class": "col",
+						html: {
+							"name": "Kana Last Name",
+							id: "kanaLastName",
+							"type": "text",
+							label: "<span>フリガナ - </span>セイ",
+							"validate": {
+								"required": true,
+								"pattern": /^[ぁ-んァ-ン]+$/,
+								"messages": {
+									"required": "Please enter your name",
+									"pattern": "Only kana are allowed."
+								}
+							}
+						}
+					}, {
+						type: "div",
+						"class": "col",
+						html: {
+							name: "Kana First Name",
+							id: "kanaFirstName",
+							type: "text",
+							label: "<span>フリガナ - </span>メイ",
+							"validate": {
+								"required": true,
+								"pattern": /^[ぁ-んァ-ン]+$/,
+								"messages": {
+									"required": "Please enter your name",
+									"pattern": "Only kana are allowed."
+								}
+							}
+						}
+					}]
+				}, {
+					type: "div",
+					html: {
+						"name": "Email",
+						id: "email",
+						"type": "email",
+						"label": "メールアドレス (半角英数字 携帯電話不可)",
+						validate: {
+							email: true,
+							required: true,
+							"maxlength": 150,
+							"pattern": /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/,
+							"messages": {
+								"required": "Please enter your email id.",
+								"pattern": "Please enter a valid email id.",
+								"maxlength": "Please enter only 150 characters."
+							}
+						}
+					}
+				}, {
+					type: "div",
+					html: {
+						"name": "Email Confirmation",
+						id: "emailConfirmation",
+						"type": "email",
+						"label": "メールアドレス(確認)",
+						validate: {
+							email: true,
+							required: true,
+							"maxlength": 150,
+							"pattern": /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/,
+							"equalTo": "[name='Email']",
+							"messages": {
+								"required": "Please enter your email id.",
+								"pattern": "Please enter a valid email id.",
+								"maxlength": "Please enter only 150 characters."
+							}
+						}
+					}
+				}, {
+					type: "div",
+					html: {
+						"name": "subject",
+						id: "subject",
+						"type": "text",
+						"label": "件名",
+						validate: {
+							required: true
+						}
+					}
+				}, {
+					"type": "div",
+					"dropdown": {
+						"name": "inquiry type",
+						"label": "種別",
+						"placeholder": "Select Subject",
+						"chosenOptions": {
+							//disable_search: true
+						},
+						"validate": {
+							"required": true
+						},
+						"options": [
+							{Name: "", Value: ""},
+							{Name: "Funding", Value: "Funding"},
+							{Name: "Getting Started", Value: "Getting Started"},
+							{Name: "Other", Value: "Other"},
+							{Name: "Trading Platforms", Value: "Trading Platforms"}
+						]
+					}
+				}], [{
+					type: "div",
+					"class": "textarea",
+					html: {
+						"type": "textarea",
+						name: "message",
+						"id": "message",
+						"label": "Message",
+						"validate": {
+							"required": true
+						}
+					}
+				}, {
+					"type": "div",
+					html: {
+						"type": "buttonSubmit",
+						"name": "submit_button",
+						"value": "Submit"
+					}
+				}]
+			]
+		}
+	}
+</script>
+
+<div class="main-right-rail">
+	<div class="wrapper">
+		<div class="primary-content">
+			<div class="section-wrapper">
+				<div class="wrapper">
+					<h2 class="form-headline">EA hosting service</h2>
+					<form data-dform-variable="eaHosting" class="ea-hosting__form"></form>
+				</div>
+			</div>
+
+			<div class="section-wrapper">
+				<div class="wrapper">
+					<h2 class="form-headline">Demo account – FTP – MT4 - AT</h2>
+					<form data-dform-variable="demoAccount" class="demo-account__form"></form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="section-wrapper contact-section" data-sectionbg="alternate">
+	<div class="wrapper">
+		<h2 class="form-headline">Send a message</h2>
+
+		<div class="form-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam rutrum
+			sapien ac lacus semper.
+		</div>
+
+		<form class="form contact__form" data-dform-variable="contactForm"></form>
+	</div>
+</div>

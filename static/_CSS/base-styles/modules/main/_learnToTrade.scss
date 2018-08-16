@@ -1,0 +1,56 @@
+.learning {
+  &-section {
+    padding-top: $gutter*6;
+    padding-bottom: $gutter*6;
+
+    .hero__title {
+      @include rem(font-size, 24);
+      line-height: 1.2;
+      color: $color-primary-3;
+
+    }
+    .hero__description {
+      margin: $gutter*2 0;
+      color: $color-darker;
+    }
+
+    .cta-link {
+      margin-right: .25em;
+    }
+
+    .hero-two-section[data-columns="2"] {
+      padding-top: $gutter*6;
+      padding-bottom: 0;
+    }
+  }
+
+  &__headline {
+    @include rem(font-size, 50);
+    color: $color-primary-3;
+    text-align: center;
+    line-height: 1.25;
+  }
+
+  &__subheadline {
+    @include rem(font-size, 20);
+    color: $color-darker;
+    text-align: center;
+    line-height: 1.4;
+  }
+
+  @media screen and (max-width: $tablet) {
+    &__subheadline {
+      @include rem(font-size, 18);
+    }
+  }
+
+  @media screen and (max-width: $mobile) {
+    &__headline {
+      @include rem(font-size, 36);
+    }
+
+    &__subheadline {
+      @include rem(font-size, 14);
+    }
+  }
+}

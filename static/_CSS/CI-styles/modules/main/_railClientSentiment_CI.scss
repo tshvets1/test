@@ -1,0 +1,49 @@
+%client-sentiment-inverse {
+  .client-sentiment__sentiment-text {
+    color: $client-sentiment-sentiment-text-inverse-color;
+  }
+}
+
+.client-sentiment {
+  &-module {
+    @include inverse-section-bg("%client-sentiment-inverse");
+  }
+
+  &__note {
+    margin: $client-sentiment-note-margin;
+    padding: $client-sentiment-note-padding;
+    text-align: center;
+  }
+
+  @at-root .primary-content & {
+    &-module {
+      padding: $client-sentiment-primary-padding;
+    }
+
+    &__legend,
+    &__sentiment {
+      display: table-cell;
+      vertical-align: middle;
+    }
+
+    &__legend {
+      padding: $client-sentiment-legend-primary-padding;
+    }
+
+    &__sentiment {
+      padding: $client-sentiment-sentiment-primary-padding;
+    }
+  }
+
+  @media screen and (max-width: $mobile) {
+    &__legend,
+    &__sentiment {
+      display: table-cell;
+      vertical-align: middle;
+    }
+
+    &__legend {
+      padding: $client-sentiment-legend-mobile-padding;
+    }
+  }
+}

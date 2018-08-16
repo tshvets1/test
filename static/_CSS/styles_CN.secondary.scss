@@ -1,0 +1,7 @@
+$old-ie: false !default;
+$is-main: false !default;
+$is-secondary: true !default;
+
+@import "CN-styles/variables_CN";
+@import "base-styles/sprites/icons";
+@import "base-styles/index.secondary";

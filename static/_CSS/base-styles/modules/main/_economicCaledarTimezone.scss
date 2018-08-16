@@ -1,0 +1,62 @@
+.economic__change-timezone {
+  $economic-timezone-title-color: $color-link;
+  $economic-timezone-title-hover-color: $color-link-hover;
+  $economic-timezone-max-width: 400px;
+  $economic-timezone-title-height: 45px;
+  $economic-timezone-title-mobile-font-size: 13;
+
+  &-title {
+    @extend .cta-link;
+    cursor: pointer;
+    @include transition(color, $transitionDurationAndEffect);
+
+    &:after {
+      border-left-color: $economic-timezone-title-color;
+      @include transition(border-left-color, $transitionDurationAndEffect);
+    }
+
+    &:hover {
+      color: $economic-timezone-title-hover-color;
+    }
+  }
+
+  @extend %chosen-select--darker-button;
+  div.economic__change-timezone-dropdown {
+    display: none;
+    max-width: $economic-timezone-max-width;
+    margin-top: $gutter;
+    margin-bottom: $gutter*2;
+  }
+
+  &.open {
+    div.economic__change-timezone-dropdown {
+      display: block;
+    }
+  }
+
+  @media screen and (max-width: $mobile) {
+    float: none;
+    width: 100%;
+    position: relative;
+
+    div.economic__change-timezone-dropdown {
+      display: none !important;
+    }
+
+    .economic__change-timezone-dropdown {
+      display: block !important;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      opacity: 0;
+      z-index: $defaultZIndex + 1;
+      cursor: pointer;
+    }
+
+    &-title {
+      line-height: $economic-timezone-title-height;
+      @include rem("font-size", $economic-timezone-title-mobile-font-size);
+    }
+  }
+}

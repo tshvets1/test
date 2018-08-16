@@ -1,0 +1,93 @@
+.tabs {
+  &__list {
+    @extend %list--unstyled;
+    max-width: $tabs-list-max-width;
+    margin: $tabs-list-margin;
+    overflow: auto;
+  }
+
+  &__item {
+    margin: $tabs-item-margin;
+    float: left;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+
+  &__link {
+    display: block;
+    padding: $tabs-link-padding;
+    @include set-text-styles($tabs-link-font...);
+    text-decoration: none;
+    border: $tabs-link-border;
+    background: $tabs-link-bg-color;
+    color: $tabs-link-color;
+    cursor: pointer;
+
+    &:hover {
+      color: $tabs-link-hover-color;
+      background: $tabs-link-hover-bg-color;
+      border: $tabs-link-hover-border;
+    }
+
+    &[aria-selected="true"],
+    &.active {
+      border: $tabs-link-active-border;
+      color: $tabs-link-active-color;
+      background: $tabs-link-active-bg-color;
+    }
+  }
+
+  &__panel {
+    display: none;
+    overflow: auto;
+  }
+
+  &.panel-open {
+    .tabs__panel {
+      display: block;
+    }
+  }
+
+  &__tabcontent {
+    h2 {
+      @extend %visually-hidden;
+    }
+
+    &[aria-hidden="true"] {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: $tablet) {
+    &__link {
+      @include set-text-styles($tabs-link-tablet-font...);
+    }
+
+    &__panel .wrapper {
+      padding: $tabs-panel-mobile-padding;
+    }
+  }
+
+  @media screen and (max-width: $mobile) {
+    &__list {
+      margin: $tabs-list-mobile-margin;
+    }
+
+    &__link {
+      @include set-text-styles($tabs-link-mobile-font...);
+      padding: $tabs-link-mobile-padding;
+      border: $tabs-link-mobile-border;
+
+      &[aria-selected="true"],
+      &.active {
+        border: $tabs-link-mobile-active-border;
+      }
+
+      &:hover {
+        border: $tabs-link-mobile-hover-border;
+      }
+    }
+  }
+}

@@ -1,0 +1,99 @@
+<!--
+  {
+  "name": "Product Summary",
+  "status": "Complete",
+  "notes": ""
+  }
+-->
+
+<section class="section-wrapper product-summary-banner" data-sectionbg="dark-gray"
+		 data-apply-ko="productLiveRates" data-product="EUR/USD" data-get-product-timeout="5000"
+		 data-default-tab="spreadBets">
+	<div class="wrapper product-summary-banner__wrapper">
+		<div class="product-summary-banner__header">
+			<h2 class="product-summary-banner__headline">UK100</h2>
+			<em class="product-summary-banner__subheadline">Index</em>
+
+			<div class="product-summary-banner__tabs-wrapper">
+				<ul class="product-summary-banner__tabs-list tabs__list" data-tabs-handler="false">
+					<li class="tabs__item">
+						<a class="tabs__link product-summary-banner__tabs-link" href="#"
+						   data-bind="click: changeTab.bind($data,'cfd'), css: {'active': currentTab()=='cfd'}">
+							CFDs
+						</a>
+					</li>
+					<li class="tabs__item">
+						<a class="tabs__link product-summary-banner__tabs-link" href="#"
+						   data-bind="click: changeTab.bind($data,'spreadBets'), css: {'active': currentTab()=='spreadBets'}">
+							Spread Bets
+						</a>
+					</li>
+					<li class="tabs__item">
+						<a class="tabs__link product-summary-banner__tabs-link" href="#"
+						   data-bind="click: changeTab.bind($data,'spotFx'), css: {'active': currentTab()=='spotFx'}">
+							Spot FX
+						</a>
+					</li>
+				</ul>
+
+				<select class="custom-select" data-bind="value: currentTab" data-chosen-select="" data-chosen-options='{"width":"100%"}'>
+					<option value="cfd">CFDs</option>
+					<option selected value="spreadBets">Spread Bets</option>
+					<option value="spotFx">Spot FX</option>
+				</select>
+			</div>
+		</div>
+
+		<div data-bind="with: ratesInfo" class="product-summary-banner__data">
+			<div class="product-summary-banner__rates">
+				<button class="product-summary-banner__rate product-summary-banner__rate-buy no-transition"
+						data-bind="highlightUpDownIntermediate: buy,
+						css: {'product-summary-banner__rate--up': buyMoving() > 0, 'product-summary-banner__rate--down': buyMoving() < 0 },
+						highlightOptions: {highlightUp: 'product-summary-banner__rate--up-end', highlightDown: 'product-summary-banner__rate--down-end',
+						highlightUpInter: 'product-summary-banner__rate--up-inter', highlightDownInter: 'product-summary-banner__rate--down-inter',
+						highlightProperty: 'buyMoving' }">
+					<strong class="product-summary-banner__rate-label">Buy</strong>
+					<label data-bind="superscriptLastChar: buy, decimals: decimals"></label>
+				</button>
+				<button class="product-summary-banner__rate no-transition" data-bind="highlightUpDownIntermediate: sell,
+						css: {'product-summary-banner__rate--up': sellMoving() > 0, 'product-summary-banner__rate--down': sellMoving() < 0 },
+						highlightOptions: {highlightUp: 'product-summary-banner__rate--up-end', highlightDown: 'product-summary-banner__rate--down-end',
+						highlightUpInter: 'product-summary-banner__rate--up-inter', highlightDownInter: 'product-summary-banner__rate--down-inter',
+						highlightProperty: 'sellMoving' }">
+					<strong class="product-summary-banner__rate-label">Sell</strong>
+					<label data-bind="superscriptLastChar: sell, decimals: decimals"></label>
+				</button>
+				<div class="product-summary-banner__rate-diff">
+					<span data-bind="text: sellBuyDiff"></span>
+				</div>
+			</div>
+			<!-- END .product-data__actions -->
+
+			<div class="product-summary-banner__changes">
+				<span>
+					<em>high</em>
+					<label data-bind="text: high"></label>
+				</span>
+				<span>
+					<em>low</em>
+					<label data-bind="text: low"></label>
+				</span>
+				<span>
+					<em>Change</em>
+					<label data-bind="text: change,
+					css: {'product-summary-banner__changes--up': change()>changeOld(),
+					'product-summary-banner__changes--down': change()<changeOld() }">
+					</label>
+				</span>
+				<span>
+					<em>% Change</em>
+					<label data-bind="text: changePercent()+'%',
+					css: {'product-summary-banner__changes--up': changePercent()>changePercentOld(),
+					'product-summary-banner__changes--down': changePercent()<changePercentOld() }">
+					</label>
+				</span>
+			</div>
+			<!-- END .product-data__changes -->
+		</div>
+	</div>
+</section>

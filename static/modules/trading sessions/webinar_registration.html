@@ -1,0 +1,53 @@
+<!--
+  {
+  "name": "Live Trading Sessions - Webinar Registration",
+  "status": "Complete",
+  "notes": ""
+  }
+-->
+
+<section class="section-wrapper webinar-registration-section" data-sectionbg="default">
+	<div class="wrapper">
+		<!-- Select Dates -->
+		<div class="webinar-registration__row">
+			<div class="webinar-registration__col-left">
+				<div class="webinar-registration__number-icon">
+					<img src="/_Images/content-managed/fpo_icon.svg" alt="1"/>
+				</div>
+				<h2 class="webinar-registration__headline">Select Dates</h2>
+
+				<div class="webinar-registration__sub-headline">All sessions displayed in London time</div>
+			</div>
+			<div class="webinar-registration__col-right">
+				<span class="webinar-registration__webinar-error"
+					  data-error-message="You can select up to 3 at a time."
+					  data-required-relation="name=SelectedLiveTrdSessions"></span>
+				<!-- repeat webinar dates -->
+				@@include('/modules/trading sessions/webinar_registration_date.html')
+				@@include('/modules/trading sessions/webinar_registration_date.html')
+				@@include('/modules/trading sessions/webinar_registration_date.html')
+				@@include('/modules/trading sessions/webinar_registration_date.html')
+				@@include('/modules/trading sessions/webinar_registration_date.html')
+				@@include('/modules/trading sessions/webinar_registration_date.html')
+				<!-- end repeat webinar dates -->
+			</div>
+		</div>
+		<!-- end Select Dates -->
+
+		<!-- Registration Form -->
+		<div class="webinar-registration__row">
+			<div class="webinar-registration__col-left">
+				<div class="webinar-registration__number-icon">
+					<img src="/_Images/content-managed/fpo_icon.svg" alt="2"/>
+				</div>
+				<h2 class="webinar-registration__headline">Complete and Submit Registration</h2>
+
+				@@include('/modules/main/signin_with_socialnetworks.html')
+			</div>
+			<div class="webinar-registration__col-right">
+				@@include('/modules/trading sessions/webinar_registration_form.html')
+			</div>
+		</div>
+		<!-- end Registration Form -->
+	</div>
+</section>

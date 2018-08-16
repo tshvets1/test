@@ -1,0 +1,158 @@
+//1. Brand Colors
+//2. Links Colors
+//3. Education Level Colors
+//4. Background Colors
+//5. Themes
+
+//1. Brand Colors
+$color-primary-1: #0ab45b !default; // green
+$color-primary-2: #0855b4 !default; // blue
+$color-primary-3: #053c50 !default; // dark blue
+
+$color-secondary-1: #7856af !default; // purple
+$color-secondary-2: #32afea !default; // light blue
+$color-secondary-3: #9ec400 !default; // lime
+$color-secondary-4: #ffd816 !default; // yellow
+$color-secondary-5: #ff8c0f !default; // orange
+$color-secondary-6: #c74f4f !default; // rose
+$color-secondary-7: #0ab45b !default; // green
+$color-secondary-8: #e5473e !default; // red
+
+$color-white: #fff !default; // white
+$color-grey: #d2d2d2 !default; //grey
+$color-lightest: #f8f8f8 !default; // lightest grey
+$color-lighter: #f0f0f0 !default; // lighter grey
+$color-light: #e8e8e8 !default; // light grey
+$color-medium: #c8d2d2 !default; // med grey
+$color-medium-dark: #aeb4b4 !default;
+$color-medium-darker: #B2B2B2 !default; //almost dark grey
+$color-dark: #828c8c !default; // dark grey
+$color-grey-dark: #dbdbdc !default;
+$color-darker: #333 !default; // text grey
+$color-black: #000 !default; // black
+
+$color-light-cool: #ebf0f0 !default;
+$color-lightest-bg: #fafafa !default;
+$color-darkest-bg: #073b51 !default;
+
+//2. Links Colors
+$color-link: $color-primary-3 !default;
+$color-link-hover: $color-primary-1 !default;
+$color-link-active: $color-link-hover !default;
+$color-link-inverse: $color-white !default;
+$color-link-inverse-hover: $color-link-hover !default;
+$color-link-inverse-hover-alt: $color-white !default;
+$color-link-inverse-active: $color-link-hover !default;
+$color-link-inverse-active-alt: $color-link-inverse-hover-alt !default;
+
+//2.2 Text Colors
+$text-color: $color-darker !default;
+$text-inverse-color: $color-white !default;
+
+//3. Education Level Colors
+$color-light-: #e7e7e7 !default;
+$color-medium-: #e1e1e1 !default;
+$color-lighter-: #f7f7f7 !default;
+
+//4. Background Colors
+$bg-default: transparent !default;
+$bg-secondary: $color-white !default;
+$bg-light: $color-lighter !default;
+
+//5. Themes
+$color-themes: (
+  (
+    theme: "default",
+    bgColor: $bg-default,
+    bgSecondaryColor: $color-white,
+    createButtonStyle: false,
+    noBorderColor: true
+  ),
+  (
+    theme: "grey",
+    bgColor: $color-light-cool,
+    createButtonStyle: false
+  ),
+  (
+    theme: "light-gray",
+    bgColor: $bg-light,
+    textColor: $color-darker
+  ),
+  (
+    theme: "medium-gray",
+    bgColor: $color-medium,
+    textColor: $color-darker
+  ),
+  (
+    theme: "dark-gray",
+    bgColor: $color-dark,
+    textColor: $color-white,
+    inverseColor: true,
+    inverseInlineBg: true
+  ),
+  (
+    theme: "black",
+    bgColor: $color-black,
+    textColor: $color-white,
+    inverseColor: true,
+    inverseInlineBg: true
+  ),
+  (
+    theme: "white",
+    bgColor: $color-white,
+    bgAltColor: $color-secondary-5,
+    createButtonStyle: false,
+    useAlternativeBgColor: true
+  ),
+  (
+    theme: "green",
+    bgColor: $color-secondary-7,
+    textColor: $color-white,
+    inverseColor: true,
+    inverseHoverColor: true
+  ),
+  (
+    theme: "blue",
+    bgColor: $color-primary-2,
+    textColor: $color-white,
+    inverseColor: true,
+    inverseInlineBg: true
+  ),
+  (
+    theme: "dark-blue",
+    bgColor: $color-primary-3,
+    textColor: $color-white,
+    inverseColor: true,
+    inverseInlineBg: true
+  ),
+  (
+    theme: "purple",
+    bgColor: $color-secondary-1,
+    textColor: $color-white
+  ),
+  (
+    theme: "lightblue",
+    bgColor: $color-secondary-2,
+    textColor: $color-white
+  ),
+  (
+    theme: "limegreen",
+    bgColor: $color-secondary-3,
+    textColor: $color-white
+  ),
+  (
+    theme: "yellow",
+    bgColor: $color-secondary-4,
+    textColor: $color-darker
+  ),
+  (
+    theme: "orange",
+    bgColor: $color-secondary-5,
+    textColor: $color-white
+  ),
+  (
+    theme: "rose",
+    bgColor: $color-secondary-6,
+    textColor: $color-white
+  )
+) !default;

@@ -1,0 +1,34 @@
+$old-ie: false !default;
+$is-main: false !default;
+$is-secondary: true !default;
+
+// Sprites
+@import "CI-styles/sprites/icons";
+
+@import "CI-styles/variables_CI";
+@import "base-styles/index.secondary";
+
+//@import
+//"CI-styles/modules/header_CI",
+//"CI-styles/modules/footer_CI";
+
+@import
+  "CI-styles/modules/main/forms_CI",
+  "CI-styles/modules/main/alert_CI",
+  "CI-styles/modules/main/alternatingImageLayout_CI",
+//"CI-styles/modules/main/multiColumnModule_CI",
+//"CI-styles/modules/main/multiColumnLayouts_CI",
+  "CI-styles/modules/main/multiColumnTile_CI",
+  "CI-styles/modules/main/multiColumnBlock_CI",
+  "CI-styles/modules/main/multiColumnFullWidthImage_CI",
+  "CI-styles/modules/main/multiColumnBox_CI",
+//"CI-styles/modules/main/heroIconList__CI",
+  "CI-styles/modules/main/multiColumnBanner_CI",
+  "CI-styles/modules/main/productSummary_CI",
+  "CI-styles/modules/main/railRelatedMarkets_CI",
+  "CI-styles/modules/main/railClientSentiment_CI",
+  "CI-styles/modules/main/mostPopularMarkets_CI",
+//"CI-styles/modules/main/heroOptions_CI"//,
+  "CI-styles/modules/main/keyBenefits_CI",
+  "CI-styles/modules/main/latestResearchGrid_CI"
+;

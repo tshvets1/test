@@ -1,0 +1,109 @@
+.hero-two-section {
+  .form {
+    &-headline {
+      margin-left: $form-label-width;
+      margin-bottom: $gutter;
+      @include rem(font-size, 17.5);
+    }
+
+    &-div.text {
+      margin-left: $form-label-width;
+    }
+
+    @media screen and (max-width: $mobile) {
+      &-headline,
+      &-div.text {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+.form.ea-hosting__form,
+.form.demo-account__form {
+  .form-terms-conditions {
+    height: auto;
+    overflow: auto;
+
+    &__content {
+      height: auto;
+      max-height: 300px;
+      overflow-y: scroll;
+      overflow-x: hidden;
+      padding: $gutter*2.6;
+      border: 1px solid $color-medium-dark;
+    }
+  }
+
+  .form-div.checkbox-inline {
+    margin: 0;
+
+    .form-label {
+      width: auto;
+      display: inline-block;
+      float: none;
+      padding-bottom: $gutter;
+    }
+  }
+
+  .form-buttonSubmit {
+    margin-left: 0;
+  }
+}
+
+.footer-comment__form {
+  position: fixed;
+  bottom: 10px;
+  z-index: $defaultZIndex;
+  right: 10px;
+  min-height: 50px;
+  width: 350px;
+  padding: $gutter*2;
+  background-color: $color-white;
+  border: 1px solid $color-medium;
+
+  & > * {
+    transition: opacity 0.25s;
+  }
+
+  &.complete {
+    & > * {
+      @include opacity(0);
+    }
+  }
+
+  textarea {
+    width: 100%;
+  }
+
+  & > h2 {
+    @include rem(font-size, 14);
+    line-height: 1.2;
+    margin-bottom: $gutter;
+  }
+
+  &-buttons {
+    width: 100%;
+    text-align: center;
+
+    button {
+      @extend %btn--unstyled;
+      padding: $gutter !important;
+      margin-bottom: 0 !important;
+      margin-left: $gutter*2;
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      &:after {
+        content: none !important;
+      }
+    }
+  }
+
+  @media screen and (max-width: $mobile) {
+    width: auto;
+    left: 10px;
+  }
+}

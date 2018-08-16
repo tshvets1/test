@@ -1,0 +1,10 @@
+@mixin rgba-background($color, $alpha) {
+  $rgba: rgba($color, $alpha);
+
+  @if ($old-ie) {
+    $ie-hex-str: ie-hex-str($rgba);
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#{$ie-hex-str},endColorstr=#{$ie-hex-str})";
+  } @else {
+    background-color: $rgba;
+  }
+}

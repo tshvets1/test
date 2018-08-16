@@ -1,0 +1,145 @@
+<!--
+  {
+  "name": "Services - Most Popular Markets",
+  "status": "Complete",
+  "notes": "[data-change-up-color][data-change-down-color] are used to set background color of changed value"
+  }
+-->
+
+
+<section class="section-wrapper most-popular-markets-section" data-sectionbg="default"
+		 data-apply-ko="mostPopularMarkets"
+		 data-tabs-options='[{"tabName":"spreadBetting","defaultProducts":["EUR/USD","USD/JPY","GBP/USD","AUD/USD"],"isLive":true,"tables":1},
+		 {"tabName":"cfd", "defaultProducts":[401152623,401138125,401152622,401152620,401152625],"filterBy":"MarketId","isLive":true,"tables":1}]'
+		 data-change-up-color="black"
+		 data-change-down-color="rose"
+		 data-get-products-timeout="3000"
+		 data-current-tab="spreadBetting">
+	<div class="wrapper">
+		<div class="most-popular-markets__tabs">
+			<div class="most-popular-markets__trading-title" data-inherit-sectionbg="true">
+				Indices Product Details
+			</div>
+
+			<h2 class="most-popular-markets__headline">Most popular markets</h2>
+
+			<!-- tabs-list (dropdown) -->
+			<div class="most-popular-markets__tabs-wrapper">
+				<ul class="most-popular-markets__tabs-list tabs__list" data-tabs-handler="false">
+					<li class="most-popular-markets__tabs-item tabs__item">
+						<a class="most-popular-markets__tabs-link tabs__link"
+						   data-bind="click: changeTab.bind($data, 'spreadBetting'), css: {'active':currentTab()=='spreadBetting'}"
+						   data-tab="spreadBetting">Spread Betting</a>
+					</li>
+					<li class="most-popular-markets__tabs-item tabs__item">
+						<a class="most-popular-markets__tabs-link tabs__link"
+						   data-bind="click: changeTab.bind($data, 'cfd'), css: {'active':currentTab()=='cfd'}"
+						   data-tab="cfd">CFD</a>
+					</li>
+				</ul>
+
+				<select class="custom-select" data-bind="value: currentTab">
+					<option value="spreadBetting">Spread Betting</option>
+					<option value="cfd">CFD</option>
+				</select>
+			</div>
+			<!-- /tabs-list -->
+
+			<!-- tabs-content -->
+			<div class="most-popular-markets__tabs-content-wrapper">
+				<div class="most-popular-markets__tabs-content">
+					<!-- tab -->
+					<div class="most-popular-markets__tabs-tab"
+						 data-bind="css: {'active': currentTab()=='spreadBetting'}">
+						<!-- ko with: spreadBetting -->
+						<div class="most-popular-markets__table-wrapper">
+							<div class="most-popular-markets__table" data-columns="1">
+								<table class="rates-table">
+									<thead>
+									<tr>
+										<th class="rates-table__product">Instrument</th>
+										<th class="most-popular-markets__table-spread">Spread</th>
+										<th>Sell</th>
+										<th>Buy</th>
+										<th>Change (%)</th>
+									</tr>
+									</thead>
+									<tbody>
+									<!-- ko foreach: products1 -->
+									<tr>
+										<td class="rates-table__product"><a href="#" data-bind="text: Product"></a></td>
+										<td class="rates-table__value">
+											<span data-bind="text: MedianSpread, highlight: MedianSpread_prev && MedianSpread!=MedianSpread_prev,
+											highlightClass: MedianSpread<MedianSpread_prev
+											? 'rates-table__value-changed rates-table__value-changed--down'
+											: 'rates-table__value-changed rates-table__value-changed--up'"></span>
+										</td>
+										<td data-bind="text: Bid, css: {'rates-table__value-down' : Bid<Bid_prev, 'rates-table__value-up' : Bid>Bid_prev }"></td>
+										<td data-bind="text: Ask, css: {'rates-table__value-down' : Ask<Ask_prev, 'rates-table__value-up' : Ask>Ask_prev }"></td>
+										<td data-bind="text: ChangeInPercentage"></td>
+									</tr>
+									<!-- /ko -->
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<!-- /ko -->
+
+						<div class="most-popular-markets__trading-sub-title">
+							For full details of all our indices for spread bet and CFD,
+							click here or consult market information in platform.
+						</div>
+					</div>
+					<!-- /tab -->
+					<!-- tab -->
+					<div class="most-popular-markets__tabs-tab"
+						 data-bind="css: {'active': currentTab()=='cfd'}">
+						<!-- ko with: cfd -->
+						<div class="most-popular-markets__table-wrapper">
+							<div class="most-popular-markets__table" data-columns="1">
+								<table class="rates-table">
+									<thead>
+									<tr>
+										<th class="rates-table__product">Instrument</th>
+										<th class="most-popular-markets__table-spread">Spread</th>
+										<th>Sell</th>
+										<th>Buy</th>
+									</tr>
+									</thead>
+									<tbody>
+									<!-- ko foreach: products1 -->
+									<tr>
+										<td class="rates-table__product"><a href="#" data-bind="text: Product"></a></td>
+										<td class="rates-table__value">
+											<span data-bind="text: MedianSpread, highlight: MedianSpread_prev && MedianSpread!=MedianSpread_prev,
+											highlightClass: MedianSpread<MedianSpread_prev
+											? 'rates-table__value-changed rates-table__value-changed--down'
+											: 'rates-table__value-changed rates-table__value-changed--up'"></span>
+										</td>
+										<td data-bind="text: Bid, css: {'rates-table__value-down' : Bid<Bid_prev, 'rates-table__value-up' : Bid>Bid_prev }"></td>
+										<td data-bind="text: Ask, css: {'rates-table__value-down' : Ask<Ask_prev, 'rates-table__value-up' : Ask>Ask_prev }"></td>
+									</tr>
+									<!-- /ko -->
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<a class="cta-link most-popular-markets__show-all-link" href="#"
+						   data-bind="click: showAll, if: productsCache().length > 10">
+							<!-- ko if: viewAll() -->
+							View less markets
+							<!-- /ko -->
+							<!-- ko ifnot: viewAll() -->
+							View all markets
+							<!-- /ko -->
+							<span data-bind="html: viewAll()?'&minus;':'+'"></span></a>
+						<!-- /ko -->
+					</div>
+					<!-- /tab -->
+				</div>
+			</div>
+			<!-- /tabs-content -->
+		</div>
+		<!-- /tabs -->
+	</div>
+</section>

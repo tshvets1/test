@@ -1,0 +1,106 @@
+{
+  "EducationTopicDetailPage": [
+	{
+	  "Navigation_Title": "13 Characteristics of a Successful Trader",
+	  "Teaser": "Learn about the traits most successful traders share.",
+	  "Url": "/en-us/education/resources-by-level/beginner/13 Characteristics of a Successful Trader Guide US",
+	  "IconPath": "/_Images/content-managed/articles/types/guide.png"
+	},
+	{
+	  "Navigation_Title": "Four Steps to Making Your First Trade in Forex",
+	  "Teaser": "Learn the essentials to placing your first trade in forex.",
+	  "Url": "/en-us/education/resources-by-level/beginner/Four Steps to Making Your First Trade in Forex Guide US",
+	  "IconPath": "/_Images/content-managed/articles/types/guide.png"
+	},
+	{
+	  "Navigation_Title": "How is forex regulated",
+	  "Teaser": "Forex is the largest, most liquid market on the planet. That size and scope creates unique challenges regarding market regulation.",
+	  "Url": "/en-us/education/resources-by-level/beginner/How is Forex Regulated",
+	  "IconPath": "/_Images/content-managed/articles/types/article.png"
+	},
+	{
+	  "Navigation_Title": "Rollover Rates",
+	  "Teaser": "Learn about rollover rates and other costs that can impact forex trades.",
+	  "Url": "/en-us/education/resources-by-level/beginner/Rollover Rates",
+	  "IconPath": "/_Images/content-managed/articles/types/article.png"
+	},
+	{
+	  "Navigation_Title": "The Ins and Outs of Trading Currencies",
+	  "Teaser": "Start your journey into trading forex by getting to know a few key points.",
+	  "Url": "/en-us/education/resources-by-level/beginner/The Ins and Outs of Trading Currencies Guide US",
+	  "IconPath": "/_Images/content-managed/articles/types/guide.png"
+	},
+	{
+	  "Navigation_Title": "Tips for Forex Trading Beginners",
+	  "Teaser": "Ten fundamental tips for beginners trading forex.",
+	  "Url": "/en-us/education/resources-by-level/beginner/Tips for Beginners Forex",
+	  "IconPath": "/_Images/content-managed/articles/types/article.png"
+	},
+	{
+	  "Navigation_Title": "Top 10 Tips for Currency Traders",
+	  "Teaser": "Ten tips to help you stay on track no matter the currency pair you\u0027re trading.",
+	  "Url": "/en-us/education/resources-by-level/beginner/Top 10 Tips for Currency Traders Guide US",
+	  "IconPath": "/_Images/content-managed/articles/types/guide.png"
+	},
+	{
+	  "Navigation_Title": "Understanding Forex Quotes",
+	  "Teaser": "Understanding forex quotes and the structure of forex pairs.",
+	  "Url": "/en-us/education/resources-by-level/beginner/Understanding Forex Quotes",
+	  "IconPath": "/_Images/content-managed/articles/types/article.png"
+	},
+	{
+	  "Navigation_Title": "What Are Bearish and Bullish Markets",
+	  "Teaser": "Learn about the difference between bearish and bullish markets with FOREX.com.",
+	  "Url": "/en-us/education/resources-by-level/beginner/What Are Bearish and Bullish  Markets",
+	  "IconPath": "/_Images/content-managed/articles/types/article.png"
+	},
+	{
+	  "Navigation_Title": "What is Forex",
+	  "Teaser": "Learn about the size, scope, and nature of the forex market.",
+	  "Url": "/en-us/education/resources-by-level/beginner/What is Forex",
+	  "IconPath": "/_Images/content-managed/articles/types/article.png"
+	},
+	{
+	  "Navigation_Title": "When can I trade forex",
+	  "Teaser": "Discover when exactly you can trade forex, and the unique benefits the forex markets offer.",
+	  "Url": "/en-us/education/resources-by-level/beginner/When Can I Trade Forex",
+	  "IconPath": "/_Images/content-managed/articles/types/article.png"
+	},
+	{
+	  "Navigation_Title": "Why Trade Forex",
+	  "Teaser": "Discover the various benefits of trading on the forex markets.",
+	  "Url": "/en-us/education/resources-by-level/beginner/Why Trade Forex",
+	  "IconPath": "/_Images/content-managed/articles/types/article.png"
+	},
+	{
+	  "Navigation_Title": "Charting Basics Bars vs Candlesticks",
+	  "Teaser": "What are bars and candlesticks? A chart is a graphical representation of historical prices. The most common chart types are bar charts and candlestick charts. Although these two chart types look quite different, they are very similar in the information they provide.",
+	  "Url": "/en-us/education/resources-by-level/beginner/Charting Basics Bars vs Candlesticks",
+	  "IconPath": "/_Images/content-managed/articles/types/article.png"
+	},
+	{
+	  "Navigation_Title": "Understanding Technical Analysis",
+	  "Teaser": "Learn the specifics of technical analysis, trends, and determining when to enter a trade.",
+	  "Url": "/en-us/education/resources-by-level/beginner/Understanding Technical Analysis",
+	  "IconPath": "/_Images/content-managed/articles/types/article.png"
+	},
+	{
+	  "Navigation_Title": "Keys to Trading Gold",
+	  "Teaser": "Discover the opportunities of trading gold and how to get started.",
+	  "Url": "/en-us/education/resources-by-level/beginner/Keys to Trading Gold Guide US",
+	  "IconPath": "/_Images/content-managed/articles/types/guide.png"
+	},
+	{
+	  "Navigation_Title": "Five Key Drivers of the Forex Markets",
+	  "Teaser": "Learn about the five major key drivers of forex markets, and how it can affect your decision making.",
+	  "Url": "/en-us/education/resources-by-level/beginner/Five Key Drivers of the Forex Markets",
+	  "IconPath": "/_Images/content-managed/articles/types/article.png"
+	},
+	{
+	  "Navigation_Title": "What Is Fundamental Analysis",
+	  "Teaser": "Learn the basics of fundamental analysis and how it can affect the forex market.",
+	  "Url": "/en-us/education/resources-by-level/beginner/What Is Fundamental Analysis",
+	  "IconPath": "/_Images/content-managed/articles/types/article.png"
+	}
+  ]
+}

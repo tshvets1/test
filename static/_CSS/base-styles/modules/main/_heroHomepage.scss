@@ -1,0 +1,79 @@
+//
+// HERO (BASIC HERO)
+// FOUND ON LANDING PAGES (Services Overview, All Platforms)
+//
+.home-page {
+  > .hero-two-section {
+    padding: $home-page-hero-two-section-padding;
+  }
+
+  .hero-two-section {
+    .hero__headline {
+      @include set-text-styles($home-page-hero-headline-font...);
+    }
+  }
+
+  > .alert-section:first-child + .hero-two-section,
+  > .hero-two-section:first-child {
+    padding: $home-page-hero-two-section-first-padding;
+  }
+
+  > .alert-section:first-child + .hero-two-section,
+  > .alert-section:first-child + [data-carousel="true"],
+  > .hero-two-section:first-child,
+  > [data-carousel="true"]:first-child {
+    .hero__headline {
+      @include set-text-styles($home-page-hero-headline-first-font...);
+    }
+  }
+
+  .hero-two-section {
+    .wrapper {
+      .col-wrapper {
+        padding: 0;
+      }
+
+      > .col {
+        padding: $home-page-hero-two-section-columns-2-col-padding;
+        z-index: $defaultZIndex - 1;
+        vertical-align: middle;
+
+        &:first-child {
+          z-index: $defaultZIndex;
+          padding: $home-page-hero-two-section-columns-2-col-first-padding;
+        }
+      }
+    }
+  }
+
+  // MOBILE
+  @media screen and (max-width: $mobile) {
+    > .hero-two-section {
+      padding: $home-page-hero-two-section-mobile-padding;
+
+      .hero__headline {
+        @include set-text-styles($home-page-hero-headline-mobile-font...);
+      }
+    }
+
+    .hero-two-section {
+      .hero__subheadline {
+        @include set-text-styles($home-page-hero-subheadline-font...);
+      }
+    }
+
+    > .alert-section:first-child + .hero-two-section,
+    > .hero-two-section:first-child {
+      padding: $home-page-hero-two-section-first-mobile-padding;
+    }
+
+    > .alert-section:first-child + .hero-two-section,
+    > .alert-section:first-child + [data-carousel="true"],
+    > .hero-two-section:first-child,
+    > [data-carousel="true"]:first-child {
+      .hero__headline {
+        @include set-text-styles($home-page-hero-headline-first-mobile-font...);
+      }
+    }
+  }
+}

@@ -1,0 +1,117 @@
+.trading-hours {
+
+  &__rtf-block {
+    margin: $gutter*4 0 $gutter*3;
+    padding-bottom: $gutter*2;
+    border-bottom: 1px solid $color-light;
+
+    h2 {
+      @include rem(font-size, 30);
+      margin: 0 0 $gutter;
+      color: $color-primary-3;
+      line-height: 1.3;
+    }
+
+    table {
+      @extend .data-table;
+      margin-bottom: $gutter*4;
+
+      th {
+        @include rem(font-size, 12);
+
+        &:first-child {
+          color: $color-white;
+          background-color: $color-primary-3;
+        }
+      }
+
+      tr {
+        > td:first-child {
+          font-weight: 700;
+        }
+      }
+    }
+  }
+
+  &__sub-headline {
+    @include rem(font-size, 20);
+    line-height: 1.3;
+    margin:$gutter 0 $gutter*3;
+  }
+
+  &__platform-links-headline {
+    @include rem(font-size, 16);
+    font-weight: 500;
+  }
+
+  &__platform-links {
+    @extend %list--unstyled;
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+
+    a {
+      display: inline-block;
+      padding: 4px 0;
+      line-height: 1.3;
+      text-decoration: none;
+    }
+  }
+
+  &__platform-link-list {
+    display: table-cell;
+    vertical-align: top;
+    padding-right: $gutter*3;
+  }
+
+  @media screen and (max-width: $mobile) {
+    &__rtf-block {
+      margin: $gutter*2 0;
+      padding: 0;
+
+      h2 {
+        @include rem(font-size, 16);
+      }
+
+      table.mobile-only-table {
+        tr {
+          &.odd {
+            background-color: $color-lightest;
+          }
+
+          &.even {
+            background-color: $color-light;
+          }
+
+          &:hover {
+            background-color: $color-medium;
+          }
+
+          &.heading {
+            background-color: $color-white;
+          }
+
+          &:first-child {
+            background-color: $color-primary-3;
+            color: $color-white;
+          }
+        }
+      }
+    }
+
+    &__sub-headline {
+      @include rem(font-size, 14);
+    }
+
+    &__platform-links-headline {
+      @include rem(font-size, 14);
+    }
+
+    &__platform-link-list {
+      width: 50%;
+      float: left;
+      display: block;
+    }
+  }
+}
+

@@ -1,0 +1,117 @@
+.active-markets {
+  &__table {
+    table {
+      position: relative;
+    }
+
+    .spinner td {
+      width: 100%;
+    }
+
+    tbody tr {
+      width: 100%;
+
+      &.odd {
+        background-color: $most-active-markets-table-row-odd-bg-color;
+      }
+
+      &.even {
+        background-color: $most-active-markets-table-row-bg-color;
+      }
+
+      &:hover {
+        background-color: $most-active-markets-table-row-hover-bg-color;
+      }
+    }
+
+    @at-root [data-move-rows="true"] & {
+      th, td {
+        display: block;
+        float: left;
+      }
+    }
+
+    th, td {
+      vertical-align: middle;
+      width: $most-active-markets-table-cell-width;
+    }
+
+    td {
+      &.active-markets__table-rank {
+        span:first-child {
+          @include set-text-styles($most-active-markets-rank-value-font...);
+        }
+      }
+    }
+
+    .rates-table__value {
+      span {
+        padding: 0;
+        border: 0;
+        left: 10px;
+        width: 50px;
+      }
+    }
+  }
+
+  &__media {
+    @include set-text-styles($most-active-markets-rank-change-value-font...);
+
+    &:before {
+      content: "";
+      display: inline-block;
+      margin: $most-active-markets-media-icon-margin;
+      background: no-repeat left center;
+      transition: none;
+    }
+
+    &--up:before {
+      content: " ";
+      @include sprite($icon-up-arrow-green);
+    }
+
+    &--down:before {
+      content: " ";
+      @include sprite($icon-down-arrow-red);
+    }
+  }
+
+  @media screen and (min-width: $mobile) {
+    &__media {
+      position: absolute;
+      @include position($most-active-markets-media-position...);
+      margin: $most-active-markets-media-margin;
+    }
+  }
+
+  //MOBILE
+  @media screen and (max-width: $mobile) {
+    &__table {
+      tr:not(.spinner) {
+        float: none;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      td {
+        line-height: 20px;
+        display: block;
+        float: left;
+      }
+
+      th,
+      td {
+        width: $most-active-markets-table-cell-mobile-width;
+      }
+    }
+
+    &__table-rank {
+      width: $most-active-markets-table-cell-rank-mobile-width;
+      padding: $most-active-markets-table-cell-rank-mobile-padding;
+    }
+
+    &__media:before {
+      margin: $most-active-markets-media-icon-mobile-margin;
+    }
+  }
+}

@@ -1,0 +1,63 @@
+.date-module {
+    @include rem(font-size, 26);
+    //position: relative;
+    top: -80px;
+    padding: 80px 40px;
+    line-height: 1;
+    text-align: center;
+    @include rgba-background(#000000, 0.1);
+
+    p {
+        margin:  0;
+    }
+
+    &__day-month {
+        font-weight: 400;
+        letter-spacing: -.03em;
+    }
+
+    &__date {
+        @include rem(font-size, 208);
+        letter-spacing: -.03em;
+    }
+
+    &__time {
+        padding: 10px 0;
+        font-weight: 700;
+        text-transform: uppercase;
+        border-top: solid 1px $color-white;
+        border-bottom: solid 1px $color-white;
+    }
+
+    &__timezone {
+        font-weight: 400;
+    }
+}
+
+.home-page {
+    .date-module {
+        top: -120px;
+        width: 300px;
+    }
+}
+
+@media screen and (max-width: $mobile) {
+    .date-module {
+        @include rem(font-size, 20);
+        top: auto;
+        margin: 10px 0 -50px;
+        width: 100%;
+        padding: 60px 10px;
+
+        &__date {
+            @include rem(font-size, 180);
+        }
+    }
+
+    .home-page {
+        .date-module {
+            top: auto;
+            margin: 10px 0 -60px;
+        }
+    }
+}

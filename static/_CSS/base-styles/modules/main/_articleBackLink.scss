@@ -1,0 +1,37 @@
+.back-link {
+  $research-article-back-link-padding: 20px 0 !default;
+  $research-article-back-link-font: $cta-link-font !default;
+  $research-article-back-link-arrow-margin: -3px 10px 0 0 !default;
+  $research-article-back-link-arrow-width: 4px !default;
+
+  $research-article-back-link-arrow-mobile-margin: null !default;
+  $research-article-back-link-arrow-mobile-size: null !default;
+  $research-article-back-link-mobile-font: $cta-link-mobile-font !default;
+
+  padding: $research-article-back-link-padding;
+
+  a {
+    display: inline-block;
+    @include set-text-styles($research-article-back-link-font...);
+    text-decoration: none;
+    @include cta-link-theme($options: right before);
+
+    &:before {
+      @extend %arrow-left;
+
+      margin: $research-article-back-link-arrow-margin;
+      border-width: $research-article-back-link-arrow-width;
+      border-right-width: if($research-article-back-link-arrow-width, $research-article-back-link-arrow-width*2, null);
+    }
+  }
+
+  @media screen and (max-width: $mobile) {
+    @include set-text-styles($research-article-back-link-mobile-font...);
+
+    &:before {
+      margin: $research-article-back-link-arrow-mobile-margin;
+      border-width: $research-article-back-link-arrow-mobile-size;
+      border-right-width: if($research-article-back-link-arrow-mobile-size, $research-article-back-link-arrow-mobile-size*2, null);
+    }
+  }
+}

@@ -1,0 +1,168 @@
+.ui-datepicker {
+  background-color: $color-medium;
+  padding: $gutter*2 $gutter*2 $gutter/2 $gutter*2;
+  color: $color-white;
+  margin-top: -$gutter;
+  margin-left: -$gutter*10;
+  width: 340px;
+
+  &:after {
+    @extend %arrow-down;
+    border-width: 10px;
+    border-top-color: $color-medium;
+
+    position: relative;
+    top: 15px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  &-header {
+    background-color: $color-primary-3;
+  }
+
+  &-title {
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 30px;
+  }
+
+  .ui-datepicker-prev, .ui-datepicker-next {
+    top: 0;
+  }
+
+  &-prev:before {
+    @extend %arrow-left;
+    position: absolute;
+    top: 10px;
+    right: 0;
+    border-width: 7px;
+    border-right-color: $color-white;
+  }
+
+  &-next:after {
+    @extend %arrow-right;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    border-width: 7px;
+    border-left-color: $color-white;
+  }
+
+  &-calendar {
+    table-layout: fixed;
+
+    .ui-state-hover {
+      @include transition(none, null);
+      background-color: $color-lighter;
+      color: $color-secondary-7;
+    }
+
+    .ui-state-active {
+      background-color: $color-lighter;
+    }
+
+    thead {
+      background-color: $color-primary-3;
+
+      th {
+        text-transform: uppercase;
+        font-weight: 200;
+      }
+    }
+
+    tbody {
+      background-color: $color-white;
+
+      td {
+        border-left: 1px solid $color-medium;
+        border-top: 1px solid $color-medium;
+
+        a, span {
+          color: $color-primary-3;
+          outline: none;
+          text-align: center;
+          line-height: 40px;
+          width: 100%;
+          padding: 0;
+        }
+
+        &:first-child {
+          border-left: 0;
+        }
+      }
+
+      tr:first-child td {
+        border-top: 0;
+      }
+    }
+  }
+
+  &-unselectable {
+    background-color: $color-lighter;
+    color: $color-dark;
+  }
+
+  th {
+    padding: 0;
+  }
+
+  @media screen and (max-width: $mobile) {
+    width: 320px;
+    padding: $gutter $gutter $gutter/2 $gutter;
+    margin-top: 0;
+    left: 50% !important;
+    margin-left: -$gutter*16;
+
+    &:after {
+      border-width: 0;
+    }
+
+    &-calendar {
+      margin: 0;
+    }
+
+    th {
+      padding: 0.7em 0.3em;
+    }
+  }
+}
+
+.ui-dialog {
+  width: auto !important;
+  background-color: $color-white;
+
+  .ui-dialog-content {
+    padding: $gutter*3;
+    padding-top: 0;
+  }
+
+  .ui-dialog-titlebar {
+    padding: 0;
+  }
+
+  .ui-dialog-titlebar-close {
+    @extend %btn--unstyled;
+    @include rem(font-size, 23);
+    background-color: $color-white;
+    color: $color-medium-dark;
+
+    .ui-button-text {
+      text-indent: 0;
+      padding: 0;
+    }
+
+    .ui-icon-closethick {
+      display: none;
+    }
+  }
+
+  &.ui-dialog-hide-close .ui-dialog-titlebar-close {
+    display: none;
+  }
+}
+
+.ui-widget-overlay {
+  background-color: #000;
+  @include opacity(0.3);
+}

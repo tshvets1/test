@@ -1,0 +1,159 @@
+.currency-converter {
+  $currency-converter-headline-font-size: 26;
+  $currency-converter-headline-mobile-font-size: 25;
+  $currency-converter-subheadline-font-size: 16;
+  $currency-converter-disclaimer-font-size: 12;
+  $currency-converter-value-input-font-size: 50;
+  $currency-converter-value-input-mobile-font-size: 14;
+
+  $currency-converter-headline-color: $color-primary-3;
+  $currency-converter-right-input-color: $color-secondary-7;
+
+  $currency-converter-value-input-height: 70px;
+  $currency-converter-value-input-mobile-height: 40px;
+
+  &-module {
+    padding: 0 0 $gutter*4;
+  }
+
+  &__headline {
+    margin-bottom: $gutter*3;
+
+    @include rem(font-size, $currency-converter-headline-font-size);
+    line-height: 1.14;
+    color: $currency-converter-headline-color;
+  }
+
+  &__sub-headline {
+    margin-bottom: $gutter*2;
+
+    @include rem(font-size, $currency-converter-subheadline-font-size);
+    font-weight: 600;
+    line-height: 1.1;
+    text-transform: uppercase;
+  }
+
+  &__disclamer {
+    @include rem(font-size, $currency-converter-disclaimer-font-size);
+  }
+
+  &__form {
+    &-left, &-right {
+      width: 50%;
+      float: left;
+    }
+
+    &-left {
+      padding-right: $gutter*2.1;
+    }
+
+    &-right {
+      padding-left: $gutter*2.1;
+
+      .form-input, .chosen-single span {
+        color: $currency-converter-right-input-color;
+        box-shadow: none;
+      }
+    }
+
+    .form-group {
+      width: 270px;
+    }
+
+    .form-input {
+      width: 100%;
+
+      &[type="number"],
+      &[type="text"] {
+        padding: 0 $gutter/2;
+        margin-bottom: $gutter*1.5;
+        height: $currency-converter-value-input-height;
+
+        @include rem(font-size, $currency-converter-value-input-font-size);
+        text-align: right;
+      }
+    }
+
+    .flag-medium {
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: $gutter;
+      margin-top: $gutter*0.3;
+      float: left;
+    }
+
+    .chosen-single span {
+      margin-right: $gutter*3.5;
+      text-align: right;
+    }
+
+    .chosen-drop .chosen-results .active-result {
+      text-align: right;
+
+      .flag-medium{
+        margin-top: 0;
+      }
+    }
+  }
+
+  &__currency {
+    display: inline-block;
+    font-weight: 700;
+    vertical-align: middle;
+    float: left;
+    padding-right: $gutter;
+
+    &-fullname {
+      display: inline;
+    }
+  }
+
+  @media screen and (max-width: $mobile) {
+    &__headline {
+      @include rem(font-size, $currency-converter-headline-mobile-font-size);
+    }
+
+    &__sub-headline {
+      display: none;
+    }
+
+    &__form {
+      &-left {
+        padding-right: $gutter;
+      }
+
+      &-right {
+        padding-left: $gutter;
+
+        .custom-select {
+          color: $currency-converter-right-input-color;
+        }
+      }
+
+      .form-group {
+        width: 100%;
+        margin-bottom: 0;
+      }
+
+      .form-input[type="number"],
+      .form-input[type="text"] {
+        height: $currency-converter-value-input-mobile-height;
+        padding: 0 $gutter/2;
+        margin-bottom: $gutter*2;
+
+        @include rem(font-size, $currency-converter-value-input-mobile-font-size);
+        font-weight: 600;
+      }
+
+      .custom-select {
+        font-weight: 700;
+        height: $currency-converter-value-input-mobile-height;
+        padding: $gutter/2 $gutter*1.5;
+
+        option {
+          font-weight: normal;
+        }
+      }
+    }
+  }
+}

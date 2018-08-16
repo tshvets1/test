@@ -1,0 +1,121 @@
+.conquer-markets {
+  $conquer-markets-headline-font-size: 50;
+  $conquer-markets-headline-tablet-font-size: 32;
+  $conquer-markets-headline-mobile-font-size: 36;
+  $conquer-markets-subheadline-tablet-font-size: 18;
+  $conquer-markets-subheadline-mobile-font-size: 16;
+
+  $conquer-markets-img-height: 179px;
+
+  &-section {
+    padding: 60px 0;
+    text-align: center;
+
+    .bx-wrapper .bx-pager {
+      margin-top: $gutter*6;
+      line-height: 0;
+    }
+
+    // MULTI COLUMN MODULE OVERRIDES
+    .multi-col {
+      &-section {
+        padding: 0;
+
+        > .wrapper {
+          padding: 0;
+        }
+      }
+
+      &__content {
+        &[data-columns="3"] .col:nth-child(3n+1),
+        &[data-columns="2"] .col:nth-child(2n+1) {
+          clear: none;
+        }
+
+        .col {
+          margin-bottom: 0;
+        }
+      }
+
+      &__headline {
+        @include rem(font-size, $conquer-markets-headline-font-size);
+        line-height: 1.25;
+        margin-bottom: 0;
+      }
+
+      &__subheadline {
+        margin-top: 0;
+      }
+
+      &__title {
+        margin-bottom: $gutter;
+      }
+
+      &__img {
+        max-height: $conquer-markets-img-height;
+      }
+
+      &__cta-link {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__cta-btn {
+    margin-bottom: 0;
+    margin-top: $gutter*6;
+  }
+
+  @media screen and (max-width: $tablet) {
+    &-section {
+      padding: 50px 0 60px;
+
+      .bx-wrapper .bx-pager {
+        margin-top: $gutter*5;
+      }
+
+      .multi-col {
+        &__headline {
+          @include rem(font-size, $conquer-markets-headline-tablet-font-size);
+        }
+
+        &__subheadline {
+          @include rem(font-size, $conquer-markets-subheadline-tablet-font-size);
+        }
+      }
+    }
+
+    &__cta-btn {
+      margin-top: $gutter*5;
+    }
+  }
+
+  @media screen and (max-width: $mobile) {
+    &-section {
+      padding: 35px 0 55px;
+
+      .bx-wrapper .bx-pager {
+        margin-top: $gutter*4;
+      }
+
+      // MULTI COLUMN MODULE OVERRIDES
+      .multi-col {
+        &__content .col {
+          margin-bottom: $gutter*2;
+        }
+
+        &__headline {
+          @include rem(font-size, $conquer-markets-headline-mobile-font-size);
+        }
+
+        &__subheadline {
+          @include rem(font-size, $conquer-markets-subheadline-mobile-font-size);
+        }
+      }
+    }
+
+    &__cta-btn {
+      margin-top: $gutter*4;
+    }
+  }
+}

@@ -1,0 +1,260 @@
+.news {
+  &-category {
+    color: $color-white;
+    letter-spacing: -0.03em;
+
+    span {
+      @extend %bg-color;
+      width: 100%;
+      display: block;
+      text-align: center;
+    }
+  }
+
+  &-date {
+    @extend .research-article__subtitle;
+  }
+
+  &-listing {
+    &-section {
+      padding-top: $gutter*6;
+      padding-bottom: $gutter*6;
+    }
+
+    &__headline {
+      margin-bottom: $gutter*2.5;
+      @include rem(font-size, 15);
+      font-weight: 700;
+      line-height: 1.2;
+      text-transform: uppercase;
+      color: $color-primary-3;
+    }
+
+    &__links {
+      @include rem(font-size, 15);
+      line-height: 1.2;
+      position: absolute;
+      right: 0;
+      top: 0;
+
+      a {
+        padding-left: $gutter;
+      }
+    }
+
+    &__items {
+      @extend %list--unstyled;
+      width: 100%;
+
+      .news-category {
+        @include rem(font-size, 11);
+        width: 100px;
+        padding-right: $gutter*2;
+
+        span {
+          line-height: 1.8;
+        }
+      }
+
+      li {
+        display: table;
+        margin-bottom: $gutter*2.5;
+        table-layout: fixed;
+
+        & > * {
+          display: table-cell;
+          vertical-align: top;
+        }
+      }
+    }
+
+    &__item {
+      &-date {
+        width: 90px;
+        @include rem(font-size, 14);
+        line-height: 1.2;
+        letter-spacing: -0.03em;
+        color: $color-primary-3;
+      }
+
+      &-news {
+        &-link {
+          @include rem(font-size, 16);
+          line-height: 1.2;
+          font-weight: 600;
+          text-decoration: none;
+          letter-spacing: -0.03em;
+        }
+
+        &-teaser {
+          display: block;
+          @include rem(font-size, 14);
+        }
+      }
+    }
+  }
+
+  &-listing-page {
+    &__headline {
+      @extend .knowledge-center__item-headline;
+    }
+
+    &__items {
+      @extend %list--unstyled;
+
+      li {
+        position: relative;
+        margin-top: $gutter*4;
+        padding-top: $gutter*4;
+        border-top: 1px solid $color-light-;
+
+        &:first-child {
+          margin-top: 0;
+          padding-top: 0;
+          border-top: 0;
+
+          .news-category {
+            top: 0;
+          }
+        }
+      }
+
+      .news-category {
+        @include rem(font-size, 12);
+        position: absolute;
+        right: 0;
+        top: 45px;
+        width: 95px;
+        line-height: 2.1;
+      }
+    }
+
+    &__item {
+      &-title {
+        @include rem(font-size, 14);
+        font-weight: 800;
+        margin: $gutter/2 0 0;
+        width: 100%;
+        padding-right: 110px;
+
+        a {
+          text-decoration: none;
+        }
+      }
+
+      &-description {
+        margin: $gutter*2 0;
+        line-height: 1.5;
+      }
+    }
+  }
+
+  @media screen and (max-width: $tablet) {
+    &-listing {
+      &__headline {
+        margin-bottom: $gutter*2;
+        @include rem(font-size, 32);
+        font-weight: 400;
+      }
+
+      &__links {
+        top: 10px;
+        right: 17px;
+      }
+
+      &__items {
+        .news-category {
+          @include rem(font-size, 9);
+          padding-right: $gutter*1.5;
+          width: 80px;
+
+          span {
+            line-height: 16px;
+          }
+        }
+
+        li {
+          margin-bottom: $gutter*2;
+          line-height: 1;
+        }
+      }
+
+      &__item {
+        &-date {
+          @include rem(font-size, 15);
+        }
+
+        &-news {
+          &-link {
+            @include rem(font-size, 15);
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: $mobile) {
+    &-listing {
+      &-section {
+        padding-top: $gutter*4;
+        padding-bottom: $gutter*4;
+      }
+
+      &__headline {
+        margin-bottom: $gutter*3;
+        @include rem(font-size, 26);
+      }
+
+      &__links {
+        top: 5px;
+      }
+
+      &__items {
+        .news-category {
+          width: 100px;
+          @include rem(font-size, 11);
+          margin-bottom: $gutter;
+
+          span {
+            line-height: 20px;
+          }
+        }
+
+        li {
+          margin-bottom: $gutter*3;
+
+          & > * {
+            display: block;
+          }
+        }
+      }
+
+      &__item {
+        &-date {
+          @include rem(font-size, 12);
+          margin-bottom: $gutter;
+        }
+
+        &-news {
+          line-height: 1.2;
+          &-link {
+            @include rem(font-size, 14);
+          }
+
+          &-teaser {
+            @include rem(font-size, 12);
+          }
+        }
+      }
+    }
+
+    &-listing-page {
+      &__items {
+        .news-category {
+          position: static;
+          margin-top: $gutter;
+        }
+      }
+    }
+  }
+}

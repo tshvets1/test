@@ -1,0 +1,86 @@
+<!--
+  {
+  "name": "Latest Research - Grid",
+  "status": "Complete",
+  "notes": ""
+  }
+-->
+
+
+<div class="section-wrapper latest-research-section" data-sectionbg="light-gray">
+	<div class="wrapper">
+
+		<div class="spinner">
+			<div class="overlay"></div>
+			<img src="/_Images/ui/gray-loader.gif" alt="spinner" />
+		</div>
+
+		<div class="research-filter__tagged">
+			Displaying research tagged <span>Technical Analytics</span>
+			<button class="research-filter__tagged-close"><span>Close</span></button>
+		</div>
+		<div class="research research-grid">
+			<div class="research__header">
+                @@include('/modules/insights/markets/latest_research_grid_filter.html')
+				<!-- /research__filters -->
+
+				<div class="research__switch">
+					<a class="research__switch-trigger research__switch-grid is-active" href="#">Switch to Grid View</a>
+					<a class="research__switch-trigger research__switch-list" href="#">Switch to List</a>
+				</div>
+				<!-- /research__switch -->
+
+			</div>
+			<!-- /research__header -->
+
+			<ul class="research__list">
+				@@include('/modules/insights/markets/latest_research_grid_item_topstory.html')
+				@@include('/modules/insights/markets/live_trading_researchgrid.html')
+				@@include('/modules/insights/markets/latest_research_grid_item.html')
+				@@include('/modules/insights/markets/latest_research_grid_item1.html')
+				@@include('/modules/insights/markets/latest_research_grid_item2.html')
+				@@include('/modules/insights/markets/latest_research_grid_item3.html')
+				@@include('/modules/insights/markets/latest_research_grid_item4.html')
+				@@include('/modules/insights/markets/latest_research_grid_item5.html')
+				@@include('/modules/insights/markets/latest_research_grid_item6.html')
+				@@include('/modules/insights/markets/live_trading_researchgrid.html')
+				@@include('/modules/insights/markets/latest_research_grid_item7.html')
+				@@include('/modules/insights/markets/latest_research_grid_item1.html')
+				@@include('/modules/insights/markets/latest_research_grid_item4.html')
+				@@include('/modules/insights/markets/latest_research_grid_item3.html')
+				@@include('/modules/insights/markets/latest_research_grid_item7.html')
+			</ul>
+
+			<script type="text/html" id="articleTemplate">
+				<li class="research__item">
+					<div class="research__content">
+						<h2 class="research-article__headline">Top Story</h2>
+
+						<h3 class="research-article__title">
+							<a class="research-article__title-link" href="#"></a>
+						</h3>
+
+						<p class="research-article__subtitle">
+							<a href="#" class="research-article__author"></a>
+							<span class="research-article__date"></span>
+						</p>
+
+						<div class="research-article__teaser"></div>
+
+						<p class="article-tags">
+							<span>Tags: </span>
+							<a class="article-tags__link" href="#"></a>
+						</p>
+					</div>
+				</li>
+			</script>
+		</div>
+		<!-- /research -->
+
+		<nav data-pagination-options='{"pagesCount":11,"currentPage":4,"pageHref": "#&pagenum={pageNumber}","previousButtonText":"Prev" ,"nextButtonText":"Next" }'></nav>
+		<nav role="navigation" class="pagination">
+			<a class="pagination__load-more" href="#">Load More</a>
+		</nav>
+
+	</div>
+</div>

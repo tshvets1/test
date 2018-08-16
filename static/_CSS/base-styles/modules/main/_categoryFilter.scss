@@ -1,0 +1,111 @@
+.category-filter-module {
+  $category-filter-bg-color: $color-dark !important !default;
+  $category-filter-color: $color-white !default;
+  $category-filter-headline-link-color: $color-white !default;
+  $category-filter-headline-font: 16 500 null uppercase !default;
+  $category-filter-headline-padding: 0 0 20px !default;
+  $category-filter-list-padding: 10px 0 !default;
+  $category-filter-list-link-font: 16 !default;
+  $category-filter-list-link-padding: 0 0 0 20px !default;
+  $category-filter-list-link-color: $color-white !default;
+  $category-filter-list-link-hover-color: $color-secondary-4 !default;
+  $category-filter-list-border: solid 1px darken($color-dark, 10%) !default;
+
+  $category-filter-icon-font: 24 !default;
+
+  background-color: $category-filter-bg-color;
+  color: $category-filter-color;
+
+  .wrapper {
+    overflow: auto;
+  }
+
+  .fixed-menu__hideable-content {
+    &-headline {
+      @include set-text-styles($category-filter-headline-font...);
+      padding: $category-filter-headline-padding;
+
+      a {
+        color: $category-filter-headline-link-color;
+        text-decoration: none;
+      }
+    }
+
+    &-list {
+      @extend %list--unstyled;
+
+      li {
+        width: 100%;
+        position: relative;
+        padding: $category-filter-list-padding;
+        border-top: $category-filter-list-border;
+        cursor: pointer;
+
+        &.active a,
+        &:hover a {
+          color: $category-filter-list-link-hover-color;
+        }
+
+        &.active a:before {
+          @if ($old-ie) {
+            content: "  ";
+          }
+          background: $category-filter-list-link-hover-color;
+        }
+      }
+
+      a {
+        display: block;
+        padding: $category-filter-list-link-padding;
+        @include set-text-styles($category-filter-list-link-font...);
+        text-decoration: none;
+        color: $category-filter-list-link-color;
+
+        &:before {
+          content: " ";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 3px;
+          height: 100%;
+          background: transparent;
+        }
+      }
+    }
+  }
+
+  //TABLET
+  @media screen and (max-width: $tablet) {
+    padding: 0 !important;
+    margin-bottom: 0 !important;
+
+    .wrapper {
+      max-height: 100vh;
+    }
+
+    .open > .fixed-menu__toggle h2 > span:after {
+      content: "\2013";
+    }
+
+    .fixed-menu__toggle {
+      h2 > span {
+        @include set-text-styles($category-filter-icon-font...);
+        position: relative;
+        top: 3px;
+
+        &:after {
+          content: "+";
+        }
+      }
+
+      a[data-scroll-to-element] {
+        font-size: 0;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+
+        @include sprite($icon-back-to-top-big);
+      }
+    }
+  }
+}

@@ -1,0 +1,244 @@
+.knowledge-center {
+  $knowledge-center-tabs-margin: 0 0 20px !default;
+  $knowledge-center-tab-margin: 0 0 10px !default;
+  $knowledge-center-tab-active-color: $color-secondary-7 !default;
+  $knowledge-center-tab-font: 14 500 null uppercase !default;
+  $knowledge-center-tab-padding: 5px 10px !default;
+  $knowledge-center-tab-border: solid 2px $color-light !default;
+  $knowledge-center-tabs-select-height: 40px !default;
+  $knowledge-center-tabs-select-padding: 0 10px !default;
+  $knowledge-center-tabs-select-border: solid 1px $color-darker !default;
+  $knowledge-center-tabs-select-option-font: null null null uppercase !default;
+  $knowledge-center-item-headline-padding: 0 0 20px !default;
+  $knowledge-center-item-headline-font: 44 null 1 !default;
+  $knowledge-center-item-headline-color: $color-primary-3 !default;
+  $knowledge-center-questions-listing-padding: 0 0 40px !default;
+  $knowledge-center-questions-listing-li-padding: 0 20px 10px 0 !default;
+  $knowledge-center-questions-listing-a-font: 16 null 1.4 !default;
+  $knowledge-center-question-padding: 10px 0 20px !default;
+  $knowledge-center-question-back-top-padding: 10px 0 50px !default;
+  $knowledge-center-question-headline-font: 14 600 !default;
+  $knowledge-center-question-headline-color: $color-primary-3 !default;
+  $knowledge-center-question-answer-font: 14 null 1.4 !default;
+  $knowledge-center-question-border: solid 1px $color-light !default;
+  $knowledge-center-group-padding: 0 0 40px !default;
+  $knowledge-center-group-headline-font: null 500 null uppercase !default;
+  $knowledge-center-group-headline-margin: 0 0 10px !default;
+  $knowledge-center-group-headline-border: solid 1px $color-light !default;
+  $knowledge-center-back-top-position: null 0 10px !default;
+  $knowledge-center-search-padding: 0 0 20px !important !default;
+  $knowledge-center-search-bg-color: $color-white !important !default;
+
+  $knowledge-center-item-headline-tablet-font: 32 !default;
+  $knowledge-center-search-tablet-padding: 20px $tabletPadding 0 !important !default;
+
+  $knowledge-center-tab-mobile-margin: 0 0 20px !default;
+  $knowledge-center-item-headline-mobile-font: 25 !default;
+  $knowledge-center-question-back-top-mobile-padding: $knowledge-center-question-padding !default;
+  $knowledge-center-group-mobile-padding: 0 0 20px !default;
+  $knowledge-center-group-headline-mobile-font: 14 !default;
+
+  &__tabs-filters {
+    margin: $knowledge-center-tabs-margin;
+
+    ul {
+      @extend %list--inline;
+      width: 100%;
+    }
+
+    li {
+      padding: $knowledge-center-tab-margin;
+
+      &:hover a,
+      &.selected a {
+        border-color: $knowledge-center-tab-active-color;
+        color: $knowledge-center-tab-active-color;
+      }
+    }
+
+    a {
+      display: block;
+      padding: $knowledge-center-tab-padding;
+      @include set-text-styles($knowledge-center-tab-font...);
+      text-decoration: none;
+      border: $knowledge-center-tab-border;
+      cursor: pointer;
+    }
+
+    select {
+      display: none;
+      height: $knowledge-center-tabs-select-height;
+      padding: $knowledge-center-tabs-select-padding;
+
+      &:hover,
+      &:focus {
+        border: $knowledge-center-tabs-select-border;
+      }
+
+      option {
+        @include set-text-styles($knowledge-center-tabs-select-option-font...);
+      }
+    }
+  }
+
+  &-section[data-one-page="true"] &__item {
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
+
+  &__item-headline {
+    padding: $knowledge-center-item-headline-padding;
+    @include set-text-styles($knowledge-center-item-headline-font...);
+    color: $knowledge-center-item-headline-color;
+  }
+
+  &__questions-listing {
+    @extend %list--unstyled;
+    overflow: auto;
+    padding: $knowledge-center-questions-listing-padding;
+
+    &-col {
+      width: 50%;
+      float: left;
+    }
+
+    li {
+      padding: $knowledge-center-questions-listing-li-padding;
+    }
+
+    a {
+      display: block;
+      @include set-text-styles($knowledge-center-questions-listing-a-font...);
+      text-decoration: none;
+      cursor: pointer;
+    }
+  }
+
+  &__question {
+    position: relative;
+    padding: $knowledge-center-question-padding;
+
+    &-headline {
+      @include set-text-styles($knowledge-center-question-headline-font...);
+      color: $knowledge-center-question-headline-color;
+    }
+
+    &-answer,
+    &-answer-full {
+      @include set-text-styles($knowledge-center-question-answer-font...);
+    }
+
+    &-answer-full {
+      display: none;
+    }
+
+    &.show-read-more &-answer {
+      display: none;
+
+      &-full {
+        display: block;
+      }
+    }
+  }
+
+  &__item[data-divider="true"] &__question {
+    border-top: $knowledge-center-question-border;
+
+    &:first-child {
+      border-top: 0;
+    }
+  }
+
+  &__item[data-back-to-top="true"] &__question {
+    padding: $knowledge-center-question-back-top-padding;
+  }
+
+  &__group {
+    padding: $knowledge-center-group-padding;
+
+    &-headline {
+      margin: $knowledge-center-group-headline-margin;
+      @include set-text-styles($knowledge-center-group-headline-font...);
+      border-bottom: $knowledge-center-group-headline-border;
+    }
+  }
+
+  &__back-to-top {
+    position: absolute;
+    @include position($knowledge-center-back-top-position...);
+    font-size: 0;
+    background: no-repeat;
+    @include sprite($icon-back-to-top);
+    cursor: pointer;
+  }
+
+  &__search {
+    padding: $knowledge-center-search-padding;
+    background-color: $knowledge-center-search-bg-color;
+
+    .search-fields,
+    .search-fields__wrapper {
+      width: 100%;
+      max-width: none;
+    }
+  }
+
+  @media screen and (max-width: $tablet) {
+    &__item-headline {
+      @include set-text-styles($knowledge-center-item-headline-tablet-font...);
+    }
+
+    &__search {
+      padding: $knowledge-center-search-tablet-padding;
+    }
+
+    &__tabs-filters {
+      position: relative;
+
+      ul {
+        display: none;
+      }
+
+      select {
+        display: block;
+      }
+    }
+  }
+
+  @media screen and (max-width: $mobile) {
+    &__tabs-filters {
+      margin: $knowledge-center-tab-mobile-margin;
+    }
+
+    &__item-headline {
+      @include set-text-styles($knowledge-center-item-headline-mobile-font...);
+    }
+
+    &__item[data-back-to-top="true"] &__question {
+      padding: $knowledge-center-question-back-top-mobile-padding;
+    }
+
+    &__group {
+      padding: $knowledge-center-group-mobile-padding;
+
+      &-headline {
+        @include set-text-styles($knowledge-center-group-headline-mobile-font...);
+      }
+    }
+
+    &__questions-listing {
+      &-col {
+        width: 100%;
+      }
+
+      li {
+        width: 100%;
+        clear: both;
+        padding-right: 0;
+      }
+    }
+  }
+}

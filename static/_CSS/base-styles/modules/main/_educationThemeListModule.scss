@@ -1,0 +1,92 @@
+.theme-list {
+
+  $theme-list-module-font: null null null null left !default;
+  $theme-list-module-font-color: $color-darker !default;
+  $theme-list-headline-font: 40 null 1.25 !default;
+  $theme-list-headline-font-color: $color-primary-3 !default;
+  $theme-list-subheadline-font: 20 null 1.4 !default;
+  $theme-list-link-hover-text-font-color: $color-secondary-7 !default;
+  $theme-list-link-hover-text-border-color: $color-secondary-7 !default;
+
+  $theme-list-headline-tablet-font: 36 !default;
+  $theme-list-subheadline-tablet-font: 18 !default;
+
+  $theme-list-headline-mobile-font: 25 !default;
+  $theme-list-subheadline-mobile-font: 14 !default;
+
+  &-module {
+    @include set-text-styles($theme-list-module-font...);
+    color: $theme-list-module-font-color;
+  }
+
+  &__headline {
+    @include set-text-styles($theme-list-headline-font...);
+    color: $theme-list-headline-font-color;
+    padding-bottom: $gutter;
+  }
+
+  &__subheadline {
+    @include set-text-styles($theme-list-subheadline-font...);
+    padding-bottom: $gutter*2;
+  }
+
+  &__list {
+    @extend %list--unstyled;
+  }
+
+  &__link {
+    display: block;
+    padding: $gutter*3 0;
+    text-decoration: none;
+  }
+
+  &__icon {
+    display: block;
+    float: left;
+    margin: -$gutter*2 $gutter*2 0 0;
+    max-width: 60px;
+    max-height: 60px;
+  }
+
+  &__text {
+    @extend .cta-link;
+    display: block;
+    overflow: hidden;
+  }
+
+  &__link:hover &__text {
+    color: $theme-list-link-hover-text-font-color;
+
+    &:after {
+      border-left-color: $theme-list-link-hover-text-border-color;
+    }
+  }
+
+  @media screen and (max-width: $tablet) {
+    &__headline {
+      @include set-text-styles($theme-list-headline-tablet-font...);
+    }
+
+    &__subheadline {
+      @include set-text-styles($theme-list-subheadline-tablet-font...);
+    }
+  }
+
+  @media screen and (max-width: $mobile) {
+    &-module {
+      padding-top: 33px;
+    }
+
+    &__headline {
+      @include set-text-styles($theme-list-headline-mobile-font...);
+    }
+
+    &__subheadline {
+      @include set-text-styles($theme-list-subheadline-mobile-font...);
+    }
+
+    &__icon {
+      margin-right: $gutter;
+    }
+  }
+}

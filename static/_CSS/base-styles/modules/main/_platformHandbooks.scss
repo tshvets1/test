@@ -1,0 +1,113 @@
+.platform-handbooks {
+  $platform-handbooks-headline-font: 18 500 null uppercase !default;
+  $platform-handbooks-headline-color: $color-primary-3 !default;
+  $platform-handbooks-description-font: 16 !default;
+  $platform-handbooks-description-padding: 0 0 20px !default;
+  $platform-handbooks-anchor-list-padding: 20px !default;
+  $platform-handbooks-anchor-list-margin: 20px 0 !default;
+  $platform-handbooks-anchor-list-bg-color: $color-lighter !default;
+  $platform-handbooks-anchor-list-li-padding: 5px 20px 5px 0 !default;
+  $platform-handbooks-anchor-list-a-font: 16 !default;
+  $platform-handbooks-anchor-item-padding: 30px 0 40px !default;
+  $platform-handbooks-anchor-item-border: solid 1px $color-light !default;
+  $platform-handbooks-anchor-item-headline-font: 14 600 !default;
+  $platform-handbooks-anchor-item-headline-color: $color-primary-3 !default;
+  $platform-handbooks-anchor-item-content-font: 14 !default;
+  $platform-handbooks-anchor-back-top-position: null 0 10px !default;
+
+  $platform-handbooks-description-mobile-font: 14 !default;
+  $platform-handbooks-description-mobile-border: solid 1px $color-light !default;
+  $platform-handbooks-anchor-list-mobile-border: solid 2px $color-light !default;
+  $platform-handbooks-anchor-item-mobile-padding: 30px 0 20px !default;
+
+  &__platform {
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
+
+  &__platform-headline {
+    padding-top: $gutter*2;
+    @include set-text-styles($platform-handbooks-headline-font...);
+    color: $platform-handbooks-headline-color;
+  }
+
+  &__description {
+    padding: $platform-handbooks-description-padding;
+    @include set-text-styles($platform-handbooks-description-font...);
+  }
+
+  &__anchor-list {
+    @extend %list--unstyled;
+    padding: $platform-handbooks-anchor-list-padding;
+    margin: $platform-handbooks-anchor-list-margin;
+    overflow: auto;
+    background-color: $platform-handbooks-anchor-list-bg-color;
+
+    &-col {
+      width: 33.3333%;
+      float: left;
+    }
+
+    li {
+      display: block;
+      padding: $platform-handbooks-anchor-list-li-padding;
+    }
+
+    a {
+      cursor: pointer;
+      @include set-text-styles($platform-handbooks-anchor-list-a-font...);
+      text-decoration: none;
+    }
+  }
+
+  &__item {
+    position: relative;
+    padding: $platform-handbooks-anchor-item-padding;
+    border-top: $platform-handbooks-anchor-item-border;
+
+    &:first-child {
+      border-top: 0;
+      padding-top: 0;
+    }
+  }
+
+  &__item-headline {
+    @include set-text-styles($platform-handbooks-anchor-item-headline-font...);
+    color: $platform-handbooks-anchor-item-headline-color;
+  }
+
+  &__item-content {
+    @include set-text-styles($platform-handbooks-anchor-item-content-font...);
+  }
+
+  &__back-to-top {
+    position: absolute;
+    @include position($platform-handbooks-anchor-back-top-position...);
+    font-size: 0;
+    background: no-repeat;
+    @include sprite($icon-back-to-top);
+    cursor: pointer;
+  }
+
+  @media screen and (max-width: $mobile) {
+    &__description {
+      @include set-text-styles($platform-handbooks-description-mobile-font...);
+      border-bottom: $platform-handbooks-description-mobile-border;
+    }
+
+    &__anchor-list {
+      border: $platform-handbooks-anchor-list-mobile-border;
+    }
+
+    &__item {
+      padding: $platform-handbooks-anchor-item-mobile-padding;
+    }
+
+    &__anchor-list-col {
+      width: 50%;
+    }
+  }
+}

@@ -1,0 +1,41 @@
+//1. Brand Colors
+//2. Links Colors
+//3. Education Level Colors
+//4. Background Colors
+
+//1. Brand Colors
+$color-primary-1: #ffee00;
+$color-primary-2: #007dd6; // blue
+$color-primary-3: #202020; // dark blue
+
+$color-secondary-2: #157db1; // light blue
+$color-secondary-4: #ffee00; // yellow
+$color-secondary-6: #dc4650; // rose
+$color-secondary-7: #50af5f; // green
+$color-secondary-8: #dc4650; // red
+
+$color-white: #fff; //white
+$color-black: #000; //black
+$color-lightest: #fbfbfb; // lightest grey
+$color-lighter: #f0f0f0; // lighter grey
+$color-light: #f4f4f4; // light grey
+$color-medium: #e2e2e2; //medium grey
+$color-medium-dark: #464646 !default;
+$color-medium-darker: #8c8c8c; //almost dark grey
+$color-dark: #252d33; // dark grey
+$color-grey-dark: #d2d2d2;
+$color-darker: #272828; // text grey
+
+$color-light-cool: #f5f5f5;
+
+$text-color: $color-darker !default;
+
+//2. Links Colors
+$color-link: $color-primary-2;
+$color-link-hover: $color-darker;
+$color-link-inverse: $color-white;
+$color-link-inverse-hover: #036799;
+
+
+//4. Background Colors
+$bg-light: $color-light;

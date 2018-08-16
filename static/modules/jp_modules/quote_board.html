@@ -1,0 +1,46 @@
+﻿<!--
+  {
+  "name": "Quote Board",
+  "status": "Complete",
+  "notes": ""
+  }
+-->
+
+<div class="section-wrapper quote-board" data-sectionbg="alternate"
+	 data-apply-ko="quoteBoard"
+	 data-get-products-timeout="5000"
+	 data-products="USD/JPY,EUR/USD,WHT/USD,USD/CAD,GBP/AUD">
+	<div class="wrapper">
+		<h2 class="quote-board__headline">
+			Quote Board
+		</h2>
+		
+		<table class="rates-table rates-table--mobile-transpose">
+			<thead>
+			<tr>
+				<th class="rates-table__product">通貨ペア</th>
+				<th>取引値</th>
+				<th>高値</th>
+				<th>安値</th>
+				<th>前日比</th>
+			</tr>
+			<tr class="spinner" data-bind="attr: {'hidden' : products().length > 0}">
+				<td colspan="5">
+					<img src="/_Images/ui/loader.gif" alt="spinner"/>
+				</td>
+			</tr>
+			</thead>
+			<tbody hidden="hidden" data-bind="attr: {'hidden' : products().length == 0}">
+			<!-- ko foreach: products -->
+			<tr>
+				<td class="rates-table__product"><a href="#" data-bind="text: product"></a></td>
+				<td data-bind="text: bid, css: {'rates-table__value-down' : bid() < bid_prev(), 'rates-table__value-up' : bid() > bid_prev() }"></td>
+				<td data-bind="text: High"></td>
+				<td data-bind="text: Low"></td>
+				<td data-bind="text: ChangeInPoints, css: {'rates-table__value-down' : ChangeInPoints() < ChangeInPoints_prev(), 'rates-table__value-up' : ChangeInPoints() > ChangeInPoints_prev() }"></td>
+			</tr>
+			<!-- /ko -->
+			</tbody>
+		</table>
+	</div>
+</div>

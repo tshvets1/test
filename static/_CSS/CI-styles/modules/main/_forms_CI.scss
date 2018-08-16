@@ -1,0 +1,68 @@
+.form {
+  &-div.has-spinner {
+    .loading-wrapper img {
+      min-width: $spinnerSmallSize + 10px;
+      margin-left: -($spinnerSmallSize + 10px);
+    }
+  }
+
+  &-validation-message,
+  label.error {
+    margin: 0 0 -1px;
+  }
+
+  @media screen and (max-width: $tablet) {
+    &-div {
+      display: flex;
+      flex-direction: column-reverse;
+
+      &.has-spinner {
+        flex-direction: column;
+        align-items: center;
+
+        .loading-wrapper {
+          margin-left: 0 !important;
+
+          > * {
+            margin: 0 0 10px 0;
+          }
+
+          img {
+            margin-left: 0;
+            min-width: 0;
+          }
+        }
+      }
+    }
+
+    .chosen-container-single {
+      width: 100% !important;
+    }
+
+    &-input,
+    &-text,
+    &-tel,
+    &-email,
+    &-textarea,
+    &-select,
+    &-password {
+      width: 100%;
+    }
+
+    &-submit {
+      width: 100%;
+      margin: 5px 0 0;
+    }
+
+    &-label {
+      position: static;
+      display: inline-block !important;
+      width: 100%;
+
+      &.for-select {
+        background: none;
+        order: 1;
+      }
+    }
+  }
+}

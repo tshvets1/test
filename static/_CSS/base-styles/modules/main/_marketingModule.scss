@@ -1,0 +1,306 @@
+.market {
+  &-section {
+    color: $color-white;
+
+    .wrapper {
+      padding: $gutter*6 0;
+      text-align: center;
+    }
+  }
+
+  &-content {
+    padding: 0 90px;
+  }
+
+  &__headline {
+    @include rem(font-size, 40);
+    margin: .5em 0;
+    font-weight: 400;
+    line-height: 1.14;
+  }
+
+  &__description {
+    @include rem(font-size, 20);
+    font-weight: 400;
+    line-height: 1.25;
+    margin: .5em 0 1em;
+
+    p {
+      @include rem(font-size, 17);
+      text-align: center;
+      font-weight: 400;
+    }
+    a {
+      color: $color-white;
+    }
+  }
+
+  &__subheadline {
+    @include callout-copy;
+    margin: .5em 0;
+    text-transform: uppercase;
+  }
+
+  &__cta-btn {
+    @include cta-btn-theme($color-secondary-5, $color-white, $isDefaultTheme: true);
+
+    + .market__cta-btn {
+      margin-left: $gutter*3;
+      @include cta-btn-theme($color-secondary-7, $color-white, $isDefaultTheme: true);
+    }
+  }
+}
+
+// COLOR THEME OVERRIDES
+[data-sectionbg="default"],
+[data-sectionbg="white"] {
+  .market {
+    &__headline {
+      color: $color-primary-3;
+    }
+
+    &__description {
+      font-weight: 400;
+    }
+  }
+}
+
+[data-sectionbg="orange"] {
+  .market__cta-btn {
+    @include cta-btn-theme($color-white, $color-secondary-5, darken($color-secondary-5, 10%),
+      $color-white, darken($color-secondary-5, 10%), darken($color-secondary-5, 15%), $isDefaultTheme: true);
+
+    + .market__cta-btn {
+      @include cta-btn-theme($color-white, $color-secondary-7, darken($color-secondary-7, 10%),
+        $color-white, darken($color-secondary-7, 10%), darken($color-secondary-7, 15%), $isDefaultTheme: true);
+    }
+  }
+}
+
+[data-sectionbg="rose"] {
+  .market__cta-btn {
+    &.white {
+      @include cta-btn-theme($color-white, $color-secondary-6, darken($color-secondary-6, 10%),
+        $color-white, darken($color-secondary-6, 10%), darken($color-secondary-6, 15%));
+    }
+  }
+}
+
+// MARKETING MODULE LAYOUTS
+.market-section[data-columns="2"] {
+  position: relative;
+  .wrapper {
+    padding: $gutter*6 0;
+  }
+
+  .market-content {
+    float: left;
+    width: 50%;
+    padding: 0 0 0 $gutter*2;
+    margin: 0;
+
+    &:first-child {
+      padding: 0 $gutter*2 0 0;
+      text-align: left;
+
+      &:after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: $gutter*3;
+        bottom: $gutter*3;
+        width: 1px;
+        background-color: $color-white;
+      }
+    }
+  }
+
+  .market__subheadline {
+    text-align: center;
+  }
+}
+
+// PROMO ICONS AND LINKS
+.promo {
+  &__list {
+    @extend %list--unstyled;
+    @include rem(font-size, 14);
+    @extend %clearfix;
+    margin: $gutter*2 0;
+    line-height: 1.5;
+    text-align: center;
+    white-space: nowrap;
+
+    > li {
+      max-width: 25%;
+      padding: 0 $gutter*2 0 0;
+      white-space: normal;
+      display: inline-block;
+      vertical-align: top;
+    }
+  }
+
+  &__link {
+    display: block;
+    color: $color-white;
+    text-decoration: none;
+
+    &:hover {
+      color: $color-white;
+    }
+
+    .promo__description {
+      @extend %cta-link;
+      @include cta-link-theme($color-white, $color-white);
+    }
+  }
+
+  &__icon {
+    height: 70px;
+    width: 60px;
+    margin: 0 auto;
+  }
+}
+
+[data-columns="2"] {
+  .promo__list {
+    margin-right: -50px;
+    > li {
+      max-width: 110px;
+    }
+  }
+}
+
+[data-sectionbg="yellow"],
+[data-sectionbg="light-gray"] {
+  color: $color-darker;
+
+  .promo__link {
+    color: $color-darker;
+
+    &:hover {
+      color: $color-link-hover;
+    }
+  }
+
+  .market-content:first-child:after {
+    background-color: $color-darker;
+  }
+}
+
+// TABLET LAYOUT
+@media screen and (max-width: $tablet) {
+  .market {
+    &__headline {
+      @include rem(font-size, 36)
+    }
+  }
+
+  .market-section[data-columns="2"] {
+    .wrapper {
+      padding: $gutter*6 $gutter*1.7;
+    }
+
+    .market-content {
+      width: 35%;
+
+      &:first-child {
+        width: 65%;
+
+        &:after {
+          left: 65%;
+        }
+      }
+    }
+
+    .promo__list {
+      margin-right: 0;
+      > li {
+        width: 50%;
+        max-width: none;
+        float: left;
+        padding-bottom: $gutter*2;
+      }
+    }
+  }
+}
+
+// MOBILE LAYOUT
+@media screen and (max-width: $mobile) {
+  .market-section {
+    .wrapper {
+      padding: $gutter*3 $gutter*1.7;
+    }
+
+    //todo: check with marketing PSD vs. Prod
+    .cta-btn {
+      display: inline-block;
+      width: auto;
+    }
+  }
+
+  .market-section[data-columns="2"] {
+    .market-content {
+      float: none;
+      width: 100%;
+      padding: 0;
+
+      &:first-child {
+        padding: 0;
+        width: 100%;
+        text-align: center;
+
+        &:after {
+          display: none;
+        }
+      }
+    }
+
+    .promo__list {
+      margin-right: 0;
+      > li {
+        width: 100%;
+        max-width: none;
+        float: none;
+      }
+    }
+  }
+
+  .market {
+    &-content {
+      padding: $gutter 0;
+    }
+
+    &__headline {
+      @include rem(font-size, 25);
+    }
+
+    &__description {
+      @include rem(font-size, 14);
+    }
+
+    &__cta-btn,
+    &__cta-btn + .market__cta-btn {
+      @include rem(font-size, 14);
+      margin: $gutter*2 0;
+    }
+  }
+
+  // PROMO ICONS AND LINKS
+  .promo {
+    &__list {
+      > li {
+        float: none;
+        display: block;
+        margin: $gutter 0;
+        width: 100%;
+        max-width: none;
+      }
+    }
+    &__link .promo__description {
+      &:after {
+        margin-left: 5px;
+      }
+    }
+  }
+}

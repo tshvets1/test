@@ -1,0 +1,39 @@
+<!--
+  {
+  "name": "Newsletter (Right Rail)",
+  "status": "Complete",
+  "notes": ""
+  }
+-->
+
+
+<div class="module-wrapper newsletter-module" data-sectionbg="green"
+	 style="background-image: url(/_Images/content-managed/callouts/bgs_right_rail_newsletter.svg);">
+	<div class="wrapper">
+		<h2 class="newsletter__headline">Weekly Newsletter</h2>
+
+		<div class="newsletter__sub-headline">Sign up for weekly insights, lorem ipsum dolor sit amet non
+			seqitor from the FOREX.com team.
+		</div>
+
+		<form class="newsletter__form form" data-validate-form="">
+			<div class="form-div">
+				<input class="form-email newsletter__input" id="newsletterSignup" type="email" required="required"
+					   data-msg-required="Please enter email" data-msg-email="Please enter valid email!">
+				<!-- do not remove/change anything-->
+				<input type="hidden" name="hdnRRScreenResolution" id="hdnRRScreenResolution" />
+				<input type="hidden" name="hdnRRSfGoogleGUID" id="hdnRRSfGoogleGUID" />
+				<input type="hidden" name="hdnRRCurrentConfig" id="hdnRRCurrentConfig" value="@ForexHelper.SiteSettings.Entity_Web_Config_Section" />
+				<input type="hidden" name="hdnRRSiteID" id="hdnRRSiteID" value="@ForexHelper.SiteSettings.Entity_Code" />
+				<input type="hidden" name="RRNLController" value="CalloutsController" />
+				<input type="hidden" name="RRNLAction" value="BindRightRailNewsLetterEmail" />
+				<input type="hidden" name="RRNLTHANK_HEADER" value="@Model.Thank_You_Title" />
+				<input type="hidden" name="RRNLTHANK_DESC" value="@Model.Thank_You_Description" />
+				<input type="hidden" name="RRNLBG_Image" value="@Model.BackgroundImageURL" />
+				<input type="hidden" name="RRNLTheme_Name" value="@Model.ThemeName" />
+				<!-- do not remove/change anything-->
+			</div>
+			<button type="submit" class="form-submit newsletter__submit-button">Sign Up</button>
+		</form>
+	</div>
+</div>

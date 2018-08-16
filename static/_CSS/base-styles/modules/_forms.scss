@@ -1,0 +1,143 @@
+//styled checkbox and radio
+input[type="checkbox"],
+input[type="radio"] {
+  @if $old-ie == false {
+    position: absolute;
+    height: 1px;
+    overflow: hidden;
+    left: -9999px;
+
+    & ~ label:not(.error) {
+      position: relative;
+      @if $old-ie {
+        display: inline-block;
+        padding: $checkbox-styled-old-ie-padding;
+      } @else {
+        display: block;
+        padding: $checkbox-styled-padding;
+      }
+      cursor: pointer;
+
+      &:before {
+        content: "";
+        z-index: $defaultZIndex;
+        position: absolute;
+        @include position($checkbox-styled-icon-position...);
+        @include size($checkbox-styled-icon-size...);
+        border: $checkbox-styled-border;
+        transition: all .15s ease-out;
+      }
+    }
+
+    &:checked ~ label:not(.error):before {
+      background: $checkbox-styled-icon-checked-bg-color;
+      border-color: $checkbox-styled-icon-checked-border-color;
+    }
+  }
+
+  &[disabled] {
+    ~ label:before {
+      border-color: $checkbox-styled-icon-disabled-border-color;
+    }
+
+    ~ label {
+      color: $checkbox-styled-icon-disabled-bg-color;
+    }
+  }
+}
+
+input[type="radio"] ~ label:not(.error):before {
+  border-radius: $checkbox-styled-radio-border-radius;
+}
+
+.btn--unstyled {
+  @extend %btn--unstyled;
+}
+
+textarea,
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="tel"],
+input[type="url"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="password"],
+select {
+  padding: $form-input-padding;
+  height: $form-input-height;
+  border: $form-input-default-border;
+  border-radius: 0;
+  @include font-family;
+
+  @media screen and (max-width: $mobile) {
+    padding: $form-input-mobile-padding;
+    height: $form-input-mobile-height;
+  }
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
+}
+
+// FORMS
+fieldset {
+  border: 0;
+  padding: 0;
+}
+
+legend {
+  display: block;
+  margin: .5em 0 1em;
+}
+
+.scfForm {
+  .hdnScreenResolution, .hdnSfGoogleGUID {
+    display: none;
+  }
+}
+
+/*Probably unused*/
+head ~ /**/ body .select--styled select {
+  padding: 10px 20px 10px 10px;
+}
+
+.select--styled {
+  select {
+    padding: 0;
+    border: solid 2px $color-secondary-7;
+    color: $color-secondary-7;
+    font-weight: bold;
+    background: transparent right center no-repeat;
+    outline: none;
+    margin: 0 0 20px;
+    line-height: 1;
+  }
+
+  /* Targetting Webkit browsers only. FF will show the dropdown arrow with so much padding. */
+  @media screen and (-webkit-min-device-pixel-ratio: 0) {
+    select {
+      padding: 10px 20px 10px 10px;
+    }
+  }
+
+  select::-ms-expand {
+    /* for IE 11 */
+    display: none;
+  }
+  option {
+    xpadding: 10px 20px 10px 10px;
+    background: rgba(0, 0, 0, 0.0);
+  }
+  ::selection {
+    background-color: $color-lightest;
+
+  }
+
+}

@@ -1,0 +1,286 @@
+.comparison {
+  &__actions {
+    position: absolute;
+    padding-left: $platform-comparison-actions-padding;
+    line-height: $platform-comparison-actions-font;
+    width: $platform-comparison-actions-width;
+  }
+
+  &__action {
+    position: relative;
+    z-index: $defaultZIndex + 1;
+    padding: $platform-comparison-action-padding;
+    background-color: $platform-comparison-action-background-color;
+
+    a {
+      color: $platform-comparison-action-link-color;
+      text-decoration: none;
+    }
+  }
+
+  &__left {
+    float: left;
+    left: -18px;
+    border-top-left-radius: $platform-comparison-action-border-radius;
+    border-bottom-left-radius: $platform-comparison-action-border-radius;
+
+    @if ($old-ie) {
+      left: -16px;
+    }
+  }
+
+  &__right {
+    float: right;
+    right: -18px;
+    border-top-right-radius: $platform-comparison-action-border-radius;
+    border-bottom-right-radius: $platform-comparison-action-border-radius;
+  }
+
+  &__table {
+    > .wrapper {
+      padding-bottom: 0;
+    }
+
+    &-mobile {
+      display: none;
+
+      &-menu {
+        @extend %list--unstyled;
+
+        &-action {
+          @extend .icon;
+          @extend .icon-minus;
+
+          &.open {
+            @extend .icon-plus;
+          }
+        }
+      }
+    }
+
+    &.odd {
+      background-color: $platform-comparison-table-odd-background-color;
+    }
+
+    &.last-child {
+      margin-bottom: $platform-comparison-table-last-child-margin;
+    }
+
+    //headline
+    h2 {
+      @include set-text-styles($platform-comparison-inner-table-cell-headline-font...);
+      margin: 0;
+    }
+
+    //description
+    p,
+    ul {
+      @include set-text-styles($platform-comparison-inner-table-cell-description-font...);
+      padding: 14px 0 0;
+    }
+
+    ul {
+      list-style-type: square;
+      width: $platform-comparison-inner-table-cell-list-width;
+      line-height: 1.2;
+      margin: $platform-comparison-inner-table-cell-list-margin;
+      padding-left: 1.5em;
+    }
+
+    li {
+      margin: $platform-comparison-inner-table-cell-list-item-margin;
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+
+    &-header {
+      h2 {
+        @include set-text-styles($platform-comparison-table-head-header-font...);
+        margin-bottom: $platform-comparison-table-head-header-margin;
+        min-height: 50px;
+      }
+
+      p,
+      ul {
+        padding: $platform-comparison-table-head-description-padding;
+        margin: $platform-comparison-table-head-description-margin;
+      }
+    }
+
+    table {
+      width: $platform-comparison-inner-table-width;
+      table-layout: fixed;
+    }
+
+    td {
+      width: $platform-comparison-inner-table-cell-width;
+      padding: $platform-comparison-inner-table-cell-padding;
+      vertical-align: top;
+      position: relative;
+      overflow: hidden;
+
+      &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 1px;
+        height: 1000px;
+        border-right: 1px solid $color-medium;
+      }
+
+      &:first-child {
+        position: absolute;
+        left: 0;
+
+        &:after {
+          content: none;
+        }
+
+        & + * {
+          &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 1000px;
+            border-left: 1px solid $color-medium;
+          }
+        }
+
+        p, ul {
+          padding-top: 0;
+        }
+
+        a {
+          @extend %cta-btn;
+          @include cta-btn-theme($color-secondary-5, $color-white, $isDefaultTheme: true);
+          padding: 8px 30px 8px 10px;
+        }
+
+        & ~ * a {
+          margin: 1em -20px 1em 0;
+          padding: 10px 40px 14px 20px;
+          @extend .cta-link;
+        }
+      }
+    }
+  }
+
+  &__table-row {
+    overflow-x: hidden;
+    overflow-y: visible;
+    margin-left: $platform-comparison-table-row-margin;
+    width: calc(75% + 1px);
+
+    @if ($old-ie) {
+      width: 3*$page-width/4 + 1;
+    }
+  }
+
+  &__table:first-child {
+    p,
+    ul {
+      padding-top: $platform-comparison-table-first-child-cell-description-padding;
+    }
+  }
+
+  @media screen and (max-width: $tablet) {
+    &__actions {
+      padding-left: $platform-comparison-actions-tablet-padding;
+    }
+
+    &__right {
+      right: -18px;
+    }
+
+    &__left {
+      left: -17px;
+    }
+
+    &__table {
+      .wrapper {
+        margin-left: $platform-comparison-table-wrapper-tablet-margin;
+        margin-right: $platform-comparison-table-wrapper-tablet-margin;
+      }
+    }
+
+    &__table-row {
+      width: calc(66.6667% + 1px);
+      margin-left: $platform-comparison-table-row-tablet-margin;
+    }
+  }
+
+  @media screen and (max-width: $mobile) {
+    &__table {
+      display: none;
+
+      &-mobile {
+        display: block;
+      }
+
+      & &-mobile-menu {
+        list-style: none;
+        padding: 0;
+
+        & > li:last-child {
+          h2 {
+            border-bottom: none;
+          }
+        }
+
+        &-headline {
+          @include set-text-styles($platform-comparison-table-mobile-menu-headline-font...);
+          color: $platform-comparison-table-mobile-menu-headline-font-color;
+          float: left;
+          width: $platform-comparison-table-mobile-menu-headline-width;
+          padding: $platfrom-comparions-table-mobile-menu-headline-padding;
+          background-color: $platform-comparison-table-mobile-menu-headline-background-color;
+          border-bottom: $platform-comparison-table-mobile-menu-headline-border;
+          cursor: pointer;
+        }
+
+        &-action {
+          float: right;
+          transition: none;
+          @include set-text-styles($platform-comparison-table-mobile-menu-action-font...);
+        }
+      }
+
+      table {
+        display: block;
+        clear: both;
+      }
+
+      tbody {
+        display: block;
+      }
+
+      tr {
+        display: block;
+
+        &.odd {
+          background-color: $platform-comparison-table-row-odd-mobile-background-color;
+        }
+
+        &.even {
+          background-color: $platform-comparison-table-row-mobile-background-color;
+        }
+      }
+
+      td {
+        padding: $platform-comparison-inner-table-cell-mobile-padding;
+        width: $platform-comparison-inner-table-cell-mobile-width;
+
+        &:first-child {
+          position: relative;
+        }
+      }
+
+      p {
+        padding-left: $platform-comparison-inner-table-cell-description-mobile-padding;
+      }
+    }
+  }
+}

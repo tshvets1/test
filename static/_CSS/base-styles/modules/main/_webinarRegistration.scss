@@ -1,0 +1,206 @@
+.webinar-registration {
+
+  $webinar-registration-headline-font: 30 400 1 !default;
+  $webinar-registration-headline-color: $color-primary-3 !default;
+  $webinar-registration-subheadline-font: 16 !default;
+  $webinar-registration-date-color: $color-primary-3 !default;
+  $webinar-registration-selected-date-wrapper-border-color: $color-secondary-7 !default;
+  $webinar-registration-selected-date-wrapper-color: $color-secondary-7 !default;
+
+  $webinar-registration-padding: 40px 0 !default;
+  $webinar-registration-row-padding: 50px 0 !default;
+  $webinar-registration-col-left-width: 33.3333% !default;
+  $webinar-registration-col-right-width: 66.6667% !default;
+  $webinar-registration-col-padding: 10px !default;
+  $webinar-registration-icon-size: 45px !default;
+  $webinar-registration-icon-margin: 0 0 20px !default;
+  $webinar-registration-headline-margin: 0 0 20px !default;
+  $webinar-registration-date-width: percentage(1/3) !default;
+  $webinar-registration-date-wrapper-padding: 10px !default;
+  $webinar-registration-date-wrapper-margin: 0 5px 10px !default;
+  $webinar-registration-error-position: -30px auto auto 15% !default;
+
+  $webinar-registration-tablet-only-padding: 0 80px !default;
+  $webinar-registration-disclaimer-tablet-only-padding: 0 40px !default;
+  $webinar-registration-headline-tablet-margin: 0 0 10px !default;
+  $webinar-registration-sub-headline-tablet-margin: 0 0 40px !default;
+  $webinar-registration-icon-tablet-margin: 0 auto 20px !default;
+
+  $webinar-registration-date-mobile-width: percentage(1/2) !default;
+  $webinar-registration-disclaimer-mobile-margin: 20px 0 0 !default;
+
+  $webinar-registration-row-border: solid 1px $color-light !default;
+  $webinar-registration-date-wrapper-border: solid 3px $color-light !default;
+  $webinar-registration-date-wrapper-mobile-border: solid 2px $color-light !default;
+
+  $webinar-registration-date-wrapper-font: null null null uppercase center !default;
+  $webinar-registration-date-font: 16 600 !default;
+  $webinar-registration-time-font: 14 !default;
+
+  $webinar-registration-date-mobile-font: 14 !default;
+  $webinar-registration-time-mobile-font: null !default;
+
+  &-section {
+    padding: $webinar-registration-padding;
+  }
+
+  &__row {
+    width: 100%;
+    padding: $webinar-registration-row-padding;
+    clear: both;
+
+    &:first-child {
+      border-bottom: $webinar-registration-row-border;
+      overflow: auto;
+    }
+  }
+
+  &__col-left {
+    width: $webinar-registration-col-left-width;
+    float: left;
+    padding-right: $webinar-registration-col-padding;
+  }
+
+  &__col-right {
+    width: $webinar-registration-col-right-width;
+    position: relative;
+    float: left;
+    padding-left: $webinar-registration-col-padding;
+  }
+
+  &__number-icon {
+    @include size($webinar-registration-icon-size...);
+    margin: $webinar-registration-icon-margin;
+  }
+
+  &__headline {
+    @include set-text-styles($webinar-registration-headline-font...);
+    color: $webinar-registration-headline-color;
+    margin: $webinar-registration-headline-margin;
+  }
+
+  &__sub-headline {
+    @include set-text-styles($webinar-registration-subheadline-font...);
+  }
+
+  &__webinar-error {
+    @extend .form-validation-message;
+    @extend .inverse;
+
+    @include position($webinar-registration-error-position...);
+  }
+
+  &__webinar-date {
+    width: $webinar-registration-date-width;
+    float: left;
+    color: $webinar-registration-date-color;
+    cursor: pointer;
+
+    &-wrapper {
+      padding: $webinar-registration-date-wrapper-padding;
+      margin: $webinar-registration-date-wrapper-margin;
+      border: $webinar-registration-date-wrapper-border;
+      @include set-text-styles($webinar-registration-date-wrapper-font...);
+      @include transition(border, $transitionDurationAndEffect);
+
+      & > div {
+        @include transition(color, $transitionDurationAndEffect);
+      }
+    }
+
+    &.selected &-wrapper {
+      border-color: $webinar-registration-selected-date-wrapper-border-color;
+
+      & > div {
+        color: $webinar-registration-selected-date-wrapper-color;
+      }
+    }
+
+    @at-root .no-touch &:hover {
+      .webinar-registration__webinar-date-wrapper {
+        border-color: $webinar-registration-selected-date-wrapper-border-color;
+
+        & > div {
+          color: $webinar-registration-selected-date-wrapper-color;
+        }
+      }
+    }
+  }
+
+  &__date {
+    @include set-text-styles($webinar-registration-date-font...);
+  }
+
+  &__time {
+    @include set-text-styles($webinar-registration-time-font...);
+  }
+
+  @media screen and (max-width: $tablet) and (min-width: $mobile) {
+    &-section > .wrapper {
+      padding: $webinar-registration-tablet-only-padding;
+    }
+
+    &__form {
+      form {
+        text-align: center;
+
+        & > * {
+          text-align: left;
+        }
+      }
+
+      .form-submit {
+        margin-left: 0;
+      }
+
+      .form-disclaimer {
+        margin: $webinar-registration-disclaimer-tablet-only-padding;
+      }
+    }
+  }
+
+  @media screen and (max-width: $tablet) {
+    &__col-left,
+    &__col-right {
+      width: 100%;
+      text-align: center;
+      padding: 0;
+    }
+
+    &__headline {
+      margin: $webinar-registration-headline-tablet-margin;
+    }
+
+    &__sub-headline {
+      margin: $webinar-registration-sub-headline-tablet-margin;
+    }
+
+    &__number-icon {
+      margin: $webinar-registration-icon-tablet-margin;
+    }
+  }
+
+  @media screen and (max-width: $mobile) {
+    &__webinar-date {
+      width: $webinar-registration-date-mobile-width;
+
+      &-wrapper {
+        border: $webinar-registration-date-wrapper-mobile-border;
+      }
+    }
+
+    &__date {
+      @include set-text-styles($webinar-registration-date-mobile-font...);
+    }
+
+    &__time {
+      @include set-text-styles($webinar-registration-time-mobile-font...);
+    }
+
+    &__form {
+      .form-disclaimer {
+        margin: $webinar-registration-disclaimer-mobile-margin;
+      }
+    }
+  }
+}

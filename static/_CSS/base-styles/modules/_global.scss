@@ -1,0 +1,260 @@
+html {
+  font-size: 62.5%;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  @include body-copy;
+  overflow-x: hidden;
+
+  @if ($old-ie) {
+    min-width: $tablet;
+    overflow: visible;
+  } @else {
+    //touch-action: manipulation;
+  }
+  @include font-family;
+}
+
+.subheading {
+  @include subheading;
+}
+
+.promo-title {
+  @include promo-title;
+}
+
+.body-copy {
+  @include body-copy;
+}
+
+.callout-copy {
+  @include callout-copy;
+}
+
+.subtitle {
+  @include subtitle;
+}
+
+.cta-link {
+  @extend %cta-link;
+  @include cta-link-theme;
+
+  @media screen and (max-width: $mobile) {
+    @include set-text-styles($cta-link-mobile-font...);
+
+    &:after {
+      font-size: 16px;
+      margin: $cta-link-arrow-mobile-margin;
+      border-width: $cta-link-arrow-mobile-size;
+      border-left-width: if($cta-link-arrow-mobile-size, $cta-link-arrow-mobile-size*2, null);
+    }
+  }
+}
+
+.cta-btn {
+  &--no-arrow {
+    padding: $cta-btn-padding-no-arrow;
+
+    &:after {
+      content: none !important;
+    }
+  }
+
+  @media screen and (max-width: $cta-btn-full-width-breakpoint) {
+    float: none;
+    display: block;
+    width: 100%;
+  }
+}
+
+.cta-btn-group {
+  overflow: hidden;
+
+  & > .cta-btn {
+    margin-right: $gutter*1.5;
+    float: left;
+  }
+
+  @media screen and (max-width: $cta-btn-full-width-breakpoint) {
+    & > .cta-btn {
+      margin-right: 0;
+      float: none;
+    }
+  }
+}
+
+.article-date {
+  @include rem(font-size, 12);
+  text-transform: uppercase;
+  color: $color-darker;
+  @media screen and (max-width: $mobile) {
+    @include rem(font-size, 10);
+  }
+}
+
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  margin: 0;
+  letter-spacing: -.03em !important;
+}
+
+p {
+  margin: 1em 0;
+}
+
+a {
+  color: $color-link;
+}
+
+a:hover {
+  color: $color-link-hover;
+}
+
+a.disable-href {
+  color: $disable-href-color;
+
+  &:after {
+    display: none !important;
+  }
+
+  &:hover {
+    color: $disable-href-color;
+  }
+}
+
+a:focus {
+  outline: 0;
+}
+
+a, a:after, a:before, button:not(.no-transition), p, span, span:after, tr, i, i:after, li, strong, strong:after {
+  @include transition(color background border, $transitionDurationAndEffect);
+}
+
+svg * {
+  @include transition(stroke, $transitionDurationAndEffect)
+}
+
+@if ($old-ie) {
+  svg,
+  img[src*=".svg"] {
+    display: none;
+  }
+}
+
+.no-transition {
+  @include transition(none, null);
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+  height: auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+
+// DATA TABLES
+.data-table {
+  @include rem(font-size, 14);
+  width: 100%;
+  margin: $gutter*2 0;
+
+  tbody {
+    tr {
+      background-color: $color-lightest;
+
+      &:nth-child(odd) {
+        background-color: $color-light;
+      }
+
+      &:hover {
+        background-color: $color-medium;
+      }
+    }
+  }
+
+  thead {
+    tr {
+      background-color: $color-lightest;
+    }
+  }
+
+  caption {
+    padding: $gutter*1.5;
+    text-align: left;
+    font-weight: 700;
+    text-transform: uppercase;
+    background-color: $color-lightest;
+
+    + thead {
+      tr {
+        background-color: $color-light;
+      }
+
+      + tbody {
+        tr {
+          background-color: $color-light;
+
+          &:nth-child(odd) {
+            background-color: $color-lightest;
+          }
+
+          &:hover {
+            background-color: $color-medium;
+          }
+        }
+      }
+    }
+  }
+
+  @if ($old-ie) {
+    tr {
+      background-color: $color-white !important;
+      border-bottom: solid 1px $color-light;
+    }
+  }
+
+  th,
+  td {
+    padding: $gutter*1.5 $gutter*2;
+    text-align: left;
+    font-weight: 400;
+    line-height: 1.4;
+  }
+
+  th {
+    @include rem(font-size, 12);
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+}
+
+// END DATA TABLES
+
+@media screen and (max-width: $mobile) {
+  body {
+    @include rem(font-size, 14);
+  }
+
+  %page-title {
+    @include rem(font-size, 36);
+    line-height: 1.1;
+  }
+}

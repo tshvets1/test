@@ -1,0 +1,588 @@
+{
+  "d": [
+	{
+	  "Product": "GBP/USD",
+	  "AliasName": "GBP/USD",
+	  "Bid": "1.29684",
+	  "ClosingBid": null,
+	  "ContractPair": null,
+	  "CounterPair": null,
+	  "Decimals": "5",
+	  "High": "1.29712",
+	  "Low": "1.29271",
+	  "Ask": "1.29708",
+	  "ChangeInPoints": "0.00314",
+	  "ChangeInPercentage": "0.24%",
+	  "Direction": "Up",
+	  "Mid": "1.29696",
+	  "MarketId": 401152623,
+	  "MarketType": "FX",
+	  "ProductUniqueID": "401152623",
+	  "MedianSpread": "2.4",
+	  "DecimalPlaces": 5,
+	  "MinTradeSize": 1000,
+	  "MinPhoneTradeSize": 5000,
+	  "MaxTradeSize": 50000000,
+	  "PipValue": "1.00000",
+	  "ContractSizePerPip": null,
+	  "DefaultMargin": "2.00000000",
+	  "MinimumMarginFactor": "",
+	  "MinStopDistance": "0.00010",
+	  "MinGuaranteedStopDistance": "50.00000",
+	  "ExpiryDate": "",
+	  "LastDealingDateTime": null,
+	  "ConvertPriceToPipsMultiplier": 10000,
+	  "Short": -0.01,
+	  "Long": -0.34
+	},
+	{
+	  "Product": "USD/JPY",
+	  "AliasName": "USD/JPY",
+	  "Bid": "111.382",
+	  "ClosingBid": null,
+	  "ContractPair": null,
+	  "CounterPair": null,
+	  "Decimals": "3",
+	  "High": "111.606",
+	  "Low": "111.114",
+	  "Ask": "111.394",
+	  "ChangeInPoints": "-0.100",
+	  "ChangeInPercentage": "-0.09%",
+	  "Direction": "Up",
+	  "Mid": "111.388",
+	  "MarketId": 401138125,
+	  "MarketType": "FX",
+	  "ProductUniqueID": "401138125",
+	  "MedianSpread": "1.2",
+	  "DecimalPlaces": 3,
+	  "MinTradeSize": 1000,
+	  "MinPhoneTradeSize": 5000,
+	  "MaxTradeSize": 50000000,
+	  "PipValue": "1.00000",
+	  "ContractSizePerPip": null,
+	  "DefaultMargin": "2.00000000",
+	  "MinimumMarginFactor": "",
+	  "MinStopDistance": "0.01400",
+	  "MinGuaranteedStopDistance": "50.00000",
+	  "ExpiryDate": "",
+	  "LastDealingDateTime": null,
+	  "ConvertPriceToPipsMultiplier": 10000,
+	  "Short": -0.34,
+	  "Long": 0.02
+	},
+	{
+	  "Product": "EUR/GBP",
+	  "AliasName": "EUR/GBP",
+	  "Bid": "0.85853",
+	  "ClosingBid": null,
+	  "ContractPair": null,
+	  "CounterPair": null,
+	  "Decimals": "5",
+	  "High": "0.85938",
+	  "Low": "0.85721",
+	  "Ask": "0.85866",
+	  "ChangeInPoints": "0.00046",
+	  "ChangeInPercentage": "0.05%",
+	  "Direction": "Down",
+	  "Mid": "0.858595",
+	  "MarketId": 401152622,
+	  "MarketType": "FX",
+	  "ProductUniqueID": "401152622",
+	  "MedianSpread": "1.3",
+	  "DecimalPlaces": 5,
+	  "MinTradeSize": 1000,
+	  "MinPhoneTradeSize": 1000,
+	  "MaxTradeSize": 50000000,
+	  "PipValue": "1.00000",
+	  "ContractSizePerPip": null,
+	  "DefaultMargin": "2.00000000",
+	  "MinimumMarginFactor": "",
+	  "MinStopDistance": "0.00014",
+	  "MinGuaranteedStopDistance": "50.00000",
+	  "ExpiryDate": "",
+	  "LastDealingDateTime": null,
+	  "ConvertPriceToPipsMultiplier": 10000,
+	  "Short": -0.01,
+	  "Long": -0.28
+	},
+	{
+	  "Product": "AUD/USD",
+	  "AliasName": "AUD/USD",
+	  "Bid": "0.74326",
+	  "ClosingBid": null,
+	  "ContractPair": null,
+	  "CounterPair": null,
+	  "Decimals": "5",
+	  "High": "0.74416",
+	  "Low": "0.74066",
+	  "Ask": "0.74342",
+	  "ChangeInPoints": "0.00148",
+	  "ChangeInPercentage": "0.20%",
+	  "Direction": "Up",
+	  "Mid": "0.74334",
+	  "MarketId": 401152620,
+	  "MarketType": "FX",
+	  "ProductUniqueID": "401152620",
+	  "MedianSpread": "1.6",
+	  "DecimalPlaces": 5,
+	  "MinTradeSize": 1000,
+	  "MinPhoneTradeSize": 5000,
+	  "MaxTradeSize": 50000000,
+	  "PipValue": "1.00000",
+	  "ContractSizePerPip": null,
+	  "DefaultMargin": "2.00000000",
+	  "MinimumMarginFactor": "",
+	  "MinStopDistance": "0.00010",
+	  "MinGuaranteedStopDistance": "50.00000",
+	  "ExpiryDate": "",
+	  "LastDealingDateTime": null,
+	  "ConvertPriceToPipsMultiplier": 10000,
+	  "Short": -0.23,
+	  "Long": 0.03
+	},
+	{
+	  "Product": "USD/CAD",
+	  "AliasName": "USD/CAD",
+	  "Bid": "1.35934",
+	  "ClosingBid": null,
+	  "ContractPair": null,
+	  "CounterPair": null,
+	  "Decimals": "5",
+	  "High": "1.36109",
+	  "Low": "1.35842",
+	  "Ask": "1.35950",
+	  "ChangeInPoints": "-0.00094",
+	  "ChangeInPercentage": "-0.07%",
+	  "Direction": "Up",
+	  "Mid": "1.35942",
+	  "MarketId": 401152625,
+	  "MarketType": "FX",
+	  "ProductUniqueID": "401152625",
+	  "MedianSpread": "1.6",
+	  "DecimalPlaces": 5,
+	  "MinTradeSize": 1000,
+	  "MinPhoneTradeSize": 5000,
+	  "MaxTradeSize": 50000000,
+	  "PipValue": "1.00000",
+	  "ContractSizePerPip": null,
+	  "DefaultMargin": "2.00000000",
+	  "MinimumMarginFactor": "",
+	  "MinStopDistance": "0.00018",
+	  "MinGuaranteedStopDistance": "50.00000",
+	  "ExpiryDate": "",
+	  "LastDealingDateTime": null,
+	  "ConvertPriceToPipsMultiplier": 10000,
+	  "Short": -0.17,
+	  "Long": -0.12
+	},
+	{
+	  "__type": "Facade.BLL.Web.Models.FacadeMostPopularLiveSpreads",
+	  "Product": "AUD/CAD",
+	  "MedianSpread": "3.1",
+	  "AliasName": "AUD/CAD",
+	  "Bid": null,
+	  "Ask": null
+	},
+	{
+	  "__type": "Facade.BLL.Web.Models.FacadeMostPopularLiveSpreads",
+	  "Product": "AUD/CHF",
+	  "MedianSpread": "3.7",
+	  "AliasName": "AUD/CHF",
+	  "Bid": null,
+	  "Ask": null
+	},
+	{
+	  "__type": "Facade.BLL.Web.Models.FacadeMostPopularLiveSpreads",
+	  "Product": "AUD/JPY",
+	  "MedianSpread": "2.0",
+	  "AliasName": "AUD/JPY",
+	  "Bid": null,
+	  "Ask": null
+	},
+	{
+	  "__type": "Facade.BLL.Web.Models.FacadeMostPopularLiveSpreads",
+	  "Product": "AUD/NZD",
+	  "MedianSpread": "4.1",
+	  "AliasName": "AUD/NZD",
+	  "Bid": null,
+	  "Ask": null
+	},
+	{
+	  "__type": "Facade.BLL.Web.Models.FacadeMostPopularLiveSpreads",
+	  "Product": "CAD/CHF",
+	  "MedianSpread": "4.0",
+	  "AliasName": "CAD/CHF",
+	  "Bid": null,
+	  "Ask": null
+	},
+	{
+	  "__type": "Facade.BLL.Web.Models.FacadeMostPopularLiveSpreads",
+	  "Product": "CAD/JPY",
+	  "MedianSpread": "2.6",
+	  "AliasName": "CAD/JPY",
+	  "Bid": null,
+	  "Ask": null
+	},
+	{
+	  "__type": "Facade.BLL.Web.Models.FacadeMostPopularLiveSpreads",
+	  "Product": "CHF/JPY",
+	  "MedianSpread": "3.1",
+	  "AliasName": "CHF/JPY",
+	  "Bid": null,
+	  "Ask": null
+	},
+	{
+	  "__type": "Facade.BLL.Web.Models.FacadeMostPopularLiveSpreads",
+	  "Product": "EUR/AUD",
+	  "MedianSpread": "3.4",
+	  "AliasName": "EUR/AUD",
+	  "Bid": null,
+	  "Ask": null
+	},
+	{
+	  "__type": "Facade.BLL.Web.Models.FacadeMostPopularLiveSpreads",
+	  "Product": "EUR/CAD",
+	  "MedianSpread": "3.5",
+	  "AliasName": "EUR/CAD",
+	  "Bid": null,
+	  "Ask": null
+	},
+	{
+	  "__type": "Facade.BLL.Web.Models.FacadeMostPopularLiveSpreads",
+	  "Product": "EUR/CHF",
+	  "MedianSpread": "2.5",
+	  "AliasName": "EUR/CHF",
+	  "Bid": null,
+	  "Ask": null
+	},
+	{
+	  "__type": "Facade.BLL.Web.Models.FacadeMostPopularLiveSpreads",
+	  "Product": "EUR/CZK",
+	  "MedianSpread": "61.0",
+	  "AliasName": "EUR/CZK",
+	  "Bid": null,
+	  "Ask": null
+	},
+	{
+	  "__type": "Facade.BLL.Web.Models.FacadeMostPopularLiveSpreads",
+	  "Product": "EUR/DKK",
+	  "MedianSpread": "5.0",
+	  "AliasName": "EUR/DKK",
+	  "Bid": null,
+	  "Ask": null
+	},
+	{
+	  "__type": "Facade.BLL.Web.Models.FacadeMostPopularLiveSpreads",
+	  "Product": "EUR/HUF",
+	  "MedianSpread": "14.1",
+	  "AliasName": "EUR/HUF",
+	  "Bid": null,
+	  "Ask": null
+	},
+	{
+	  "__type": "Facade.BLL.Web.Models.FacadeMostPopularLiveSpreads",
+	  "Product": "EUR/JPY",
+	  "MedianSpread": "2.7",
+	  "AliasName": "EUR/JPY",
+	  "Bid": null,
+	  "Ask": null
+	},
+	{
+	  "__type": "Facade.BLL.Web.Models.FacadeMostPopularLiveSpreads",
+	  "Product": "EUR/NOK",
+	  "MedianSpread": "32.8",
+	  "AliasName": "EUR/NOK",
+	  "Bid": null,
+	  "Ask": null
+	},
+	{
+	  "__type": "Facade.BLL.Web.Models.FacadeMostPopularLiveSpreads",
+	  "Product": "EUR/NZD",
+	  "MedianSpread": "8.3",
+	  "AliasName": "EUR/NZD",
+	  "Bid": null,
+	  "Ask": null
+	},
+	{
+	  "__type": "Facade.BLL.Web.Models.FacadeMostPopularLiveSpreads",
+	  "Product": "EUR/PLN",
+	  "MedianSpread": "23.0",
+	  "AliasName": "EUR/PLN",
+	  "Bid": null,
+	  "Ask": null
+	},
+	{
+	  "__type": "Facade.BLL.Web.Models.FacadeMostPopularLiveSpreads",
+	  "Product": "EUR/SEK",
+	  "MedianSpread": "30.0",
+	  "AliasName": "EUR/SEK",
+	  "Bid": null,
+	  "Ask": null
+	},
+	{
+	  "__type": "Facade.BLL.Web.Models.FacadeMostPopularLiveSpreads",
+	  "Product": "EUR/TRY",
+	  "MedianSpread": "39.8",
+	  "AliasName": "EUR/TRY",
+	  "Bid": null,
+	  "Ask": null
+	},
+	{
+	  "__type": "Facade.BLL.Web.Models.FacadeMostPopularLiveSpreads",
+	  "Product": "EUR/USD",
+	  "MedianSpread": "1.8",
+	  "AliasName": "EUR/USD",
+	  "Bid": "1.07355",
+	  "Ask": "1.07373",
+	  "ChangeInPercentage": "-0.25%"
+	},
+	{
+	  "__type": "Facade.BLL.Web.Models.FacadeMostPopularLiveSpreads",
+	  "Product": "GBP/AUD",
+	  "MedianSpread": "4.8",
+	  "AliasName": "GBP/AUD",
+	  "Bid": null,
+	  "Ask": null
+	},
+	{
+	  "__type": "Facade.BLL.Web.Models.FacadeMostPopularLiveSpreads",
+	  "Product": "GBP/CAD",
+	  "MedianSpread": "5.6",
+	  "AliasName": "GBP/CAD",
+	  "Bid": null,
+	  "Ask": null
+	},
+	{
+	  "__type": "Facade.BLL.Web.Models.FacadeMostPopularLiveSpreads",
+	  "Product": "GBP/CHF",
+	  "MedianSpread": "4.5",
+	  "AliasName": "GBP/CHF",
+	  "Bid": null,
+	  "Ask": null
+	},
+	{
+	  "__type": "Facade.BLL.Web.Models.FacadeMostPopularLiveSpreads",
+	  "Product": "GBP/JPY",
+	  "MedianSpread": "4.2",
+	  "AliasName": "GBP/JPY",
+	  "Bid": null,
+	  "Ask": null
+	},
+	{
+	  "__type": "Facade.BLL.Web.Models.FacadeMostPopularLiveSpreads",
+	  "Product": "GBP/NZD",
+	  "MedianSpread": "6.7",
+	  "AliasName": "GBP/NZD",
+	  "Bid": null,
+	  "Ask": null
+	},
+	{
+	  "__type": "Facade.BLL.Web.Models.FacadeMostPopularLiveSpreads",
+	  "Product": "NZD/CAD",
+	  "MedianSpread": "7.7",
+	  "AliasName": "NZD/CAD",
+	  "Bid": null,
+	  "Ask": null
+	},
+	{
+	  "__type": "Facade.BLL.Web.Models.FacadeMostPopularLiveSpreads",
+	  "Product": "NZD/CHF",
+	  "MedianSpread": "5.8",
+	  "AliasName": "NZD/CHF",
+	  "Bid": null,
+	  "Ask": null
+	},
+	{
+	  "__type": "Facade.BLL.Web.Models.FacadeMostPopularLiveSpreads",
+	  "Product": "NZD/JPY",
+	  "MedianSpread": "3.6",
+	  "AliasName": "NZD/JPY",
+	  "Bid": null,
+	  "Ask": null
+	},
+	{
+	  "__type": "Facade.BLL.Web.Models.FacadeMostPopularLiveSpreads",
+	  "Product": "NZD/USD",
+	  "MedianSpread": "2.7",
+	  "AliasName": "NZD/USD",
+	  "Bid": null,
+	  "Ask": null
+	},
+	{
+	  "__type": "Facade.BLL.Web.Models.FacadeMostPopularLiveSpreads",
+	  "Product": "SGD/JPY",
+	  "MedianSpread": "6.3",
+	  "AliasName": "SGD/JPY",
+	  "Bid": null,
+	  "Ask": null
+	},
+	{
+	  "__type": "Facade.BLL.Web.Models.FacadeMostPopularLiveSpreads",
+	  "Product": "USD/CHF",
+	  "MedianSpread": "1.8",
+	  "AliasName": "USD/CHF",
+	  "Bid": null,
+	  "Ask": null
+	},
+	{
+	  "__type": "Facade.BLL.Web.Models.FacadeMostPopularLiveSpreads",
+	  "Product": "USD/CNH",
+	  "MedianSpread": "26.0",
+	  "AliasName": "USD/CNH",
+	  "Bid": null,
+	  "Ask": null
+	},
+	{
+	  "__type": "Facade.BLL.Web.Models.FacadeMostPopularLiveSpreads",
+	  "Product": "USD/CZK",
+	  "MedianSpread": "61.0",
+	  "AliasName": "USD/CZK",
+	  "Bid": null,
+	  "Ask": null
+	},
+	{
+	  "__type": "Facade.BLL.Web.Models.FacadeMostPopularLiveSpreads",
+	  "Product": "USD/DKK",
+	  "MedianSpread": "8.7",
+	  "AliasName": "USD/DKK",
+	  "Bid": null,
+	  "Ask": null
+	},
+	{
+	  "__type": "Facade.BLL.Web.Models.FacadeMostPopularLiveSpreads",
+	  "Product": "USD/HKD",
+	  "MedianSpread": "4.4",
+	  "AliasName": "USD/HKD",
+	  "Bid": null,
+	  "Ask": null
+	},
+	{
+	  "__type": "Facade.BLL.Web.Models.FacadeMostPopularLiveSpreads",
+	  "Product": "USD/HUF",
+	  "MedianSpread": "17.9",
+	  "AliasName": "USD/HUF",
+	  "Bid": null,
+	  "Ask": null
+	},
+	{
+	  "__type": "Facade.BLL.Web.Models.FacadeMostPopularLiveSpreads",
+	  "Product": "USD/MXN",
+	  "MedianSpread": "71.4",
+	  "AliasName": "USD/MXN",
+	  "Bid": null,
+	  "Ask": null
+	},
+	{
+	  "__type": "Facade.BLL.Web.Models.FacadeMostPopularLiveSpreads",
+	  "Product": "USD/NOK",
+	  "MedianSpread": "31.0",
+	  "AliasName": "USD/NOK",
+	  "Bid": null,
+	  "Ask": null
+	},
+	{
+	  "__type": "Facade.BLL.Web.Models.FacadeMostPopularLiveSpreads",
+	  "Product": "USD/PLN",
+	  "MedianSpread": "22.0",
+	  "AliasName": "USD/PLN",
+	  "Bid": null,
+	  "Ask": null
+	},
+	{
+	  "__type": "Facade.BLL.Web.Models.FacadeMostPopularLiveSpreads",
+	  "Product": "USD/RUB",
+	  "MedianSpread": "1269.0",
+	  "AliasName": "USD/RUB",
+	  "Bid": null,
+	  "Ask": null
+	},
+	{
+	  "__type": "Facade.BLL.Web.Models.FacadeMostPopularLiveSpreads",
+	  "Product": "USD/SEK",
+	  "MedianSpread": "33.0",
+	  "AliasName": "USD/SEK",
+	  "Bid": null,
+	  "Ask": null
+	},
+	{
+	  "__type": "Facade.BLL.Web.Models.FacadeMostPopularLiveSpreads",
+	  "Product": "USD/SGD",
+	  "MedianSpread": "6.3",
+	  "AliasName": "USD/SGD",
+	  "Bid": null,
+	  "Ask": null
+	},
+	{
+	  "__type": "Facade.BLL.Web.Models.FacadeMostPopularLiveSpreads",
+	  "Product": "USD/TRY",
+	  "MedianSpread": "34.0",
+	  "AliasName": "USD/TRY",
+	  "Bid": null,
+	  "Ask": null
+	},
+	{
+	  "__type": "Facade.BLL.Web.Models.FacadeMostPopularLiveSpreads",
+	  "Product": "USD/ZAR",
+	  "MedianSpread": "81.0",
+	  "AliasName": "USD/ZAR",
+	  "Bid": null,
+	  "Ask": null
+	},
+	{
+	  "__type": "Facade.BLL.Web.Models.FacadeMostPopularLiveSpreads",
+	  "Product": "XAG/USD",
+	  "MedianSpread": "3.1",
+	  "AliasName": "XAG/USD",
+	  "Bid": null,
+	  "Ask": null
+	},
+	{
+	  "__type": "Facade.BLL.Web.Models.FacadeMostPopularLiveSpreads",
+	  "Product": "XAU/AUD",
+	  "MedianSpread": "61.0",
+	  "AliasName": "XAU/AUD",
+	  "Bid": null,
+	  "Ask": null
+	},
+	{
+	  "__type": "Facade.BLL.Web.Models.FacadeMostPopularLiveSpreads",
+	  "Product": "XAU/CHF",
+	  "MedianSpread": "61.0",
+	  "AliasName": "XAU/CHF",
+	  "Bid": null,
+	  "Ask": null
+	},
+	{
+	  "__type": "Facade.BLL.Web.Models.FacadeMostPopularLiveSpreads",
+	  "Product": "XAU/EUR",
+	  "MedianSpread": "61.0",
+	  "AliasName": "XAU/EUR",
+	  "Bid": null,
+	  "Ask": null
+	},
+	{
+	  "__type": "Facade.BLL.Web.Models.FacadeMostPopularLiveSpreads",
+	  "Product": "XAU/GBP",
+	  "MedianSpread": "61.0",
+	  "AliasName": "XAU/GBP",
+	  "Bid": null,
+	  "Ask": null
+	},
+	{
+	  "__type": "Facade.BLL.Web.Models.FacadeMostPopularLiveSpreads",
+	  "Product": "XAU/USD",
+	  "MedianSpread": "45.0",
+	  "AliasName": "XAU/USD",
+	  "Bid": null,
+	  "Ask": null
+	},
+	{
+	  "__type": "Facade.BLL.Web.Models.FacadeMostPopularLiveSpreads",
+	  "Product": "ZAR/JPY",
+	  "MedianSpread": "2.7",
+	  "AliasName": "ZAR/JPY",
+	  "Bid": null,
+	  "Ask": null
+	}
+  ]
+}

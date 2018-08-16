@@ -1,0 +1,51 @@
+.most-active-markets {
+  position: relative;
+  @extend %primary-content-wrapper;
+
+  &__headline {
+    @include set-text-styles($most-active-markets-headline-font...);
+    display: inline-block;
+    float: left;
+  }
+
+  &__tabs-list {
+    margin: $most-active-markets-tabs-list-margin;
+
+    &-wrapper {
+      @extend %rightRailDropdown;
+
+      float: right;
+      width: inherit;
+    }
+  }
+
+  &__tabs-select {
+    display: none;
+  }
+
+  &__tabs-content {
+    clear: both;
+  }
+
+  .pie {
+    canvas {
+      margin: 0 0 0 5px;
+    }
+  }
+
+  //MOBILE
+  @media screen and (max-width: $mobile) {
+    &__headline {
+      @include set-text-styles($most-active-markets-mobile-headline-font...);
+      margin: $most-active-markets-mobile-headline-padding;
+    }
+
+    &__tabs-list-wrapper {
+      padding-bottom: $most-active-markets-tabs-list-wrapper-padding;
+    }
+
+    &__tabs-list {
+      display: none;
+    }
+  }
+}

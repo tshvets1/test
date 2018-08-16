@@ -1,0 +1,73 @@
+.help-links {
+  &__heading {
+    @include set-text-styles($footer-help-links-headline-font...);
+    display: inline-block;
+    vertical-align: middle;
+    margin: $footer-help-links-headline-margin;
+  }
+
+  &__list {
+    @extend %list--inline;
+    @include set-text-styles($footer-help-links-list-font...);
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  &__link {
+    text-decoration: none;
+    margin: $footer-help-links-link-margin;
+
+    @at-root footer & {
+      @include underline($footer-help-links-underline...);
+    }
+  }
+  &__icon {
+    display: inline-block;
+    @include size($footer-help-links-icon-size...);
+    margin: $footer-help-links-margin;
+    vertical-align: baseline;
+    overflow: hidden;
+
+    img {
+      height: 100%;
+      max-width: 100%;
+    }
+
+    + * {
+      display: inline-block;
+    }
+  }
+
+  @media screen and (max-width: $tablet) {
+    &__heading {
+      @include set-text-styles($footer-help-links-headline-tablet-font...);
+    }
+
+    &__list {
+      @include set-text-styles($footer-help-links-list-tablet-font...);
+    }
+
+    &__icon {
+      @include size($footer-help-links-icon-tablet-size...);
+    }
+  }
+
+  @media screen and (max-width: $mobile) {
+    &__heading {
+      display: block;
+      margin: $footer-help-links-headline-mobile-margin;
+      @include set-text-styles($footer-help-links-headline-mobile-font...);
+    }
+
+    &__list {
+      @include set-text-styles($footer-help-links-list-mobile-font...);
+    }
+
+    &__link {
+      margin: $footer-help-links-link-margin;
+    }
+    &__icon {
+      @include size($footer-help-links-icon-mobile-size...);
+    }
+  }
+}

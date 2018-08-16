@@ -1,0 +1,18 @@
+/* To add line by line background color around inline content */
+@mixin vertical-align-parent {
+  transform-style: preserve-3d;
+}
+
+@mixin vertical-align {
+  position: relative;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+@mixin vertical-align-undo {
+  position: relative;
+  top: auto;
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+}

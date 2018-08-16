@@ -1,0 +1,20 @@
+.article-tags {
+  @include set-text-styles($article-tags-font...);
+
+  a {
+    color: $article-tags-link-color;
+    @include set-text-styles($article-tags-link-font...);
+    text-decoration: none;
+
+    @include underline($article-tags-link-color, 1px, 1px);
+  }
+
+  // WHEN ON ARTICLE DETAIL
+  .rtf + & {
+    padding: $gutter*2 0;
+  }
+
+  @media screen and (max-width: $mobile) {
+      @include set-text-styles($article-tags-mobile-font...);
+  }
+}

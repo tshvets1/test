@@ -1,0 +1,183 @@
+.current-rates {
+  $current-rates-headline-font-size: 16 !default;
+  $current-rates-headline-mobile-font-size: 14 !default;
+
+  $current-rates-color: $color-darker !default;
+  $current-rates-inverse-color: $color-white !default;
+  $current-rates-inverse-link-color: $color-white !default;
+  $current-rates-inverse-link-hover-color: $color-white !default;
+
+  $current-rates-inverse-border: solid 1px $color-white;
+  $current-rates-inverse-dropdown-border: $color-secondary-7 !important !default;
+  $current-rates-inverse-link-underline: ($current-rates-inverse-link-hover-color, 1px) !default;
+
+  display: inline-block;
+
+  &__headline {
+    display: inline-block;
+    margin: $gutter 0 $gutter*2 0;
+
+    @include rem(font-size, $current-rates-headline-font-size);
+    text-transform: uppercase;
+    font-weight: 600;
+
+    .tooltip {
+      padding-left: $gutter/5;
+    }
+  }
+
+  &__dropdown {
+    @extend %rightRailDropdown;
+
+    margin: $gutter 0;
+  }
+
+  &__table {
+    td {
+      &:last-child {
+        padding-right: $gutter*1.5;
+      }
+
+      &.rates-table__product {
+        width: 31%;
+      }
+    }
+  }
+
+  &__tables {
+    overflow: auto;
+  }
+
+  &-section {
+    text-align: left;
+    color: $current-rates-color;
+
+    .wrapper {
+      text-align: left;
+      padding-top: 0 !important;
+      padding-bottom: 0 !important;
+    }
+
+    &[data-two-tables="true"] {
+      .current-rates {
+        &__table-wrapper {
+          width: 50%;
+          float: left;
+          &:first-child {
+            padding-right: $gutter/2;
+          }
+
+          &:last-child {
+            padding-left: $gutter/2;
+          }
+        }
+      }
+    }
+
+    &[data-two-columns="true"],
+    &[data-two-tables="true"] {
+      .current-rates {
+        &__table {
+          &-product {
+            width: auto;
+          }
+        }
+      }
+    }
+
+    //TRANSPARENT BACKGROUND AND WHITE TEXT
+    &[data-transparentbg="true"] {
+      color: $current-rates-inverse-color;
+
+      .current-rates {
+        &__headline {
+          .tooltip {
+            &:after {
+              color: $current-rates-inverse-color;
+              border-color: $current-rates-inverse-color;
+            }
+          }
+        }
+
+        &__table {
+          a {
+            color: $current-rates-inverse-link-color !important;
+            @include underline($current-rates-inverse-link-underline...);
+          }
+
+          th, td {
+            color: $current-rates-inverse-color;
+          }
+
+          tr {
+            background: none !important;
+          }
+
+          tbody tr {
+            border-top: $current-rates-inverse-border;
+          }
+        }
+      }
+
+      @extend %chosen-select--transparent-button;
+
+      .chosen-container-single {
+        .chosen-single div {
+          border: none;
+        }
+      }
+    }
+  }
+
+  // MOBILE
+  @media screen and (max-width: $mobile) {
+    &__headline {
+      float: left;
+      line-height: 30px;
+      margin: 0 0 $gutter*2;
+      max-width: 60%;
+
+      @include rem(font-size, $current-rates-headline-mobile-font-size);
+    }
+
+    &__table {
+      th:first-child,
+      td:first-child {
+        padding-left: $gutter;
+      }
+    }
+
+    &__tables {
+      clear: both;
+      overflow: visible;
+    }
+
+    &-section {
+      .wrapper {
+        padding: 0 !important;
+        text-align: left !important;
+      }
+
+      &[data-transparentbg="true"] {
+        .custom-select {
+          border: $current-rates-inverse-border;
+          color: $current-rates-inverse-color;
+        }
+      }
+
+      &[data-two-tables="true"] {
+        .current-rates__table-wrapper {
+          width: 100%;
+          float: none;
+          &:first-child {
+            padding-right: 0;
+          }
+
+          &:last-child {
+            padding-left: 0;
+          }
+        }
+      }
+    }
+  }
+}

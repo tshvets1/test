@@ -1,0 +1,136 @@
+.account-forms {
+  $account-forms-headline-font-size: 30;
+  $account-forms-headline-mobile-font-size: 22;
+  $account-forms-headline-color: $color-primary-3;
+  $account-forms-list-border: solid 1px $color-light;
+  $account-forms-link-font-size: 20;
+  $account-forms-link-mobile-font-size: 16;
+  $account-forms-download-font-size: 20px;
+  $account-forms-download-color: $color-primary-3;
+  $account-forms-download-hover-color: $color-secondary-7;
+
+  &__item {
+    position: relative;
+    margin: 0 0 $gutter*3;
+    clear: both;
+
+    &:first-child {
+      margin-top: $primary-content-fix;
+    }
+  }
+
+  &__item-headline {
+    @include rem(font-size, $account-forms-headline-font-size);
+    color: $account-forms-headline-color;
+    margin: 0 0 $gutter*2;
+  }
+
+  &__list {
+    @extend %list--unstyled;
+
+    li {
+      display: table;
+      width: 100%;
+      border-top: $account-forms-list-border;
+    }
+
+    &[data-columns="2"] {
+      li {
+        display: block;
+        float: left;
+        width: 50%;
+      }
+
+      .account-forms__link {
+        display: block;
+      }
+    }
+  }
+
+  &__form {
+    display: table-row;
+  }
+
+  &__link {
+    @include rem(font-size, $account-forms-link-font-size);
+    display: table-cell;
+    position: relative;
+    padding: $gutter*1.5 $gutter $gutter*1.5 $gutter*3.5;
+    line-height: 1.2;
+    text-decoration: none;
+    vertical-align: middle;
+
+    + .apply-online {
+      display: table-cell;
+      text-align: right;
+    }
+
+    // DOWNLOAD LINK ICON
+    .icon-download {
+      position: absolute;
+      left: 0;
+      font-size: $account-forms-download-font-size;
+
+      @if ($old-ie) {
+        margin-top: -$gutter/5;
+      }
+
+      &:after {
+        color: $account-forms-download-color;
+      }
+    }
+
+    &:hover .icon-download:after {
+      color: $account-forms-download-hover-color;
+    }
+  }
+
+  @media screen and (max-width: $tablet) {
+    &__item:first-child {
+      margin-top: 0;
+    }
+  }
+
+  // MOBILE
+  @media screen and (max-width: $mobile) {
+    &__item-headline {
+      @include rem(font-size, $account-forms-headline-mobile-font-size);
+      line-height: 1.4;
+    }
+
+    &__list {
+      li {
+        display: block;
+      }
+
+      &[data-columns="2"] {
+        li {
+          float: none;
+          width: 100%;
+        }
+
+        .account-forms__link {
+          display: block;
+        }
+      }
+    }
+
+    &__form {
+      display: block;
+    }
+
+    &__link {
+      @include rem(font-size, $account-forms-link-mobile-font-size);
+      display: block;
+
+      + .apply-online {
+        display: block;
+      }
+
+      // DOWNLOAD LINK ICON
+      .icon-download {
+        margin-top: -2px;
+      }
+    }
+  }
+}

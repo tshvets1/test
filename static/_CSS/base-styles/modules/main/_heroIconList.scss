@@ -1,0 +1,59 @@
+.hero-two-section[data-icon-list="true"] {
+  .multi-col {
+    &__description {
+      margin: $hero-two-section-icon-list-description-margin;
+      @include set-text-styles($hero-two-section-icon-list-description-font...);
+    }
+
+    &__img {
+      max-height: $hero-two-section-icon-list-multi-col-img-max-height;
+      margin: $hero-two-section-icon-list-multi-col-img-margin;
+    }
+
+    &__content .col {
+      margin: $hero-two-section-icon-list-multi-col-margin;
+      padding: $hero-two-section-icon-list-multi-col-padding;
+      @include set-text-styles($hero-two-section-icon-list-col-font...);
+    }
+  }
+
+  @media screen and (max-width: $tablet) {
+    .multi-col {
+      &__description {
+        margin: $hero-two-section-icon-list-description-tablet-margin;
+        @include set-text-styles($hero-two-section-icon-list-description-tablet-font...);
+      }
+
+      &__content .col {
+        margin: $hero-two-section-icon-list-multi-col-tablet-margin;
+        padding: $hero-two-section-icon-list-multi-col-tablet-padding;
+      }
+
+      &__img {
+        max-height: $hero-two-section-icon-list-multi-col-img-tablet-max-height;
+      }
+    }
+  }
+
+  @media screen and (max-width: $mobile) {
+    .multi-col {
+      &__description {
+        margin: $hero-two-section-icon-list-description-mobile-margin;
+        @include set-text-styles($hero-two-section-icon-list-description-mobile-font...);
+      }
+
+      &__content .col {
+        margin: $hero-two-section-icon-list-multi-col-mobile-margin;
+        padding: $hero-two-section-icon-list-multi-col-mobile-padding;
+      }
+
+      &__img {
+        max-height: $hero-two-section-icon-list-multi-col-img-mobile-max-height;
+      }
+    }
+
+    .cta-btn {
+      margin: 0;
+    }
+  }
+}

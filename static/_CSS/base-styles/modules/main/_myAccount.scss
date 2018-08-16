@@ -1,0 +1,58 @@
+.my-account-login {
+  &-section {
+    .wrapper {
+      padding-top: $gutter*4;
+      padding-bottom: $gutter*4;
+    }
+
+    .my-account-login {
+      &__form {
+        width: 400px;
+        margin: 0 auto;
+
+        &-headline {
+          padding-left: 25%;
+          padding-bottom: $gutter*2;
+          text-transform: uppercase;
+          font-weight: 600;
+        }
+
+        .form-submit {
+          width: auto;
+        }
+      }
+
+      &__sub-form-text {
+        @include rem(font-size, 14);
+        padding-left: 25%;
+        padding-bottom: $gutter*2;
+      }
+
+      @media screen and (max-width: $mobile) {
+        &__form {
+          width: 100%;
+
+          .form-submit {
+            width: 100%;
+          }
+
+          .form-label {
+            display: none;
+          }
+
+          &-headline {
+            padding-left: 0;
+          }
+        }
+
+        &__sub-form-text {
+          padding-left: 0;
+        }
+
+        &__sub-headline {
+          @include rem(font-size, 21)
+        }
+      }
+    }
+  }
+}

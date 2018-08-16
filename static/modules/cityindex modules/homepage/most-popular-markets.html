@@ -1,0 +1,93 @@
+<!--
+  {
+  "name": "Services - Most Popular Markets",
+  "status": "Complete",
+  "notes": "[data-change-up-color][data-change-down-color] are used to set background color of changed value"
+  }
+-->
+
+
+<section class="section-wrapper most-popular-markets-section" data-sectionbg="default"
+		 data-apply-ko="mostPopularMarkets"
+		 data-tabs-options='[{"tabName":"spreadBetting", "shownColumns":"Instrument,Spread,Sell,Buy,Change", "defaultProducts":"EUR/USD,USD/JPY,GBP/USD,AUD/USD", "isLive":true, "tables":"1"}]'
+		 data-change-up-color="black"
+		 data-change-down-color="green"
+		 data-get-products-timeout="3000"
+		 data-current-tab="spreadBetting">
+	<div class="wrapper">
+		<div class="most-popular-markets__tabs">
+			<div class="most-popular-markets__trading-title" data-inherit-sectionbg="true">
+				Indices Product Details
+			</div>
+
+			<h2 class="most-popular-markets__headline">Most popular markets</h2>
+
+			<!-- tabs-list (dropdown) -->
+
+			<!-- /tabs-list -->
+
+			<!-- tabs-content -->
+			<div class="most-popular-markets__tabs-content-wrapper">
+				<div class="most-popular-markets__tabs-content">
+					<!-- tab -->
+					<div class="most-popular-markets__tabs-tab"
+						 data-bind="css: {'active': currentTab()=='spreadBetting'}">
+						<!-- ko with: spreadBetting -->
+						<div class="most-popular-markets__table-wrapper">
+							<div class="most-popular-markets__table" data-columns="1">
+								<table class="rates-table">
+									<thead>
+									<tr>
+										<th class="rates-table__product">Instrument</th>
+										<th class="most-popular-markets__table-spread">Spread</th>
+										<th class="rates-table__concat">
+											Sell <!-- ko if: $root.isMobile() --> /
+												<br>
+												Buy
+											<!-- /ko -->
+										</th>
+										<th class="mobile-hidden">Buy</th>
+										<th>Change (%)</th>
+									</tr>
+									</thead>
+									<tbody>
+									<!-- ko foreach: products1 -->
+									<tr>
+										<td class="rates-table__product"><a href="#" data-bind="text: Product"></a></td>
+										<td class="rates-table__value">
+											<span data-bind="text: MedianSpread, highlight: MedianSpread_prev && MedianSpread!=MedianSpread_prev,
+											highlightClass: MedianSpread<MedianSpread_prev
+											? 'rates-table__value-changed rates-table__value-changed--down'
+											: 'rates-table__value-changed rates-table__value-changed--up'"></span>
+										</td>
+										<td class="rates-table__concat">
+											<span data-bind="text: Bid, css: {'rates-table__value-down' : Bid<Bid_prev, 'rates-table__value-up' : Bid>Bid_prev }"></span>
+											<!-- ko if: $root.isMobile() -->
+												<br>
+												<span data-bind="text: Ask, css: {'rates-table__value-down' : Ask<Ask_prev, 'rates-table__value-up' : Ask>Ask_prev }"></span>
+											<!-- /ko -->
+										</td>
+										<td class="mobile-hidden"
+											data-bind="text: Ask, css: {'rates-table__value-down' : Ask<Ask_prev, 'rates-table__value-up' : Ask>Ask_prev }"></td>
+										<td data-bind="text: ChangeInPercentage"></td>
+									</tr>
+									<!-- /ko -->
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<!-- /ko -->
+
+						<div class="most-popular-markets__trading-sub-title">
+							For full details of all our indices for spread bet and CFD,
+							click here or consult market information in platform.
+						</div>
+					</div>
+					<!-- /tab -->
+				</div>
+			</div>
+			<!-- /tabs-content -->
+		</div>
+		<!-- /tabs -->
+	</div>
+</section>

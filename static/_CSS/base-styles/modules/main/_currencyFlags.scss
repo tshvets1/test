@@ -1,0 +1,44 @@
+//copied from old FOREX.com
+$currency-flags-size: 24px 18px !default;
+$currency-flags-bg-image: url('/_images/ui/flags_medium.gif') !default;
+$currency-flags-options: (
+  (currency: "usd", position: 0 -1px),
+  (currency: "cad", position: 0 -20px),
+  (currency: "chf", position: 0 -39px),
+  (currency: "jpy", position: 0 -58px),
+  (currency: "aud", position: 0 -77px),
+  (currency: "eur", position: 0 -96px),
+  (currency: "gbp", position: 0 -115px),
+  (currency: "nzd", position: 0 -134px),
+  (currency: "dkk", position: 0 -153px),
+  (currency: "hkd", position: 0 -172px),
+  (currency: "sgd", position: 0 -191px),
+  (currency: "nok", position: 0 -210px),
+  (currency: "sek", position: 0 -229px),
+  (currency: "xau", position: 0 -248px),
+  (currency: "xag", position: 0 -267px),
+  (currency: "mxn", position: 0 -286px),
+  (currency: "zar", position: 0 -305px),
+  (currency: "pln", position: 0 -324px),
+  (currency: "try", position: 0 -343px),
+  (currency: "huf", position: 0 -362px),
+  (currency: "czk", position: 0 -381px),
+  (currency: "rub", position: 0 -400px),
+  (currency: "cnh", position: 0 -419px),
+  (currency: "ron", position: 0 -438px),
+  (currency: "ils", position: 0 -457px),
+  (currency: "thb", position: 0 -476px)
+);
+
+.flag-medium {
+  width: 24px;
+  height: 18px;
+  overflow: hidden;
+  background: $currency-flags-bg-image no-repeat;
+
+  @each $flag-options in $currency-flags-options {
+    &.med-#{map_get($flag-options, currency)} {
+      background-position: map_get($flag-options, position);
+    }
+  }
+}

@@ -1,0 +1,1017 @@
+//1 Header
+//  1.1 Header - Utility Nav
+//  1.2 Header - Secondary Nav
+//  1.3 Header - Primary Nav
+//2 Footer
+//  2.1 Footer - Tagline
+//  2.2 Footer - Social Links
+//  2.3 Footer - Help Links
+//  2.4 Footer - Utility Links
+//  2.5 Footer - Group Links
+//  2.6 Footer - Corporate Links
+//3 Hero Options
+//  3.1 Hero Options - Icon List
+//  3.2 Hero Options - Left Aligned
+//  3.3 Hero Options - on Homepage
+//4 Other
+//  4.1 Other - CTA
+//  4.2 Forms
+//    4.2.1 Forms - Checkbox/Radio
+//    4.2.2 Forms - Demo Account
+//    4.2.3 Forms - Select
+//      4.2.3.1 Forms - Select - Chosen Select
+//    4.2.4 Forms - Rail Demo Form
+//5 Alert
+//6 Rates Table (Margin Pip Calculator, Most Active Markets, Most Popular Markets and etc.)
+//  6.1 Most Active Markets
+//  6.2 Master The Markets
+//  6.3 Quote Board
+//7 Margin/Pip Calculator
+//8 Tabs module
+//9 Bar Module (Global Bar, Open an Account Bar)
+//10 Multicolumn Module
+//  10.1 Multicolumn Module - List
+//  10.2 Multicolumn Module - RTF
+//11 Rail Modules
+//  11.1 Rail Modules - Top Stories
+//  11.2 Rail Modules - Most Active Markets
+//  11.3 Rail Modules - Related Markets
+//  11.4 Rail Modules - Client Sentiment
+//12 Economic Calendar
+//  12.1 Economic Calendar - Rail
+//13 Most Popular Markets
+//14 Tooltip
+//15 Alternating Image Layout
+//  15.1 Alternating Image Layout - Item
+//16 Key Benefits
+//17 Education
+//  17.1 Education - Education Themes Rail
+//    17.1.1 Education - Education Themes Rail - Tertiary Navigation Menu
+//18 Banner Area
+//19 Platform Comparison
+//20 Product Summary
+//  20.1 Product Summary - Banner
+//  20.2 Product Summary - Details
+//21 Research
+//  21.1 Research - Article
+//  21.2 Research - Related
+//  21.3 Research - Master the Markets
+//  21.4 Research - Article Tags
+//  21.5 Research - Grid Page
+//    21.5.1 Research - Grid Page - Grid View
+//    21.5.2 Research - Grid Page - Switch View
+//22 International Landing
+//23 Live Trading
+//24 Pagination
+
+//1.1 Header - Utility Nav
+$utility-nav-bg-color: $color-black;
+$utility-nav-links-header-bg-color: $color-darker;
+$utility-nav-links-hover-bg-color: transparent;
+$utility-search-bg-color: $color-white;
+$utility-nav-open-account-bg-color: transparent;
+$utility-nav-links-bottom-link-mobile-bg-color: $color-darker;
+$utility-search-mobile-bg-color: $color-white;
+
+$utility-nav-links-color: $color-white;
+$utility-nav-links-hover-color: $color-primary-2;
+$utility-nav-item-sub-link-hover-color: $color-primary-2;
+$utility-search-icon-color: $color-white !default;
+$utility-search-placeholder-color: $color-white;
+$utility-search-placeholder-mobile-color: $color-darker;
+
+$utility-nav-height: 70px;
+$utility-nav-logo-size: 190px 30px !default;
+$utility-nav-search-height: 26px !default;
+$utility-nav-item-btn-margin: 6px 15px !default;
+
+$utility-nav-search-tablet-height: 37px !default;
+$utility-nav-links-header-tablet-item-padding: 10px;
+
+$utility-nav-mobile-height: 60px;
+$utility-nav-logo-mobile-size: 160px 25px;
+$utility-nav-search-mobile-height: 22px !default;
+
+$utility-nav-logo-iphone5-size: 135px 21px;
+
+$utility-nav-font: 12 normal;
+$utility-nav-item-btn-font: 11 null null null center !default;
+$utility-search-icon-font-size: 15px !default;
+$utility-nav-menu-toggle-font-size: 15px;
+
+//1.2 Header - Secondary Nav
+$secondary-nav-border: $color-primary-3;
+
+//1.3 Header - Primary Nav
+$primary-nav-item-wrapper-bg-color: $color-darker;
+$primary-nav-item-open-trigger-bg-color: $color-darker;
+$primary-nav-overview-bg-color: transparent;
+$primary-nav-item-wrapper-mobile-bg-color: $color-lighter;
+$primary-nav-item-trigger-mobile-bg-color: $color-white;
+$primary-nav-item-open-trigger-mobile-bg-color: $color-lighter;
+
+$primary-nav-color: $color-white;
+$primary-nav-links-color: $color-white;
+$primary-nav-links-hover-color: $color-primary-2;
+$primary-nav-item-trigger-color: $color-primary-3;
+$primary-nav-item-active-trigger-color: $color-primary-2;
+$primary-nav-item-open-trigger-color: $color-primary-2;
+$primary-nav-sub-item-subheadline-color: $color-white;
+$primary-nav-sub-item-subheadline-hover-color: $primary-nav-sub-item-subheadline-color;
+
+$primary-nav-links-mobile-color: $color-darker;
+$primary-nav-links-hover-mobile-color: $primary-nav-links-mobile-color;
+$primary-nav-item-trigger-mobile-color: $color-darker;
+$primary-nav-item-hover-trigger-mobile-color: $color-darker;
+$primary-nav-item-active-trigger-mobile-color: $primary-nav-item-trigger-mobile-color;
+$primary-nav-item-open-trigger-mobile-color: $color-darker;
+$primary-nav-sub-item-subheadline-mobile-color: $color-darker;
+$primary-nav-sub-item-subheadline-hover-mobile-color: $color-darker;
+
+$primary-nav-sub-item-padding: 10px 30px 10px 30px;
+
+$primary-nav-border: transparent;
+$primary-nav-item-wrapper-border: none;
+$primary-nav-item-trigger-border: none;
+$primary-nav-item-content-border-color: #686969;
+$primary-nav-item-trigger-mobile-border: solid 1px $color-darker;
+$primary-nav-item-open-trigger-mobile-border: solid 1px $color-darker;
+$primary-nav-item-mobile-border: none;
+$primary-nav-sub-item-mobile-border: solid 1px $color-darker;
+
+$primary-nav-height: 50px;
+$primary-nav-mobile-height: 50px;
+$primary-nav-sub-item-links-underline: ($color-primary-2 1px 5px);
+$primary-nav-shrinked-nav-height: 50px;
+
+$primary-nav-font: 16 null 1.6;
+$primary-nav-item-trigger-font: null 400 $primary-nav-height uppercase;
+$primary-nav-sub-item-headline-font: 16 700 1.2 uppercase;
+$primary-nav-sub-item-subheadline-font: 16 600;
+$primary-nav-sub-item-description-font: 14 null 1.4;
+$primary-nav-sub-item-links-font: 12;
+
+$primary-nav-item-trigger-mobile-font: null 600 null none;
+$primary-nav-sub-item-links-mobile-font: 13;
+$primary-nav-sub-item-subheadline-mobile-font: 15 400;
+
+//2 Footer
+$footer-bg-color: $color-darker;
+$footer-disclaimer-bg-color: $footer-bg-color;
+
+$footer-color: $color-white;
+$footer-link-color: $color-link-inverse;
+$footer-link-hover-color: $color-link-inverse-hover;
+
+$footer-border: solid 1px #5d5e5e;
+
+$footer-contacts-one-column-breakpoint: $tablet;
+$footer-group-links-underline: ($footer-link-hover-color, 1px, 2px);
+
+$footer-disclaimer-font: 13;
+$footer-disclaimer-padding: 20px 0 50px;
+$footer-disclaimer-tablet-font: null;
+$footer-disclaimer-tablet-padding: null;
+$footer-disclaimer-mobile-font: 12;
+$footer-disclaimer-mobile-padding: 10px 0 25px;
+
+//2.2 Footer Social Links
+$footer-social-links-link-bg-color: #585858;
+$footer-social-links-link-hover-bg-color: $footer-link-hover-color;
+
+$footer-social-links-link-size: 24px 24px 4px 4px;
+$footer-social-links-link-tablet-size: 48px 48px 10px 10px;
+$footer-social-links-link-mobile-size: 30px 30px 4px 4px;
+
+$footer-social-links-link-border-radius: 3px !default;
+$footer-social-links-link-tablet-border-radius: 5px !default;
+$footer-social-links-heading-tablet-margin: 0 0 15px !default;
+$footer-social-links-link-tablet-margin: 0 5px 0 0 !default;
+$footer-social-links-link-mobile-border-radius: 3px !default;
+$footer-social-links-heading-mobile-margin: 0 0 10px !default;
+
+$footer-social-links-font: 14.5 600 null uppercase;
+$footer-social-links-tablet-font: 29 null 1;
+$footer-social-links-mobile-font: 16;
+
+//2.3 Footer Help Links
+$footer-help-links-disable-href-color: $color-white;
+$footer-help-links-link-mobile-hover-color: $color-secondary-4;
+
+$footer-help-links-link-margin: 0 10px 0 5px;
+
+$footer-help-links-icon-size: auto 24px;
+$footer-help-links-icon-tablet-size: auto 30px;
+$footer-help-links-icon-mobile-size: auto 25px;
+
+$footer-help-links-underline: ($footer-link-hover-color, 1px, 3px);
+
+$footer-help-links-headline-font: 14.5 600 null uppercase;
+$footer-help-links-list-font: 14.5;
+$footer-help-links-headline-tablet-font: 29 null 1;
+$footer-help-links-list-tablet-font: 20;
+$footer-help-links-headline-mobile-font: 16;
+$footer-help-links-list-mobile-font: 14;
+
+//2.4 Footer Utility Links
+$footer-utility-links-bg-color: $footer-bg-color;
+
+$footer-utility-links-arrow-color: $color-primary-1 !default;
+$footer-utility-links-arrow-hover-color: $color-primary-2 !default;
+
+$footer-utility-links-padding: 20px 0;
+$footer-utility-links-link-margin: 0 10px 0 0;
+$footer-utility-links-border: solid 1px $color-white !default;
+$footer-utility-links-link-tablet-padding: 15px 0 0 !default;
+$footer-utility-links-tablet-padding: 25px 0;
+$footer-utility-links-link-mobile-padding: 10px 0 0;
+
+$footer-utility-links-underline: ($footer-link-hover-color, 1px, 1px, 0, 0, before);
+
+$footer-utility-links-font: 14.5;
+$footer-utility-links-tablet-font: 24;
+$footer-utility-links-mobile-font: 12;
+
+//2.6 Footer Corporate Links
+$footer-corporate-links-link-padding: 0;
+$footer-corporate-links-link-margin: 0 10px 0 0;
+$footer-corporate-links-underline: $footer-utility-links-underline;
+$footer-corporate-links-tablet-padding: $footer-utility-links-tablet-padding;
+
+$footer-corporate-links-font: $footer-utility-links-font;
+$footer-corporate-links-link-font: null null 1.3;
+$footer-corporate-links-tablet-font: $footer-utility-links-tablet-font;
+$footer-corporate-links-mobile-font: $footer-utility-links-mobile-font;
+
+//3 Hero Options
+$hero-two-section-highlight-bg-color: $color-darker;
+$hero-two-section-highlight-inverse-bg-color: $color-secondary-4;
+
+$hero-two-section-highlight-inverse-color: $color-darker;
+
+$hero-two-section-columns-2-breakpoint: $tablet;
+$hero-two-section-headline-margin: 0 0 20px 12px;
+$hero-two-section-columns-1-padding: 30px 0;
+$hero-two-section-columns-1-subheadline-margin: 20px 0;
+$hero-two-section-columns-2-padding: $hero-two-section-columns-1-padding;
+
+$hero-two-section-columns-2-tablet-padding: 30px 0;
+$hero-two-section-columns-2-headline-tablet-margin: 0 0 20px 12px !default;
+
+$hero-two-section-headline-mobile-margin: 0 25px 0;
+$hero-two-section-columns-1-mobile-padding: 25px 0;
+$hero-two-section-columns-2-mobile-padding: $hero-two-section-columns-1-mobile-padding;
+$hero-two-section-columns-1-headline-mobile-margin: 0 0 20px 8px;
+$hero-two-section-columns-1-subheadline-mobile-margin: 20px 0 5px;
+$hero-two-section-columns-2-headline-mobile-margin: 0 0 20px 12px;
+
+$hero-two-section-highlight-options: (12px, 0, 0, 12px, 5px, 5px, 0 -5px 0 -12px);
+
+$hero-two-section-headline-font: 32 600 1.35;
+$hero-two-section-headline-no-highlight-font: $hero-two-section-headline-font;
+$hero-two-section-headline-page-title-font: 42 400;
+$hero-two-section-subheadline-font: 22 400 1.5;
+$hero-two-section-description-font: 17 400 1.3;
+
+$hero-two-section-headline-tablet-font: 36;
+$hero-two-section-headline-page-title-tablet-font: 36 600;
+$hero-two-section-headline-no-highlight-tablet-font: 36;
+$hero-two-section-subheadline-tablet-font: 22;
+$hero-two-section-description-tablet-font: 28 normal;
+
+$hero-two-section-headline-mobile-font: 36;
+$hero-two-section-headline-page-title-mobile-font: 36;
+$hero-two-section-columns-1-headline-mobile-font: 36;
+$hero-two-section-subheadline-mobile-font: 17 !default;
+$hero-two-section-description-mobile-font: 15;
+
+//3.1 Hero Options - Icon List
+$hero-two-section-icon-list-content-width: null !default;
+$hero-two-section-icon-list-multi-col-margin: 20px 0 0;
+$hero-two-section-icon-list-multi-col-padding: 0 15px !important;
+$hero-two-section-icon-list-multi-col-img-margin: 0 auto 10px !important;
+$hero-two-section-icon-list-multi-col-img-max-height: 35px;
+$hero-two-section-icon-list-list-after-multi-col-mobile-margin: 10px 0 0 !default;
+
+$hero-two-section-icon-list-border: solid 1px #8a8d8e !default;
+
+$hero-two-section-icon-list-multi-col-tablet-padding: 0 30px !important;
+$hero-two-section-icon-list-col-tablet-padding: 0 0 10px !important !default;
+$hero-two-section-icon-list-col-tablet-margin: 0 0 10px !default;
+$hero-two-section-icon-list-multi-col-img-tablet-max-height: 40px !default;
+
+$hero-two-section-icon-list-description-mobile-margin: 0;
+$hero-two-section-icon-list-multi-col-mobile-padding: 0 !important;
+$hero-two-section-icon-list-multi-col-mobile-margin: 10px 0 0;
+$hero-two-section-icon-list-col-mobile-padding: null !default;
+$hero-two-section-icon-list-col-mobile-margin: null !default;
+$hero-two-section-icon-list-multi-col-img-mobile-max-height: 30px;
+$hero-two-section-icon-list-left-aligned-multi-col-img-mobile-margin: 0 auto 5px !important;
+$hero-two-section-icon-list-left-aligned-multi-col-description-mobile-font: 14 null 1.3;
+$hero-two-section-icon-list-left-aligned-cta-mobile-margin: 20px 0 10px;
+
+$hero-two-section-icon-list-description-font: 15 600 1.4;
+$hero-two-section-icon-list-description-tablet-font: 20;
+$hero-two-section-icon-list-description-mobile-font: 10;
+
+//3.2 Hero Options - Left Aligned
+$hero-two-section-left-aligned-mobile-headline-font: 20;
+$hero-two-section-left-aligned-subheadline-mobile-font: 16 null 1.5;
+$hero-two-section-left-aligned-subheadline-mobile-margin: 10px 0;
+
+//3.3 Hero Options - on Homepage
+$home-page-hero-headline-font: 42 400;
+$home-page-hero-headline-first-font: 50;
+$home-page-hero-headline-mobile-font: $hero-two-section-headline-mobile-font;
+$home-page-hero-headline-first-mobile-font: $hero-two-section-headline-mobile-font;
+$home-page-hero-subheadline-font: null;
+
+//4 Other
+$pointer-width: 30px;
+$pointer-mobile-width: 15px;
+$primary-content-fix: 0;
+
+//4.1 Other - CTA
+$cta-link-arrow-margin: -3px -2px 0 10px;
+$cta-link-arrow-size: 6px;
+$cta-link-font: 16 600 1.2 uppercase;
+
+$cta-link-arrow-mobile-margin: null !default;
+$cta-link-arrow-mobile-size: null !default;
+$cta-link-mobile-font: 15 !default;
+
+$cta-btn-full-width-breakpoint: $tablet;
+
+$cta-btn-padding: 12px 30px;
+$cta-btn-border-radius: 4px;
+$cta-btn-border: solid 2px;
+$cta-btn-has-arrow: false;
+
+$cta-btn-mobile-border: $cta-btn-border;
+
+$cta-btn-font: 14 600 1.3 uppercase center;
+$cta-btn-tablet-font: 21;
+$cta-btn-mobile-font: 14 null 1.3;
+
+//4.2 Forms
+$form-div-min-height: 50px;
+$form-div-margin: 0 0 10px;
+
+$form-label-width-units: .38;
+$form-label-padding: 5px 0 0;
+$form-label-error-position: null, 0, $form-div-min-height - 1;
+$form-label-error-padding: 1.5px 13px;
+$form-label-error-arrow-position: null 46px -6px;
+
+$form-input-width-units: 1 - $form-label-width-units;
+$form-input-width: percentage($form-input-width-units);
+$form-input-chosen-width: null;
+$form-input-padding: 7px 16px;
+
+$form-submit-height: auto;
+$form-submit-width: $form-input-width;
+
+$form-label-tablet-font: 22;
+$form-input-tablet-font: 22;
+
+$form-input-mobile-padding: 3px 10px;
+$form-div-mobile-min-height: 0;
+$form-div-mobile-margin: 0 0 10px;
+$form-label-mobile-height: auto;
+$form-label-mobile-line-height: normal;
+$form-label-mobile-padding: 0 0 5px;
+$form-label-error-mobile-position: null, null, 27px !important;
+$form-label-focus-mobile-height: $form-label-mobile-height;
+$form-label-focus-mobile-line-height: $form-label-mobile-line-height !important;
+$form-label-focus-mobile-margin: 0;
+
+$form-label-mobile-color: inherit;
+$form-label-focus-mobile-color: inherit;
+
+$form-submit-mobile-height: auto;
+
+$form-input-font: 16;
+$form-label-font: 18 600 null uppercase;
+$form-label-mobile-font: 11;
+
+//4.2.2 Forms - Demo Account
+$demo-account-hero-form-padding: 0;
+
+//4.2.3 Forms - Select
+$custom-select-height: auto;
+$custom-select-mobile-padding: 2px 0 2px 5px;
+
+//4.2.4 Forms - Rail Demo Form
+$form-rail-label-tablet-width: percentage(1);
+$form-rail-input-tablet-width: percentage(1);
+
+//5 Alert
+$alert-cookie-padding: 5px 60px 5px 0;
+$alert-risk-warning-padding: 5px;
+$alert-risk-warning-border: none;
+$alert-risk-warning-opacity: 0.8;
+
+$alert-risk-warning-color: #222;
+$alert-cookie-font: 13 null 1.4;
+$alert-risk-warning-font: 14 bold null null center;
+
+//6 Rates Table (Margin Pip Calculator, Most Active Markets, Most Popular Markets and etc.)
+$rates-table-head-bg-color: $color-secondary-4;
+$rates-table-row-bg-color: $color-lightest;
+$rates-table-row-odd-bg-color: $color-lighter;
+
+$rates-table-cell-padding: 10px 0 10px 5px;
+$rates-table-cell-product-padding: 18px;
+
+$rates-table-head-border: solid 2px $color-black;
+$rates-table-head-mobile-border: solid 1px $color-black;
+$rates-table-transpose-head-mobile-border: none;
+$rates-table-head-mobile-width: 100px;
+$rates-table-transpose-row-mobile-height: auto;
+$rates-table-transpose-cell-mobile-padding: 10px 5px !important;
+$rates-table-cell-product-mobile-padding: $rates-table-cell-padding;
+
+$rates-table-head-font: 16 600 1.2 null left;
+$rates-table-cell-font: 15 400 1.2;
+$rates-table-cell-value-font: null 400;
+$rates-table-cell-product-font: 15 400;
+
+$rates-table-head-mobile-font: 13;
+$rates-table-cell-mobile-font: 13;
+$rates-table-cell-product-mobile-font: 13;
+
+//6.3 Quote Board
+$quote-board-tabs-item-margin: 0 0 0 -4px;
+$quote-board-tabs-link-font: 16 400;
+$quote-board-tabs-link-border: solid 2px $color-darker;
+$quote-board-tabs-link-font-color: $color-darker;
+$quote-board-tabs-link-active-color: $color-white;
+$quote-board-tabs-link-active-background-color: $color-darker;
+$quote-board-tabs-link-active-border-color: $color-darker;
+
+//7 Margin/Pip Calculator
+$margin-pip-calculator-table-head-bg-color: $color-secondary-4;
+$margin-pip-calculator-table-row-bg-color: $color-lighter;
+$margin-pip-calculator-table-row-odd-bg-color: $color-lightest;
+
+$margin-pip-calculator-table-cell-padding: 10px 0 10px 10px;
+$margin-pip-calculator-table-contract-width: auto;
+
+//8 Tabs module
+$tabs-link-active-bg-color: $color-darker;
+
+$tabs-link-color: $color-darker;
+$tabs-link-active-color: $color-white;
+
+$tabs-item-margin: 0 0 0 -2px;
+$tabs-link-padding: 5px 20px;
+
+$tabs-list-mobile-margin: 0 auto 10px;
+$tabs-link-mobile-padding: 5px 10px;
+
+$tabs-link-border: solid 2px $color-darker;
+$tabs-link-active-border: $tabs-link-border;
+
+$tabs-link-mobile-border: solid 1px $color-darker;
+$tabs-link-mobile-active-border: $tabs-link-mobile-border;
+$tabs-link-mobile-hover-border: $tabs-link-mobile-border;
+
+$tabs-link-font: 16;
+$tabs-link-tablet-font: 21;
+$tabs-link-mobile-font: 9;
+
+//9 Bar Module (Global Bar, Open an Account Bar)
+$bar-content-padding: 20px 70px;
+$bar-primary-content-padding: 25px 60px 25px 20px;
+$bar-one-column-breakpoint: $tablet;
+
+$bar-rtf-mobile-padding: 0;
+$bar-content-one-column-padding: 20px 0;
+$bar-primary-content-one-column-padding: $bar-content-one-column-padding;
+
+$bar-rtf-font: 18;
+$bar-rtf-mobile-font: 20 600 1.3 null null;
+
+//10 Multicolumn Module
+$multi-col-headline-color: $color-darker;
+$multi-col-title-color: $color-darker;
+$multi-col-primary-bg-color: none;
+
+$multi-col-padding: 40px 0;
+$multi-col-primary-padding: 20px 0;
+$multi-col-headline-margin: 0 0 10px;
+$multi-col-content-margin-top: 30px;
+$multi-col-img-margin: 0 0 5px;
+$multi-col-img-max-height: 55px;
+$multi-col-description-margin: 25px 0 30px;
+$multi-col-subheadline-img-bottom-margin: 38px 0 -40px !default;
+
+$multi-col-tablet-padding: 30px 0;
+$multi-col-description-tablet-margin: 0;
+$multi-col-subheadline-img-bottom-tablet-margin: 30px 0 -30px !default;
+$multi-col-img-tablet-margin: 0;
+$multi-col-img-tablet-max-width: 55px;
+$multi-col-img-after-tablet-padding: 0 0 0 70px !default;
+$multi-col-cta-link-tablet-margin: 5px 0 10px;
+$multi-col-col-tablet-margin: 20px 0 0 !default;
+$multi-col-col-divider-tablet-padding: 0 0 10px !default;
+
+$multi-col-mobile-padding: 25px 0;
+$multi-col-content-mobile-margin-top: 20px;
+$multi-col-subheadline-img-bottom-mobile-margin: 30px 0 -25px !default;
+$multi-col-subheadline-mobile-margin: 0 0 15px;
+$multi-col-img-mobile-margin: null;
+$multi-col-img-mobile-max-height: 35px;
+$multi-col-img-mobile-max-width: 35px;
+$multi-col-img-after-mobile-padding: 0 0 0 50px !default;
+$multi-col-col-mobile-margin: 10px 0 0 !default;
+
+$multi-col-col-border: solid 1px $color-darker;
+
+$multi-col-headline-font: 32 null 1.2;
+$multi-col-subheadline-font: 17 null 1.5;
+$multi-col-title-font: 22 null 1.2;
+$multi-col-subtitle-font: 16 700 1.2;
+$multi-col-description-font: 14 null 1.3;
+
+$multi-col-tablet-font: null null null null left;
+$multi-col-headline-tablet-font: 36 600 null uppercase center;
+$multi-col-subtitle-tablet-font: 22;
+$multi-col-description-tablet-font: 22;
+
+$multi-col-headline-mobile-font: 22 400 null none;
+$multi-col-subheadline-mobile-font: 15;
+$multi-col-title-mobile-font: 14;
+$multi-col-subtitle-mobile-font: 15 600;
+$multi-col-description-mobile-font: 15;
+
+//10.3 Multicolumn Module - Layouts
+$multi-col-columns: (
+  (columns: 2, padding: 0 0 0 20px, padding-nth: 0 20px 0 0, width: 50%),
+  (columns: 3, padding: 0 20px, width: 33.3333%),
+  (columns: 4, padding: 0 15px, width: 25%),
+  (columns: 5, padding: 0 10px, width: 20%)
+) !default;
+$multi-col-col-border-position: 0 null 20px 0;
+
+//11 Rail Modules
+//11.1 Rail Modules - Top Stories
+$top-stories-link-color: $color-primary-3;
+$top-stories-link-hover-color: $color-primary-2;
+
+$top-stories-hero-options-padding: false;
+$top-stories-headline-margin: 0 0 5px;
+$top-stories-link-padding: 0 0 5px;
+
+$top-stories-headline-mobile-margin: 0 0 5px;
+$top-stories-list-mobile-padding: 15px 0 15px;
+$top-stories-list-mobile-first-padding: $top-stories-list-mobile-padding;
+$top-stories-link-mobile-padding: 0 0 5px;
+$top-stories-teaser-mobile-margin: 1em 0 5px;
+
+$top-stories-hero-options-border: none;
+$top-stories-mobile-border: none;
+
+$top-stories-headline-font: 19 600 1.2 uppercase;
+$top-stories-link-font: 16 null 1.2;
+$top-stories-date-font: 13;
+
+$top-stories-headline-tablet-font: 28 400;
+$top-stories-link-tablet-font: 20;
+$top-stories-date-tablet-font: 20;
+$top-stories-cta-link-tablet-font: 26;
+
+$top-stories-headline-mobile-font: 16;
+$top-stories-link-mobile-font: 15 600;
+$top-stories-teaser-mobile-font: 14;
+$top-stories-cta-link-mobile-font: 15;
+
+//11.3 Rail Modules - Related Markets
+$related-markets-sentiment-text-color: $text-color;
+$related-markets-sentiment-text-inverse-color: $color-white !default;
+
+$related-markets-headline-margin: 0 0 15px;
+$related-markets-product-margin: 20px 0 0;
+$related-markets-sentiment-size: 90px;
+$related-markets-sentiment-text-width: 58px;
+$related-markets-sentiment-text-margin: 36.5% 0 0 18px;
+$related-markets-product-primary-margin: 0 !default;
+$related-markets-sentiment-primary-width: 25% !default;
+$related-markets-sentiment-primary-padding: 20px !default;
+
+$related-markets-headline-tablet-margin: 0 0 20px;
+$related-markets-sentiment-tablet-size: 115px;
+$related-markets-sentiment-text-tablet-width: 71px;
+$related-markets-sentiment-text-tablet-margin: 36% 0 0 22px;
+
+$related-markets-headline-mobile-margin: 0 0 15px;
+$related-markets-product-mobile-margin: 0;
+$related-markets-sentiment-mobile-width: 25%;
+$related-markets-sentiment-mobile-size: 50px;
+$related-markets-sentiment-text-mobile-width: 30px;
+$related-markets-sentiment-text-mobile-margin: 24% 0 0 11px;
+$related-markets-sentiment-link-mobile-width: 3px !default;
+$related-markets-sentiment-link-mobile-margin: -2px -2px 0 3px !default;
+$related-markets-sentiment-primary-mobile-padding: 15px 10px !default;
+
+$related-markets-headline-font: 19 600 1.2 uppercase;
+$related-markets-sentiment-text-font: 16;
+
+$related-markets-headline-tablet-font: 30 400 1;
+$related-markets-sentiment-text-tablet-font: 20;
+
+$related-markets-headline-mobile-font: 15;
+$related-markets-sentiment-text-mobile-font: 8;
+$related-markets-sentiment-link-mobile-font: 8 !default;
+
+//11.4 Rail Modules - Client Sentiment
+$client-sentiment-sentiment-text-color: $color-secondary-2 !default;
+$client-sentiment-sentiment-text-inverse-color: $color-white !default;
+
+$client-sentiment-headline-margin: 0 0 15px;
+$client-sentiment-legend-item-padding: 0 0 15px;
+$client-sentiment-sentiment-size: 160px;
+$client-sentiment-sentiment-margin: 0 auto 20px;
+$client-sentiment-sentiment-text-width: 101px;
+$client-sentiment-sentiment-text-margin: 31% 0 0 29px;
+$client-sentiment-primary-padding: 20px !default;
+$client-sentiment-sentiment-primary-padding: 0 !default;
+$client-sentiment-legend-primary-padding: 0 0 0 25px !default;
+$client-sentiment-note-margin: 0 -20px -20px !default;
+$client-sentiment-note-padding: 10px 20px !default;
+
+$client-sentiment-headline-tablet-margin: 0 0 20px;
+$client-sentiment-legend-tablet-padding: 0 0 0 25px;
+
+$client-sentiment-headline-mobile-margin: 0 0 15px;
+$client-sentiment-sentiment-mobile-size: 80px;
+$client-sentiment-sentiment-mobile-margin: 0;
+$client-sentiment-sentiment-text-mobile-width: 50px;
+$client-sentiment-sentiment-text-mobile-margin: 31% 0 0 15px;
+$client-sentiment-legend-mobile-padding: 0 0 0 13px;
+
+$client-sentiment-headline-font: 19 600 1.2 uppercase;
+$client-sentiment-legend-headline-font: 20 600 1.4;
+$client-sentiment-legend-description-font: 18 null 1.2;
+$client-sentiment-sentiment-text-font: 34 400 1.2;
+$client-sentiment-sentiment-sub-text-font: 15 400 1 uppercase;
+
+$client-sentiment-headline-tablet-font: 30 400 1;
+
+$client-sentiment-headline-mobile-font: 15;
+$client-sentiment-legend-headline-mobile-font: 10;
+$client-sentiment-legend-description-mobile-font: 9;
+$client-sentiment-sentiment-text-mobile-font: 17;
+$client-sentiment-sentiment-sub-text-mobile-font: 7.5;
+
+//12 Economic Calendar
+//12.1 Economic Calendar - Rail
+$economic-calendar-rail-event-row-odd-bg-color: $color-lightest;
+$economic-calendar-rail-event-row-even-bg-color: darken($color-light-cool, 5%);
+
+$economic-calendar-rail-event-row-link-color: $color-primary-2;
+$economic-calendar-rail-event-hover-link-color: $color-primary-2;
+$economic-calendar-rail-event-hover-link-hover-color: $color-primary-3;
+
+$economic-calendar-rail-headline-margin: 0 0 10px;
+$economic-calendar-rail-cta-link-margin: 10px 0 0;
+
+$economic-calendar-rail-headline-mobile-margin: 0 0 10px;
+$economic-calendar-rail-event-row-mobile-padding: 10px;
+$economic-calendar-rail-event-row-mobile-height: normal;
+$economic-calendar-rail-event-row-text-mobile-padding: 0 0 7px;
+$economic-calendar-rail-event-row-flag-mobile-padding: 3px 0 0;
+$economic-calendar-rail-cta-link-mobile-margin: 10px 0 0;
+
+$economic-calendar-rail-headline-font: 19 600 1.2 uppercase;
+$economic-calendar-rail-date-font: 14 null null uppercase left !default;
+$economic-calendar-rail-act-prev-label-font: null bold !default;
+
+$economic-calendar-rail-mobile-font: 13;
+$economic-calendar-rail-headline-mobile-font: 16;
+$economic-calendar-rail-text-mobile-font: 15 600;
+$economic-calendar-rail-date-mobile-font: 13;
+$economic-calendar-rail-act-prev-label-mobile-font: null normal;
+
+//13 Most Popular Markets
+$most-popular-markets-padding: 70px 0 0;
+$most-popular-markets-headline-margin: 20px 0 35px;
+$most-popular-markets-tabs-padding: 0 70px 30px;
+$most-popular-markets-trading-sub-title-padding: 0;
+$most-popular-markets-tab-trading-sub-title-padding: 10px 0 0;
+$most-popular-markets-trading-title-padding: 0 10px;
+$most-popular-markets-trading-title-top: -24px;
+$most-popular-markets-trading-title-width: 620px;
+
+$most-popular-markets-tablet-padding: 45px 0 0;
+$most-popular-markets-headline-tablet-margin: 20px 0 30px;
+$most-popular-markets-trading-sub-title-tablet-padding: 0 0 10px;
+$most-popular-markets-trading-title-tablet-top: -22px;
+$most-popular-markets-trading-title-tablet-width: 100%;
+
+$most-popular-markets-mobile-padding: 25px 0 0;
+$most-popular-markets-tabs-mobile-padding: 0 $tabletPadding 25px;
+$most-popular-markets-headline-mobile-margin: 5px 0 15px;
+$most-popular-markets-trading-title-mobile-top: 0;
+$most-popular-markets-trading-title-mobile-padding: 0 0 20px;
+$most-popular-markets-table-spread-mobile-width: auto;
+
+$most-popular-markets-tabs-border: solid 2px $color-darker;
+$most-popular-markets-tabs-mobile-border: none;
+
+$most-popular-markets-switch-to-dropdown-breakpoint: false;
+
+$most-popular-markets-headline-font: 18 600 1.2 uppercase;
+$most-popular-markets-trading-title-font: 36 null 1.2 null center;
+$most-popular-markets-trading-sub-title-font: 18 null 1.2 null center;
+
+$most-popular-markets-headline-tablet-font: 22;
+$most-popular-markets-trading-title-tablet-font: 30 600;
+$most-popular-markets-trading-sub-title-tablet-font: 21;
+
+$most-popular-markets-headline-mobile-font: 10;
+$most-popular-markets-trading-title-mobile-font: 25 600;
+$most-popular-markets-trading-sub-title-mobile-font: 10.5;
+
+//14 Tooltip
+$tooltip-icon-hover-color: $color-primary-2 !default;
+
+//15 Alternating Image Layout
+$alternating-layout-padding: 45px 0 0;
+$alternating-layout-columns-padding: 0;
+$alternating-layout-columns-margin: 45px auto 0;
+$alternating-layout-content-padding: 25px;
+$alternating-layout-headline-color: $color-darker;
+$alternating-layout-headline-padding: 0 0 13px;
+$alternating-layout-image-width: 50%;
+
+$alternating-layout-tablet-padding: 30px $tabletPadding;
+
+$alternating-layout-mobile-padding: 25px 0;
+$alternating-layout-headline-mobile-padding: 0 0 5px;
+$alternating-layout-columns-mobile-margin: 0;
+$alternating-layout-columns-mobile-padding: 20px $tabletPadding 0;
+
+$alternating-layout-border: none;
+
+$alternating-layout-headline-font: 32 null 1.2 null center;
+$alternating-layout-subheadline-font: 17 null 1.2 null center;
+
+$alternating-layout-headline-tablet-font: 34;
+$alternating-layout-subheadline-tablet-font: 20;
+
+$alternating-layout-headline-mobile-font: 22 null null null left;
+$alternating-layout-subheadline-mobile-font: 15 null null null left;
+
+//15.1 Alternating Image Layout - Item
+$alternating-item-headline-margin: 0 0 15px;
+$alternating-item-media-margin: 20px 0 0;
+
+$alternating-item-media-tablet-margin: 20px 0 10px;
+$alternating-item-cta-tablet-font: 20;
+
+$alternating-item-headline-color: $color-darker;
+$alternating-item-headline-font: 20 600 1.2 uppercase;
+$alternating-item-sub-headline-font: 17 null 1.4;
+
+$alternating-item-headline-tablet-font: 24;
+
+$alternating-item-mobile-font: 14 null null null left;
+$alternating-item-headline-mobile-font: 15;
+$alternating-item-sub-headline-mobile-font: 15 null 1.3;
+
+//16 Key Benefits
+$key-benefits-slider-item-bg-color: $color-darker;
+$key-benefits-slider-item-active-bg-color: none;
+
+$key-benefits-slider-item-tablet-bg-color: $color-white;
+$key-benefits-slider-item-active-tablet-bg-color: $color-secondary-4;
+
+$key-benefits-headline-color: inherit;
+$key-benefits-headline-inverse-color: inherit;
+$key-benefits-slider-item-color: $color-white;
+$key-benefits-slider-item-active-color: inherit;
+$key-benefits-slider-item-size: floor($page-width/6) 100%;
+$key-benefits-slider-item-padding: 15px 10px;
+$key-benefits-slider-item-max-height: 60px;
+$key-benefits-slider-item-max-width: 60px;
+$key-benefits-slider-item-margin: 0 0 10px;
+$key-benefits-slide-margin: 0 0 30px;
+$key-benefits-slide-title-color: inherit;
+$key-benefits-slide-item-hover-color: $key-benefits-slider-item-color;
+$key-benefits-slide-item-active-hover-color: inherit;
+$key-benefits-slide-headline-inverse-color: inherit;
+
+$key-benefits-padding: 50px 0;
+$key-benefits-headline-margin: 0 0 10px;
+$key-benefits-slide-description-margin: 5px 0 15px;
+$key-benefits-slider-item-progress-height: 0;
+
+$key-benefits-slider-control-prev-position: calc(50% - 12px) null null -36px;
+$key-benefits-slider-control-next-position: null -36px null auto;
+
+$key-benefits-tablet-padding: 30px 0;
+$key-benefits-slider-viewport-tablet-min-height: 35px;
+$key-benefits-slider-nav-tablet-margin: 10px 0 0;
+$key-benefits-slider-item-tablet-size: 24px !important, 24px;
+
+$key-benefits-mobile-padding: 25px 0;
+$key-benefits-slider-item-mobile-size: 12px !important, 12px;
+
+$key-benefits-slide-item-margin-border: solid 10px transparent;
+$key-benefits-slide-item-border: solid 2px $color-darker;
+
+$key-benefits-slide-item-margin-tablet-border: none;
+$key-benefits-slide-item-tablet-border: none;
+
+$key-benefits-headline-font: 32 null 1.2;
+$key-benefits-description-font: 16 null 1.2;
+$key-benefits-slider-item-font: null null 1.2;
+$key-benefits-slider-item-title-font: 15 600;
+$key-benefits-slide-title-font: 19 600;
+$key-benefits-slide-description-font: 16;
+
+$key-benefits-headline-tablet-font: 34;
+$key-benefits-description-tablet-font: 18;
+$key-benefits-slide-title-tablet-font: 18;
+
+$key-benefits-headline-mobile-font: 22;
+$key-benefits-description-mobile-font: 15 null 1.4;
+$key-benefits-slide-title-mobile-font: 15 null 1.4;
+$key-benefits-slide-description-mobile-font: 15 null 1.3;
+
+//17 Education
+//17.1 Education - Education Themes Rail
+$education-themes-rail-themes-link-active-bg-color: none;
+$education-themes-rail-themes-link-color: $color-link-hover !default;
+$education-themes-rail-themes-link-hover: $color-link !default;
+$education-themes-rail-themes-link-active: $color-link !default;
+
+$education-themes-rail-themes-margin: 0;
+$education-themes-rail-themes-link-margin: 0;
+$education-themes-rail-themes-link-padding: 10px 0;
+
+$education-themes-rail-tablet-padding: 20px $tabletPadding !default;
+$education-themes-rail-themes-link-tablet-width: 100%;
+$education-themes-rail-themes-link-tablet-padding: 0;
+
+$education-themes-rail-themes-link-mobile-margin: null !default;
+$education-themes-rail-themes-link-mobile-padding: null !default;
+
+$education-themes-rail-themes-link-border: solid 1px $color-grey-dark;
+
+$education-themes-rail-headline-font: 19 600 1.2 uppercase;
+$education-themes-rail-themes-link-font: 16 null 1.2;
+
+$education-themes-rail-headline-mobile-font: 16;
+$education-themes-rail-themes-link-mobile-font: 16;
+
+//20 Product Summary
+//20.1 Product Summary - Banner
+$product-summary-banner-rate-bg-color: $color-lighter;
+$product-summary-banner-rate-up-inter-bg-color: $color-secondary-2;
+$product-summary-banner-rate-label-bg-color: $color-medium-darker !default;
+$product-summary-banner-rate-label-inter-bg-color: $color-white !default;
+
+$product-summary-banner-rate-color: $text-color;
+$product-summary-banner-rate-up-color: $text-color;
+$product-summary-banner-rate-down-color: $text-color;
+$product-summary-banner-changes-up-color: $color-secondary-2;
+
+$product-summary-banner-padding: 55px 0 50px;
+$product-summary-banner-subheadline-margin: 0 0 20px;
+$product-summary-banner-header-padding: 0;
+$product-summary-banner-dropdown-width: 200px;
+$product-summary-banner-dropdown-after-headline-margin: 20px 0 0 !default;
+$product-summary-banner-rates-padding: 0 0 20px;
+$product-summary-banner-rate-size: 212px 84px;
+$product-summary-banner-rate-padding: 0 0 0 65px;
+$product-summary-banner-rate-buy-margin: 0 0 0 45px;
+$product-summary-banner-rate-value-position: none;
+$product-summary-banner-rate-buy-value-position: none;
+$product-summary-banner-rate-label-position: none;
+$product-summary-banner-rate-label-width: 45px !default;
+$product-summary-banner-rate-buy-label-position: none;
+$product-summary-banner-rate-arrow-margin: -7px 0 0;
+$product-summary-banner-rate-arrow-position: 50% null null 17px !default;
+$product-summary-banner-changes-padding: 0 0 0 45px;
+
+$product-summary-banner-tablet-padding: 30px 0;
+$product-summary-banner-subheadline-tablet-margin: 0 0 20px;
+$product-summary-banner-rates-tablet-padding: 30px 0 25px;
+$product-summary-banner-rate-tablet-size: "50% - 50px" 125px true;
+$product-summary-banner-rate-tablet-padding: 0 0 0 100px;
+$product-summary-banner-rate-buy-tablet-margin: 0 0 0 100px;
+$product-summary-banner-rate-label-tablet-width: 70px !default;
+$product-summary-banner-rate-arrow-tablet-position: null null null 29px !default;
+$product-summary-banner-rate-arrow-tablet-scale: 1.4 !default;
+
+$product-summary-banner-mobile-padding: 15px 0 !default;
+$product-summary-banner-headline-mobile-margin: 0 0 2px;
+$product-summary-banner-subheadline-mobile-margin: 0 0 10px;
+$product-summary-banner-rates-mobile-padding: 10px 0 0;
+$product-summary-banner-rate-mobile-size: "50% - 17px" 50px true;
+$product-summary-banner-rate-mobile-padding: 0 0 0 34px;
+$product-summary-banner-rate-buy-mobile-margin: 0 0 0 34px;
+$product-summary-banner-rate-arrow-mobile-position: null null null 7px !default;
+$product-summary-banner-rate-label-mobile-width: 26px !default;
+$product-summary-banner-rate-arrow-mobile-scale: 0.7 !default;
+
+$product-summary-banner-breakpoint: $tablet;
+$product-summary-banner-rate-border: solid 2px #707070;
+$product-summary-banner-rate-border-alt: solid 1px $color-medium-darker !default;
+$product-summary-banner-rate-border-radius: 7px !default;
+$product-summary-banner-rate-border-alt-radius: 4px !default;
+$product-summary-banner-rate-mobile-border: solid 1px #707070 !default;
+$product-summary-banner-rate-border-mobile-radius: 2px !default;
+$product-summary-banner-rate-border-alt-mobile-radius: 0 !default;
+
+$product-summary-banner-headline-font: 58 null 1;
+$product-summary-banner-subheadline-font: 26;
+$product-summary-banner-rate-font: 26 600 1.5 null left;
+$product-summary-banner-rate-label-font: 20 400 1;
+$product-summary-banner-changes-value-font: 24 600 1.3 null left;
+$product-summary-banner-changes-label-font: 14 600 null uppercase left;
+
+$product-summary-banner-headline-tablet-font: 60;
+$product-summary-banner-subheadline-tablet-font: 30 null 1;
+$product-summary-banner-rate-tablet-font: 38;
+$product-summary-banner-rate-label-tablet-font: 30;
+$product-summary-banner-changes-value-tablet-font: 28 null 1.4;
+$product-summary-banner-changes-label-tablet-font: 28 null 1.2;
+
+$product-summary-banner-headline-mobile-font: 28;
+$product-summary-banner-subheadline-mobile-font: 14;
+$product-summary-banner-rate-mobile-font: 16;
+$product-summary-banner-rate-label-mobile-font: 12;
+$product-summary-banner-changes-value-mobile-font: 13;
+$product-summary-banner-changes-label-mobile-font: 11;
+
+$product-summary-banner-controls: "select";
+
+//20.2 Product Summary - Details
+$product-summary-details-color: $text-color !default;
+
+$product-summary-details-padding: 0 0 30px;
+$product-summary-details-cell-bg-color: #f7f7f7 !default;
+$product-summary-details-cell-info-bg-color: $color-white !default;
+
+$product-summary-details-row-margin: 10px 0 0 !default;
+$product-summary-details-headline-margin: 5px 0 15px !default;
+$product-summary-details-cell-margin: 4px !default;
+$product-summary-details-cell-padding: 10px 20px 110px !default;
+$product-summary-details-cell-width: 255px !default;
+$product-summary-details-cell-info-width: $primary-width - $product-summary-details-cell-width !default;
+
+$product-summary-details-headline-tablet-margin: 20px 0 !default;
+$product-summary-details-cell-tablet-width: 40% !default;
+$product-summary-details-cell-info-tablet-width: 60% !default;
+
+$product-summary-details-headline-mobile-margin: 10px 0 !default;
+$product-summary-details-row-mobile-margin: 5px 0 0 !default;
+$product-summary-details-cell-mobile-padding: 5px 10px 105px !default;
+$product-summary-details-cell-mobile-margin: 2px !default;
+$product-summary-details-cell-mobile-width: 50% !default;
+$product-summary-details-cell-info-mobile-width: 50% !default;
+
+$product-summary-details-headline-font: 30 null 1.2 !default;
+$product-summary-details-cell-font: 17 600 !default;
+$product-summary-details-cell-info-font: 18 400 !default;
+
+$product-summary-details-headline-tablet-font: 36 !default;
+$product-summary-details-cell-tablet-font: 20 !default;
+$product-summary-details-cell-info-tablet-font: 20 !default;
+
+$product-summary-details-headline-mobile-font: 18 !default;
+$product-summary-details-cell-mobile-font: 10 !default;
+$product-summary-details-cell-info-mobile-font: 10 !default;
+
+//21 Research
+//21.1 Research - Article
+$research-article-title-link-color: $color-darker;
+$research-article-title-link-hover-color: $color-link-inverse-hover;
+
+$research-article-author-font: null 400;
+$research-article-teaser-font: 15 null 1.5;
+
+$research-article-title-mobile-font: 22;
+
+//21.4 Research - Article Tags
+$article-tags-link-font: null 400;
+
+//21.5 Research - Grid Page
+//21.5.1 Research - Grid Page - Grid View
+$research-grid-item-top-story-bg-color: $color-darker;
+$research-grid-item-top-story-hover-bg-color: $color-secondary-2;
+$research-grid-item-top-story-article-title-font: 32 null 1.2;
+$research-grid-item-top-story-article-title-border: none;
+$research-grid-item-top-story-article-title-hover-border: none;
+
+//22 International Landing
+$international-landing-map-pin-icon: $icon-pin;
+
+//23 Live Trading
+$live-trading-promo-mobile-font: null null null null left !default;
+
+//24 Pagination
+$pagination-breakpoint: $tablet;

@@ -1,0 +1,281 @@
+.master-markets {
+  &__title {
+    padding-left: $gutter*1.5;
+    @include rem(font-size, 50);
+    line-height: 1.25;
+
+    span {
+      @include inline-bg($color-secondary-7);
+      color: $color-white;
+    }
+  }
+
+  &__subtitle {
+    margin: $gutter*4 0;
+    @include rem(font-size, 20);
+    line-height: 1.4;
+  }
+
+  &-section {
+    padding-top: $gutter*6;
+    padding-bottom: $gutter*6;
+    color: $color-darker;
+
+    .most-active-markets {
+      &__headline {
+        line-height: 1.25;
+      }
+
+      &__sub-headline {
+        margin: $gutter 0 $gutter*2;
+        float: right;
+        @include rem(font-size, 12);
+        line-height: 1.25;
+      }
+
+      &__sentiment-legend {
+        display: inline-block;
+        position: absolute;
+        right: 0;
+        bottom: 10px;
+
+        ul {
+          @extend %list--unstyled;
+        }
+
+        li {
+          @include rem(font-size, 12);
+          display: inline-block;
+          text-transform: uppercase;
+          padding-left: $gutter*2;
+
+          span {
+            display: inline-block;
+            padding-left: $gutter/2;
+          }
+        }
+
+        &-item {
+          height: 12px;
+          width: 12px;
+
+          &.long {
+            background-color: $color-secondary-2;
+          }
+
+          &.short {
+            background-color: $color-secondary-4;
+          }
+        }
+      }
+    }
+
+    .active-markets {
+      &__table {
+        margin-top: $gutter*2;
+
+        td {
+          @include rem(font-size, 26);
+          line-height: 30px;
+          height: 110px;
+          padding: 0 $gutter;
+          vertical-align: middle;
+          width: 18%;
+
+          &:first-child {
+            padding-left: 0;
+            width: 22%;
+            @include rem(font-size, 32);
+
+            a {
+              text-decoration: none;
+            }
+          }
+
+          &:not(:last-child) {
+            padding: $gutter*4 $gutter;
+          }
+        }
+
+        th {
+          width: 18%;
+
+          &:first-child {
+            width: 22%;
+            padding-left: $gutter*1.5;
+          }
+        }
+
+        &-sentiment {
+          padding-left: $gutter*1.5;
+          width: 100px;
+        }
+
+        tr {
+          background-color: $color-white;
+          border-bottom: 1px solid $color-lighter;
+
+          &:first-child {
+            background-color: $color-lighter;
+          }
+        }
+      }
+
+      &__short,
+      &__long {
+        text-align: center;
+        position: relative;
+
+        span {
+          position: absolute;
+          text-align: left !important;
+          z-index: $defaultZIndex;
+          @if ($old-ie) {
+            top: 44px;
+            left: 40px !important;
+          } @else {
+            top: 42px;
+            left: 37px !important;
+          }
+          @include rem(font-size, 16);
+        }
+
+        canvas {
+          margin: $gutter*1.5 0;
+        }
+      }
+    }
+  }
+
+  &__content {
+    @extend %clearfix;
+
+    &[data-columns="2"] {
+      > .col {
+        position: relative;
+        float: left;
+        width: 70%;
+        padding-right: $gutter*2;
+
+        & + .col {
+          width: 30%;
+          margin-top: $gutter*5;
+          padding: $gutter*2;
+          background: $color-light;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: $tablet) {
+    &__subtitle {
+      @include rem(font-size, 18);
+      margin: $gutter*3 0;
+    }
+
+    &-section {
+      padding-top: $gutter*6;
+      padding-bottom: $gutter*4;
+
+      .most-active-markets {
+        &__sentiment-legend {
+          bottom: 0;
+        }
+      }
+
+      .active-markets__table {
+        margin-top: $gutter*2;
+
+        td:first-child {
+          @include rem(font-size, 28);
+        }
+      }
+    }
+
+    &__content[data-columns="2"] > .col {
+      float: none;
+      width: 100%;
+      padding: 0;
+
+      & + .col {
+        margin-top: $gutter*4;
+        width: 100%;
+      }
+    }
+  }
+
+  @media screen and (max-width: $mobile) {
+    &__title {
+      @include rem(font-size, 36);
+      padding-left: $gutter/2;
+
+      span {
+        @include inline-bg-mobile($color-secondary-7);
+      }
+    }
+
+    &__subtitle {
+      @include rem(font-size, 17);
+      margin: $gutter*2.5 0;
+    }
+
+    &-section {
+      padding-top: $gutter*5;
+      padding-bottom: $gutter*4;
+
+      .research-article__headline {
+        display: none;
+      }
+
+      .most-active-markets {
+        &__headline {
+          float: none;
+          margin-bottom: 0;
+        }
+
+        &__sub-headline {
+          float: none;
+          margin: $gutter 0;
+        }
+      }
+
+      .active-markets {
+        &__table {
+          margin-top: $gutter*2;
+
+          th,
+          td {
+            text-align: left;
+            width: auto;
+
+            &:first-child {
+              width: 35% !important;
+            }
+          }
+
+          th {
+            @include rem(font-size, 14);
+          }
+
+          td {
+            @include rem(font-size, 17);
+            height: 50px;
+
+            &:first-child {
+              padding-left: $gutter*1.5;
+            }
+
+            &:not(:last-child) {
+              padding: $gutter*1.5 $gutter;
+            }
+          }
+        }
+
+        &__short,
+        &__long {
+          display: none;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+$old-ie: false !default;
+$is-main: false !default;
+$is-secondary: true !default;
+
+@import "EN-styles/variables_EN";
+// Sprites
+@import "base-styles/sprites/icons";
+@import "base-styles/index.secondary";
+
+//@import "EN-styles/modules/header_EN";

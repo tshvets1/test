@@ -1,0 +1,145 @@
+$twitter-padding: 60px 0 40px !default;
+$twitter-icon-size: 48px !default;
+$twitter-icon-margin: 10px 20px 0 0 !default;
+$twitter-time-padding: 0 0 0 50px !default;
+$twitter-content-margin: .75em 0 !default;
+$twitter-cta-link-margin: 1em 0 !default;
+
+$twitter-tablet-padding: 40px 0 30px !default;
+
+$twitter-icon-mobile-size: 35px !default;
+$twitter-icon-mobile-margin: (10/3) px 15px 0 0 !default;
+$twitter-time-mobile-position: 40px 17px !default;
+
+$twitter-user-name-underline: $color-link-hover, 1px, 5px null 3px !default;
+$twitter-user-name-inverse-underline: $color-link-inverse-hover, 1px, 5px null 3px !default;
+$twitter-user-name-inverse-underline-alt: $color-link-inverse-hover-alt, 1px, 5px null 3px !default;
+$twitter-content-link-border: solid 1px $color-link !default;
+$twitter-content-link-hover-border: solid 1px $color-link-hover !default;
+$twitter-content-link-inverse-border: solid 1px $color-link-inverse !default;
+$twitter-content-link-inverse-hover-border: solid 1px $color-link-inverse-hover !default;
+$twitter-content-link-inverse-hover-alt-border: solid 1px $color-link-inverse-hover-alt !default;
+
+$twitter-info-font: 16 !default;
+$twitter-display-name-font: null 700 !default;
+$twitter-content-font: 33 null 1.5 !default;
+
+$twitter-info-mobile-font: 12 null 1.5 !default;
+$twitter-content-mobile-font: 16 !default;
+
+%twitter-inverse-color {
+  .twitter__content {
+    a {
+      border-bottom: $twitter-content-link-inverse-border;
+    }
+  }
+}
+
+%twitter-inverse-hover-color {
+  .twitter__user-name {
+    @include underline($twitter-user-name-inverse-underline...);
+  }
+
+  .twitter__content {
+    a:hover {
+      border-bottom: $twitter-content-link-inverse-hover-border;
+    }
+  }
+}
+
+%twitter-inverse-hover-color-alt {
+  .twitter__user-name {
+    @include underline($twitter-user-name-inverse-underline-alt...);
+  }
+
+  .twitter__content {
+    a:hover {
+      border-bottom: $twitter-content-link-inverse-hover-alt-border;
+    }
+  }
+}
+
+.twitter {
+  &-section {
+    position: relative;
+    padding: $twitter-padding;
+
+    @include inverse-section-bg("%twitter-inverse-color", "%twitter-inverse-hover-color", "%twitter-inverse-hover-color-alt");
+  }
+
+  &__icon {
+    float: left;
+    @include size($twitter-icon-size...);
+    margin: $twitter-icon-margin;
+  }
+
+  &__info {
+    @include set-text-styles($twitter-info-font...);
+  }
+
+  &__user-info {
+    display: block;
+    overflow: hidden;
+  }
+
+  &__display-name {
+    display: block;
+    @include set-text-styles($twitter-display-name-font...);
+  }
+
+  &__user-name {
+    @include underline($twitter-user-name-underline...);
+    text-decoration: none;
+  }
+
+  &__time {
+    padding: $twitter-time-padding;
+  }
+
+  &__content {
+    margin: $twitter-content-margin;
+    @include set-text-styles($twitter-content-font...);
+
+    a {
+      border-bottom: $twitter-content-link-border;
+      text-decoration: none;
+
+      &:hover {
+        border-bottom: $twitter-content-link-hover-border;
+      }
+    }
+  }
+
+  &__cta-link {
+    @extend .cta-link;
+    margin: $twitter-cta-link-margin;
+  }
+
+  // TABLET LAYOUT
+  @media screen and (max-width: $tablet) {
+    &-section {
+      padding: $twitter-tablet-padding;
+    }
+  }
+  // MOBILE LAYOUT
+  @media screen and (max-width: $mobile) {
+    &__icon {
+      @include size($twitter-icon-mobile-size...);
+      margin: $twitter-icon-mobile-margin;
+    }
+
+    &__info {
+      @include set-text-styles($twitter-info-mobile-font...);
+    }
+
+    &__content {
+      position: relative;
+      @include set-text-styles($twitter-content-mobile-font...);
+    }
+
+    &__time {
+      position: absolute;
+      @include position($twitter-time-mobile-position...);
+    }
+  }
+}

@@ -1,0 +1,43 @@
+// normalize override
+input[type=search] {
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  border-radius: 0
+}
+
+// SITE SEARCH
+.site-search {
+  position: relative;
+  margin: 0 10px 0 5px;
+
+  &__label {
+    @extend %visually-hidden;
+  }
+
+  &__input {
+    padding: $gutter/3 $gutter*2 $gutter/3 $gutter/2;
+    width: 180px;
+    border: solid 1px $color-medium;
+
+    &:focus {
+      outline: none;
+      border-color: $color-primary-3;
+    }
+  }
+
+  &__submit {
+    @extend %btn--unstyled;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    overflow: hidden;
+    color: $color-primary-3;
+
+    .icon-search {
+      font-weight: bold;
+      line-height: inherit;
+    }
+  }
+}

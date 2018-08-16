@@ -1,0 +1,12 @@
+.key-benefits {
+  &__slider-nav-item {
+    &:hover {
+      overflow: hidden;
+      color: $key-benefits-slider-item-active-color;
+
+      &:after {
+        background: $key-benefits-slider-item-active-bg-color;
+      }
+    }
+  }
+}

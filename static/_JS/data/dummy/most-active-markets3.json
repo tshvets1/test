@@ -1,0 +1,136 @@
+{
+  "d": [
+	{
+	  "__type": "Facade.BLL.Web.Models.FacadeProductVolatilityWithBidAsk",
+	  "Bid": "24.8421",
+	  "Offer": "24.8502",
+	  "Product": "one",
+	  "CurrentPrice": 0,
+	  "Volatility": 1.65,
+	  "Alias": "one",
+	  "Long": 30,
+	  "Short": 70
+	},
+	{
+	  "__type": "Facade.BLL.Web.Models.FacadeProductVolatilityWithBidAsk",
+	  "Bid": "8.721",
+	  "Offer": "8.745",
+	  "Product": "two",
+	  "CurrentPrice": 0,
+	  "Volatility": 1.84,
+	  "Alias": "two",
+	  "Long": 50,
+	  "Short": 50
+	},
+	{
+	  "__type": "Facade.BLL.Web.Models.FacadeProductVolatilityWithBidAsk",
+	  "Bid": "1108.67",
+	  "Offer": "1109.12",
+	  "Product": "three",
+	  "CurrentPrice": 0,
+	  "Volatility": 2.83,
+	  "Alias": "three",
+	  "Long": 7,
+	  "Short": 93
+	},
+	{
+	  "__type": "Facade.BLL.Web.Models.FacadeProductVolatilityWithBidAsk",
+	  "Bid": "0.99597",
+	  "Offer": "0.99613",
+	  "Product": "four",
+	  "CurrentPrice": 0.996,
+	  "Volatility": 0.04,
+	  "Alias": "four",
+	  "Long": 55,
+	  "Short": 45
+	},
+	{
+	  "__type": "Facade.BLL.Web.Models.FacadeProductVolatilityWithBidAsk",
+	  "Bid": "13.95532",
+	  "Offer": "13.96065",
+	  "Product": "five",
+	  "CurrentPrice": 0,
+	  "Volatility": 1.37,
+	  "Alias": "five",
+	  "Long": 85,
+	  "Short": 15
+	},
+	{
+	  "__type": "Facade.BLL.Web.Models.FacadeProductVolatilityWithBidAsk",
+	  "Bid": "1.40922",
+	  "Offer": "1.40993",
+	  "Product": "six",
+	  "CurrentPrice": 0,
+	  "Volatility": 1.82,
+	  "Alias": "six",
+	  "Long": 3,
+	  "Short": 97
+	},
+	{
+	  "__type": "Facade.BLL.Web.Models.FacadeProductVolatilityWithBidAsk",
+	  "Bid": "288.730",
+	  "Offer": "288.851",
+	  "Product": "seven",
+	  "CurrentPrice": 0,
+	  "Volatility": 3.16,
+	  "Alias": "seven",
+	  "Long": 98,
+	  "Short": 2
+	},
+	{
+	  "__type": "Facade.BLL.Web.Models.FacadeProductVolatilityWithBidAsk",
+	  "Bid": "6.85645",
+	  "Offer": "6.85703",
+	  "Product": "eight",
+	  "CurrentPrice": 0,
+	  "Volatility": 2.49,
+	  "Alias": "eight",
+	  "Long": 34,
+	  "Short": 66
+	},
+	{
+	  "__type": "Facade.BLL.Web.Models.FacadeProductVolatilityWithBidAsk",
+	  "Bid": "732.61",
+	  "Offer": "733.37",
+	  "Product": "nine",
+	  "CurrentPrice": 0,
+	  "Volatility": 6.80,
+	  "Alias": "nine",
+	  "Long": 10,
+	  "Short": 90
+	},
+	{
+	  "__type": "Facade.BLL.Web.Models.FacadeProductVolatilityWithBidAsk",
+	  "Bid": "80.585",
+	  "Offer": "80.634",
+	  "Product": "ten",
+	  "CurrentPrice": 0,
+	  "Volatility": 1.58,
+	  "Alias": "ten",
+	  "Long": 65,
+	  "Short": 35
+	},
+    	{
+    	    "__type": "Facade.BLL.Web.Models.FacadeProductVolatilityWithBidAsk",
+    	    "Bid": "80.585",
+    	    "Offer": "80.634",
+    	    "Product": "eleven",
+    	    "CurrentPrice": 0,
+    	    "Volatility": 1.58,
+    	    "Alias": "eleven",
+    	    "Long": 65,
+    	    "Short": 35
+    	},
+        	{
+        	    "__type": "Facade.BLL.Web.Models.FacadeProductVolatilityWithBidAsk",
+        	    "Bid": "80.585",
+        	    "Offer": "80.634",
+        	    "Product": "twelve",
+        	    "CurrentPrice": 0,
+        	    "Volatility": 1.58,
+        	    "Alias": "twelve",
+        	    "Long": 65,
+        	    "Short": 35
+        	}
+  ]
+}

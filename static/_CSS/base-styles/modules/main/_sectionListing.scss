@@ -1,0 +1,58 @@
+.section-listing {
+  @extend %list--unstyled;
+  margin: 0;
+
+  > li {
+    margin-top: $gutter*5;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+  }
+
+  &__icon {
+    float: left;
+    max-width: 50px;
+    margin: $gutter/2 $gutter*4 $gutter 0;
+    width: 100%;
+  }
+
+  &__content {
+    overflow: hidden;
+
+  }
+  &__title {
+    @include rem(font-size, 20);
+    display: inline-block;
+    text-decoration: none;
+  }
+
+  &__description {
+    @include rem(font-size, 14);
+    color: $color-darker;
+    line-height: 1.6;
+
+    p {
+      margin-top: 0;
+    }
+  }
+
+  @media screen and (max-width: $mobile) {
+    text-align: center;
+
+    > li {
+      margin-top: $gutter*2;
+    }
+    &__icon {
+      float: none;
+      margin: $gutter/2 auto;
+    }
+
+    &__title {
+      @include rem(font-size, 16);
+      margin-bottom: 0;
+      font-weight: 700;
+    }
+  }
+}

@@ -1,0 +1,313 @@
+// THESE ARE COMMON STYLES FOR THE RICH TEXT FIELDS (RTF) 
+// USED ON THE DETAIL PAGES AND OTHER AREAS THOUGHOUT THE SITE
+// EFFECTS CONTENT WITHIN: <div class="rtf">...</div>
+
+.rtf {
+  h2,
+  h3 {
+    @include set-text-styles(15, 700);
+    margin: 1em 0 0;
+    color: $color-primary-3;
+  }
+
+  h2 + p,
+  h3 + p {
+    margin-top: 0;
+  }
+
+  p {
+    margin: 1.4375em 0;
+    line-height: 1.6;
+  }
+
+  ul {
+    list-style: square;
+    padding-left: 1.2em;
+  }
+
+  li {
+    margin: 8px 0;
+  }
+
+  .disc {
+    list-style: disc;
+  }
+  .circle {
+    list-style: circle;
+  }
+  .square {
+    list-style: square;
+  }
+  .none {
+    list-style: none;
+  }
+
+  ol {
+    margin-top: 0;
+    margin-left: 1em;
+    padding-left: 1em;
+
+    ol {
+      list-style: lower-alpha;
+      padding-left: 1.7em;
+
+      li {
+        padding-left: 1em;
+      }
+
+      ol {
+        list-style: lower-roman;
+        padding-left: 2em;
+      }
+    }
+  }
+
+  ol, ul {
+    line-height: 1.6;
+  }
+
+  .lower-alpha {
+    list-style: lower-alpha;
+  }
+  .upper-alpha {
+    list-style: upper-alpha;
+  }
+  .lower-roman {
+    list-style: lower-roman;
+  }
+  .upper-roman {
+    list-style: upper-roman;
+  }
+  .decimal {
+    list-style: decimal;
+  }
+  .decimal-leading-zero {
+    list-style: decimal-leading-zero;
+    padding-left: 2em;
+  }
+
+  blockquote {
+    @include rem(font-size, 33);
+    position: relative;
+    z-index: $defaultZIndex;
+    margin: 0;
+    padding: $gutter*2 0 $gutter*2 $gutter*6.3;
+    line-height: 1.36;
+    font-weight: 200;
+    color: $color-primary-3;
+    letter-spacing: -1px;
+
+    &:before {
+      @include rem(font-size, 114);
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: $beforeAllZIndex;
+
+      content: open-quote;
+      font-weight: 700;
+      line-height: 0.9;
+      color: $color-lighter;
+    }
+
+    h2,
+    h3 {
+      margin-top: 0;
+    }
+
+    p {
+      margin: 0;
+
+      & + p {
+        margin-top: 1em;
+      }
+    }
+  }
+
+  .highlight-1 {
+    @include rem(font-size, 16);
+    font-weight: 400;
+    color: $color-darker;
+    letter-spacing: 0;
+
+    &[class*="primary"],
+    &[class*="secondary"] {
+
+      h3 {
+        @include rem(font-size, 24);
+        line-height: 1.38;
+        font-weight: 200;
+        color: $color-darker;
+      }
+
+    }
+  }
+  [class*="highlight"] {
+    padding: 20px 0 20px 30px;
+    border-left: solid 12px $color-light;
+
+    &:before {
+      display: none;
+    }
+
+    &.primary-green {
+      border-left-color: $color-secondary-7;
+    }
+    &.primary-blue {
+      border-left-color: $color-primary-2;
+    }
+    &.primary-dark-blue {
+      border-left-color: $color-primary-3;
+    }
+    &.secondary-purple {
+      border-left-color: $color-secondary-1;
+    }
+    &.secondary-light-blue {
+      border-left-color: $color-secondary-2;
+    }
+    &.secondary-lime {
+      border-left-color: $color-secondary-3;
+    }
+    &.secondary-yellow {
+      border-left-color: $color-secondary-4;
+    }
+    &.secondary-orange {
+      border-left-color: $color-secondary-5;
+    }
+    &.secondary-rose {
+      border-left-color: $color-secondary-6;
+    }
+  }
+
+  figure {
+    margin: $gutter*2 0;
+
+    figcaption {
+      @include rem(font-size, 14);
+      padding: $gutter 0;
+      color: $color-darker;
+      border-bottom: solid 1px $color-light;
+    }
+  }
+
+  table {
+    @extend .data-table;
+  }
+
+  // NUMBERED LIST WITH CIRCLES - FOUND ON OPEN ACCOUNT
+  .big-number-list {
+    counter-reset: item;
+    padding-left: 0;
+    @if ($old-ie) {
+      white-space: nowrap;
+    }
+
+    li {
+      position: relative;
+      display: inline-block;
+
+      &:before {
+        @include rem(font-size, 20);
+        display: inline-block;
+        content: counter(item);
+        counter-increment: item;
+        height: 1.75em;
+        width: 1.75em;
+        margin: 0 20px 0 0;
+        line-height: 1.5;
+        text-align: center;
+        border: solid 3px $color-white;
+        border-radius: 100%;
+
+        @if ($old-ie) {
+          -ms-behavior: url(/_CSS/htc/PIE.htc);
+        }
+      }
+
+      img {
+        vertical-align: middle;
+        margin: 0 $gutter*4;
+      }
+
+    }
+  }
+}
+
+@media screen and (max-width: $mobile) {
+  .rtf {
+    h2, h3 {
+      @include set-text-styles(16, null, 1.25);
+    }
+    ol, li {
+      line-height: 1.68;
+    }
+
+    blockquote {
+      @include rem(font-size, 21);
+      padding: $gutter 0 $gutter $gutter*3.3;
+
+      &:before {
+        @include rem(font-size, 60);
+      }
+    }
+
+    .big-number-list {
+      display: inline-block;
+      margin: 0 auto $gutter;
+
+      li {
+        display: block;
+        text-align: left;
+
+        &:before {
+          @include rem(font-size, 13);
+          margin: 0 $gutter/2 0 0;
+          border: solid 2px $color-white;
+        }
+        .arrow {
+          display: none;
+        }
+
+      }
+    }
+
+    /* FLIP SCROLL RESPONSIVE TABLES - http://elvery.net/demo/responsive-tables */
+    //issue with @extend and :not with .data-table.
+    table:not([class~="data-table"]) {
+      width: 100%;
+      border-collapse: collapse;
+      border-spacing: 0;
+      display: block;
+      position: relative;
+
+      th,
+      td {
+        margin: 0;
+        display: block;
+        height: 45px;
+        text-align: left;
+      }
+
+      thead {
+        display: block;
+        float: left;
+
+        tr {
+          display: block;
+        }
+      }
+      tbody {
+        display: block;
+        width: auto;
+        position: relative;
+        overflow-x: auto;
+        white-space: nowrap;
+
+        tr {
+          display: inline-block;
+          vertical-align: top;
+        }
+      }
+    }
+  }
+}

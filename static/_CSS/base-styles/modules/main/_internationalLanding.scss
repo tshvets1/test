@@ -1,0 +1,208 @@
+.international {
+  &-logo {
+    .wrapper {
+      padding-top: $gutter*2;
+      padding-bottom: $gutter*2;
+      line-height: 1;
+
+      .logo {
+        display: inline-block;
+      }
+    }
+  }
+
+  &__dropdown {
+    &-module {
+      @if($old-ie) {
+        z-index: $defaultZIndex;
+      }
+
+      .wrapper {
+        padding-bottom: $gutter*8;
+        padding-top: $gutter*8;
+        text-align: center;
+
+        .form {
+          width: 400px;
+          display: inline-block;
+          position: relative;
+          text-align: center;
+
+          &-div {
+            margin-bottom: 0;
+          }
+
+          .chosen-container-single {
+            text-align: left;
+          }
+
+          select, input {
+            color: $color-darker;
+            background-color: $color-white;
+          }
+        }
+      }
+    }
+
+    &-headline {
+      @include rem(font-size, 26);
+    }
+
+    &-description {
+      @include rem(font-size, 20);
+      padding-bottom: $gutter*2;
+    }
+  }
+
+  &__error-message {
+    display: none;
+    position: absolute;
+    width: 100%;
+    z-index: $defaultZIndex;
+    padding: $gutter;
+    margin-top: $gutter*6;
+    overflow: auto;
+
+    color: $color-darker;
+    background: $color-secondary-4;
+    text-align: left;
+
+    &.active {
+      display: block;
+    }
+
+    img {
+      float: left;
+      width: 50px;
+    }
+
+    span {
+      width: 330px;
+      float: left;
+      line-height: 1.15;
+      padding-left: $gutter;
+    }
+  }
+
+  &__map {
+    padding-top: $gutter*4;
+    padding-bottom: $gutter*4;
+    .wrapper {
+      position: relative;
+      padding: 0;
+    }
+
+    &-pin {
+      position: absolute;
+      display: block;
+      @include sprite($international-landing-map-pin-icon);
+
+      &[data-country="US"] {
+        top: 32%;
+        left: 25.5%;
+      }
+
+      &[data-country="UK"] {
+        top: 20%;
+        left: 46.6%;
+      }
+
+      &[data-country="CA"] {
+        top: 20%;
+        left: 20%;
+      }
+
+      &[data-country="JP"] {
+        top: 31%;
+        left: 84.5%;
+      }
+
+      &[data-country="AU"] {
+        top: 70%;
+        left: 87%;
+      }
+
+      &[data-country="CN"] {
+        top: 36%;
+        left: 76%;
+      }
+
+      &[data-country="RU"] {
+        top: 15%;
+        left: 61%;
+      }
+
+      &[data-country="DE"] {
+        top: 21%;
+        left: 52%;
+      }
+
+      &[data-country="PL"] {
+        top: 22.5%;
+        left: 49.5%;
+      }
+
+      &[data-country="SG"] {
+        top: 51%;
+        left: 75%;
+      }
+
+      &[data-country="AR"] {
+        top: 38%;
+        left: 59%;
+      }
+    }
+
+    &-descriptions {
+      display: none;
+    }
+
+    &-tooltip-rtf {
+      width: 425px;
+      @include rem(font-size, 14);
+      color: $color-darker;
+      line-height: normal;
+    }
+  }
+
+  &__map-img img {
+    width: 100%;
+  }
+
+  @media screen and (max-width: $mobile) {
+    &__dropdown {
+      &-module {
+        .wrapper {
+          .form {
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    &__map {
+      background-color: $color-white !important;
+
+      &-img {
+        display: none;
+      }
+
+      &-descriptions {
+        display: block;
+        padding: 0 $gutter*1.7;
+      }
+
+      &-tooltip-rtf {
+        width: 100%;
+        text-align: center;
+        padding-bottom: $gutter;
+      }
+    }
+
+    &__error-message {
+      span {
+        max-width: 78%;
+      }
+    }
+  }
+}

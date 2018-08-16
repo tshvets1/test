@@ -1,0 +1,118 @@
+.demo-form-module {
+  .form-instructions__headline {
+    padding-bottom: $gutter*2;
+
+    span {
+      text-transform: uppercase;
+    }
+  }
+
+  .form-group,
+  .form-div {
+    @include set-text-styles($form-rail-font...);
+
+    .form-label {
+      width: $form-rail-label-width;
+    }
+
+    .form-input, .form-tel, .form-email, .form-text, .form-textarea {
+      width: $form-rail-input-width;
+    }
+
+    .chosen-container-single {
+      float: right;
+      width: $form-rail-input-width !important;
+    }
+
+    &.has-spinner {
+      .form-submit,
+      .loading-wrapper {
+        float: left;
+        margin-left: 0;
+
+        &:first-child,
+        &.hidden ~ * {
+          margin-left: $form-rail-submit-margin-left;
+        }
+
+        &:first-child {
+          margin-left: 21%;
+        }
+      }
+    }
+  }
+
+  .form-submit {
+    margin-left: $form-rail-submit-margin-left;
+  }
+
+  .form-disclaimer {
+    @include set-text-styles($form-rail-disclaimer-font...);
+    margin-left: 0;
+
+    &__links a {
+      @include set-text-styles($form-rail-disclaimer-font...);
+    }
+  }
+
+  @media screen and (max-width: $tablet) {
+    .form-group, .form-div {
+      .form-label {
+        width: $form-rail-label-tablet-width;
+      }
+
+      .form-input, .form-tel, .form-email, .form-text, .form-textarea {
+        width: $form-rail-input-tablet-width;
+      }
+
+      .chosen-container-single {
+        width: $form-rail-input-tablet-width !important;
+      }
+
+      &.has-spinner {
+        .form-submit,
+        .loading-wrapper {
+
+          &:first-child,
+          &.hidden ~ * {
+            margin-left: $form-rail-submit-tablet-margin-left;
+          }
+        }
+      }
+    }
+
+    .form-submit {
+      margin-left: $form-rail-submit-tablet-margin-left;
+    }
+  }
+
+  @media screen and (max-width: $mobile) {
+    .form-group, .form-div {
+      .form-label {
+        width: $form-rail-label-mobile-width;
+      }
+
+      .form-input, .form-tel, .form-email, .form-text, .form-textarea {
+        width: $form-rail-input-mobile-width;
+      }
+
+      &.has-spinner {
+        text-align: center;
+
+        .form-submit,
+        .loading-wrapper {
+          float: none;
+        }
+
+        .form-submit,
+        .loading-wrapper.hidden ~ * {
+          margin-left: $form-rail-submit-mobile-margin-left;
+        }
+      }
+    }
+
+    .form-submit {
+      margin-left: $form-rail-submit-mobile-margin-left;
+    }
+  }
+}

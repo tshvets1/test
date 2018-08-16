@@ -1,0 +1,264 @@
+//
+// GENERIC HERO
+// FOUND ON GENERIC PAGE TEMPLATE (Terms & Conditions, Sitemap, etc.)
+//
+.hero {
+  &__content-wrapper {
+    @extend %display-flex;
+    position: relative;
+    max-width: $page-width;
+    margin: 0 auto;
+
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+
+  &__content {
+    padding-bottom: $gutter*6;
+    -webkit-flex: 0 0 50%;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+  }
+
+  &__intro {
+    @include rem(font-size, 20);
+    line-height: 1.4;
+    margin: 0 0 1em;
+  }
+
+  &__description {
+    line-height: 1.4;
+  }
+}
+
+.secondary-hero {
+  &__headline {
+    @include rem(font-size, 44);
+    span {
+      @include inline-bg($color-white);
+      color: $color-primary-3;
+    }
+  }
+
+  &[data-sectionbg="blue"] .cta-btn {
+    @include cta-btn-theme($color-secondary-7, $color-white, $isDefaultTheme: true)
+  }
+}
+
+.generic-hero {
+  $g-hero-section-img-height: 120px !default;
+  $g-hero-section-padding: $g-hero-section-img-height 0 0 !default;
+  $g-hero-section-inner-hero-options-padding: 30px 0 0 !default;
+  //todo: probably useless: review after JP release
+  $g-hero-section-is-page-title-inner-hero-options-padding: $g-hero-section-inner-hero-options-padding !default;
+  $g-hero-section-inner-hero-options-content-padding-bottom: 20px !default;
+  $g-hero-section-title-margin: -36px 0 0 10px !default;
+  $g-hero-section-no-inner-hero-options-g-content-after-padding: $g-hero-section-img-height 0 0 !default;
+  $g-content-after-g-hero-no-inner-hero-options-padding: 30px 0 0 !default;
+
+  $g-hero-section-img-tablet-height: 120px !default;
+  $g-hero-section-tablet-padding: null !default;
+  $g-hero-section-title-tablet-margin: -40px 0 0 10px !default;
+  $g-hero-section-inner-hero-options-tablet-padding: 40px 0 0 !default;
+  //todo: probably useless: review after JP release
+  $g-hero-section-is-page-title-inner-hero-options-tablet-padding: $g-hero-section-inner-hero-options-tablet-padding !default;
+  $g-hero-section-no-inner-hero-options-g-content-after-tablet-padding: $g-hero-section-img-tablet-height 0 40px !default;
+
+  $g-hero-section-img-mobile-height: 65px !default;
+  $g-hero-section-mobile-padding: $g-hero-section-img-mobile-height 0 0 !default;
+  $g-hero-section-inner-hero-options-mobile-padding: 10px 0 30px !default;
+  //todo: probably useless: review after JP release
+  $g-hero-section-is-page-title-inner-hero-options-mobile-padding: $g-hero-section-inner-hero-options-mobile-padding !default;
+  $g-hero-section-title-mobile-margin: -30px 0 0 5px !default;
+  $g-hero-section-no-inner-hero-options-g-content-after-mobile-padding: $g-hero-section-img-mobile-height 0 10px !default;
+  $g-content-after-g-hero-no-inner-hero-options-mobile-padding: 0 !default;
+
+  $g-hero-section-title-font: 40 400 1.2 !default;
+  $g-hero-section-title-is-page-title-font: 50 !default;
+  $g-hero-section-title-mobile-font: 25 null 1.1 !default;
+  $g-hero-section-title-is-page-title-mobile-font: 36 !default;
+
+  &-section {
+    position: relative;
+    padding: $g-hero-section-padding;
+
+    .hero-two-section[data-columns="2"] {
+      padding: $g-hero-section-inner-hero-options-padding;
+
+      .wrapper > .col {
+        padding-bottom: $g-hero-section-inner-hero-options-content-padding-bottom;
+
+        &.hero__media {
+          padding-bottom: 0;
+        }
+      }
+    }
+
+    .page__title {
+      position: absolute;
+      margin: $g-hero-section-title-margin;
+      @include set-text-styles($g-hero-section-title-font...);
+
+      span {
+        @include inline-bg($color-white);
+        color: $color-primary-3;
+      }
+    }
+
+    &.special-bg {
+      background-color: $color-lighter;
+    }
+
+    &[data-is-page-title="true"],
+    &[data-is-page-title="True"] {
+      .page__title {
+        @include set-text-styles($g-hero-section-title-is-page-title-font...);
+      }
+
+      .hero-two-section[data-columns="2"] {
+        padding: $g-hero-section-is-page-title-inner-hero-options-padding;
+      }
+    }
+
+    &[data-has-inner-hero-options="false"][data-has-generic-content-after="true"],
+    &[data-has-inner-hero-options="true"] {
+      .page__title {
+        position: relative;
+      }
+    }
+
+    &[data-has-inner-hero-options="false"][data-has-generic-content-after="true"] {
+      padding: $g-hero-section-no-inner-hero-options-g-content-after-padding;
+
+      + .generic-content-section {
+        padding: $g-content-after-g-hero-no-inner-hero-options-padding;
+      }
+    }
+  }
+
+  &__img {
+    @extend %bannerBg;
+    @extend %section-bg;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: $g-hero-section-img-height;
+
+    &[data-sectionbg="blue"] {
+      color: $color-darker;
+      background-color: $color-primary-2;
+    }
+  }
+
+  // TABLET LAYOUT
+  @media screen and (max-width: $tablet) {
+    &-section {
+      padding: $g-hero-section-tablet-padding;
+
+      .page__title {
+        position: relative;
+        margin: $g-hero-section-title-tablet-margin;
+      }
+
+      .hero-two-section[data-columns="2"] {
+        padding: $g-hero-section-inner-hero-options-tablet-padding;
+
+        > .wrapper {
+          padding: 0 $tabletPadding;
+        }
+      }
+
+      &[data-is-page-title="true"],
+      &[data-is-page-title="True"] {
+        .hero-two-section[data-columns="2"] {
+          padding: $g-hero-section-is-page-title-inner-hero-options-tablet-padding;
+        }
+      }
+
+      &[data-has-inner-hero-options="false"] {
+        padding: $g-hero-section-no-inner-hero-options-g-content-after-tablet-padding;
+      }
+    }
+  }
+
+  // MOBILE LAYOUT
+  @media screen and (max-width: $mobile) {
+    &-section {
+      position: relative;
+      padding: $g-hero-section-mobile-padding;
+
+      .hero-two-section[data-columns="2"] {
+        padding: $g-hero-section-inner-hero-options-mobile-padding;
+
+        .wrapper {
+          & > .col, .additional-option {
+            padding-bottom: 0;
+          }
+        }
+      }
+
+      .page__title {
+        margin: $g-hero-section-title-mobile-margin;
+        @include set-text-styles($g-hero-section-title-mobile-font...);
+
+        span {
+          @include inline-bg-mobile($color-white, $line-height: 1.25);
+          color: $color-primary-3;
+        }
+      }
+
+      &.special-bg {
+        background-color: $color-white;
+      }
+
+      &[data-is-page-title="true"],
+      &[data-is-page-title="True"] {
+        .page__title {
+          @include set-text-styles($g-hero-section-title-is-page-title-mobile-font...);
+        }
+
+        .hero-two-section[data-columns="2"] {
+          padding: $g-hero-section-is-page-title-inner-hero-options-mobile-padding;
+        }
+      }
+
+      .hero {
+        &__content-wrapper {
+          display: block;
+          padding: 0 $gutter*1.7 $gutter*3;
+        }
+
+        &__content {
+          padding-bottom: 0;
+        }
+
+        &__intro,
+        &__description {
+          @include rem(font-size, 14);
+        }
+      }
+
+      &[data-has-inner-hero-options="false"] {
+        padding: $g-hero-section-no-inner-hero-options-g-content-after-mobile-padding;
+      }
+
+      &[data-has-inner-hero-options="false"][data-has-generic-content-after="true"] {
+        padding: $g-hero-section-no-inner-hero-options-g-content-after-mobile-padding;
+
+        + .generic-content-section {
+          padding: $g-content-after-g-hero-no-inner-hero-options-mobile-padding;
+        }
+      }
+    }
+
+    &__img {
+      height: $g-hero-section-img-mobile-height;
+
+      &[data-sectionbg="blue"] {
+        color: $color-darker;
+        background-color: $color-primary-2;
+      }
+    }
+  }
+}

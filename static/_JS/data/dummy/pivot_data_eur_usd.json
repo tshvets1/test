@@ -1,0 +1,32 @@
+{
+  "d": [
+	{
+	  "__type": "Facade.BLL.Web.Models.FacadePivotPointWithBidAsk",
+	  "Bid": "1.08931",
+	  "Offer": "1.08941",
+	  "MakretId": 401138124,
+	  "DailyPivotPoint": 1.10421,
+	  "WeeklyPivotPoint": 1.10728,
+	  "MonthlyPivotPoint": 1.10221,
+	  "DailyExpirationDate": "11/10/2016 10:00:00 PM",
+	  "WeeklyExpirationDate": "11/11/2016 10:00:00 PM",
+	  "MonthlyExpirationDate": "11/30/2016 10:00:00 PM",
+	  "DailyLastUpdatedDate": "11/9/2016 10:00:00 PM",
+	  "WeeklyLastUpdatedDate": "11/4/2016 10:00:00 PM",
+	  "MonthlyLastUpdatedDate": "10/31/2016 10:00:00 PM",
+	  "Quote": "EUR/USD",
+	  "DailyHigh": "1.12995",
+	  "DailyLow": "1.09071",
+	  "DailyClose": "1.09198",
+	  "WeeklyHigh": "1.11417",
+	  "WeeklyLow": "1.0936",
+	  "WeeklyClose": "1.11407",
+	  "MonthlyHigh": "1.12443",
+	  "MonthlyLow": "1.08511",
+	  "MonthlyClose": "1.09708",
+	  "Decimals": "5",
+	  "LastUpdated": "10/31/2016 10:00:00 PM",
+	  "Alias": null
+	}
+  ]
+}

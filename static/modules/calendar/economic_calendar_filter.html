@@ -1,0 +1,101 @@
+<!--
+  {
+  "name": "Economic Calendar - Filter",
+  "status": "Testing - to replicate",
+  "notes": ""
+  }
+-->
+
+<div class="section-wrapper fixed-menu-section economic-calendar-filter-section" data-sectionbg="default"
+	 data-for="tablet mobile">
+	<div class="wrapper">
+		<div class="fixed-menu__toggle">
+			<h2 class="filter">
+				<i class="icon icon-filter"></i>
+				<span></span>
+			</h2>
+			<h2 class="fixed-menu__changeble-headline filter-views">
+				<span class="filter-views__label">DISPLAYING:</span>
+				<span class="filter-views__value"></span>
+				<i class="icon icon-arrow-down"></i>
+			</h2>
+		</div>
+		<div class="fixed-menu__hideable-content filter-views">
+			<ul class="fixed-menu__hideable-content-list dates" data-type="radio">
+				<li>
+					<input type="radio" id="date-0" value="recentnext" name="date" checked/>
+					<label for="date-0"></label>
+				</li>
+				<li>
+					<input type="radio" id="date-1" value="today" name="date"/>
+					<label for="date-1"></label>
+				</li>
+				<li>
+					<input type="radio" id="date-2" value="tomorrow" name="date"/>
+					<label for="date-2"></label>
+				</li>
+				<li>
+					<input type="radio" id="date-3" value="thisweek" name="date"/>
+					<label for="date-3"></label>
+				</li>
+				<li>
+					<input type="radio" id="date-4" value="nextweek" name="date"/>
+					<label for="date-4"></label>
+				</li>
+				<li class="economic-calendar-filter__custom">
+					<input type="radio" id="date-5" value="custom" name="date"/>
+					<label for="date-5"></label>
+
+					<div class="economic-calendar-filter__custom-dates">
+						<div class="economic-calendar-filter__custom-date">
+							<label for="fxst-start"></label>
+							<input type="text" id="fxst-start">
+						</div>
+						<div class="economic-calendar-filter__custom-date">
+							<label for="fxst-end"></label>
+							<input type="text" id="fxst-end">
+						</div>
+					</div>
+				</li>
+			</ul>
+
+			<a href="#" class="economic-calendar-filter__filter-results cta-btn"></a>
+		</div>
+		<div class="fixed-menu__hideable-content filter">
+			<!-- Countries Filter -->
+			<h2 class="fixed-menu__hideable-content-headline" data-toggle-class="open-countries"></h2>
+
+			<ul class="fixed-menu__hideable-content-list countries" data-type="checkbox"></ul>
+			<!-- End Countries Filter -->
+			<!-- Categories Filter -->
+			<h2 class="fixed-menu__hideable-content-headline" data-toggle-class="open-categories"></h2>
+
+			<ul class="fixed-menu__hideable-content-list categories" data-type="checkbox"></ul>
+			<!-- End Categories Filter -->
+			<!-- Volatility Filter -->
+			<h2 class="fixed-menu__hideable-content-headline" data-toggle-class="open-volatilities"></h2>
+
+			<ul class="fixed-menu__hideable-content-list volatilities" data-type="radio">
+				<li>
+					<input type="radio" id="volatility-0" value="0" name="volatility"/>
+					<label for="volatility-0"></label>
+				</li>
+				<li>
+					<input type="radio" id="volatility-1" value="1" name="volatility"/>
+					<label for="volatility-1"></label>
+				</li>
+				<li>
+					<input type="radio" id="volatility-2" value="2" name="volatility"/>
+					<label for="volatility-2"></label>
+				</li>
+				<li>
+					<input type="radio" id="volatility-3" value="3" name="volatility"/>
+					<label for="volatility-3"></label>
+				</li>
+			</ul>
+			<!-- End Volatility Filter -->
+
+			<a href="#" class="economic-calendar-filter__filter-results cta-btn"></a>
+		</div>
+	</div>
+</div>

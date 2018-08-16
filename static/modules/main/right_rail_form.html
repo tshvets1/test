@@ -1,0 +1,407 @@
+<!--
+  {
+  "name": "Demo Form (Right Rail)",
+  "status": "Complete",
+  "notes": ""
+  }
+-->
+
+
+<div class="module-wrapper demo-form-module" data-sectionbg="default">
+	<div class="wrapper">
+		<h3 class="form-instructions__headline">
+			Open a demo account
+			<span class="required-note">All Fields Required</span>
+		</h3>
+
+		<form data-dform-variable="demoFormRightRail"></form>
+
+		<script type="text/javascript">
+			var demoFormRightRail = {
+				"action": "index.html",
+				"method": "post",
+				"html": [
+					{
+						type: "div",
+						html: {
+							"id": "firstName",
+							"name": "firstName",
+							"label": "First Name",
+							"type": "text",
+							"validate": {
+								"required": true
+							}
+						}
+					}, {
+						type: "div",
+						html: {
+							"id": "surname",
+							"name": "surname",
+							"label": "Surname",
+							"type": "text",
+							"validate": {
+								"required": true
+							}
+						}
+					}, {
+						"type": "div",
+						"dropdown": {
+							"name": "country",
+							"label": "Country",
+							"placeholder": "Select Country",
+							"validate": {
+								"required": true,
+								"messages": {
+									"required": "Country required"
+								}
+							},
+							"chosenOptions": {
+								"width" : "60%"
+							},
+							"defaultValue": "United States",
+							"options": [
+								{Name: "", Value: ""},
+								{Name: "Afghanistan", Value: "Afghanistan"},
+								{Name: "Algeria", Value: "Algeria"},
+								{Name: "American Samoa", Value: "American Samoa"},
+								{Name: "Andorra", Value: "Andorra"},
+								{Name: "Angola", Value: "Angola"},
+								{Name: "Anguilla", Value: "Anguilla"},
+								{Name: "Antigua and Barbuda", Value: "Antigua and Barbuda"},
+								{Name: "Argentina", Value: "Argentina"},
+								{Name: "Armenia", Value: "Armenia"},
+								{Name: "Aruba", Value: "Aruba"},
+								{Name: "Australia", Value: "Australia"},
+								{Name: "Austria", Value: "Austria"},
+								{Name: "Azerbaijan", Value: "Azerbaijan"},
+								{Name: "Bahamas", Value: "Bahamas"},
+								{Name: "Bahrain", Value: "Bahrain"},
+								{Name: "Bangladesh", Value: "Bangladesh"},
+								{Name: "Barbados", Value: "Barbados"},
+								{Name: "Belarus", Value: "Belarus"},
+								{Name: "Belgium", Value: "Belgium"},
+								{Name: "Belize", Value: "Belize"},
+								{Name: "Benin", Value: "Benin"},
+								{Name: "Bermuda", Value: "Bermuda"},
+								{Name: "Bhutan", Value: "Bhutan"},
+								{Name: "Bolivia", Value: "Bolivia"},
+								{Name: "Bosnia and Herzegovina", Value: "Bosnia and Herzegovina"},
+								{Name: "Botswana", Value: "Botswana"},
+								{Name: "Bouvet Island", Value: "Bouvet Island"},
+								{Name: "Brazil", Value: "Brazil"},
+								{Name: "Brunei", Value: "Brunei"},
+								{Name: "Bulgaria", Value: "Bulgaria"},
+								{Name: "Burkina Faso", Value: "Burkina Faso"},
+								{Name: "Burundi", Value: "Burundi"},
+								{Name: "Cambodia", Value: "Cambodia"},
+								{Name: "Cameroon", Value: "Cameroon"},
+								{Name: "Canada", Value: "Canada"},
+								{Name: "Cape Verde", Value: "Cape Verde"},
+								{Name: "Cayman Islands", Value: "Cayman Islands"},
+								{Name: "Central African Republic", Value: "Central African Republic"},
+								{Name: "Chad", Value: "Chad"},
+								{Name: "Chile", Value: "Chile"},
+								{Name: "China", Value: "China"},
+								{Name: "Christmas Island", Value: "Christmas Island"},
+								{Name: "Cocos Islands", Value: "Cocos Islands"},
+								{Name: "Colombia", Value: "Colombia"},
+								{Name: "Comoros", Value: "Comoros"},
+								{Name: "Congo", Value: "Congo"},
+								{
+									Name: "Congo Democratic Republic of the",
+									Value: "Congo Democratic Republic of the"
+								},
+								{Name: "Cook Islands", Value: "Cook Islands"},
+								{Name: "Costa Rica", Value: "Costa Rica"},
+								{Name: "Croatia", Value: "Croatia"},
+								{Name: "Cuba", Value: "Cuba"},
+								{Name: "Cyprus", Value: "Cyprus"},
+								{Name: "Czech Republic", Value: "Czech Republic"},
+								{Name: "Denmark", Value: "Denmark"},
+								{Name: "Djibouti", Value: "Djibouti"},
+								{Name: "Dominica", Value: "Dominica"},
+								{Name: "Dominican Republic", Value: "Dominican Republic"},
+								{Name: "Ecuador", Value: "Ecuador"},
+								{Name: "Egypt", Value: "Egypt"},
+								{Name: "El Salvador", Value: "El Salvador"},
+								{Name: "Equatorial Guinea", Value: "Equatorial Guinea"},
+								{Name: "Eritrea", Value: "Eritrea"},
+								{Name: "Estonia", Value: "Estonia"},
+								{Name: "Ethiopia", Value: "Ethiopia"},
+								{Name: "Falkland Islands", Value: "Falkland Islands"},
+								{Name: "Faroe Islands", Value: "Faroe Islands"},
+								{Name: "Fiji", Value: "Fiji"},
+								{Name: "Finland", Value: "Finland"},
+								{Name: "France", Value: "France"},
+								{Name: "French Guiana", Value: "French Guiana"},
+								{Name: "Gabon", Value: "Gabon"},
+								{Name: "Gambia", Value: "Gambia"},
+								{Name: "Georgia", Value: "Georgia"},
+								{Name: "Germany", Value: "Germany"},
+								{Name: "Ghana", Value: "Ghana"},
+								{Name: "Gibraltar", Value: "Gibraltar"},
+								{Name: "Greece", Value: "Greece"},
+								{Name: "Greenland", Value: "Greenland"},
+								{Name: "Grenada", Value: "Grenada"},
+								{Name: "Guadeloupe", Value: "Guadeloupe"},
+								{Name: "Guam", Value: "Guam"},
+								{Name: "Guatemala", Value: "Guatemala"},
+								{Name: "Guinea", Value: "Guinea"},
+								{Name: "Guinea Bissau", Value: "Guinea Bissau"},
+								{Name: "Guyana", Value: "Guyana"},
+								{Name: "Haiti", Value: "Haiti"},
+								{Name: "Honduras", Value: "Honduras"},
+								{Name: "Hong Kong", Value: "Hong Kong"},
+								{Name: "Hungary", Value: "Hungary"},
+								{Name: "Iceland", Value: "Iceland"},
+								{Name: "India", Value: "India"},
+								{Name: "Indonesia", Value: "Indonesia"},
+								{Name: "Iran", Value: "Iran"},
+								{Name: "Iraq", Value: "Iraq"},
+								{Name: "Ireland", Value: "Ireland"},
+								{Name: "Israel", Value: "Israel"},
+								{Name: "Italy", Value: "Italy"},
+								{Name: "Ivory Coast", Value: "Ivory Coast"},
+								{Name: "Jamaica", Value: "Jamaica"},
+								{Name: "Japan", Value: "Japan"},
+								{Name: "Jordan", Value: "Jordan"},
+								{Name: "Kazakhstan", Value: "Kazakhstan"},
+								{Name: "Kenya", Value: "Kenya"},
+								{Name: "Kiribati", Value: "Kiribati"},
+								{Name: "Kuwait", Value: "Kuwait"},
+								{Name: "Kyrgyzstan", Value: "Kyrgyzstan"},
+								{Name: "Laos", Value: "Laos"},
+								{Name: "Latvia", Value: "Latvia"},
+								{Name: "Lebanon", Value: "Lebanon"},
+								{Name: "Lesotho", Value: "Lesotho"},
+								{Name: "Liberia", Value: "Liberia"},
+								{Name: "Libya", Value: "Libya"},
+								{Name: "Liechtenstein", Value: "Liechtenstein"},
+								{Name: "Lithuania", Value: "Lithuania"},
+								{Name: "Luxembourg", Value: "Luxembourg"},
+								{Name: "Macau", Value: "Macau"},
+								{Name: "Macedonia", Value: "Macedonia"},
+								{Name: "Madagascar", Value: "Madagascar"},
+								{Name: "Malawi", Value: "Malawi"},
+								{Name: "Malaysia", Value: "Malaysia"},
+								{Name: "Maldives", Value: "Maldives"},
+								{Name: "Mali", Value: "Mali"},
+								{Name: "Malta", Value: "Malta"},
+								{Name: "Marshall Islands", Value: "Marshall Islands"},
+								{Name: "Martinique", Value: "Martinique"},
+								{Name: "Mauritania", Value: "Mauritania"},
+								{Name: "Mauritius", Value: "Mauritius"},
+								{Name: "Mayotte", Value: "Mayotte"},
+								{Name: "Mexico", Value: "Mexico"},
+								{Name: "Micronesia", Value: "Micronesia"},
+								{Name: "Moldova", Value: "Moldova"},
+								{Name: "Monaco", Value: "Monaco"},
+								{Name: "Mongolia", Value: "Mongolia"},
+								{Name: "Montenegro", Value: "Montenegro"},
+								{Name: "Montserrat", Value: "Montserrat"},
+								{Name: "Morocco", Value: "Morocco"},
+								{Name: "Mozambique", Value: "Mozambique"},
+								{Name: "Myanmar", Value: "Myanmar"},
+								{Name: "Namibia", Value: "Namibia"},
+								{Name: "Nauru", Value: "Nauru"},
+								{Name: "Nepal", Value: "Nepal"},
+								{Name: "Netherlands", Value: "Netherlands"},
+								{Name: "Netherlands Antilles", Value: "Netherlands Antilles"},
+								{Name: "New Caledonia", Value: "New Caledonia"},
+								{Name: "New Zealand", Value: "New Zealand"},
+								{Name: "Nicaragua", Value: "Nicaragua"},
+								{Name: "Niger", Value: "Niger"},
+								{Name: "Nigeria", Value: "Nigeria"},
+								{Name: "Niue", Value: "Niue"},
+								{Name: "Norfolk Island", Value: "Norfolk Island"},
+								{Name: "North Korea", Value: "North Korea"},
+								{Name: "Northern Mariana Islands", Value: "Northern Mariana Islands"},
+								{Name: "Norway", Value: "Norway"},
+								{Name: "Oman", Value: "Oman"},
+								{Name: "Pakistan", Value: "Pakistan"},
+								{Name: "Palau", Value: "Palau"},
+								{Name: "Panama", Value: "Panama"},
+								{Name: "Papa New Guinea", Value: "Papa New Guinea"},
+								{Name: "Paraguay", Value: "Paraguay"},
+								{Name: "Peru", Value: "Peru"},
+								{Name: "Philippines", Value: "Philippines"},
+								{Name: "Pitcairn Island", Value: "Pitcairn Island"},
+								{Name: "Poland", Value: "Poland"},
+								{Name: "Polynesia", Value: "Polynesia"},
+								{Name: "Portugal", Value: "Portugal"},
+								{Name: "Puerto Rico", Value: "Puerto Rico"},
+								{Name: "Qatar", Value: "Qatar"},
+								{Name: "Reunion", Value: "Reunion"},
+								{Name: "Romania", Value: "Romania"},
+								{Name: "Russia", Value: "Russia"},
+								{Name: "Rwanda", Value: "Rwanda"},
+								{Name: "Saint Helena", Value: "Saint Helena"},
+								{Name: "Saint Kitts and Nevis", Value: "Saint Kitts and Nevis"},
+								{Name: "Saint Lucia", Value: "Saint Lucia"},
+								{Name: "Saint Pierre and Miquelon", Value: "Saint Pierre and Miquelon"},
+								{
+									Name: "Saint Vincent and the Grenadines",
+									Value: "Saint Vincent and the Grenadines"
+								},
+								{Name: "Samoa", Value: "Samoa"},
+								{Name: "San Marino", Value: "San Marino"},
+								{Name: "Sao Tome and Principe", Value: "Sao Tome and Principe"},
+								{Name: "Saudi Arabia", Value: "Saudi Arabia"},
+								{Name: "Senegal", Value: "Senegal"},
+								{Name: "Serbia", Value: "Serbia"},
+								{Name: "Seychelles", Value: "Seychelles"},
+								{Name: "Sierra Leone", Value: "Sierra Leone"},
+								{Name: "Singapore", Value: "Singapore"},
+								{Name: "Slovakia", Value: "Slovakia"},
+								{Name: "Slovenia", Value: "Slovenia"},
+								{Name: "Solomon Islands", Value: "Solomon Islands"},
+								{Name: "Somalia", Value: "Somalia"},
+								{Name: "South Africa", Value: "South Africa"},
+								{
+									Name: "South Georgia and South Sandwich Islands",
+									Value: "South Georgia and South Sandwich Islands"
+								},
+								{Name: "South Korea", Value: "South Korea"},
+								{Name: "Spain", Value: "Spain"},
+								{Name: "Sri Lanka", Value: "Sri Lanka"},
+								{Name: "Sudan", Value: "Sudan"},
+								{Name: "Suriname", Value: "Suriname"},
+								{
+									Name: "Svalbard and Jan Mayen Islands",
+									Value: "Svalbard and Jan Mayen Islands"
+								},
+								{Name: "Swaziland", Value: "Swaziland"},
+								{Name: "East Timor", Value: "East Timor"},
+								{Name: "Sweden", Value: "Sweden"},
+								{Name: "Switzerland", Value: "Switzerland"},
+								{Name: "Syria", Value: "Syria"},
+								{Name: "Taiwan", Value: "Taiwan"},
+								{Name: "Tajikistan", Value: "Tajikistan"},
+								{Name: "Tanzania", Value: "Tanzania"},
+								{Name: "Thailand", Value: "Thailand"},
+								{Name: "Togo", Value: "Togo"},
+								{Name: "Tokelau", Value: "Tokelau"},
+								{Name: "Tonga", Value: "Tonga"},
+								{Name: "Trinidad and Tobago", Value: "Trinidad and Tobago"},
+								{Name: "Tunisia", Value: "Tunisia"},
+								{Name: "Turkey", Value: "Turkey"},
+								{Name: "Turkmenistan", Value: "Turkmenistan"},
+								{Name: "Turks and Caicos Islands", Value: "Turks and Caicos Islands"},
+								{Name: "Tuvalu", Value: "Tuvalu"},
+								{Name: "Uganda", Value: "Uganda"},
+								{Name: "Ukraine", Value: "Ukraine"},
+								{Name: "United Arab Emirates", Value: "United Arab Emirates"},
+								{Name: "United Kindgom", Value: "United Kindgom"},
+								{Name: "United States", Value: "United States"},
+								{Name: "Uruguay", Value: "Uruguay"},
+								{Name: "Uzbekistan", Value: "Uzbekistan"},
+								{Name: "Vanuata", Value: "Vanuata"},
+								{Name: "Vatican City", Value: "Vatican City"},
+								{Name: "Venezuela", Value: "Venezuela"},
+								{Name: "Vietnam", Value: "Vietnam"},
+								{Name: "Virgin Islands", Value: "Virgin Islands"},
+								{Name: "Wallis and Futana Islands", Value: "Wallis and Futana Islands"},
+								{Name: "Yemen", Value: "Yemen"},
+								{Name: "Zambia", Value: "Zambia"},
+								{Name: "Zimbabwe", Value: "Zimbabwe"}
+							]
+						}
+					}, {
+						type: "div",
+						html: {
+							"id": "phone",
+							"name": "phone",
+							"type": "tel",
+							"label": "Phone"
+						}
+					}, {
+						type: "div",
+						html: {
+							"id": "email",
+							"name": "email",
+							"label": "Email",
+							"type": "email",
+							validate: {
+								email: true,
+								required: true
+							}
+						}
+					}, {
+						"type": "div",
+						"dropdown": {
+							"name": "baseCurrency",
+							"label": "Base Currency",
+							"validate": {
+								"required": true
+							},
+							"chosenOptions": {
+								"disable_search": true,
+								"width" : "60%"
+							},
+							"options": [
+								{Name: "CAD", Value: "CAD"},
+								{Name: "EUR", Value: "EUR"},
+								{Name: "GBP", Value: "GBP"},
+								{Name: "USD", Value: "USD"},
+								{Name: "YEN", Value: "YEN"}
+							]
+						}
+					}, {
+						"type": "div",
+						"dropdown": {
+							"name": "hearAboutUs",
+							"label": "Hear about us?",
+							"validate": {
+								"required": true
+							},
+							"chosenOptions": {
+								"disable_search": true,
+								"width" : "60%"
+							},
+							"options": [
+								{Name: "Search Engine", Value: "Search Engine"},
+								{Name: "TV or Radio", Value: "TV or Radio"},
+								{Name: "Website", Value: "Website"},
+								{Name: "Word of Mouth", Value: "Word of Mouth"}
+							]
+						}
+					},
+					{
+						"type": "div",
+						"dropdown": {
+							"name": "website",
+							"label": "Website",
+							"validate": {
+								"required": true
+							},
+							"chosenOptions": {
+								"disable_search": true,
+								"width" : "60%"
+							},
+							"options": [
+								{Name: "Acme Forex", Value: "Acme Forex"},
+								{Name: "Babypips", Value: "Babypips"},
+								{Name: "Bloomberg", Value: "Bloomberg"}
+							]
+						}
+					}, {
+						"type": "div",
+						"class": "has-spinner",
+						html: '<div class="loading-wrapper hidden"><img alt="" src="http://forex.com.verndale-local.com/_images/ui/loader.gif"></div><button class="form-submit form-buttonSubmit" type="submit" value="SUBMIT">SUBMIT</button>'
+					}
+				]
+			}
+		</script>
+
+		<div class="form-disclaimer">
+			By submitting your telephone number you agree that FOREX.com can contact you to help you make the most
+			of your demo account, and inform you about our products and services.
+
+			<div class="form-disclaimer__links">
+				<a href="#">Demo Account Disclosure</a>
+				<a href="#">Legal Notice</a>
+				<a href="#">Privacy Policy</a>
+			</div>
+		</div>
+	</div>
+</div>

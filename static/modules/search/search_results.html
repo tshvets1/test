@@ -1,0 +1,33 @@
+<!--
+  {
+  "name": "Search - Results",
+  "status": "Complete",
+  "notes": ""
+  }
+-->
+
+<div class="section-wrapper search-results-section" data-sectionbg="default">
+	<div class="wrapper">
+
+		<!-- result start -->
+		<!-- ko foreach: results -->
+		<div class="search-results__result">
+			<h2 class="search-results__site-section"><a data-bind="text: Title, attr: {href: Url}"></a></h2>
+
+			<div class="search-results__search-teaser-text" data-bind="html: TruncatedBodyWithHighlights">
+			</div>
+		</div>
+		<!-- /ko -->
+		<!-- result end -->
+
+		<nav data-bind="visible: !isMobile, pagination: pager, event: {pageChanged: pageChanged}"></nav>
+
+		<div class="search-results__spinner">
+			<img src="/_Images/ui/gray-loader.gif" alt="spinner" />
+		</div>
+
+		<nav role="navigation" class="pagination" data-bind="visible: isMobile">
+			<a class="pagination__load-more" href="#" data-bind="click: loadMore">Load More +</a>
+		</nav>
+	</div>
+</div>

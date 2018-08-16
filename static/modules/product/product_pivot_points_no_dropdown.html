@@ -1,0 +1,296 @@
+<!--
+  {
+  "name": "Pivot Points",
+  "status": "Complete",
+  "notes": ""
+  }
+-->
+
+<div class="section-wrapper pivot-points" data-apply-ko="pivotPoints" data-default-product="EUR/USD"
+	 data-sectionbg="alternate">
+	<div class="wrapper">
+		<h2 class="pivot-points__headline">Pivot Points</h2>
+
+		<!-- ko with: product -->
+		<div class="pivot-points__tabs tabs"
+			 data-bind="event: { tabChanged: tabChanged}, css: {'panel-open': showDetails}">
+			<ul class="tabs__list" data-existing-hx="h2"><li class="tabs__item">
+					<a class="tabs__link" href="#pivot-daily" id="label_pivot-daily" data-tab="daily">Daily</a>
+				</li><li class="tabs__item">
+					<a class="tabs__link" href="#pivot-weekly" id="label_pivot-weekly" data-tab="weekly">Weekly</a>
+				</li><li class="tabs__item">
+					<a class="tabs__link" href="#pivot-monthly" id="label_pivot-monthly" data-tab="monthly">Montly</a>
+				</li>
+			</ul>
+			<div class="pivot-points__intervals-dropdown">
+				<select class="custom-select" data-bind="value: currentTab">
+					<option value="daily">Daily</option>
+					<option value="weekly">Weekly</option>
+					<option value="monthly">Montly</option>
+				</select>
+			</div>
+
+			<div class="pivot-points__wrapper">
+				<ul class="pivot-details">
+					<li class="pivot-details__point">
+						<span class="pivot-details__title">Pivot Point</span>
+						<span class="pivot-details__number" data-bind="text: pivot"></span></li>
+					<li class="pivot-details__distance">
+						<span class="pivot-details__title">Distance</span>
+
+						<div class="tooltip">
+							<div class="tooltip__content">
+								<h2>Distance</h2>
+
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vitae velit eget
+									nisi porta
+									facilisis. </p>
+							</div>
+						</div>
+						<span class="pivot-details__number" data-bind="text: distance"></span>
+					</li>
+					<li class="pivot-details__bid">
+						<span class="pivot-details__title">Bid</span>
+						<span class="pivot-details__number"
+							  data-bind="superscriptLastChar: bid, decimals: decimals"></span>
+					</li>
+					<li class="pivot-details__ask">
+						<span class="pivot-details__title">Ask</span>
+						<span class="pivot-details__number"
+							  data-bind="superscriptLastChar: ask, decimals: decimals"></span>
+					</li>
+
+				</ul>
+
+				<div class="tabs__panel" data-sectionbg="default">
+
+					<div role="tabpanel" class="tabs__tabcontent" id="pivot-daily">
+						<h2 class="visually-hidden">Daily</h2>
+
+						<div class="pivot-points__tables">
+							<!-- ko with: daily -->
+							<table class="pivot-points__table">
+								<tbody>
+
+								<tr>
+									<th>High</th>
+									<td data-bind="text: high"></td>
+								</tr>
+								<tr>
+									<th>Low</th>
+									<td data-bind="text: low"></td>
+								</tr>
+								<tr>
+									<th>Close</th>
+									<td data-bind="text: close"></td>
+								</tr>
+								</tbody>
+							</table>
+
+							<table class="pivot-points__table">
+								<tbody>
+
+								<tr>
+									<th>R3</th>
+									<td data-bind="text: r3"></td>
+								</tr>
+								<tr>
+									<th>R2</th>
+									<td data-bind="text: r2"></td>
+								</tr>
+								<tr>
+									<th>R1</th>
+									<td data-bind="text: r1"></td>
+								</tr>
+								</tbody>
+							</table>
+
+							<table class="pivot-points__table">
+								<tbody>
+
+								<tr>
+									<th>S1</th>
+									<td data-bind="text: s1"></td>
+								</tr>
+								<tr>
+									<th>S2</th>
+									<td data-bind="text: s2"></td>
+								</tr>
+								<tr>
+									<th>S3</th>
+									<td data-bind="text: s3"></td>
+								</tr>
+								</tbody>
+							</table>
+							<!-- /ko -->
+						</div>
+
+					</div>
+					<!-- END TABPANEL -->
+
+					<div role="tabpanel" class="tabs__tabcontent" id="pivot-weekly">
+						<h2 class="visually-hidden">Weekly</h2>
+
+						<div class="pivot-points__tables">
+
+							<!-- ko with: weekly -->
+							<table class="pivot-points__table">
+								<tbody>
+
+								<tr>
+									<th>High</th>
+									<td data-bind="text: high"></td>
+								</tr>
+								<tr>
+									<th>Low</th>
+									<td data-bind="text: low"></td>
+								</tr>
+								<tr>
+									<th>Close</th>
+									<td data-bind="text: close"></td>
+								</tr>
+								</tbody>
+							</table>
+
+							<table class="pivot-points__table">
+								<tbody>
+
+								<tr>
+									<th>R3</th>
+									<td data-bind="text: r3"></td>
+								</tr>
+								<tr>
+									<th>R2</th>
+									<td data-bind="text: r2"></td>
+								</tr>
+								<tr>
+									<th>R1</th>
+									<td data-bind="text: r1"></td>
+								</tr>
+								</tbody>
+							</table>
+
+							<table class="pivot-points__table">
+								<tbody>
+
+								<tr>
+									<th>S1</th>
+									<td data-bind="text: s1"></td>
+								</tr>
+								<tr>
+									<th>S2</th>
+									<td data-bind="text: s2"></td>
+								</tr>
+								<tr>
+									<th>S3</th>
+									<td data-bind="text: s3"></td>
+								</tr>
+								</tbody>
+							</table>
+							<!-- /ko -->
+						</div>
+
+
+					</div>
+					<!-- END TABPANEL -->
+
+					<div role="tabpanel" class="tabs__tabcontent" id="pivot-monthly">
+						<h2 class="visually-hidden">Montly</h2>
+
+						<div class="pivot-points__tables">
+
+							<!-- ko with: monthly -->
+							<table class="pivot-points__table">
+								<tbody>
+
+								<tr>
+									<th>High</th>
+									<td data-bind="text: high"></td>
+								</tr>
+								<tr>
+									<th>Low</th>
+									<td data-bind="text: low"></td>
+								</tr>
+								<tr>
+									<th>Close</th>
+									<td data-bind="text: close"></td>
+								</tr>
+								</tbody>
+							</table>
+
+							<table class="pivot-points__table">
+								<tbody>
+
+								<tr>
+									<th>R3</th>
+									<td data-bind="text: r3"></td>
+								</tr>
+								<tr>
+									<th>R2</th>
+									<td data-bind="text: r2"></td>
+								</tr>
+								<tr>
+									<th>R1</th>
+									<td data-bind="text: r1"></td>
+								</tr>
+								</tbody>
+							</table>
+
+							<table class="pivot-points__table">
+								<tbody>
+
+								<tr>
+									<th>S1</th>
+									<td data-bind="text: s1"></td>
+								</tr>
+								<tr>
+									<th>S2</th>
+									<td data-bind="text: s2"></td>
+								</tr>
+								<tr>
+									<th>S3</th>
+									<td data-bind="text: s3"></td>
+								</tr>
+								</tbody>
+							</table>
+							<!-- /ko -->
+
+						</div>
+
+					</div>
+					<!-- END TABPANEL -->
+				</div>
+				<!-- END .tabs__panel -->
+
+				<div class="pivot-points__footer">
+					<button class="pivot-points__panel-toggle" data-bind="click: $root.showTabPanel">
+						<span class="show-details">Show Details</span>
+						<span class="hide-details">Hide Details</span>
+					</button>
+					<p class="pivot-points__last-updated"><strong>Last Updated:</strong> <span
+							data-bind="text: $data[currentTab()].lastUpdated"></span> EST
+					</p>
+				</div>
+			</div>
+		</div>
+		<!-- .tabs -->
+
+		<!-- /ko -->
+		<div class="spinner pivot-points__spinner" data-bind="attr: {hidden: !!product() }" hidden>
+			<img src="/_Images/ui/loader.gif" alt="spinner"/>
+		</div>
+
+		<div class="understanding-pivot-points" panel-toggle>
+			<h3 class="understanding-pivot-points__headline">Understanding Pivot Points</h3>
+
+			<div class="rtf">
+				Pivot points are used byt traders as a predictive indicator and denote levels of technical significance.
+				When used in conjunction with other technical indicators such as support and resisitance or Fibonacci,
+				pivot
+				points can... <a href="read-more">Read more</a>
+			</div>
+
+			<a class="cta-btn">Learn more about Technical Analysis</a>
+		</div>
+	</div>
+</div>

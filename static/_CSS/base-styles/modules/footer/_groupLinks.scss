@@ -1,0 +1,59 @@
+.group-links {
+  &__heading {
+    @include set-text-styles($footer-group-links-headline-font...);
+    margin: $footer-group-links-headline-margin;
+  }
+
+  &__list {
+    @extend %list--unstyled;
+    margin: $footer-group-links-margin;
+  }
+
+  &__link {
+    text-decoration: none;
+    @include underline($footer-group-links-underline...);
+  }
+
+  &[data-columns="3"] > &__col {
+    padding: 0 $footer-group-links-col-3-padding/3;
+
+    &#{if($old-ie, ".nth-child-3n-1", ":nth-child(3n+1)")} {
+      padding: 0 $footer-group-links-col-3-padding*2/3 0 0;
+    }
+
+    &#{if($old-ie, ".nth-child-3n-3", ":nth-child(3n+3)")} {
+      padding: 0 0 0 $footer-group-links-col-3-padding*2/3;
+    }
+    &:nth-child(3) ~ * {
+      display: none;
+    }
+
+    .two-column & {
+      width: 50%;
+      &:nth-child(2) ~ * {
+        display: none;
+      }
+    }
+  }
+
+  @media screen and (max-width: $mobile) {
+    &__heading {
+      @include set-text-styles($footer-group-links-headline-mobile-font...);
+    }
+
+    &[data-columns="3"] > &__col {
+      display: block;
+      width: 100%;
+      padding: 0;
+      &:nth-child(3n+1),
+      &:nth-child(3n+3) {
+        padding: 0;
+      }
+
+      .two-column & {
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+}

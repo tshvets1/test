@@ -1,0 +1,89 @@
+<!--
+  {
+  "name": "Most Active Markets - Right Rail",
+  "status": "In Progress",
+  "notes": ""
+  }
+-->
+
+<div class="module-wrapper most-active-markets" data-sectionbg="default"
+	 data-apply-ko="mostActiveMarkets"
+	 data-get-products-timeout="4000"
+	 data-products="['USD/JPY','EUR/USD','WHT/USD','USD/CAD','GBP/AUD']"
+	 data-move-rows="true">
+	<div class="wrapper">
+		<h2 class="most-active-markets__headline">
+			Most Active Markets
+			<div class="tooltip">
+				<div class="tooltip__content">
+					<h2>Lorem ipsum</h2>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vitae velit
+						eget
+						nisi porta
+						facilisis.
+					</p>
+				</div>
+			</div>
+		</h2>
+		<!-- DROPDOWN -->
+		<div class="most-active-markets__dropdown">
+			<select class="custom-select" data-bind="event: {change: changeTab}" data-chosen-select=""
+					data-chosen-options='{"disable_search":"true","width":"100%"}'>
+				<option data-tab="15minutes">15 minutes</option>
+				<option data-tab="hourly">hourly</option>
+				<option data-tab="daily">daily</option>
+				<option data-tab="monthly">monthly</option>
+			</select>
+		</div>
+		<!-- END DROPDOWN -->
+		<div class="most-active-markets__tabs-content">
+			<div class="active-markets__table">
+				<table class="rates-table">
+					<thead>
+					<tr>
+						<th class="active-markets__table-rank">
+							<div class="tooltip">
+								<div class="tooltip__content">
+									<h2>Lorem ipsum</h2>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vitae velit
+										eget
+										nisi porta
+										facilisis.
+									</p>
+								</div>
+							</div>
+						</th>
+						<th class="rates-table__product">Market</th>
+						<th class="rates-table__value">Change</th>
+					</tr>
+					<tr class="spinner" data-bind="attr: {'hidden' : products().length > 0}">
+						<td colspan="3">
+							<img src="/_Images/ui/loader.gif" alt="spinner"/>
+						</td>
+					</tr>
+					</thead>
+					<tbody hidden data-bind="attr: {'hidden' : products().length == 0}">
+					<!-- ko foreach: products -->
+					<tr>
+						<td class="active-markets__table-rank">
+							<span class="mobile-hidden tablet-hidden desktop-hidden" data-bind="text: rank"></span>
+							<span class="active-markets__media"
+								  data-bind="text: rankChange, css: {'active-markets__media--up': rankDirection()=='up', 'active-markets__media--down': rankDirection()!='up'}"></span>
+						</td>
+						<td class="rates-table__product">
+							<a href="#" data-bind="text: product"></a>
+						</td>
+						<td class="rates-table__value">
+							<span data-bind="text: change() + '%'"></span>
+						</td>
+					</tr>
+					<!-- /ko -->
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+	<!-- .tabs -->
+</div>

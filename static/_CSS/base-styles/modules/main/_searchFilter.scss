@@ -1,0 +1,70 @@
+.search-filter {
+  $search-filter-icon-color: $color-white !default;
+
+  $search-filter-padding: 35px 0 !default;
+  $search-filter-item-padding: 0 20px 0 0 !default;
+  $search-filter-item-label-padding: 0 0 0 26px !important !default;
+  $search-filter-headline-width: 29% !default;
+  $search-filter-filters-width: 70% !default;
+  $search-filter-icon-position: null null null $tabletPadding !default;
+
+  $search-filter-border: solid 1px $color-light !default;
+
+  $search-filter-tablet-padding: 30px $tabletPadding 20px !default;
+
+  $search-filter-headline-font: 14 500 !default;
+  $search-filter-item-label-font: 14 !default;
+  $search-filter-icon-font: 16px !default;
+
+  &__filters {
+    @extend %list--inline;
+
+    li {
+      padding: $search-filter-item-padding;
+    }
+
+    label {
+      @include set-text-styles($search-filter-item-label-font...);
+      padding: $search-filter-item-label-padding;
+    }
+  }
+
+  //NOT MOBILE
+  @media screen and (min-width: $mobile) {
+    &-section .wrapper {
+      padding: $search-filter-tablet-padding;
+      border-bottom: $search-filter-border;
+    }
+
+    &__headline {
+      display: inline-block;
+      vertical-align: top;
+      width: $search-filter-headline-width;
+      @include set-text-styles($search-filter-headline-font...);
+    }
+
+    &__filters {
+      display: inline-block;
+      width: $search-filter-filters-width;
+    }
+  }
+
+  @media screen and (min-width: $tablet) {
+    &-section .wrapper {
+      padding: $search-filter-padding;
+      border-bottom: $search-filter-border;
+    }
+  }
+
+  //MOBILE ONLY
+  @media screen and (max-width: $mobile) {
+    &-section .fixed-menu__toggle {
+      .icon {
+        position: relative;
+        @include position($search-filter-icon-position...);
+        color: $search-filter-icon-color;
+        font-size: $search-filter-icon-font;
+      }
+    }
+  }
+}

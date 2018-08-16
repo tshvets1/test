@@ -1,0 +1,200 @@
+.multi-col-section[data-display-as="block"] {
+  $multi-col-block-title-bg-color: rgba($color-white, 0.2);
+  $multi-col-block-description-bg-color: $color-white;
+
+  $multi-col-block-color: null !default;
+  $multi-col-block-title-color: $color-white !default;
+  $multi-col-block-description-color: $color-darker !default;
+  $multi-col-block-description-link-color: $color-link !default;
+  $multi-col-block-description-link-hover-color: $color-link-hover !default;
+
+  $multi-col-block-headline-margin: 0 0 20px !default;
+  $multi-col-block-subheadline-margin: 10px 70px 40px !default;
+  $multi-col-block-title-margin: null !default;
+  $multi-col-block-title-padding: 13px !default;
+  $multi-col-block-description-margin: 0 !default;
+  $multi-col-block-description-padding: 25px 30px !default;
+  $multi-col-block-col-2-padding: 55px !default;
+
+  $multi-col-block-headline-tablet-margin: null !default;
+  $multi-col-block-subheadline-tablet-margin: 10px 0 25px !default;
+  $multi-col-block-title-tablet-margin: null !default;
+  $multi-col-block-title-tablet-padding: 10px 15px !default;
+  $multi-col-block-description-tablet-margin: 0 0 25px !default;
+  $multi-col-block-description-tablet-padding: null !default;
+  $multi-col-block-col-tablet-padding: 0 !default;
+  $multi-col-block-col-tablet-margin: null !default;
+
+  $multi-col-block-headline-mobile-margin: 0 0 10px !default;
+  $multi-col-block-subheadline-mobile-margin: 10px 0 15px !default;
+  $multi-col-block-title-mobile-margin: 0 !default;
+  $multi-col-block-title-mobile-padding: 15px !default;
+  $multi-col-block-description-mobile-margin: 0 0 15px !default;
+  $multi-col-block-description-mobile-padding: 15px !default;
+  $multi-col-block-col-mobile-padding: null !default;
+  $multi-col-block-col-mobile-margin: 30px 0 0 !default;
+
+  $multi-col-block-tablet-border-radius: 0 !default;
+  $multi-col-block-mobile-border-radius: 0;
+
+  $multi-col-block-font: null !default;
+  $multi-col-block-headline-font: null !default;
+  $multi-col-block-subheadline-font: null !default;
+  $multi-col-block-title-font: 18 600 null uppercase !default;
+  $multi-col-block-description-font: 16 null 1.3 !default;
+
+  $multi-col-block-tablet-font: null null null null center !default;
+  $multi-col-block-headline-tablet-font: 34 600 !default;
+  $multi-col-block-subheadline-tablet-font: 20 null 1.4 !default;
+  $multi-col-block-title-tablet-font: 24 null null none !default;
+  $multi-col-block-description-tablet-font: 21 !default;
+
+  $multi-col-block-mobile-font: null !default;
+  $multi-col-block-headline-mobile-font: 22 400 !default;
+  $multi-col-block-subheadline-mobile-font: 15 !default;
+  $multi-col-block-title-mobile-font: 16 !default;
+  $multi-col-block-description-mobile-font: 15 !default;
+
+  color: $multi-col-block-color;
+  @include set-text-styles($multi-col-block-font...);
+
+  .multi-col {
+    &__headline {
+      @include set-text-styles($multi-col-block-headline-font...);
+      margin: $multi-col-block-headline-margin;
+    }
+
+    &__subheadline {
+      @include set-text-styles($multi-col-block-subheadline-font...);
+      margin: $multi-col-block-subheadline-margin;
+    }
+
+    &__title {
+      @include set-text-styles($multi-col-block-title-font...);
+      margin: $multi-col-block-title-margin;
+      padding: $multi-col-block-title-padding;
+      background: $multi-col-block-title-bg-color;
+      color: $multi-col-block-title-color;
+    }
+
+    &__description {
+      @include set-text-styles($multi-col-block-description-font...);
+      margin: $multi-col-block-description-margin;
+      padding: $multi-col-block-description-padding;
+      background: $multi-col-block-description-bg-color;
+      color: $multi-col-block-description-color;
+      flex-grow: 1;
+
+      a {
+        color: $multi-col-block-description-link-color;
+        text-decoration: none;
+
+        &:hover {
+          color: $multi-col-block-description-link-hover-color;
+        }
+      }
+
+      > *:first-child {
+        margin-top: 0;
+      }
+
+      > *:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    &__cta-btn {
+      width: 100%;
+      margin-bottom: 0;
+    }
+
+    &__content {
+      > .col {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+
+  @media screen and (min-width: $tablet + 1) {
+    .multi-col__content {
+      &[data-columns="2"] > .col {
+        padding: 0 $multi-col-block-col-2-padding 0 $multi-col-block-col-2-padding/2;
+
+        &#{if($old-ie, ".nth-child-2n-1", ":nth-child(2n+1)")} {
+          padding: 0 $multi-col-block-col-2-padding/2 0 $multi-col-block-col-2-padding;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: $tablet) {
+    @include set-text-styles($multi-col-block-tablet-font...);
+
+    .multi-col {
+      &__headline {
+        @include set-text-styles($multi-col-block-headline-tablet-font...);
+        margin: $multi-col-block-headline-tablet-margin;
+      }
+
+      &__subheadline {
+        @include set-text-styles($multi-col-block-subheadline-tablet-font...);
+        margin: $multi-col-block-subheadline-tablet-margin;
+      }
+
+      &__title {
+        @include set-text-styles($multi-col-block-title-tablet-font...);
+        margin: $multi-col-block-title-tablet-margin;
+        padding: $multi-col-block-title-tablet-padding;
+        border-radius: $multi-col-block-tablet-border-radius;
+      }
+
+      &__description {
+        @include set-text-styles($multi-col-block-description-tablet-font...);
+        margin: $multi-col-block-description-tablet-margin;
+        padding: $multi-col-block-description-tablet-padding;
+        border-radius: $multi-col-block-tablet-border-radius;
+      }
+
+      &__content > .col {
+        padding: $multi-col-block-col-tablet-padding;
+        margin: $multi-col-block-col-tablet-margin;
+      }
+    }
+  }
+
+  @media screen and (max-width: $mobile) {
+    @include set-text-styles($multi-col-block-mobile-font...);
+
+    .multi-col {
+      &__headline {
+        @include set-text-styles($multi-col-block-headline-mobile-font...);
+        margin: $multi-col-block-headline-mobile-margin;
+      }
+
+      &__subheadline {
+        @include set-text-styles($multi-col-block-subheadline-mobile-font...);
+        margin: $multi-col-block-subheadline-mobile-margin;
+      }
+
+      &__title {
+        @include set-text-styles($multi-col-block-title-mobile-font...);
+        margin: $multi-col-block-title-mobile-margin;
+        padding: $multi-col-block-title-mobile-padding;
+        border-radius: $multi-col-block-mobile-border-radius;
+      }
+
+      &__description {
+        @include set-text-styles($multi-col-block-description-mobile-font...);
+        margin: $multi-col-block-description-mobile-margin;
+        padding: $multi-col-block-description-mobile-padding;
+        border-radius: $multi-col-block-mobile-border-radius;
+      }
+
+      &__content > .col {
+        padding: $multi-col-block-col-mobile-padding;
+        margin: $multi-col-block-col-mobile-margin;
+      }
+    }
+  }
+}

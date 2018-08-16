@@ -1,0 +1,83 @@
+.related-products {
+  $related-products-headline-font: 16 700 1.25 uppercase !default;
+  $related-products-list-margin: 10px 0 !default;
+  $related-products-list-li-padding: 10px !default;
+  $related-products-list-li-border: solid 1px $color-medium !default;
+  $related-products-link-font: 20 !default;
+  $related-products-link-padding: 10px 0 !default;
+  $related-products-icon-width: 90px !default;
+  $related-products-icon-margin: 0 20px 0 0 !default;
+
+  $related-products-list-li-tablet-padding: 0 40px !default;
+  $related-products-list-li-tablet-margin: 10px 0 !default;
+
+  $related-products-headline-mobile-font: 14 500 !default;
+  $related-products-link-mobile-font: 16 !default;
+
+  &__headline {
+    @include set-text-styles($related-products-headline-font...);
+  }
+
+  &__list {
+    @extend %list--unstyled;
+    margin: $related-products-list-margin;
+
+    li {
+      padding: $related-products-list-li-padding;
+      border-bottom: $related-products-list-li-border;
+
+      &:last-child {
+        border: 0;
+      }
+    }
+  }
+
+  &__link {
+    display: block;
+    padding: $related-products-link-padding;
+    @include set-text-styles($related-products-link-font...);
+    text-decoration: none;
+  }
+
+  &__icon {
+    display: inline-block;
+    margin: $related-products-icon-margin;
+    width: $related-products-icon-width;
+    vertical-align: middle;
+    img {
+      display: block;
+    }
+  }
+
+  &__text {
+    vertical-align: middle;
+  }
+
+  //TABLET ONLY
+  @media screen and (max-width: $tablet) and (min-width: $mobile) {
+    &__list {
+      li {
+        display: inline-block;
+        padding: $related-products-list-li-tablet-padding;
+        margin: $related-products-list-li-tablet-margin;
+        border-bottom: 0;
+
+        &:first-child {
+          border-right: $related-products-list-li-border;
+          padding-left: 0;
+        }
+      }
+    }
+  }
+
+  //MOBILE
+  @media screen and (max-width: $mobile) {
+    &__headline {
+      @include set-text-styles($related-products-headline-mobile-font...);
+    }
+
+    &__link {
+      @include set-text-styles($related-products-link-mobile-font...);
+    }
+  }
+}

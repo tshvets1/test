@@ -1,0 +1,307 @@
+<!--
+  {
+  "name": "Services - Most Popular Markets",
+  "status": "Complete",
+  "notes": "[data-change-up-color][data-change-down-color] are used to set background color of changed value"
+  }
+-->
+
+
+<section class="section-wrapper most-popular-markets-section" data-sectionbg="alternate"
+		 data-apply-ko="mostPopularMarkets"
+		 data-tabs-options='[{"tabName":"live","defaultProducts":"EUR/HUF,GBP/USD,USD/CAD,XAU/EUR,AUD/CAD,AUD/USD,NZD/CAD,CAD/CHF,GBP/CHF,GBP/AUD,EUR/USD,NZD/CHF,EUR/GBP,AUD/CHF","isLive":true,"tables":"3"},
+		 {"tabName":"typical","defaultProducts":"EUR/HUF,GBP/USD,USD/CAD,XAU/EUR,AUD/CAD,GBP/CHF,GBP/AUD,EUR/USD,NZD/CHF,EUR/GBP,AUD/CHF","isLive":false,"staticData":[],"tables":"2"}]'
+		 data-change-up-color="green"
+		 data-change-down-color="green"
+		 data-hide-spread="false"
+		 data-get-products-timeout="3000"
+		 data-current-tab="live">
+	<div class="wrapper">
+		<h1 class="most-popular-markets__title">Realize the opportunities</h1>
+
+		<script type="text/javascript">
+			var typicalData = JSON.parse('[{"Product":"XAU/CHF","AsLowAs":"1101.59","Ask":"1102.20","MedianSpread":"-3.38","E":"1109.18","F":"1098.45","G":"D"},' +
+					'{"Product":"EUR/HUF","AsLowAs":"304.828","Ask":"305.022","MedianSpread":"1.674","E":"306.257","F":"302.936","G":"D"},' +
+					'{"Product":"GBP/USD","AsLowAs":"1.51740","Ask":"1.51760","MedianSpread":"-0.00056","E":"1.52424","F":"1.51494","G":"D"},' +
+					'{"Product":"USD/CAD","AsLowAs":"1.20297","Ask":"1.20320","MedianSpread":"-0.00357","E":"1.20889","F":"1.20274","G":"D"},' +
+					'{"Product":"XAU/EUR","AsLowAs":"1061.01","Ask":"1061.62","MedianSpread":"-5.46","E":"1069.59","F":"1057.13","G":"D"},' +
+					'{"Product":"NZD/JPY","AsLowAs":"89.718","Ask":"89.751","MedianSpread":"-0.834","E":"90.763","F":"89.486","G":"D"},' +
+					'{"Product":"USD/TRY","AsLowAs":"2.70520","Ask":"2.70626","MedianSpread":"0.00132","E":"2.70882","F":"2.69538","G":"D"},' +
+					'{"Product":"XAG/USD","AsLowAs":"16.445","Ask":"16.480","MedianSpread":"-0.080","E":"16.631","F":"16.380","G":"D"},' +
+					'{"Product":"GBP/NZD","AsLowAs":"2.02528","Ask":"2.02588","MedianSpread":"0.01730","E":"2.03604","F":"2.00482","G":"D"},' +
+					'{"Product":"EUR/AUD","AsLowAs":"1.40778","Ask":"1.40807","MedianSpread":"-0.00027","E":"1.41279","F":"1.40604","G":"D"},' +
+					'{"Product":"USD/SGD","AsLowAs":"1.32846","Ask":"1.32892","MedianSpread":"-0.00332","E":"1.33306","F":"1.32505","G":"D"},' +
+					'{"Product":"USD/NOK","AsLowAs":"7.51939","Ask":"7.52275","MedianSpread":"-0.05484","E":"7.59395","F":"7.50765","G":"D"},' +
+					'{"Product":"GBP/CAD","AsLowAs":"1.82551","Ask":"1.82592","MedianSpread":"-0.00629","E":"1.83515","F":"1.82357","G":"D"},' +
+					'{"Product":"AUD/CAD","AsLowAs":"0.95958","Ask":"0.95984","MedianSpread":"0.00140","E":"0.96138","F":"0.95669","G":"D"},' +
+					'{"Product":"NZD/USD","AsLowAs":"0.74906","Ask":"0.74931","MedianSpread":"-0.00650","E":"0.75730","F":"0.74581","G":"D"},' +
+					'{"Product":"CHF/JPY","AsLowAs":"129.548","Ask":"129.580","MedianSpread":"0.237","E":"129.887","F":"129.222","G":"D"},' +
+					'{"Product":"CAD/JPY","AsLowAs":"99.540","Ask":"99.566","MedianSpread":"0.256","E":"99.720","F":"99.226","G":"D"}' +
+					',{"Product":"USD/CNH","AsLowAs":"6.2012","Ask":"6.2037","MedianSpread":"-0.0049","E":"6.2096","F":"6.1968","G":"D"}' +
+					',{"Product":"EUR/TRY","AsLowAs":"3.03896","Ask":"3.04047","MedianSpread":"0.01496","E":"3.04682","F":"3.02348","G":"D"}' +
+					',{"Product":"AUD/USD","AsLowAs":"0.79763","Ask":"0.79778","MedianSpread":"0.00357","E":"0.79877","F":"0.79180","G":"D"}' +
+					',{"Product":"XAU/USD","AsLowAs":"1191.75","Ask":"1192.20","MedianSpread":"-1.31","E":"1197.70","F":"1189.39","G":"D"}' +
+					',{"Product":"XAU/AUD","AsLowAs":"1493.99","Ask":"1494.60","MedianSpread":"-8.03","E":"1508.29","F":"1490.32","G":"D"}' +
+					',{"Product":"USD/JPY","AsLowAs":"119.767","Ask":"119.781","MedianSpread":"-0.059","E":"120.056","F":"119.638","G":"D"}' +
+					',{"Product":"SGD/JPY","AsLowAs":"90.118","Ask":"90.171","MedianSpread":"0.155","E":"90.397","F":"89.933","G":"D"}' +
+					',{"Product":"AUD/JPY","AsLowAs":"95.533","Ask":"95.553","MedianSpread":"0.380","E":"95.664","F":"94.972","G":"D"}' +
+					',{"Product":"ZAR/JPY","AsLowAs":"9.941","Ask":"9.965","MedianSpread":"-0.041","E":"10.047","F":"9.933","G":"D"}' +
+					',{"Product":"NZD/CAD","AsLowAs":"0.90101","Ask":"0.90172","MedianSpread":"-0.01054","E":"0.91392","F":"0.89910","G":"D"}' +
+					',{"Product":"USD/HUF","AsLowAs":"271.415","Ask":"271.593","MedianSpread":"0.290","E":"272.080","F":"269.718","G":"D"}' +
+					',{"Product":"USD/RUB","AsLowAs":"49.7605","Ask":"49.9855","MedianSpread":"-0.4790","E":"50.7555","F":"49.6140","G":"D"}' +
+					',{"Product":"USD/CHF","AsLowAs":"0.92432","Ask":"0.92454","MedianSpread":"-0.00170","E":"0.92821","F":"0.92122","G":"D"}' +
+					',{"Product":"USD/ZAR","AsLowAs":"12.03040","Ask":"12.03630","MedianSpread":"0.06020","E":"12.04470","F":"11.93130","G":"D"}' +
+					',{"Product":"EUR/PLN","AsLowAs":"4.05780","Ask":"4.05845","MedianSpread":"0.03195","E":"4.06170","F":"4.02385","G":"D"}' +
+					',{"Product":"CAD/CHF","AsLowAs":"0.76816","Ask":"0.76853","MedianSpread":"0.00074","E":"0.76920","F":"0.76541","G":"D"}' +
+					',{"Product":"AUD/NZD","AsLowAs":"1.06458","Ask":"1.06495","MedianSpread":"0.01414","E":"1.06618","F":"1.04900","G":"D"}' +
+					',{"Product":"USD/PLN","AsLowAs":"3.61275","Ask":"3.61329","MedianSpread":"0.01290","E":"3.61625","F":"3.58359","G":"D"}' +
+					',{"Product":"GBP/CHF","AsLowAs":"1.40260","Ask":"1.40305","MedianSpread":"-0.00358","E":"1.40869","F":"1.39978","G":"D"}' +
+					',{"Product":"USD/HKD","AsLowAs":"7.75172","Ask":"7.75200","MedianSpread":"0.00067","E":"7.75210","F":"7.75095","G":"D"}' +
+					',{"Product":"GBP/AUD","AsLowAs":"1.90212","Ask":"1.90252","MedianSpread":"-0.00879","E":"1.91579","F":"1.89788","G":"D"}' +
+					',{"Product":"USD/MXN","AsLowAs":"15.33992","Ask":"15.34500","MedianSpread":"0.00592","E":"15.36250","F":"15.30400","G":"D"}' +
+					',{"Product":"EUR/NZD","AsLowAs":"1.49877","Ask":"1.49951","MedianSpread":"0.01947","E":"1.50393","F":"1.47706","G":"D"}' +
+					',{"Product":"EUR/JPY","AsLowAs":"134.510","Ask":"134.531","MedianSpread":"0.474","E":"134.893","F":"134.015","G":"D"}' +
+					',{"Product":"EUR/USD","AsLowAs":"1.12305","Ask":"1.12321","MedianSpread":"0.00469","E":"1.12717","F":"1.11741","G":"D"}' +
+					',{"Product":"EUR/CHF","AsLowAs":"1.03810","Ask":"1.03833","MedianSpread":"0.00211","E":"1.03999","F":"1.03590","G":"D"}' +
+					',{"Product":"USD/CZK","AsLowAs":"24.4145","Ask":"24.4226","MedianSpread":"-0.0480","E":"24.5395","F":"24.3070","G":"D"}' +
+					',{"Product":"XAU/GBP","AsLowAs":"785.20","Ask":"785.81","MedianSpread":"-0.51","E":"788.43","F":"783.14","G":"D"}' +
+					',{"Product":"NZD/CHF","AsLowAs":"0.69226","Ask":"0.69282","MedianSpread":"-0.00747","E":"0.70183","F":"0.69097","G":"D"}' +
+					',{"Product":"EUR/CAD","AsLowAs":"1.35107","Ask":"1.35138","MedianSpread":"0.00133","E":"1.35642","F":"1.34887","G":"D"}' +
+					',{"Product":"USD/SEK","AsLowAs":"8.28979","Ask":"8.29304","MedianSpread":"-0.05700","E":"8.36562","F":"8.27760","G":"D"}' +
+					',{"Product":"EUR/GBP","AsLowAs":"0.74007","Ask":"0.74018","MedianSpread":"0.00336","E":"0.74193","F":"0.73663","G":"D"}' +
+					',{"Product":"EUR/CZK","AsLowAs":"27.4230","Ask":"27.4290","MedianSpread":"0.0809","E":"27.4455","F":"27.3621","G":"D"}' +
+					',{"Product":"AUD/CHF","AsLowAs":"0.73722","Ask":"0.73760","MedianSpread":"0.00169","E":"0.73830","F":"0.73446","G":"D"}' +
+					',{"Product":"GBP/JPY","AsLowAs":"181.739","Ask":"181.777","MedianSpread":"-0.159","E":"182.538","F":"181.437","G":"D"}' +
+					',{"Product":"EUR/NOK","AsLowAs":"8.44568","Ask":"8.44910","MedianSpread":"-0.01522","E":"8.49970","F":"8.43560","G":"D"}' +
+					',{"Product":"USD/DKK","AsLowAs":"6.64561","Ask":"6.64633","MedianSpread":"-0.02567","E":"6.67858","F":"6.62221","G":"D"}' +
+					',{"Product":"EUR/DKK","AsLowAs":"7.46405","Ask":"7.46460","MedianSpread":"0.00160","E":"7.46546","F":"7.46235","G":"D"}' +
+					',{"Product":"EUR/SEK","AsLowAs":"9.31110","Ask":"9.31465","MedianSpread":"-0.02904","E":"9.36858","F":"9.30207","G":"D"}]');
+		</script>
+
+		<div class="most-popular-markets__tabs">
+			<div class="most-popular-markets__trading-title" data-inherit-sectionbg="true">
+				We keep your trading costs low and ...
+			</div>
+
+			<!-- tabs content above tabs-list -->
+			<div class="most-popular-markets__tabs-content">
+				<div class="most-popular-markets__tabs-tab"
+					 data-bind="css: {'active': currentTab() == 'live'}">
+					<div class="most-popular-markets__trading-sub-title">
+						Live. For over a decade, FOREX.com has been serving the needs of currency traders worldwide. We
+						are
+						proud to offer traders of all types sophisticated trading tools, ultra-competitive spreads and
+						exceptional execution quality on over 120 currencies.
+					</div>
+				</div>
+				<div class="most-popular-markets__tabs-tab"
+					 data-bind="css: {'active': currentTab() == 'typical'}">
+					<div class="most-popular-markets__trading-sub-title">
+						Typical. For over a decade, FOREX.com has been serving the needs of currency traders worldwide.
+						We are
+						proud to offer traders of all types sophisticated trading tools, ultra-competitive spreads and
+						exceptional execution quality on over 120 currencies.
+					</div>
+				</div>
+			</div>
+			<!-- /tabs content -->
+
+			<h2 class="most-popular-markets__headline">Most popular markets</h2>
+
+			<!-- tabs-list (dropdown) -->
+			<div class="most-popular-markets__tabs-wrapper">
+				<ul class="most-popular-markets__tabs-list tabs__list" data-tabs-handler="false">
+					<li class="most-popular-markets__tabs-item tabs__item">
+						<a class="most-popular-markets__tabs-link tabs__link"
+						   data-bind="click: changeTab.bind($data, 'live'), css: {'active':currentTab()=='live'}"
+						   data-tab="live">Live</a>
+					</li>
+					<li class="most-popular-markets__tabs-item tabs__item">
+						<a class="most-popular-markets__tabs-link tabs__link"
+						   data-bind="click: changeTab.bind($data, 'typical'), css: {'active':currentTab()=='typical'}"
+						   data-tab="typical">Typical</a>
+					</li>
+				</ul>
+
+				<select class="custom-select" data-bind="value: currentTab">
+					<option value="live">Live</option>
+					<option value="typical">Typical</option>
+				</select>
+			</div>
+			<!-- /tabs-list -->
+
+			<!-- tabs-content -->
+			<div class="most-popular-markets__tabs-content-wrapper">
+				<div class="most-popular-markets__tabs-content">
+					<!-- tab -->
+					<div class="most-popular-markets__tabs-tab" data-bind="css: {'active': currentTab()=='live'}">
+						<!-- ko with: live -->
+						<div class="most-popular-markets__table-wrapper">
+							<div class="most-popular-markets__table" data-columns="3">
+								<table class="rates-table">
+									<thead>
+									<tr>
+										<th class="rates-table__product">Product</th>
+										<th class="most-popular-markets__table-spread">Spread</th>
+									</tr>
+									</thead>
+									<tbody>
+									<!-- ko foreach: products1 -->
+									<tr>
+										<td class="rates-table__product"><a href="#" data-bind="text: Product"></a></td>
+										<td class="rates-table__value">
+											<span data-bind="text: MedianSpread, highlight: MedianSpread_prev && MedianSpread!=MedianSpread_prev,
+											highlightClass: MedianSpread<MedianSpread_prev
+											? 'rates-table__value-changed rates-table__value-changed--down'
+											: 'rates-table__value-changed rates-table__value-changed--up'"></span>
+										</td>
+									</tr>
+									<!-- /ko -->
+									</tbody>
+								</table>
+							</div>
+							<div class="most-popular-markets__table mobile-hidden" data-columns="3">
+								<table class="rates-table">
+									<thead>
+									<tr>
+										<th class="rates-table__product">Product</th>
+										<th class="most-popular-markets__table-spread">Spread</th>
+									</tr>
+									</thead>
+									<tbody>
+									<!-- ko foreach: products2 -->
+									<tr>
+										<td class="rates-table__product"><a href="#" data-bind="text: Product"></a></td>
+										<td class="rates-table__value">
+											<span data-bind="text: MedianSpread, highlight: MedianSpread_prev && MedianSpread!=MedianSpread_prev,
+											highlightClass: MedianSpread<MedianSpread_prev
+											? 'rates-table__value-changed rates-table__value-changed--down'
+											: 'rates-table__value-changed rates-table__value-changed--up'"></span>
+										</td>
+									</tr>
+									<!-- /ko -->
+									</tbody>
+								</table>
+							</div>
+							<div class="most-popular-markets__table mobile-hidden" data-columns="3">
+								<table class="rates-table">
+									<thead>
+									<tr>
+										<th class="rates-table__product">Product</th>
+										<th class="rates-table__value">Spread</th>
+									</tr>
+									</thead>
+									<tbody>
+									<!-- ko foreach: products3 -->
+									<tr>
+										<td class="rates-table__product"><a href="#" data-bind="text: Product"></a></td>
+										<td class="rates-table__value">
+											<span data-bind="text: MedianSpread, highlight: MedianSpread_prev && MedianSpread!=MedianSpread_prev,
+											highlightClass: MedianSpread<MedianSpread_prev
+											? 'rates-table__value-changed rates-table__value-changed--down'
+											: 'rates-table__value-changed rates-table__value-changed--up'"></span>
+										</td>
+									</tr>
+									<!-- /ko -->
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<a class="most-popular-markets__show-all-link cta-link" href="#"
+						   data-bind="click: showAll, if: productsCache().length > 10">
+							<!-- ko if: viewAll() -->
+							View less markets
+							<!-- /ko -->
+							<!-- ko ifnot: viewAll() -->
+							View all markets
+							<!-- /ko -->
+							<span data-bind="html: viewAll()?'&minus;':'+'"></span></a>
+						<!-- /ko -->
+
+						<div class="most-popular-markets__trading-sub-title">
+							Live. For over a decade, FOREX.com has been serving the needs of currency traders worldwide.
+							We
+							are
+							proud to offer traders of all types sophisticated trading tools, ultra-competitive spreads
+							and
+							exceptional execution quality on over 120 currencies.
+						</div>
+					</div>
+					<!-- /tab -->
+					<!-- tab -->
+					<div class="most-popular-markets__tabs-tab" data-bind="css: {'active': currentTab()=='typical'}">
+						<!-- ko with: typical -->
+						<div class="most-popular-markets__table-wrapper">
+							<div class="most-popular-markets__table" data-columns="2">
+								<table class="rates-table">
+									<thead>
+									<tr>
+										<th class="rates-table__product">Product</th>
+										<th data-bind="ifnot: $root.hideSpread">Typical</th>
+										<th>As Low As</th>
+									</tr>
+									</thead>
+									<tbody>
+									<!-- ko foreach: products1 -->
+									<tr>
+										<td class="rates-table__product"><a href="#" data-bind="text: Product"></a></td>
+										<td data-bind="ifnot: $root.hideSpread">
+											<span data-bind="text: MedianSpread"></span>
+										</td>
+										<td data-bind="text: AsLowAs"></td>
+									</tr>
+									<!-- /ko -->
+									</tbody>
+								</table>
+							</div>
+							<div class="most-popular-markets__table mobile-hidden" data-columns="2">
+								<table class="rates-table">
+									<thead>
+									<tr>
+										<th class="rates-table__product">Product</th>
+										<th data-bind="ifnot: $root.hideSpread">Typical</th>
+										<th>As Low As</th>
+									</tr>
+									</thead>
+									<tbody>
+									<!-- ko foreach: products2 -->
+									<tr>
+										<td class="rates-table__product"><a href="#" data-bind="text: Product"></a></td>
+										<td data-bind="ifnot: $root.hideSpread">
+											<span data-bind="text: MedianSpread"></span>
+										</td>
+										<td data-bind="text: AsLowAs"></td>
+									</tr>
+									<!-- /ko -->
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<a class="most-popular-markets__show-all-link cta-link" href="#"
+						   data-bind="click: showAll, if: productsCache().length > 10">
+							<!-- ko if: viewAll() -->
+							View less markets
+							<!-- /ko -->
+							<!-- ko ifnot: viewAll() -->
+							View all markets
+							<!-- /ko -->
+							<span data-bind="html: viewAll()?'&minus;':'+'"></span></a>
+						<!-- /ko -->
+
+						<div class="most-popular-markets__trading-sub-title">
+							Typical. For over a decade, FOREX.com has been serving the needs of currency traders
+							worldwide.
+							We are
+							proud to offer traders of all types sophisticated trading tools, ultra-competitive spreads
+							and
+							exceptional execution quality on over 120 currencies.
+						</div>
+					</div>
+					<!-- /tab -->
+				</div>
+			</div>
+			<!-- /tabs-content -->
+		</div>
+		<!-- /tabs -->
+	</div>
+</section>

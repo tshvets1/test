@@ -1,0 +1,34 @@
+<!--
+  {
+  "name": "Economic Calendar - Grid",
+  "status": "In Progress",
+  "notes": ""
+  }
+-->
+
+<div id="fxst_grid" class="fxst_grid">
+</div>
+
+<script type="text/javascript" src="http://calendar.fxstreet.com/scripts/resources/?culture=en-us"></script>
+
+<script type="text/javascript">
+    var calendarOptions = {
+        tabs: "",
+        gridSelector: "#fxst_grid",
+        filterSelector: ".economic-calendar-filter-section",
+        pushUpdates: true,
+        saveSettings: true,
+        linkOnDetail: {
+            label: "Login to trade this event",
+            cssClass: "cta-link",
+            href: "#"
+        },
+        culture: "en-us",
+        timezone: "Eastern Standard Time",
+		resources: {
+			FilterResults: "_Filter_",
+			RecentAndNext: "RECENTANDNEXT",
+			ShowFilters: "S/H Filters"
+		}
+    };
+</script>

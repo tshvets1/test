@@ -1,0 +1,41 @@
+.faq-module {
+  &__list {
+    @extend %list--unstyled;
+    margin-bottom: $gutter;
+
+    li {
+      margin-top: $gutter;
+      padding-top: $gutter*2;
+      border-top: solid 1px $color-light;
+
+      &:first-child {
+        border-top: none;
+        padding-top: 0;
+      }
+    }
+  }
+
+  &__headline {
+    @include rem(font-size, 16);
+    line-height: 1.3;
+    margin-bottom: $gutter*3;
+    color: $color-darker;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+
+  &__link {
+    display: block;
+    padding: 0 0 $gutter/5;
+    line-height: 1.3;
+    text-decoration: none;
+  }
+
+  &__description {
+    @include rem(font-size, 14);
+    display: block;
+    line-height: 1.5;
+    padding: $gutter/2 0;
+    color: $color-darker;
+  }
+}

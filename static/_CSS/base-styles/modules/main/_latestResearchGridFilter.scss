@@ -1,0 +1,279 @@
+.research-filter {
+  $research-filter-content-padding: 40px !default;
+  $research-filter-content-margin: 0 0 10px !default;
+  $research-filter-content-border: solid 1px $color-medium !default;
+  $research-filter-content-headline-font: 16 700 null uppercase !default;
+  $research-filter-content-headline-padding: 0 0 30px !default;
+  $research-filter-checkbox-label-font: 14 !default;
+  $research-filter-checkbox-label-padding: 0 0 10px 26px !default;
+
+  $research-filter-toggle-padding: 0 0 15px !default;
+  $research-filter-toggle-font: 16 700 null uppercase !default;
+  $research-filter-toggle-icon-font: 20px !default;
+  $research-filter-toggle-icon-margin: 0 5px 0 0 !default;
+  $research-filter-toggle-color: $color-primary-3 !default;
+  $research-filter-toggle-hover-color: $color-secondary-7 !default;
+
+  $research-filter-divider-margin: 30px 0 !default;
+  $research-filter-divider-border: solid 1px $color-medium !default;
+  $research-filter-btn-margin: 0 15px 0 0 !default;
+
+  $research-filter-badge-width: 24px !default;
+  $research-filter-badge-font: 14 700 $research-filter-badge-width null center !default;
+  $research-filter-badge-color: $color-white !important !default;
+  $research-filter-badge-bg-color: $color-secondary-7 !default;
+
+  $research-filter-tagged-margin: 0 0 20px !default;
+  $research-filter-tagged-padding: 0 0 3px !default;
+  $research-filter-tagged-font: 23 null 1.3 !default;
+  $research-filter-tagged-tag-font: null 700 !default;
+  $research-filter-tagged-color: $color-primary-3 !default;
+  $research-filter-tagged-icon-size: 12px !default;
+  $research-filter-tagged-icon-position: -2px !default;
+  $research-filter-tagged-icon-font-size: 11px !default;
+
+  $research-filter-toggle-tablet-bg-color: $color-dark !default;
+  $research-filter-toggle-tablet-color: $color-white !default;
+  $research-filter-content-tablet-margin: 0 !default;
+  $research-filter-content-tablet-padding: 0 0 50px !default;
+  $research-filter-save-settings-tablet-padding: 30px 20px !default;
+  $research-filter-save-settings-tablet-color: $color-white !default;
+  $research-filter-save-settings-label-tablet-padding: 0 0 0 26px !default;
+  $research-filter-save-settings-checkbox-tablet-color: $color-secondary-4 !default;
+
+  $research-filter-tagged-mobile-padding: 0 $tabletPadding !default;
+
+  &-section {
+    .fixed-menu {
+      &__hideable-content {
+        display: none;
+        margin: $research-filter-content-margin;
+        padding: $research-filter-content-padding;
+        border: $research-filter-content-border;
+
+        &-wrapper {
+          float: left;
+          width: 25%;
+        }
+
+        &-headline {
+          padding: $research-filter-content-headline-padding;
+          @include set-text-styles($research-filter-content-headline-font...);
+        }
+
+        &-list {
+          @extend %list--unstyled;
+
+          &[data-type="checkbox"] {
+            label {
+              padding: $research-filter-checkbox-label-padding;
+              @include set-text-styles($research-filter-checkbox-label-font...);
+              text-overflow: ellipsis;
+              white-space: nowrap;
+            }
+          }
+        }
+      }
+
+      &__toggle {
+        padding: $research-filter-toggle-padding;
+        overflow: hidden;
+
+        .filter {
+          display: block;
+          float: left;
+          @include set-text-styles($research-filter-toggle-font...);
+          cursor: pointer;
+
+          * {
+            color: $research-filter-toggle-color;
+          }
+
+          .icon:after {
+            color: $research-filter-toggle-color;
+          }
+
+          & > span:first-child {
+            display: inline-block;
+            position: relative;
+            top: 2px;
+            margin: $research-filter-toggle-icon-margin;
+            font-size: $research-filter-toggle-icon-font;
+          }
+
+          &:hover {
+            * {
+              color: $research-filter-toggle-hover-color;
+            }
+
+            .icon:after {
+              color: $research-filter-toggle-hover-color;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__divider {
+    clear: both;
+    display: inline-block;
+    width: 100%;
+    margin: $research-filter-divider-margin;
+    border-top: $research-filter-divider-border;
+  }
+
+  &__filter-btn {
+    display: inline-block;
+    margin: $research-filter-btn-margin;
+  }
+
+  &__save-settings {
+    display: inline-block;
+  }
+
+  &__badge {
+    display: inline-block;
+    margin-left: $gutter/2;
+    width: $research-filter-badge-width;
+    @include set-text-styles($research-filter-badge-font...);
+    color: $research-filter-badge-color;
+    background-color: $research-filter-badge-bg-color;
+    border-radius: 100%;
+    cursor: default;
+
+    @if ($old-ie) {
+      position: relative;
+      -ms-behavior: url(/_CSS/htc/PIE.htc);
+    }
+  }
+
+  &__tagged {
+    position: relative;
+    margin: $research-filter-tagged-margin;
+    padding: $research-filter-tagged-padding;
+    @include set-text-styles($research-filter-tagged-font...);
+    letter-spacing: -.03em;
+    color: $research-filter-tagged-color;
+
+    &-close {
+      position: relative;
+      @include position($research-filter-tagged-icon-position...);
+      @include size($research-filter-tagged-icon-size...);
+
+      @extend %btn--unstyled;
+      @extend .icon;
+      @extend .icon-close;
+      font-size: $research-filter-tagged-icon-font-size;
+
+      span {
+        display: none;
+      }
+    }
+
+    span {
+      @include set-text-styles($research-filter-tagged-tag-font...);
+    }
+  }
+
+  @media screen and (min-width: $mobile) and (max-width: $tablet) {
+    &-section[data-for] {
+      .fixed-menu__hideable-content {
+        &-headline {
+          background: none;
+        }
+
+        &-wrapper {
+          width: 33.333%;
+        }
+
+        &-list li {
+          border-top: 0;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: $tablet) {
+    &-section[data-for] {
+      .wrapper {
+        max-height: 100vh;
+        overflow: visible;
+      }
+
+      .fixed-menu {
+        &__toggle {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          z-index: $fixedMenuZIndex;
+          background: $research-filter-toggle-tablet-bg-color;
+          padding-bottom: 0;
+
+          span,
+          .icon:after {
+            color: $research-filter-toggle-tablet-color;
+          }
+        }
+
+        &__hideable-content {
+          border: 0;
+          margin: $research-filter-content-tablet-margin;
+          padding: $research-filter-content-tablet-padding;
+
+          &-list li {
+            width: 100%;
+            float: none;
+          }
+        }
+      }
+    }
+
+    &__divider {
+      display: none;
+    }
+
+    &__filter-btn {
+      display: none;
+    }
+
+    &__save-settings {
+      display: block;
+      clear: both;
+      padding: $research-filter-save-settings-tablet-padding;
+      color: $research-filter-save-settings-tablet-color;
+
+      input[type="checkbox"] + label {
+        padding: $research-filter-save-settings-label-tablet-padding;
+      }
+
+      input[type="checkbox"]:checked + label:before {
+        background: $research-filter-save-settings-checkbox-tablet-color;
+        border-color: $research-filter-save-settings-checkbox-tablet-color;
+      }
+    }
+  }
+
+  @media screen and (max-width: $mobile) {
+    &-section {
+      .fixed-menu__hideable-content {
+        &-wrapper {
+          width: 100%;
+          float: none;
+        }
+
+        &-list li:first-child {
+          border: 0;
+        }
+      }
+    }
+
+    &__save-settings {
+      display: none;
+    }
+
+    &__tagged {
+      padding: $research-filter-tagged-mobile-padding;
+    }
+  }
+}

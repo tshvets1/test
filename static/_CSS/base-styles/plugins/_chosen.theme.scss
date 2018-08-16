@@ -1,0 +1,226 @@
+@mixin chosen-select-set-color($text-color, $border: solid 1px $text-color, $button-border: $border) {
+  border: $border;
+
+  span {
+    color: $text-color;
+  }
+
+  abbr:after {
+    color: $text-color;
+  }
+
+  & > div {
+    @if ($button-border != false) {
+      border-left: $button-border;
+    }
+
+    b:after {
+      border-top-color: $text-color;
+    }
+  }
+}
+
+@mixin chosen-select-set-hover-color($text-color, $border: null, $button-border: $border) {
+  &.chosen-with-drop {
+    .chosen-single {
+      @include chosen-select-set-color($text-color, $border, $button-border);
+    }
+  }
+
+  .chosen-single {
+    @at-root .no-touch &:hover {
+      @include chosen-select-set-color($text-color, $border, $button-border);
+    }
+  }
+}
+
+@mixin chosen-select-color-button($bg-color, $border, $border-active: null, $border-hover:$border-active) {
+  .chosen-container-single {
+    &.chosen-with-drop .chosen-single > div {
+      border-left: $border-active;
+    }
+
+    .chosen-single > div {
+      background-color: $bg-color;
+      border-left: $border;
+    }
+
+    @at-root .no-touch & .chosen-single:hover > div {
+      border-left: $border-hover;
+    }
+  }
+}
+
+.chosen-container-single {
+  .chosen-single {
+    padding: $chosen-theme-padding;
+    height: $chosen-theme-height;
+
+    @include set-text-styles($chosen-theme-font...);
+
+    border-radius: 0;
+    box-shadow: none;
+    background: $chosen-theme-bg-color;
+
+    @include chosen-select-set-color($chosen-theme-color...);
+    transition: none;
+
+    span {
+      transition: none;
+    }
+
+    & > div {
+      padding: $chosen-theme-btn-padding;
+      width: $chosen-theme-btn-width;
+
+      b {
+        background: none;
+
+        &:after {
+          @extend %arrow-down;
+          border-width: $chosen-theme-btn-arrow-width;
+        }
+      }
+    }
+
+    abbr {
+      @include position($chosen-theme-cancel-position...);
+      background: none;
+
+      &:after {
+        content: "\d7";
+        @include set-text-styles($chosen-theme-cancel-font...);
+      }
+    }
+  }
+
+  .chosen-drop {
+    margin: $chosen-theme-list-margin;
+
+    @include set-text-styles($chosen-theme-list-font...);
+
+    border: $chosen-theme-list-border;
+    border-radius: 0;
+    box-shadow: none;
+    background: $chosen-theme-list-bg-color;
+
+    .chosen-results {
+      padding: 0;
+      margin: 0;
+
+      li {
+        padding: $chosen-theme-list-result-padding;
+        border-top: $chosen-theme-list-result-border;
+
+        &:first-child {
+          border-top: 0;
+        }
+      }
+
+      .highlighted {
+        background: $chosen-theme-list-result-hover-bg-color;
+        color: $chosen-theme-list-result-hover-color;
+      }
+    }
+
+    .chosen-search {
+      @extend .icon;
+      @extend .icon-search;
+
+      display: block;
+      margin: 0;
+      padding: 0;
+      color: $chosen-theme-list-search-color;
+
+      &:after {
+        position: absolute;
+        @include position($chosen-theme-list-search-icon-position...);
+        @include set-text-styles($chosen-theme-list-search-icon-font...);
+      }
+
+      input[type="text"] {
+        @include set-text-styles($chosen-theme-list-search-input-font...);
+        color: $chosen-theme-list-search-input-color;
+
+        padding: $chosen-theme-list-search-input-padding;
+        margin: 0;
+
+        border: 0;
+        border-bottom: $chosen-theme-list-search-input-border;
+      }
+    }
+  }
+
+  @include chosen-select-set-hover-color($chosen-theme-hover-active-color...);
+}
+
+%chosen-select--transparent-button {
+  .chosen-container-single {
+    .chosen-single {
+      @include chosen-select-set-color($chosen-theme-transparent-btn-color...);
+    }
+  }
+}
+
+%chosen-select--darker-button {
+  @include chosen-select-color-button($chosen-theme-darker-btn-color...);
+}
+
+%chosen-select--hover-active-alt-color {
+  .chosen-container-single {
+    @include chosen-select-set-hover-color($chosen-theme-hover-active-alt-color...);
+  }
+}
+
+%custom-select--hover-focus-alt-color {
+  .custom-select {
+    &:focus {
+      border-color: $custom-select-focus-alt-color;
+      color: $custom-select-focus-alt-color;
+    }
+
+    &:hover {
+      border-color: $custom-select-focus-alt-color;
+      color: $custom-select-focus-alt-color;
+    }
+  }
+}
+
+.custom-select {
+  display: block !important;
+  position: absolute;
+  left: -10000px;
+  opacity: 0;
+  padding: $custom-select-padding;
+  height: $custom-select-height;
+
+  @include set-text-styles($custom-select-font...);
+
+  border: $custom-select-border;
+  background: $custom-select-bg-color;
+  outline: 0;
+  -webkit-appearance: menulist;
+
+  &:focus,
+  &:hover {
+    border: $custom-select-focus-border;
+  }
+
+  option {
+    color: $custom-select-color;
+  }
+}
+
+@media screen and (max-width: $mobile) {
+  .chosen-container-single {
+    display: none;
+  }
+
+  .custom-select {
+    width: 100% !important;
+    position: relative;
+    left: 0;
+    opacity: 1;
+    padding: $custom-select-mobile-padding;
+  }
+}

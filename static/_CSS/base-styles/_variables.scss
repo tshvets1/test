@@ -1,0 +1,82 @@
+//1 Colors
+//2 Measurements & Breakpoints
+//3 Other
+//3.1 Other - Transparency
+//3.2 Other - Z-Indexes
+//4 Components
+//5 Fonts
+
+//1 Colors
+@import "colors-variables";
+
+//2 Measurements & Breakpoints
+$gutter: 10px !default;
+$page-width: 940px !default;
+$rail-width: 308px !default;
+$mobile: 767px !default;
+$tablet: 1023px !default;
+$tabletPadding: 17px !default;
+
+//2.1 Layout
+$primary-margin: 50px !default;
+$primary-width: $page-width - $rail-width - $primary-margin !default;
+$primary-padding: 0 0 60px !default;
+$primary-wrapper-margin-top: 20px !default;
+$primary-wrapper-padding-top: 20px !default;
+$primary-wrapper-border: solid 1px $color-lighter !default;
+
+$secondary-margin: 0 0 60px !default;
+$secondary-module-margin: 0 0 2px !default;
+$secondary-module-padding: 20px !default;
+$secondary-module-default-bg-color: $color-lighter !default;
+
+$two-column-after-hero-margin-top: 60px !default;
+$secondary-after-g-hero-margin: -$two-column-after-hero-margin-top 0 60px !default;
+
+$primary-tablet-padding: 0 $tabletPadding !default;
+$primary-wrapper-padding: 20px 0 30px !default;
+$secondary-tablet-margin: 0 0 20px !important !default;
+$secondary-module-tablet-margin: null !default;
+$secondary-module-tablet-padding: 50px $tabletPadding !default;
+$two-column-after-hero-tablet-margin-top: null !default;
+
+$primary-mobile-padding: null !default;
+$secondary-mobile-margin: null !default;
+$secondary-module-mobile-padding: null !default;
+$secondary-module-mobile-margin: null !default;
+$two-column-after-hero-mobile-margin-top: null !default;
+
+//3 Other
+$spinnerSize: 60px !default;
+$spinnerSmallSize: 40px !default;
+
+// article type icon width
+$default-article-type-width: 26px !default;
+$articleTypeColors: "grey", "green", "white", "yellow", "dark-blue" !default;
+
+// BASE IMAGE PATH
+$assetPath: "/_Images/" !default;
+
+//3.1 Other - Transparency
+$section-bg-opacity: 0.95 !default;
+
+//3.2 Other - Z-Indexes
+$beforeAllZIndex: -1 !default;
+$defaultZIndex: 1 !default;
+$utilityNavZIndex: 2 !default;
+$tooltipZIndex: 3 !default;
+$dropdownListZIndex: 3 !default;
+$fixedMenuZIndex: 4 !default;
+$errorTooltipZIndex: 4 !default;
+$alertFixedToBottomZIndex: 5 !default;
+$headerStickyZIndex: 10 !default;
+$glossaryZIndex: 100 !default;
+$spinnerZIndex: 101 !default;
+$modalZIndex: 1000 !default;
+$afterAllZIndex: 9999 !default;
+
+//4 Components
+@import "components-variables";
+
+//5 Fonts
+@import "fonts-variables";

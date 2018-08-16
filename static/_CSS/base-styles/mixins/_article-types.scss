@@ -1,0 +1,94 @@
+@mixin article-type-base($articleTypeBaseClass, $colors, $width, $attributeName) {
+  .#{$articleTypeBaseClass} {
+
+    @each $color in $colors {
+      $position: index($colors, $color) - 1;
+
+      &[#{$attributeName}="#{$color}"] {
+        background-position: -$width*$position 0;
+      }
+    }
+  }
+}
+
+@mixin article-type-hover($articleTypeBaseClass, $colors, $width) {
+  @include article-type-base($articleTypeBaseClass, $colors, $width, data-article-type-hover);
+
+  .#{$articleTypeBaseClass}:hover {
+    > div {
+      display: none;
+    }
+
+    span {
+      @include opacity(1);
+    }
+  }
+}
+
+@mixin article-type-hover-parent($articleTypeBaseClass, $colors, $width, $applyWhen: ":hover") {
+  @include article-type-hover($articleTypeBaseClass, $colors, $width);
+  .#{$articleTypeBaseClass}:hover span {
+    opacity: inherit;
+  }
+
+  @each $color in $colors {
+    $position: index($colors, $color) - 1;
+
+    &[data-article-type-hover="#{$color}"] {
+      > .#{$articleTypeBaseClass} span {
+        background-position: -$width*$position 0;
+
+        @if ($old-ie) {
+          img {
+            left: -$width*$position !important;
+          }
+        }
+      }
+    }
+  }
+
+  &#{$applyWhen} {
+    .#{$articleTypeBaseClass} {
+      > div {
+        display: none;
+      }
+
+      span {
+        @include opacity(1);
+      }
+    }
+  }
+}
+
+@mixin article-type($articleTypeBaseClass, $colors, $width) {
+  .#{$articleTypeBaseClass} {
+    background-position: 0 0;
+    position: relative;
+    width: $width;
+    height: $width;
+    background-size: $width*5 $width;
+
+    @if ($old-ie) {
+      -ms-behavior: url(/_CSS/htc/backgroundsize.min.htc);
+    }
+
+    span {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      @include opacity(0);
+      background-position: 0 0;
+      width: $width;
+      height: $width;
+      background-size: $width*5 $width;
+      @include transition(opacity, $transitionDurationAndEffect);
+      @if ($old-ie) {
+        -ms-behavior: url(/_CSS/htc/backgroundsize.min.htc);
+      }
+    }
+  }
+
+  @include article-type-base($articleTypeBaseClass, $colors, $width, data-article-type-default);
+}

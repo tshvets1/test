@@ -1,0 +1,53 @@
+.research-article-detail {
+  $research-article-detail-title-color: $color-primary-3 !default;
+  $research-article-detail-title-font: 40 null 1.2 !default;
+  $research-article-detail-rtf-font: 14 !default;
+
+  $research-article-detail-title-mobile-font: 25 null 1.25 !default;
+
+  padding: 0 0 $gutter*3;
+
+  .research-article {
+
+    &__title {
+      @include set-text-styles($research-article-detail-title-font...);
+      color: $research-article-detail-title-color;
+    }
+
+    &__subtitle {
+      float: left;
+      width: 70%;
+    }
+  }
+
+  .rtf {
+    padding: $gutter/2 0;
+    clear: both;
+
+    img[src*=".svg"] {
+      width: 100%;
+    }
+
+    svg {
+      width: 100%;
+    }
+  }
+
+  @media screen and (max-width: $mobile) {
+    .research-article {
+      &__title {
+        @include set-text-styles( $research-article-detail-title-mobile-font...);
+      }
+
+      &__subtitle {
+        width: 100%;
+      }
+    }
+  }
+
+  .section-wrapper & .rtf {
+    p {
+      @include set-text-styles($research-article-detail-rtf-font...);
+    }
+  }
+}

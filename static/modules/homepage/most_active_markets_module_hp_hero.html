@@ -1,0 +1,55 @@
+<!--
+  {
+  "name": "Most Active Markets Module - HP Hero",
+  "status": "In Progress",
+  "notes": ""
+  }
+-->
+
+<article class="primary-content__wrapper most-active-markets"
+		 data-apply-ko="mostActiveMarkets"
+		 data-products="['USD/JPY','EUR/USD','WHT/USD','USD/CAD','GBP/AUD']"
+		 data-get-products-timeout="5000"
+		 data-move-rows="false">
+	<div class="most-active-markets__tabs">
+			<div class="most-active-markets__tabs-content">
+			<div class="active-markets__table" data-style="blue">
+				<table class="rates-table">
+					<thead>
+					<tr>
+						<th>Market</th>
+						<th>Bid</th>
+						<th>Ask</th>
+					</tr>
+					<tr class="spinner" data-bind="attr: {'hidden' : products().length > 0}">
+						<td colspan="3">
+							<img src="/_Images/ui/loader.gif" alt="spinner"/>
+						</td>
+					</tr>
+					</thead>
+					<tbody>
+					<!-- ko foreach: products -->
+					<tr data-bind="visible: $index() < 3">
+						<td>
+							<a href="#" data-bind="text: product"></a>
+						</td>
+						<td>
+                                <span data-bind="text: bid,
+						css: {'rates-table__value-up' : bid() > bid_prev(), 'rates-table__value-down': bid() < bid_prev()}"></span>
+						</td>
+						<td>
+                                <span data-bind="text: ask,
+						css: {'rates-table__value-up' : ask() > ask_prev(), 'rates-table__value-down': ask() < ask_prev()}"></span>
+						</td>
+					</tr>
+					<!-- /ko -->
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div class="most-active-markets__sub-headline">Products are refreshed at 5 minutes intervals</div>
+
+	</div>
+
+
+</article>

@@ -1,0 +1,46 @@
+@mixin font-face($font-face-options) {
+  $font-types: (
+    woff: "woff",
+    woff2: "woff2",
+    otf: "opentype",
+    ttf: "truetype",
+    eot: "embedded-opentype",
+    svg: "svg"
+  );
+
+  $font-family-name: map_get($font-face-options, font-family);
+  $font-version: map_get($font-face-options, version);
+  $font-path: map_get($font-face-options, font-path);
+  $font-formats: map_get($font-face-options, font-formats);
+  $options: map_get($font-face-options, options);
+
+  @each $font in $options {
+    $font-weight: map_get($font, font-weight);
+    $font-style: map_get($font, font-style);
+    $font-src-base-name: map_get($font, src-base-name);
+
+    @font-face {
+      font-family: $font-family-name;
+      font-weight: $font-weight;
+
+      @if ($font-style) {
+        font-style: $font-style;
+      }
+
+      @if (index($font-formats, "eot")) {
+        src: url("#{$font-path}/#{$font-src-base-name}.eot?v=#{$font-version}");
+      }
+
+      $src-property: null;
+      @each $font-format in $font-formats {
+        $should-add-iefix: $old-ie and $font-format == "eot";
+        $font-url: "#{$font-path}/#{$font-src-base-name}.#{$font-format}#{if($should-add-iefix, "?#iefix&", "?")}v=#{$font-version}";
+        $font-type: map_get($font-types, $font-format);
+        @if ($should-add-iefix or $font-format != "eot") {
+          $src-property: $src-property, url($font-url) format($font-type);
+        }
+      }
+      src: $src-property;
+    }
+  }
+}

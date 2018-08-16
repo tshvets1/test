@@ -1,0 +1,69 @@
+﻿<!--
+  {
+  "name": "Swap Rates",
+  "status": "Complete",
+  "notes": ""
+  }
+-->
+
+<div class="section-wrapper quote-board" data-sectionbg="alternate"
+	 data-apply-ko="swapRates"
+	 data-get-products-timeout="5000"
+	 data-products="USD/JPY,EUR/USD,WHT/USD,USD/CAD,GBP/AUD"
+	 data-default-standart="10">
+	<div class="wrapper">
+		<h2 class="quote-board__headline">
+			Swap Rates
+		</h2>
+
+		<div class="quote-board__dropdown">
+			<select class="quote-board__select" data-bind="value: standart">
+				<option value="10" selected="selected">マイクロ</option>
+				<option value="100">ミニ</option>
+				<option value="1000">スタンダード</option>
+			</select>
+			<ul class="quote-board__tabs tabs__list" data-tabs-handler="false">
+				<li class="quote-board__tabs-item tabs__item" data-bind="click: changeTab.bind($data, 10)">
+					<a class="quote-board__tabs-link tabs__link active" data-bind="css: { active: standart() == 10}">マイクロ</a>
+				</li>
+				<li class="quote-board__tabs-item tabs__item" data-bind="click: changeTab.bind($data, 100)">
+					<a class="quote-board__tabs-link tabs__link" data-bind="css: { active: standart() == 100}">ミニ</a>
+				</li>
+				<li class="quote-board__tabs-item tabs__item" data-bind="click: changeTab.bind($data, 1000)">
+					<a class="quote-board__tabs-link tabs__link" data-bind="css: { active: standart() == 1000}">スタンダード</a>
+				</li>
+			</ul>
+			<a class="quote-board__update-btn" data-bind="click: update">
+				更新 <i class="icon icon-refresh"></i>
+			</a>
+		</div>
+
+		<table class="rates-table rates-table--mobile-transpose">
+			<thead>
+			<tr>
+				<th class="rates-table__product">通貨ペア</th>
+				<th>ビッド</th>
+				<th>オファー</th>
+				<th>損益（ロング）</th>
+				<th>損益（ショート）</th>
+			</tr>
+			<tr class="spinner" data-bind="attr: {'hidden' : products().length > 0}">
+				<td colspan="5">
+					<img src="/_Images/ui/loader.gif" alt="spinner"/>
+				</td>
+			</tr>
+			</thead>
+			<tbody hidden="hidden" data-bind="attr: {'hidden' : products().length == 0}">
+			<!-- ko foreach: products -->
+			<tr>
+				<td class="rates-table__product"><a href="#" data-bind="text: product"></a></td>
+				<td data-bind="text: bid, css: {'rates-table__value-down' : bid() < bid_prev(), 'rates-table__value-up' : bid() > bid_prev() }"></td>
+				<td data-bind="text: ask, css: {'rates-table__value-down' : ask() < ask_prev(), 'rates-table__value-up' : ask() > ask_prev() }"></td>
+				<td data-bind="text: Long() * $parent.standart()"></td>
+				<td data-bind="text: Short() * $parent.standart()"></td>
+			</tr>
+			<!-- /ko -->
+			</tbody>
+		</table>
+	</div>
+</div>

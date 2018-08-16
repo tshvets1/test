@@ -1,0 +1,22 @@
+<!--
+  {
+  "name": "Article Detail Module",
+  "status": "Complete",
+  "notes": "NOTE: This Page Template is also used for Account Forms, Knowledge Center, Economic Calendar, etc."
+  }
+-->
+
+<section class="section-wrapper main-right-rail" data-sectionbg="default">
+	<div class="wrapper">
+		<div class="primary-content">			
+			@@include('/modules/education/article-detail/edu_article_detail_content.html')
+			@@include('/modules/education/article-detail/edu_related_topics_module.html')
+		</div>
+
+		<aside class="secondary-content right-rail" role="complementary">
+			@@include('/modules/education/article-detail/edu_article_detail_filter.html')
+			@@include('/modules/product/product_right_rail_live_trading.html')
+			@@include('/modules/education/article-detail/edu_right_rail_theme.html')
+		</aside>
+	</div>
+</section>

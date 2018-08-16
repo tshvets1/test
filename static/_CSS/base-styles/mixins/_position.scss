@@ -1,0 +1,8 @@
+@mixin position($top:null, $right: null, $bottom: null, $left: null) {
+  @if ($top != none) {
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+  }
+}

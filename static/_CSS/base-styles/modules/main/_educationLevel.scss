@@ -1,0 +1,154 @@
+.education-level {
+    $education-level-module-font: null null null null left !default;
+    $education-level-module-font-color: $color-darker !default;
+    $education-level-headline-font: 40 null 1.25 !default;
+    $education-level-headline-font-color: $color-primary-3 !default;
+    $education-level-subheadline-font: 20 null 1.4 !default;
+    $education-level-item-bg-color: $color-light- !default;
+    $education-level-item-border: 1px solid $color-medium !default;
+    $education-level-item-hover-bg-color: $color-medium- !default;
+    $education-level-item-link-font: null null 1 uppercase !default;
+    $education-level-item-link-hover-font-color: $color-secondary-7 !default;
+    $education-level-item-link-hover-border-color: $color-secondary-7 !default;
+    $education-level-item-paragraph-font: 20 !default;
+    $education-level-item-paragraph-font-color: $color-primary-3 !default;
+    $education-level-item-cta-link-font-color: $color-primary-3 !default;
+    $education-level-image-font: null null null null center !default;
+    $education-level-image-bg-color: $color-lighter- !default;
+    $education-level-image-border: 1px solid $color-medium !default;
+
+    $education-level-tablet-headline-font: 36 !default;
+    $education-level-tablet-subheadline-font: 18 !default;
+
+    $education-level-mobile-headline-font: 25 !default;
+    $education-level-mobile-subheadline-font: 14 !default;
+    $education-level-item-mobile-font: null null null null left !default;
+    $education-level-item-mobile-paragraph-font: 17 null normal !default;
+
+  &-module {
+    @include set-text-styles($education-level-module-font... );
+    color: $education-level-module-font-color;
+  }
+
+  &__headline {
+    @include set-text-styles($education-level-headline-font...);
+    color: $education-level-headline-font-color;
+    padding-bottom: $gutter;
+  }
+
+  &__sub-headline {
+    @include set-text-styles($education-level-subheadline-font...);
+    padding-bottom: $gutter*2;
+  }
+
+  &__list {
+    @extend %list--unstyled;
+  }
+
+  &__item {
+    display: table;
+    width: 100%;
+    margin-bottom: $gutter;
+    background-color: $education-level-item-bg-color;
+    border-bottom: $education-level-item-border;
+
+    & > a {
+      @include set-text-styles($education-level-item-link-font...);
+      display: table-row;
+      padding: 0;
+      text-decoration: none;
+
+      &:hover {
+        p, .cta-link {
+          color: $education-level-item-link-hover-font-color;
+        }
+
+        span:after {
+          border-left-color: $education-level-item-link-hover-border-color;
+        }
+      }
+    }
+
+    &:hover {
+      background-color: $education-level-item-hover-bg-color;
+    }
+
+    p {
+      @include set-text-styles($education-level-item-paragraph-font...);
+      display: table-cell;
+      vertical-align: middle;
+      margin: 0;
+      padding: $gutter*3 $gutter*4;
+      color: $education-level-item-paragraph-font-color;
+
+      .cta-link {
+        display: block;
+        padding-top: $gutter/2;
+        color: $education-level-item-cta-link-font-color;
+      }
+    }
+
+    &-image {
+      @include set-text-styles($education-level-image-font...);
+      display: table-cell;
+      width: 130px;
+      padding: $gutter;
+      background-color: $education-level-image-bg-color;
+      border-left: $education-level-image-border;
+      height: 110px;
+
+      img {
+        max-width: 110px;
+        vertical-align: middle;
+      }
+    }
+  }
+
+  @media screen and (max-width: $tablet) {
+    &__headline {
+      @include set-text-styles($education-level-tablet-headline-font...);
+    }
+
+    &__sub-headline {
+      @include set-text-styles($education-level-tablet-subheadline-font...);
+    }
+  }
+
+  @media screen and (max-width: $mobile) {
+    &__headline {
+      @include set-text-styles($education-level-mobile-headline-font...);
+    }
+
+    &__sub-headline {
+      @include set-text-styles($education-level-mobile-subheadline-font...);
+    }
+
+    &__item {
+      @include set-text-styles($education-level-item-mobile-font...);
+      margin-bottom: $gutter;
+      padding-left: 0;
+      overflow: hidden;
+      height: auto;
+
+      p {
+        @include set-text-styles($education-level-item-mobile-paragraph-font...);
+        padding: $gutter*2;
+
+        .cta-link {
+          padding-top: 0;
+        }
+      }
+
+      &-image {
+        padding: $gutter;
+        overflow: hidden;
+        height: 80px;
+        width: 90px;
+
+        img {
+          height: 100%;
+        }
+      }
+    }
+  }
+}

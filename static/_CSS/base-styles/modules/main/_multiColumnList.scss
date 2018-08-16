@@ -1,0 +1,41 @@
+.multi-col__list {
+  margin: $multi-col-list-margin;
+
+  & > ul {
+    @extend %list--unstyled;
+    width: 100%;
+  }
+
+  &-title {
+    @include set-text-styles($multi-col-list-title-font...);
+    margin:$multi-col-list-title-margin;
+  }
+
+  &-item {
+    display: table;
+    position: relative;
+    clear: both;
+    overflow: visible;
+    margin: $multi-col-list-item-margin;
+
+    &:first-child {
+      margin: $multi-col-list-item-first-child-margin;
+    }
+
+    &-img {
+      position: absolute;
+      max-width: $multi-col-list-item-img-max-width;
+      max-height: $multi-col-list-item-img-max-height;
+    }
+
+    &-title {
+      padding: $multi-col-list-item-title-padding;
+      min-height: $multi-col-list-item-title-min-height;
+      @include set-text-styles($multi-col-list-item-title-font...);
+    }
+  }
+
+  &-cta-link {
+    margin: $multi-col-list-cta-link-margin;
+  }
+}

@@ -1,0 +1,42 @@
+//1 Colors
+//2 Measurements & Breakpoints
+//3 Other
+//3.1 Other - Transparency
+//3.2 Other - Z-Indexes
+//4 Components
+//5 Fonts
+//1. Colors
+@import "colors-variables_CI";
+
+//2. Measurements & Breakpoints
+$page-width: 940px;
+$rail-width: 308px;
+$mobile: 767px;
+$tablet: 1023px;
+$iphone5: 375px !default;
+$tabletPadding: 17px;
+
+$primary-margin: 38px;
+$primary-width: $page-width - $rail-width - $primary-margin;
+$secondary-module-margin: 0 0 10px;
+$secondary-module-padding: 20px;
+$two-column-after-hero-margin-top: 40px;
+$secondary-after-g-hero-margin-top: -40px 0 60px;
+
+$primary-tablet-padding: 0 $tabletPadding 30px;
+$secondary-tablet-margin: 0 0 30px;
+$secondary-module-tablet-margin: $primary-tablet-padding;
+$secondary-module-tablet-padding: 20px;
+$two-column-after-hero-tablet-margin-top: 30px;
+
+$primary-mobile-padding: 0 $tabletPadding 15px;
+$secondary-mobile-margin: 0 0 15px;
+$secondary-module-mobile-padding: 15px 10px;
+$secondary-module-mobile-margin: $primary-mobile-padding;
+$two-column-after-hero-mobile-margin-top: 25px;
+
+//4. Components
+@import "components-variables_CI";
+
+//5 Fonts
+@import "fonts-variables_CI";

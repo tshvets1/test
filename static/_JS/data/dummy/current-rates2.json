@@ -1,0 +1,84 @@
+{
+  "d": [
+	{
+	  "Bid": "0.99598",
+	  "Offer": "0.99615",
+	  "Product": "USD/CHF",
+	  "Decimals": "5",
+	  "Spread": "-0.00017",
+	  "AliasName": "USD/CHF"
+	},
+	{
+	  "Bid": "15.058",
+	  "Offer": "15.090",
+	  "Product": "XAG/USD",
+	  "Decimals": "3",
+	  "Spread": "-0.032",
+	  "AliasName": "XAG/USD"
+	},
+	{
+	  "Bid": "13.9454",
+	  "Offer": "13.9505",
+	  "Product": "USD/ZAR",
+	  "Decimals": "4",
+	  "Spread": "-0.00510",
+	  "AliasName": "USD/ZAR"
+	},
+	{
+	  "Bid": "1.40906",
+	  "Offer": "1.40953",
+	  "Product": "USD/SGD",
+	  "Decimals": "5",
+	  "Spread": "-0.00047",
+	  "AliasName": "USD/SGD"
+	},
+	{
+	  "Bid": "8.62775",
+	  "Offer": "8.63029",
+	  "Product": "USD/SEK",
+	  "Decimals": "5",
+	  "Spread": "-0.00254",
+	  "AliasName": "USD/SEK"
+	},
+	{
+	  "Bid": "121.909",
+	  "Offer": "121.923",
+	  "Product": "USD/JPY",
+	  "Decimals": "3",
+	  "Spread": "-0.014",
+	  "AliasName": "USD/JPY"
+	},
+	{
+	  "Bid": "7.75070",
+	  "Offer": "7.75103",
+	  "Product": "USD/HKD",
+	  "Decimals": "5",
+	  "Spread": "-0.00033",
+	  "AliasName": "USD/HKD"
+	},
+	{
+	  "Bid": "6.85708",
+	  "Offer": "6.85768",
+	  "Product": "USD/DKK",
+	  "Decimals": "5",
+	  "Spread": "-0.00060",
+	  "AliasName": "USD/DKK"
+	},
+	{
+	  "Bid": "0.66106",
+	  "Offer": "0.66131",
+	  "Product": "NZD/USD",
+	  "Decimals": "5",
+	  "Spread": "-0.00025",
+	  "AliasName": "NZD/USD"
+	},
+	{
+	  "Bid": "0.65831",
+	  "Offer": "0.65885",
+	  "Product": "NZD/CHF",
+	  "Decimals": "5",
+	  "Spread": "-0.00054",
+	  "AliasName": "NZD/CHF"
+	}
+  ]
+}

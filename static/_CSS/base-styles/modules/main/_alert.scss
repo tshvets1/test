@@ -1,0 +1,82 @@
+%alert-close-inverse {
+  .alert__close {
+    color: $alert-close-inverse-color;
+  }
+}
+
+.alert {
+  &__message {
+    @include set-text-styles($alert-font...);
+    padding: $alert-message-padding;
+    margin: 0;
+    letter-spacing: -.03em;
+  }
+
+  &__link {
+    @extend .cta-link;
+  }
+
+  &__close {
+    @extend %btn--unstyled;
+    position: absolute;
+    top: -2px;
+    right: 0;
+    height: 100%;
+    width: $alert-close-width;
+    line-height: 0;
+
+    @extend .icon;
+    @extend .icon-close;
+    color: $alert-close-color;
+    font-size: $alert-close-font-size;
+
+    span {
+      display: none;
+    }
+  }
+
+  @each $color-theme in $color-themes {
+    @if (map_get($color-theme, inverseColor)) {
+      &-section[data-sectionbg="#{map_get($color-theme, theme)}"] {
+        @extend %alert-close-inverse;
+      }
+    }
+  }
+
+  &-section.bottom-fixed {
+    position: fixed;
+    bottom: 0;
+    z-index: $alertFixedToBottomZIndex;
+    width: 100%;
+    border-top: $alert-risk-warning-border;
+    opacity: $alert-risk-warning-opacity;
+
+    .alert__message {
+      @include set-text-styles($alert-risk-warning-font...);
+      padding: $alert-risk-warning-padding;
+      color: $alert-risk-warning-color;
+    }
+  }
+
+  &-section[data-cookie-alert="cookieAlert"] {
+    .alert__message {
+      @include set-text-styles($alert-cookie-font...);
+      padding: $alert-cookie-padding;
+    }
+  }
+
+  @media screen and (max-width: $mobile) {
+    .nav-menu-open &-section.bottom-fixed {
+      z-index: $beforeAllZIndex;
+      display: none;
+    }
+
+    &__message {
+      @include set-text-styles($alert-mobile-font...);
+    }
+
+    &__link {
+      display: block;
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "ResearchArticleDetailPage": [
+	{
+	  "Top_Story": true,
+	  "Headline": "USD/CAD: Will the Loonie Bounce Back This Week?",
+	  "Author_Name": "John Doe",
+	  "ArticleDateFormat": "Friday, May 15, 2015 12:30 AM",
+	  "RelatedTags": [
+		{
+		  "Tag_Name": "Forex",
+		  "Id": "forex"
+		},
+		{
+		  "Tag_Name": "technical analysis",
+		  "Id": "technical analysis"
+		},
+		{
+		  "Tag_Name": "fundamental analysis",
+		  "Id": "fundamental analysis"
+		}
+	  ],
+	  "Teaser": "The USD/CAD has had a torrid time of late. In a nutshell, the Canadian dollar has strengthened on the back of higher oil prices and also some stronger-than-expected inflation figures from Canada, while at the same time, the US dollar has weakened on some mixed-bag US data and after Janet Yellen recently dismissed fears about a pickup in US inflation"
+	},
+	{
+	  "Top_Story": false,
+	  "Headline": "AUDUSD only manages a glimpse of life back above 0.7800",
+	  "Author_Name": "John Doe",
+	  "ArticleDateFormat": "Friday, May 01, 2015 3:19 PM",
+	  "RelatedTags": null,
+	  "Teaser": "The USD/CAD has had a torrid time of late. In a nutshell, the Canadian dollar has strengthened on the back of higher oil prices and also some stronger-than-expected inflation figures from Canada, while at the same time, the US dollar has weakened on some mixed-bag US data and after Janet Yellen recently dismissed fears about a pickup in US inflation"
+	},
+	{
+	  "Top_Story": false,
+	  "Headline": "AUDUSD only manages a glimpse of life back above 0.7800",
+	  "Author_Name": "John Doe",
+	  "ArticleDateFormat": "Friday, May 01, 2015 3:19 PM",
+	  "RelatedTags": null,
+	  "Teaser": "The USD/CAD has had a torrid time of late. In a nutshell, the Canadian dollar has strengthened on the back of higher oil prices and also some stronger-than-expected inflation figures from Canada, while at the same time, the US dollar has weakened on some mixed-bag US data and after Janet Yellen recently dismissed fears about a pickup in US inflation"
+	}
+  ]
+}

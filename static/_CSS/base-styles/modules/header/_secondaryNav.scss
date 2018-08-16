@@ -1,0 +1,31 @@
+.secondary-nav {
+  position: relative;
+  z-index: $defaultZIndex - 1;
+  border-bottom: $secondary-nav-border;
+  @include set-text-styles($secondary-nav-font...);
+
+  &__links {
+    @extend %list--inline;
+    text-align: right;
+  }
+
+  &__item {
+    position: relative;
+
+    &.active:after {
+      position: absolute;
+      bottom: -1px;
+      left: 50%;
+      margin-left: -9px;
+      content: "";
+      width: 18px;
+      border-bottom: $secondary-nav-item-active-border;
+    }
+
+    a {
+      display: inline-block;
+      line-height: $secondary-nav-item-height;
+      padding: $secondary-nav-item-padding;
+    }
+  }
+}

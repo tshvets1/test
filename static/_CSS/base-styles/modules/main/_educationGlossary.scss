@@ -1,0 +1,213 @@
+.glossary {
+  $glossary-section-color: $color-darker !default;
+  $glossary-section-font: null null null null left !default;
+  $glossary-headline-font: 50 400 1.2 null center !default;
+  $glossary-headline-font-color: $color-primary-3 !default;
+  $glossary-heading-font: 250 300 1 uppercase !default;
+  $glossary-terms-font: null null 1.5 !default;
+  $glossary-terms-term-font: null 700 null uppercase !default;
+  $glossary-anchorlinks-font: null null null null center !default;
+  $glossary-fixed-anchorlinks-bg-color: $color-white !default;
+  $glossary-fixed-anchorlinks-border: 1px solid $color-light !default;
+  $glossary-anchorlinks-inner-font: null 400 !default;
+  $glossary-anchorlinks-link-font: null null null uppercase center !default;
+  $glossary-anchorlinks-link-border: solid 2px $color-lighter !default;
+  $glossary-anchorlinks-link-font-color: $color-primary-3 !default;
+  $glossary-anchorlinks-active-link-border: solid 2px $color-secondary-7 !default;
+  $glossary-anchorlinks-active-link-font-color: $color-secondary-7 !default;
+  $glossary-anchorlinks-hover-link-font-color: $color-secondary-7 !default;
+
+  $glossary-tablet-headline-font: 50 !default;
+  $glossary-tablet-heading-font: 168 !default;
+
+  $glossary-section-mobile-wrapper-with-alternate-background-bg-color: $color-white !default;
+  $glossary-headline-mobile-font: 36 !default;
+  $glossary-heading-mobile-font: 50 !default;
+  $glossary-heading-mobile-border: solid 1px $color-lighter !default;
+  $glossary-terms-term-mobile-font: 14 700 !default;
+
+  $glossary-section-not-mobile-bg-color: $color-light !default;
+  $glossary-section-odd-not-mobile-bg-color: $color-white !default;
+
+  &-section {
+    @include set-text-styles($glossary-section-font...);
+    color: $glossary-section-color;
+    padding-top: 35px;
+    padding-bottom: 35px;
+  }
+
+  &-header-section {
+    padding-top: 35px;
+    padding-bottom: 35px;
+  }
+
+  &__headline {
+    @include set-text-styles($glossary-headline-font...);
+    color: $glossary-headline-font-color;
+  }
+
+  &__heading {
+    @include set-text-styles($glossary-heading-font...);
+    width: 33.333%;
+    float: left;
+  }
+
+  &-terms {
+    @include set-text-styles($glossary-terms-font...);
+    width: 66.667%;
+    float: left;
+    padding-top: 20px;
+
+    &__term {
+      @include set-text-styles($glossary-terms-term-font...);
+      width: 25%;
+      float: left;
+      padding-right: 10px;
+      padding-bottom: 30px;
+      clear: left;
+    }
+
+    &__definition {
+      width: 75%;
+      float: left;
+      margin-left: 0;
+      padding-bottom: 30px;
+    }
+  }
+
+  &__anchorlinks {
+    @include set-text-styles($glossary-anchorlinks-font...);
+    padding-top: $gutter*4;
+    z-index: $glossaryZIndex;
+    width: 100%;
+
+    &.fixed {
+      position: fixed;
+      top: 0;
+      left: 0;
+      display: block;
+      padding-bottom: $gutter*2;
+      background-color: $glossary-fixed-anchorlinks-bg-color;
+      border-bottom: $glossary-fixed-anchorlinks-border;
+    }
+
+    .inner {
+      @include set-text-styles($glossary-anchorlinks-inner-font...);
+      margin: 0 auto;
+    }
+
+    .divider {
+      display: table;
+    }
+
+    a {
+      @include set-text-styles($glossary-anchorlinks-link-font...);
+      color: $glossary-anchorlinks-link-font-color;
+      min-width: 32px;
+      height: 32px;
+      display: block;
+      margin: 2px;
+      float: left;
+      padding: 1px 0 0 1px;
+      border: $glossary-anchorlinks-link-border;
+      text-decoration: none;
+
+      &.active {
+        border: $glossary-anchorlinks-active-link-border;
+        color: $glossary-anchorlinks-active-link-font-color;
+      }
+
+      &:hover {
+        color: $glossary-anchorlinks-hover-link-font-color;
+      }
+    }
+  }
+
+  //TABLET
+  @media screen and (max-width: $tablet) {
+    &-header-section {
+      padding-top: 80px;
+      padding-bottom: 80px;
+    }
+
+    &__headline {
+      @include set-text-styles($glossary-tablet-headline-font...);
+    }
+
+    &__heading {
+      @include set-text-styles($glossary-tablet-heading-font...);
+      width: 20%;
+      padding-top: 10px;
+    }
+
+    &-terms {
+      width: 80%;
+    }
+  }
+
+  //MOBILE
+  @media screen and (max-width: $mobile) {
+
+    &-header-section {
+      padding-top: $gutter*3;
+      padding-bottom: $gutter*3;
+    }
+
+    &-section {
+      padding-top: 0;
+      padding-bottom: 0;
+
+      &.section-wrapper[data-sectionbg="alternate"] {
+        background-color: $glossary-section-mobile-wrapper-with-alternate-background-bg-color;
+      }
+    }
+
+    &__headline {
+      @include set-text-styles($glossary-headline-mobile-font...);
+    }
+
+    &__heading {
+      @include set-text-styles($glossary-heading-mobile-font...);
+      width: 100%;
+      padding: 0 0 $gutter*1.5;
+      border-bottom: $glossary-heading-mobile-border;
+    }
+
+    &-terms {
+      width: 100%;
+
+      &__term {
+        @include set-text-styles($glossary-terms-term-mobile-font...);
+        width: 100%;
+        padding-bottom: 0;
+      }
+
+      &__definition {
+        width: 100%;
+      }
+    }
+  }
+
+  //NOT MOBILE
+  @media screen and (min-width: $mobile) {
+    &-section {
+      position: relative;
+      background-color: $glossary-section-not-mobile-bg-color;
+
+      &#{if($old-ie, ".nth-of-type-odd", ":nth-of-type(odd)")} {
+        background-color: $glossary-section-odd-not-mobile-bg-color;
+      }
+    }
+  }
+}
+
+//DESKTOP
+@media screen and (min-width: $tablet) {
+  .inner {
+    max-width: $page-width;
+    margin: 0 auto;
+    position: relative;
+    min-height: 50px;
+    display: inline-block;
+  }
+}

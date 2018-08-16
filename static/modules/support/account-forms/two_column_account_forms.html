@@ -1,0 +1,25 @@
+<!--
+  {
+  "name": "Account Forms Page Content",
+  "status": "Complete",
+  "notes": "NOTE: This Page Template is also used for Account Forms, Trading Hours, Education Detail, etc."
+  }
+-->
+
+<section class="section-wrapper main-right-rail" data-sectionbg="default">
+	<div class="wrapper">
+		<div class="primary-content">
+
+			<div class="account-forms__items">
+				@@include('/modules/support/account-forms/account_forms_item.html', {"headline": "Account Applications"})
+				@@include('/modules/support/account-forms/account_forms_item.html', {"headline": "MetaTrader Account Applications"})
+				@@include('/modules/support/account-forms/account_forms_item_without_buttons.html', {"headline": "General Forms"})
+			</div>
+		</div>
+
+		<aside class="secondary-content" role="complementary">
+			@@include('/modules/product/product_right_rail_live_trading.html')
+			@@include('/modules/support/account-forms/right_rail_faq_module.html')
+		</aside>
+	</div>
+</section>

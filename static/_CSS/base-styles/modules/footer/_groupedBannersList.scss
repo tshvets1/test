@@ -1,0 +1,25 @@
+.grouped-banners-list {
+  &__headline {
+    @include rem(font-size, $footer-grouped-banners-list-font-size);
+    margin: .5em 0;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  &__list {
+    @extend %list--unstyled;
+
+    ul {
+      margin-bottom: $gutter*2;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    li {
+      display: inline-block;
+      padding-bottom: $gutter*2;
+    }
+  }
+}

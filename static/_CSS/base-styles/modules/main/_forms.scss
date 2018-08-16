@@ -1,0 +1,535 @@
+.form {
+  width: 100%;
+  text-align: left;
+
+  &-headline {
+    margin: $form-headline-margin;
+    @include set-text-styles($form-headline-font...);
+    color: $form-headline-color;
+  }
+
+  &-description {
+    @include set-text-styles($form-description-font...);
+    margin: $form-description-margin;
+  }
+
+  @extend %chosen-select--darker-button;
+
+  .chosen-container-single {
+    width: $form-input-chosen-width;
+
+    &.chosen-with-drop {
+      .chosen-single {
+        background: $form-dropdown-bg-color;
+      }
+    }
+
+    .chosen-single {
+      background: $form-dropdown-bg-color;
+    }
+  }
+
+  .custom-select {
+    background: $form-dropdown-bg-color;
+    color: $form-input-color;
+    @include set-text-styles($form-select-font...)
+  }
+
+  &-instructions__headline {
+    @include set-text-styles($form-instructions-font...);
+
+    .required-note {
+      display: block;
+      @include set-text-styles($form-instructions-note-font...);
+    }
+  }
+
+  &-group,
+  &-div {
+    @include set-text-styles($form-div-font...);
+    position: relative;
+    min-height: $form-div-min-height;
+    margin: $form-div-margin;
+    clear: both;
+
+    &.default-height {
+      height: auto;
+    }
+
+    &.checkbox-inline {
+      height: auto;
+      margin: $form-div-checkbox-inline-margin;
+
+      label.form-label {
+        padding-bottom: 0;
+        height: auto;
+      }
+    }
+
+    &.invalid-control {
+      color: $form-div-invalid-color;
+
+      .form-validation-message {
+        display: block;
+      }
+    }
+
+    &.checkbox .form-input,
+    &.radiogroup .form-input {
+      border: 0 !important;
+      padding: $form-div-checkbox-radio-padding;
+    }
+
+    &.checkbox {
+      & > label.form-label {
+        padding: $form-div-checkbox-label-padding;
+        position: absolute;
+      }
+    }
+
+    &.radiogroup {
+
+      .form-div .form-div {
+        display: table-cell;
+
+        .form-label {
+          width: 100%;
+        }
+      }
+    }
+
+    &.text {
+      padding: $form-div-text-padding;
+      min-height: 0;
+      margin: $form-div-text-margin;
+    }
+
+    &.textarea {
+      height: $form-div-textarea-height;
+
+      .form-validation-message,
+      label.error {
+        @include position($form-div-textarea-label-position...);
+      }
+    }
+
+    &[data-controls] {
+      & > .col {
+        float: left;
+        clear: right;
+        margin-bottom: 0;
+
+        input {
+          padding-left: $form-div-controls-label-width + 1;
+          width: 100%;
+        }
+
+        .form-label {
+          position: absolute;
+          width: $form-div-controls-label-width;
+          color: $form-div-controls-label-color;
+          @include set-text-styles($form-div-controls-label-font...);
+
+          span {
+            display: none;
+          }
+        }
+      }
+
+      &[data-label-before] {
+        & > .col {
+          input {
+            padding-left: 9px;
+          }
+        }
+      }
+    }
+
+    &[data-controls="2"] {
+      > .col {
+        width: $form-div-controls-2-width;
+      }
+
+      > *:first-child + .col {
+        padding-right: $form-div-controls-padding/2;
+        padding-left: 0;
+      }
+
+      > *:first-child + .col + .col {
+        padding-left: $form-div-controls-padding/2;
+        padding-right: 0;
+        clear: none;
+      }
+    }
+
+    &[data-controls="3"] {
+      & > .col {
+        width: $form-div-controls-3-width;
+        padding: 0 $form-div-controls-padding/3;
+      }
+
+      > *:first-child + .col {
+        padding-left: 2*$form-div-controls-padding/3;
+        padding-right: 0;
+      }
+      > *:first-child + .col + .col + .col {
+        padding-right: 2*$form-div-controls-padding/3;
+        padding-left: 0;
+      }
+    }
+  }
+
+  &-div-hidden {
+    position: absolute;
+    left: -10000px;
+    @include opacity(0);
+  }
+
+  textarea {
+    height: 100%;
+    resize: none;
+  }
+
+  &-input,
+  &-text,
+  &-tel,
+  &-email,
+  &-textarea,
+  &-password {
+    width: $form-input-width;
+    outline: 0;
+    float: right;
+    @include set-text-styles($form-input-font...);
+    color: $form-input-color;
+    border: $form-input-border;
+
+    &:focus,
+    &:active,
+    &.open {
+      border-color: $form-input-active-border-color;
+    }
+
+    @at-root .no-touch &:hover {
+      border-color: $form-input-active-border-color;
+    }
+  }
+
+  &-label {
+    display: table;
+    height: $form-label-height;
+    width: $form-label-width;
+    float: left;
+    padding: $form-label-padding;
+    @include set-text-styles($form-label-font...);
+    transition: all .15s ease-out;
+
+    & > span {
+      display: table-cell;
+      vertical-align: middle;
+      line-height: 1.3;
+    }
+  }
+
+  &-validation-message,
+  label.error {
+    @include set-text-styles($form-label-error-font...);
+    position: absolute;
+    z-index: $errorTooltipZIndex;
+    @include position($form-label-error-position...);
+    display: none;
+    cursor: pointer;
+
+    color: $form-label-error-color;
+    background-color: $form-label-error-bg-color;
+    padding: $form-label-error-padding;
+
+    &:after {
+      @extend %arrow-down;
+      position: absolute;
+      @include position($form-label-error-arrow-position...);
+      border-width: $form-label-error-arrow-width;
+      border-top-color: $form-label-error-bg-color;
+    }
+  }
+
+  label.error {
+    display: none !important;
+  }
+
+  &.form-dirty + &-validation-message,
+  &.form-dirty .error + label.error {
+    display: inline !important;
+  }
+
+  &-validation-message.inverse,
+  &-div.inverse > label.error {
+    @include position($form-label-error-inverse-position...);
+
+    &:after {
+      @include position($form-label-error-inverse-arrow-position...);
+    }
+  }
+
+  &-submit {
+    @extend %btn--unstyled-btn;
+    @extend %cta-btn;
+    @include cta-btn-theme($form-submit-default-color..., $isDefaultTheme: true);
+    height: $form-submit-height;
+    width: $form-submit-width;
+    margin: $form-submit-margin;
+
+    &[disabled] {
+      color: $form-submit-default-disabled-color;
+
+      &:after {
+        border-left-color: $form-submit-default-disabled-color;
+      }
+    }
+  }
+
+  &-disclaimer {
+    text-align: left;
+    margin: $form-disclaimer-margin;
+
+    &__links {
+      @include set-text-styles($form-disclaimer-links-font...);
+      margin: $form-disclaimer-links-margin;
+
+      a {
+        display: inline-block;
+        margin: $form-disclaimer-link-margin;
+      }
+    }
+  }
+
+  &-div.has-spinner {
+    .form-submit,
+    .loading-wrapper {
+      float: left;
+      margin-left: 0;
+
+      &:first-child,
+      &.hidden ~ * {
+        margin-left: $form-label-width;
+      }
+    }
+
+    .loading-wrapper {
+      display: table;
+      @include rem(font-size, 15);
+
+      & > * {
+        display: table-cell;
+        vertical-align: middle;
+        margin: 0;
+        padding: 0 10px 0 0;
+      }
+
+      img {
+        height: $spinnerSmallSize;
+      }
+
+      &.hidden {
+        display: none;
+      }
+    }
+  }
+
+  @media screen and (max-width: $tablet) {
+    &-label {
+      @include set-text-styles($form-label-tablet-font...);
+    }
+    &-input,
+    &-text,
+    &-tel,
+    &-email,
+    &-textarea,
+    &-select,
+    &-password {
+      @include set-text-styles($form-input-tablet-font...);
+    }
+  }
+
+  @media screen and (max-width: $mobile) {
+    &-label,
+    &-div[data-controls]:not([data-label-before]) > .col &-label {
+      display: inline-block;
+      padding: $form-label-mobile-padding;
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: $form-label-mobile-height;
+      @include set-text-styles($form-label-mobile-font...);
+
+      transition: $form-label-mobile-transition;
+
+      text-align: left;
+      line-height: $form-label-mobile-line-height;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+
+      color: $form-label-mobile-color;
+
+      & > span {
+        display: inline-block;
+      }
+
+      &.for-select {
+        background-color: $form-label-select-mobile-bg-color;
+
+        &.mobile-hidden + select {
+          background-color: $form-label-select-mobile-bg-color;
+        }
+      }
+    }
+
+    &-validation-message,
+    label.error {
+      @include set-text-styles($form-label-error-mobile-font...);
+      @include position($form-label-error-mobile-position...);
+      padding: $form-label-error-mobile-padding;
+
+      &:after {
+        @include position($form-label-error-arrow-mobile-position...);
+        border-width: $form-label-error-arrow-mobile-width;
+      }
+    }
+
+    &-validation-message.inverse,
+    &-div.inverse > label.error {
+      @include position($form-label-error-inverse-mobile-position...);
+    }
+
+    &-input,
+    &-text,
+    &-tel,
+    &-email,
+    &-textarea,
+    &-select,
+    &-password {
+      width: 100%;
+      @include set-text-styles($form-input-mobile-font...);
+
+      &:focus ~ .form-label {
+        display: inline-block !important;
+        line-height: $form-label-focus-mobile-line-height;
+        height: $form-label-focus-mobile-height;
+        margin: $form-label-focus-mobile-margin;
+        color: $form-label-focus-mobile-color;
+      }
+    }
+
+    .custom-select {
+      width: 100%;
+      background-color: transparent;
+    }
+
+    &-group, &-div {
+      min-height: $form-div-mobile-min-height;
+      margin: $form-div-mobile-margin;
+
+      &[data-controls] {
+        margin-bottom: 0;
+        overflow: auto;
+
+        & > .col {
+          margin: $form-div-mobile-margin;
+        }
+
+        &:not([data-label-before]) {
+          & > .col {
+            width: 100%;
+            padding: $form-div-controls-mobile-padding;
+
+            input {
+              padding: $form-div-controls-mobile-input-padding;
+            }
+
+            .form-label {
+              @include set-text-styles($form-div-controls-label-mobile-font...);
+            }
+          }
+
+          & > label {
+            display: none;
+          }
+        }
+      }
+
+      &[data-controls="2"] {
+        & > .col {
+          width: 50%;
+        }
+      }
+
+      &[data-controls="3"] {
+        & > .col {
+          width: 33.3333%;
+        }
+      }
+
+      &[data-label-before="true"] {
+        min-height: $form-div-controls-label-before-mobile-min-height;
+
+        .form-label {
+          @include set-text-styles($form-div-controls-label-before-mobile-font...);
+          color: $form-label-focus-mobile-color;
+          padding: $form-div-controls-label-before-mobile-padding;
+          margin: $form-div-controls-label-before-mobile-margin;
+        }
+
+        & > .col,
+        & > .form-input {
+          margin-top: $form-div-controls-label-before-input-mobile-margin-top;
+        }
+      }
+
+      &.checkbox-inline label {
+        line-height: $form-div-checkbox-label-mobile-line-height;
+        color: $form-label-focus-mobile-color;
+      }
+    }
+
+    &-disclaimer {
+      width: 100%;
+      margin: $form-disclaimer-mobile-margin;
+    }
+
+    &-submit {
+      height: $form-submit-mobile-height;
+      width: $form-submit-mobile-width;
+      margin-left: 0;
+    }
+
+    &-div.has-spinner {
+      height: auto;
+
+      .form-submit,
+      .loading-wrapper {
+        float: none;
+
+        &:first-child,
+        &.hidden ~ * {
+          margin-left: 0;
+        }
+      }
+
+      .loading-wrapper {
+        display: block;
+        @include rem(font-size, 15);
+
+        & > * {
+          display: block;
+          text-align: center;
+          margin: 0 0 $gutter 0;
+          padding: 0;
+        }
+
+        img {
+          display: inline-block;
+        }
+      }
+    }
+  }
+}

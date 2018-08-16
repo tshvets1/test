@@ -1,0 +1,128 @@
+@mixin subheading {
+  @include set-text-styles($subheading-font...);
+  letter-spacing: -0.01em;
+}
+
+@mixin promo-title {
+  @include set-text-styles($promo-title-font...);
+}
+
+@mixin body-copy {
+  @include set-text-styles($body-copy-font...);
+  color: $body-copy-color;
+}
+
+@mixin callout-copy {
+  @include set-text-styles($callout-copy-font...);
+}
+
+@mixin subtitle {
+  @include set-text-styles($subtitle-font...);
+}
+
+%cta-link {
+  display: inline-block;
+  @include set-text-styles($cta-link-font...);
+  text-decoration: none;
+
+  &:after {
+    @extend %arrow-right;
+
+    @if ($old-ie) {
+      display: inline-block;
+    }
+    margin: $cta-link-arrow-margin;
+    border-width: $cta-link-arrow-size;
+    border-left-width: if($cta-link-arrow-size, $cta-link-arrow-size*2, null);
+  }
+}
+
+@mixin cta-link-theme($color: $color-link, $color-hover: $color-link-hover, $options: left after) {
+  color: $color;
+
+  $leftOrRight: nth($options, 1);
+  $afterOrBefore: nth($options, 2);
+
+  &:#{$afterOrBefore} {
+    border-#{$leftOrRight}-color: $color;
+  }
+
+  &:hover {
+    color: $color-hover;
+    &:#{$afterOrBefore} {
+      border-#{$leftOrRight}-color: $color-hover;
+    }
+  }
+}
+
+%cta-btn {
+  display: inline-block;
+  margin: $cta-btn-margin;
+  padding: $cta-btn-padding;
+  @include set-text-styles($cta-btn-font...);
+  text-decoration: none;
+
+  border-bottom: $cta-btn-border;
+  @if ($cta-btn-border-radius) {
+    border-radius: $cta-btn-border-radius;
+  }
+
+  @if ($cta-btn-has-arrow) {
+    &:after {
+      @extend %arrow-right;
+      margin: $cta-btn-arrow-margin;
+
+      @if ($old-ie) {
+        display: inline-block;
+      }
+      border-width: $cta-btn-arrow-size;
+      border-left-width: $cta-btn-arrow-size*2;
+    }
+  }
+
+  @media screen and (max-width: $tablet) {
+    padding: $cta-btn-tablet-padding;
+    @include set-text-styles($cta-btn-tablet-font...);
+    border-bottom: $cta-btn-tablet-border;
+  }
+
+  @media screen and (max-width: $mobile) {
+    padding: $cta-btn-mobile-padding;
+    @include set-text-styles($cta-btn-mobile-font...);
+    border-bottom: $cta-btn-mobile-border;
+  }
+}
+
+@mixin cta-btn-theme($bg-color, $text-color, $border-color: darken($bg-color, 10%),
+  $bg-hover-color: darken($bg-color, 5%), $text-hover-color: $text-color, $border-hover-color: darken($bg-color, 15%), $isDefaultTheme: false) {
+
+  color: $text-color if($isDefaultTheme, null, !important);
+  background: $bg-color if($isDefaultTheme, null, !important);
+  border-bottom-color: $border-color if($isDefaultTheme, null, !important);
+
+  @if ($cta-btn-has-arrow) {
+    &:after {
+      border-left-color: $text-color if($isDefaultTheme, null, !important);
+    }
+  }
+
+  &:hover {
+    color: $text-hover-color if($isDefaultTheme, null, !important);
+    background: $bg-hover-color if($isDefaultTheme, null, !important);
+    border-color: $border-hover-color if($isDefaultTheme, null, !important);
+
+    @if ($cta-btn-has-arrow) {
+      &:after {
+        border-left-color: $text-hover-color if($isDefaultTheme, null, !important);
+      }
+    }
+  }
+}
+
+@mixin font-family() {
+  @if ($old-ie) {
+    font-family: $font-primary-oldie;
+  } @else {
+    font-family: $font-primary;
+  }
+}

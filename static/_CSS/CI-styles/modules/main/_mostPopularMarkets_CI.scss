@@ -1,0 +1,22 @@
+.most-popular-markets {
+  @media screen and (max-width: $mobile) {
+    &__trading-title {
+      width: 100%;
+    }
+
+    &__tabs-wrapper {
+      .custom-select {
+        display: none !important;
+      }
+    }
+  }
+}
+
+.rates-table {
+  @media screen and (max-width: $mobile) {
+    th,
+    td {
+      vertical-align: top;
+    }
+  }
+}

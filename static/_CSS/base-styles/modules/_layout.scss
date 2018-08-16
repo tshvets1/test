@@ -1,0 +1,237 @@
+// BASIC CONTAINERS
+.section-wrapper {
+  @extend %bannerBg;
+  @extend %data-pointer;
+}
+
+.wrapper {
+  @extend %clearfix;
+  position: relative;
+  max-width: $page-width;
+  margin: 0 auto;
+}
+
+// PAGE CONTENT
+.page-content {
+  position: relative;
+  z-index: $defaultZIndex;
+  min-height: 200px;
+
+}
+
+// MAIN SECTION WITH RIGHT RAIL
+.primary-content {
+  width: $primary-width;
+  display: inline-block;
+  padding: $primary-padding;
+}
+
+.secondary-content {
+  display: inline-block;
+  width: $rail-width;
+  margin: $secondary-margin;
+
+  .module-wrapper {
+    padding: $secondary-module-padding;
+    margin: $secondary-module-margin;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &[data-sectionbg=""],
+    &[data-sectionbg="default"] {
+      background-color: $secondary-module-default-bg-color;
+    }
+  }
+}
+
+.main-right-rail {
+  .primary-content {
+    margin-right: $primary-margin;
+    float: left;
+  }
+}
+
+.main-left-rail {
+  .primary-content {
+    margin-left: $primary-margin;
+  }
+
+  .secondary-content {
+    float: left;
+  }
+}
+
+.section-wrapper {
+  & + .main-left-rail,
+  & + .main-right-rail {
+    padding-top: $two-column-after-hero-margin-top;
+
+    .secondary-content {
+      margin-top: 0;
+    }
+  }
+}
+
+.generic-hero-section {
+  + .main-right-rail {
+    .secondary-content {
+      margin: $secondary-after-g-hero-margin;
+    }
+  }
+
+  &[data-has-inner-hero-options="false"] {
+    + .main-right-rail,
+    + .main-left-rail {
+      padding: 0;
+    }
+  }
+}
+
+// FLEXBOX LAYOUT
+%display-flex {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.two-column {
+  @extend %display-flex;
+
+  > .col {
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    @if ($old-ie) {
+      float: left;
+      width: 50%;
+    }
+  }
+}
+
+//HEADER
+.three-column {
+  @extend %clearfix;
+
+  > .col {
+    float: left;
+    width: 33.3%;
+  }
+}
+
+@media screen and (min-width: $tablet + 1) {
+  .generic-hero-section[data-has-inner-hero-options="false"] {
+    padding-bottom: $two-column-after-hero-margin-top;
+  }
+}
+
+// TABLET
+@media screen and (max-width: $tablet) {
+  .section-wrapper > .wrapper {
+    padding-left: $tabletPadding;
+    padding-right: $tabletPadding;
+  }
+
+  // MAIN SECTION WITH RIGHT RAIL
+  .primary-content {
+    display: block;
+    width: 100%;
+    margin: 0 !important;
+    padding: $primary-tablet-padding;
+    float: none;
+    clear: both;
+  }
+
+  .secondary-content {
+    position: relative;
+    display: block;
+    width: 100%;
+    clear: both;
+    margin: $secondary-tablet-margin;
+
+    .module-wrapper {
+      padding: $secondary-module-tablet-padding;
+      margin: $secondary-module-tablet-margin;
+    }
+  }
+
+  .main-right-rail,
+  .main-left-rail {
+    > .wrapper {
+      padding: 0;
+    }
+
+    .section-wrapper + & {
+      padding-top: $two-column-after-hero-tablet-margin-top;
+    }
+  }
+
+  .generic-hero-section + .main-right-rail {
+    .secondary-content {
+      margin-top: 0;
+    }
+  }
+
+  //HEADER
+  .header {
+    .three-column {
+      display: block;
+    }
+
+    .three-column {
+      > .col {
+        float: none;
+        width: 100%;
+      }
+    }
+  }
+
+  .page-content {
+    min-height: 0;
+  }
+}
+
+// MOBILE
+@media screen and (max-width: $mobile) {
+  .section-wrapper,
+  .module-wrapper {
+    &[data-mobile-bgimg="false"] {
+      background-image: none !important;
+    }
+  }
+
+  .two-column,
+  .three-column {
+    display: block;
+  }
+
+  .three-column {
+    > .col {
+      float: none;
+      width: 100%;
+    }
+  }
+
+  .primary-content {
+    padding: $primary-mobile-padding;
+  }
+
+  .secondary-content {
+    margin: $secondary-mobile-margin;
+
+    .module-wrapper {
+      padding: $secondary-module-mobile-padding;
+      margin: $secondary-module-mobile-margin;
+    }
+  }
+
+  .main-right-rail,
+  .main-left-rail {
+    .section-wrapper + & {
+      padding-top: $two-column-after-hero-mobile-margin-top;
+    }
+  }
+}

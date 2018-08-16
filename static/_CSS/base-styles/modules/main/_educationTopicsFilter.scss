@@ -1,0 +1,76 @@
+.topics-anchors-section {
+  $topics-anchors-section-padding: 0 0 20px !default;
+  $topics-anchors-section-menu-content-list-font: null null null null center !default;
+  $topics-anchors-section-menu-content-list-li-margin: 10px 2px !default;
+  $topics-anchors-section-menu-content-list-li-hover-link-font-color: $color-secondary-7 !default;
+  $topics-anchors-section-menu-content-list-li-hover-link-border-color: $color-secondary-7 !default;
+  $topics-anchors-section-menu-content-list-li-link-font: 12 700 null uppercase !default;
+  $topics-anchors-section-menu-content-list-li-link-padding: 7px !default;
+  $topics-anchors-section-menu-content-list-li-link-border: solid 2px $color-light !default;
+
+  $topics-anchors-section-mobile-padding: 0 !default;
+  $topics-anchors-section-menu-content-list-li-mobile-margin: 0 !default;
+  $topics-anchors-section-menu-content-h2-span-mobile-font: 24 !default;
+  $topics-anchors-section-menu-content-list-li-link-mobile-font: 16 400 null none !default;
+  $topics-anchors-section-menu-content-list-li-link-mobile-padding: 0 !default;
+  $topics-anchors-section-menu-content-list-li-link-mobile-border: 0 !default;
+
+  padding: $topics-anchors-section-padding;
+
+  .fixed-menu__hideable-content-list {
+    @extend %list--inline;
+    @include set-text-styles($topics-anchors-section-menu-content-list-font...);
+
+    li {
+      margin: $topics-anchors-section-menu-content-list-li-margin;
+
+      &:hover a {
+        color: $topics-anchors-section-menu-content-list-li-hover-link-font-color;
+        border-color: $topics-anchors-section-menu-content-list-li-hover-link-border-color;
+      }
+    }
+
+    a {
+      @include set-text-styles($topics-anchors-section-menu-content-list-li-link-font...);
+      display: block;
+      padding: $topics-anchors-section-menu-content-list-li-link-padding;
+      text-decoration: none;
+      border: $topics-anchors-section-menu-content-list-li-link-border;
+    }
+  }
+
+  //MOBILE
+  @media screen and (max-width: $mobile) {
+    padding: $topics-anchors-section-mobile-padding;
+
+    .open > .fixed-menu__toggle h2 > span:after {
+      content: "\2013";
+    }
+
+    .fixed-menu {
+      &__toggle {
+        h2 > span {
+          @include set-text-styles($topics-anchors-section-menu-content-h2-span-mobile-font...);
+          position: relative;
+          top: 3px;
+
+          &:after {
+            content: "+";
+          }
+        }
+      }
+
+      &__hideable-content-list {
+        li {
+          margin: $topics-anchors-section-menu-content-list-li-mobile-margin;
+        }
+
+        a {
+          @include set-text-styles($topics-anchors-section-menu-content-list-li-link-mobile-font...);
+          padding: $topics-anchors-section-menu-content-list-li-link-mobile-padding;
+          border: $topics-anchors-section-menu-content-list-li-link-mobile-border;
+        }
+      }
+    }
+  }
+}

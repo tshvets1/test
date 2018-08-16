@@ -1,0 +1,61 @@
+<!--
+  {
+  "name": "Client Sentiment (Rail)",
+  "status": "Complete",
+  "notes": ""
+  }
+-->
+
+
+<div class="module-wrapper client-sentiment-module" data-sectionbg="dark-gray"
+	 data-apply-ko="clientSentiment" data-get-product-timeout="5000" data-product="XAG/USD">
+	<div class="wrapper">
+		<!-- ko with: product -->
+		<h2 class="client-sentiment__headline"><span data-bind="text: product + ': '"></span>Client Sentiment [!]</h2>
+
+		<div class="client-sentiment__wrapper">
+			<div class="client-sentiment__sentiment"
+				 data-bind="attr: {
+					 		'data-percent': Long() > Short() ? -Long() : -Short(),
+					 		'data-bar-color': Long() > Short() ? '#157db1' : '#de4559',
+					 		'data-track-color': Long() > Short() ? '#2d627c' : '#924550'
+						},
+						drawPie: $root.isDataUpdated"
+				 data-border-color-from=".client-sentiment-module">
+				<div class="client-sentiment__sentiment-text">
+					<span data-bind="text: Long() > Short() ? Math.floor(Long()) + '%' : Math.floor(Short()) + '%'"></span>
+					<span data-bind="text: Long() > Short() ? 'long' : 'short'"></span>
+				</div>
+			</div>
+
+			<div class="client-sentiment__legend">
+				<div class="client-sentiment__legend-item">
+					<h2 class="client-sentiment__legend-item-headline">
+						<span data-bind="text: Math.floor(Short())"></span>% Short
+					</h2>
+
+					<div class="client-sentiment__legend-item-description">
+						<span data-bind="text: Math.floor(Short())"></span>% of clients with open positions expect the
+						price
+						to fall
+					</div>
+				</div>
+				<div class="client-sentiment__legend-item">
+					<h2 class="client-sentiment__legend-item-headline">
+						<span data-bind="text: Math.floor(Long())"></span>% Long
+					</h2>
+
+					<div class="client-sentiment__legend-item-description">
+						<span data-bind="text: Math.floor(Long())"></span>% of clients with open positions expect the
+						price to
+						rise
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="client-sentiment__note">
+			This is calculated to the nearest 1%.
+		</div>
+		<!-- /ko -->
+	</div>
+</div>

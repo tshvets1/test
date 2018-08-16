@@ -1,0 +1,144 @@
+.live-trading-sessions {
+  &-section {
+    @extend %bannerBg;
+    position: relative;
+    color: $color-white;
+    text-align: center;
+
+    .wrapper {
+      padding-top: $gutter*5;
+      padding-bottom: $gutter*5;
+    }
+
+    .multi-col__content {
+      .col {
+        padding: $gutter;
+      }
+
+      .multi-col__title {
+        font-weight: 400;
+        color: $color-white;
+      }
+    }
+  }
+
+  &__headline {
+    @include rem(font-size, 38);
+    padding: 2*$gutter 0;
+    width: 100%;
+    line-height: 1em;
+  }
+
+  &__sub-headline {
+    @include rem(font-size, 20);
+    font-weight: 700;
+    padding-bottom: 2*$gutter;
+  }
+
+  &__text {
+    @include rem(font-size, 16);
+    padding-top: 3*$gutter;
+  }
+
+  &__add-to-calendar {
+    &.addtocalendar {
+      position: relative;
+      display: inline-block;
+
+      var {
+        display: none;
+      }
+
+      a.atcb-link {
+        @extend %cta-btn;
+        @include cta-btn-theme($color-white, $color-secondary-7, darken($color-secondary-7, 10%),
+          $color-white, darken($color-secondary-7, 10%), darken($color-secondary-7, 15%), $isDefaultTheme: true);
+        cursor: pointer;
+        width: 100%;
+      }
+
+      &.open {
+        .atcb-link {
+          border-bottom-color: darken($color-secondary-7, 15%);
+        }
+
+        .atcb-list {
+          visibility: visible;
+        }
+      }
+
+      .atcb-item-link {
+        color: $color-darker !important;
+        text-decoration: none;
+        display: block;
+      }
+
+      .atcb-list {
+        @include rem(font-size, 16);
+        border: 1px solid $color-light;
+        visibility: hidden;
+        position: absolute;
+        top: 55px;
+        width: 100%;
+
+        @extend %list--unstyled;
+        background: #fff;
+      }
+
+      .atcb-item {
+        background-color: $color-white;
+        padding: 5px 20px;
+        position: relative;
+        z-index: $dropdownListZIndex;
+        border-top: 1px solid $color-light;
+
+        &:first-child {
+          border-top: 0;
+        }
+
+        &.hover, &:hover {
+          background-color: $color-light;
+          @include transition(none, null);
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: $tablet) {
+    &-section {
+      .multi-col__content[data-columns="4"] .col {
+        width: 25%;
+        clear: none;
+      }
+    }
+  }
+
+  @media screen and (max-width: $mobile) {
+    &-section {
+      .multi-col__content[data-columns="4"] .col {
+        width: 50%;
+        float: left;
+
+        &:nth-child(4n+1) {
+          clear: left;
+        }
+
+        &:nth-child(2) {
+          margin: 0;
+        }
+      }
+
+      .multi-col__content .multi-col__title {
+        line-height: 1.25;
+      }
+    }
+
+    &__add-to-calendar {
+      width: 100%;
+
+      .atcb-list {
+        top: 0;
+      }
+    }
+  }
+}

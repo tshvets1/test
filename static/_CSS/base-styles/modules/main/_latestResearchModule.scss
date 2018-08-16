@@ -1,0 +1,151 @@
+.research-article-section {
+  @media screen and (max-width: $tablet) and (min-width: $mobile) {
+    padding: $research-article-section-tablet-padding;
+  }
+}
+
+.latest-research {
+  @extend %primary-content-wrapper;
+
+  .cta-btn {
+    margin: $research-article-cta-margin;
+  }
+}
+
+.research-article {
+  &__headline {
+    margin-bottom: $gutter*2.5;
+    @include set-text-styles($research-article-headline-font...);
+  }
+
+  &__title {
+    margin: $research-article-title-margin;
+    @include set-text-styles($research-article-title-font...);
+  }
+
+  &__title-link {
+    display: block;
+    text-decoration: none;
+    z-index: $defaultZIndex;
+    line-height: 1.2;
+
+    color: $research-article-title-link-color;
+
+    &:hover {
+      color: $research-article-title-link-hover-color;
+    }
+  }
+
+  &__title-link &__title-link-clone {
+    z-index: $beforeAllZIndex;
+    display: none;
+  }
+
+  &__subtitle {
+    margin: $research-article-subtitle-margin;
+    @include set-text-styles($research-article-subtitle-font...);
+  }
+
+  &__author {
+    display: inline-block;
+    @include set-text-styles($research-article-author-font...);
+    text-decoration: none;
+  }
+
+  &__date {
+    display: block;
+  }
+
+  &__author-link {
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  &__teaser {
+    margin: $research-article-teaser-margin;
+    @include set-text-styles($research-article-teaser-font...);
+
+    & > p {
+      padding: 0;
+      margin: 0;
+    }
+  }
+}
+
+.research-related {
+  @extend %clearfix;
+  position: relative;
+  margin: $research-related-margin;
+
+  .research-article {
+    float: left;
+    width: 49%;
+    @include size($research-related-article-width...);
+    padding: $research-related-article-padding;
+    background: $research-related-article-bg-color;
+
+    &:first-child {
+      margin-right: $gutter;
+    }
+
+    &__title {
+      @include set-text-styles($research-related-article-title-font...);
+      margin: $research-related-article-title-margin;
+    }
+
+    &__subtitle {
+      padding-bottom: 0;
+      margin-top: 0;
+    }
+  }
+}
+
+@media screen and (max-width: $mobile) {
+  .research-related {
+    margin: $research-related-mobile-margin;
+
+    .research-article {
+      float: none;
+      width: 100%;
+      padding: $research-related-article-mobile-padding;
+      margin: $research-related-article-mobile-margin;
+
+      &:first-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .research-article {
+    &__subtitle {
+      width: 100%;
+    }
+
+    &__title {
+      @include set-text-styles($research-article-title-mobile-font...);
+    }
+  }
+}
+
+.master-markets__content {
+  .research-article {
+    &__headline {
+      position: absolute;
+      @include position($research-master-markets-article-headline-position...);
+      padding: $research-master-markets-article-headline-padding;
+      color: $research-master-markets-article-headline-color;
+      background: $research-master-markets-article-headline-bg-color;
+      @include set-text-styles($research-master-markets-article-headline-font...);
+    }
+    &__title {
+      margin: $research-master-markets-article-title-margin;
+      @include set-text-styles($research-master-markets-article-title-font...);
+    }
+    &__teaser {
+      max-height: $research-master-markets-article-teaser-max-height;
+      overflow: hidden;
+    }
+  }
+}

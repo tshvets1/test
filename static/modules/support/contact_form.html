@@ -1,0 +1,105 @@
+<!--
+  {
+  "name": "Support - Contact Us form",
+  "status": "Complete",
+  "notes": ""
+  }
+-->
+
+<section class="section-wrapper contact-section" data-sectionbg="alternate">
+	<div class="wrapper">
+		<h2 class="form-headline">Send a message</h2>
+
+		<div class="form-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam rutrum
+			sapien ac lacus semper.
+		</div>
+
+		<form class="form contact__form" data-dform-variable="contactForm"></form>
+
+		<script type="text/javascript">
+			var contactForm = {
+				"action": "index.html",
+				"method": "get",
+				html: {
+					"type": "multiCol",
+					"matchHeight": "true",
+					columns: "2",
+					cols: [
+						[{
+							type: "div",
+							html: {
+								"id": "name",
+								"name": "name",
+								"label": "Name",
+								"type": "text",
+								"validate": {
+									"required": true
+								}
+							}
+						}, {
+							type: "div",
+							html: {
+								"id": "phone",
+								"name": "phone",
+								"type": "tel",
+								"label": "Phone"
+							}
+						}, {
+							type: "div",
+							html: {
+								"id": "email",
+								"name": "email",
+								"type": "email",
+								"label": "Email",
+								"validate": {
+									required: true,
+									email: true
+								}
+							}
+						}, {
+							"type": "div",
+							"dropdown": {
+								"name": "subject",
+								"label": "Subject",
+								"placeholder": "Select Subject",
+								"chosenOptions": {
+									"width": "62%"
+									//disable_search: true
+								},
+								"validate": {
+									"required": true
+								},
+								"options": [
+									{Name: "", Value: ""},
+									{Name: "Funding", Value: "Funding"},
+									{Name: "Getting Started", Value: "Getting Started"},
+									{Name: "Other", Value: "Other"},
+									{Name: "Trading Platforms", Value: "Trading Platforms"}
+								]
+							}
+						}], [{
+							type: "div",
+							"class": "textarea",
+							html: {
+								"type": "textarea",
+								name: "message",
+								"id": "message",
+								"label": "Message",
+								"validate": {
+									"required": true
+								}
+							}
+						}, {
+							"type": "div",
+							html: {
+								"type": "buttonSubmit",
+								"name": "submit_button",
+								"value": "Submit"
+							}
+						}]
+					]
+				}
+			}
+		</script>
+	</div>
+</section>

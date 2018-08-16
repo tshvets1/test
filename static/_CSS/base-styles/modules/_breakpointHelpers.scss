@@ -1,0 +1,60 @@
+// BREAKPOINTS
+// MOBILE 320-768
+// TABLET 768-1024 pixels
+// DESKTOP 1024+ pixels
+
+@if ($old-ie) {
+  .desktop-hidden {
+    display: none !important;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+// DESKTOP/TABLET 
+.desktop-only {
+  //display: block;
+}
+
+.mobile-only,
+.mobile-only-table {
+  display: none !important;
+}
+
+// DESKTOP ONLY
+@media screen and (min-width: $tablet) {
+
+  [data-display-desktop="false"], // DATA ATTRIBUTES - (if attribute is true, it will display by default)
+  .desktop-hidden {
+    display: none !important;
+  }
+}
+
+// TABLET ONLY
+@media screen and (min-width: $mobile) and (max-width: $tablet) {
+
+  [data-display-tablet="false"], // DATA ATTRIBUTES (if attribute is true, it will display by default)
+  .tablet-hidden {
+    display: none !important;
+  }
+}
+
+// MOBILE ONLY
+@media screen and (max-width: $mobile) {
+
+  [data-display-mobile="false"], // DATA ATTRIBUTES (if attribute is true, it will display by default)
+  .mobile-hidden,
+  .desktop-only {
+    display: none !important;
+  }
+
+  .mobile-only {
+    display: block !important;
+  }
+
+  .mobile-only-table {
+    display: table !important;
+  }
+}

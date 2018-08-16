@@ -1,0 +1,104 @@
+// SHARE THIS MODULE
+.article {
+  $article-share-icon-color: $color-white !default;
+  $article-share-icon-facebook-bg-color: #065DF9 !default;
+  $article-share-icon-twitter-bg-color: #72e5ed !default;
+  $article-share-icon-google-plus-bg-color: $color-secondary-8 !default;
+  $article-share-icon-whatsapp-bg-color: #60b82d !default;
+  $article-share-icon-linkedin-bg-color: #00a0dc !default;
+  $article-share-icon-vk-bg-color: #597DA3 !default;
+
+  $article-share-font: 14 null 1 !default;
+  $latest-research-article-share-font: null null null null right !default;
+  $article-share-icon-font: 15 null null null center !default;
+
+  $article-share-icon-size: 30px 30px !default;
+
+  $latest-research-article-share-mobile-font: null null null null left !default;
+
+  &__share {
+    > * {
+      @include set-text-styles($article-share-font...);
+      display: inline-block;
+      vertical-align: middle;
+
+      &.article__share-label {
+        padding-right: $gutter;
+      }
+    }
+
+    > [data-share-this] {
+      cursor: pointer;
+    }
+
+    .icon {
+      width: nth($article-share-icon-size, 1);
+      height: nth($article-share-icon-size, 2);
+      @include set-text-styles($article-share-icon-font...);
+      line-height: nth($article-share-icon-size, 2);
+      color: $article-share-icon-color;
+
+      &.icon-facebook {
+        background-color: $article-share-icon-facebook-bg-color;
+      }
+
+      &.icon-twitter {
+        background-color: $article-share-icon-twitter-bg-color;
+      }
+
+      &.icon-google-plus {
+        background-color: $article-share-icon-google-plus-bg-color;
+      }
+
+      &.icon-whatsapp {
+        background-color: $article-share-icon-whatsapp-bg-color;
+      }
+
+      &.icon-linkedin {
+        background-color: $article-share-icon-linkedin-bg-color;
+      }
+
+      &.icon-vk {
+        background-color: $article-share-icon-vk-bg-color;
+      }
+    }
+
+    // LATEST RESEARCH
+    @at-root .research-article-detail & {
+      @include set-text-styles($latest-research-article-share-font...);
+    }
+
+    // EDUCATION ARTICLE DETAIL 
+    @at-root .article-section & {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+  }
+
+  @media screen and (max-width: $mobile) {
+
+    &__share {
+      // EDUCATION ARTICLE DETAIL
+      @at-root .article-section & {
+        position: relative;
+        display: block;
+        padding-top: $gutter*2;
+      }
+
+      // LATEST RESEARCH
+      @at-root .research-article-detail & {
+        @include set-text-styles($latest-research-article-share-mobile-font...);
+        display: block;
+        padding: $gutter 0 0;
+        clear: both;
+      }
+    }
+
+    &__description {
+      .article__download {
+        padding-top: $gutter*1.5;
+      }
+    }
+  }
+}

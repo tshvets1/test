@@ -1,0 +1,112 @@
+.live-trading {
+  &__headline {
+    @include set-text-styles($live-trading-promo-headline-font...);
+    color: $live-trading-promo-headline-color;
+  }
+
+  &__description {
+    margin: $live-trading-promo-description-margin;
+    color: $live-trading-promo-description-color;
+  }
+
+  &-promo {
+    @extend %bannerBg;
+    padding: $live-trading-promo-padding;
+
+    .cta-link:hover {
+      color: $live-trading-promo-cta-color;
+      &:after {
+        border-left-color: $live-trading-promo-cta-color;
+      }
+    }
+  }
+
+  @at-root .secondary-content & {
+    &-promo {
+      border: $live-trading-promo-rail-border;
+      border-top-width: $live-trading-promo-rail-border-top;
+      border-bottom-width: $live-trading-promo-rail-border-bottom;
+    }
+  }
+
+  // WHEN PROMO IS IN LATEST RESEARCH GRID
+  @at-root .research-grid & {
+    &-promo {
+      padding: $live-trading-promo-research-grid-padding;
+      height: 100%;
+    }
+
+    &__headline {
+      @include set-text-styles($live-trading-promo-research-grid-headline-font...);
+    }
+  }
+
+  // TABLET
+  @media screen and (max-width: $tablet) {
+    &-promo {
+      @include set-text-styles($live-trading-promo-tablet-font...);
+
+      .cta-link {
+        display: block;
+        margin-top: 0;
+      }
+    }
+
+    &__headline {
+      float: none;
+    }
+
+    &__description {
+      display: block;
+      clear: both;
+      margin: $live-trading-promo-tablet-description-margin;
+      @include set-text-styles($live-trading-promo-tablet-description-font...);
+    }
+
+    @at-root .secondary-content & {
+      &-promo {
+        padding: $live-trading-promo-rail-tablet-padding;
+        border: none;
+      }
+    }
+  }
+
+  // MOBILE
+  @media screen and (max-width: $mobile) {
+    &-promo {
+      @include set-text-styles($live-trading-promo-mobile-font...);
+
+      .wrapper {
+        position: relative;
+      }
+
+      .cta-link {
+        display: inline-block;
+        margin: 0;
+        vertical-align: top;
+      }
+    }
+
+    &__headline {
+      float: left;
+      @include set-text-styles($live-trading-promo-mobile-headline-font...);
+    }
+
+    &__description {
+      margin-bottom: 0;
+      padding: $live-trading-promo-mobile-description-padding;
+      clear: both;
+    }
+
+    // WHEN PROMO IS IN LATEST RESEARCH GRID
+    @at-root .research-grid & {
+      &-promo {
+        padding: $live-trading-promo-research-grid-mobile-padding;
+      }
+
+      &__headline {
+        @include set-text-styles($live-trading-promo-research-grid-mobile-headline-font...);
+      }
+    }
+  }
+}

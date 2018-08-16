@@ -1,0 +1,28 @@
+@media screen and (min-width: $tablet + 1) {
+  .primary-nav {
+    &__item-content {
+      &:after,
+      &:before {
+        content: '';
+      }
+    }
+
+    &__item {
+      &.open &-trigger {
+        border-top-color: $primary-nav-item-open-trigger-border-color;
+      }
+    }
+
+    &__sub-item-subheadline {
+      margin: 0;
+    }
+
+    &__logo {
+      display: none;
+    }
+
+    &__logo + &__links--justify {
+      padding-left: 0;
+    }
+  }
+}

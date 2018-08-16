@@ -1,0 +1,80 @@
+.quote-board {
+  .wrapper {
+    padding-top: $gutter*6;
+    padding-bottom: $gutter*6;
+  }
+
+  &__headline {
+    @include set-text-styles($quote-board-headline-font...);
+    margin-bottom: 20px;
+    float: left;
+  }
+
+  &__dropdown {
+    float: right;
+  }
+
+  &__tabs {
+    @extend %rightRailDropdown;
+    width: auto;
+    display: inline-block;
+    margin: 0;
+  }
+
+  &__select {
+    display: none;
+  }
+
+  &__update-btn {
+    @include set-text-styles($quote-board-update-button-font...);
+    display: inline-block;
+    vertical-align: top;
+    height: 33px;
+    padding: 5px 10px;
+    margin: 0 0 10px;
+    cursor: pointer;
+
+    background: $quote-board-update-button-background-color;
+    color: $quote-board-update-button-font-color;
+
+    &:hover {
+      background: $quote-board-update-button-hover-background-color;
+      color: $quote-board-update-button-hover-font-color;
+    }
+  }
+
+  @media screen and (max-width: $mobile) {
+    .wrapper {
+      padding-top: $gutter*4;
+      padding-bottom: $gutter*4;
+    }
+
+    &__dropdown {
+      margin-bottom: 20px;
+      width: 100%;
+      display: table;
+      table-layout: fixed;
+    }
+
+    &__tabs {
+      display: none;
+    }
+
+    &__update-btn {
+      vertical-align: middle;
+    }
+
+    &__select {
+      width: calc(100% - 10px);
+      display: table-cell;
+      padding: 10px 15px;
+      border: $quote-board-mobile-select-border;
+    }
+
+    &__update-btn {
+      display: table-cell;
+      width: 70px;
+      height: auto;
+    }
+  }
+}

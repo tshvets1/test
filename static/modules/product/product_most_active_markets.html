@@ -1,0 +1,90 @@
+<!--
+  {
+  "name": "Most Active Markets",
+  "status": "Complete",
+  "notes": ""
+  }
+-->
+
+<article class="section-wrapper most-active-markets"
+		 data-apply-ko="mostActiveMarkets"
+		 data-get-products-timeout="4000"
+		 data-products="['USD/JPY','EUR/USD','WHT/USD','USD/CAD','GBP/AUD','USD/JPY','EUR/USD','WHT/USD','USD/CAD','GBP/AUD']"
+		 data-move-rows="true">
+	<div class="most-active-markets__tabs">
+		<h2 class="most-active-markets__headline">Most active markets</h2>
+		<div class="most-active-markets__tabs-list-wrapper">
+			<ul class="most-active-markets__tabs-list tabs__list" data-tabs-handler="false">
+				<li class="most-active-markets__tabs-item tabs__item">
+					<a class="most-active-markets__tabs-link tabs__link active" data-bind="click: changeTab"
+					   data-tab="15minutes">15 minutes</a>
+				</li>
+				<li class="most-active-markets__tabs-item tabs__item">
+					<a class="most-active-markets__tabs-link tabs__link" data-bind="click: changeTab" data-tab="hourly">hourly</a>
+				</li>
+				<li class="most-active-markets__tabs-item tabs__item">
+					<a class="most-active-markets__tabs-link tabs__link" data-bind="click: changeTab" data-tab="daily">daily</a>
+				</li>
+				<li class="most-active-markets__tabs-item tabs__item">
+					<a class="most-active-markets__tabs-link tabs__link" data-bind="click: changeTab"
+					   data-tab="monthly">monthly</a>
+				</li>
+			</ul>
+		</div>
+		<div class="most-active-markets__tabs-content">
+			<div class="active-markets__table">
+				<table class="rates-table">
+					<thead>
+					<tr>
+						<th class="active-markets__table-rank">
+							<span class="mobile-hidden">Rank&nbsp;</span>
+							<div class="tooltip">
+								<div class="tooltip__content">
+									<h2>Lorem ipsum</h2>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vitae velit
+										eget
+										nisi porta
+										facilisis.
+									</p>
+								</div>
+							</div>
+						</th>
+						<th class="rates-table__product">Market</th>
+						<th class="mobile-hidden">Bid</th>
+						<th class="mobile-hidden">Ask</th>
+						<th class="rates-table__value">Change</th>
+					</tr>
+					<tr class="spinner" data-bind="attr: {'hidden' : products().length > 0}">
+						<td colspan="5">
+							<img src="/_Images/ui/loader.gif" alt="spinner"/>
+						</td>
+					</tr>
+					</thead>
+					<tbody hidden data-bind="attr: {'hidden' : products().length == 0}">
+					<!-- ko foreach: products -->
+					<tr>
+						<td class="active-markets__table-rank">
+							<span class="mobile-hidden" data-bind="text: rank"></span>
+							<span class="active-markets__media"
+									data-bind="text: rankChange, css: {'active-markets__media--up': rankDirection()=='up', 'active-markets__media--down': rankDirection()!='up'}"></span>
+						</td>
+						<td class="rates-table__product">
+							<a href="#" data-bind="text: product"></a>
+						</td>
+						<td class="mobile-hidden"
+							data-bind="text: bid, css: {'rates-table__value-up' : bid() > bid_prev(), 'rates-table__value-down': bid() < bid_prev()}"></td>
+						<td class="mobile-hidden"
+							data-bind="text: ask, css: {'rates-table__value-up' : ask() > ask_prev(), 'rates-table__value-down': ask() < ask_prev()}"></td>
+						<td class="rates-table__value">
+                                <span data-bind="text: change() + '%'"></span>
+						</td>
+					</tr>
+					<!-- /ko -->
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+	<!-- .tabs -->
+</article>

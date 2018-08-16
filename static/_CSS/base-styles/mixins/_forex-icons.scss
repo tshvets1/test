@@ -1,0 +1,99 @@
+@font-face {
+  font-family: "forex-icons";
+  src: url("/_Fonts/forex-icons.eot?c37d470bbad2fceb8f1f0662f5a7202c");
+  src: url("/_Fonts/forex-icons.eot?#iefix") format("embedded-opentype"),
+  url("/_Fonts/forex-icons.woff2?c37d470bbad2fceb8f1f0662f5a7202c") format("woff2"),
+  url("/_Fonts/forex-icons.woff?c37d470bbad2fceb8f1f0662f5a7202c") format("woff"),
+  url("/_Fonts/forex-icons.ttf?c37d470bbad2fceb8f1f0662f5a7202c") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.icon {
+
+  font-family: "forex-icons";
+
+  display: inline-block;
+  font-weight: normal;
+  font-style: normal;
+  speak: none;
+  text-decoration: inherit;
+  text-transform: none;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// Icons
+
+.icon-arrow-down:after {
+  content: "\f101";
+}
+
+.icon-close:after {
+  content: "\f102";
+}
+
+.icon-download:after {
+  content: "\f103";
+}
+
+.icon-externallink:after {
+  content: "\f104";
+}
+
+.icon-facebook:after {
+  content: "\f105";
+}
+
+.icon-filter:after {
+  content: "\f106";
+}
+
+.icon-google-plus:after {
+  content: "\f107";
+}
+
+.icon-linkedin:after {
+  content: "\f108";
+}
+
+.icon-minus:after {
+  content: "\f109";
+}
+
+.icon-mobile-login:after {
+  content: "\f10a";
+}
+
+.icon-mobile-menu:after {
+  content: "\f10b";
+}
+
+.icon-plus:after {
+  content: "\f10c";
+}
+
+.icon-refresh:after {
+  content: "\f10d";
+}
+
+.icon-search:after {
+  content: "\f10e";
+}
+
+.icon-twitter:after {
+  content: "\f10f";
+}
+
+.icon-vk:after {
+  content: "\f110";
+}
+
+.icon-whatsapp:after {
+  content: "\f111";
+}
+
+.icon-youtube:after {
+  content: "\f112";
+}

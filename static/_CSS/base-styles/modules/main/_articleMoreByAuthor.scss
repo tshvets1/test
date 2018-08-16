@@ -1,0 +1,105 @@
+.more-by {
+  $article-more-by: 1 !default;
+  $article-more-by-border: solid 1px $color-light !default;
+  $article-more-by-date-font: 12 null null uppercase !default;
+  $article-more-by-author-font: 16 700 null uppercase !default;
+  $article-more-by-list-border: solid 1px $color-light !default;
+  $article-more-by-link-font: 20 null 1.2 !default;
+  $article-more-by-link-mobile-font: 16 !default;
+
+  &-module {
+    width: 100%;
+    margin: $gutter*3 0 0;
+    padding: $gutter*3 0 0;
+    border-top: $article-more-by-border;
+
+    .date {
+      @include set-text-styles($article-more-by-date-font...);
+      white-space: nowrap;
+    }
+  }
+
+  &__author {
+    @include set-text-styles($article-more-by-author-font...);
+    margin-bottom: $gutter*2;
+  }
+
+  &__list {
+    @extend %list--inline;
+    display: table-row;
+
+    li {
+      display: table-cell;
+      padding: 0 $gutter*2 0 $gutter*2;
+      border-left: $article-more-by-list-border;
+      vertical-align: top;
+      width: 40%;
+
+      &:first-child {
+        padding-left: 0;
+        border-left: 0;
+      }
+
+      &:last-child,
+      &:first-child + * + * {
+        padding-right: 0;
+        vertical-align: middle;
+        width: 20%;
+
+        .cta-link {
+          white-space: nowrap;
+        }
+      }
+    }
+  }
+
+  &__link {
+    @include set-text-styles($article-more-by-link-font...);
+    display: block;
+    padding: 0 0 $gutter/5;
+    text-decoration: none;
+  }
+
+  //MOBILE
+  @media screen and (max-width: $mobile) {
+    &-module {
+      display: block;
+    }
+
+    &__author {
+      margin-bottom: $gutter;
+    }
+
+    &__list {
+      display: block;
+
+      li {
+        display: block;
+        padding: 0 0 $gutter*2;
+        margin-bottom: $gutter*2;
+        border-left: none;
+        border-bottom: $article-more-by-list-border;
+        width: 100%;
+
+        &:first-child {
+          padding: $gutter 0;
+        }
+
+        &:last-child {
+          padding: 0;
+          border: 0;
+          width: auto;
+          margin: 0;
+
+          .cta-link {
+            white-space: normal;
+          }
+        }
+      }
+    }
+
+    &__link {
+        @include set-text-styles($article-more-by-link-mobile-font...);
+    }
+  }
+}

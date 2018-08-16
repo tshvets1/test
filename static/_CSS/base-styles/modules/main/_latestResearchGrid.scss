@@ -1,0 +1,312 @@
+.latest-research-section {
+  .wrapper {
+    @extend %clearfix;
+  }
+
+  &.no-filter {
+    // in case there is no filter
+    .research-filter__tagged + .research > .research__header {
+      position: absolute;
+      right: 0;
+      top: 0;
+
+      & > .research__switch {
+        position: static;
+      }
+    }
+  }
+
+  @media screen and (max-width: $mobile) {
+    padding-top: 58px;
+    .wrapper {
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
+}
+
+.research {
+  margin-top: $primary-content-fix;
+
+  &__header {
+    @extend %clearfix;
+    position: relative;
+    clear: both;
+    min-height: $research-header-min-height;
+  }
+
+  &__list {
+    @extend %list--unstyled;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__item {
+    position: relative;
+    background: $research-item-bg-color;
+
+    &#{if($old-ie, ".nth-child-even", ":nth-child(even)")} {
+      background: $research-item-even-bg-color;
+    }
+
+    &:first-child.top-story {
+      .research-article__title-link {
+        display: block;
+        position: relative;
+
+        &-content {
+          position: absolute;
+          @include position($research-grid-item-top-story-article-title-content-position...);
+        }
+      }
+    }
+  }
+
+  &__content {
+    padding: $research-content-padding;
+
+    .research-article__headline {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: $tablet) {
+    margin: 0;
+
+    &__header {
+      min-height: $research-header-tablet-min-height;
+    }
+  }
+
+  @media screen and (max-width: $mobile) {
+    &__header {
+      display: none;
+    }
+
+    &__content {
+      padding: $research-content-mobile-padding;
+    }
+
+    &__item {
+      float: none;
+      width: 100%;
+      padding: 0;
+      border-bottom: $research-item-mobile-border;
+
+      .research-article__teaser {
+        max-height: $research-item-article-teaser-mobile-max-height;
+        overflow: hidden;
+      }
+    }
+  }
+}
+
+// GRID LAYOUT
+.research-grid {
+  .research__item {
+    &:first-child.top-story {
+      .research-article {
+        &__headline {
+          display: block;
+          position: absolute;
+          @include position($research-grid-item-top-story-article-headline-position...);
+          padding: $research-grid-item-top-story-article-headline-padding;
+
+          @include set-text-styles($research-grid-item-top-story-article-headline-font...);
+          color: $research-grid-item-top-story-article-headline-color;
+          background: $research-grid-item-top-story-article-headline-bg-color;
+        }
+      }
+    }
+  }
+
+  //TABLET + DESKTOP
+  @media screen and (min-width: $mobile + 1) {
+    .research__list {
+      margin: $research-grid-list-margin;
+    }
+
+    .research-article {
+      &__title {
+        margin: $research-grid-article-title-margin;
+        @include set-text-styles($research-grid-article-title-font...);
+      }
+
+      &__teaser {
+        margin: $research-grid-article-teaser-margin;
+      }
+    }
+
+    .article-tags {
+      position: absolute;
+      @include position($research-grid-article-tabs-position...);
+      max-height: $research-grid-article-tabs-max-height;
+      overflow: hidden;
+      padding: $research-grid-article-tabs-padding;
+      border-bottom: $research-grid-article-tabs-border;
+      background: $research-grid-article-tabs-bg-color;
+    }
+
+    .research__content {
+      padding: $research-grid-content-padding;
+
+      &-wrapper {
+        position: absolute;
+        @include position($research-grid-content-wrapper-position...);
+        padding: $research-grid-content-wrapper-padding;
+        max-height: $research-grid-content-wrapper-max-height;
+        overflow: hidden;
+        color: $research-grid-content-wrapper-color;
+      }
+    }
+
+    .research__item {
+      position: relative;
+      float: left;
+      width: $research-grid-item-width;
+      padding: $research-grid-item-padding;
+      overflow: hidden;
+      background: $research-grid-item-bg-color;
+      border-left: $research-grid-item-border;
+      border-bottom: $research-grid-item-border;
+
+      &.live-promo {
+        padding: $research-grid-item-live-promo-padding;
+      }
+
+      &:first-child,
+      &#{if($old-ie, ".nth-child-16n-4", ":nth-of-type(16n+4)")},
+      &#{if($old-ie, ".nth-child-16n-11", ":nth-of-type(16n+11)")} {
+        width: $research-grid-item-alt-width;
+      }
+
+      &:hover {
+        background: $research-grid-item-hover-bg-color;
+
+        .article-tags {
+          background: $research-grid-item-hover-bg-color;
+          border-bottom-color: $research-grid-item-hover-bg-color;
+        }
+      }
+
+      &:first-child.top-story {
+        color: $research-grid-item-top-story-color;
+        background: $research-grid-item-top-story-bg-color;
+
+        a {
+          color: $research-grid-item-top-story-color;
+        }
+
+        &:hover {
+          background: $research-grid-item-top-story-hover-bg-color;
+        }
+
+        .research__content {
+          padding: $research-grid-item-top-story-content-padding;
+        }
+
+        .research-article {
+          &__title {
+            margin: $research-grid-item-top-story-article-title-margin;
+            padding: $research-grid-item-top-story-article-title-padding;
+            @include set-text-styles($research-grid-item-top-story-article-title-font...);
+          }
+
+          &__title-link {
+            &-border {
+              position: relative;
+              @include position($research-grid-item-top-story-article-title-border-position...);
+
+              @if ($old-ie) {
+                visibility: hidden;
+              } @else {
+                color: transparent;
+                border-bottom: $research-grid-item-top-story-article-title-border;
+              }
+            }
+
+            &:hover {
+              @if ($old-ie) {
+                .research-article__title-link-content {
+                  text-decoration: underline;
+                }
+              } @else {
+                .research-article__title-link-border {
+                  border-bottom: $research-grid-item-top-story-article-title-hover-border;
+                }
+              }
+            }
+          }
+
+          &__author {
+            display: inline;
+            text-decoration: none;
+
+            &:last-child:after {
+              content: "";
+              display: table;
+            }
+
+            @include underline($research-grid-item-top-story-article-author-underline...);
+          }
+
+          &__teaser {
+            display: none;
+          }
+        }
+
+        .article-tags {
+          position: relative;
+          padding: 0;
+          background: $research-grid-item-top-story-article-tags-bg-color;
+          border: 0;
+        }
+
+        .article-tags__link {
+          @include underline($research-grid-item-top-story-article-tags-link-underline...);
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: $mobile + 1) and (max-width: $tablet) {
+    .research__item {
+      width: $research-grid-item-tablet-width;
+
+      &:first-child,
+      &:nth-child(4),
+      &:nth-child(7),
+      &:nth-child(11) {
+        width: $research-grid-item-alt-tablet-width;
+      }
+    }
+  }
+
+  @media screen and (max-width: $mobile) {
+    .research__item {
+      border-bottom: $research-grid-item-mobile-border;
+      padding: $research-grid-item-mobile-padding;
+
+      // CONTENT STYLES OF 1ST ITEM
+      &:first-child.top-story {
+        .research__content {
+          padding: $research-grid-item-top-story-content-mobile-padding;
+        }
+
+        .research-article {
+          &__headline {
+            @include position($research-grid-item-top-story-article-headline-mobile-position...);
+            color: $research-grid-item-top-story-article-headline-mobile-color;
+            background-color: $research-grid-item-top-story-article-headline-mobile-bg-color;
+
+          }
+          &__title {
+            margin: $research-grid-item-top-story-article-title-mobile-margin;
+            padding: $research-grid-item-top-story-article-title-mobile-padding;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,54 @@
+<!--
+  {
+  "name": "Currency Converter",
+  "status": "In Progress",
+  "notes": ""
+  }
+-->
+<div class="wrapper">
+	<div class="currency-converter-module"
+		 data-apply-ko="currencyConverter"
+		 data-get-products-timeout="5000"
+		 data-default-currency-left="EUR">
+		<h2 class="currency-converter__headline">Currency Converter</h2>
+
+		<div class="form currency-converter__form">
+			<div class="currency-converter__form-left">
+				<div class="currency-converter__sub-headline">Currency I have</div>
+				<div class="form-group">
+                    <input class="form-input" type="text" min="0"
+                           data-bind="allowNumeric: true, value: amountInput, textInput: amountInput" />
+				</div>
+				<div class="form-group">
+					<select class="custom-select"
+							data-bind=" options: currencies, optionsText: 'currency',
+							optionsValue: 'currency', optionsAfterRender: afterAddCurrencies, value: currency">
+					</select>
+				</div>
+			</div>
+			<div class="currency-converter__form-right">
+				<div class="currency-converter__sub-headline">Currency I want</div>
+				<div class="form-group">
+					<input class="form-input" type="text"
+						   data-bind="allowNumeric: true, value: amountOutput, textInput: amountOutput" />
+				</div>
+				<div class="form-group">
+					<select class="custom-select"
+							data-bind=" options: currenciesOutput, optionsText: 'currency',
+							optionsValue: 'currency', optionsAfterRender: afterAddCurrenciesOutput, value: currencyOutput">
+					</select>
+				</div>
+			</div>
+		</div>
+
+		<div class="currency-converter__disclamer desktop-only">
+			Neither FOREX.com nor its affiliates will be held responsible for the reliability or accuracy of this data.
+			The
+			service is provided in good faith; however, there are no explicit or implicit warranties of accuracy. The
+			user
+			agrees not to hold FOREX.com or any of its affiliates, liable for trading decisions that are based on the
+			pip &
+			margin calculators from this website.
+		</div>
+	</div>
+</div>

@@ -1,0 +1,283 @@
+.economic-calendar-section {
+  $economic-calendar-font-size: 14;
+  $economic-calendar-mobile-font-size: 12;
+  $economic-calendar-head-font-size: 13;
+  $economic-calendar-head-mobile-font-size: 12;
+  $economic-calendar-detail-headline-font-size: 44;
+  $economic-calendar-detail-headline-mobile-font-size: 34;
+  $economic-calendar-detail-event-name-font-size: 16;
+  $economic-calendar-detail-event-name-mobile-font-size: 13;
+  $economic-calendar-detail-font-size: 14;
+  $economic-calendar-detail-table-value-font-size: 20;
+
+  $economic-calendar-head-bg-color: $color-light;
+  $economic-calendar-head-mobile-bg-color: $color-light;
+  $economic-calendar-event-row-bg-color: $color-light;
+  $economic-calendar-event-row-hover-bg-color: $color-primary-3;
+  $economic-calendar-event-row-selected-bg-color: $color-primary-3 !important;
+  $economic-calendar-event-row-odd-bg-color: $color-white;
+  $economic-calendar-event-row-even-bg-color: $color-lighter;
+  $economic-calendar-detail-row-bg-color: $color-lightest;
+  $economic-calendar-detail-headline-bg-color: $color-light;
+
+  $economic-calendar-event-row-selected-color: $color-white;
+
+  $economic-calendar-event-row-border: solid 1px $color-white;
+  $economic-calendar-detail-row-border: solid 1px $color-white;
+  $economic-calendar-detail-border: solid 1px $color-medium-dark;
+  $economic-calendar-detail-table-border: solid 1px $color-light;
+
+  $economic-calendar-head-height: 45px;
+  $economic-calendar-date-row-height: 45px;
+  $economic-calendar-event-row-height: 45px;
+
+  padding-bottom: $gutter*4;
+
+  .fxst-calendarpro {
+    @include rem(font-size, $economic-calendar-font-size);
+    text-align: center;
+    table-layout: fixed;
+  }
+
+  .fxst-calendarhead {
+    line-height: $economic-calendar-head-height;
+    background-color: $economic-calendar-head-bg-color;
+
+    th {
+      @include rem(font-size, $economic-calendar-head-font-size);
+      font-weight: 500;
+      padding: 0 $gutter/2;
+
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+
+    .fxst-thtime {
+      width: 10%;
+    }
+
+    .fxst-thcountry, .fxst-thvolatility {
+      width: 6.25%;
+    }
+
+    .fxst-thevent {
+      width: 40%;
+    }
+
+    .fxst-thactual, .fxst-thprevious, .fxst-thconsensus {
+      width: 13.5%;
+    }
+  }
+
+  .fxit-revised, .fxit-arrow, .fxst-threvised, .fxst-tharrow {
+    display: none;
+  }
+
+  .fxst-layout-tabs {
+    display: none;
+  }
+
+  .fxst-thevent, .fxst-txt-left {
+    text-align: left;
+    line-height: normal;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  .fxst-dateRow {
+    text-align: left;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: $economic-calendar-date-row-height;
+    padding-top: $gutter*3;
+  }
+
+  .fxst-tr {
+    &-event {
+      line-height: $economic-calendar-event-row-height;
+      background-color: $economic-calendar-event-row-bg-color;
+      border-bottom: $economic-calendar-event-row-border;
+      cursor: pointer;
+
+      .no-touch &:hover {
+        background-color: $economic-calendar-event-row-hover-bg-color;
+        color: $economic-calendar-event-row-selected-color;
+
+        a {
+          color: $economic-calendar-event-row-selected-color;
+        }
+      }
+    }
+
+    &-nexteventline {
+      ~ .fxst-oddRow {
+        background-color: $economic-calendar-event-row-odd-bg-color;
+      }
+
+      ~ .fxst-evenRow {
+        background-color: $economic-calendar-event-row-even-bg-color;
+      }
+    }
+
+    &-detail {
+      background-color: $economic-calendar-detail-row-bg-color;
+      text-align: left;
+      border-bottom: $economic-calendar-detail-row-border;
+
+      .fxst-eventheadline {
+        background-color: $economic-calendar-detail-headline-bg-color;
+        padding: $gutter*1.5;
+        width: 170px;
+
+        .fxst-countryheadline {
+          @include rem(font-size, $economic-calendar-detail-headline-font-size);
+          font-weight: 700;
+          line-height: 1;
+        }
+
+        .fxst-eventname {
+          @include rem(font-size, $economic-calendar-detail-event-name-font-size);
+          text-transform: uppercase;
+          font-weight: 400;
+          line-height: 1.3;
+        }
+
+        &-left {
+          padding-bottom: $gutter*2;
+          margin-bottom: $gutter*2;
+          border-bottom: $economic-calendar-detail-border;
+        }
+      }
+
+      .fxst-eventheadline, .fxit-eventinfo {
+        display: table-cell;
+        vertical-align: top;
+      }
+
+      .fxit-eventinfo > * {
+        padding: $gutter*2;
+      }
+
+      table {
+        @include rem(font-size, $economic-calendar-detail-font-size);
+        text-align: center;
+        table-layout: fixed;
+        width: 100%;
+
+        td {
+          &:first-child + td {
+            border-left: $economic-calendar-detail-table-border;
+            border-right: $economic-calendar-detail-table-border;
+          }
+
+          & > span:first-child {
+            @include rem(font-size, $economic-calendar-detail-table-value-font-size);
+          }
+        }
+      }
+    }
+  }
+
+  .fxec_selectedRow {
+    background-color: $economic-calendar-event-row-selected-bg-color;
+    color: $economic-calendar-event-row-selected-color;
+
+    a {
+      color: $economic-calendar-event-row-selected-color;
+    }
+  }
+
+  .fxit-eventurl {
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  .economic__actions {
+    position: relative;
+    min-height: 45px;
+  }
+
+  @media screen and (max-width: $tablet) {
+    .primary-content & .wrapper {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  @media screen and (max-width: $mobile) {
+    .fxst-calendarpro {
+      @include rem(font-size, $economic-calendar-mobile-font-size);
+
+      table-layout: fixed;
+      overflow: hidden;
+    }
+
+    .fxst-dateRow td {
+      padding-left: $gutter*2;
+    }
+
+    .fxst-calendarhead {
+      th {
+        @include rem(font-size, $economic-calendar-head-mobile-font-size);
+        font-weight: normal;
+        padding: 0;
+      }
+
+      .fxst-thtime {
+        width: 17%;
+      }
+
+      .fxst-thevent {
+        width: 30%;
+      }
+    }
+
+    .fxst-tr {
+      &-event td {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+
+      &-detail {
+        .fxst-eventheadline {
+          overflow: auto;
+
+          .fxst-countryheadline {
+            @include rem(font-size, $economic-calendar-detail-headline-mobile-font-size);
+          }
+
+          .fxst-eventname {
+            @include rem(font-size, $economic-calendar-detail-event-name-mobile-font-size);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
+
+          &-left {
+            float: left;
+            width: 30%;
+            margin: 0;
+            padding: 0 $gutter*2 0 0;
+            border-bottom: 0;
+            border-right: $economic-calendar-detail-border;
+          }
+
+          &-right {
+            float: left;
+            width: 70%;
+            margin: 0;
+            padding: 0 0 0 $gutter*2;
+          }
+        }
+
+        .fxst-eventheadline, .fxit-eventinfo {
+          display: block;
+          width: 100%;
+        }
+      }
+    }
+  }
+}

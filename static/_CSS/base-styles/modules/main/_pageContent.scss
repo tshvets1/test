@@ -1,0 +1,22 @@
+.generic-content-section {
+  .wrapper {
+    padding-bottom: $gutter*6;
+  }
+
+  h2 {
+    @include rem(font-size, 16);
+    font-weight: 700;
+    margin: 1em 0;
+  }
+
+  @media screen and (min-width: $mobile) {
+    h3 {
+      font-weight: 700;
+    }
+
+    p {
+      font-weight: 400;
+      margin-top: 0;
+    }
+  }
+}

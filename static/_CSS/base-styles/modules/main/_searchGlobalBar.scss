@@ -1,0 +1,106 @@
+.search-global-bar {
+  $search-global-bar-padding: 20px 0 !default;
+  $search-global-bar-tablet-padding: 20px $tabletPadding !default;
+  $search-global-bar-search-width: 25% !default;
+  $search-global-bar-search-padding: 5px 0 0 !default;
+  $search-global-bar-search-error-position: null null 40px !default;
+  $search-global-bar-search-input-padding: 10px 35px 10px 10px !default;
+  $search-global-bar-search-submit-width: 40px !default;
+  $search-global-bar-result-text-width: 75% !default;
+  $search-global-bar-result-text-padding: 0 20px 0 0 !default;
+
+  $search-global-bar-search-error-mobile-position: null null 50px !default;
+
+  $search-global-bar-border: solid 1px $color-light !default;
+
+  $search-global-bar-result-text-font: 33 200 1.25 !default;
+  $search-global-bar-result-text-highlight-font: null normal !default;
+
+  $search-global-bar-result-text-mobile-font: 30 null null null center !default;
+
+  &-section {
+    .wrapper {
+      border-bottom: $search-global-bar-border;
+      padding: $search-global-bar-padding;
+    }
+
+    .search-bar-module {
+      float: right;
+      width: $search-global-bar-search-width;
+
+      label.error {
+        @include position($search-global-bar-search-error-position...);
+      }
+
+      .search-fields {
+        width: 100%;
+
+        &__wrapper {
+          width: 100%;
+          max-width: none;
+        }
+      }
+    }
+  }
+
+  &__search-result-text {
+    @include set-text-styles($search-global-bar-result-text-font...);
+    width: $search-global-bar-result-text-width;
+    float: left;
+
+    span {
+      word-wrap: break-word;
+
+      &:first-child {
+        @include set-text-styles($search-global-bar-result-text-highlight-font...);
+      }
+    }
+  }
+
+  //NOT MOBILE
+  @media screen and (min-width: $mobile) {
+    &-section {
+      .search-fields {
+        padding: $search-global-bar-search-padding;
+
+        &__input {
+          padding: $search-global-bar-search-input-padding;
+        }
+
+        &__submit {
+          width: $search-global-bar-search-submit-width;
+        }
+      }
+    }
+
+    &__search-result-text {
+      padding: $search-global-bar-result-text-padding;
+    }
+  }
+
+  @media screen and (max-width: $tablet) {
+    &-section .wrapper {
+      padding: $search-global-bar-tablet-padding;
+    }
+  }
+
+  //MOBILE ONLY
+  @media screen and (max-width: $mobile) {
+    &-section {
+      .search-bar-module {
+        width: 100%;
+        float: none;
+
+        label.error {
+          @include position($search-global-bar-search-error-mobile-position...);
+        }
+      }
+    }
+
+    &__search-result-text {
+      float: none;
+      width: 100%;
+      @include set-text-styles($search-global-bar-result-text-mobile-font...);
+    }
+  }
+}

@@ -1,0 +1,114 @@
+{
+  "d": [
+	{
+	  "__type": "Facade.BLL.Web.Models.FacadeProductVolatilityWithBidAsk",
+	  "Bid": "24.8421",
+	  "Offer": "24.8502",
+	  "Product": "USD/CZK",
+	  "CurrentPrice": 0,
+	  "Volatility": 2.65,
+	  "Alias": "USD/CZK",
+	  "Long": 30,
+	  "Short": 70
+	},
+	{
+	  "__type": "Facade.BLL.Web.Models.FacadeProductVolatilityWithBidAsk",
+	  "Bid": "8.721",
+	  "Offer": "8.745",
+	  "Product": "ZAR/JPY",
+	  "CurrentPrice": 0,
+	  "Volatility": 1.84,
+	  "Alias": "ZAR/JPY",
+	  "Long": 50,
+	  "Short": 50
+	},
+	{
+	  "__type": "Facade.BLL.Web.Models.FacadeProductVolatilityWithBidAsk",
+	  "Bid": "1108.67",
+	  "Offer": "1109.12",
+	  "Product": "XAU/USD",
+	  "CurrentPrice": 0,
+	  "Volatility": 2.13,
+	  "Alias": "XAU/USD",
+	  "Long": 7,
+	  "Short": 93
+	},
+	{
+	  "__type": "Facade.BLL.Web.Models.FacadeProductVolatilityWithBidAsk",
+	  "Bid": "0.99597",
+	  "Offer": "0.99613",
+	  "Product": "USD/CHF",
+	  "CurrentPrice": 0.996,
+	  "Volatility": 0.04,
+	  "Alias": "USD/CHF",
+	  "Long": 55,
+	  "Short": 45
+	},
+	{
+	  "__type": "Facade.BLL.Web.Models.FacadeProductVolatilityWithBidAsk",
+	  "Bid": "13.95532",
+	  "Offer": "13.96065",
+	  "Product": "USD/ZAR",
+	  "CurrentPrice": 0,
+	  "Volatility": 1.37,
+	  "Alias": "USD/ZAR",
+	  "Long": 85,
+	  "Short": 15
+	},
+	{
+	  "__type": "Facade.BLL.Web.Models.FacadeProductVolatilityWithBidAsk",
+	  "Bid": "1.40922",
+	  "Offer": "1.40993",
+	  "Product": "USD/SGD",
+	  "CurrentPrice": 0,
+	  "Volatility": 1.82,
+	  "Alias": "USD/SGD",
+	  "Long": 3,
+	  "Short": 97
+	},
+	{
+	  "__type": "Facade.BLL.Web.Models.FacadeProductVolatilityWithBidAsk",
+	  "Bid": "288.730",
+	  "Offer": "288.851",
+	  "Product": "USD/HUF",
+	  "CurrentPrice": 0,
+	  "Volatility": 3.16,
+	  "Alias": "USD/HUF",
+	  "Long": 98,
+	  "Short": 2
+	},
+	{
+	  "__type": "Facade.BLL.Web.Models.FacadeProductVolatilityWithBidAsk",
+	  "Bid": "6.85645",
+	  "Offer": "6.85703",
+	  "Product": "USD/DKK",
+	  "CurrentPrice": 0,
+	  "Volatility": 2.49,
+	  "Alias": "USD/DKK",
+	  "Long": 34,
+	  "Short": 66
+	},
+	{
+	  "__type": "Facade.BLL.Web.Models.FacadeProductVolatilityWithBidAsk",
+	  "Bid": "732.61",
+	  "Offer": "733.37",
+	  "Product": "XAU/GBP",
+	  "CurrentPrice": 0,
+	  "Volatility": 6.80,
+	  "Alias": "XAU/GBP",
+	  "Long": 10,
+	  "Short": 90
+	},
+	{
+	  "__type": "Facade.BLL.Web.Models.FacadeProductVolatilityWithBidAsk",
+	  "Bid": "80.585",
+	  "Offer": "80.634",
+	  "Product": "NZD/JPY",
+	  "CurrentPrice": 0,
+	  "Volatility": 1.58,
+	  "Alias": "NZD/JPY",
+	  "Long": 65,
+	  "Short": 35
+	}
+  ]
+}

@@ -1,0 +1,38 @@
+.contact {
+  $contact-listing-title-font-size: 16;
+
+  &-listing {
+    @extend %list--unstyled;
+    margin: 0 0 $gutter*3;
+  }
+
+  &__title {
+    @include rem(font-size, $contact-listing-title-font-size);
+    line-height: 1.4;
+    margin: $gutter*3 0 $gutter/2;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  &__information {
+    p {
+      margin: 0;
+      line-height: 1.5;
+    }
+
+    a {
+      text-decoration: none;
+    }
+  }
+
+  @media screen and (max-width: $mobile) {
+    &-listing {
+      margin: $gutter 0;
+      text-align: center;
+    }
+
+    &__title {
+      margin: $gutter*1.5 0 0;
+    }
+  }
+}

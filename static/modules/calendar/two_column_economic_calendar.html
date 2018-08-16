@@ -1,0 +1,29 @@
+<!--
+  {
+  "name": "Economic Calendar Page Content",
+  "status": "In Progress",
+  "notes": "NOTE: This Page Template is also used for Account Forms, Trading Hours, Education Detail, etc."
+  }
+-->
+
+<section class="section-wrapper main-right-rail" data-sectionbg="default">
+	<div class="wrapper">
+		<div class="primary-content">
+
+			<div class="section-wrapper economic-calendar-section" data-sectionbg="default">
+				@@include('/modules/calendar/economic_calendar_filter.html')
+				<div class="economic__actions">
+					@@include('/modules/calendar/change_time_zone.html')
+					@@include('/modules/calendar/legend.html')
+				</div>
+				@@include('/modules/calendar/economic_calendar.html')
+			</div>
+		</div>
+
+		<aside class="secondary-content" role="complementary">
+			@@include('/modules/product/product_right_rail_live_trading.html')
+			@@include('/modules/main/right_rail_current_rates.html')
+			@@include('/modules/main/right_rail_top_stories.html')
+		</aside>
+	</div>
+</section>

@@ -1,0 +1,31 @@
+<!--
+  {
+  "name": "Quiz Results - Horizontal Bar Graph",
+  "status": "In Progress",
+  "notes": "data-chart attribute sets the chart type; chart-data container contains divs with data attributes for the chart"
+  }
+-->
+
+<section class="section-wrapper quiz__results-wrapper" data-columns="1" data-chart="horizontal">
+    <div class="spinner">
+        <div class="overlay"></div>
+        <img src="/_Images/ui/gray-loader.gif" alt="spinner" />
+    </div>
+	<div class="wrapper">
+		<h2 class="quiz__results-chart-headline">You And The Big Picture</h2>
+		<h3 class="quiz__results-chart-subheadline">Take our quiz and get in touch with your inner trader</h3>
+		<div class="quiz__results-chart-container">
+			<div id="chart-data">
+                <div data-selected=false data-value="8" data-label="8%" data-color="#c74f4f" data-type="hobbist"></div>
+                <div data-selected=true data-value="48" data-label="48%" data-color="#ffd816" data-type="technician"></div>
+                <div data-selected=false data-value="12" data-label="12%" data-color="#9ec400" data-type="tactician"></div>
+				<div data-selected=false data-value="32" data-label="32%" data-color="#7856af" data-type="tactician"></div>
+			</div>
+			<div class="quiz__results-chart-data">
+				<div data-role="chart"></div>
+				<img class="quiz__results-chart-indicator" src='/_Images/content-managed/quiz/6.png'
+					 data-role="isMeIndicator" data-replacement-text="YOU"/>
+			</div>
+		</div>
+	</div>
+</section>

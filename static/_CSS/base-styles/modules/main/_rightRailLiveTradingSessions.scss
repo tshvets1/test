@@ -1,0 +1,106 @@
+.live-trading-right-rail {
+  &-module .wrapper {
+    color: $color-darker;
+    text-align: left;
+
+    .cta-btn {
+      border-top: none;
+      border-left: none;
+      border-right: none;
+    }
+  }
+
+  &__headline {
+    @include rem(font-size, 16);
+    color: $color-darker;
+    font-weight: 500;
+    text-transform: uppercase;
+
+    margin: $gutter 0 $gutter*3;
+  }
+
+  &__sub-headline {
+    @include rem(font-size, 16);
+  }
+
+  &__description {
+    @include rem(font-size, 14);
+    padding-bottom: $gutter;
+  }
+
+  &__dates {
+    padding-bottom: $gutter*2;
+
+    .webinar-registration {
+      &__webinar-date {
+        width: 100%;
+        float: none;
+
+        &-wrapper {
+          margin: $gutter/2 0;
+          overflow: auto;
+          color: $color-primary-3;
+        }
+      }
+
+      &__date {
+        float: left;
+      }
+
+      &__time {
+        @include rem(font-size, 16);
+        float: right;
+      }
+    }
+  }
+
+  //tablet only
+  @media screen and (min-width: $mobile) and (max-width: $tablet) {
+    &__dates {
+      .webinar-registration {
+        &__webinar-date {
+          width: 25%;
+          float: left;
+
+          &-wrapper {
+            margin: 0 $gutter*3 $gutter*3 0;
+          }
+        }
+
+        &__date, &__time {
+          float: none;
+        }
+      }
+    }
+
+    &-module .wrapper {
+      .cta-btn {
+        float: left;
+        clear: both;
+      }
+    }
+  }
+
+  @media screen and (max-width: $mobile) {
+    &-module .wrapper {
+      .cta-btn {
+        width: 100%;
+      }
+
+      .webinar-registration__webinar-date {
+        width: 100%;
+      }
+    }
+
+    &__headline {
+      margin: 0 0 $gutter*2;
+
+      @include rem(font-size, 14);
+    }
+
+    &__sub-headline, &__description {
+      @include rem(font-size, 14);
+      line-height: 1.25;
+    }
+  }
+}

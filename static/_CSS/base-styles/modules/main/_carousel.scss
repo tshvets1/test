@@ -1,0 +1,42 @@
+.bx-wrapper {
+  $bx-wrapper-pager-size: 12px 12px;
+  $bx-wrapper-pager-bg: $color-medium;
+  $bx-wrapper-pager-hover-bg: $color-primary-3;
+
+  position: relative;
+
+  .bx-pager {
+    width: 100%;
+    text-align: center;
+
+    &.bx-default-pager a {
+      text-indent: -9999px;
+      display: block;
+      width: nth($bx-wrapper-pager-size, 1);
+      height: nth($bx-wrapper-pager-size, 2);
+      margin: 0 $gutter;
+      border-radius: 50%;
+
+      @if ($old-ie) {
+        -ms-behavior: url(/_CSS/htc/PIE.htc);
+      }
+
+      background: $bx-wrapper-pager-bg;
+
+      &:hover, &.active {
+        background: $bx-wrapper-pager-hover-bg;
+      }
+    }
+
+    &-item {
+      display: inline-block;
+      font-size: 0;
+      line-height: 0;
+    }
+  }
+
+  .bx-viewport {
+    /*fix other elements on the page moving (on Chrome)*/
+    -webkit-transform: translatez(0);
+  }
+}

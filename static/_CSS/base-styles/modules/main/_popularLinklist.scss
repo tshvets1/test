@@ -1,0 +1,23 @@
+.popular {
+
+  &-section {
+    text-align: left;
+  }
+
+  &__headline {
+    @include rem(font-size, 44);
+    color: $color-primary-3;
+  }
+
+  &__linklist {
+    @extend %list--unstyled;
+
+    li {
+      margin: $gutter*1.5 0;
+    }
+
+    a {
+      text-decoration: none;
+    }
+  }
+}

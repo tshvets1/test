@@ -1,0 +1,32 @@
+<!--
+  {
+  "name": "Related Markets (Right Rail)",
+  "status": "Complete",
+  "notes": ""
+  }
+-->
+
+
+<div class="module-wrapper related-markets-module" data-sectionbg="default"
+	 data-apply-ko="relatedMarkets" data-get-products-timeout="5000"
+	 data-products="EUR/USD,USD/JPY,WHT/USD,GBP/AUD">
+	<div class="wrapper">
+
+		<h2 class="related-markets__headline">Related markets</h2>
+
+		<div class="related-markets__sentiments" data-bind="foreach: products">
+			<div class="related-markets__product">
+				<div class="related-markets__sentiment"
+					 data-bind="fadeVisibile: $root.isDataUpdated, attr: {'data-percent': Long() > Short() ? -Long() : -Short()},
+						drawPie: $root.isDataUpdated"
+					 data-bar-color="#32afea"
+					 data-track-color="#8fd3f3">
+					<div class="related-markets__sentiment-text">
+						<span data-bind="text: (Long() > Short() ? Math.floor(Long()) : Math.floor(Short())) + '%'"></span>
+					</div>
+				</div>
+				<a class="related-markets__sentiment-link cta-link" href="#" data-bind="text: product"></a>
+			</div>
+		</div>
+	</div>
+</div>

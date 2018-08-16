@@ -1,0 +1,202 @@
+.rates-table {
+  table-layout: fixed;
+  width: 100%;
+  margin-bottom: $gutter*2;
+  text-align: left;
+
+  th {
+    @include set-text-styles($rates-table-head-font...);
+    padding: $rates-table-head-padding;
+  }
+
+  thead tr:first-child {
+    background-color: $rates-table-head-bg-color;
+    border-bottom: $rates-table-head-border;
+  }
+
+  tbody tr {
+    background-color: $rates-table-row-bg-color;
+
+    &#{if($old-ie, ".nth-child-odd", ":nth-child(odd)")} {
+      background-color: $rates-table-row-odd-bg-color;
+    }
+
+    &:hover {
+      background-color: $rates-table-row-hover-bg-color;
+    }
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  td {
+    padding: $rates-table-cell-padding;
+    @include set-text-styles($rates-table-cell-font...);
+  }
+
+  th:first-child,
+  td:first-child {
+    padding-left: $rates-table-cell-product-padding;
+
+    @at-root .secondary-content & {
+      padding-left: $rates-table-cell-product-rail-padding;
+    }
+  }
+
+  &__product {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+
+    @at-root .secondary-content td#{&},
+    .secondary-content th#{&} {
+      width: 31%;
+    }
+
+    @at-root  .rates-table td#{&} {
+      @include set-text-styles($rates-table-cell-product-font...);
+    }
+  }
+
+  &__value {
+    &-down {
+      color: $rates-table-value-down-color;
+    }
+
+    &-up {
+      color: $rates-table-value-up-color;
+    }
+
+    span {
+      border: $rates-table-value-default-border;
+      padding: 0 $gutter/2;
+      @include set-text-styles($rates-table-cell-value-font...);
+    }
+
+    &-changed {
+      color: $rates-table-value-changed;
+      background-color: $rates-table-value-changed-bg-color;
+      border: $rates-table-value-changed-border;
+    }
+  }
+
+  .secondary-content &__spread {
+    width: $rates-table-spread-width;
+  }
+
+  .spinner {
+    position: static;
+    height: $rates-table-spinner-height + 20px;
+    background-color: transparent;
+
+    td {
+      height: $rates-table-spinner-height;
+      padding: 0;
+    }
+
+    img {
+      margin: 0;
+    }
+
+    &:hover {
+      background-color: transparent;
+    }
+  }
+
+  @media screen and (max-width: $mobile) {
+    th {
+      @include set-text-styles($rates-table-head-mobile-font...);
+    }
+
+    thead tr:first-child {
+      border-bottom: $rates-table-head-mobile-border;
+    }
+
+    td {
+      padding: $rates-table-cell-mobile-padding;
+      @include set-text-styles($rates-table-cell-mobile-font...);
+    }
+
+    th:first-child,
+    td:first-child {
+      padding: $rates-table-cell-product-mobile-padding;
+
+      @at-root .secondary-content & {
+        padding: $rates-table-cell-product-rail-mobile-padding;
+      }
+    }
+
+    &__product {
+      @at-root .rates-table td#{&} {
+        @include set-text-styles($rates-table-cell-product-mobile-font...);
+      }
+    }
+
+    &__value {
+      span {
+        @include set-text-styles($rates-table-cell-value-mobile-font...);
+      }
+    }
+
+    @at-root .secondary-content &__spread {
+      width: $rates-table-spread-mobile-width
+    }
+
+    .spinner {
+      height: auto;
+
+      td {
+        background-color: transparent;
+      }
+    }
+
+    &--mobile-transpose {
+      border-collapse: collapse;
+      border-spacing: 0;
+      position: relative;
+
+      th,
+      td {
+        display: block;
+        height: $rates-table-transpose-row-mobile-height;
+        padding: $rates-table-transpose-cell-mobile-padding;
+      }
+
+      td {
+        background-color: $rates-table-transpose-row-mobile-bg-color;
+      }
+
+      tr:nth-child(odd) td {
+        background-color: $rates-table-transpose-row-odd-mobile-bg-color;
+      }
+
+      thead {
+        display: block;
+        float: left;
+
+        tr:first-child {
+          border-bottom: $rates-table-transpose-head-mobile-border;
+          display: block;
+        }
+      }
+
+      tbody {
+        display: flex;
+        width: auto;
+        position: relative;
+        overflow-x: auto;
+        white-space: nowrap;
+      }
+
+      .spinner {
+        position: absolute;
+        padding: 0;
+        width: calc(100% - #{$rates-table-value-changed-border});
+        margin-left: $rates-table-value-changed-border;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+}

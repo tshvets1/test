@@ -1,0 +1,359 @@
+//
+// HERO OPTIONS
+%hero-inverse-inline-bg {
+  .hero__headline {
+    span {
+      @include inline-bg($hero-two-section-highlight-inverse-bg-color, $hero-two-section-highlight-options...);
+      color: $hero-two-section-highlight-inverse-color;
+    }
+  }
+
+  &[data-highlight-headline="false"] {
+    .hero__headline {
+      span {
+        color: $hero-two-section-headline-no-highlight-inverse-color;
+      }
+    }
+  }
+}
+
+.hero-two-section {
+  position: relative;
+
+  @include inverse-section-bg("%hero-inverse-inline-bg");
+
+  // COLUMN LAYOUTS
+  &[data-columns="1"] {
+    padding: $hero-two-section-columns-1-padding;
+
+    .hero__subheadline {
+      margin: $hero-two-section-columns-1-subheadline-margin;
+    }
+  }
+
+  &[data-columns="2"] {
+    padding: $hero-two-section-columns-2-padding;
+
+    .wrapper {
+      display: table;
+      table-layout: fixed;
+      width: 100%;
+
+      .col-wrapper {
+        padding: 0;
+      }
+
+      > .col {
+        width: 50%;
+        display: table-cell;
+        vertical-align: top;
+        padding: $hero-two-section-columns-2-col-padding;
+
+        &.hero__media {
+          // RIGHT COLUMN MEDIA
+          text-align: center;
+          vertical-align: middle;
+          // YOU TUBE VIDEO
+          iframe {
+            max-width: 100%;
+          }
+          // IMAGES
+          img {
+            display: block;
+            height: auto;
+            margin: 0 auto;
+          }
+
+          &[data-img-align="bottom"] {
+            vertical-align: bottom;
+          }
+
+          &[data-img-align="right"] {
+            img {
+              float: right;
+            }
+          }
+
+          &[data-img-align="left"] {
+            img {
+              float: left;
+            }
+          }
+        }
+
+        &:first-child {
+          padding: $hero-two-section-columns-2-col-first-padding;
+
+          > .economic-calendar-section,
+          > .top-stories-module,
+          > .demo-account {
+            padding-right: $hero-two-section-columns-2-content-module-padding;
+            padding-left: 0;
+          }
+        }
+      }
+    }
+
+    .top-stories-module,
+    .economic-calendar-section,
+    .demo-account {
+      padding-left: $hero-two-section-columns-2-content-module-padding;
+    }
+  }
+
+  &[data-highlight-headline="false"] {
+    .hero__headline {
+      @include set-text-styles($hero-two-section-headline-no-highlight-font...);
+      margin-left: 0;
+
+      span {
+        box-shadow: none !important;
+        background: transparent !important;
+        outline: none !important;
+        color: $hero-two-section-headline-no-highlight-color;
+
+        &:after {
+          content: none !important;
+        }
+      }
+    }
+  }
+
+  &[data-is-page-title="true"],
+  &[data-is-page-title="True"] {
+    .hero__headline {
+      @include set-text-styles($hero-two-section-headline-page-title-font...);
+    }
+  }
+
+  &[data-divider="true"] .wrapper > .col:first-child {
+    position: relative;
+
+    &:after {
+      content: "";
+      position: absolute;
+      display: block;
+      @include position(0, 0, 0);
+      border-right: $hero-two-section-border;
+    }
+  }
+
+  // HERO CONTENT
+  .hero {
+    &__headline {
+      @include set-text-styles($hero-two-section-headline-font...);
+      margin: $hero-two-section-headline-margin;
+
+      span {
+        @include inline-bg($hero-two-section-highlight-bg-color, $hero-two-section-highlight-options...);
+        color: $hero-two-section-highlight-color;
+      }
+    }
+
+    &__subheadline {
+      margin: $hero-two-section-subheadline-margin;
+      @include set-text-styles($hero-two-section-subheadline-font...);
+    }
+
+    &__description {
+      margin: $hero-two-section-description-margin;
+      @include set-text-styles($hero-two-section-description-font...);
+    }
+
+    &__media {
+      vertical-align: top;
+    }
+
+    // ONE OFF
+    &__media[data-columns="3"] {
+      .hero__media-col {
+        text-align: center;
+        padding: 0 $gutter/2;
+      }
+    }
+  }
+
+  // TABLET LAYOUT
+  @media screen and (max-width: $tablet) {
+    &[data-columns="1"] {
+      padding: $hero-two-section-columns-1-tablet-padding;
+
+      .hero__subheadline {
+        margin: $hero-two-section-columns-1-subheadline-tablet-margin;
+      }
+    }
+
+    &[data-columns="2"] {
+      padding: $hero-two-section-columns-2-tablet-padding;
+
+      .hero__headline {
+        margin: $hero-two-section-columns-2-headline-tablet-margin;
+      }
+
+      .top-stories-module,
+      .economic-calendar-section,
+      .demo-account {
+        padding-left: $hero-two-section-columns-2-content-module-tablet-padding;
+      }
+    }
+
+    &[data-highlight-headline="false"] {
+      .hero__headline {
+        margin-left: 0;
+        @include set-text-styles($hero-two-section-headline-no-highlight-tablet-font...);
+      }
+    }
+
+    .hero {
+      &__headline {
+        @include set-text-styles($hero-two-section-headline-tablet-font...);
+      }
+
+      &__subheadline {
+        @include set-text-styles($hero-two-section-subheadline-tablet-font...);
+      }
+
+      &__description {
+        @include set-text-styles($hero-two-section-description-tablet-font...);
+      }
+    }
+
+    &[data-is-page-title="true"],
+    &[data-is-page-title="True"] {
+      .hero__headline {
+        @include set-text-styles($hero-two-section-headline-page-title-tablet-font...);
+      }
+    }
+  }
+
+  // MOBILE LAYOUT
+  @media screen and (max-width: $mobile) {
+    // HERO HAS MOBILE AND DESKTOP CTA BUTTONS TO MATCH DESIGN
+    .cta-btn.mobile-only {
+      margin: $hero-two-section-cta-btn-mobile-margin;
+    }
+
+    //todo: remove after JP release
+    .mobile-only .cta-btn.mobile-only {
+      margin: 15px 0;
+    }
+
+    &[data-columns="1"] {
+      padding: $hero-two-section-columns-1-mobile-padding;
+
+      .hero__headline {
+        margin: $hero-two-section-columns-1-headline-mobile-margin;
+        padding: $hero-two-section-columns-1-headline-mobile-padding;
+        @include set-text-styles($hero-two-section-columns-1-headline-mobile-font...);
+      }
+
+      .hero__subheadline {
+        margin: $hero-two-section-columns-1-subheadline-mobile-margin;
+        @include set-text-styles($hero-two-section-columns-1-subheadline-mobile-font...);
+      }
+    }
+
+    &[data-columns="2"] {
+      padding: $hero-two-section-columns-2-mobile-padding;
+      .wrapper {
+        display: block;
+        text-align: left;
+      }
+
+      .hero__headline {
+        margin: $hero-two-section-columns-2-headline-mobile-margin;
+      }
+    }
+
+    &[data-highlight-headline="false"] {
+      .hero__headline {
+        margin-left: 0;
+        @include set-text-styles($hero-two-section-headline-no-highlight-mobile-font...);
+      }
+    }
+
+    .hero {
+      &__headline {
+        @include set-text-styles($hero-two-section-headline-mobile-font...);
+        margin: $hero-two-section-headline-mobile-margin;
+      }
+
+      &__subheadline {
+        margin: $hero-two-section-subheadline-mobile-margin;
+        @include set-text-styles($hero-two-section-subheadline-mobile-font...);
+      }
+
+      &__description {
+        @include set-text-styles($hero-two-section-description-mobile-font...);
+      }
+
+      &__media {
+        text-align: left !important;
+
+        & > img {
+          text-align: center;
+          padding-bottom: $gutter*2;
+
+          & + * {
+            clear: left;
+          }
+        }
+      }
+
+      &__media[data-img-align="bottom"],
+      &__media[data-img-align="default"] {
+        img {
+          display: block;
+          position: relative;
+          top: auto;
+          bottom: auto;
+          right: auto;
+          max-width: 100%;
+          max-height: 100%;
+          margin: $gutter auto $gutter*4;
+          -ms-transform: translateY(0%);
+          transform: translateY(0%);
+          float: none;
+        }
+      }
+
+      &__media[data-mobile-img="false"],
+      &__media[data-mobile-img="False"] {
+        & > img {
+          display: none !important;
+        }
+      }
+    }
+
+    &[data-is-page-title="true"],
+    &[data-is-page-title="True"] {
+      .hero__headline {
+        @include set-text-styles($hero-two-section-headline-page-title-mobile-font...);
+      }
+    }
+  }
+
+  @media screen and (max-width: $hero-two-section-columns-2-breakpoint) {
+    &[data-divider="true"] .wrapper > .col:first-child:after {
+      content: none;
+    }
+
+    &[data-columns="2"] {
+      .wrapper {
+        > .col,
+        > .col:first-child {
+          display: block;
+          width: 100%;
+          padding: 0 !important;
+        }
+      }
+
+      .top-stories-module,
+      .economic-calendar-section,
+      .demo-account {
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+  }
+}

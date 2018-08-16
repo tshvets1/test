@@ -1,0 +1,266 @@
+// SCSS variables are information about icon's compiled state, stored under its original file name
+//
+// .icon-home {
+//   width: $icon-home-width;
+// }
+//
+// The large array-like variables contain all information about a single icon
+// $icon-home: x y offset_x offset_y width height total_width total_height image_path;
+//
+// At the bottom of this section, we provide information about the spritesheet itself
+// $spritesheet: width height image $spritesheet-sprites;
+$icon-back-to-top-big-name: 'icon-back-to-top-big';
+$icon-back-to-top-big-x: 404px;
+$icon-back-to-top-big-y: 0px;
+$icon-back-to-top-big-offset-x: -404px;
+$icon-back-to-top-big-offset-y: 0px;
+$icon-back-to-top-big-width: 46px;
+$icon-back-to-top-big-height: 54px;
+$icon-back-to-top-big-total-width: 450px;
+$icon-back-to-top-big-total-height: 54px;
+$icon-back-to-top-big-image: '/_Images/sprites/ci-png-icons.png';
+$icon-back-to-top-big: (404px, 0px, -404px, 0px, 46px, 54px, 450px, 54px, '/_Images/sprites/ci-png-icons.png', 'icon-back-to-top-big', );
+$icon-back-to-top-name: 'icon-back-to-top';
+$icon-back-to-top-x: 196px;
+$icon-back-to-top-y: 0px;
+$icon-back-to-top-offset-x: -196px;
+$icon-back-to-top-offset-y: 0px;
+$icon-back-to-top-width: 26px;
+$icon-back-to-top-height: 26px;
+$icon-back-to-top-total-width: 450px;
+$icon-back-to-top-total-height: 54px;
+$icon-back-to-top-image: '/_Images/sprites/ci-png-icons.png';
+$icon-back-to-top: (196px, 0px, -196px, 0px, 26px, 26px, 450px, 54px, '/_Images/sprites/ci-png-icons.png', 'icon-back-to-top', );
+$icon-banner-area-control-left-name: 'icon-banner-area-control-left';
+$icon-banner-area-control-left-x: 42px;
+$icon-banner-area-control-left-y: 0px;
+$icon-banner-area-control-left-offset-x: -42px;
+$icon-banner-area-control-left-offset-y: 0px;
+$icon-banner-area-control-left-width: 11px;
+$icon-banner-area-control-left-height: 19px;
+$icon-banner-area-control-left-total-width: 450px;
+$icon-banner-area-control-left-total-height: 54px;
+$icon-banner-area-control-left-image: '/_Images/sprites/ci-png-icons.png';
+$icon-banner-area-control-left: (42px, 0px, -42px, 0px, 11px, 19px, 450px, 54px, '/_Images/sprites/ci-png-icons.png', 'icon-banner-area-control-left', );
+$icon-banner-area-control-right-name: 'icon-banner-area-control-right';
+$icon-banner-area-control-right-x: 26px;
+$icon-banner-area-control-right-y: 0px;
+$icon-banner-area-control-right-offset-x: -26px;
+$icon-banner-area-control-right-offset-y: 0px;
+$icon-banner-area-control-right-width: 11px;
+$icon-banner-area-control-right-height: 19px;
+$icon-banner-area-control-right-total-width: 450px;
+$icon-banner-area-control-right-total-height: 54px;
+$icon-banner-area-control-right-image: '/_Images/sprites/ci-png-icons.png';
+$icon-banner-area-control-right: (26px, 0px, -26px, 0px, 11px, 19px, 450px, 54px, '/_Images/sprites/ci-png-icons.png', 'icon-banner-area-control-right', );
+$icon-down-arrow-red-name: 'icon-down-arrow-red';
+$icon-down-arrow-red-x: 0px;
+$icon-down-arrow-red-y: 0px;
+$icon-down-arrow-red-offset-x: 0px;
+$icon-down-arrow-red-offset-y: 0px;
+$icon-down-arrow-red-width: 8px;
+$icon-down-arrow-red-height: 10px;
+$icon-down-arrow-red-total-width: 450px;
+$icon-down-arrow-red-total-height: 54px;
+$icon-down-arrow-red-image: '/_Images/sprites/ci-png-icons.png';
+$icon-down-arrow-red: (0px, 0px, 0px, 0px, 8px, 10px, 450px, 54px, '/_Images/sprites/ci-png-icons.png', 'icon-down-arrow-red', );
+$icon-pin-name: 'icon-pin';
+$icon-pin-x: 367px;
+$icon-pin-y: 0px;
+$icon-pin-offset-x: -367px;
+$icon-pin-offset-y: 0px;
+$icon-pin-width: 32px;
+$icon-pin-height: 41px;
+$icon-pin-total-width: 450px;
+$icon-pin-total-height: 54px;
+$icon-pin-image: '/_Images/sprites/ci-png-icons.png';
+$icon-pin: (367px, 0px, -367px, 0px, 32px, 41px, 450px, 54px, '/_Images/sprites/ci-png-icons.png', 'icon-pin', );
+$icon-product-banner-down-red-name: 'icon-product-banner-down-red';
+$icon-product-banner-down-red-x: 77px;
+$icon-product-banner-down-red-y: 0px;
+$icon-product-banner-down-red-offset-x: -77px;
+$icon-product-banner-down-red-offset-y: 0px;
+$icon-product-banner-down-red-width: 14px;
+$icon-product-banner-down-red-height: 14px;
+$icon-product-banner-down-red-total-width: 450px;
+$icon-product-banner-down-red-total-height: 54px;
+$icon-product-banner-down-red-image: '/_Images/sprites/ci-png-icons.png';
+$icon-product-banner-down-red: (77px, 0px, -77px, 0px, 14px, 14px, 450px, 54px, '/_Images/sprites/ci-png-icons.png', 'icon-product-banner-down-red', );
+$icon-product-banner-down-white-name: 'icon-product-banner-down-white';
+$icon-product-banner-down-white-x: 96px;
+$icon-product-banner-down-white-y: 0px;
+$icon-product-banner-down-white-offset-x: -96px;
+$icon-product-banner-down-white-offset-y: 0px;
+$icon-product-banner-down-white-width: 14px;
+$icon-product-banner-down-white-height: 14px;
+$icon-product-banner-down-white-total-width: 450px;
+$icon-product-banner-down-white-total-height: 54px;
+$icon-product-banner-down-white-image: '/_Images/sprites/ci-png-icons.png';
+$icon-product-banner-down-white: (96px, 0px, -96px, 0px, 14px, 14px, 450px, 54px, '/_Images/sprites/ci-png-icons.png', 'icon-product-banner-down-white', );
+$icon-product-banner-up-blue-name: 'icon-product-banner-up-blue';
+$icon-product-banner-up-blue-x: 58px;
+$icon-product-banner-up-blue-y: 0px;
+$icon-product-banner-up-blue-offset-x: -58px;
+$icon-product-banner-up-blue-offset-y: 0px;
+$icon-product-banner-up-blue-width: 14px;
+$icon-product-banner-up-blue-height: 14px;
+$icon-product-banner-up-blue-total-width: 450px;
+$icon-product-banner-up-blue-total-height: 54px;
+$icon-product-banner-up-blue-image: '/_Images/sprites/ci-png-icons.png';
+$icon-product-banner-up-blue: (58px, 0px, -58px, 0px, 14px, 14px, 450px, 54px, '/_Images/sprites/ci-png-icons.png', 'icon-product-banner-up-blue', );
+$icon-product-banner-up-white-name: 'icon-product-banner-up-white';
+$icon-product-banner-up-white-x: 115px;
+$icon-product-banner-up-white-y: 0px;
+$icon-product-banner-up-white-offset-x: -115px;
+$icon-product-banner-up-white-offset-y: 0px;
+$icon-product-banner-up-white-width: 14px;
+$icon-product-banner-up-white-height: 14px;
+$icon-product-banner-up-white-total-width: 450px;
+$icon-product-banner-up-white-total-height: 54px;
+$icon-product-banner-up-white-image: '/_Images/sprites/ci-png-icons.png';
+$icon-product-banner-up-white: (115px, 0px, -115px, 0px, 14px, 14px, 450px, 54px, '/_Images/sprites/ci-png-icons.png', 'icon-product-banner-up-white', );
+$icon-slider-control-left-name: 'icon-slider-control-left';
+$icon-slider-control-left-x: 134px;
+$icon-slider-control-left-y: 0px;
+$icon-slider-control-left-offset-x: -134px;
+$icon-slider-control-left-offset-y: 0px;
+$icon-slider-control-left-width: 26px;
+$icon-slider-control-left-height: 24px;
+$icon-slider-control-left-total-width: 450px;
+$icon-slider-control-left-total-height: 54px;
+$icon-slider-control-left-image: '/_Images/sprites/ci-png-icons.png';
+$icon-slider-control-left: (134px, 0px, -134px, 0px, 26px, 24px, 450px, 54px, '/_Images/sprites/ci-png-icons.png', 'icon-slider-control-left', );
+$icon-slider-control-right-name: 'icon-slider-control-right';
+$icon-slider-control-right-x: 165px;
+$icon-slider-control-right-y: 0px;
+$icon-slider-control-right-offset-x: -165px;
+$icon-slider-control-right-offset-y: 0px;
+$icon-slider-control-right-width: 26px;
+$icon-slider-control-right-height: 24px;
+$icon-slider-control-right-total-width: 450px;
+$icon-slider-control-right-total-height: 54px;
+$icon-slider-control-right-image: '/_Images/sprites/ci-png-icons.png';
+$icon-slider-control-right: (165px, 0px, -165px, 0px, 26px, 24px, 450px, 54px, '/_Images/sprites/ci-png-icons.png', 'icon-slider-control-right', );
+$icon-up-arrow-green-name: 'icon-up-arrow-green';
+$icon-up-arrow-green-x: 13px;
+$icon-up-arrow-green-y: 0px;
+$icon-up-arrow-green-offset-x: -13px;
+$icon-up-arrow-green-offset-y: 0px;
+$icon-up-arrow-green-width: 8px;
+$icon-up-arrow-green-height: 10px;
+$icon-up-arrow-green-total-width: 450px;
+$icon-up-arrow-green-total-height: 54px;
+$icon-up-arrow-green-image: '/_Images/sprites/ci-png-icons.png';
+$icon-up-arrow-green: (13px, 0px, -13px, 0px, 8px, 10px, 450px, 54px, '/_Images/sprites/ci-png-icons.png', 'icon-up-arrow-green', );
+$icon-view-grid-blue-name: 'icon-view-grid-blue';
+$icon-view-grid-blue-x: 227px;
+$icon-view-grid-blue-y: 0px;
+$icon-view-grid-blue-offset-x: -227px;
+$icon-view-grid-blue-offset-y: 0px;
+$icon-view-grid-blue-width: 29px;
+$icon-view-grid-blue-height: 27px;
+$icon-view-grid-blue-total-width: 450px;
+$icon-view-grid-blue-total-height: 54px;
+$icon-view-grid-blue-image: '/_Images/sprites/ci-png-icons.png';
+$icon-view-grid-blue: (227px, 0px, -227px, 0px, 29px, 27px, 450px, 54px, '/_Images/sprites/ci-png-icons.png', 'icon-view-grid-blue', );
+$icon-view-grid-grey-name: 'icon-view-grid-grey';
+$icon-view-grid-grey-x: 261px;
+$icon-view-grid-grey-y: 0px;
+$icon-view-grid-grey-offset-x: -261px;
+$icon-view-grid-grey-offset-y: 0px;
+$icon-view-grid-grey-width: 29px;
+$icon-view-grid-grey-height: 27px;
+$icon-view-grid-grey-total-width: 450px;
+$icon-view-grid-grey-total-height: 54px;
+$icon-view-grid-grey-image: '/_Images/sprites/ci-png-icons.png';
+$icon-view-grid-grey: (261px, 0px, -261px, 0px, 29px, 27px, 450px, 54px, '/_Images/sprites/ci-png-icons.png', 'icon-view-grid-grey', );
+$icon-view-list-blue-name: 'icon-view-list-blue';
+$icon-view-list-blue-x: 295px;
+$icon-view-list-blue-y: 0px;
+$icon-view-list-blue-offset-x: -295px;
+$icon-view-list-blue-offset-y: 0px;
+$icon-view-list-blue-width: 31px;
+$icon-view-list-blue-height: 27px;
+$icon-view-list-blue-total-width: 450px;
+$icon-view-list-blue-total-height: 54px;
+$icon-view-list-blue-image: '/_Images/sprites/ci-png-icons.png';
+$icon-view-list-blue: (295px, 0px, -295px, 0px, 31px, 27px, 450px, 54px, '/_Images/sprites/ci-png-icons.png', 'icon-view-list-blue', );
+$icon-view-list-grey-name: 'icon-view-list-grey';
+$icon-view-list-grey-x: 331px;
+$icon-view-list-grey-y: 0px;
+$icon-view-list-grey-offset-x: -331px;
+$icon-view-list-grey-offset-y: 0px;
+$icon-view-list-grey-width: 31px;
+$icon-view-list-grey-height: 27px;
+$icon-view-list-grey-total-width: 450px;
+$icon-view-list-grey-total-height: 54px;
+$icon-view-list-grey-image: '/_Images/sprites/ci-png-icons.png';
+$icon-view-list-grey: (331px, 0px, -331px, 0px, 31px, 27px, 450px, 54px, '/_Images/sprites/ci-png-icons.png', 'icon-view-list-grey', );
+$spritesheet-width: 450px;
+$spritesheet-height: 54px;
+$spritesheet-image: '/_Images/sprites/ci-png-icons.png';
+$spritesheet-sprites: ($icon-back-to-top-big, $icon-back-to-top, $icon-banner-area-control-left, $icon-banner-area-control-right, $icon-down-arrow-red, $icon-pin, $icon-product-banner-down-red, $icon-product-banner-down-white, $icon-product-banner-up-blue, $icon-product-banner-up-white, $icon-slider-control-left, $icon-slider-control-right, $icon-up-arrow-green, $icon-view-grid-blue, $icon-view-grid-grey, $icon-view-list-blue, $icon-view-list-grey, );
+$spritesheet: (450px, 54px, '/_Images/sprites/ci-png-icons.png', $spritesheet-sprites, );
+
+// The provided mixins are intended to be used with the array-like variables
+//
+// .icon-home {
+//   @include sprite-width($icon-home);
+// }
+//
+// .icon-email {
+//   @include sprite($icon-email);
+// }
+//
+// Example usage in HTML:
+//
+// `display: block` sprite:
+// <div class="icon-home"></div>
+//
+// To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+//
+// // CSS
+// .icon {
+//   display: inline-block;
+// }
+//
+// // HTML
+// <i class="icon icon-home"></i>
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+// The `sprites` mixin generates identical output to the CSS template
+//   but can be overridden inside of SCSS
+//
+// @include sprites($spritesheet-sprites);
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}

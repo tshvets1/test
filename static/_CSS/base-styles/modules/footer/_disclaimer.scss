@@ -1,0 +1,25 @@
+.disclaimer-section {
+  @include set-text-styles($footer-disclaimer-font...);
+  background-color: $footer-disclaimer-bg-color !important;
+
+  .wrapper {
+    border-top: 0;
+    padding: $footer-disclaimer-padding;
+  }
+
+  @media screen and (max-width: $tablet) {
+    @include set-text-styles($footer-disclaimer-tablet-font...);
+
+    .wrapper {
+      padding: $footer-disclaimer-tablet-padding;
+    }
+  }
+
+  @media screen and (max-width: $mobile) {
+    @include set-text-styles($footer-disclaimer-mobile-font...);
+
+    .wrapper {
+      padding: $footer-disclaimer-mobile-padding;
+    }
+  }
+}

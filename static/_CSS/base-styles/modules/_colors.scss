@@ -1,0 +1,268 @@
+@mixin inverse-section-bg($extend-class, $extend-class-hover: null, $extend-class-hover-alt: null) {
+  @each $color-theme in $color-themes {
+    @if (map_get($color-theme, inverseColor)) {
+      &[data-sectionbg="#{map_get($color-theme, theme)}"] {
+        @extend #{$extend-class};
+
+        @if (map_get($color-theme, inverseHoverColor) and $extend-class-hover-alt) {
+          @extend #{$extend-class-hover-alt};
+        } @else if ($extend-class-hover) {
+          @extend #{$extend-class-hover};
+        }
+      }
+    }
+  }
+}
+
+body {
+  background: $bg-default;
+}
+
+// COLOR BACKGROUNDS
+%section-bg {
+  @each $color-theme in $color-themes {
+    &[data-sectionbg=#{map_get($color-theme, theme)}] {
+      background-color: map_get($color-theme, bgColor);
+      @if (map_get($color-theme, noBorderColor) != true) {
+        border-color: map_get($color-theme, bgColor);
+      }
+    }
+  }
+}
+
+%section-bg-darken {
+  @each $color-theme in $color-themes {
+    &[data-sectionbg=#{map_get($color-theme, theme)}] {
+      background-color: darken(map_get($color-theme, bgColor), 5%);
+    }
+  }
+}
+
+%section-bg-transparent {
+  @each $color-theme in $color-themes {
+    &[data-sectionbg=#{map_get($color-theme, theme)}] {
+      background-color: rgba(map_get($color-theme, bgColor), $section-bg-opacity);
+    }
+  }
+}
+
+%inherit-section-bg {
+  @each $color-theme in $color-themes {
+    &[data-sectionbg=#{map_get($color-theme, theme)}] {
+      [data-inherit-sectionbg] {
+        $bgColor: map_get($color-theme, bgColor);
+        $bgSecondaryColor: map_get($color-theme, bgSecondaryColor);
+        background-color: if($bgSecondaryColor, $bgSecondaryColor, $bgColor);
+      }
+    }
+  }
+}
+
+%bg-color {
+  @extend %section-bg;
+}
+
+%bg-color-hover {
+  @each $color-theme in $color-themes {
+    &[data-sectionbg="#{map_get($color-theme, theme)}"]:hover {
+      background-color: darken(map_get($color-theme, bgColor), 5%);
+    }
+  }
+}
+
+%bg-color-darken-border {
+  @extend %bg-color;
+
+  @each $color-theme in $color-themes {
+    $color: if(
+        map_get($color-theme, useAlternativeBgColor),
+        map_get($color-theme, bgAltColor),
+        map_get($color-theme, bgColor)
+    );
+
+    &[data-sectionbg=#{map_get($color-theme, theme)}] {
+      border-color: darken($color, 10%);
+      &:after {
+        background-color: darken($color, 10%);
+      }
+    }
+  }
+}
+
+%section-bg-inverse-color {
+  color: $text-inverse-color;
+
+  a#{if($old-ie, ".not-cta-btn", ":not(.cta-btn)")} {
+    color: $color-link-inverse;
+  }
+
+  a.cta-link:after {
+    border-left-color: $color-link-inverse;
+  }
+}
+
+%section-bg-inverse-hover-color {
+  a#{if($old-ie, ".not-cta-btn", ":not(.cta-btn)")}:hover {
+    color: $color-link-inverse-hover;
+  }
+
+  a.cta-link:hover:after {
+    border-left-color: $color-link-inverse-hover;
+  }
+}
+
+%section-bg-inverse-hover-color-alt {
+  a#{if($old-ie, ".not-cta-btn", ":not(.cta-btn)")}:hover {
+    color: $color-link-inverse-hover-alt;
+  }
+
+  a.cta-link:hover:after {
+    border-left-color: $color-link-inverse-hover-alt;
+  }
+}
+
+//BUTTON-COLORS
+%button-bg {
+  @each $color-theme in $color-themes {
+    @if (map_get($color-theme, createButtonStyle) != false) {
+      $theme: map_get($color-theme, theme);
+      $bgColor: map_get($color-theme, bgColor);
+      $color: map_get($color-theme, textColor);
+
+      &.#{$theme} {
+        @include cta-btn-theme($bgColor, $color);
+      }
+    }
+  }
+
+  &.white,
+  &.white-orange {
+    @include cta-btn-theme($color-white, $color-secondary-5, darken($color-secondary-5, 10%),
+      $color-white, darken($color-secondary-5, 10%), darken($color-secondary-5, 15%));
+  }
+
+  &.white-rose {
+    @include cta-btn-theme($color-white, $color-secondary-6, darken($color-secondary-6, 10%),
+      $color-white, darken($color-secondary-6, 10%), darken($color-secondary-6, 15%));
+  }
+
+  &.white-green {
+    @include cta-btn-theme($color-white, $color-secondary-7, darken($color-secondary-7, 10%),
+      $color-white, darken($color-secondary-7, 10%), darken($color-secondary-7, 15%));
+  }
+}
+
+// ALTERNATING GREY BACKGROUND
+.section-default {
+  background-color: $bg-default !important;
+  border-color: $bg-default !important;
+
+  div[data-inherit-sectionbg="true"] {
+    background-color: $color-white !important;
+  }
+}
+
+.section-light {
+  background-color: $bg-light !important;
+  border-color: $bg-light !important;
+
+  div[data-inherit-sectionbg="true"] {
+    background-color: $bg-light !important;
+  }
+}
+
+.section-wrapper[data-sectionbg="alternate"] {
+  & div[data-inherit-sectionbg="true"] {
+    background-color: $bg-secondary;
+  }
+
+  &#{if($old-ie, ".nth-child-even", ":nth-child(even)")} {
+    background-color: $bg-light;
+    border-color: $bg-light;
+
+    & div[data-inherit-sectionbg="true"] {
+      background-color: $bg-light;
+    }
+
+    &[data-colored-header="true"] {
+      .hero__headline span {
+        @include inline-bg($bg-light);
+
+        @media screen and (max-width: $mobile) {
+          @include inline-bg-mobile($bg-light);
+        }
+      }
+    }
+  }
+}
+
+.home-page .hero-two-section,
+.secondary-hero {
+  ~ .section-wrapper[data-sectionbg="alternate"] {
+    &#{if($old-ie, ".nth-child-even", ":nth-child(even)")} {
+      background-color: $bg-default;
+      border-color: $bg-default;
+
+      &[data-colored-header="true"] {
+        .hero__headline span {
+          @include inline-bg($color-white);
+
+          @media screen and (max-width: $mobile) {
+            @include inline-bg-mobile($color-white);
+          }
+        }
+      }
+    }
+
+    &#{if($old-ie, ".nth-child-odd", ":nth-child(odd)")} {
+      background-color: $bg-light;
+      border-color: $bg-light;
+
+      &[data-colored-header="true"] {
+        .hero__headline span {
+          @include inline-bg($bg-light);
+
+          @media screen and (max-width: $mobile) {
+            @include inline-bg-mobile($bg-light);
+          }
+        }
+      }
+    }
+  }
+}
+
+// COLOR BACKGROUNDS
+.module-wrapper,
+.section-wrapper {
+  @extend %section-bg;
+
+  @include inverse-section-bg("%section-bg-inverse-color", "%section-bg-inverse-hover-color", "%section-bg-inverse-hover-color-alt");
+
+  &[data-sectionbg="blue"] {
+    .cta-btn {
+      @include cta-btn-theme($color-secondary-5, $color-white, $isDefaultTheme: true);
+    }
+  }
+}
+
+.section-wrapper {
+  @extend %inherit-section-bg;
+
+  &[data-sectionbg="default"][data-pointer="true"] {
+    border-color: $color-white;
+  }
+}
+
+.module-wrapper {
+  &[data-sectionbg="yellow"] {
+    .cta-btn {
+      @include cta-btn-theme($color-secondary-5, $color-white, $isDefaultTheme: true);
+    }
+  }
+}
+
+.cta-btn {
+  @extend %cta-btn;
+  @include cta-btn-theme($cta-btn-default-theme-options..., $isDefaultTheme: true);
+  @extend %button-bg;
+}

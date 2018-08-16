@@ -1,0 +1,93 @@
+{
+  "ResultsPerPage": "10",
+  "TotalResults": "135",
+  "ResultItems": [
+	{
+	  "Title": "ForexTrader",
+	  "Url": "ForexTrader",
+	  "TruncatedBodyWithHighlights": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, <em class='highlighted'>Customer Service</em> sed do eiusmod tempor incididunt ut labore et dolore."
+	},
+	{
+	  "Title": "Range of Markets",
+	  "Url": "Range of Markets",
+	  "TruncatedBodyWithHighlights": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, <em class='highlighted'>Customer Service</em> sed do eiusmod tempor incididunt ut labore et dolore."
+	},
+	{
+	  "Title": "ForexTrader Long Title Very Long Title",
+	  "Url": "ForexTrader",
+	  "TruncatedBodyWithHighlights": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, <em class='highlighted'>Customer Service</em> sed do eiusmod tempor incididunt ut labore et dolore."
+	},
+	{
+	  "Title": "Dealbook",
+	  "Url": "Dealbook",
+	  "TruncatedBodyWithHighlights": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, <em class='highlighted'>Customer Service</em> sed do eiusmod tempor incididunt ut labore et dolore."
+	},
+	{
+	  "Title": "Knowledge Center",
+	  "Url": "Knowledge Center",
+	  "TruncatedBodyWithHighlights": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, <em class='highlighted'>Customer Service</em> sed do eiusmod tempor incididunt ut labore et dolore."
+	},
+	{
+	  "Title": "ForexTrader",
+	  "Url": "ForexTrader",
+	  "TruncatedBodyWithHighlights": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, <em class='highlighted'>Customer Service</em> sed do eiusmod tempor incididunt ut labore et dolore."
+	},
+	{
+	  "Title": "Range of Markets",
+	  "Url": "Range of Markets",
+	  "TruncatedBodyWithHighlights": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, <em class='highlighted'>Customer Service</em> sed do eiusmod tempor incididunt ut labore et dolore."
+	},
+	{
+	  "Title": "ForexTrader",
+	  "Url": "ForexTrader",
+	  "TruncatedBodyWithHighlights": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, <em class='highlighted'>Customer Service</em> sed do eiusmod tempor incididunt ut labore et dolore."
+	},
+	{
+	  "Title": "Dealbook",
+	  "Url": "Dealbook",
+	  "TruncatedBodyWithHighlights": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, <em class='highlighted'>Customer Service</em> sed do eiusmod tempor incididunt ut labore et dolore."
+	},
+	{
+	  "Title": "Knowledge Center",
+	  "Url": "Knowledge Center",
+	  "TruncatedBodyWithHighlights": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, <em class='highlighted'>Customer Service</em> sed do eiusmod tempor incididunt ut labore et dolore."
+	},
+	{
+	  "Title": "ForexTrader",
+	  "Url": "ForexTrader",
+	  "TruncatedBodyWithHighlights": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, <em class='highlighted'>Customer Service</em> sed do eiusmod tempor incididunt ut labore et dolore."
+	},
+	{
+	  "Title": "Range of Markets",
+	  "Url": "Range of Markets",
+	  "TruncatedBodyWithHighlights": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, <em class='highlighted'>Customer Service</em> sed do eiusmod tempor incididunt ut labore et dolore."
+	},
+	{
+	  "Title": "ForexTrader",
+	  "Url": "ForexTrader",
+	  "TruncatedBodyWithHighlights": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, <em class='highlighted'>Customer Service</em> sed do eiusmod tempor incididunt ut labore et dolore."
+	}
+  ],
+  "FilterMe": [
+	{
+	  "Title": "Services",
+	  "Count": 30
+	},
+	{
+	  "Title": "Insights",
+	  "Count": 22
+	},
+	{
+	  "Title": "Education",
+	  "Count": 18
+	},
+	{
+	  "Title": "Why Us",
+	  "Count": 23
+	},
+	{
+	  "Title": "Support",
+	  "Count": 42
+	}
+  ]
+}

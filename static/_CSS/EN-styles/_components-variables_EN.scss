@@ -1,0 +1,27 @@
+//1 Header
+//  1.1 Header - Utility Nav
+//  1.2 Header - Secondary Nav
+//  1.3 Header - Primary Nav
+
+//1.1 Header - Utility Nav
+$utility-nav-bg-color: $color-white;
+$utility-nav-links-hover-bg-color: #d6dddd;
+$utility-nav-mobile-bg-color: $color-light-cool;
+
+$utility-nav-height: 94.5px;
+$utility-nav-dropdown-height: 29px;
+$utility-nav-logo-size: 148px 22px !default;
+$utility-nav-search-height: 24px !default;
+
+//1.3 Header - Primary Nav
+$primary-nav-bg-color: $color-light-cool;
+$primary-nav-overview-bg-color: transparent;
+$primary-nav-mobile-bg-color: $color-white;
+
+$primary-nav-sub-item-padding: 15px 14px;
+
+$primary-nav-height: 40px;
+$primary-nav-shrinked-nav-height: 40px;
+
+$primary-nav-item-trigger-font: 14 500 $primary-nav-height uppercase;
+$primary-nav-item-trigger-mobile-font: 14.5 700;

@@ -1,0 +1,56 @@
+//1.1 Fonts - font-face options
+
+$font-primary: "Open Sans", helvetica, arial, sans-serif;
+
+//1.1 Fonts - font-face options
+$font-face-options: (
+  font-path: "/_Fonts",
+  version: "1.10.13",
+  font-family: "Open Sans",
+  font-formats: "eot" "woff" "ttf",
+  options: (
+    (
+      font-weight: 300,
+      src-base-name: "OpenSans-Light"
+    ), (
+      font-weight: 300,
+      font-style: italic,
+      src-base-name: "OpenSans-LightItalic"
+    ), (
+      font-weight: 400,
+      src-base-name: "OpenSans-Regular"
+    ), (
+      font-weight: 400,
+      font-style: italic,
+      src-base-name: "OpenSans-Italic"
+    ), (
+      font-weight: 500,
+      src-base-name: "OpenSans-Regular"
+    ), (
+      font-weight: 500,
+      font-style: italic,
+      src-base-name: "OpenSans-Italic"
+    ), (
+      font-weight: 600,
+      src-base-name: "OpenSans-Semibold"
+    ), (
+      font-weight: 600,
+      font-style: italic,
+      src-base-name: "OpenSans-SemiboldItalic"
+    ), (
+      font-weight: bold,
+      src-base-name: "OpenSans-Bold"
+    ), (
+      font-weight: bold,
+      font-style: italic,
+      src-base-name: "OpenSans-BoldItalic"
+    ), (
+      font-weight: 800,
+      src-base-name: "OpenSans-ExtraBold"
+    ), (
+      font-weight: 800,
+      font-style: italic,
+      src-base-name: "OpenSans-ExtraBoldItalic"
+    )
+  )
+) !default;

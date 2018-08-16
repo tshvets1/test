@@ -1,0 +1,176 @@
+.multi-col-section[data-display-as="box"] {
+  $multi-col-box-color: null !default;
+
+  $multi-col-box-headline-margin: 0 0 30px !default;
+  $multi-col-box-img-margin: 20px 0 25px !default;
+  $multi-col-box-subtitle-margin: 0 0 10px !default;
+  $multi-col-box-description-margin: 10px 0 20px !default;
+  $multi-col-box-description-padding: null !default;
+  $multi-col-box-content-padding: 20px 5px !default;
+  $multi-col-box-img-max-height: null !default;
+  $multi-col-box-cta-link-font: 14 null 1.3 !default;
+
+  $multi-col-box-headline-tablet-margin: 0 0 35px !default;
+  $multi-col-box-col-tablet-margin: 0 0 20px !default;
+  $multi-col-box-col-tablet-padding: 0 70px !default;
+  $multi-col-box-img-tablet-margin: 5px 0 30px !default;
+  $multi-col-box-content-tablet-padding: 20px 0 0 0 !default;
+  $multi-col-box-img-after-tablet-padding: 0 !default;
+  $multi-col-box-img-tablet-max-width: 100% !default;
+
+  $multi-col-box-headline-mobile-margin: 0 0 17px !default;
+  $multi-col-box-col-mobile-padding: 0 20px !important !default;
+  $multi-col-box-col-mobile-margin: 0 0 10px !default;
+  $multi-col-box-content-mobile-padding: 10px 0 0 0 !default;
+  $multi-col-box-img-after-mobile-padding: null !default;
+  $multi-col-box-img-mobile-margin: 5px 0 15px !default;
+  $multi-col-box-img-mobile-max-width: null !default;
+
+  $multi-col-box-content-border: 1px solid $color-darker;
+
+  $multi-col-box-font: null !default;
+  $multi-col-box-headline-font: null !default;
+  $multi-col-box-subtitle-font: 18 null 1 !default;
+  $multi-col-box-description-font: null !default;
+
+  $multi-col-box-tablet-font: null null null null center !default;
+  $multi-col-box-headline-tablet-font: 32 400 null none center !default;
+  $multi-col-box-description-tablet-font: null !default;
+
+  $multi-col-box-headline-mobile-font: null !default;
+  $multi-col-box-description-mobile-font: null !default;
+  $multi-col-box-subtitle-mobile-font: null !default;
+
+  color: $multi-col-box-color;
+  @include set-text-styles($multi-col-box-font...);
+
+  .multi-col {
+    &__headline {
+      @include set-text-styles($multi-col-box-headline-font...);
+      margin: $multi-col-box-headline-margin;
+    }
+
+    &__img {
+      margin: $multi-col-box-img-margin;
+      max-height: $multi-col-box-img-max-height;
+    }
+
+    &__subtitle {
+      margin: $multi-col-box-subtitle-margin;
+      @include set-text-styles($multi-col-box-subtitle-font...);
+    }
+
+    &__description {
+      @include set-text-styles($multi-col-box-description-font...);
+      margin: $multi-col-box-description-margin;
+      padding: $multi-col-box-description-padding;
+
+      > :last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    &__content {
+      border: $multi-col-box-content-border;
+      padding: $multi-col-box-content-padding;
+
+      > .col {
+        border-left: $multi-col-box-content-border;
+
+        &:first-child {
+          border-left: none;
+        }
+      }
+    }
+  }
+
+  .cta-btn {
+    margin-top: 30px;
+  }
+
+  @media screen and (min-width: $mobile) {
+    .cta-link {
+      @include set-text-styles($multi-col-box-cta-link-font...);
+    }
+  }
+
+  @media screen and (max-width: $tablet) {
+    @include set-text-styles($multi-col-box-tablet-font...);
+
+    .multi-col {
+      &__headline {
+        @include set-text-styles($multi-col-box-headline-tablet-font...);
+        margin: $multi-col-box-headline-tablet-margin;
+      }
+
+      &__img {
+        position: static;
+        max-width: $multi-col-box-img-tablet-max-width;
+        margin: $multi-col-box-img-tablet-margin;
+
+        ~ * {
+          padding: $multi-col-box-img-after-tablet-padding;
+        }
+      }
+
+      &__description {
+        @include set-text-styles($multi-col-box-description-tablet-font...);
+      }
+
+      &__content {
+        padding: $multi-col-box-content-tablet-padding;
+
+        > .col {
+          margin: $multi-col-box-col-tablet-margin;
+          padding: $multi-col-box-col-tablet-padding;
+          float: left;
+          clear: none;
+          width: 50%;
+
+          &#{if($old-ie, ".nth-child-odd", ":nth-child(odd)")} {
+            border-left: none;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: $mobile) {
+    .multi-col {
+      &__content > .col {
+        padding: $multi-col-box-col-mobile-padding;
+      }
+
+      &__headline {
+        @include set-text-styles($multi-col-box-headline-mobile-font...);
+        margin: $multi-col-box-headline-mobile-margin;
+      }
+
+      &__subtitle {
+        @include set-text-styles($multi-col-box-subtitle-mobile-font...);
+      }
+
+      &__img {
+        max-width: $multi-col-box-img-mobile-max-width;
+        margin: $multi-col-box-img-mobile-margin;
+
+        ~ * {
+          padding: $multi-col-box-img-after-mobile-padding;
+        }
+      }
+
+      &__description {
+        @include set-text-styles($multi-col-box-description-mobile-font...);
+      }
+
+      &__content {
+        padding: $multi-col-box-content-mobile-padding;
+
+        > .col {
+          margin: $multi-col-box-col-mobile-margin;
+          padding: $multi-col-box-col-mobile-padding;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,31 @@
+.remodal.redirect-modal-section {
+  .divider {
+    text-transform: uppercase;
+    color: $color-darker;
+    position: absolute;
+    right: -10px;
+    top: 35%;
+    z-index: $defaultZIndex;
+    padding: $gutter 0;
+    background-color: $color-white;
+  }
+
+  .multi-col__description {
+    color: $color-darker;
+  }
+
+  @media screen and (max-width: $mobile) {
+    .multi-col__content > .col:first-child {
+      border-bottom: 1px solid $color-light;
+      margin-bottom: $gutter*3;
+    }
+
+    .divider {
+      position: relative;
+      top: inherit;
+      right: inherit;
+      bottom: -12px;
+      padding: 0 $gutter;
+    }
+  }
+}

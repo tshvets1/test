@@ -1,0 +1,123 @@
+.tooltip {
+  display: inline-block;
+  position: relative;
+  line-height: 1;
+  vertical-align: text-top;
+
+  .tooltip__content {
+    display: none;
+  }
+
+  &__content {
+    cursor: pointer;
+    color: $tooltip-color;
+
+    h2 {
+      @include set-text-styles($tooltip-h2-font...);
+      padding: $tooltip-h2-padding;
+      word-wrap: break-word;
+    }
+
+    p {
+      @include set-text-styles($tooltip-p-font...);
+      margin: 0;
+    }
+  }
+
+  &:after {
+    content: " ? ";
+    display: inline-block;
+    position: relative;
+    @include size($tooltip-size...);
+    @include set-text-styles($tooltip-icon-font...);
+    color: $tooltip-icon-color;
+    border: $tooltip-border;
+    border-radius: 50%;
+    vertical-align: middle;
+  }
+
+  &:hover {
+    &:after {
+      color: $tooltip-icon-hover-color;
+      border-color: $tooltip-icon-hover-color;
+    }
+  }
+
+  @media screen and (max-width: $mobile) {
+    &__content {
+      p {
+        @include set-text-styles($tooltip-p-mobile-font...);
+      }
+    }
+  }
+}
+
+.tooltipster {
+  $tooltipster-default-theme-bg-color: $color-white !default;
+  $tooltipster-error-theme-bg-color: $color-secondary-6 !default;
+
+  $tooltipster-error-theme-color: $color-white !default;
+
+  $tooltipster-default-theme-content-padding: 15px !default;
+  $tooltipster-data-theme-content-padding: 10px 15px !default;
+  $tooltipster-error-theme-margin: 14px 0 0 !default;
+  $tooltipster-error-theme-content-padding: 5px 10px !default;
+  $tooltipster-error-theme-arrow-width: 7px !default;
+  $tooltipster-error-theme-arrow-position: 10px !default;
+
+  $tooltipster-default-theme-border: solid 3px $color-grey !default;
+  $tooltipster-default-theme-mobile-border: solid 2px $color-grey !default;
+
+  $tooltipster-error-theme-content-font: 14 null 1.6 !default;
+
+  &-default, &-data-tooltip {
+    border: $tooltipster-default-theme-border;
+    background: $tooltipster-default-theme-bg-color;
+
+    @media screen and (max-width: $mobile) {
+      border: $tooltipster-default-theme-mobile-border;
+    }
+
+    .tooltipster-content {
+      overflow: hidden;
+      padding: $tooltipster-default-theme-content-padding;
+    }
+  }
+
+  &-data-tooltip {
+    .tooltipster-content {
+      padding: $tooltipster-data-theme-content-padding;
+    }
+  }
+
+  &-error {
+    background-color: $tooltipster-error-theme-bg-color;
+    color: $tooltipster-error-theme-color;
+
+    cursor: pointer;
+    margin: $tooltipster-error-theme-margin;
+    z-index: $tooltipZIndex;
+
+    .tooltipster-content {
+      @include set-text-styles($tooltipster-error-theme-content-font...);
+      padding: $tooltipster-error-theme-content-padding;
+    }
+
+    .tooltipster-arrow-top span,
+    .tooltipster-arrow-top-right span,
+    .tooltipster-arrow-top-left span {
+      border-left-width: $tooltipster-error-theme-arrow-width !important;
+      border-right-width: $tooltipster-error-theme-arrow-width !important;
+      border-top-width: $tooltipster-error-theme-arrow-width;
+      bottom: -$tooltipster-error-theme-arrow-width;
+    }
+
+    .tooltipster-arrow-top-right span {
+      right: $tooltipster-error-theme-arrow-position;
+    }
+
+    .tooltipster-arrow-top-left span {
+      left: $tooltipster-error-theme-arrow-position;
+    }
+  }
+}

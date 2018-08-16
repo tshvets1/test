@@ -1,0 +1,83 @@
+.hero-two-section[data-left-aligned="true"] {
+  @include set-text-styles($hero-two-section-left-aligned-font...);
+
+  .hero__headline {
+    margin-top: $hero-two-section-left-aligned-headline-margin;
+  }
+
+  &[data-carousel="true"] {
+    .hero__headline {
+      margin-top: $hero-two-section-left-aligned-data-carousel-headline-margin;
+    }
+  }
+
+  .multi-col {
+    &__headline {
+      @include set-text-styles($hero-two-section-left-aligned-multi-col-headline-font...);
+      margin-bottom: $hero-two-section-left-aligned-multi-col-headline-margin;
+    }
+
+    &__subheadline {
+      @include set-text-styles($hero-two-section-left-aligned-multi-col-subheadline-font...);
+      margin-top: $hero-two-section-left-aligned-multi-col-subheadline-margin;
+    }
+
+    &__list {
+      padding-bottom: $hero-two-section-left-aligned-multi-col-list-padding;
+    }
+
+    &__content {
+      .col{
+        margin-bottom: $hero-two-section-left-aligned-multi-col-content-col-margin;
+      }
+    }
+  }
+
+  @media screen and (max-width: $tablet) {
+    .hero__headline {
+      @include set-text-styles($hero-two-section-left-aligned-tablet-headline-font...);
+    }
+  }
+
+  @media screen and (max-width: $mobile) {
+    .wrapper {
+      @include set-text-styles($hero-two-section-left-aligned-mobile-wrapper-font...);
+    }
+
+    .hero__headline {
+      @include set-text-styles($hero-two-section-left-aligned-mobile-headline-font...);
+      margin: $hero-two-section-left-aligned-mobile-headline-margin;
+    }
+
+    .hero__subheadline {
+      @include set-text-styles($hero-two-section-left-aligned-subheadline-mobile-font...);
+      margin: $hero-two-section-left-aligned-subheadline-mobile-margin;
+    }
+
+    .multi-col {
+      &__headline {
+        @include set-text-styles($hero-two-section-left-aligned-multi-col-headline-mobile-font...);
+        margin-bottom: $hero-two-section-left-aligned-multi-col-headline-mobile-margin;
+      }
+
+      &__subheadline {
+        @include set-text-styles($hero-two-section-left-aligned-multi-col-subheadline-mobile-font...);
+        margin-top: $hero-two-section-left-aligned-multi-col-subheadline-mobile-margin;
+      }
+
+      &__list {
+        padding-bottom: $hero-two-section-left-aligned-multi-col-list-mobile-padding;
+      }
+
+      &__content {
+        .col{
+          margin-bottom:$hero-two-section-left-aligned-multi-col-content-col-mobile-margin;
+
+          &:last-child {
+            margin-bottom: $hero-two-section-left-aligned-multi-col-content-last-col-mobile-margin;
+          }
+        }
+      }
+    }
+  }
+}

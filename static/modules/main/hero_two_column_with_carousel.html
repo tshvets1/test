@@ -1,0 +1,777 @@
+<!--
+  {
+  "name": "2 Column Options - Carousel",
+  "status": "Complete",
+  "notes": ""
+  }
+-->
+
+<hr style="margin: 30px 0;">
+
+<div class="wrapper">
+	Left aligned + Carousel: Left aligned typography and CTA. Carouseling screenshots on right.
+</div>
+
+<section class="section-wrapper hero-two-section" data-sectionbg="alternate" style="" data-pointer="false"
+		 data-columns="2" data-left-aligned="true" data-carousel="true" data-slider-auto="false">
+	<div class="wrapper">
+		<div class="col">
+			<h1 class="hero__headline"><span>Lorem Ipsum</span></h1>
+			<div class="hero__subheadline">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.
+			</div>
+			<a href="#" class="cta-btn desktop-only">Lorem Ipsum</a>
+		</div>
+
+		<div class="col hero__media">
+			<div class="carousel">
+				<div class="slide no-transition">
+					<!--'/modules/main/demo_account_registration.html' - without div.demo-form wrapper-->
+					<script type="text/javascript">
+						var demoForm = {
+							"action": "index.html",
+							"method": "post",
+							/*"ajax": {
+							 "url": "index.html",
+							 "type": "post",
+							 //will try find global function with name "onDemoFormSubmit"
+							 "success": "onDemoFormSubmit",
+							 //will execute this function
+							 "error": function () {
+							 console.log("error posting data");
+							 }
+							 },*/
+							"html": [
+								{
+									type: "div",
+									html: {
+										"type": "hidden"
+									}
+								}, {
+									type: "div",
+									html: {
+										"id": "firstName",
+										"name": "firstName",
+										"label": "First Name",
+										"type": "text",
+										"validate": {
+											"required": true,
+											"minlength": 2,
+											"messages": {
+												"minlength": "test {0} test {1}"
+											}
+										}
+									}
+								},
+								{
+									type: "div",
+									html: {
+										"id": "surname",
+										"name": "surname",
+										"label": "Surname",
+										"type": "text"
+									}
+								},
+								{
+									type: "div",
+									html: {
+										"id": "email",
+										"name": "email",
+										"label": "Email",
+										"type": "email",
+										validate: {
+											email: true,
+											required: true
+										}
+									}
+								}, {
+									type: "div",
+									html: {
+										"name": "InternationalCode",
+										"type": "hidden"
+									}
+								},
+								{
+									"type": "div",
+									"dropdown": {
+										"name": "country",
+										"label": "Country",
+										"updateDependencyOnChange": {
+											inputName: "InternationalCode",
+											data: "Code"
+										},
+										"placeholder": "Select Country",
+										"validate": {
+											"required": true,
+											"messages": {
+												"required": "Country required"
+											}
+										},
+										//"defaultValue": "United States",
+										"options": [
+											{Name: "Name", Value: "", Code: "", isPlaceholder: "true"},
+											{Name: "Austria", Value: "Austria", Code: "9", PhoneFormat: "999-9999"},
+											{Name: "Azerbaijan", Value: "Azerbaijan", Code: "2"},
+											{Name: "Bahamas", Value: "Bahamas", Code: "3"},
+											{Name: "Bahrain", Value: "Bahrain", Code: "4"},
+											{Name: "Bangladesh", Value: "Bangladesh", Code: "5"},
+											{Name: "Barbados", Value: "Barbados", Code: "6"},
+											{
+												Name: "Belarus",
+												Value: "Belarus",
+												Code: "7",
+												PhoneFormat: "99-999-9999",
+												WsEntity: "EU",
+												WsEntityLang: "EN",
+												NotAvailable: "false"
+											},
+											{Name: "Belgium", Value: "Belgium", Code: "8"},
+											{Name: "Belize", Value: "Belize", Code: "9"},
+											{Name: "Ukraine", Value: "Ukraine", Code: "10"},
+											{Name: "United Arab Emirates", Value: "United Arab Emirates", Code: "11"},
+											{Name: "United Kindgom", Value: "United Kindgom", Code: "12"},
+											{Name: "United States", Value: "United States", Code: "13"}
+										],
+										conditions: {
+											"United States": {
+												dropdown: {
+													name: "state",
+													label: "State",
+													"placeholder": "Select State",
+													"chosenOptions": {
+														no_results_text: "Not Found!"
+													},
+													options: [
+														{Name: "", Value: ""},
+														{Name: "WA", Value: "Washington"},
+														{Name: "NY", Value: "New York"}
+													],
+													"validate": {
+														"required": true,
+														"messages": {
+															"required": "State required"
+														}
+													}
+												}
+											},
+											"Belarus": {
+												navigate: "https://en.wikipedia.org/wiki/Belarus"
+											},
+											"default": {
+												html: {
+													type: "text",
+													id: "city",
+													name: "city",
+													label: "City",
+													validate: {
+														required: true
+													}
+												}
+											}
+										}
+									}
+								},
+								{
+									type: "div",
+									html: {
+										"id": "phone",
+										"name": "phone",
+										"type": "tel",
+										"label": "Phone",
+										validate: {
+											pattern: /(^\d{3}-\d{3}-\d{4})$/,
+											required: true,
+											"messages": {
+												"pattern": "Invalid Phone. Required format: 999-999-9999"
+											}
+										}
+									}
+								}, {
+									"type": "div",
+									"hideByCookie": "adv,tracking",
+									"dropdown": {
+										"name": "Hear about us",
+										"label": "How did you hear about us?",
+										"validate": {
+											"required": true,
+											"messages": {"required": "Please select a category."}
+										},
+										"conditions": {
+											"Website/Online Ad": {
+												"mapname": "Website_map",
+												"dropdown": {
+													"validate": {
+														"required": true,
+														"messages": {"required": "Please tell us where you heard about us."}
+													},
+													"id": "044790a0-eeba-4292-9be8-081a127140fb",
+													"name": "Website",
+													"label": "",
+													"options": [{
+														"Name": "Which website?",
+														"Value": "",
+														"Id": "f4332ab4-8d21-4ba2-b672-7d302c39945a",
+														"Language": {"Name": "en"},
+														"Version": 1,
+														"Url": "/en-us/shared/components/data/form-fields-data/hear-about-us/website-online-ad/choose-an-option",
+														"TemplateId": "67d7213d-501e-45e9-848d-6080b27daae9"
+													}, {
+														"Name": "--------------------------",
+														"Value": "",
+														"Id": "1f0c3966-b733-4429-9a53-b87338ee5f52",
+														"Language": {"Name": "en"},
+														"Version": 1,
+														"Url": "/en-us/shared/components/data/form-fields-data/hear-about-us/website-online-ad/separator",
+														"TemplateId": "67d7213d-501e-45e9-848d-6080b27daae9"
+													}, {
+														"Name": "Acme Forex",
+														"Value": "DropDown.WebsiteOnline_Ad.Acme_Forex",
+														"Id": "55bf901c-4ea3-4227-82b4-1f805503b6f3",
+														"Language": {"Name": "en"},
+														"Version": 1,
+														"Url": "/en-us/shared/components/data/form-fields-data/hear-about-us/website-online-ad/acme-forex",
+														"TemplateId": "67d7213d-501e-45e9-848d-6080b27daae9"
+													}, {
+														"Name": "AboutCurrency.com",
+														"Value": "DropDown.WebsiteOnline_Ad.AboutCurrency",
+														"Id": "b94d5b1e-b579-4639-8a9b-bd1564ed6bda",
+														"Language": {"Name": "en"},
+														"Version": 1,
+														"Url": "/en-us/shared/components/data/form-fields-data/hear-about-us/website-online-ad/aboutcurrency",
+														"TemplateId": "67d7213d-501e-45e9-848d-6080b27daae9"
+													}, {
+														"Name": "Babypips.com",
+														"Value": "DropDown.WebsiteOnline_Ad.Babypips",
+														"Id": "f517c9b2-72a7-4911-8d93-cd63314636c6",
+														"Language": {"Name": "en"},
+														"Version": 1,
+														"Url": "/en-us/shared/components/data/form-fields-data/hear-about-us/website-online-ad/babypips",
+														"TemplateId": "67d7213d-501e-45e9-848d-6080b27daae9"
+													}, {
+														"Name": "DailyForex.com",
+														"Value": "DropDown.WebsiteOnline_Ad.DailyForex",
+														"Id": "912651ca-c48a-4ba8-81cf-58ff0246c685",
+														"Language": {"Name": "en"},
+														"Version": 1,
+														"Url": "/en-us/shared/components/data/form-fields-data/hear-about-us/website-online-ad/dailyforex",
+														"TemplateId": "67d7213d-501e-45e9-848d-6080b27daae9"
+													}, {
+														"Name": "eFXnews.com",
+														"Value": "DropDown.WebsiteOnline_Ad.eFXnews",
+														"Id": "de4a6ca2-ed40-46ca-8353-d798061f4fa1",
+														"Language": {"Name": "en"},
+														"Version": 1,
+														"Url": "/en-us/shared/components/data/form-fields-data/hear-about-us/website-online-ad/efxnews",
+														"TemplateId": "67d7213d-501e-45e9-848d-6080b27daae9"
+													}, {
+														"Name": "ForexBrokerz.com",
+														"Value": "DropDown.WebsiteOnline_Ad.ForexBrokerz",
+														"Id": "9adb2c70-10c8-4a1b-89e8-cc4691df8574",
+														"Language": {"Name": "en"},
+														"Version": 1,
+														"Url": "/en-us/shared/components/data/form-fields-data/hear-about-us/website-online-ad/forexbrokerz",
+														"TemplateId": "67d7213d-501e-45e9-848d-6080b27daae9"
+													}, {
+														"Name": "ForexCrunch.com",
+														"Value": "DropDown.WebsiteOnline_Ad.ForexCrunch",
+														"Id": "bcc847f6-3d35-4127-acd3-c57748582502",
+														"Language": {"Name": "en"},
+														"Version": 1,
+														"Url": "/en-us/shared/components/data/form-fields-data/hear-about-us/website-online-ad/forexcrunch",
+														"TemplateId": "67d7213d-501e-45e9-848d-6080b27daae9"
+													}, {
+														"Name": "ForexFactory.com",
+														"Value": "DropDown.WebsiteOnline_Ad.Forex_Factory",
+														"Id": "ed593a1f-b217-48d6-90be-836d453bdb7b",
+														"Language": {"Name": "en"},
+														"Version": 1,
+														"Url": "/en-us/shared/components/data/form-fields-data/hear-about-us/website-online-ad/forexfactory",
+														"TemplateId": "67d7213d-501e-45e9-848d-6080b27daae9"
+													}, {
+														"Name": "ForexNews.com",
+														"Value": "DropDown.WebsiteOnline_Ad.ForexNews",
+														"Id": "4c9fc2bb-eb74-49fa-8b21-f0857165e716",
+														"Language": {"Name": "en"},
+														"Version": 1,
+														"Url": "/en-us/shared/components/data/form-fields-data/hear-about-us/website-online-ad/forexnews",
+														"TemplateId": "67d7213d-501e-45e9-848d-6080b27daae9"
+													}, {
+														"Name": "Forex-Ratings.com",
+														"Value": "DropDown.WebsiteOnline_Ad.Forex-Ratings",
+														"Id": "7ca1a183-6ffb-4afc-b2e9-a17a28df93ca",
+														"Language": {"Name": "en"},
+														"Version": 1,
+														"Url": "/en-us/shared/components/data/form-fields-data/hear-about-us/website-online-ad/forex-ratings",
+														"TemplateId": "67d7213d-501e-45e9-848d-6080b27daae9"
+													}, {
+														"Name": "FXEmpire.com",
+														"Value": "DropDown.WebsiteOnline_Ad.FXEmpire",
+														"Id": "bc9b252d-e5d3-4846-9c02-e076411fbd4b",
+														"Language": {"Name": "en"},
+														"Version": 1,
+														"Url": "/en-us/shared/components/data/form-fields-data/hear-about-us/website-online-ad/fxempire",
+														"TemplateId": "67d7213d-501e-45e9-848d-6080b27daae9"
+													}, {
+														"Name": "Fxstreet.com",
+														"Value": "DropDown.WebsiteOnline_Ad.FxStreet",
+														"Id": "fd65a9eb-050e-4607-886d-72ec1ce4fe59",
+														"Language": {"Name": "en"},
+														"Version": 1,
+														"Url": "/en-us/shared/components/data/form-fields-data/hear-about-us/website-online-ad/fxstreet",
+														"TemplateId": "67d7213d-501e-45e9-848d-6080b27daae9"
+													}, {
+														"Name": "Investing.com",
+														"Value": "DropDown.WebsiteOnline_Ad.Investing",
+														"Id": "c833cbf3-df81-4994-ab5c-86c5ef8915f2",
+														"Language": {"Name": "en"},
+														"Version": 1,
+														"Url": "/en-us/shared/components/data/form-fields-data/hear-about-us/website-online-ad/investing",
+														"TemplateId": "67d7213d-501e-45e9-848d-6080b27daae9"
+													}, {
+														"Name": "MyFXBook.com",
+														"Value": "DropDown.WebsiteOnline_Ad.MyFXBook",
+														"Id": "a3eca54d-0678-4b90-92e8-343840b7d01d",
+														"Language": {"Name": "en"},
+														"Version": 1,
+														"Url": "/en-us/shared/components/data/form-fields-data/hear-about-us/website-online-ad/myfxbook",
+														"TemplateId": "67d7213d-501e-45e9-848d-6080b27daae9"
+													}, {
+														"Name": "Yahoo.com",
+														"Value": "DropDown.WebsiteOnline_Ad.Yahoo",
+														"Id": "e2d5a6ac-d041-4a8d-9806-8a638848fc9b",
+														"Language": {"Name": "en"},
+														"Version": 1,
+														"Url": "/en-us/shared/components/data/form-fields-data/hear-about-us/website-online-ad/yahoo",
+														"TemplateId": "67d7213d-501e-45e9-848d-6080b27daae9"
+													}, {
+														"Name": "Other Website",
+														"Value": "DropDown.WebsiteOnline_Ad.Other_Website",
+														"Id": "9c9c31e1-8213-42c4-8da9-db03caff8efe",
+														"Language": {"Name": "en"},
+														"Version": 1,
+														"Url": "/en-us/shared/components/data/form-fields-data/hear-about-us/website-online-ad/other-website",
+														"TemplateId": "67d7213d-501e-45e9-848d-6080b27daae9"
+													}]
+												}
+											},
+											"Search Engine": {
+												"mapname": "Website_map",
+												"dropdown": {
+													"validate": {
+														"required": true,
+														"messages": {"required": "Please tell us where you heard about us."}
+													},
+													"id": "044790a0-eeba-4292-9be8-081a127140fb",
+													"name": "Website",
+													"label": "",
+													"options": [{
+														"Name": "Which search engine?",
+														"Value": "",
+														"Id": "0fa73ed6-5c93-4b23-9205-504c5a7982d8",
+														"Language": {"Name": "en"},
+														"Version": 1,
+														"Url": "/en-us/shared/components/data/form-fields-data/hear-about-us/search-engine/choose-an-option",
+														"TemplateId": "67d7213d-501e-45e9-848d-6080b27daae9"
+													}, {
+														"Name": "--------------------------",
+														"Value": "",
+														"Id": "c6e51df5-7cdc-4739-a56b-61b1605120f1",
+														"Language": {"Name": "en"},
+														"Version": 1,
+														"Url": "/en-us/shared/components/data/form-fields-data/hear-about-us/search-engine/separator",
+														"TemplateId": "67d7213d-501e-45e9-848d-6080b27daae9"
+													}, {
+														"Name": "Bing",
+														"Value": "DropDown.Search_Engine.Bing/MSN",
+														"Id": "1ccfb4fc-8cbf-45a7-b7e3-85c8f5635a24",
+														"Language": {"Name": "en"},
+														"Version": 1,
+														"Url": "/en-us/shared/components/data/form-fields-data/hear-about-us/search-engine/bing",
+														"TemplateId": "67d7213d-501e-45e9-848d-6080b27daae9"
+													}, {
+														"Name": "Google",
+														"Value": "DropDown.Search_Engine.Google",
+														"Id": "c2be429e-59ec-4ec4-bd4e-c8c62203a818",
+														"Language": {"Name": "en"},
+														"Version": 1,
+														"Url": "/en-us/shared/components/data/form-fields-data/hear-about-us/search-engine/google",
+														"TemplateId": "67d7213d-501e-45e9-848d-6080b27daae9"
+													}, {
+														"Name": "Yahoo",
+														"Value": "DropDown.Search_Engine.Yahoo",
+														"Id": "3de0f3e5-168a-48e5-a68f-d5a06e739ed7",
+														"Language": {"Name": "en"},
+														"Version": 1,
+														"Url": "/en-us/shared/components/data/form-fields-data/hear-about-us/search-engine/yahoo",
+														"TemplateId": "67d7213d-501e-45e9-848d-6080b27daae9"
+													}, {
+														"Name": "Other Search Engine",
+														"Value": "DropDown.Search_Engine.Other_Search_Engine",
+														"Id": "8d552819-9fe9-48e1-8584-46a20ceee552",
+														"Language": {"Name": "en"},
+														"Version": 1,
+														"Url": "/en-us/shared/components/data/form-fields-data/hear-about-us/search-engine/other-search-engine",
+														"TemplateId": "67d7213d-501e-45e9-848d-6080b27daae9"
+													}]
+												}
+											},
+											"TV/Radio": {
+												"mapname": "Website_map",
+												"dropdown": {
+													"validate": {
+														"required": true,
+														"messages": {"required": "Please tell us where you heard about us."}
+													},
+													"id": "044790a0-eeba-4292-9be8-081a127140fb",
+													"name": "Website",
+													"label": "",
+													"options": [{
+														"Name": "Which TV/Radio?",
+														"Value": "",
+														"Id": "4b89eec0-40b4-490d-a388-7b47f2c88904",
+														"Language": {"Name": "en"},
+														"Version": 1,
+														"Url": "/en-us/shared/components/data/form-fields-data/hear-about-us/tv-radio/choose-an-option",
+														"TemplateId": "67d7213d-501e-45e9-848d-6080b27daae9"
+													}, {
+														"Name": "--------------------------",
+														"Value": "",
+														"Id": "2d9c8e6d-bb45-4529-9beb-eb8e0ba30def",
+														"Language": {"Name": "en"},
+														"Version": 1,
+														"Url": "/en-us/shared/components/data/form-fields-data/hear-about-us/tv-radio/separator",
+														"TemplateId": "67d7213d-501e-45e9-848d-6080b27daae9"
+													}, {
+														"Name": "Acme TV",
+														"Value": "DropDown.TV.Acme_TV",
+														"Id": "bdb948ae-93b2-4ce0-ada4-d1e0c18e7887",
+														"Language": {"Name": "en"},
+														"Version": 1,
+														"Url": "/en-us/shared/components/data/form-fields-data/hear-about-us/tv-radio/acme-tv",
+														"TemplateId": "67d7213d-501e-45e9-848d-6080b27daae9"
+													}, {
+														"Name": "Bloomberg Radio",
+														"Value": "DropDown.TV.Bloomberg_Radio",
+														"Id": "1ae35d4f-1c6e-4f6b-9a4c-05a7d5a916ee",
+														"Language": {"Name": "en"},
+														"Version": 1,
+														"Url": "/en-us/shared/components/data/form-fields-data/hear-about-us/tv-radio/bloomberg-radio",
+														"TemplateId": "67d7213d-501e-45e9-848d-6080b27daae9"
+													}, {
+														"Name": "Bloomberg TV",
+														"Value": "DropDown.TV.Bloomberg_TV",
+														"Id": "86a0e7da-a9f4-46f3-ad68-ba78f8df5f70",
+														"Language": {"Name": "en"},
+														"Version": 1,
+														"Url": "/en-us/shared/components/data/form-fields-data/hear-about-us/tv-radio/bloomberg-tv",
+														"TemplateId": "67d7213d-501e-45e9-848d-6080b27daae9"
+													}, {
+														"Name": "CNBC TV",
+														"Value": "DropDown.TV.CNBC_TV",
+														"Id": "2b752b13-b825-4969-9184-c859902ea258",
+														"Language": {"Name": "en"},
+														"Version": 1,
+														"Url": "/en-us/shared/components/data/form-fields-data/hear-about-us/tv-radio/cnbc",
+														"TemplateId": "67d7213d-501e-45e9-848d-6080b27daae9"
+													}, {
+														"Name": "CNN TV",
+														"Value": "DropDown.TV.CNN_TV",
+														"Id": "26be5473-6daa-4a0d-803c-32751c72f426",
+														"Language": {"Name": "en"},
+														"Version": 1,
+														"Url": "/en-us/shared/components/data/form-fields-data/hear-about-us/tv-radio/cnn-tv",
+														"TemplateId": "67d7213d-501e-45e9-848d-6080b27daae9"
+													}, {
+														"Name": "ESPN",
+														"Value": "DropDown.TV.ESPN",
+														"Id": "a5ed6b3c-bb79-4670-9dc8-b4cb26891956",
+														"Language": {"Name": "en"},
+														"Version": 1,
+														"Url": "/en-us/shared/components/data/form-fields-data/hear-about-us/tv-radio/espn",
+														"TemplateId": "67d7213d-501e-45e9-848d-6080b27daae9"
+													}, {
+														"Name": "G4",
+														"Value": "DropDown.TV.G4",
+														"Id": "0f9db9ae-1658-423e-abd7-edd88b9c79d9",
+														"Language": {"Name": "en"},
+														"Version": 1,
+														"Url": "/en-us/shared/components/data/form-fields-data/hear-about-us/tv-radio/g4",
+														"TemplateId": "67d7213d-501e-45e9-848d-6080b27daae9"
+													}, {
+														"Name": "History International",
+														"Value": "DropDown.TV.History_International",
+														"Id": "cca22700-e4c9-4327-a05b-e9f524e60614",
+														"Language": {"Name": "en"},
+														"Version": 1,
+														"Url": "/en-us/shared/components/data/form-fields-data/hear-about-us/tv-radio/history-international",
+														"TemplateId": "67d7213d-501e-45e9-848d-6080b27daae9"
+													}, {
+														"Name": "MSNBC",
+														"Value": "DropDown.TV.MSNBC_TV",
+														"Id": "d5cbd175-51a0-4e6f-a959-262b4559ed36",
+														"Language": {"Name": "en"},
+														"Version": 1,
+														"Url": "/en-us/shared/components/data/form-fields-data/hear-about-us/tv-radio/msnbc",
+														"TemplateId": "67d7213d-501e-45e9-848d-6080b27daae9"
+													}, {
+														"Name": "MSNBC TV",
+														"Value": "DropDown.TV.MSNBC_TV",
+														"Id": "58e2d8b4-d594-4389-89d9-fdb356796d82",
+														"Language": {"Name": "en"},
+														"Version": 1,
+														"Url": "/en-us/shared/components/data/form-fields-data/hear-about-us/tv-radio/msnbc-tv",
+														"TemplateId": "67d7213d-501e-45e9-848d-6080b27daae9"
+													}, {
+														"Name": "Other TV",
+														"Value": "DropDown.TV.Appearance",
+														"Id": "bd56f69d-df63-4396-ae6f-1beffceb6eee",
+														"Language": {"Name": "en"},
+														"Version": 1,
+														"Url": "/en-us/shared/components/data/form-fields-data/hear-about-us/tv-radio/other-tv",
+														"TemplateId": "67d7213d-501e-45e9-848d-6080b27daae9"
+													}, {
+														"Name": "TV Appearance",
+														"Value": "DropDown.TV.Appearance",
+														"Id": "21070e10-5eb9-4388-a0fb-cfe96ce0cf65",
+														"Language": {"Name": "en"},
+														"Version": 1,
+														"Url": "/en-us/shared/components/data/form-fields-data/hear-about-us/tv-radio/tv-appearance",
+														"TemplateId": "67d7213d-501e-45e9-848d-6080b27daae9"
+													}, {
+														"Name": "CNN",
+														"Value": "DropDown.TV.CNN_TV",
+														"Id": "4518675d-cdcb-4cf4-8c89-05d1c0a43782",
+														"Language": {"Name": "en"},
+														"Version": 1,
+														"Url": "/en-us/shared/components/data/form-fields-data/hear-about-us/tv-radio/cnn",
+														"TemplateId": "67d7213d-501e-45e9-848d-6080b27daae9"
+													}, {
+														"Name": "History International",
+														"Value": "DropDown.TV.History_International",
+														"Id": "cca22700-e4c9-4327-a05b-e9f524e60614",
+														"Language": {"Name": "en"},
+														"Version": 1,
+														"Url": "/en-us/shared/components/data/form-fields-data/hear-about-us/tv-radio/history-international",
+														"TemplateId": "67d7213d-501e-45e9-848d-6080b27daae9"
+													}]
+												}
+											},
+											"Word of Mouth": {
+												"mapname": "Website_map",
+												"dropdown": {
+													"validate": {
+														"required": true,
+														"messages": {"required": "Please tell us where you heard about us."}
+													},
+													"id": "044790a0-eeba-4292-9be8-081a127140fb",
+													"name": "Website",
+													"label": "",
+													"options": [{
+														"Name": "hello everyone",
+														"Value": "he",
+														"Id": "f924bc1a-00dc-4950-a704-210cce61fecc",
+														"Language": {"Name": "en"},
+														"Version": 1,
+														"Url": "/en-us/shared/components/data/form-fields-data/hear-about-us/word-of-mouth/new-child",
+														"TemplateId": "67d7213d-501e-45e9-848d-6080b27daae9"
+													}]
+												}
+											}
+										},
+										"id": "f3c40e4f-23bc-4c66-a1f2-bd193b75479e",
+										options: [{
+											"Name": "How did you hear about us?",
+											"Value": "",
+											"Id": "36145aa9-df11-4cc7-b44f-261b1fd48b59",
+											"Language": {"Name": "en"},
+											"Version": 1,
+											"Url": "/en-us/shared/components/data/form-fields-data/hear-about-us/choose-an-option",
+											"TemplateId": "67d7213d-501e-45e9-848d-6080b27daae9"
+										}, {
+											"Name": "--------------------------",
+											"Value": "",
+											"Id": "1e9fdf1a-a09a-4589-96e5-7f7f012c4396",
+											"Language": {"Name": "en"},
+											"Version": 1,
+											"Url": "/en-us/shared/components/data/form-fields-data/hear-about-us/separator",
+											"TemplateId": "67d7213d-501e-45e9-848d-6080b27daae9"
+										}, {
+											"Name": "Website/Online Ad",
+											"Value": "Website/Online Ad",
+											"Id": "d3de3ee0-bf55-403a-bba8-05bd17a07b8e",
+											"Language": {"Name": "en"},
+											"Version": 1,
+											"Url": "/en-us/shared/components/data/form-fields-data/hear-about-us/website-online-ad",
+											"TemplateId": "67d7213d-501e-45e9-848d-6080b27daae9"
+										}, {
+											"Name": "Search Engine",
+											"Value": "Search Engine",
+											"Id": "403086db-f0d4-4548-88c8-e07ac4224e56",
+											"Language": {"Name": "en"},
+											"Version": 1,
+											"Url": "/en-us/shared/components/data/form-fields-data/hear-about-us/search-engine",
+											"TemplateId": "67d7213d-501e-45e9-848d-6080b27daae9"
+										}, {
+											"Name": "TV/Radio",
+											"Value": "TV/Radio",
+											"Id": "74b512d7-fa5e-4493-b636-e10c7df0ae71",
+											"Language": {"Name": "en"},
+											"Version": 1,
+											"Url": "/en-us/shared/components/data/form-fields-data/hear-about-us/tv-radio",
+											"TemplateId": "67d7213d-501e-45e9-848d-6080b27daae9"
+										}, {
+											"Name": "Word of Mouth",
+											"Value": "DropDown..Word_Of_Mouth",
+											"Id": "040a452d-e25c-426e-b76b-1b411a6c76de",
+											"Language": {"Name": "en"},
+											"Version": 1,
+											"Url": "/en-us/shared/components/data/form-fields-data/hear-about-us/word-of-mouth",
+											"TemplateId": "67d7213d-501e-45e9-848d-6080b27daae9"
+										}]
+									}
+								},
+
+								{
+									"type": "buttonSubmit",
+									"value": "Submit"
+								}
+							]
+						};
+					</script>
+
+					<form id="demoForm1" data-dform-variable="demoForm">
+					</form>
+
+
+					<div class="demo-account__disclaimer" id="demoDisclaimer">
+						By submitting your telephone number you agree that FOREX.com can contact you to help you make
+						the
+						most of your demo account, and inform you about our products and services.
+
+						<div class="demo-account__rtf">
+							<a href="#">Demo Account Disclosure</a>
+							<a href="#">Legal Notice </a>
+							<a href="#">Privacy Policy</a>
+						</div>
+
+					</div>
+				</div>
+				<div class="slide no-transition" hidden>
+					<iframe width="460" height="259"
+							src="https://www.youtube.com/embed/rEnXEhSwhT8?rel=0&amp;showinfo=0" frameborder="0"
+							allowfullscreen></iframe>
+				</div >
+				<div class="slide no-transition" hidden>
+					<img src="/_Images/content-managed/team/listing1.png" alt="browser"/>
+				</div>
+			</div>
+		</div>
+		<a href="#" class="cta-btn mobile-only">CAll to action button</a>
+	</div>
+</section>
+
+<hr style="margin: 30px 0;">
+
+<div class="wrapper">
+	1 Col Module with Carousel: Left aligned typography and CTA. Carouseling screenshots on right.
+</div>
+
+<section class="section-wrapper generic-hero-section" data-columns="1" data-sectionbg="alternate" data-carousel="true"
+		 data-slider-auto="false">
+	<div class="wrapper">
+		<div class="carousel">
+			<section class="section-wrapper hero-two-section" data-sectionbg="" style="" data-columns="2">
+				<div class="wrapper">
+					<div class="col">
+						<h1 class="hero__headline"><span>Video</span></h1>
+						<div class="hero__subheadline">
+							Lorem ipsum dolor sit amet, contsectetur adipisicing elit, sed do eiusmod tempor incididunt
+							ut
+							labore et dolore magna.
+						</div>
+						<a href="#" class="cta-btn">Open an Account</a>
+					</div>
+
+					<div class="col hero__media" data-img-align="default" data-mobile-img="true">
+
+						<iframe width="460" height="259"
+								src="https://www.youtube.com/embed/rEnXEhSwhT8?rel=0&amp;showinfo=0"
+								frameborder="0" allowfullscreen></iframe>
+
+					</div>
+
+				</div>
+			</section>
+			<section class="section-wrapper hero-two-section" data-sectionbg="" hidden data-columns="2">
+				<div class="wrapper" data-function="matchHeights">
+					<div class="col">
+						<h1 class="hero__headline"><span>Demo Form</span></h1>
+						<div class="hero__subheadline">
+							Lorem ipsum dolor sit amet, contsectetur adipisicing elit, sed do eiusmod tempor incididunt
+							ut
+							labore et dolore magna.
+						</div>
+						<a href="#" class="cta-btn">Open an Account</a>
+					</div>
+
+					<div class="col" data-img-align="default" data-mobile-img="true">
+
+
+						@@include('/modules/main/demo_account_registration.html')
+
+
+					</div>
+
+				</div>
+			</section>
+			<section class="section-wrapper hero-two-section" data-sectionbg="" hidden style="" data-columns="2">
+				<div class="wrapper" data-function="matchHeights">
+					<div class="col">
+
+						<h1 class="hero__headline"><span>Image Aligned Center (default)</span></h1>
+						<div class="hero__subheadline">
+							Lorem ipsum dolor sit amet, contsectetur adipisicing elit, sed do eiusmod tempor incididunt
+							ut
+							labore et dolore magna.
+						</div>
+						<a href="#" class="cta-btn desktop-only">Open an Account</a>
+
+					</div>
+
+					<div class="col hero__media" data-img-align="default" data-mobile-img="true">
+
+						<img src="/_Images/content-managed/callouts/nav_callout_live_chat.png"
+							 alt="Available on multiple platforms and devices">
+
+						<a href="#" class="cta-btn mobile-only">Open an Account</a>
+					</div>
+				</div>
+			</section>
+			<section class="section-wrapper hero-two-section" data-sectionbg="" hidden style="" data-columns="2">
+				<div class="wrapper">
+					<div class="col">
+						<div class="hero__subheadline">
+							Lorem ipsum dolor sit amet, contsectetur adipisicing elit, sed do eiusmod tempor incididunt
+							ut
+							labore et
+							dolore magna.
+						</div>
+						<h1 class="hero__headline"><span>Current Rates</span></h1>
+						<a href="#" class="cta-btn">Open an Account</a>
+
+					</div>
+
+					<div class="col hero__media" data-img-align="default" data-mobile-img="true">
+
+						@@include('/modules/main/current_rates_2col_module.html')
+
+					</div>
+				</div>
+			</section>
+		</div>
+	</div>
+</section>
+
+<hr style="margin: 30px 0;">
+
+@@include('/modules/main/hero_two_column_with_carousel_full.html')

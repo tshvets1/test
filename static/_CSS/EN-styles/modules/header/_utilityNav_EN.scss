@@ -1,0 +1,20 @@
+@media screen and (min-width: $tablet + 1) {
+  .utility-nav {
+    &__links-mobile &__logo {
+      float: left;
+      display: table;
+      height: $utility-nav-height;
+      line-height: 0;
+
+      & > a {
+        @include size($utility-nav-logo-size...);
+        display: table-cell;
+        vertical-align: middle;
+      }
+    }
+
+    &__links {
+      float: right;
+    }
+  }
+}

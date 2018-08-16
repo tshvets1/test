@@ -1,0 +1,186 @@
+$team-listing-header-color: $color-primary-3 !default;
+$team-listing-header-padding: 40px 0 !default;
+$team-listing-header-mobile-padding: 40px 0 10px !default;
+
+$team-listing-header-font: 44 !default;
+$team-listing-header-mobile-font: 25 !default;
+
+$team-listing-member-margin: 70px 0 !default;
+$team-listing-member-img-max-width: 230px !default;
+$team-listing-member-img-max-height: 300px !default;
+$team-listing-member-img-margin: 0 90px 0 0 !default;
+$team-listing-member-img-alt-margin: 0 0 0 90px !default;
+
+$team-listing-member-img-tablet-margin: 0 20px 0 0 !default;
+$team-listing-member-img-alt-tablet-margin: 0 0 0 20px !default;
+
+$team-listing-member-mobile-margin: 30px 0 !default;
+$team-listing-member-img-mobile-max-width: 572px !default;
+$team-listing-member-img-mobile-margin: 10px auto !default;
+
+$team-listing-member-name-font: 20 500 !default;
+$team-listing-member-title-font: 16 400 !default;
+
+$team-listing-member-name-mobile-font: 16 700 !default;
+$team-listing-member-title-mobile-font: 14 !default;
+
+$team-listing-recent-article-title-color: $color-primary-3 !default;
+$team-listing-recent-article-margin: 35px 0 15px !default;
+$team-listing-recent-article-padding: 15px 0 !default;
+
+$team-listing-recent-article-border: solid 1px $color-light !default;
+
+$team-listing-recent-article-title-font: 20 !default;
+$team-listing-recent-article-date-font: 12 null null uppercase !default;
+$team-listing-recent-article-title-mobile-font: null null 1.25 !default;
+
+.page-header {
+  padding: $team-listing-header-padding;
+  text-align: center;
+
+  &__headline {
+    @include set-text-styles($team-listing-header-font...);
+    color: $team-listing-header-color;
+  }
+}
+
+.member {
+  margin: $team-listing-member-margin;
+
+  &__image {
+    position: relative;
+    float: left;
+
+    img {
+      position: relative;
+      max-height: $team-listing-member-img-max-height;
+      max-width: $team-listing-member-img-max-width;
+      margin: $team-listing-member-img-margin;
+    }
+  }
+
+  &__info {
+    overflow: hidden;
+  }
+
+  &__name {
+    @include set-text-styles($team-listing-member-name-font...);
+  }
+
+  &__title {
+    display: block;
+    @include set-text-styles($team-listing-member-title-font...);
+    font-style: normal;
+  }
+}
+
+.additional-authors {
+  .member#{if($old-ie, ".nth-child-even", ":nth-child(even)")} {
+    .member__image {
+      float: right;
+
+      img {
+        margin: $team-listing-member-img-alt-margin;
+      }
+    }
+  }
+}
+
+// RECENT ARTICLE 
+.recent-article {
+  margin: $team-listing-recent-article-margin;
+  padding: $team-listing-recent-article-padding;
+  border-bottom: $team-listing-recent-article-border;
+  border-top: $team-listing-recent-article-border;
+
+  &__title {
+    display: block;
+    @include set-text-styles($team-listing-recent-article-title-font...);
+    color: $team-listing-recent-article-title-color;
+    text-decoration: none;
+  }
+
+  &__date {
+    @include set-text-styles($team-listing-recent-article-date-font...);
+  }
+}
+
+// TABLET LAYOUT
+@media screen and (max-width: $tablet) {
+  .member {
+    &__image {
+      img {
+        margin: $team-listing-member-img-tablet-margin;
+      }
+    }
+  }
+
+  .additional-authors {
+    .member:nth-child(even) {
+      .member__image {
+        margin: $team-listing-member-img-alt-tablet-margin;
+      }
+    }
+  }
+}
+
+// MOBILE LAYOUT
+@media screen and (max-width: $mobile) {
+  .page-header {
+    padding: $team-listing-header-mobile-padding;
+    &__headline {
+      @include set-text-styles($team-listing-header-mobile-font...);
+    }
+  }
+
+  .member {
+    margin: $team-listing-member-mobile-margin;
+
+    &__info {
+      overflow: visible;
+    }
+
+    &__image {
+      position: relative;
+      float: none;
+      max-width: $team-listing-member-img-mobile-max-width;
+      overflow: hidden;
+      margin: $team-listing-member-img-mobile-margin;
+
+      img {
+        display: block;
+        max-width: 100%;
+        max-height: none;
+        margin: 0 auto;
+      }
+    }
+
+    &__name {
+      @include set-text-styles($team-listing-member-name-mobile-font...);
+    }
+
+    &__title {
+      @include set-text-styles($team-listing-member-title-mobile-font...);
+    }
+  }
+
+  .additional-authors {
+    .member:nth-child(even) {
+      .member__image {
+        float: none;
+        margin: $team-listing-member-img-mobile-margin;
+        img {
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+
+  .recent-article__title {
+    @include set-text-styles($team-listing-recent-article-title-mobile-font...);
+  }
+
+  .additional-option {
+    padding-bottom: $gutter*3;
+  }
+}

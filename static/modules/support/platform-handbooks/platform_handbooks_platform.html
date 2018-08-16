@@ -1,0 +1,44 @@
+<!--
+  {
+  "name": "Platform Handbooks - Platform Item",
+  "status": "Complete",
+  "notes": ""
+  }
+-->
+
+<h2 class="platform-handbooks__platform-headline mobile-only">@@headline</h2>
+
+<ul class="platform-handbooks__anchor-list">
+	<li><a data-scroll-to-element="#rangeOfMarkets">Range of Markets</a></li>
+	<li><a data-scroll-to-element="#tradingHours">Trading Hours</a></li>
+	<li><a data-scroll-to-element="#fees">Fees</a></li>
+	<li><a data-scroll-to-element="#margin">Margin</a></li>
+	<li><a data-scroll-to-element="#requirements">Requirements</a></li>
+	<li><a href="#">Liquidations</a></li>
+	<li><a href="#">Client Money</a></li>
+	<li><a href="#">Trade Executions</a></li>
+	<li><a href="#">Order Types</a></li>
+	<li><a href="#">Rollovers (Forex)</a></li>
+	<li><a href="#">Products & Trading</a></li>
+	<li><a href="#">Phone Trading</a></li>
+	<li><a href="#">Order Expiry</a></li>
+	<li><a href="#">Funding & Withdrawals</a></li>
+	<li><a href="#">System Requirements</a></li>
+	<li><a href="#">Trading Tools</a></li>
+	<li><a href="#">Platform Information</a></li>
+</ul>
+
+<div class="platform-handbooks__items">
+	@@include('/modules/support/platform-handbooks/platform_handbooks_item.html', {"itemId":
+	"rangeOfMarkets", "headline": "Range of Markets"})
+	@@include('/modules/support/platform-handbooks/platform_handbooks_item.html', {"itemId":
+	"tradingHours",
+	"headline": "Trading Hours"})
+	@@include('/modules/support/platform-handbooks/platform_handbooks_item.html', {"itemId": "fees",
+	"headline": "Fees"})
+	@@include('/modules/support/platform-handbooks/platform_handbooks_item.html', {"itemId": "margin",
+	"headline": "Margin"})
+	@@include('/modules/support/platform-handbooks/platform_handbooks_item.html', {"itemId":
+	"requirements",
+	"headline": "Requirements"})
+</div>

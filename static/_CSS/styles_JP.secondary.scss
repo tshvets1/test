@@ -1,0 +1,7 @@
+$old-ie: false !default;
+$is-main: false !default;
+$is-secondary: true !default;
+
+@import "JP-styles/variables_JP";
+@import "base-styles/sprites/icons";
+@import "base-styles/index.secondary";

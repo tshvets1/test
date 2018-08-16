@@ -1,0 +1,107 @@
+.client-sentiment {
+  &__headline {
+    margin: $client-sentiment-headline-margin;
+    @include set-text-styles($client-sentiment-headline-font...);
+  }
+
+  &__legend-item {
+    padding: $client-sentiment-legend-item-padding;
+
+    &-headline {
+      @include set-text-styles($client-sentiment-legend-headline-font...);
+    }
+
+    &-description {
+      @include set-text-styles($client-sentiment-legend-description-font...);
+    }
+  }
+
+  &__sentiment {
+    display: block;
+    position: relative;
+    @include size($client-sentiment-sentiment-size...);
+    margin: $client-sentiment-sentiment-margin;
+    text-align: center;
+
+    &-text {
+      position: absolute;
+      z-index: $defaultZIndex;
+      width: $client-sentiment-sentiment-text-width;
+      margin: $client-sentiment-sentiment-text-margin;
+      color: $client-sentiment-sentiment-text-color;
+
+      span {
+        @include set-text-styles($client-sentiment-sentiment-sub-text-font...);
+        display: block;
+      }
+
+      span:first-child {
+        @include set-text-styles($client-sentiment-sentiment-text-font...);
+        display: block;
+      }
+    }
+  }
+
+  //TABLET ONLY
+  @media screen and (max-width: $tablet) and (min-width: $mobile) {
+    &__headline {
+      margin: $client-sentiment-headline-tablet-margin;
+      @include set-text-styles($client-sentiment-headline-tablet-font...);
+    }
+
+    &__legend,
+    &__sentiment {
+      display: table-cell;
+      vertical-align: middle;
+    }
+
+    &__legend {
+      padding: $client-sentiment-legend-tablet-padding;
+    }
+
+    &__sentiment {
+      padding: $client-sentiment-sentiment-tablet-padding;
+    }
+  }
+
+  @media screen and (max-width: $mobile) {
+    &__headline {
+      margin: $client-sentiment-headline-mobile-margin;
+      @include set-text-styles($client-sentiment-headline-mobile-font...);
+    }
+
+    &__sentiment {
+      @include size($client-sentiment-sentiment-mobile-size...);
+      margin: $client-sentiment-sentiment-mobile-margin;
+
+      &-text {
+        width: $client-sentiment-sentiment-text-mobile-width;
+        margin: $client-sentiment-sentiment-text-mobile-margin;
+
+        span {
+          @include set-text-styles($client-sentiment-sentiment-sub-text-mobile-font...);
+        }
+
+        span:first-child {
+          @include set-text-styles($client-sentiment-sentiment-text-mobile-font...);
+        }
+      }
+    }
+
+    &__legend {
+      padding: $client-sentiment-legend-mobile-padding;
+    }
+
+    &__legend-item {
+      padding: $client-sentiment-legend-item-mobile-padding;
+
+      &-headline {
+        @include set-text-styles($client-sentiment-legend-headline-mobile-font...);
+      }
+
+      &-description {
+        @include set-text-styles($client-sentiment-legend-description-mobile-font...);
+      }
+    }
+  }
+}

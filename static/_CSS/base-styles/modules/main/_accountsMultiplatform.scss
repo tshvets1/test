@@ -1,0 +1,164 @@
+.section-wrapper {
+  .wrapper[data-multiplatform="true"] {
+    &:after {
+      display: none;
+    }
+
+    .rtf {
+      p {
+        @include rem(font-size, 20);
+      }
+    }
+  }
+}
+
+.hero-section .multipromo-section {
+  position: relative;
+  float: left;
+  width: 100%;
+  margin: 0 0 $gutter*4;
+  z-index: $defaultZIndex;
+
+  &:after,
+  .wrapper:after {
+    display: none;
+  }
+  .wrapper {
+    padding: 0;
+  }
+
+  a:not(.cta-btn):not(.cta-link) {
+    color: $color-link;
+  }
+}
+
+.try-demo {
+  padding: $gutter*2 0;
+}
+
+// PROMO ITEM (PLATFORM ACCOUNT TYPE)
+.promo-item {
+  position: relative;
+  padding: $gutter*4 $gutter*7;
+  color: $color-darker;
+  text-align: center;
+  background: $color-white;
+
+  &:first-child {
+    border-right: solid 1px $color-light;
+  }
+
+  &__featured {
+    position: absolute;
+    top: 0;
+    left: $gutter*4;
+    height: 70px;
+    width: 55px;
+    overflow: hidden;
+  }
+
+  &__title {
+    @include rem(font-size, 30);
+    line-height: 1.2;
+    color: $color-primary-3;
+    margin-bottom: $gutter*2;
+
+  }
+
+  a:not(.cta-btn) {
+    color: $color-primary-3 !important;
+    &:after {
+      border-left-color: $color-primary-3 !important;
+    }
+
+    &:hover {
+      color: $color-secondary-7 !important;
+      &:after {
+        border-left-color: $color-secondary-7 !important;
+      }
+    }
+  }
+}
+
+// PROMO ITEM LAYOUT
+[data-columns="2"] {
+  .promo-item {
+    float: left;
+    width: 50%;
+  }
+}
+
+[data-columns="3"] {
+  .promo-item {
+    float: left;
+    width: 33.33%;
+  }
+}
+
+@media screen and (max-width: $mobile) {
+  .section-wrapper {
+    .wrapper {
+      //todo: check with marketing PSD vs. Prod
+      &[data-multiplatform="false"] .cta-btn {
+        display: inline-block;
+        width: auto;
+      }
+
+      &[data-multiplatform="true"] .cta-btn {
+        display: block;
+      }
+    }
+  }
+  .hero-section .multipromo-section {
+    float: none;
+    .wrapper {
+      padding: $gutter*3 0 0;
+      margin-left: -$gutter*1.7;
+      margin-right: -$gutter*1.7;
+    }
+
+  }
+
+  .try-demo {
+    padding: $gutter 0;
+  }
+
+  // PROMO ITEM (PLATFORM ACCOUNT TYPE)
+  .promo-item {
+    &__featured {
+      left: 50px;
+      height: 50px;
+      width: 36px;
+    }
+
+    &__title {
+      @include rem(font-size, 25);
+    }
+  }
+
+  // PROMO ITEM LAYOUT
+  [data-columns="2"],
+  [data-columns="3"] {
+    .promo-item {
+      float: none;
+      width: 100%;
+      padding: $gutter*3 $gutter*1.7;
+
+      &:after {
+        content: " ";
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 17px;
+        left: 17px;
+        border-top: solid 1px $color-light;
+      }
+
+      &:first-child {
+        &:after {
+          display: none;
+        }
+      }
+    }
+  }
+}

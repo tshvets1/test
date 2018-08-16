@@ -1,0 +1,226 @@
+.topic {
+  $topic-padding: 0 0 30px !default;
+  $topic-even-section-bg-color: $color-lighter !default;
+  $topic-back-to-top-position: null 10px 0 !default;
+  $topic-back-to-top-font: 0 !default;
+  $topic-headline-font: 40 400 1.136 !default;
+  $topic-content-font: 15 null 1.5 !default;
+  $topic-filter-border: 1px $color-medium solid !default;
+  $topic-filter-headline-font: 16 600 null uppercase !default;
+  $topic-filter-headline-font-color: $color-darker !default;
+  $topic-filter-item-headline-font: null null 1.15 !default;
+  $topic-filter-item-subheadline-font: 10 700 null uppercase !default;
+  $topic-filter-item-subheadline-font-color: $color-dark !default;
+  $topic-filter-item-hover-headlines-font-color: $color-secondary-7 !default;
+
+  $topic-section-mobile-bg-color: $color-white !important !default;
+  $topic-mobile-headline-font: 25 !default;
+  $topic-mobile-headline-border: 1px $color-light solid !default;
+  $topic-mobile-content-font: 14 !default;
+  $topic-mobile-filter-border: 0 !default;
+  $topic-mobile-filter-item-font: 17 !default;
+  $topic-mobile-filter-item-subheadline-font: 11 !default;
+  $topic-mobile-filter-headline-font: 17 700 !default;
+
+  &-section {
+    padding: $topic-padding;
+
+    &#{if($old-ie, ".nth-of-type-even", ":nth-of-type(even)")} {
+      background-color: $topic-even-section-bg-color;
+    }
+  }
+
+  &__back-to-top {
+    position: absolute;
+    @include position($topic-back-to-top-position...);
+    @include set-text-styles($topic-back-to-top-font...);
+    background: no-repeat;
+    @include sprite($icon-back-to-top);
+  }
+
+  &__main {
+    width: 33.336%;
+    float: left;
+    padding-top: $gutter*5;
+    padding-right: $gutter*3;
+  }
+
+  &__filters {
+    width: 66.663%;
+    float: left;
+    padding: 50px 0 45px;
+  }
+
+  &__headline {
+    @include set-text-styles($topic-headline-font...);
+    padding-bottom: $gutter*2.6;
+  }
+
+  &__content {
+    @include set-text-styles($topic-content-font...);
+    padding-bottom: $gutter*2.4;
+  }
+
+  &__filter {
+    border-top: $topic-filter-border;
+    overflow: auto;
+    padding-top: $gutter*3.5;
+    margin-top: $gutter;
+    position: relative;
+
+    &:first-child {
+      border-top: 0;
+      padding-top: 0;
+      margin-top: 0;
+    }
+
+    &-headline {
+      @include set-text-styles($topic-filter-headline-font...);
+      color: $topic-filter-headline-font-color;
+      position: absolute;
+      padding: $gutter 0;
+    }
+
+    &-items {
+      @extend %list--unstyled;
+      padding-top: $gutter*4;
+      padding-bottom: $gutter*2;
+      overflow: auto;
+    }
+
+    &-item {
+      width: 50%;
+      float: left;
+      position: relative;
+      padding-bottom: $gutter;
+      padding-left: $gutter*2;
+
+      [class^="media"] {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      &#{if($old-ie, ".nth-child-odd", ":nth-child(odd)")} {
+        padding-right: $gutter*2;
+        clear: left;
+      }
+
+      &-wrapper {
+        display: block;
+        padding: 0 0 0 $gutter*2;
+      }
+
+      &-headline {
+        @include set-text-styles($topic-filter-item-headline-font...);
+        position: relative;
+        display: block;
+        text-decoration: none;
+      }
+
+      &-sub-headline {
+        @include set-text-styles($topic-filter-item-subheadline-font...);
+        color: $topic-filter-item-subheadline-font-color;
+        @include transition(color, $transitionDurationAndEffect);
+      }
+
+      &:hover &-headline,
+      &:hover &-sub-headline {
+        color: $topic-filter-item-hover-headlines-font-color;
+      }
+    }
+  }
+
+  //TABLET
+  @media screen and (max-width: $tablet) {
+    &__back-to-top {
+      right: 50px;
+    }
+
+    &__main {
+      width: 100%;
+      margin-bottom: $gutter*4;
+    }
+
+    &__filters {
+      width: 100%;
+      padding-top: 0;
+      padding-left: 0;
+
+      &-headline {
+        padding-left: 0;
+      }
+    }
+  }
+
+  //MOBILE
+  @media screen and (max-width: $mobile) {
+    &-section {
+      background-color: $topic-section-mobile-bg-color;
+    }
+
+    &__back-to-top {
+      display: none;
+    }
+
+    &__main {
+      padding-top: 0;
+      padding-right: 0;
+      margin-bottom: $gutter*2;
+    }
+
+    &__headline {
+      @include set-text-styles($topic-mobile-headline-font...);
+      border-bottom: $topic-mobile-headline-border;
+      padding-bottom: $gutter;
+      margin-bottom: $gutter;
+    }
+
+    &__filters {
+      padding: 0;
+    }
+
+    &__filter {
+      margin-top: 0;
+      padding-top: 0;
+      border-top: $topic-mobile-filter-border;
+
+      &-item {
+        @include set-text-styles($topic-mobile-filter-item-font...);
+        width: 100%;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+
+        [class^="media"] {
+          left: 0 !important;
+        }
+
+        &-wrapper {
+          padding-left: $gutter*4;
+        }
+
+        &-sub-headline {
+          @include set-text-styles($topic-mobile-filter-item-subheadline-font...);
+        }
+      }
+
+      &-headline {
+        @include set-text-styles($topic-mobile-filter-headline-font...);
+      }
+    }
+
+    &__content {
+      @include set-text-styles($topic-mobile-content-font...);
+      padding-left: 0;
+    }
+  }
+}
+
+.topics-section-wrapper {
+  $topics-section-wrapper-search-bar-module-font: null null null null center !default;
+
+  .search-bar-module {
+    @include set-text-styles($topics-section-wrapper-search-bar-module-font...);
+    margin-bottom: $gutter*3;
+  }
+}

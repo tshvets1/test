@@ -1,0 +1,7 @@
+@include article-type(media-source, $articleTypeColors, $default-article-type-width);
+
+.no-touch {
+  *[data-article-type-hover] {
+    @include article-type-hover-parent(media-source, $articleTypeColors, $default-article-type-width);
+  }
+}

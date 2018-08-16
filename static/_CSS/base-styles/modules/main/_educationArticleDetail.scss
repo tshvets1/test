@@ -1,0 +1,222 @@
+.article-section {
+  $article-section-article-wrapper-border: 1px solid $color-light !default;
+  $article-section-article-head-wrapper-color: $color-primary-3 !default;
+  $article-section-article-description-wrap-border: 1px solid $color-light !default;
+  $article-section-article-video-description-wrap-color: $color-darker !default;
+  $article-section-article-video-description-wrap-border: none !default;
+  $article-section-article-headline-font: 44 null 1.2 !default;
+  $article-section-article-sub-headline-font: 18 600 1 !default;
+  $article-section-article-created-by-font: 14 !default;
+  $article-section-article-content-border: 1px solid $color-light !default;
+  $article-section-article-download-span-font-color: $color-primary-3 !default;
+  $article-section-article-download-span-font: 14 !default;
+  $article-section-article-download-hover-span-font-color: $color-secondary-7 !default;
+  $article-section-article-next-topic-font-color: $text-color !default;
+  $article-section-article-video-description-font: 14 !default;
+  $acticle-section-article-image-head-wrapper-font-color: $color-white !default;
+  $article-section-article-iamge-head-wrapper-font: null null 0 !default;
+  $article-section-article-rtf-paragraph-font-color: $color-darker !default;
+  $article-section-article-rtf-paragraph-font: 15 !default;
+  $article-section-article-share-icon-google-plus-bg-color: $color-secondary-8 !default;
+  $article-section-preview-mode-article-image-headline-font: null null 1.25 !default;
+
+  $article-section-article-mobile-headline-font: 25 !default;
+
+  .article {
+    &__wrapper {
+      @extend %clearfix;
+      margin-bottom: $gutter*3;
+      margin-top: $primary-content-fix;
+      padding-bottom: $gutter*2;
+      border-bottom: $article-section-article-wrapper-border;
+    }
+
+    &__head-wrapper {
+      color: $article-section-article-head-wrapper-color;
+    }
+
+    &__description-wrap {
+      @extend %clearfix;
+      position: relative;
+      margin: 0 0 $gutter*3;
+      padding: 0 0 $gutter*3;
+      border-bottom: $article-section-article-description-wrap-border;
+    }
+    &-video .article__description-wrap {
+      color: $article-section-article-video-description-wrap-color;
+      padding: 0;
+      border: $article-section-article-video-description-wrap-border;
+    }
+
+    &__headline {
+      @include set-text-styles($article-section-article-headline-font...);
+      padding-bottom: 40px;
+    }
+
+    &__sub-headline {
+      @include set-text-styles($article-section-article-sub-headline-font...);
+    }
+
+    &__created-by {
+      @include set-text-styles($article-section-article-created-by-font...);
+      margin-bottom: $gutter*6;
+    }
+
+    &__content {
+      padding-bottom: 20px;
+      border-bottom: $article-section-article-content-border;
+    }
+
+    &__download {
+      @extend .cta-link;
+      display: table;
+      cursor: pointer;
+
+      &:after {
+        content: none;
+      }
+
+      span {
+        @include set-text-styles($article-section-article-download-span-font...);
+        color: $article-section-article-download-span-font-color;
+        display: table-cell;
+        vertical-align: middle;
+        padding-left: $gutter/5;
+      }
+
+      .media-source {
+        display: table-cell;
+        vertical-align: middle;
+
+        @if ($old-ie) {
+          display: block;
+        }
+      }
+
+      &:hover span {
+        color: $article-section-article-download-hover-span-font-color;
+      }
+    }
+
+    &__description {
+      padding-right: 190px;
+      min-height: 30px;
+    }
+
+    &__next-topic {
+      float: right;
+      margin-right: $gutter*2;
+      text-transform: uppercase;
+      color: $article-section-article-next-topic-font-color;
+
+      &-link {
+        @extend .cta-link;
+      }
+    }
+
+    &.article-video {
+      .container {
+        position: relative;
+        width: 100%;
+        height: 0;
+        padding-bottom: 60%;
+      }
+      .video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+      .article__description {
+        @include set-text-styles($article-section-article-video-description-font...);
+      }
+
+      .article__head-wrapper {
+        margin-bottom: $gutter*3;
+      }
+    }
+
+    &.article-image {
+      .article {
+        &__head-wrapper {
+          @extend %section-bg;
+          color: $acticle-section-article-image-head-wrapper-font-color;
+          @include set-text-styles($article-section-article-iamge-head-wrapper-font...);
+          margin-bottom: $gutter*3;
+        }
+
+        &__headline, &__sub-headline, &__created-by {
+          display: none;
+        }
+      }
+    }
+
+    .rtf {
+      p {
+        color: $article-section-article-rtf-paragraph-font-color;
+        @include set-text-styles($article-section-article-rtf-paragraph-font...);
+      }
+
+      img[src*=".svg"] {
+        width: 100%;
+      }
+    }
+
+    &__share {
+      .icon.icon-google-plus {
+        background-color: $article-section-article-share-icon-google-plus-bg-color;
+      }
+    }
+  }
+
+  //TABLET
+  @media screen and (max-width: $tablet) {
+    .article {
+      padding: $gutter*2 $gutter*1.7;
+
+      &__wrapper {
+        margin-top: 0;
+      }
+    }
+  }
+
+  //MOBILE
+  @media screen and (max-width: $mobile) {
+    .article {
+      padding: $gutter*2 0;
+
+      &__headline {
+        @include set-text-styles($article-section-article-mobile-headline-font...);
+      }
+
+      &__description {
+        padding-right: 0;
+        min-height: 0;
+      }
+
+      &__created-by {
+        margin-bottom: 0;
+      }
+
+      &__next-topic {
+        float: none;
+      }
+
+      &__share {
+        position: relative;
+        padding-top: $gutter*2;
+      }
+    }
+  }
+
+  //display headline and image in edit and preview mode
+  @at-root .scEditPreview & .article.article-image {
+    .article {
+      &__headline, &__sub-headline, &__created-by {
+        @include set-text-styles($article-section-preview-mode-article-image-headline-font...);
+        display: block;
+      }
+    }
+  }
+}

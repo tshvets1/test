@@ -1,0 +1,40 @@
+.help-links-module {
+  .help-links {
+    &__list {
+      @extend %list--unstyled;
+      display: block;
+
+      li {
+        @extend %clearfix;
+        display: block;
+        font-weight: 700;
+      }
+    }
+
+    &__link {
+      @extend .cta-link;
+      margin-left: 0;
+      &[href^=tel]:after {
+        display: none;
+      }
+    }
+
+    &__icon {
+      display: inline-block;
+      height: 50px;
+      width: 50px;
+      margin-right: 15px;
+      vertical-align: middle;
+
+      img {
+        display: block;
+        max-width: 90%;
+        height: auto;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $mobile) {
+
+}

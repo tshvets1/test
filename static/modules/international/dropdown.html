@@ -1,0 +1,63 @@
+<!--
+  {
+  "name": "International - Dropdown Module",
+  "status": "In Progress",
+  "notes": ""
+  }
+-->
+<div class="section-wrapper international__dropdown-module" data-sectionbg="blue"
+	 style="background-image: url('/_Images/content-managed/banners/banner-accounts-dealbook2.svg');">
+	<div class="wrapper">
+		<div class="international__dropdown-description">
+			Learn about the products and services available for your country
+		</div>
+
+		<form class="form" data-dform-variable="countryForm">
+			<div class="international__error-message">
+				<img src="/_Images/content-managed/fpo_icon.svg" alt="alert"/>
+				<span>
+					FOREX.com is not currently accepting applications from your country.
+				</span>
+			</div>
+		</form>
+
+		<script type="text/javascript">
+			var countryForm = {
+				"mustHideLabelsForMobile": false,
+				"html": [
+					{
+						"type": "div",
+						"dropdown": {
+							"name": "country",
+							"chosenOptions": {
+								width: "100%"
+							},
+							"options": [
+								{Name: "Select Country", Value: "", "isPlaceholder": "true"},
+								{Name: "Austria", Value: "Austria", NotAvailable: "true"},
+								{Name: "Azerbaijan", Value: "Azerbaijan", NotAvailable: "true"},
+								{Name: "Bahamas", Value: "Bahamas", NotAvailable: "true"},
+								{Name: "Bahrain", Value: "Bahrain"},
+								{Name: "Bangladesh", Value: "Bangladesh"},
+								{Name: "Barbados", Value: "Barbados"},
+								{Name: "Belarus", Value: "Belarus", NotAvailable: "true"},
+								{Name: "Belgium", Value: "Belgium", WsEntity: "1"},
+								{Name: "Belize", Value: "Belize"},
+								{Name: "Ukraine", Value: "Ukraine"},
+								{Name: "United Arab Emirates", Value: "United Arab Emirates"},
+								{Name: "United Kindgom", Value: "United Kindgom", WsEntity: "2"},
+								{Name: "United States", Value: "United States"}
+							],
+							conditions: {
+								"United Kindgom": {
+									navigate: "https://google.com",
+
+								}
+							}
+						}
+					}
+				]
+			}
+		</script>
+	</div>
+</div>

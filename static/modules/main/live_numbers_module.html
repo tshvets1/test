@@ -1,0 +1,58 @@
+<!--
+  {
+  "name": "Live Numbers Module",
+  "status": "In Progress",
+  "notes": ""
+  }
+-->
+
+<div class="section-wrapper most-active-markets" data-sectionbg="default"
+	 data-apply-ko="mostActiveMarkets"
+	 data-get-products-timeout="4000"
+	 data-products="['USD/JPY','EUR/USD','WHT/USD','USD/CAD','GBP/AUD']"
+	 data-move-rows="false">
+
+	<table class="active-markets__table rates-table">
+		<thead>
+		<tr>
+			<th class="active-markets__table-rank">
+				<span class="mobile-hidden">Rank&nbsp;</span>
+				<div class="tooltip desktop-hidden tablet-hidden">
+					<div class="tooltip__content">
+						<h2>Lorem ipsum</h2>
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vitae velit
+							eget
+							nisi porta
+							facilisis.
+						</p>
+					</div>
+				</div>
+			</th>
+			<th class="rates-table__product">Market</th>
+			<th class="rates-table__value">Change</th>
+		</tr>
+		<tr class="spinner" data-bind="attr: {'hidden' : products().length > 0}">
+			<td colspan="5">
+				<img src="/_Images/ui/loader.gif" alt="spinner"/>
+			</td>
+		</tr>
+		</thead>
+		<tbody>
+		<!-- ko foreach: products -->
+		<tr>
+			<td class="active-markets__table-rank">
+					<span class="active-markets__media"
+						  data-bind="text: rankChange, css: {'active-markets__media--up': rankDirection()=='up', 'active-markets__media--down': rankDirection()!='up'}"></span>
+			</td>
+			<td class="rates-table__product">
+				<a href="#" data-bind="text: product"></a>
+			</td>
+			<td class="rates-table__value">
+				<span data-bind="text: change() + '%'"></span>
+			</td>
+		</tr>
+		<!-- /ko -->
+		</tbody>
+	</table>
+</div>

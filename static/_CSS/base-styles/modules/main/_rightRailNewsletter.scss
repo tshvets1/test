@@ -1,0 +1,77 @@
+.secondary-content {
+  .newsletter {
+    &-module {
+      @extend %bannerBg;
+
+      .wrapper {
+        padding: $gutter*2 0;
+      }
+    }
+
+    &__headline, &__sub-headline {
+      @include rem(font-size, 16);
+      line-height: 1.25;
+    }
+
+    &__headline {
+      padding-bottom: $gutter;
+      font-weight: 500;
+      text-transform: uppercase;
+    }
+
+    &__sub-headline {
+      padding-bottom: $gutter*2;
+    }
+
+    &__form .form-div {
+      width: 60%;
+      float: left;
+
+      .form-input, .form-email {
+        width: 100%;
+        border: 0;
+      }
+    }
+
+    &__submit-button {
+      padding: 0 $gutter*2 0 $gutter;
+      margin: 0;
+      border: 0;
+      width: initial;
+      height: 45px;
+      background-color: transparent;
+      float: left;
+
+      &:hover {
+        background: none;
+      }
+    }
+  }
+}
+
+// COLOR OVERRIDES
+.newsletter-module {
+  &[data-sectionbg="blue"],
+  &[data-sectionbg="green"],
+  &[data-sectionbg="dark-blue"],
+  &[data-sectionbg="purple"],
+  &[data-sectionbg="lightblue"],
+  &[data-sectionbg="limegreen"],
+  &[data-sectionbg="orange"],
+  &[data-sectionbg="rose"],
+  .newsletter__submit,
+  .newsletter__submit:hover {
+    color: $color-white;
+  }
+}
+
+// TABLET LAYOUT
+@media screen and (max-width: $tablet) {
+  .secondary-content {
+    .newsletter-module {
+      .wrapper {
+        padding: 0;
+      }
+    }
+  }
+}

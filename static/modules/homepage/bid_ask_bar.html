@@ -1,0 +1,40 @@
+<!--
+  {
+  "name": "Home Page - Bid/Ask bar",
+  "status": "Done",
+  "notes": ""
+  }
+-->
+
+<section class="section-wrapper bid-ask-bar-section" data-sectionbg="alternate"
+		 data-apply-ko="bidAskBar"
+		 data-products='["USD/JPY","EUR/USD","WHT/USD","USD/CAD","GBP/AUD"]'
+		 data-next-products-timeout="4000"
+		 data-get-products-timeout="5000"
+		 data-auto-slide="true">
+	<div class="spinner" data-bind="attr: { hidden: products().length != 0}">
+		<img src="/_Images/ui/loader.gif" alt="spinner" />
+	</div>
+	<div class="wrapper">
+		<div class="bid-ask__products" hidden data-bind="attr: {'hidden' : products().length == 0}">
+			<!-- ko foreach: products --><a class="bid-ask__product" href="#" data-bind="attr: {'data-index': $index()}">
+			<h2 class="bid-ask__headline" data-bind="text: product"></h2>
+
+			<div class="bid-ask__bid"
+				 data-bind="css: {'bid-ask__down': bid_prev() > bid(), 'bid-ask__up': bid_prev() < bid()}">
+				<em>bid</em>
+				<span data-bind="superscriptLastChar: bid, decimals: decimals"></span>
+			</div>
+			<div class="bid-ask__spread">
+				<span data-bind="text: spread"></span>
+			</div>
+			<div class="bid-ask__ask"
+				 data-bind="css: {'bid-ask__down': ask_prev() > ask(), 'bid-ask__up': ask_prev() < ask()}">
+				<em>ask</em>
+				<span data-bind="superscriptLastChar: ask, decimals: decimals"></span>
+			</div>
+		</a><!-- /ko -->
+
+		</div>
+	</div>
+</section>

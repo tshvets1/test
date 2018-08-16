@@ -1,0 +1,122 @@
+.hover-state {
+  &__content {
+    position: relative;
+  }
+
+  //COLORS
+  &__wrapper {
+    @extend %bg-color-darken-border;
+  }
+
+  &__content-hover {
+    @if ($old-ie) {
+      @extend %bg-color;
+    } @else {
+      @extend %section-bg-transparent;
+    }
+  }
+  //END COLORS
+
+  &__content-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: $defaultZIndex + 1;
+
+    @if ($old-ie) {
+      /*-ms-filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr='#7F333333', endColorstr='#7F333333');
+      filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr='#7F333333', endColorstr='#7F333333');*/
+      display: none;
+    } @else {
+      opacity: 0;
+      @include transition(opacity, 0.35s);
+      background-color: rgba($color-dark, .5);
+
+      & > * {
+        transform: translateX(-$page-width/2);
+        -ms-transform: translateX(-$page-width/2); /*correction*/
+        @include transition(opacity transform, 0.35s);
+      }
+
+      & > *:nth-child(2) {
+        transition-delay: 0.05s;
+      }
+
+      & > *:nth-child(3) {
+        transition-delay: 0.1s;
+      }
+
+      & > *:nth-child(3) {
+        transition-delay: 0.15s;
+      }
+
+      .cta-link {
+        -webkit-transition: opacity 0.35s, transform 0.35s, color $transitionDurationAndEffect;
+        -moz-transition: opacity 0.35s, transform 0.35s, color $transitionDurationAndEffect;
+        -ms-transition: opacity 0.35s, transform 0.35s, color $transitionDurationAndEffect;
+        -o-transition: opacity 0.35s, transform 0.35s, color $transitionDurationAndEffect;
+        transition: opacity 0.35s, transform 0.35s, color $transitionDurationAndEffect;
+        transition-delay: 0s;
+      }
+    }
+
+    > * {
+      margin-left: 13px;
+      margin-right: 10px;
+    }
+
+    > .cta-btn,
+    > .cta-link {
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    p {
+      display: inline;
+
+      @include rem(font-size, 18);
+      color: $color-primary-3;
+      line-height: 2.2;
+
+      @include inline-bg($color-white, 10px, 0, 3px, 4px, 0, 4px);
+    }
+  }
+
+  &__wrapper {
+    position: relative;
+    overflow: hidden;
+
+    & > img {
+      position: absolute;
+      top: 0;
+    }
+
+    &[data-no-hover="true"] {
+      .hover-state__content:after {
+        content: none !important;
+      }
+    }
+  }
+
+  &__wrapper:hover &__content-hover {
+    @if ($old-ie) {
+      display: block;
+    } @else {
+      opacity: 1;
+
+      & > * {
+        transform: translateX(0);
+        -ms-transform: translateX(0); /*correction*/
+      }
+    }
+  }
+
+  &__wrapper &__content {
+    .cta-btn,
+    .cta-link {
+      margin-top: $gutter*3;
+    }
+  }
+}

@@ -1,0 +1,154 @@
+.promo-bar {
+  $promoBarHeight: 95px;
+
+  &-section .wrapper {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  margin: $gutter 0;
+
+  &__items {
+    @extend %list--unstyled;
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+
+    img {
+      width: 100%;
+      left: 0;
+    }
+
+    li {
+      display: table-cell;
+      width: 33.333%;
+      padding: 0 (20px/6);
+
+      &:first-child {
+        padding-left: 0;
+        padding-right: (20px/3);
+      }
+
+      &:last-child {
+        padding-right: 0;
+        padding-left: (20px/3);
+      }
+    }
+  }
+
+  .hover-state__content-hover {
+    height: $promoBarHeight;
+  }
+
+  &__item {
+    height: $promoBarHeight;
+    width: 100%;
+
+    @include rem(font-size, 22);
+    color: $color-white;
+    text-decoration: none;
+    font-weight: 600;
+
+    &:hover {
+      color: $color-white;
+    }
+
+    &-content {
+      display: block;
+      line-height: $promoBarHeight;
+
+      p {
+        @include rem(font-size, 22);
+      }
+
+      &:after {
+        height: $promoBarHeight;
+      }
+    }
+  }
+
+  &__item-wrapper {
+    width: 100%;
+    text-align: center;
+
+    &:after {
+      content: "";
+      height: 3px;
+      width: 100%;
+      background-color: $color-white;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+  }
+
+  @media screen and (max-width: $tablet) {
+    $promoBarHeight: 74px;
+
+    &__items {
+      li {
+        padding: 0 (16px/6);
+
+        &:first-child {
+          padding-left: 0;
+          padding-right: (16px/3);
+        }
+
+        &:last-child {
+          padding-right: 0;
+          padding-left: (16px/3);
+        }
+      }
+    }
+
+    &__item,
+    .hover-state__content-hover {
+      @include rem(font-size, 18);
+      height: $promoBarHeight;
+    }
+
+    &__item-content {
+      line-height: $promoBarHeight;
+
+      p {
+        @include rem(font-size, 18);
+      }
+    }
+  }
+
+  @media screen and (max-width: $mobile) {
+    $promoBarHeight: 55px;
+
+    &__items {
+      li {
+        display: block;
+        width: 100%;
+        padding: 0;
+        margin-bottom: $gutter*2;
+
+        &:first-child {
+          padding: 0;
+        }
+
+        &:last-child {
+          padding: 0;
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    &__item,
+    .hover-state__content-hover {
+      @include rem(font-size, 16);
+      height: $promoBarHeight;
+    }
+
+    &__item-content {
+      line-height: $promoBarHeight;
+
+      p {
+        @include rem(font-size, 16);
+      }
+    }
+  }
+}

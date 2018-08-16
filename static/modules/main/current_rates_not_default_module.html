@@ -1,0 +1,65 @@
+<!--
+  {
+  "name": "Current Rates Not Default SectionBG Module",
+  "status": "In Progress",
+  "notes": "data-transparentbg attribute used to set transparent background for dropdown and table and to set text color to white"
+  }
+-->
+
+<div class="current-rates-section" data-apply-ko="currentRates"
+	 data-products="['USD/JPY','EUR/USD','WHT/USD','USD/CAD','GBP/AUD']"
+	 data-get-products-timeout="5000"
+	 data-transparentbg="true">
+	<div class="wrapper">
+		<h2>data-transparentbg="true"</h2>
+		<h2 class="current-rates__headline">Lorem ipsum
+
+			<div class="tooltip">
+				<div class="tooltip__content">
+					<h2>Lorem ipsum</h2>
+
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vitae velit eget nisi porta
+						facilisis. </p>
+				</div>
+			</div>
+		</h2>
+
+		<!-- DROPDOWN -->
+		<div class="current-rates__dropdown">
+			<select class="custom-select" data-placeholder="Choose Item" id="currentRatesDropdown" data-chosen-select=""
+					data-chosen-options='{"disable_search":"true","width":"100%"}'>
+				<option value=""></option>
+				<option value="Lorem7">Lorem7</option>
+				<option value="Lorem8">Lorem8</option>
+				<option value="Lorem9">Lorem9</option>
+			</select>
+		</div>
+		<!-- END DROPDOWN -->
+
+		<table class="current-rates__table rates-table">
+			<thead>
+			<tr>
+				<th class="rates-table__product">Pair</th>
+				<th>Bid</th>
+				<th>Ask</th>
+				<th class="rates-table__spread">Spread</th>
+			</tr>
+			</thead>
+			<tbody>
+			<!-- ko foreach: products -->
+			<tr>
+				<td class="rates-table__product"><a href="#" data-bind="text: product"></a></td>
+				<td data-bind="text: bid, css: {'rates-table__value-down' : bid()<bid_prev(), 'rates-table__value-up' : bid()>bid_prev() }"></td>
+				<td data-bind="text: ask, css: {'rates-table__value-down' : ask()<ask_prev(), 'rates-table__value-up' : ask()>ask_prev() }"></td>
+				<td class="rates-table__value">
+					<span data-bind="text: spread, highlight: spread(), highlightClass: 'rates-table__value-changed'"></span>
+				</td>
+			</tr>
+			<!-- /ko -->
+			</tbody>
+		</table>
+
+		<a class="cta-link" href="#">Lorem ipsum</a>
+	</div>
+</div>
+

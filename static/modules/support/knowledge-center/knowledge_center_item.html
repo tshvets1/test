@@ -1,0 +1,67 @@
+<!--
+  {
+  "name": "Knowledge Center - Item",
+  "status": "Complete",
+  "notes": "data-filter attribute is used by filter tabs to define which groups should be shown/hidden on tab click"
+  }
+-->
+
+<div class="module-wrapper knowledge-center__item active" id="@@itemId" data-divider="true" data-back-to-top="true">
+	<h2 class="knowledge-center__item-headline">
+		@@headline
+	</h2>
+
+	@@include('/modules/support/knowledge-center/knowledge_center_tabs_filter.html')
+
+	<ul class="knowledge-center__questions-listing">
+		<li data-filter="group1"><a data-scroll-to-element="#group1-q1" href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit?</a>
+		</li>
+		<li data-filter="group1"><a data-scroll-to-element="#group1-q2" href="#">Praesent est metus, laoreet blandit? </a></li>
+		<li data-filter="group1"><a data-scroll-to-element="#group1-q3" href="#">Magna sed, finibus dictum velit. Vestibulum et dolor rhoncus
+			urna convallis? </a></li>
+		<li data-filter="group1"><a data-scroll-to-element="#group1-q4" href="#">Volutpat quis elementum augue? </a></li>
+		<li data-filter="group2"><a data-scroll-to-element="#group2-q1" href="#">Nulla varius elit congue risus interdum interdum. Phasellus
+			tempus vitae enim sed?</a></li>
+		<li data-filter="group2"><a data-scroll-to-element="#group2-q2" href="#">Consequat cum sociis natoque penatibus et magnis dis
+			parturient montes, nascetur?</a></li>
+		<li data-filter="group2"><a data-scroll-to-element="#group2-q3" href="#">Ridiculus mus. Proin eu felis interdum?</a></li>
+		<li><a data-scroll-to-element="#group2-q4" href="#">Rutrum ipsum vitae, aliquet diam. Aliquam consectetur, ligula
+			id bibendum? </a></li>
+		<li data-filter="group3"><a data-scroll-to-element="#group3-q1" href="#">Aliquet, sapien quam euismod purus, in consectetur justo
+			felis sed ligula. Quisque?</a></li>
+		<li data-filter="group3"><a data-scroll-to-element="#group3-q2" href="#"> luctus nec tortor ut euismod?</a></li>
+		<li data-filter="group3"><a data-scroll-to-element="#group3-q3" href="#">Venenatis ligula, ut elementum massa ullamcorper vitae. Proin
+			vestibulum congue sem non ullamcorper?</a></li>
+		<li data-filter="group3"><a data-scroll-to-element="#group3-q4" href="#">Volutpat quis elementum augue? </a></li>
+	</ul>
+
+	<div class="knowledge-center__group" data-filter="group1">
+		<div class="knowledge-center__group-headline">Lorem Ipsum</div>
+		<div class="knowledge-center__questions">
+			@@include('/modules/support/knowledge-center/knowledge_center_question.html', {"questionId": "group1-q1"})
+			@@include('/modules/support/knowledge-center/knowledge_center_question.html', {"questionId": "group1-q2"})
+			@@include('/modules/support/knowledge-center/knowledge_center_question.html', {"questionId": "group1-q3"})
+			@@include('/modules/support/knowledge-center/knowledge_center_question.html', {"questionId": "group1-q4"})
+		</div>
+	</div>
+
+	<div class="knowledge-center__group" data-filter="group2">
+		<div class="knowledge-center__group-headline">Lorem Ipsum</div>
+		<div class="knowledge-center__questions">
+			@@include('/modules/support/knowledge-center/knowledge_center_question.html', {"questionId": "group2-q1"})
+			@@include('/modules/support/knowledge-center/knowledge_center_question.html', {"questionId": "group2-q2"})
+			@@include('/modules/support/knowledge-center/knowledge_center_question.html', {"questionId": "group2-q3"})
+			@@include('/modules/support/knowledge-center/knowledge_center_question.html', {"questionId": "group2-q4"})
+		</div>
+	</div>
+
+	<div class="knowledge-center__group" data-filter="group3">
+		<div class="knowledge-center__group-headline">Lorem Ipsum</div>
+		<div class="knowledge-center__questions">
+			@@include('/modules/support/knowledge-center/knowledge_center_question.html', {"questionId": "group3-q1"})
+			@@include('/modules/support/knowledge-center/knowledge_center_question.html', {"questionId": "group3-q2"})
+			@@include('/modules/support/knowledge-center/knowledge_center_question.html', {"questionId": "group3-q3"})
+			@@include('/modules/support/knowledge-center/knowledge_center_question.html', {"questionId": "group3-q4"})
+		</div>
+	</div>
+</div>

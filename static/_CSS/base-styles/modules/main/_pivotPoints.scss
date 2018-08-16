@@ -1,0 +1,393 @@
+.pivot-points {
+  $primary-pivot-points-bg-color: $bg-default !important !default;
+  $primary-pivot-points-padding: 0 !default;
+
+  $pivot-points-table-row-bg-color: $color-lightest !default;
+  $pivot-points-table-row-even-bg-color: $color-light !default;
+  $pivot-points-table-row-hover-bg-color: $color-medium !default;
+  $pivot-points-table-row-mobile-bg-color: $color-light !default;
+  $pivot-points-table-row-even-mobile-bg-color: $color-lightest !default;
+
+  $pivot-points-panel-toggle-color: $color-link !default;
+  $pivot-points-panel-toggle-hover-color: $color-link-hover !default;
+  $pivot-points-last-updated-color: $color-dark !default;
+
+  $pivot-points-padding: 40px 0 !default;
+  $pivot-points-headline-margin: 0 0 20px !default;
+  $pivot-points-currencies-dropdown-width: 200px !default;
+  $pivot-points-currencies-dropdown-margin: 0 0 20px !default;
+  $pivot-points-tabs-list-margin: 0 0 10px !default;
+  $pivot-points-table-head-padding: 15px !default;
+  $pivot-points-table-cell-padding: 15px !default;
+  $pivot-points-table-margin: 0 0 20px !default;
+  $pivot-points-panel-toggle-margin: 10px 0 !default;
+  $pivot-points-panel-toggle-padding: 0 !default;
+
+  $pivot-points-dropdown-mobile-width: calc(50% - 5px) !default;
+  $pivot-points-dropdown-with-spinner-mobile-width: calc(100% - #{$spinnerSmallSize + 5px}) !important !default;
+  $pivot-points-dropdown-mobile-margin: 20px 0 !default;
+  $pivot-points-dropdown-select-mobile-height: 40px !default;
+
+  $pivot-points-last-updated-margin: 10px 0 !default;
+
+  $pivot-points-table-border: solid 1px $color-grey-dark !default;
+  $pivot-points-table-size: "100% / 3" false true !default;
+
+  $pivot-points-headline-font: 15 700 null uppercase !default;
+  $pivot-points-table-head-font: 14 700 null uppercase left !default;
+  $pivot-points-table-cell-font: 14 null null null right !default;
+  $pivot-points-panel-toggle-font: null 700 null uppercase !default;
+  $pivot-points-last-updated-font: 14 !default;
+  $pivot-points-dropdown-select-mobile-font: 14 !default;
+
+  position: relative;
+  padding: $pivot-points-padding;
+  @extend %primary-content-wrapper;
+
+  &__wrapper {
+    display: inline;
+  }
+
+  &__headline {
+    margin: $pivot-points-headline-margin;
+    float: left;
+    @include set-text-styles($pivot-points-headline-font...);
+  }
+
+  &__currencies-dropdown {
+    position: relative;
+    width: $pivot-points-currencies-dropdown-width;
+    clear: left;
+    float: left;
+    margin: $pivot-points-currencies-dropdown-margin;
+
+    @extend %chosen-select--darker-button;
+  }
+
+  &__headline + &__tabs {
+    @extend %menuDropdown;
+
+    .custom-select {
+      left: -10000px;
+    }
+  }
+
+  &__spinner {
+    clear: both;
+
+    img {
+      margin-top: 0;
+    }
+  }
+
+  &__change-product-spinner {
+    position: absolute;
+    width: auto;
+    right: -($spinnerSmallSize + 5px);
+    top: 0;
+
+    img {
+      margin: 0;
+      height: $spinnerSmallSize;
+    }
+  }
+
+  &__tabs {
+    @extend %clearfix;
+    @extend %menuDropdownDefault;
+
+    .tabs__list {
+      float: right;
+      margin: $pivot-points-tabs-list-margin;
+    }
+
+    select {
+      left: -10000px;
+    }
+  }
+
+  &__tables {
+    th {
+      padding: $pivot-points-table-head-padding;
+      @include set-text-styles($pivot-points-table-head-font...);
+    }
+
+    td {
+      padding: $pivot-points-table-cell-padding;
+      @include set-text-styles($pivot-points-table-cell-font...);
+    }
+  }
+
+  &__table {
+    margin: $pivot-points-table-margin;
+    float: left;
+    border-left: $pivot-points-table-border;
+    @include size($pivot-points-table-size...);
+
+    tr {
+      background-color: $pivot-points-table-row-bg-color;
+
+      &#{if($old-ie, ".nth-child-even", ":nth-child(even)")} {
+        background-color: $pivot-points-table-row-even-bg-color;
+      }
+
+      &:hover,
+      &.even:hover {
+        background-color: $pivot-points-table-row-hover-bg-color;
+      }
+    }
+
+    &:first-child {
+      border-left: 0;
+    }
+  }
+
+  &__last-updated {
+    @include set-text-styles($pivot-points-last-updated-font...);
+    color: $pivot-points-last-updated-color;
+    margin: $pivot-points-last-updated-margin;
+  }
+
+  &__panel-toggle {
+    @extend %btn--unstyled;
+    margin: $pivot-points-panel-toggle-margin;
+    padding: $pivot-points-panel-toggle-padding;
+    float: left;
+    @include set-text-styles($pivot-points-panel-toggle-font...);
+
+    span, &:after {
+      color: $pivot-points-panel-toggle-color;
+      @include transition(color, $transitionDurationAndEffect);
+    }
+
+    &:hover {
+      span, &:after {
+        color: $pivot-points-panel-toggle-hover-color;
+      }
+    }
+
+    .hide-details {
+      display: none;
+    }
+
+    &:after {
+      content: "+"
+    }
+
+    @at-root .panel-open & {
+      .show-details {
+        display: none;
+      }
+
+      .hide-details {
+        display: inline;
+      }
+
+      &:after {
+        content: "\2013"
+      }
+    }
+  }
+
+  &__panel-toggle + &__last-updated {
+    float: right;
+  }
+
+  .primary-content & {
+    background-color: $primary-pivot-points-bg-color;
+    padding-top: 20px;
+
+    .wrapper {
+      padding: $primary-pivot-points-padding;
+    }
+  }
+
+  @media screen and (max-width: $mobile) {
+    &__headline {
+      float: none;
+      display: block;
+      width: 100%;
+      margin-bottom: 0;
+    }
+
+    &__headline + &__tabs {
+      .custom-select {
+        left: auto;
+      }
+    }
+
+    &__table {
+      width: 100%;
+      float: none;
+      margin: 0;
+      border: 0;
+
+      tr {
+        background-color: $pivot-points-table-row-mobile-bg-color;
+
+        &.even {
+          background-color: $pivot-points-table-row-even-mobile-bg-color;
+        }
+      }
+    }
+
+    &__intervals-dropdown,
+    &__currencies-dropdown {
+      float: left;
+      width: $pivot-points-dropdown-mobile-width;
+
+      .custom-select {
+        position: static;
+        @include set-text-styles($pivot-points-dropdown-select-mobile-font...);
+        height: $pivot-points-dropdown-select-mobile-height;
+      }
+    }
+
+    &__currencies-dropdown {
+      margin: $pivot-points-dropdown-mobile-margin;
+    }
+
+    &__currencies-dropdown + &__tabs &__intervals-dropdown {
+      margin: $pivot-points-dropdown-mobile-margin;
+    }
+
+    &__intervals-dropdown {
+      float: right;
+    }
+
+    &__change-product-spinner {
+      right: 0;
+
+      + .custom-select {
+        width: $pivot-points-dropdown-with-spinner-mobile-width;
+      }
+    }
+
+    &__tabs {
+      .tabs__list {
+        display: none;
+      }
+    }
+
+    &__last-updated {
+      clear: both;
+      width: 100%;
+    }
+  }
+}
+
+.pivot-details {
+  $pivot-details-item-distance-bg-color: $color-light !default;
+
+  $pivot-details-ask-color: $color-secondary-6 !default;
+  $pivot-details-bid-color: $color-secondary-7 !default;
+
+  $pivot-details-margin: 20px 0 0 !default;
+  $pivot-details-bg-color: $color-lighter !default;
+  $pivot-details-item-padding: 20px !default;
+  $pivot-details-item-width: 24% !default;
+  $pivot-details-item-distance-width: 28% !default;
+  $pivot-details-number-margin: 10px 0 0;
+
+  $pivot-details-item-mobile-width: 50% !default;
+  $pivot-details-item-distance-mobile-width: 50% !default;
+
+  $pivot-details-title-font: 14 null null uppercase !default;
+  $pivot-details-number-font: 32 !default;
+
+  $pivot-details-title-mobile-font: 11 !default;
+  $pivot-details-number-mobile-font: 25 !default;
+
+  @extend %list--unstyled;
+  clear: both;
+  overflow: auto;
+  position: relative;
+  margin: $pivot-details-margin;
+  background: $pivot-details-bg-color;
+
+  li {
+    float: left;
+    width: $pivot-details-item-width;
+    padding: $pivot-details-item-padding;
+    line-height: 1;
+
+    &.pivot-details__distance {
+      float: right;
+      width: $pivot-details-item-distance-width;
+    }
+  }
+
+  &__title {
+    @include set-text-styles($pivot-details-title-font...);
+    display: inline-block;
+  }
+
+  &__number {
+    @include set-text-styles($pivot-details-number-font...);
+    margin: $pivot-details-number-margin;
+    display: block;
+  }
+
+  &__bid {
+    b, sup {
+      color: $pivot-details-bid-color;
+    }
+  }
+
+  &__ask {
+    b, sup {
+      color: $pivot-details-ask-color;
+    }
+  }
+
+  &__distance {
+    background: $pivot-details-item-distance-bg-color;
+  }
+
+  @media screen and (max-width: $mobile) {
+    li {
+      width: $pivot-details-item-mobile-width;
+
+      &.pivot-details__distance {
+        float: left;
+        width: $pivot-details-item-distance-mobile-width;
+      }
+    }
+
+    &__title {
+      @include set-text-styles($pivot-details-title-mobile-font...);
+    }
+    &__number {
+      @include set-text-styles($pivot-details-number-mobile-font...);
+    }
+  }
+}
+
+.understanding-pivot-points {
+  $understanding-pivot-points-headline-margin: 1em 0 !default;
+  $understanding-pivot-points-rtf-margin: 0 0 1em !default;
+
+  $understanding-pivot-points-headline-mobile-margin: 0.5em 0 !default;
+
+  $understanding-pivot-points-headline-font: 26 null 1.4 !default;
+  $understanding-pivot-points-headline-mobile-font: 25 null 1.25 !default;
+
+  clear: both;
+
+  &__headline {
+    @include set-text-styles($understanding-pivot-points-headline-font...);
+    color: $color-primary-3;
+    margin: $understanding-pivot-points-headline-margin;
+  }
+
+  .rtf {
+    margin: $understanding-pivot-points-rtf-margin;
+  }
+
+  @media screen and (max-width: $mobile) {
+    &__headline {
+      @include set-text-styles($understanding-pivot-points-headline-mobile-font...);
+      margin: $understanding-pivot-points-headline-mobile-margin;
+    }
+  }
+}
